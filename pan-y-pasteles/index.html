@@ -1,0 +1,1368 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Fast Pan y Pasteles · Pastelería</title>
+<meta name="description" content="Pastelería artesanal con obrador propio en Ajalvir y cafetería en Ajalvir y Paracuellos de Jarama: tartas por encargo, palmeritas, pastelería, catering dulce y desayunos a domicilio. 4,5★ con 114 reseñas en Google.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800;900&family=Figtree:wght@400;500;600;700;800&display=swap">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%23341006'/%3E%3Ctext x='32' y='44' text-anchor='middle' font-family='Georgia' font-style='italic' font-size='34' fill='%23F0006A'%3Ef%3C/text%3E%3C/svg%3E">
+<style>
+/* Fast Pan y Pasteles — sus colores reales (panypasteles.com): papel #F8F1EB de fondo, marrón #341006 en cabecera, botones y pie, rosa #BD0052 de acento y #FF5C9D en bandas; logo en fucsia #F0006A. Tipografía Archivo como su web. Fotos reales de su web. */
+:root{
+  color-scheme: light;
+  --shell:#F8F1EB;
+  --shell-2:#EFE1D7;
+  --ink:#341006;
+  --ink-soft:#6B5148;
+  --hibiscus:#BD0052;
+  --hibiscus-ink:#8E003D;
+  --palm:#BD0052;
+  --jungle:#341006;
+  --sun:#FF5C9D;
+  --marca:#F0006A;
+  --rosa:#FF5C9D;
+  --blush:#FFE4EE;
+  --azul:#EFE1D7;
+  --line:rgba(52,16,6,.14);
+  --font-display:"Archivo", "Helvetica Neue", Arial, sans-serif;
+  --font-body:"Figtree", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --r-sm:12px; --r-md:18px; --r-lg:24px;
+  --shadow:0 30px 60px -30px rgba(52,16,6,.45), 0 8px 20px -10px rgba(52,16,6,.15);
+  --wrap:1180px;
+  --head:72px;
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html{scroll-behavior:smooth;scroll-padding-top:calc(var(--head) + 12px)}
+body{margin:0;background:var(--shell);color:var(--ink);font-family:var(--font-body);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:clip}
+img{max-width:100%;display:block}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--hibiscus);outline-offset:3px;border-radius:6px}
+.wrap{max-width:var(--wrap);margin-inline:auto;padding-inline:clamp(16px,4vw,40px)}
+h1,h2,h3{margin:0;text-wrap:balance;line-height:1;letter-spacing:-.035em;font-weight:800;font-family:var(--font-display)}
+p{margin:0}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:13px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--palm)}
+.eyebrow::before{content:"✦"!important;width:auto!important;height:auto!important;background:none!important;-webkit-mask:none!important;mask:none!important;font-size:14px;letter-spacing:0;}
+.eyebrow-old::before{content:"";width:18px;height:18px;flex:none;background:currentColor;-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M3 15.5C4 10 7.6 6 12 6s8 4 9 9.5c-2.6-1.6-5.6-2.3-9-2.3s-6.4.7-9 2.3zM7 9.6 9 14M12 7.5V13M17 9.6 15 14' stroke='%23000' stroke-width='1.6' fill='%23000'/%3E%3C/svg%3E") center/contain no-repeat;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M3 15.5C4 10 7.6 6 12 6s8 4 9 9.5c-2.6-1.6-5.6-2.3-9-2.3s-6.4.7-9 2.3z'/%3E%3C/svg%3E") center/contain no-repeat}
+.display{font-family:var(--font-display);font-style:normal;font-weight:800;letter-spacing:-.035em;color:var(--hibiscus)}
+.lead{font-size:clamp(18px,1.6vw,20px);color:var(--ink-soft);max-width:34em}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 24px;border-radius:999px;font:700 16px/1.15 var(--font-body);text-align:center;text-decoration:none;border:1.5px solid transparent;cursor:pointer;transition:transform .25s cubic-bezier(.2,.7,.2,1),box-shadow .25s,background .25s,border-color .25s}
+.btn svg{width:19px;height:19px;flex:none}
+.btn-primary{background:var(--hibiscus);color:#fff;box-shadow:0 12px 24px -12px rgba(189,0,82,.85)}
+.btn-primary:hover{background:var(--hibiscus-ink);transform:translateY(-2px)}
+.btn-ghost{background:transparent;border-color:var(--line);color:var(--ink)}
+.btn-ghost:hover{border-color:var(--ink);transform:translateY(-2px)}
+.btn-light{background:rgba(255,255,255,.94);color:var(--ink)}
+.btn-light:hover{background:#fff;transform:translateY(-2px)}
+.sec{padding-block:clamp(72px,10vw,128px)}
+.sec-head{display:grid;gap:16px;max-width:760px;margin-bottom:clamp(36px,5vw,56px)}
+.sec-head h2,.split-txt h2,.book-cta h2,.visit h2{font-size:clamp(34px,4.4vw,56px)}
+.sec-head .display,.split-txt .display,.book-cta .display,.visit .display{display:block}
+.band-white{background:#fff}
+.band-blush{background:var(--blush)}
+.band-azul{background:var(--azul)}
+.band-jungle{background:var(--jungle);color:#F6EDE3}
+.band-jungle .eyebrow{color:var(--sun)}
+.band-jungle .display{color:var(--sun)}
+.band-jungle .lead{color:rgba(248,241,235,.82)}
+.band-rosa{background:var(--rosa);color:var(--ink)}
+.band-rosa .eyebrow,.band-rosa .display{color:var(--ink)}
+.band-rosa .display{color:#6E0030}
+.band-magenta{background:var(--hibiscus);color:#fff}
+.band-magenta .eyebrow{color:#FFD3E3}
+.band-magenta .display{color:#FFD3E3}
+.band-magenta .lead{color:rgba(255,255,255,.88)}
+.band-magenta .book-perks{color:rgba(255,255,255,.9)}
+.band-magenta .book-perks li::before{color:#FFD3E3}
+.btn-light{color:var(--hibiscus-ink)}
+/* Cinta como la de su web */
+.ticker{background:var(--jungle);color:var(--shell);overflow-x:auto;overflow-y:hidden;scrollbar-width:none;border-block:1px solid rgba(255,255,255,.06)}
+.ticker>div{display:flex;width:max-content;animation:tick 38s linear infinite}
+.ticker span{display:inline-flex;align-items:center;gap:18px;padding:15px 0 15px 18px;font:800 15px/1 var(--font-display);letter-spacing:.08em;text-transform:uppercase;white-space:nowrap}
+.ticker span::after{content:"✦";color:var(--rosa)}
+@keyframes tick{to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){.ticker>div{animation:none}}
+
+/* Cabecera */
+.top{position:fixed;top:0;left:0;right:0;padding-top:env(safe-area-inset-top,0px);z-index:60;background:rgba(52,16,6,.94);-webkit-backdrop-filter:blur(18px) saturate(1.4);backdrop-filter:blur(18px) saturate(1.4);border-bottom:1px solid rgba(255,255,255,.1);transition:background .4s,border-color .4s}
+.top.glass{background:linear-gradient(180deg,rgba(52,16,6,.6),rgba(52,16,6,.1));border-bottom-color:rgba(255,255,255,.16)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;height:var(--head)}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;-webkit-tap-highlight-color:transparent;user-select:none}
+.brand img{width:auto;height:50px}
+.brand small{font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:rgba(248,241,235,.75);line-height:1.35;padding-left:10px;border-left:1px solid rgba(248,241,235,.2)}
+.top.glass .brand small,.top.glass .nav a{color:rgba(255,255,255,.85)}
+.nav{display:flex;gap:26px;font-size:15px;font-weight:600}
+.nav a{text-decoration:none;color:rgba(248,241,235,.85);white-space:nowrap;text-transform:uppercase;letter-spacing:.08em;font-size:13.5px;font-weight:700}
+.nav a:hover{color:var(--rosa)}
+.top.glass .nav a:hover{color:#fff}
+.top .btn{min-height:44px;padding:0 18px;font-size:15px}
+.progress{position:absolute;left:0;bottom:-1px;height:2px;width:100%;background:var(--hibiscus);transform:scaleX(0);transform-origin:left}
+.top.glass .progress{opacity:0}
+
+/* Loader con el logo */
+.loader{position:fixed;inset:0;z-index:200;display:grid;place-items:center;background:radial-gradient(60% 50% at 50% 45%,rgba(255,92,157,.45),transparent 70%),var(--hibiscus);color:#F8F1EB;transition:opacity .7s cubic-bezier(.2,.7,.2,1),visibility 0s .7s;animation:ld-safety 0s 4s forwards}
+.loader.out{opacity:0;visibility:hidden}
+@keyframes ld-safety{to{opacity:0;visibility:hidden}}
+.ld-in{display:grid;justify-items:center;gap:12px;transition:transform .7s cubic-bezier(.2,.7,.2,1)}
+.loader.out .ld-in{transform:scale(.92) translateY(-8px)}
+.ld-mark{position:relative;width:clamp(170px,16vw,210px);aspect-ratio:1;display:grid;place-items:center}
+.ld-mark img{width:76%;height:auto;animation:ld-breathe 1.8s ease-in-out infinite}
+.ld-ring{position:absolute;inset:0;transform:rotate(-90deg)}
+.ld-ring circle{fill:none;stroke:rgba(248,241,235,.22);stroke-width:2}
+.ld-ring .ld-arc{stroke:#F8F1EB;stroke-width:2.5;stroke-linecap:round;stroke-dasharray:100;stroke-dashoffset:100;animation:ld-draw 1.1s cubic-bezier(.6,.1,.3,1) forwards}
+.ld-sub{font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#F8F1EB;animation:ld-up .8s .3s cubic-bezier(.2,.7,.2,1) both}
+@keyframes ld-draw{to{stroke-dashoffset:0}}
+@keyframes ld-breathe{50%{transform:scale(1.04)}}
+@keyframes ld-up{from{opacity:0;transform:translateY(10px)}}
+.loading .hero-inner>*,.loading .deck-wrap{animation-play-state:paused!important}
+@media (prefers-reduced-motion:reduce){.ld-mark img,.ld-ring .ld-arc{animation:none;stroke-dashoffset:0}}
+
+/* Hero */
+.hero{position:relative;height:100vh;height:100svh;min-height:640px;max-height:1000px;overflow:hidden;background:var(--jungle);color:#fff}
+.hero-bg{position:absolute;inset:0;z-index:0;overflow:hidden}
+.hero-bg img{width:100%;height:100%;object-fit:cover;object-position:50% 55%;filter:blur(4px) saturate(1.05);animation:kenburns 20s ease-out both}
+.hero-bg::after{content:"";position:absolute;inset:0;background:radial-gradient(55% 65% at 74% 55%,rgba(255,92,157,.38),transparent 70%),linear-gradient(90deg,rgba(52,16,6,.94) 0%,rgba(52,16,6,.82) 45%,rgba(52,16,6,.62) 100%)}
+@keyframes kenburns{from{transform:scale(1.12)}to{transform:scale(1.03)}}
+.hero-inner{position:relative;z-index:2;height:100%;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;padding-top:var(--head);padding-right:min(46%,520px)}
+.hero-inner>*{min-width:0;max-width:100%}
+.hero .eyebrow{color:var(--sun)}
+.hero h1{font-size:clamp(48px,6vw,96px);max-width:11em;margin-top:18px;text-shadow:0 2px 30px rgba(0,0,0,.25)}
+.hero h1 .display{display:block;color:var(--sun);margin-top:.04em}
+.hero-sub{margin-top:20px;max-width:33em;font-size:clamp(17px,1.4vw,20px);color:rgba(255,255,255,.9)}
+.hero-meta{display:flex;flex-wrap:wrap;align-items:center;gap:10px 16px;margin-top:22px}
+.hero-quote{font-size:15px;font-style:italic;color:rgba(255,255,255,.88)}
+.hero-quote small{font-style:normal;opacity:.75}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px;align-items:center}
+.hero .btn-ghost{background:rgba(255,255,255,.92);border-color:transparent;color:var(--ink)}
+.hero-micro{font-size:13px;color:rgba(255,255,255,.8)}
+.hero-foot{flex-basis:100%;display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 16px}
+/* juego de Reyes: enlace discreto, sin competir con los botones */
+.hero-play{font-size:13px;color:rgba(255,255,255,.62);text-decoration:underline dotted rgba(255,255,255,.35);text-underline-offset:3px;white-space:nowrap;transition:color .2s}
+
+/* Abierto ahora: horario real de la ficha de Google */
+.status{display:inline-flex;align-items:center;gap:9px;padding:8px 14px;border-radius:999px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.24);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);font-size:14px;font-weight:600;color:#fff;text-decoration:none;white-space:nowrap}
+.status i{width:9px;height:9px;flex:none;border-radius:50%;background:#7BD88F;box-shadow:0 0 0 0 rgba(123,216,143,.7);animation:t-pulso 1.8s ease-out infinite}
+.status.closed i{background:#E7A15B;box-shadow:none;animation:none}
+
+/* Vitrina del hero: baraja de fotos reales que pasa sola; al tocarla, se lleva un bocado */
+.deck-wrap{position:absolute;z-index:3;right:max(clamp(16px,4vw,40px),calc((100% - var(--wrap))/2 + 40px));top:calc(50% + var(--head)/2);transform:translateY(-50%);width:clamp(280px,29vw,410px);width:min(clamp(280px,29vw,410px),max(210px,calc((100vh - var(--head) - 150px)*.75)));width:min(clamp(280px,29vw,410px),max(210px,calc((100svh - var(--head) - 150px)*.75)));aspect-ratio:3/4}
+.deck{position:relative;width:100%;height:100%;cursor:pointer;outline:none;-webkit-tap-highlight-color:transparent}
+.deck:focus-visible{outline:3px solid var(--sun);outline-offset:14px;border-radius:24px}
+.card{position:absolute;inset:0;margin:0;border-radius:22px;overflow:hidden;background:#fff;border:6px solid #fff;box-shadow:0 40px 70px -30px rgba(0,0,0,.7),0 10px 24px -8px rgba(0,0,0,.35);transition:transform .9s cubic-bezier(.2,.75,.2,1),opacity .6s,filter .6s;will-change:transform}
+.card img{width:100%;height:100%;object-fit:cover;display:block}
+.card figcaption{position:absolute;left:12px;right:12px;bottom:12px;padding:9px 14px;border-radius:999px;background:rgba(248,241,235,.95);color:var(--ink);font:800 14px/1.2 var(--font-display);letter-spacing:-.01em;text-align:center;opacity:0;transform:translateY(8px);transition:opacity .5s .35s,transform .5s .35s}
+.card[data-pos="0"]{transform:rotate(-3deg);z-index:4}
+.card[data-pos="0"] figcaption{opacity:1;transform:none}
+.card[data-pos="1"]{transform:translate(18%,-2%) rotate(7deg) scale(.93);z-index:3;filter:brightness(.85)}
+.card[data-pos="2"]{transform:translate(-16%,3%) rotate(-11deg) scale(.88);z-index:2;filter:brightness(.7)}
+.card[data-pos="3"],.card[data-pos="4"]{transform:translate(4%,5%) rotate(3deg) scale(.82);z-index:1;filter:brightness(.55)}
+.card[data-pos="4"]{opacity:0}
+.card.out{transform:translate(125%,6%) rotate(24deg);opacity:0;z-index:5}
+.deck:hover .card[data-pos="0"]{transform:rotate(-1deg) scale(1.02)}
+.card.chomp{animation:chomp .32s cubic-bezier(.3,1.6,.5,1)}
+@keyframes chomp{40%{transform:rotate(-1deg) scale(.96)}}
+.crumb{position:absolute;z-index:8;width:8px;height:8px;border-radius:45% 55% 40% 60%;background:#BD0052;pointer-events:none}
+.bite-hint{position:absolute;z-index:6;left:50%;bottom:-54px;transform:translateX(-50%);display:inline-flex;align-items:center;gap:8px;padding:7px 14px;border-radius:999px;background:rgba(52,16,6,.5);border:1px solid rgba(255,255,255,.2);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);font-size:13.5px;font-weight:600;color:#fff;white-space:nowrap;pointer-events:none;transition:opacity .4s}
+.bite-hint svg{width:16px;height:16px;color:var(--sun)}
+.bite-hint.gone{opacity:0}
+.seal{position:absolute;z-index:6;width:clamp(96px,8.8vw,124px);left:-15%;bottom:-6%;animation:spin 26s linear infinite;filter:drop-shadow(0 10px 20px rgba(0,0,0,.35))}
+.seal text{font:800 10.4px var(--font-display);fill:#fff;letter-spacing:.06em}
+.seal .seal-f{font:italic 400 40px Georgia,serif;fill:#F0006A;letter-spacing:0}
+@keyframes spin{to{transform:rotate(360deg)}}
+.rate-stk{position:absolute;z-index:7;right:-9%;top:-5%;display:grid;grid-template-columns:auto auto;align-items:center;gap:2px 10px;padding:12px 16px 12px 14px;border-radius:18px;background:#fff;color:var(--ink);text-decoration:none;transform:rotate(4deg);box-shadow:0 22px 40px -16px rgba(0,0,0,.55);transition:transform .3s}
+.rate-stk:hover{transform:rotate(1deg) scale(1.04)}
+.rate-stk .stars{grid-column:1/-1;display:flex;gap:2px;color:#F5B400}.rate-stk svg{width:19px;height:19px}
+.rate-stk b{font:800 40px/1 var(--font-display);letter-spacing:-.03em}
+.rate-stk small{font-size:13.5px;line-height:1.25;font-weight:700;color:var(--ink-soft)}
+.js-anim .deck-wrap{animation:deckin 1.2s .3s cubic-bezier(.2,.75,.2,1) both}
+@keyframes deckin{from{opacity:0;transform:translateY(-44%) rotate(6deg) scale(.9)}to{opacity:1;transform:translateY(-50%)}}
+@keyframes t-pulso{70%{box-shadow:0 0 0 8px transparent}100%{box-shadow:0 0 0 0 transparent}}
+@media (prefers-reduced-motion:reduce){.seal{animation:none}.card{transition:none}.status i{animation:none}}
+
+/* Reseñas */
+.rv-wrap{position:relative;overflow:hidden}
+.rv-wrap::before{content:"";position:absolute;inset:0;background:url(img/cafeteria-mesas.jpg) center/cover;filter:blur(8px) saturate(.9);transform:scale(1.08);opacity:.5}
+.rv-wrap::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(248,241,235,.94),rgba(248,241,235,.82) 50%,rgba(248,241,235,.96))}
+.rv-wrap>.wrap{position:relative;z-index:1}
+.rv-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;align-items:start}
+.rv{margin:0;padding:22px;border:1px solid var(--line);border-radius:var(--r-md);background:rgba(255,255,255,.88);display:grid;gap:14px}
+.rv-top{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.rv-stars{display:flex;gap:2px;color:#F5B400}.rv-stars svg{width:16px;height:16px}.rv-stars .off{opacity:.25}
+.rv-tag{font-size:12px;font-weight:700;color:var(--hibiscus-ink);background:rgba(189,0,82,.1);padding:4px 10px;border-radius:999px;white-space:nowrap}
+.rv blockquote{margin:0;font-size:16px;line-height:1.55}
+.rv figcaption{display:flex;align-items:center;gap:10px}
+.rv figcaption i{width:36px;height:36px;border-radius:50%;display:grid;place-items:center;color:#fff;font-style:normal;font-weight:700}
+.rv figcaption span{display:grid;line-height:1.25}.rv figcaption small{color:var(--ink-soft);font-size:13px}
+.rv-x{display:none}
+.rv-more{display:flex;flex-wrap:wrap;gap:6px 16px;align-items:baseline;justify-content:center;margin-top:30px;font-size:15px;color:var(--ink-soft)}
+.rv-more a{font-weight:700;color:var(--hibiscus-ink);text-decoration:none}
+
+/* La vitrina: carrete horizontal de trabajos reales */
+.reel{display:grid;grid-auto-flow:column;grid-auto-columns:clamp(230px,24vw,300px);gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;padding:4px clamp(16px,4vw,40px) 18px;margin-inline:calc(clamp(16px,4vw,40px)*-1);scrollbar-width:thin;scrollbar-color:var(--line) transparent}
+.reel figure{margin:0;scroll-snap-align:start;display:grid;gap:10px}
+.reel img{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:var(--r-md);box-shadow:0 18px 30px -22px rgba(43,30,25,.6)}
+.reel figcaption{display:grid;gap:2px;font-size:15px;color:var(--ink-soft)}
+.reel figcaption b{font:800 20px/1.2 var(--font-display);letter-spacing:-.02em;color:var(--ink)}
+.reel-nav{display:flex;gap:8px;justify-content:flex-end;margin-top:-6px}
+.reel-nav button{all:unset;cursor:pointer;width:44px;height:44px;border-radius:50%;display:grid;place-items:center;border:1.5px solid var(--line);color:var(--ink);transition:border-color .2s}
+.reel-nav button:hover{border-color:var(--ink)}.reel-nav svg{width:18px;height:18px}
+.reel-nav .prev svg{transform:rotate(180deg)}
+
+/* Ventajas */
+.perks{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.perks li{display:grid;gap:10px;align-content:start;padding:12px 12px 22px;border-radius:var(--r-lg);background:var(--shell);box-shadow:0 24px 40px -28px rgba(52,16,6,.6)}
+.perks img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:16px;margin-bottom:6px}
+.perks h3,.perks p{padding-inline:8px}
+.perks h3{font-size:23px;color:var(--ink)}
+.perks p{color:var(--ink-soft);font-size:16px}
+
+/* El salón: bloque partido foto + texto */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,6vw,88px);align-items:center}
+.split-img{position:relative;margin:0}
+.split-img img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:var(--r-lg);box-shadow:var(--shadow)}
+.split-img .mini{position:absolute;width:42%;right:-6%;bottom:-8%;aspect-ratio:3/4;border:6px solid #fff;border-radius:18px;transform:rotate(4deg)}
+.split-txt{display:grid;gap:18px;justify-items:start}
+.ticks{list-style:none;margin:4px 0 0;padding:0;display:grid;gap:10px;font-size:17px}
+.ticks li{display:flex;gap:12px;align-items:flex-start}
+.ticks li::before{content:"✦";width:24px;height:24px;flex:none;margin-top:1px;border-radius:50%;display:grid;place-items:center;background:var(--hibiscus);color:#fff;font-size:12px}
+
+/* Encargos */
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.svc{display:grid;grid-template-rows:auto 1fr;background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);overflow:hidden;transition:transform .3s,box-shadow .3s}
+.svc:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.svc .ph{overflow:hidden}
+.svc img{width:100%;aspect-ratio:4/3;object-fit:cover;transition:transform .8s cubic-bezier(.2,.7,.2,1)}
+.svc:hover img{transform:scale(1.04)}
+.svc>div{display:grid;gap:10px;align-content:start;padding:22px 22px 24px}
+.svc h3{font-size:26px}
+.svc p{color:var(--ink-soft);font-size:16px}
+.svc-cta{display:inline-flex;align-items:center;gap:8px;margin-top:6px;font-weight:700;font-size:15px;color:var(--hibiscus-ink);text-decoration:none}
+.svc-cta svg{width:16px;height:16px;transition:transform .25s}
+.svc-cta:hover svg{transform:translateX(4px)}
+.course{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(24px,4vw,56px);align-items:center;margin-top:26px;padding:clamp(18px,3vw,28px);border-radius:var(--r-lg);background:#fff;border:1px solid var(--line)}
+.course img{width:100%;aspect-ratio:4/3;object-fit:cover;object-position:50% 30%;border-radius:var(--r-md)}
+.course>div{display:grid;gap:12px;justify-items:start}
+.course h3{font-size:clamp(26px,2.6vw,34px)}
+.course p{color:var(--ink-soft)}
+
+/* Pasos */
+.steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.steps li{display:grid;gap:10px;align-content:start;padding:26px;border-radius:var(--r-lg);background:#fff;border:1px solid var(--line)}
+.steps b{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;background:var(--hibiscus);color:#fff;font-family:var(--font-display);font-weight:800;font-size:20px}
+.steps h3{font-size:24px}
+.steps p{color:var(--ink-soft);font-size:16px}
+
+/* Encargo CTA */
+.book-cta{display:grid;grid-template-columns:1fr auto;gap:32px;align-items:end}
+.book-cta>div{display:grid;gap:16px}
+.book-perks{list-style:none;margin:6px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:8px 20px;font-size:15px;color:rgba(246,237,227,.85)}
+.book-perks li::before{content:"✓ ";color:var(--sun);font-weight:700}
+.book-cta .btn-light{background:#fff}
+.book-cta .btn{min-height:58px;padding:0 30px;font-size:17px}
+
+/* Borrador */
+.draft{outline:3px dashed #E5B300;outline-offset:-12px}
+.incl{list-style:none;margin:0;padding:0;display:grid;gap:10px;font-size:18px}
+mark{background:#FFE58A;padding:0 4px;border-radius:4px}
+
+/* Visita y FAQ */
+.visit{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,6vw,88px);align-items:start}
+.visit>div:first-child{display:grid;gap:16px;justify-items:start}
+.shops{display:grid;gap:14px;width:100%}
+.shop{display:grid;grid-template-columns:150px 1fr;gap:16px;align-items:start;background:#fff;border:1px solid var(--line);border-radius:var(--r-md);padding:12px}
+.shop img{width:100%;height:100%;min-height:150px;object-fit:cover;border-radius:12px}
+.shop>div{display:grid;gap:4px;align-content:start}
+.shop h3{font-size:21px}.shop h3 small{font:600 13px var(--font-body);letter-spacing:0;color:var(--ink-soft)}
+.shop p{font-size:15px;color:var(--ink-soft)}
+.shop .hours{margin-top:2px;font-size:14.5px}.shop .hours th{padding:4px 14px 4px 0}.shop .hours td{padding:4px 0}
+.shop-l{display:flex;flex-wrap:wrap;gap:6px 16px;margin-top:4px}
+.shop-l a{display:inline-flex;align-items:center;gap:6px;font-weight:700;color:var(--hibiscus-ink);text-decoration:none}
+.shop-l svg{width:16px;height:16px}
+.sign{margin:6px 0 0;border-radius:var(--r-md);overflow:hidden;box-shadow:var(--shadow);max-width:440px}
+.sign img{width:100%;aspect-ratio:16/10;object-fit:cover}
+.hours{border-collapse:collapse;margin-top:8px;font-size:16px}
+.hours th{text-align:left;font-weight:700;padding:8px 24px 8px 0;color:var(--ink)}
+.hours td{padding:8px 0;color:var(--ink-soft);font-variant-numeric:tabular-nums}
+.hours tr+tr{border-top:1px solid var(--line)}
+.hours tr.today th,.hours tr.today td{color:var(--hibiscus-ink)}
+.contact{list-style:none;margin:6px 0 0;padding:0;display:grid;gap:10px}
+.contact li{display:flex;align-items:center;gap:10px}
+.contact svg{width:20px;height:20px;flex:none;color:var(--hibiscus)}
+.contact a{text-decoration:none;font-weight:600}
+.contact a:hover{color:var(--hibiscus)}
+.faq{display:grid;gap:10px}
+.faq details{background:#fff;border:1px solid var(--line);border-radius:var(--r-md);padding:4px 20px}
+.faq summary{cursor:pointer;list-style:none;padding:16px 0;font-weight:700;display:flex;justify-content:space-between;gap:12px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font-size:22px;line-height:1;color:var(--hibiscus);transition:transform .25s}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq details p{padding:0 0 18px;color:var(--ink-soft)}
+.map{margin-top:10px;border-radius:var(--r-md);overflow:hidden;border:1px solid var(--line);height:260px;background:var(--shell-2)}
+.map iframe{width:100%;height:100%;border:0;display:block}
+
+/* Cierre y pie */
+.final{padding-block:clamp(80px,11vw,140px);text-align:center}
+.final .wrap{display:grid;justify-items:center;gap:18px}
+.final h2{font-size:clamp(40px,5.6vw,76px);max-width:12em}
+.final h2 .display{display:block}
+.final .hero-ctas{justify-content:center;margin-top:8px}
+.foot{background:var(--jungle);color:rgba(248,241,235,.75);overflow:hidden}
+.foot-logo{display:flex;justify-content:center;padding-top:44px}
+.foot-logo img{width:clamp(180px,22vw,280px)}
+.foot .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;font-size:14px;padding-block:22px;margin-top:34px;border-top:1px solid rgba(248,241,235,.12)}
+.foot a{text-decoration:none}
+
+/* Animaciones de entrada */
+.js-anim [data-reveal]{opacity:0;transform:translateY(32px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1)}
+.js-anim [data-reveal].in{opacity:1;transform:none}
+.js-anim .hero-inner>*{animation:rise .9s cubic-bezier(.2,.7,.2,1) both}
+.js-anim .hero-inner>:nth-child(2){animation-delay:.12s}.js-anim .hero-inner>:nth-child(3){animation-delay:.24s}.js-anim .hero-inner>:nth-child(4){animation-delay:.36s}.js-anim .hero-inner>:nth-child(5){animation-delay:.48s}
+@keyframes rise{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+
+.mbar{display:none}
+
+@media (max-width:1100px){.nav a:nth-child(n+4){display:none}.perks{grid-template-columns:1fr 1fr}}
+@media (max-width:960px){
+  .nav{display:none}
+  .svc-grid{grid-template-columns:1fr 1fr}
+  .play-grid{grid-template-columns:1fr}
+  .rv-grid{grid-template-columns:1fr 1fr}
+  .split,.visit,.book-cta,.course{grid-template-columns:1fr}
+  .split-img{max-width:520px}
+  .steps{grid-template-columns:1fr}
+  .hero{height:auto;min-height:0;max-height:none;display:flex;flex-direction:column}
+  .hero-inner{height:auto;padding-right:clamp(16px,4vw,40px);padding-top:30px;padding-bottom:56px}
+  .deck-wrap{position:relative;order:-1;right:auto;top:auto;transform:none;margin:calc(var(--head) + 30px) auto 0;width:min(50vw,280px)}
+  .js-anim .deck-wrap{animation-name:deckin-m}
+  .seal{left:-24%;bottom:auto;top:-6%}
+  .rate-stk{right:-26%;top:6%;padding:9px 12px 10px;border-radius:14px;gap:2px 8px}
+  .rate-stk b{font-size:28px}
+  .rate-stk svg{width:14px;height:14px}
+  .rate-stk small{font-size:12px}
+  .bite-hint{display:none}
+  .hero-bg::after{background:radial-gradient(70% 40% at 50% 26%,rgba(255,92,157,.4),transparent 70%),linear-gradient(180deg,rgba(52,16,6,.74),rgba(52,16,6,.93) 55%)}
+  .shop{grid-template-columns:110px 1fr}.shop img{min-height:120px}
+}
+@keyframes deckin-m{from{opacity:0;transform:translateY(16px) rotate(6deg) scale(.9)}to{opacity:1;transform:none}}
+@media (max-width:640px){
+  body{font-size:16px;padding-bottom:76px}
+  .hide-m{display:none}
+  .top .btn{display:none}
+  .brand img{width:auto;height:44px}
+  .brand small{display:none}
+  .hero-inner{padding-top:24px;padding-bottom:34px}
+  .deck-wrap{margin-top:calc(var(--head) + 22px);width:min(46vw,250px,28vh);width:min(46vw,250px,28svh)}
+  .card{border-width:4px;border-radius:18px}
+  .card figcaption{font-size:13px;padding:7px 10px;left:8px;right:8px;bottom:8px}
+  .seal{width:84px;left:-30%}
+  .rate-stk{right:-40%;top:2%;transform:rotate(5deg) scale(.92);transform-origin:left top}
+  .hero h1{font-size:clamp(32px,10.4vw,52px);margin-top:12px}
+  .hero-sub{margin-top:12px;font-size:16px}
+  .hero-meta{margin-top:14px}
+  .hero-quote{display:none}
+  .status{font-size:13px;padding:7px 12px;white-space:normal}
+  .hero-meta,.hero-ctas{max-width:100%}
+  .hero .hero-ctas .btn-primary,.hero-micro{display:none}
+  .hero .eyebrow{font-size:11px;letter-spacing:.1em}
+  .hero .eyebrow .hide-m{display:none}
+  .hero .hero-ctas{margin-top:14px}
+  .hero .hero-ctas .btn-ghost{min-height:46px}
+  .hero-foot{margin-top:2px}
+  .rv-grid{grid-template-columns:1fr}
+  .rv-grid .rv:nth-child(n+4){display:none}
+  .svc-grid{grid-template-columns:1fr}
+  .play{grid-template-columns:1fr}.play img{aspect-ratio:16/10;min-height:0}
+  .perks{grid-template-columns:1fr}
+  .split-img .mini{right:-2%;width:38%}
+  .book-cta .btn{width:100%}
+  .final .hero-ctas{width:100%}.final .hero-ctas .btn{flex:1}
+  .mbar{display:flex;gap:6px;position:fixed;left:12px;right:12px;bottom:calc(10px + env(safe-area-inset-bottom,0px));z-index:70;padding:6px;border-radius:999px;background:rgba(248,241,235,.82);-webkit-backdrop-filter:blur(18px) saturate(1.4);backdrop-filter:blur(18px) saturate(1.4);border:1px solid rgba(43,30,25,.1);box-shadow:0 14px 34px -14px rgba(28,19,15,.5);transition:background .4s,border-color .4s,opacity .3s,transform .3s}
+  .mbar.glass{background:rgba(52,16,6,.5);border-color:rgba(255,255,255,.18)}
+  .mbar.off{opacity:0;transform:translateY(16px);pointer-events:none}
+  .mbar .btn{flex:1;min-width:0;min-height:48px;white-space:nowrap;padding:0 12px;gap:8px;font-size:15px}
+  .mbar .btn-ghost{flex:0 0 48px;width:48px;padding:0;border-color:transparent;background:rgba(52,16,6,.08)}
+  .ticker span{font-size:13px;padding-block:12px}
+  .mbar.glass .btn-ghost{background:rgba(255,255,255,.16);color:#fff}
+}
+
+@media (max-width:340px){.mbar .btn-primary svg{display:none}}
+@media (min-width:961px) and (max-width:1100px){.deck-wrap{right:56px}}
+
+/* Temporadas: el eyebrow del hero se vuelve una píldora con punto latiendo cuando hay fecha cerca */
+.hero .eyebrow.t-on{padding:6px 14px 6px 10px;border-radius:999px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.22);color:#fff;-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}
+.hero .eyebrow.t-on::before{width:8px;height:8px;border-radius:50%;-webkit-mask:none;mask:none;background:var(--sun);box-shadow:0 0 0 0 var(--sun);animation:t-pulso 1.8s ease-out infinite}
+@media (prefers-reduced-motion:reduce){.hero .eyebrow.t-on::before{animation:none}}
+
+/* Botones flotantes (cabecera y barra móvil): aparecen tras un mínimo scroll, no al pintar el hero */
+.top .btn-primary{transition:opacity .35s,transform .35s cubic-bezier(.2,.7,.2,1),background .25s,box-shadow .25s}
+html.cta-wait .top .btn-primary{opacity:0;transform:translateY(-8px);pointer-events:none}
+.mbar{transition:transform .35s cubic-bezier(.2,.7,.2,1),opacity .35s,background .4s,border-color .4s}
+html.cta-wait .mbar{transform:translateY(150%)!important;opacity:0!important;pointer-events:none}
+.ticker::-webkit-scrollbar{display:none}
+.shop>div{min-width:0}.shop p,.shop h3{overflow-wrap:anywhere}
+@media (max-width:420px){.shop{grid-template-columns:1fr}.shop img{min-height:0;aspect-ratio:16/9;height:auto}.shop .hours th{padding-right:10px}}
+
+/* ---- Paneles (de la referencia Aloha) ---- */
+.bk{position:fixed;inset:0;z-index:120}
+.bk[hidden]{display:none}
+.bk-scrim{position:absolute;inset:0;background:rgba(52,16,6,.5);opacity:0;transition:opacity .35s ease}
+.bk.open .bk-scrim{opacity:1}
+.bk-panel{position:absolute;top:0;right:0;bottom:0;width:min(480px,100%);background:var(--shell);display:flex;flex-direction:column;box-shadow:-30px 0 80px -30px rgba(52,16,6,.5);transform:translateX(100%);transition:transform .42s cubic-bezier(.2,.8,.2,1)}
+.bk.open .bk-panel{transform:none}
+.bk-head{display:grid;grid-template-columns:44px 1fr 44px;align-items:center;gap:8px;padding:calc(10px + env(safe-area-inset-top,0px)) 12px 10px;border-bottom:1px solid var(--line);background:#fff}
+.bk-head .t{text-align:center;display:grid;gap:2px}
+.bk-head .t span{font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft)}
+.bk-head .t b{font-family:var(--font-display);font-weight:400;font-size:20px;color:var(--hibiscus);line-height:1.1}
+.bk-ib{all:unset;cursor:pointer;width:44px;height:44px;border-radius:50%;display:grid;place-items:center;color:var(--ink)}
+.bk-ib:hover{background:var(--shell-2)}
+.bk-ib:focus-visible{outline:3px solid var(--hibiscus)}
+.bk-ib svg{width:22px;height:22px}
+.bk-ib[disabled]{visibility:hidden}
+.bk-prog{height:4px;background:var(--shell-2)}
+.bk-prog i{display:block;height:100%;background:linear-gradient(90deg,var(--hibiscus),var(--sun));transform-origin:left;transition:transform .35s ease}
+.bk-body{flex:1;overflow-y:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch;padding:28px 22px 24px}
+.bk-pane{display:grid;gap:18px;align-content:start}
+.bk-pane[hidden]{display:none}
+.bk-pane h3{font-size:clamp(26px,6vw,32px);line-height:1.1}
+.bk-pane .sub{color:var(--ink-soft);margin-top:-8px}
+.bk-opts{display:grid;gap:10px}
+.bk-opts label{position:relative;cursor:pointer;display:block}
+.bk-opts input{position:absolute;opacity:0;inset:0;margin:0;cursor:pointer}
+.bk-opts span{display:flex;align-items:center;justify-content:space-between;min-height:58px;padding:0 18px;border-radius:16px;border:1.5px solid var(--line);background:#fff;font-size:17px;font-weight:600;transition:border-color .2s,background .2s,color .2s}
+.bk-opts span::after{content:"";width:22px;height:22px;border-radius:50%;border:2px solid var(--line);flex:none;transition:all .2s}
+.bk-opts input[type=checkbox]+span::after{border-radius:7px}
+.bk-opts input:checked+span{border-color:var(--hibiscus);background:#FFE4EE;color:var(--hibiscus-ink)}
+.bk-opts input:checked+span::after{border-color:var(--hibiscus);background:var(--hibiscus) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='none' stroke='white' stroke-width='3.2' stroke-linecap='round' stroke-linejoin='round' d='M6 12l4 4 8-8'/%3E%3C/svg%3E") center/14px no-repeat}
+.bk-opts input:focus-visible+span{outline:3px solid var(--hibiscus);outline-offset:2px}
+.bk-opts.row{grid-template-columns:repeat(auto-fit,minmax(0,1fr));gap:8px}
+.bk-opts.row span{justify-content:center;min-height:50px;padding:0 10px;font-size:15px;text-align:center}
+.bk-opts.row span::after{display:none}
+.bk-field{display:grid;gap:8px;min-width:0}
+.bk-field>span{font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-soft)}
+.bk-field input,.bk-field textarea{display:block;width:100%;min-width:0;max-width:100%;min-height:56px;padding:14px 16px;border-radius:14px;border:1.5px solid var(--line);background:#fff;font:500 17px var(--font-body);color:var(--ink);-webkit-appearance:none;appearance:none}
+.bk-field input[type=date]{text-align:left}
+.bk-field input::-webkit-date-and-time-value{text-align:left}
+.bk-field textarea{min-height:96px;resize:vertical}
+.cal{background:#fff;border:1.5px solid var(--line);border-radius:18px;padding:10px 12px 14px}
+.cal-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:6px}
+.cal-head b{font-size:17px}
+.cal-head .bk-ib[disabled]{visibility:visible;opacity:.25;cursor:default}
+.cal-dow,.cal-grid{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:4px;text-align:center}
+.cal-dow span{font-size:12px;font-weight:700;color:var(--ink-soft);padding:4px 0}
+.cal-dow .we,.cal-grid .we{color:var(--hibiscus)}
+.cal-grid button{all:unset;box-sizing:border-box;cursor:pointer;aspect-ratio:1;max-height:48px;width:100%;display:grid;place-items:center;border-radius:12px;font-weight:600;font-size:15px;font-variant-numeric:tabular-nums;color:var(--ink);transition:background .15s,color .15s}
+.cal-grid button.we{color:var(--hibiscus)}
+.cal-grid button:hover:not([disabled]){background:var(--shell-2)}
+.cal-grid button[disabled]{opacity:.28;cursor:default}
+.cal-grid button{position:relative}
+.cal-grid button.today{opacity:1;color:var(--ink);box-shadow:inset 0 0 0 2px var(--sun);background:#FFE4EE}
+.cal-grid button.today::after{content:"";position:absolute;left:50%;bottom:12%;width:5px;height:5px;margin-left:-2.5px;border-radius:50%;background:#BD0052}
+.cal-legend{display:flex;align-items:center;gap:6px;margin:10px 2px 0;font-size:13px;font-weight:600;color:var(--ink-soft)}
+.cal-legend i{width:14px;height:14px;border-radius:5px;box-shadow:inset 0 0 0 2px var(--sun);background:#FFE4EE;position:relative;flex:none}
+.cal-legend i::after{content:"";position:absolute;left:50%;bottom:2px;width:4px;height:4px;margin-left:-2px;border-radius:50%;background:#BD0052}
+.cal-grid button[aria-pressed="true"]{background:var(--hibiscus);color:#fff}
+.cal-grid button:focus-visible{outline:3px solid var(--hibiscus);outline-offset:1px}
+.cal-sel{margin:4px 0 0;font-weight:600;color:var(--ink-soft)}
+.cal-sel.on{color:var(--hibiscus-ink)}
+.bk-field input:focus,.bk-field textarea:focus{outline:none;border-color:var(--hibiscus)}
+.bk-field input[aria-invalid="true"]{border-color:#C6283D;background:#FFF2F4}
+.stepper{display:grid;grid-template-columns:56px 1fr 56px;align-items:center;background:#fff;border:1.5px solid var(--line);border-radius:16px;overflow:hidden}
+.stepper button{all:unset;cursor:pointer;height:56px;display:grid;place-items:center;font-size:26px;font-weight:600;color:var(--hibiscus)}
+.stepper button:active{background:var(--shell-2)}
+.stepper button:focus-visible{outline:3px solid var(--hibiscus);outline-offset:-3px}
+.stepper output{text-align:center;font-size:22px;font-weight:700;font-variant-numeric:tabular-nums}
+.bk-foot{padding:12px 22px calc(14px + env(safe-area-inset-bottom,0px));border-top:1px solid var(--line);background:#fff;display:grid;gap:8px}
+.bk-foot .btn{width:100%;min-height:56px;font-size:17px}
+.bk-foot [hidden]{display:none!important}
+.f-error{margin:0;color:#B3213A;font-weight:600;font-size:15px}
+.btn-wa{background:#1FA855;color:#fff;box-shadow:0 12px 24px -12px rgba(31,168,85,.8);width:100%;white-space:nowrap}
+.btn-wa:hover{background:#178F47}
+.btn-wa svg{width:22px;height:22px}
+.f-preview{margin:0;white-space:pre-wrap;font:16px/1.5 var(--font-body);background:#E7FFDB;border-radius:16px 16px 16px 4px;padding:16px 18px;color:#123;box-shadow:0 1px 0 rgba(0,0,0,.06)}
+.f-copy{all:unset;cursor:pointer;justify-self:center;font-size:14px;font-weight:600;color:var(--hibiscus-ink);text-decoration:underline;text-underline-offset:3px;padding:4px 8px}
+.f-copy:focus-visible{outline:3px solid var(--hibiscus);border-radius:6px}
+.f-hint{margin:0;font-size:13px;color:var(--ink-soft);text-align:center}
+
+
+.hrs{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.stepper.sm{grid-template-columns:40px 1fr 40px;border-radius:14px}
+.stepper.sm button{height:44px;font-size:22px}
+.stepper.sm button[disabled]{opacity:.25;cursor:default}
+.stepper.sm output{font-size:18px}
+.hrs-out{margin:-4px 0 0;font-size:14px;font-weight:600;color:var(--hibiscus-ink)}
+/* Panel compacto: ningún paso necesita scroll */
+.bk-body{padding:18px 18px 14px}
+.bk-pane{gap:14px}
+.bk-pane h3{font-size:24px}
+.bk-pane .sub{margin-top:-6px;font-size:15px}
+.bk-field{gap:6px}
+.bk-field>span{font-size:12px}
+.bk-opts{gap:8px}
+.bk-opts span{min-height:50px;font-size:16px;border-radius:14px}
+.bk-opts.row span{min-height:44px}
+.bk-opts.grid2{grid-template-columns:1fr 1fr}
+.bk-opts.grid2 span{min-height:44px;padding:0 12px;font-size:14px}
+.bk-opts.grid2 span::after{width:18px;height:18px}
+.bk-field input,.bk-field textarea{min-height:48px;padding:11px 14px;font-size:16px}
+.bk-field textarea{min-height:76px}
+.stepper{grid-template-columns:52px 1fr 52px}
+.stepper button{height:48px}
+.cal{padding:6px 8px 10px}
+.cal-head{margin-bottom:2px}
+.cal-head .bk-ib{width:38px;height:38px}
+.cal-dow span{padding:2px 0}
+.cal-grid{gap:2px}
+.cal-grid button{aspect-ratio:auto;height:clamp(34px,5.2vh,44px)}
+.cal-legend{margin-top:6px;font-size:12px}
+.cal-sel{margin:0;font-size:14px}
+.f-preview{font-size:14px;padding:12px 14px}
+.bk-foot{padding:10px 18px calc(10px + env(safe-area-inset-bottom,0px));gap:6px}
+.bk-foot .btn{min-height:50px}
+.bk-head{padding-block:calc(6px + env(safe-area-inset-top,0px)) 6px}
+@media (max-height:700px){
+  .bk-pane h3{font-size:22px}
+  .bk-opts span{min-height:46px}
+  .bk-opts.row span,.bk-opts.grid2 span{min-height:40px}
+  .stepper button{height:44px}
+  .cal-grid button{height:32px;font-size:14px}
+  .bk-body{padding-top:14px}
+  .f-preview{font-size:13px;line-height:1.4;padding:10px 12px}
+  .bk-pane .sub{font-size:13.5px}
+}
+@media (max-height:620px){.bk-pane{gap:10px}.bk-pane h3{font-size:20px}.f-preview{font-size:12.5px;line-height:1.35}}
+.rvd-body{display:grid;grid-template-columns:minmax(0,1fr);gap:18px;align-content:start;overflow-x:hidden;overscroll-behavior-x:none;touch-action:pan-y}
+.rvd .bk-panel{overflow-x:hidden;max-width:100vw}
+.rvd-body>*,.rvd-list>*{min-width:0;max-width:100%}
+.rvd-list .rv,.rvd-list .rv *{overflow-wrap:anywhere}
+.rvd-list .rv-top{flex-wrap:wrap}.rvd-list .rv-tag{white-space:normal}
+.rvd-sum{display:grid;grid-template-columns:auto minmax(0,1fr);gap:22px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:var(--r-md);padding:18px 20px}
+.rvd-score{display:grid;justify-items:center;gap:4px}
+.rvd-score b{font-size:44px;line-height:1;font-weight:700;color:var(--ink)}
+.rvd-score small{font-size:13px;color:var(--ink-soft)}
+.rvd-dist{list-style:none;margin:0;padding:0;display:grid;gap:5px;font-size:13px;color:var(--ink-soft)}
+.rvd-dist li{display:grid;grid-template-columns:12px 1fr 22px;gap:8px;align-items:center}
+.rvd-dist i{height:8px;border-radius:99px;background:var(--shell-2);overflow:hidden}.rvd-dist b{display:block;height:100%;background:#F5B400;border-radius:99px}
+.rvd-dist em{font-style:normal;text-align:right}
+.rvd-h{margin:6px 0 0;font-size:17px}
+.rvd-list{display:grid;grid-template-columns:minmax(0,1fr);gap:12px}
+.rvd-list .rv{background:#fff;opacity:1!important;transform:none!important}
+.rvd-map{border-radius:var(--r-md);overflow:hidden;border:1px solid var(--line);background:var(--shell-2);height:300px;flex:none}
+.rvd-map iframe{width:100%;height:100%;border:0;display:block}
+.rvd-note{margin:0;font-size:13px;color:var(--ink-soft)}
+.rvd-foot{padding:12px 16px calc(12px + env(safe-area-inset-bottom,0px));border-top:1px solid var(--line);background:#fff}
+.rvd-foot .btn{width:100%}
+/* Subir arriba */
+.totop{position:fixed;right:20px;bottom:24px;z-index:65;width:48px;height:48px;border-radius:50%;border:1px solid rgba(255,255,255,.6);background:rgba(255,255,255,.72);-webkit-backdrop-filter:blur(14px) saturate(1.6);backdrop-filter:blur(14px) saturate(1.6);color:var(--ink);display:grid;place-items:center;cursor:pointer;box-shadow:0 10px 30px -10px rgba(58,36,48,.4);opacity:0;transform:translateY(12px) scale(.9);pointer-events:none;transition:opacity .3s,transform .3s}
+.totop.on{opacity:1;transform:none;pointer-events:auto}
+.totop:hover{transform:translateY(-2px)}
+.totop svg{width:22px;height:22px}
+@media (max-width:960px){.totop{bottom:calc(86px + env(safe-area-inset-bottom,0px));right:16px;width:44px;height:44px}}
+@media (max-width:640px){.bk-panel{width:100%;transform:translateY(100%);box-shadow:none}}
+.bk-head .t b{font-style:normal}
+.bk-opts input:checked+span{background:#FFE4EE}
+.btn-wa{font-size:16px}
+@media (max-height:620px){.cal-legend{display:none}}
+.bk-pane h3:focus{outline:none}
+
+.bk-head .t b{font-weight:800;letter-spacing:-.02em}
+.bk-opts input:checked+span{background:#FFE4EE}
+.btn-wa{font-size:16px}
+.bk-pane h3:focus{outline:none}
+#f-call{width:100%}
+.f-preview{background:#fff;border:1.5px solid var(--line);border-radius:16px;color:var(--ink)}
+.f-call{background:#fff}
+</style>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-cake" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 21h16M5 21v-7a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v7"/><path d="M5 16c1.2 1 2.3 1 3.5 0s2.3-1 3.5 0 2.3 1 3.5 0 2.3-1 3.5 0M12 12V8.5"/><path d="M12 4.2c.9.9.9 2.3 0 2.8-.9-.5-.9-1.9 0-2.8z"/></g></symbol>
+  <symbol id="i-croissant" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 15.5C4 10 7.6 6 12 6s8 4 9 9.5c-2.6-1.6-5.6-2.3-9-2.3s-6.4.7-9 2.3z"/><path d="M8.2 7.4 9.6 13M12 6.2V13M15.8 7.4 14.4 13"/></g></symbol>
+  <symbol id="i-croissant-f" viewBox="0 0 24 24"><path fill="#C98A3C" d="M2.2 15.8C3.2 9.6 7.3 5.6 12 5.6s8.8 4 9.8 10.2c-2.9-1.9-6.2-2.8-9.8-2.8s-6.9.9-9.8 2.8z"/><path fill="none" stroke="#FBF6EF" stroke-width="1.3" stroke-linecap="round" d="M7.6 7.4 9.4 13M12 5.8V12.9M16.4 7.4 14.6 13"/></symbol>
+  <symbol id="i-cup" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9h13v5a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5zM17 10.5h1.5a2.5 2.5 0 0 1 0 5H17M8 2.5c-.6.8-.6 1.7 0 2.5M12 2.5c-.6.8-.6 1.7 0 2.5"/></g></symbol>
+  <symbol id="i-basket" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10h18l-2 10H5zM7.5 10l3-6M16.5 10l-3-6M9 14v3M12 14v3M15 14v3"/></g></symbol>
+  <symbol id="i-whisk" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 10 4 20M14.5 3.5c3.5 0 6 2.5 6 6 0 2-1.5 3.5-3.5 3.5-3 0-6-3-6-6 0-2 1.5-3.5 3.5-3.5zM12.6 5.6c1.6 2.8 3.8 5 6.6 6.6"/></g></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></symbol>
+  <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .2-1.3c-.1-.1-.3-.2-.6-.3z"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 22s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></g></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></g></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2.8l2.8 5.9 6.4.8-4.7 4.4 1.2 6.4L12 17.2l-5.7 3.1 1.2-6.4L2.8 9.5l6.4-.8z"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-hand" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 13V5.5a1.5 1.5 0 0 1 3 0V12M11 11V4.5a1.5 1.5 0 0 1 3 0V12M14 11V6.5a1.5 1.5 0 0 1 3 0V14c0 4-2.5 7-6 7s-5-2-6.5-4.5L3 13.5a1.6 1.6 0 0 1 2.6-1.8L8 14"/></g></symbol>
+  <symbol id="i-heart" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" d="M12 20s-7.5-4.6-9.2-9.6C1.7 7 3.9 4 7 4c2 0 3.5 1.1 5 3 1.5-1.9 3-3 5-3 3.1 0 5.3 3 4.2 6.4C19.5 15.4 12 20 12 20z"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="M4 7l8 6 8-6"/></g></symbol>
+</svg>
+
+<div class="loader" id="loader" aria-hidden="true">
+  <div class="ld-in">
+    <div class="ld-mark"><svg class="ld-ring" viewBox="0 0 140 140"><circle cx="70" cy="70" r="66"/><circle class="ld-arc" cx="70" cy="70" r="66" pathLength="100"/></svg><img src="img/logo-crema.png" alt=""></div>
+    <small class="ld-sub">Hecho en Ajalvir · desde el obrador</small>
+  </div>
+</div>
+<script>
+/* ---------- Loader con el logo: en cada entrada o recarga; se va al cargar la página (mín. 0,9 s, máx. 3 s) ---------- */
+(function(){var d=document.documentElement,l=document.getElementById('loader'),t0=Date.now(),done=false;d.classList.add('loading');
+ function go(){if(done)return;done=true;setTimeout(function(){l.classList.add('out');d.classList.remove('loading');setTimeout(function(){l.remove()},900)},Math.max(0,900-(Date.now()-t0)))}
+ if(document.readyState==='complete')go();else window.addEventListener('load',go);setTimeout(go,3000);})();
+</script>
+
+<header class="top glass" id="top">
+  <div class="wrap">
+    <a class="brand" href="#hero" aria-label="Fast Pan y Pasteles, pastelería. Inicio"><img src="img/logo.png" alt=""><small>Pastelería<br>Obrador propio</small></a>
+    <nav class="nav" aria-label="Secciones">
+      <a href="#vitrina">Las tartas</a>
+      <a href="#resenas">Opiniones</a>
+      <a href="#obrador">El obrador</a>
+      <a href="#encargos">Encargos</a>
+      <a href="#visita">Tiendas</a>
+    </nav>
+    <a class="btn btn-primary" href="#encargar"><svg><use href="#i-cake"/></svg>Encargar</a>
+  </div>
+  <div class="progress" id="progress"></div>
+</header>
+
+<main>
+  <section class="hero" id="hero">
+    <picture class="hero-bg" aria-hidden="true"><img src="img/cafeteria-obrador.jpg" alt="" fetchpriority="high" decoding="async"></picture>
+    <div class="hero-inner wrap">
+      <span class="eyebrow" data-t="eyebrow">Pastelería artesanal · Ajalvir<span class="hide-m"> y Paracuellos</span></span>
+      <h1 data-t="h1">Lo importante <span class="display">se celebra</span></h1>
+      <p class="hero-sub" data-t="sub">Tartas, palmeritas y pastelería de nuestro obrador de Ajalvir, con cafetería en Ajalvir y Paracuellos de Jarama. <span class="hide-m">Encarga tu tarta y recógela en la tienda que prefieras.</span></p>
+      <div class="hero-meta">
+        <a class="status" id="status" href="#visita"><i></i><span>Horario de hoy</span></a>
+        <span class="hero-quote">«Lo de las palmeras de chocolate es algo de locos!!!» <small>— Pedro C., en Google</small></span>
+      </div>
+      <div class="hero-ctas">
+        <a class="btn btn-primary" href="#encargar"><svg><use href="#i-cake"/></svg><span data-t="cta">Encargar mi tarta</span></a>
+        <a class="btn btn-ghost" href="#vitrina">Ver las tartas</a>
+        <div class="hero-foot"><small class="hero-micro" data-t="micro">Te confirmamos precio y disponibilidad · sin compromiso</small></div>
+      </div>
+    </div>
+    <div class="deck-wrap">
+      <div class="deck" id="deck" role="button" tabindex="0" aria-label="Dale un bocado y pasa a la siguiente foto">
+        <figure class="card"><img src="img/tarta-fresa-nata.jpg" alt="Tarta de fresa y nata con fresas naturales y nata montada" fetchpriority="high"><figcaption>Fresa y nata</figcaption></figure>
+        <figure class="card"><img src="img/tarta-milhojas.jpg" alt="Milhojas de hojaldre caramelizado con crema, nata y frambuesas"><figcaption>Milhojas de frambuesa</figcaption></figure>
+        <figure class="card"><img src="img/palmeritas-chocolate.jpg" alt="Palmeritas bañadas en chocolate negro"><figcaption>Palmeritas de chocolate</figcaption></figure>
+        <figure class="card"><img src="img/tarta-sacher.jpg" alt="Tarta Sacher bañada en chocolate negro con frambuesas"><figcaption>Sacher</figcaption></figure>
+        <figure class="card"><img src="img/tarta-mousse-frambuesa.jpg" alt="Tarta mousse de frambuesa con gelatina de frambuesa"><figcaption>Mousse de frambuesa</figcaption></figure>
+      </div>
+      <svg class="seal" viewBox="0 0 120 120" aria-hidden="true"><defs><path id="seal-c" d="M60 60m-44 0a44 44 0 1 1 88 0a44 44 0 1 1-88 0"/></defs><circle cx="60" cy="60" r="58" fill="#BD0052"/><circle cx="60" cy="60" r="31" fill="#F8F1EB"/><text><textPath href="#seal-c" textLength="272" lengthAdjust="spacing">HECHO EN AJALVIR · OBRADOR PROPIO · </textPath></text><text class="seal-f" x="60" y="72" text-anchor="middle">f</text></svg>
+      <a class="rate-stk" href="#resenas" data-rvd aria-label="4,5 de 5 en Google con 114 reseñas. Ver opiniones"><span class="stars"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></span><b>4,5</b><small>114 reseñas<br>en Google</small></a>
+      <span class="bite-hint" id="bite-hint"><svg><use href="#i-hand"/></svg>Toca y dale un bocado</span>
+    </div>
+  </section>
+
+  <div class="ticker" aria-hidden="true"><div><span>Hecho en Ajalvir</span><span>Tartas por encargo</span><span>Pastelería artesanal</span><span>Palmeritas</span><span>Catering dulce</span><span>Desayunos a domicilio</span><span>Hecho en Ajalvir</span><span>Tartas por encargo</span><span>Pastelería artesanal</span><span>Palmeritas</span><span>Catering dulce</span><span>Desayunos a domicilio</span></div></div>
+
+  <section class="sec rv-wrap" id="resenas">
+    <div class="wrap">
+      <div class="sec-head" data-reveal>
+        <span class="eyebrow">Lo que dicen en Google</span>
+        <h2>«Mi pastelería <span class="display">favorita!!!»</span></h2>
+        <p class="lead">93 de las 114 reseñas de la tienda de Ajalvir son de cinco estrellas. Estas son de los últimos meses, tal cual las escribieron.</p>
+      </div>
+      <div class="rv-grid">
+        <figure class="rv" data-reveal><div class="rv-top"><span class="rv-stars" aria-label="5 de 5 estrellas"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></span><span class="rv-tag">Palmeritas</span></div><blockquote>«Un sitio genial para tomar un café y un desayuno […] y lo de las palmeras de chocolate es algo de locos!!! Hay que probarlas para saber de que hablo!!»</blockquote><figcaption><i style="background:#BD0052">P</i><span><b>Pedro C.</b><small>hace un mes · Google</small></span></figcaption></figure>
+        <figure class="rv" data-reveal><div class="rv-top"><span class="rv-stars" aria-label="5 de 5 estrellas"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></span><span class="rv-tag">Tartas</span></div><blockquote>«Me hicieron dos tartas, una de frutas para 18 personas y otra pequeña de chocolate para 4 personas. La de frutas como siempre espectacular, pero la de chocolate […] riquísima, exquisita, maravilla»</blockquote><figcaption><i style="background:#341006">J</i><span><b>Juanjo I.</b><small>hace 8 meses · Google</small></span></figcaption></figure>
+        <figure class="rv" data-reveal><div class="rv-top"><span class="rv-stars" aria-label="5 de 5 estrellas"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></span><span class="rv-tag">Desayuno</span></div><blockquote>«Hemos quedado encantados la atención de la chica un 10 muy maja la calidad del servicio y los productos excelente el café buenísimo los bollos calentitos y muy fresquitos»</blockquote><figcaption><i style="background:#D63A7C">D</i><span><b>Daniel</b><small>hace un mes · Google</small></span></figcaption></figure>
+        <figure class="rv" data-reveal><div class="rv-top"><span class="rv-stars" aria-label="5 de 5 estrellas"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></span><span class="rv-tag">Celebración</span></div><blockquote>«Les llame para ver si podían ayudarme para la celebración del 50 cumpleaños de mi marido porque éramos 40 personas y que acierto!! Me dieron varias opciones […] quedó una fiesta maravillosa!!»</blockquote><figcaption><i style="background:#6B5148">E</i><span><b>Elena del B.</b><small>hace un año · Google</small></span></figcaption></figure>
+        <figure class="rv" data-reveal><div class="rv-top"><span class="rv-stars" aria-label="5 de 5 estrellas"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></span><span class="rv-tag">Pastelería</span></div><blockquote>«Pastelería de 10. Calidad excepcional en todos sus productos y un ambiente muy cuidado y relajante. La atención al cliente es fantástica. Mi pastelería favorita!!!»</blockquote><figcaption><i style="background:#BD0052">C</i><span><b>Celia C.</b><small>hace 7 meses · Google</small></span></figcaption></figure>
+        <figure class="rv" data-reveal><div class="rv-top"><span class="rv-stars" aria-label="5 de 5 estrellas"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></span><span class="rv-tag">Cafetería</span></div><blockquote>«Cafeteria en Ajalvir con un café riquísimo. No he probado otro igual desde hace mucho tiempo»</blockquote><figcaption><i style="background:#341006">C</i><span><b>Cristina del B.</b><small>hace 2 meses · Google</small></span></figcaption></figure>
+        <figure class="rv rv-x"><div class="rv-top"><span class="rv-stars" aria-label="5 de 5 estrellas"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></span><span class="rv-tag">Buñuelos</span></div><blockquote>«Todo exquisito, los buñuelos en especial!!!!! Muy recomendable. Repetiremos»</blockquote><figcaption><i style="background:#D63A7C">J</i><span><b>Jorge M.</b><small>hace 11 meses · Google</small></span></figcaption></figure>
+        <figure class="rv rv-x"><div class="rv-top"><span class="rv-stars" aria-label="4 de 5 estrellas"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg class="off"><use href="#i-star"/></svg></span><span class="rv-tag">Roscón</span></div><blockquote>«Nosotros venimos a merendar muchas veces y nos encanta y siempre compramos el roscón de reyes aqui, que no es industrial»</blockquote><figcaption><i style="background:#6B5148">C</i><span><b>Carolina T.</b><small>hace 11 meses · Google</small></span></figcaption></figure>
+        <figure class="rv rv-x"><div class="rv-top"><span class="rv-stars" aria-label="5 de 5 estrellas"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></span><span class="rv-tag">Palmeritas</span></div><blockquote>«Las palmeritas son irresistibles: tiernas, con el equilibrio perfecto de dulzor y un sabor delicioso. ¡Un sitio para repetir!»</blockquote><figcaption><i style="background:#BD0052">A</i><span><b>Alba G.</b><small>hace un año · Google</small></span></figcaption></figure>
+        <figure class="rv rv-x"><div class="rv-top"><span class="rv-stars" aria-label="5 de 5 estrellas"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></span><span class="rv-tag">Tartas</span></div><blockquote>«Tarta de frutas riquísima. Y admiten perretes 😍🐶🐕»</blockquote><figcaption><i style="background:#341006">B</i><span><b>Blanca S.</b><small>hace un año · Google</small></span></figcaption></figure>
+        <figure class="rv rv-x"><div class="rv-top"><span class="rv-stars" aria-label="5 de 5 estrellas"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></span><span class="rv-tag">Pastelería</span></div><blockquote>«Llevo muchos años yendo a esta pastelería. Estoy encantada con todo lo que ofrece, el lugar y los profesionales que atienden al público.»</blockquote><figcaption><i style="background:#D63A7C">M</i><span><b>Marisa</b><small>hace 4 meses · Google</small></span></figcaption></figure>
+      </div>
+      <p class="rv-more"><a href="#resenas" data-rvd>Ver más opiniones y la ficha de Google →</a></p>
+    </div>
+  </section>
+
+  <section class="sec band-white" id="vitrina">
+    <div class="wrap">
+      <div class="sec-head" data-reveal>
+        <span class="eyebrow">La vitrina de las celebraciones</span>
+        <h2>Tartas <span class="display">con nombre propio.</span></h2>
+        <p class="lead">Veintiuna tartas en carta, todas del obrador de Ajalvir. Tamaños, acabados y precio se confirman al encargarla.</p>
+      </div>
+      <div class="reel" id="reel" data-reveal>
+        <figure><img src="img/tarta-fresa-nata.jpg" alt="Tarta de fresa y nata" loading="lazy"><figcaption><b>Fresa y nata</b>Bizcocho de vainilla, nata montada y fresas naturales</figcaption></figure>
+        <figure><img src="img/tarta-san-marcos.jpg" alt="Tarta San Marcos con yema tostada y nata" loading="lazy"><figcaption><b>San Marcos</b>Nata, trufa y yema confitada tostada</figcaption></figure>
+        <figure><img src="img/tarta-queso.jpg" alt="Tarta de queso horneada" loading="lazy"><figcaption><b>Tarta de queso</b>Casera, cocida tres horas en horno de piedra</figcaption></figure>
+        <figure><img src="img/tarta-mousse-chocolate.jpg" alt="Tarta mousse de tres chocolates" loading="lazy"><figcaption><b>Mousse de chocolate</b>Blanco, con leche y negro</figcaption></figure>
+        <figure><img src="img/tarta-milhojas.jpg" alt="Milhojas de frambuesa" loading="lazy"><figcaption><b>Milhojas</b>Hojaldre caramelizado, crema y frambuesas</figcaption></figure>
+        <figure><img src="img/tarta-carrot.jpg" alt="Carrot cake cortada" loading="lazy"><figcaption><b>Carrot cake</b>Bizcocho especiado de zanahoria y crema</figcaption></figure>
+        <figure><img src="img/tarta-sacher.jpg" alt="Tarta Sacher" loading="lazy"><figcaption><b>Sacher</b>Chocolate negro y frambuesa</figcaption></figure>
+        <figure><img src="img/tarta-oreo.jpg" alt="Tarta de Oreo con nata" loading="lazy"><figcaption><b>Oreo</b>Bizcocho, nata y galleta Oreo</figcaption></figure>
+        <figure><img src="img/tarta-manzana.jpg" alt="Tarta de manzana caramelizada" loading="lazy"><figcaption><b>Manzana</b>Crema, compota y manzana caramelizada</figcaption></figure>
+      </div>
+      <div class="reel-nav"><button type="button" class="prev" aria-label="Anteriores"><svg><use href="#i-arrow"/></svg></button><button type="button" class="next" aria-label="Siguientes"><svg><use href="#i-arrow"/></svg></button></div>
+    </div>
+  </section>
+
+  <section class="sec band-rosa" id="casa">
+    <div class="wrap">
+      <div class="sec-head" data-reveal>
+        <span class="eyebrow">Elige tu antojo</span>
+        <h2>Una casa. <span class="display">Muchas formas de disfrutarla.</span></h2>
+      </div>
+      <ul class="perks">
+        <li data-reveal><img src="img/pastelitos.jpg" alt="Pastelitos surtidos: cannoli, profiteroles y lionesas" loading="lazy"><h3>Pastelería</h3><p>Palmeritas, pastelitos, mini croissants, pastas, hojaldre y tartas individuales.</p></li>
+        <li data-reveal><img src="img/cafeteria-mesas.jpg" alt="Cafetería de Ajalvir con mesas de madera y sillas amarillas" loading="lazy"><h3>Cafetería</h3><p>Café, tostada con tomate, bollería del día y, al mediodía, empanadas venezolanas con guasacaca.</p></li>
+        <li data-reveal><img src="img/catering-dulce.jpg" alt="Mesa de catering dulce con cupcakes, donuts y bizcochos" loading="lazy"><h3>Catering dulce</h3><p>Bocados, cupcakes, galletas decoradas y candy tables para celebrar en compañía.</p></li>
+        <li data-reveal><img src="img/bolleria.jpg" alt="Bandejas de bollería recién horneada en el obrador" loading="lazy"><h3>Desayunos a domicilio</h3><p>Ocho propuestas, del clásico al ibérico, para felicitar desde primera hora.</p></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="sec" id="obrador">
+    <div class="wrap split">
+      <figure class="split-img" data-reveal><img src="img/obrador-equipo.jpg" alt="Pasteleros trabajando en el obrador de Ajalvir" loading="lazy"><img class="mini" src="img/obrador-palmeritas.jpg" alt="Palmeritas recién bañadas en el obrador" loading="lazy"></figure>
+      <div class="split-txt" data-reveal>
+        <span class="eyebrow">Nuestro corazón</span>
+        <h2>Detrás de cada vitrina <span class="display">está Ajalvir.</span></h2>
+        <p class="lead">Aquí se amasa, se lamina, se hornea y se termina cada pieza. Pasteleros profesionales convierten el trabajo diario en sabores que llegan cada mañana a Ajalvir y a Paracuellos de Jarama.</p>
+        <ul class="ticks">
+          <li>Obrador propio en el Polígono Industrial Donada</li>
+          <li>De ahí sale el pan, la bollería y las tartas de las dos tiendas</li>
+          <li>En la cafetería de Ajalvir, solo un cristal entre tu mesa y el obrador</li>
+          <li>Roscón en Reyes, torrijas en Semana Santa y buñuelos por Todos los Santos</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec band-blush" id="encargos">
+    <div class="wrap">
+      <div class="sec-head" data-reveal>
+        <span class="eyebrow">Encargos</span>
+        <h2>¿Hay algo que celebrar? <span class="display">Lo preparamos nosotros.</span></h2>
+        <p class="lead">Cuéntanos qué necesitas y para cuándo. Te contestamos con el precio y la disponibilidad, y lo recoges en Ajalvir o en Paracuellos.</p>
+      </div>
+      <div class="svc-grid">
+        <article class="svc" data-reveal><div class="ph"><img src="img/tarta-mousse-frambuesa.jpg" alt="Tarta mousse de frambuesa" loading="lazy"></div><div><h3>Tartas para celebrar</h3><p>Clásicas, de mousse, de queso o decoradas. Dinos para cuántas personas y qué os gusta.</p><a class="svc-cta" href="#encargar" data-tipo="Una tarta">Encargar una tarta <svg><use href="#i-arrow"/></svg></a></div></article>
+        <article class="svc" data-reveal><div class="ph"><img src="img/tartaletas.jpg" alt="Tartaletas individuales de crema y frambuesas" loading="lazy"></div><div><h3>Catering dulce</h3><p>Selecciones dulces, cupcakes, galletas y candy tables para reuniones y celebraciones.</p><a class="svc-cta" href="#encargar" data-tipo="Catering dulce o candy table">Preparar una mesa dulce <svg><use href="#i-arrow"/></svg></a></div></article>
+        <article class="svc" data-reveal><div class="ph"><img src="img/mini-croissants.jpg" alt="Mini croissants con chocolate y un vaso de Fast" loading="lazy"></div><div><h3>Desayuno a domicilio</h3><p>Clásico, cumpleaños, romántico, chocolates, ibérico… Te contamos la composición y si llegamos a tu zona.</p><a class="svc-cta" href="#encargar" data-tipo="Un desayuno a domicilio">Preparar la sorpresa <svg><use href="#i-arrow"/></svg></a></div></article>
+      </div>
+      <div class="course" data-reveal>
+        <img src="img/tarta-boda.jpg" alt="Tarta de boda de varios pisos con volantes en blanco y gris" loading="lazy">
+        <div>
+          <span class="eyebrow">Tartas decoradas</span>
+          <h3>Para bodas, bautizos y cumpleaños</h3>
+          <p>Diseños hechos a mano en el obrador para el día que no se repite. Cuéntanos la idea, la fecha y cuántos sois, y el equipo te orienta sobre tamaño y acabado.</p>
+          <a class="btn btn-ghost" href="#encargar" data-tipo="Una tarta decorada">Contar mi idea</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="como">
+    <div class="wrap">
+      <div class="sec-head" data-reveal>
+        <span class="eyebrow">Cómo encargar</span>
+        <h2>Tu encargo en tres pasos, <span class="display">sin esperar al teléfono.</span></h2>
+      </div>
+      <ol class="steps">
+        <li data-reveal><b>1</b><h3>Cuéntanos qué quieres</h3><p>Tarta, catering dulce o desayuno, el día, la tienda y para cuántos. Menos de un minuto.</p></li>
+        <li data-reveal><b>2</b><h3>Envíalo por email</h3><p>Te lo dejamos escrito con un código de encargo para que no se pierda nada. Si lo prefieres, llama a la tienda.</p></li>
+        <li data-reveal><b>3</b><h3>Te confirmamos</h3><p>Precio, alérgenos y disponibilidad los confirma quien hace la pieza. Lo recoges en Ajalvir o Paracuellos.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="sec band-magenta" id="encargar-cta">
+    <div class="wrap book-cta" data-reveal>
+      <div>
+        <span class="eyebrow">Haz tu encargo</span>
+        <h2>¿Lo dejamos listo <span class="display">para tu día?</span></h2>
+        <p class="lead">Unas preguntas rápidas y te preparamos el mensaje con tu código de encargo.</p>
+        <ul class="book-perks"><li>Sin registrarte</li><li>Menos de un minuto</li><li>Sin compromiso</li></ul>
+      </div>
+      <a class="btn btn-light" href="#encargar"><svg><use href="#i-cake"/></svg>Empezar mi encargo</a>
+    </div>
+  </section>
+
+  <section class="sec band-white draft" id="borrador" hidden>
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">Borrador · Datos que faltan</span>
+        <h2>Para completar <span class="display">con Fast.</span></h2>
+        <p class="lead">Esta sección solo se ve con #borradores en la dirección.</p>
+      </div>
+      <ul class="incl">
+        <li>¿Tenéis WhatsApp o un móvil para encargos?: <mark>[número]</mark> (ahora el panel acaba en email a info@panypasteles.com o en llamada)</li>
+        <li>Plazo mínimo para encargar una tarta: <mark>[__ días]</mark> · ¿Tartas decoradas con cuánta antelación?: <mark>[…]</mark></li>
+        <li>Precios orientativos de tartas por raciones y de los desayunos a domicilio: <mark>[desde __ €]</mark></li>
+        <li>Zonas de entrega de los desayunos a domicilio: <mark>[pueblos]</mark></li>
+        <li>Fotos reales de los desayunos a domicilio, del roscón terminado, de las torrijas y de los buñuelos: <mark>[fotos]</mark></li>
+        <li>Nota de Google de la tienda de Paracuellos de Jarama: <mark>[nota y nº de reseñas]</mark></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="sec band-azul" id="visita">
+    <div class="wrap visit">
+      <div data-reveal>
+        <span class="eyebrow">Ven a vernos</span>
+        <h2>Dos tiendas. <span class="display">El mismo sabor.</span></h2>
+        <div class="shops">
+          <article class="shop"><img src="img/fachada-ajalvir.jpg" alt="Fachada rosa de Fast Pan y Pasteles en Ajalvir" loading="lazy"><div><h3>Ajalvir <small>· obrador y cafetería</small></h3><p>Calle Segovia, 6 · Polígono Industrial Donada</p><table class="hours" id="hours" aria-label="Horario de Ajalvir"><tr data-d="0 1 2 3 4 5 6"><th>Todos los días</th><td>7:00–20:00</td></tr></table><p class="shop-l"><a href="tel:+34918848796"><svg><use href="#i-phone"/></svg>918 84 87 96</a><a href="https://www.google.com/maps/dir/?api=1&amp;destination=40.5301768,-3.4835333" target="_blank" rel="noopener"><svg><use href="#i-pin"/></svg>Cómo llegar</a></p></div></article>
+          <article class="shop"><img src="img/fachada-paracuellos.jpg" alt="Escaparate de Pan&amp;Pasteles en Paracuellos de Jarama" loading="lazy"><div><h3>Paracuellos de Jarama <small>· cafetería</small></h3><p>Avenida Juan Pablo II, 26 · Centro Comercial</p><table class="hours" id="hours2" aria-label="Horario de Paracuellos"><tr data-d="0 1 2 3 4 5"><th>Domingo a viernes</th><td>7:30–23:00</td></tr><tr data-d="6"><th>Sábados</th><td>8:00–23:00</td></tr></table><p class="shop-l"><a href="tel:+34912688525"><svg><use href="#i-phone"/></svg>912 68 85 25</a><a href="https://www.google.com/maps/dir/?api=1&amp;destination=40.5029318,-3.5140667" target="_blank" rel="noopener"><svg><use href="#i-pin"/></svg>Cómo llegar</a></p></div></article>
+        </div>
+        <ul class="contact">
+          <li><svg><use href="#i-mail"/></svg><a href="mailto:info@panypasteles.com">info@panypasteles.com</a></li>
+          <li><svg><use href="#i-heart"/></svg><a href="https://www.instagram.com/panypasteles" target="_blank" rel="noopener">@panypasteles en Instagram</a></li>
+        </ul>
+      </div>
+      <div data-reveal>
+        <div class="faq">
+          <details open><summary>¿Cómo encargo una tarta?</summary><p>Desde esta página te preparamos el mensaje con todo lo que hace falta, o llamando a la tienda: Ajalvir 918 84 87 96, Paracuellos 912 68 85 25. No hay pedido online: el encargo se cierra hablando con el equipo.</p></details>
+          <details><summary>¿Dónde se recoge?</summary><p>En cualquiera de las dos tiendas abiertas, Ajalvir o Paracuellos de Jarama. Se dice al encargarla.</p></details>
+          <details><summary>¿Se hace todo aquí?</summary><p>Sí. El obrador está en Ajalvir, en el Polígono Industrial Donada, y de ahí sale el pan, la bollería y las tartas. Lo que hay en el mostrador de Paracuellos llegó esa mañana desde Ajalvir.</p></details>
+          <details><summary>¿Hacéis roscón, torrijas y buñuelos?</summary><p>Los tres, cada uno en su fecha: roscón de Reyes en enero, torrijas en Semana Santa —con pan brioche— y buñuelos por Todos los Santos.</p></details>
+          <details><summary>¿Cuánto cuesta una tarta? ¿Y los alérgenos?</summary><p>Depende del tamaño y de la tarta, así que el precio se da al encargarla. Los alérgenos se preguntan antes de encargar, para que conteste quien ha hecho la pieza.</p></details>
+          <details><summary>¿Y la tienda de Alcalá de Henares?</summary><p>La de Calle Mayor, 13 está temporalmente cerrada.</p></details>
+        </div>
+        <div class="map"><iframe title="Fast Pan y Pasteles Ajalvir en Google Maps" src="https://maps.google.com/maps?q=Fast%20Pan%20y%20Pasteles%2C%20Calle%20Segovia%206%2C%2028864%20Ajalvir&amp;hl=es&amp;z=15&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="final band-jungle">
+    <div class="wrap">
+      <span class="eyebrow">Fast Pan y Pasteles · Hecho en Ajalvir</span>
+      <h2>Lo importante <span class="display">se celebra</span></h2>
+      <div class="hero-ctas">
+        <a class="btn btn-primary" href="#encargar"><svg><use href="#i-cake"/></svg>Encargar</a>
+        <a class="btn btn-light" href="tel:+34918848796"><svg><use href="#i-phone"/></svg>Llamar</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="foot-logo"><img src="img/logo.png" alt="be fast, pan y pasteles" loading="lazy"></div>
+  <div class="wrap"><span>Fast Pan y Pasteles · Calle Segovia, 6 · 28864 Ajalvir · Avenida Juan Pablo II, 26 · 28860 Paracuellos de Jarama</span><a href="mailto:info@panypasteles.com">info@panypasteles.com</a></div>
+</footer>
+
+<button class="totop" id="totop" type="button" aria-label="Subir arriba"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="M12 19V5M5 12l7-7 7 7"/></svg></button>
+
+<div class="bk rvd" id="rvd" role="dialog" aria-modal="true" aria-labelledby="rvd-title" hidden>
+  <div class="bk-scrim" data-rvd-x></div>
+  <div class="bk-panel">
+    <header class="bk-head">
+      <span></span>
+      <div class="t"><span>Google</span><b id="rvd-title">Opiniones</b></div>
+      <button type="button" class="bk-ib" data-rvd-x aria-label="Cerrar"><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" d="M6 6l12 12M18 6L6 18"/></svg></button>
+    </header>
+    <div class="bk-body rvd-body">
+      <div class="rvd-sum">
+        <div class="rvd-score"><b>4,5</b><span class="rv-stars"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></span><small>114 reseñas</small></div>
+        <ul class="rvd-dist" aria-label="Reparto de estrellas"><li><span>5</span><i><b style="width:82%"></b></i><em>93</em></li><li><span>4</span><i><b style="width:7%"></b></i><em>8</em></li><li><span>3</span><i><b style="width:1%"></b></i><em>1</em></li><li><span>2</span><i><b style="width:3%"></b></i><em>3</em></li><li><span>1</span><i><b style="width:8%"></b></i><em>9</em></li></ul>
+      </div>
+      <h3 class="rvd-h">Algunas de las más recientes (tienda de Ajalvir)</h3>
+      <div class="rvd-list" id="rvd-list"></div>
+      <h3 class="rvd-h">Fast Pan y Pasteles (Ajalvir) en Google Maps</h3>
+      <div class="rvd-map"><iframe id="rvd-map" title="Fast Pan y Pasteles Ajalvir en Google Maps" data-src="https://maps.google.com/maps?q=Fast%20Pan%20y%20Pasteles%2C%20Calle%20Segovia%206%2C%2028864%20Ajalvir&amp;hl=es&amp;z=15&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+      <p class="rvd-note">Google no permite mostrar aquí su lista completa de reseñas; puedes leerlas todas en su ficha.</p>
+    </div>
+    <footer class="rvd-foot"><a class="btn btn-ghost" href="https://www.google.com/maps/place/Fast+Pan+y+Pasteles/@40.5301768,-3.4835333,17z/data=!4m6!3m5!1s0xd4235baeb9279cb:0xd79501199150e672!8m2!3d40.5301768!4d-3.4835333!16s%2Fg%2F11m7pjrjdg?hl=es" target="_blank" rel="noopener">Ver las 114 en Google</a></footer>
+  </div>
+</div>
+
+<div class="bk" id="bk" role="dialog" aria-modal="true" aria-labelledby="bk-title" hidden>
+  <div class="bk-scrim" id="bk-scrim"></div>
+  <div class="bk-panel">
+    <header class="bk-head">
+      <button type="button" class="bk-ib" id="bk-back" aria-label="Paso anterior"><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M15 18l-6-6 6-6"/></svg></button>
+      <div class="t"><span id="bk-step">Paso 1 de 4</span><b id="bk-title">Tu encargo</b></div>
+      <button type="button" class="bk-ib" id="bk-x" aria-label="Cerrar"><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" d="M6 6l12 12M18 6L6 18"/></svg></button>
+    </header>
+    <div class="bk-prog"><i id="bk-bar" style="transform:scaleX(.25)"></i></div>
+    <form class="bk-body" id="book-form" novalidate>
+      <section class="bk-pane" data-step="1">
+        <h3>¿Qué te preparamos?</h3>
+        <div class="bk-opts">
+          <label><input type="radio" name="tipo" value="Una tarta"><span>Una tarta</span></label>
+          <label><input type="radio" name="tipo" value="Una tarta decorada"><span>Una tarta decorada</span></label>
+          <label><input type="radio" name="tipo" value="Catering dulce o candy table"><span>Catering dulce o candy table</span></label>
+          <label><input type="radio" name="tipo" value="Un desayuno a domicilio"><span>Un desayuno a domicilio</span></label>
+          <label><input type="radio" name="tipo" value="Pastelería o bollería para llevar"><span>Pastelería o bollería</span></label>
+          <label><input type="radio" name="tipo" value="Dulces de temporada"><span>Roscón, torrijas o buñuelos</span></label>
+        </div>
+      </section>
+      <section class="bk-pane" data-step="2" hidden>
+        <h3>¿Para qué día?</h3>
+        <div class="bk-field">
+          <div class="cal" id="cal">
+            <div class="cal-head">
+              <button type="button" class="bk-ib" id="cal-prev" aria-label="Mes anterior"><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M15 18l-6-6 6-6"/></svg></button>
+              <b id="cal-m" aria-live="polite"></b>
+              <button type="button" class="bk-ib" id="cal-next" aria-label="Mes siguiente"><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M9 18l6-6-6-6"/></svg></button>
+            </div>
+            <div class="cal-dow" aria-hidden="true"><span>L</span><span>M</span><span>X</span><span>J</span><span>V</span><span>S</span><span class="we">D</span></div>
+            <div class="cal-grid" id="cal-grid"></div>
+            <p class="cal-legend"><i></i>Hoy · abrimos todos los días</p>
+          </div>
+          <input type="hidden" id="f-fecha" name="fecha">
+        </div>
+        <div class="bk-field" id="f-tienda-wrap"><span>Lo recojo en</span>
+          <div class="bk-opts row">
+            <label><input type="radio" name="tienda" value="Ajalvir" checked><span>Ajalvir</span></label>
+            <label><input type="radio" name="tienda" value="Paracuellos"><span>Paracuellos</span></label>
+          </div>
+        </div>
+        <label class="bk-field" id="f-zona-wrap" hidden><span>¿Dónde lo llevamos? (pueblo o zona)</span><input type="text" id="f-zona" placeholder="Ajalvir, Paracuellos, Torrejón…"></label>
+      </section>
+      <section class="bk-pane" data-step="3" hidden>
+        <h3 id="f-pax-h">¿Para cuántas personas?</h3>
+        <div class="bk-field">
+          <div class="bk-opts grid2">
+            <label><input type="radio" name="pax" value="2–4 personas"><span>2–4</span></label>
+            <label><input type="radio" name="pax" value="6–8 personas" checked><span>6–8</span></label>
+            <label><input type="radio" name="pax" value="10–20 personas"><span>10–20</span></label>
+            <label><input type="radio" name="pax" value="más de 20 personas"><span>Más de 20</span></label>
+          </div>
+        </div>
+        <label class="bk-field"><span>¿Qué os gusta? (opcional)</span><input type="text" id="f-sabor" placeholder="San Marcos, chocolate, fresa y nata…"></label>
+        <label class="bk-field" id="f-texto-wrap"><span>Texto en la tarta (opcional)</span><input type="text" id="f-texto" placeholder="¡Felices 50, Juan!"></label>
+      </section>
+      <section class="bk-pane" data-step="4" hidden>
+        <h3>Últimos detalles</h3>
+        <label class="bk-field"><span>Tu nombre</span><input type="text" id="f-nombre" autocomplete="given-name" placeholder="Marta"></label>
+        <label class="bk-field"><span>Tu teléfono, para confirmarte (opcional)</span><input type="tel" id="f-tel" autocomplete="tel" inputmode="tel" placeholder="600 000 000"></label>
+        <label class="bk-field"><span>¿Alergias o intolerancias? (opcional)</span><input type="text" id="f-alergias" placeholder="Frutos secos, sin lactosa…"></label>
+        <label class="bk-field"><span>Algo más (opcional)</span><input type="text" id="f-notas" placeholder="Hora de recogida, una idea, una foto que te guste…"></label>
+      </section>
+      <section class="bk-pane" data-step="5" hidden>
+        <h3>Tu encargo está listo</h3>
+        <p class="sub">Aún no está confirmado: te respondemos con precio y disponibilidad.</p>
+        <pre class="f-preview" id="f-preview"></pre>
+        <button type="button" class="f-copy" id="f-copy">Copiar mensaje</button>
+      </section>
+    </form>
+    <footer class="bk-foot">
+      <p class="f-error" id="f-error" role="alert" hidden></p>
+      <button type="button" class="btn btn-primary" id="bk-next">Siguiente</button>
+      <a class="btn btn-primary" id="f-wa" href="#" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-mail"/></svg>Enviar por email</a>
+      <a class="btn btn-ghost f-call" id="f-call" href="tel:+34918848796" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-phone"/></svg><span>Prefiero llamar a Ajalvir</span></a>
+    </footer>
+  </div>
+</div>
+
+<div class="mbar">
+  <a class="btn btn-primary" href="#encargar"><svg><use href="#i-cake"/></svg><span data-t="mbar">Encargar mi tarta</span></a>
+  <a class="btn btn-ghost" href="tel:+34918848796" aria-label="Llamar a Ajalvir, 918 84 87 96"><svg><use href="#i-phone"/></svg></a>
+</div>
+
+<script>
+(function(){
+"use strict";
+var reduced=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+var SFX={play:function(){}}; /* sin sonidos */
+
+/* ---------- Temporadas de Fast Pan y Pasteles: fechas fuertes de una pastelería ---------- */
+/* Solo lo que dicen hacer en su web: roscón de Reyes en enero, torrijas en Semana Santa (con pan brioche), buñuelos por Todos los Santos,
+   tartas y desayunos a domicilio (cumpleaños, romántico…). Nada de precios, descuentos ni escasez. */
+window.TEMPORADAS=[
+  {id:'san-valentin',nombre:'San Valentín',evento:'san-valentin',antes:12,prioridad:3,deco:'corazones',
+   textos:{eyebrow:'San Valentín · {cuenta}',h1:'Lo importante <span class="display">se celebra a dos</span>',
+     sub:'Desayuno romántico a domicilio o una tarta del obrador para el {fecha}. <span class="hide-m">Cuéntanos y te confirmamos disponibilidad.</span>',
+     cta:'Preparar la sorpresa',micro:'Encárgalo con tiempo · sin compromiso',mbar:'Sorpresa para el 14'},
+   marcar:['input[name="tipo"][value="Un desayuno a domicilio"]'],wa:'💘 Para San Valentín ({fecha})'},
+  {id:'torrijas',nombre:'Semana Santa',evento:'semana-santa',antes:14,despues:3,prioridad:2,
+   textos:{eyebrow:'Semana Santa · {cuenta}',h1:'Vuelven las torrijas <span class="display">de pan brioche</span>',
+     sub:'En Semana Santa el obrador de Ajalvir hace torrijas con pan brioche. <span class="hide-m">Ven a por ellas o encárgalas para tu mesa.</span>',
+     cta:'Encargar torrijas',micro:'Recógelas en Ajalvir o Paracuellos',mbar:'Encargar torrijas'},
+   marcar:['input[name="tipo"][value="Dulces de temporada"]'],wa:'🍞 Quiero torrijas para Semana Santa'},
+  {id:'dia-madre',nombre:'Día de la Madre',evento:'dia-madre',antes:14,prioridad:3,
+   textos:{eyebrow:'Día de la Madre · {cuenta}',h1:'Para mamá, <span class="display">algo que se celebre</span>',
+     sub:'Una tarta del obrador o un desayuno a domicilio para el {fecha}. <span class="hide-m">Encárgalo y te confirmamos.</span>',
+     cta:'Encargar su regalo',micro:'Encárgalo con tiempo · sin compromiso',mbar:'Regalo para mamá'},
+   marcar:['input[name="tipo"][value="Un desayuno a domicilio"]'],wa:'💐 Para el Día de la Madre ({fecha})'},
+  {id:'todos-santos',nombre:'Todos los Santos',evento:'todos-santos',antes:21,prioridad:2,
+   textos:{eyebrow:'Todos los Santos · {cuenta}',h1:'Llegan los buñuelos <span class="display">del obrador</span>',
+     sub:'Por Todos los Santos hacemos buñuelos en Ajalvir para el {fecha}. <span class="hide-m">Ven a por ellos o encárgalos.</span>',
+     cta:'Encargar buñuelos',micro:'Recógelos en Ajalvir o Paracuellos',mbar:'Encargar buñuelos'},
+   marcar:['input[name="tipo"][value="Dulces de temporada"]'],wa:'🕯️ Buñuelos para Todos los Santos ({fecha})'},
+  {id:'reyes',nombre:'Roscón de Reyes',evento:'reyes',desde:'12-20',hasta:'01-06',prioridad:3,deco:'estrellas',
+   textos:{eyebrow:'Roscón de Reyes · {cuenta}',h1:'Este año, <span class="display">roscón de obrador</span>',
+     sub:'Encarga tu roscón para el {fecha} y recógelo en Ajalvir o Paracuellos. <span class="hide-m">Hecho a mano en nuestro obrador.</span>',
+     cta:'Reservar mi roscón',micro:'Resérvalo con tiempo · sin compromiso',mbar:'Reservar roscón'},
+   marcar:['input[name="tipo"][value="Dulces de temporada"]'],wa:'👑 Roscón para Reyes ({fecha})'}
+];
+/* ---------- Temporadas: la landing cambia sola cuando se acerca una fecha clave del oficio ---------- */
+/* Configura window.TEMPORADAS antes de este bloque (ver references/temporadas/README.md).
+   Pruebas: ?temporada=<id> fuerza una, ?temporada=no las apaga, ?fecha=2027-02-10 simula el día.
+   Selector para enseñarlas: #temporadas en la dirección (en local), 5 toques seguidos en el logo de la cabecera o la tecla T (también dentro del visor del Artifact). */
+(function(){
+var CFG=window.TEMPORADAS||[]; if(!CFG.length)return;
+var MESES=['enero','febrero','marzo','abril','mayo','junio','julio','agosto','septiembre','octubre','noviembre','diciembre'];
+var DAY=864e5;
+function d(y,m,dd){return new Date(y,m-1,dd)}
+function nth(y,m,dow,n){var f=d(y,m,1);return d(y,m,1+(dow-f.getDay()+7)%7+7*(n-1))}       /* n-ésimo día de la semana (0=domingo) del mes */
+function pascua(y){var a=y%19,b=Math.floor(y/100),c=y%100,e=(19*a+b-Math.floor(b/4)-Math.floor((b-Math.floor((8*b+13)/25)+1)/3)+15)%30,
+  f=(32+2*(b%4)+2*Math.floor(c/4)-e-c%4)%7,g=Math.floor((a+11*e+22*f)/451),m=Math.floor((e+f-7*g+114)/31);return d(y,m,(e+f-7*g+114)%31+1)}
+function mas(x,n){return new Date(x.getFullYear(),x.getMonth(),x.getDate()+n)}
+/* Calendario de España. Cada evento devuelve el día clave de ese año. */
+var EV={
+  'reyes':function(y){return d(y,1,6)},
+  'rebajas-invierno':function(y){return d(y,1,7)},
+  'san-valentin':function(y){return d(y,2,14)},
+  'carnaval':function(y){return mas(pascua(y),-47)},            /* martes de carnaval */
+  'dia-padre':function(y){return d(y,3,19)},
+  'semana-santa':function(y){return mas(pascua(y),-3)},         /* jueves santo */
+  'pascua':pascua,
+  'sant-jordi':function(y){return d(y,4,23)},                   /* solo Cataluña */
+  'dia-madre':function(y){return nth(y,5,0,1)},                 /* primer domingo de mayo */
+  'san-isidro':function(y){return d(y,5,15)},                   /* solo Madrid capital */
+  'san-juan':function(y){return d(y,6,24)},
+  'dia-abuelos':function(y){return d(y,7,26)},
+  'vuelta-cole':function(y){return d(y,9,8)},                   /* aproximado: varía por comunidad */
+  'halloween':function(y){return d(y,10,31)},
+  'todos-santos':function(y){return d(y,11,1)},
+  'black-friday':function(y){return mas(nth(y,11,4,4),1)},      /* viernes tras el 4.º jueves */
+  'navidad':function(y){return d(y,12,25)},
+  'nochevieja':function(y){return d(y,12,31)}
+};
+function md(s,y){var p=s.split('-');return d(y,+p[0],+p[1])}
+function antes(t){return t.antes==null?14:t.antes}
+/* Ventanas [inicio, fin, día clave] de una temporada alrededor del año y */
+function ventanas(t,y){var out=[];for(var k=y-1;k<=y+1;k++){
+  if(t.desde){var a=md(t.desde,k),b=md(t.hasta,k);if(b<a)b=md(t.hasta,k+1);out.push([a,b,t.evento?EV[t.evento](b.getFullYear()):b])}
+  else{var e=t.fecha?md(t.fecha,k):EV[t.evento]&&EV[t.evento](k);if(e)out.push([mas(e,-antes(t)),mas(e,t.despues||0),e])}}
+  return out}
+function elegir(hoy){var best=null;hoy=new Date(hoy.getFullYear(),hoy.getMonth(),hoy.getDate());
+  CFG.forEach(function(t){ventanas(t,hoy.getFullYear()).forEach(function(w){if(hoy<w[0]||hoy>w[1])return;
+    var pr=t.prioridad!=null?t.prioridad:(t.desde?1:2),falta=Math.round((w[2]-hoy)/DAY);
+    if(!best||pr>best.pr||(pr===best.pr&&Math.abs(falta)<Math.abs(best.falta)))best={t:t,pr:pr,falta:falta,dia:w[2]}})});
+  return best}
+/* Forzar una temporada aunque hoy no toque: la muestra como si faltaran unos días */
+function forzar(id,hoy){var t=CFG.filter(function(x){return x.id===id})[0];if(!t)return null;
+  var w=ventanas(t,hoy.getFullYear()).filter(function(w){return w[1]>=hoy})[0],falta=Math.round((w[2]-hoy)/DAY);
+  if(hoy<w[0])falta=Math.min(antes(t),9);return {t:t,falta:falta,dia:w[2]}}
+function rellenar(s,b){if(!s)return s;var n=b.falta,f=b.dia.getDate()+' de '+MESES[b.dia.getMonth()];
+  var cuenta=n>1?'Faltan '+n+' días':n===1?'Es mañana':n===0?'Es hoy':'';
+  return s.replace(/\{cuenta\}/g,cuenta).replace(/\{dias\}/g,n).replace(/\{fecha\}/g,f).replace(/\{anio\}/g,b.dia.getFullYear())}
+
+var q=new URLSearchParams(location.search),forzada=q.get('temporada'),sim=q.get('fecha'),hoy=new Date();
+if(sim&&/^\d{4}-\d\d-\d\d$/.test(sim)){var p=sim.split('-');hoy=d(+p[0],+p[1],+p[2])}
+hoy=new Date(hoy.getFullYear(),hoy.getMonth(),hoy.getDate());
+window.TEMPORADA_ELEGIR=function(x){var b=elegir(x);return b?b.t.id:null};   /* para scripts/temporadas.js */
+var root=document.documentElement,reducido=matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+/* Estado original, para poder volver a la versión de todo el año al cambiar de temporada desde el selector */
+var CLAVES={};CFG.forEach(function(t){Object.keys(t.textos||{}).forEach(function(k){CLAVES[k]=1})});   /* solo las claves que usa alguna temporada: otros data-t de la página no se tocan */
+var T=[].slice.call(document.querySelectorAll('[data-t]')).filter(function(el){return CLAVES[el.getAttribute('data-t')]}).map(function(el){return [el,el.innerHTML,el.hidden]});
+var fotosOrig=[],tokens=[],marcados=[],deco=null;
+function limpiar(){
+  T.forEach(function(o){o[0].innerHTML=o[1];o[0].hidden=o[2];o[0].classList.remove('t-on')});
+  tokens.forEach(function(k){root.style.removeProperty(k)});tokens=[];
+  fotosOrig.forEach(function(o){if(o[0].tagName==='SOURCE')o[0].srcset=o[1];else{o[0].src=o[1];if(o[2])o[0].srcset=o[2]}});fotosOrig=[];
+  marcados.forEach(function(el){el.checked=false});marcados=[];
+  if(deco){deco();deco=null}
+  root.removeAttribute('data-temporada');window.TEMPORADA=null}
+function aplicar(b){
+  limpiar();var id=b?b.t.id:null;
+  /* Bloques solo de temporada: data-temporada-solo="san-valentin dia-madre" (empiezan con hidden) y data-temporada-fuera="…" */
+  document.querySelectorAll('[data-temporada-solo]').forEach(function(el){el.hidden=!(id&&el.getAttribute('data-temporada-solo').split(/\s+/).indexOf(id)>-1)});
+  document.querySelectorAll('[data-temporada-fuera]').forEach(function(el){el.hidden=!!(id&&el.getAttribute('data-temporada-fuera').split(/\s+/).indexOf(id)>-1)});
+  if(!b)return;
+  var t=b.t;root.setAttribute('data-temporada',id);
+  /* Colores: sobrescribe tokens de :root (solo acentos; el fondo y la tinta no se tocan) */
+  if(t.tema)Object.keys(t.tema).forEach(function(k){root.style.setProperty(k,t.tema[k]);tokens.push(k)});
+  /* Textos: cualquier elemento con data-t="clave". El HTML trae el texto de todo el año; si estaba hidden, se muestra */
+  if(t.textos)Object.keys(t.textos).forEach(function(k){document.querySelectorAll('[data-t="'+k+'"]').forEach(function(el){el.innerHTML=rellenar(t.textos[k],b);el.hidden=false;el.classList.add('t-on')})});
+  /* Fotos: {selector: ruta}. Solo fotos reales del negocio para esa fecha */
+  if(t.fotos)Object.keys(t.fotos).forEach(function(s){document.querySelectorAll(s).forEach(function(el){
+    if(el.tagName==='SOURCE'){fotosOrig.push([el,el.srcset]);el.srcset=t.fotos[s]}else{fotosOrig.push([el,el.src,el.getAttribute('srcset')]);el.removeAttribute('srcset');el.src=t.fotos[s]}})});
+  /* Marcar opciones del panel de encargo/reserva (solo si no hay ninguna marcada en ese grupo) */
+  if(t.marcar)t.marcar.forEach(function(s){var el=document.querySelector(s);if(el&&!document.querySelector('input[name="'+el.name+'"]:checked')){el.checked=true;marcados.push(el)}});
+  window.TEMPORADA={id:id,nombre:t.nombre||id,dias:b.falta,fecha:b.dia,linea:rellenar(t.wa,b)||''};   /* el panel añade TEMPORADA.linea al mensaje de WhatsApp */
+  try{document.dispatchEvent(new CustomEvent('temporada',{detail:window.TEMPORADA}))}catch(e){}
+  if(t.deco&&!reducido)deco=decorar(t)}
+
+/* Decoración ligera en el hero: petalos, corazones, nieve, hojas, confeti o estrellas. Nunca sobre el texto ni con movimiento reducido */
+function decorar(t){
+  var host=document.querySelector(t.decoEn||'#hero');if(!host)return null;
+  var cv=document.createElement('canvas');cv.className='t-deco';cv.setAttribute('aria-hidden','true');
+  cv.style.cssText='position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:1';
+  host.insertBefore(cv,host.children[1]||null);
+  var cx=cv.getContext('2d'),W=0,H=0,DPR=Math.min(devicePixelRatio||1,1.5),P=[],raf=0,last=0;
+  var COL=t.decoColores||{petalos:['#F5B8C9','#FFD9E2','#E88AA6'],corazones:['#FF6B8B','#FFB3C4','#E0325A'],nieve:['#FFFFFF'],hojas:['#C9733B','#E0A04A','#9C4A24'],confeti:['#FFD166','#EF476F','#06D6A0','#4CC9F0'],estrellas:['#FFE8A3','#FFFFFF']}[t.deco]||['#fff'];
+  function size(){var r=host.getBoundingClientRect();W=r.width;H=r.height;cv.width=W*DPR;cv.height=H*DPR;cx.setTransform(DPR,0,0,DPR,0,0)}
+  function nuevo(top){var s=t.deco==='nieve'?2+Math.random()*3:t.deco==='estrellas'?1.5+Math.random()*2.5:7+Math.random()*7;
+    return {x:Math.random()*W,y:top?-20:Math.random()*H,s:s,vy:(t.deco==='estrellas'?0:.25+Math.random()*.5)*(s>6?1:.7),vx:(Math.random()-.5)*.3,a:Math.random()*6.3,va:(Math.random()-.5)*.03,f:Math.random()*6.3,c:COL[Math.floor(Math.random()*COL.length)]}}
+  function forma(p){cx.save();cx.translate(p.x,p.y);cx.rotate(p.a);cx.fillStyle=p.c;cx.globalAlpha=t.deco==='estrellas'?.4+.5*Math.abs(Math.sin(p.f)):.85;var s=p.s;cx.beginPath();
+    if(t.deco==='corazones'){cx.moveTo(0,s*.35);cx.bezierCurveTo(-s,-s*.3,-s*.4,-s,0,-s*.45);cx.bezierCurveTo(s*.4,-s,s,-s*.3,0,s*.35)}
+    else if(t.deco==='nieve'||t.deco==='estrellas')cx.arc(0,0,s/2,0,7);
+    else if(t.deco==='confeti')cx.rect(-s/2,-s/4,s,s/2);
+    else cx.ellipse(0,0,s/2,s*(t.deco==='hojas'?.28:.34),0,0,7);
+    cx.fill();cx.restore()}
+  function paso(ts){raf=requestAnimationFrame(paso);if(ts-last<30)return;last=ts;
+    var r=host.getBoundingClientRect();if(r.bottom<0||r.top>innerHeight)return;   /* fuera de pantalla: no pinta */
+    cx.clearRect(0,0,W,H);P.forEach(function(p,i){p.f+=.03;p.y+=p.vy;p.x+=p.vx+Math.sin(p.f)*.35;p.a+=p.va;if(p.y>H+20)P[i]=nuevo(true);forma(p)})}
+  function arranca(){cancelAnimationFrame(raf);if(!document.hidden)raf=requestAnimationFrame(paso)}
+  size();var n=Math.min(t.decoCuantos||22,Math.round(W*H/40000)+6);for(var i=0;i<n;i++)P.push(nuevo(false));
+  addEventListener('resize',size);document.addEventListener('visibilitychange',arranca);arranca();
+  return function(){cancelAnimationFrame(raf);removeEventListener('resize',size);document.removeEventListener('visibilitychange',arranca);cv.remove()}}
+
+var hoyB=elegir(hoy);
+aplicar(forzada==='no'?null:forzada?forzar(forzada,hoy):hoyB);
+
+/* ---------- Selector de temporadas: solo con #temporadas en la dirección, para enseñárselas al cliente ---------- */
+/* El visor del Artifact no pasa el #hash al iframe: también se abre con 5 toques seguidos en el logo de la cabecera (.brand) o con la tecla T */
+var sel=null,manual=false;
+function selector(){
+  if(location.hash!=='#temporadas'&&!manual){if(sel){sel.remove();sel=null}return}
+  if(sel)return;
+  var st=document.createElement('style');st.textContent='.t-sel{position:fixed;left:12px;right:12px;bottom:calc(14px + env(safe-area-inset-bottom,0px));z-index:150;margin:0 auto;max-width:max-content;display:flex;align-items:center;gap:6px;padding:6px;border-radius:18px;background:rgba(20,20,20,.82);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);color:#fff;font:600 13px/1.2 system-ui,-apple-system,sans-serif;box-shadow:0 14px 34px -12px rgba(0,0,0,.6);overflow-x:auto;scrollbar-width:none}'
+   +'.t-sel::-webkit-scrollbar{display:none}.t-sel b{padding:0 6px 0 8px;font-size:11px;letter-spacing:.08em;text-transform:uppercase;opacity:.6;white-space:nowrap}'
+   +'.t-sel button{all:unset;cursor:pointer;white-space:nowrap;padding:9px 12px;border-radius:12px;color:#fff}.t-sel button:hover{background:rgba(255,255,255,.12)}.t-sel button[aria-pressed="true"]{background:#fff;color:#111}'
+   +'.t-sel button small{display:block;font-size:10px;font-weight:500;opacity:.65;margin-top:2px}.t-sel .x{opacity:.7;padding:9px 10px}'
+   +'@media (max-width:640px){.t-sel{bottom:calc(84px + env(safe-area-inset-bottom,0px));max-width:none}}';
+  sel=document.createElement('div');sel.className='t-sel';sel.setAttribute('role','toolbar');sel.setAttribute('aria-label','Ver la landing en cada temporada');
+  sel.appendChild(st);
+  function hint(t){var w=ventanas(t,hoy.getFullYear()).filter(function(w){return w[1]>=hoy})[0],f=function(x){return x.getDate()+' '+MESES[x.getMonth()].slice(0,3)};return f(w[0])+' – '+f(w[1])}
+  var h='<b>Temporadas</b><button type="button" data-id="@hoy">Hoy<small>'+(hoyB?(hoyB.t.nombre||hoyB.t.id):'sin temporada')+'</small></button><button type="button" data-id="">Todo el año<small>versión base</small></button>';
+  CFG.forEach(function(t){h+='<button type="button" data-id="'+t.id+'">'+(t.nombre||t.id)+'<small>'+hint(t)+'</small></button>'});
+  sel.insertAdjacentHTML('beforeend',h+'<button type="button" class="x" aria-label="Cerrar el selector">✕</button>');
+  var elegido='@hoy';
+  function marca(){sel.querySelectorAll('button[data-id]').forEach(function(x){x.setAttribute('aria-pressed',String(x.dataset.id===elegido))})}
+  sel.addEventListener('click',function(e){var x=e.target.closest('button');if(!x)return;
+    if(x.classList.contains('x')){manual=false;if(location.hash==='#temporadas')history.replaceState(null,'',location.pathname+location.search);selector();return}
+    elegido=x.dataset.id;aplicar(elegido==='@hoy'?hoyB:elegido?forzar(elegido,hoy):null);marca();window.scrollTo({top:0,behavior:'smooth'})});
+  document.body.appendChild(sel);marca()}
+selector();addEventListener('hashchange',selector);
+var toques=[];
+document.addEventListener('click',function(e){if(!e.target.closest||!e.target.closest(window.TEMPORADAS_DISPARADOR||'.brand'))return;var n=Date.now();
+  toques=toques.filter(function(t){return n-t<2500});toques.push(n);if(toques.length>=5){toques=[];manual=true;selector()}});
+document.addEventListener('keydown',function(e){if((e.key==='t'||e.key==='T')&&!e.metaKey&&!e.ctrlKey&&!e.altKey&&!/INPUT|TEXTAREA|SELECT/.test(e.target.tagName)&&!e.target.isContentEditable){manual=!sel;if(!manual&&location.hash==='#temporadas')history.replaceState(null,'',location.pathname+location.search);selector()}});
+})();
+
+
+/* ---------- Horario real de Ajalvir (su web y Google): abierto ahora / cuándo abrimos ---------- */
+var HOURS={0:[[7,20]],1:[[7,20]],2:[[7,20]],3:[[7,20]],4:[[7,20]],5:[[7,20]],6:[[7,20]]};
+var DIAS=['domingo','lunes','martes','miércoles','jueves','viernes','sábado'];
+function hm(h){var m=Math.round((h%1)*60);return Math.floor(h)+':'+String(m).padStart(2,'0')}
+function estado(d){
+  var w=d.getDay(),h=d.getHours()+d.getMinutes()/60,tr=HOURS[w];
+  for(var i=0;i<tr.length;i++)if(h>=tr[i][0]&&h<tr[i][1])return{open:true,hasta:tr[i][1]};
+  for(i=0;i<tr.length;i++)if(h<tr[i][0])return{open:false,abre:tr[i][0],dia:w,en:0};
+  for(var k=1;k<8;k++){var dw=(w+k)%7;if(HOURS[dw].length)return{open:false,abre:HOURS[dw][0][0],dia:dw,en:k}}
+}
+(function(){var st=document.getElementById('status');if(!st)return;var t=st.querySelector('span');
+ function upd(){var e=estado(new Date());st.classList.toggle('closed',!e.open);
+   t.textContent=e.open?'Ajalvir: abierto · hasta las '+hm(e.hasta):'Ajalvir: cerrado · abrimos '+(e.en===0?'hoy':e.en===1?'mañana':'el '+DIAS[e.dia])+' a las '+hm(e.abre)}
+ upd();setInterval(upd,60000);
+ var today=new Date().getDay();document.querySelectorAll('.hours tr').forEach(function(r){if(r.dataset.d.split(' ').indexOf(String(today))>-1)r.classList.add('today')});})();
+
+/* ---------- Vitrina del hero: la baraja pasa sola; al tocarla, se lleva un bocado (máscara) con migas ---------- */
+(function(){var deck=document.getElementById('deck');if(!deck)return;
+ var wrap=deck.parentNode,hint=document.getElementById('bite-hint');
+ var cards=[].slice.call(deck.children),order=cards.map(function(_,i){return i}),busy=false,timer=null;
+ function lay(){order.forEach(function(c,p){cards[c].dataset.pos=p;cards[c].setAttribute('aria-hidden',p?'true':'false')})}
+ function next(){if(busy)return;busy=true;var top=cards[order[0]];top.classList.add('out');deck.style.webkitMaskImage=deck.style.maskImage='';
+  setTimeout(function(){order.push(order.shift());top.classList.remove('out');lay();busy=false},reduced?0:520)}
+ function play(){stop();if(!reduced)timer=setInterval(next,3600)}
+ function stop(){clearInterval(timer)}
+ /* el bocado: tres círculos en el borde más cercano al toque, combinados como máscara */
+ function bite(cx,cy){
+   /* se muerde toda la pila (la máscara va en .deck), así el mordisco deja ver el fondo oscuro y no la foto de detrás */
+   var card=cards[order[0]],r=deck.getBoundingClientRect(),w=deck.offsetWidth,h=deck.offsetHeight;
+   var x=Math.max(0,Math.min(w,(cx-r.left)/r.width*w)),y=Math.max(0,Math.min(h,(cy-r.top)/r.height*h));
+   var d={l:x,r:w-x,t:y,b:h-y},edge=Object.keys(d).sort(function(a,b){return d[a]-d[b]})[0];
+   var R=Math.max(34,w*.16),pts=[];
+   for(var i=-1;i<=1;i++){var o=i*R*.95,out=i?R*.45:R*.05;
+     if(edge==='l')pts.push([-out,y+o]);if(edge==='r')pts.push([w+out,y+o]);
+     if(edge==='t')pts.push([x+o,-out]);if(edge==='b')pts.push([x+o,h+out])}
+   /* la capa de máscara se agranda P px por cada lado para no recortar las tarjetas giradas ni sus sombras */
+   var P=140,m=pts.map(function(p){return 'radial-gradient(circle '+R.toFixed(1)+'px at '+(p[0]+P).toFixed(1)+'px '+(p[1]+P).toFixed(1)+'px, transparent 97%, #000 100%)'}).join(',');
+   deck.style.webkitMaskImage=deck.style.maskImage=m;
+   deck.style.webkitMaskSize=deck.style.maskSize='calc(100% + '+2*P+'px) calc(100% + '+2*P+'px)';
+   deck.style.webkitMaskPosition=deck.style.maskPosition='-'+P+'px -'+P+'px';
+   deck.style.webkitMaskRepeat=deck.style.maskRepeat='no-repeat';
+   deck.style.webkitMaskClip='no-clip';deck.style.maskClip='no-clip';
+   deck.style.webkitMaskComposite='source-in';deck.style.maskComposite='intersect';
+   card.classList.remove('chomp');void card.offsetWidth;card.classList.add('chomp');
+   /* migas que caen desde el mordisco */
+   if(!reduced){var wr=wrap.getBoundingClientRect(),px=pts[1][0]+r.left-wr.left,py=pts[1][1]+r.top-wr.top;
+     for(var k=0;k<11;k++){var c=document.createElement('i');c.className='crumb';var s=4+Math.random()*7;
+       c.style.cssText='left:'+px+'px;top:'+py+'px;width:'+s+'px;height:'+s+'px;background:'+(Math.random()<.5?'#BD0052':'#FF5C9D');
+       wrap.appendChild(c);
+       var a=Math.random()*Math.PI*2,v=30+Math.random()*60;
+       c.animate([{transform:'translate(-50%,-50%)',opacity:1},{transform:'translate(calc(-50% + '+(Math.cos(a)*v)+'px),calc(-50% + '+(Math.sin(a)*v*.5+70+Math.random()*60)+'px)) rotate('+(Math.random()*360)+'deg)',opacity:0}],{duration:700+Math.random()*400,easing:'cubic-bezier(.2,.6,.4,1)'}).onfinish=(function(el){return function(){el.remove()}})(c)}}
+   if(hint)hint.classList.add('gone');
+ }
+ lay();play();
+ var last=0;
+ deck.addEventListener('click',function(e){var now=Date.now();if(busy||now-last<700)return;last=now;
+   var x=e.clientX,y=e.clientY;if(!x&&!y){var r=deck.getBoundingClientRect();x=r.right;y=r.top+r.height*.3}
+   bite(x,y);stop();setTimeout(function(){next();play()},reduced?150:650)});
+ deck.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();deck.click()}});
+ deck.addEventListener('mouseenter',stop);deck.addEventListener('mouseleave',play);
+ document.addEventListener('visibilitychange',function(){document.hidden?stop():play()});})();
+
+/* ---------- Carrete de la vitrina: flechas ---------- */
+(function(){var reel=document.getElementById('reel');if(!reel)return;var nav=reel.nextElementSibling;
+ function step(d){var f=reel.querySelector('figure');reel.scrollBy({left:d*(f?f.getBoundingClientRect().width+18:300)*2,behavior:reduced?'auto':'smooth'})}
+ nav.querySelector('.prev').addEventListener('click',function(){step(-1)});nav.querySelector('.next').addEventListener('click',function(){step(1)});})();
+
+/* ---------- Cabecera de vidrio sobre el hero (por scroll: el IntersectionObserver falla dentro de iframes) ---------- */
+(function(){var top=document.getElementById('top'),hero=document.getElementById('hero'),mbar=document.querySelector('.mbar'),totop=document.getElementById('totop'),ctas=hero.querySelector('.hero-ctas'),h1=hero.querySelector('h1'),tk=false;
+ function sync(){tk=false;var end=hero.offsetTop+hero.offsetHeight;top.classList.toggle('glass',scrollY<end-top.offsetHeight);
+  if(mbar){mbar.classList.toggle('glass',scrollY+innerHeight-40<end);
+   /* la barra nunca tapa el botón del hero */
+   /* …ni el titular: mientras el h1 no quede entero por encima, la barra se esconde */
+   var r=ctas.getBoundingClientRect(),t=h1.getBoundingClientRect(),lim=innerHeight-84;
+   mbar.classList.toggle('off',(r.height>0&&r.bottom>lim&&r.top<innerHeight)||(t.bottom>lim&&t.top<innerHeight))}
+  if(totop)totop.classList.toggle('on',scrollY>end-innerHeight/2)}
+ sync();window.addEventListener('scroll',function(){if(!tk){tk=true;requestAnimationFrame(sync)}},{passive:true});window.addEventListener('resize',sync);window.addEventListener('load',sync);
+ hero.addEventListener('animationend',sync);setTimeout(sync,2500);setTimeout(sync,4000);})();
+
+/* ---------- Borradores: se ven solo con #borradores en la dirección ---------- */
+(function(){function sync(){var on=location.hash==='#borradores';document.querySelectorAll('.draft').forEach(function(d){d.hidden=!on});if(on){var t=document.querySelector('.draft');t&&setTimeout(function(){t.scrollIntoView()},300)}}
+ sync();window.addEventListener('hashchange',sync)})();
+
+/* ---------- Encargo: panel paso a paso que acaba en un email a la tienda (no tienen WhatsApp) o en una llamada ---------- */
+(function(){
+  var MAIL='info@panypasteles.com', TEL={Ajalvir:['+34918848796','918 84 87 96'],Paracuellos:['+34912688525','912 68 85 25']}, N=5, DES='Un desayuno a domicilio', TARTAS=['Una tarta','Una tarta decorada'], SINPAX=['Pastelería o bollería para llevar','Dulces de temporada'];
+  var bk=document.getElementById('bk'); if(!bk)return;
+  var f=document.getElementById('book-form'), panes=[].slice.call(f.querySelectorAll('.bk-pane'));
+  var back=document.getElementById('bk-back'), next=document.getElementById('bk-next'), wa=document.getElementById('f-wa'), call=document.getElementById('f-call');
+  var err=document.getElementById('f-error'), bar=document.getElementById('bk-bar'), stepT=document.getElementById('bk-step');
+  var fecha=document.getElementById('f-fecha'), nombre=document.getElementById('f-nombre'), pre=document.getElementById('f-preview');
+  var step=1, opener=null;
+  /* Calendario propio: desde hoy; Ajalvir abre todos los días */
+  var min=new Date(); min.setHours(0,0,0,0);
+  var view=new Date(min.getFullYear(),min.getMonth(),1), grid=document.getElementById('cal-grid'), calM=document.getElementById('cal-m'), cPrev=document.getElementById('cal-prev');
+  function iso(dt){return dt.getFullYear()+'-'+String(dt.getMonth()+1).padStart(2,'0')+'-'+String(dt.getDate()).padStart(2,'0')}
+  var todayIso=iso(new Date());
+  function drawCal(){
+    var mn=view.toLocaleDateString('es-ES',{month:'long'});calM.textContent=mn.charAt(0).toUpperCase()+mn.slice(1)+' '+view.getFullYear();
+    cPrev.disabled=view<=new Date(min.getFullYear(),min.getMonth(),1);
+    var first=(new Date(view.getFullYear(),view.getMonth(),1).getDay()+6)%7, days=new Date(view.getFullYear(),view.getMonth()+1,0).getDate(), h='';
+    for(var i=0;i<first;i++)h+='<span></span>';
+    for(var dd=1;dd<=days;dd++){var dt=new Date(view.getFullYear(),view.getMonth(),dd),w=dt.getDay(),v=iso(dt),isToday=v===todayIso,off=dt<min;
+      h+='<button type="button" data-d="'+v+'" class="'+(w===0?'we':'')+(isToday?' today':'')+'"'+(off?' disabled':'')+' aria-pressed="'+(fecha.value===v)+'" aria-label="'+dt.toLocaleDateString('es-ES',{weekday:'long',day:'numeric',month:'long'})+(isToday?' (hoy)':'')+'"'+(isToday?' aria-current="date"':'')+'>'+dd+'</button>'}
+    grid.innerHTML=h;
+  }
+  grid.addEventListener('click',function(e){var b=e.target.closest('button[data-d]');if(!b||b.disabled)return;fecha.value=b.dataset.d;err.hidden=true;drawCal();var nb=grid.querySelector('[data-d="'+fecha.value+'"]');nb&&nb.focus({preventScroll:true})});
+  cPrev.addEventListener('click',function(){view.setMonth(view.getMonth()-1);drawCal()});
+  document.getElementById('cal-next').addEventListener('click',function(){view.setMonth(view.getMonth()+1);drawCal()});
+  setTimeout(drawCal,0);
+  function sel(n){var e=f.querySelector('input[name="'+n+'"]:checked');return e?e.value:''}
+  function val(id){var e=document.getElementById(id);return e?e.value.trim():''}
+  function fmt(iso){var p=iso.split('-');return new Date(+p[0],+p[1]-1,+p[2]).toLocaleDateString('es-ES',{weekday:'long',day:'numeric',month:'long'})}
+  /* código de encargo: fecha + 3 caracteres; se mantiene mientras no cambie la fecha */
+  var _code='',_codeFor='';
+  function code(){if(_codeFor!==fecha.value||!_code){var p=fecha.value.split('-'),r='',A='ABCDEFGHJKLMNPQRSTUVWXYZ23456789';for(var i=0;i<3;i++)r+=A[Math.floor(Math.random()*A.length)];_code='FP-'+p[2]+p[1]+'-'+r;_codeFor=fecha.value}return _code}
+  function message(){
+    var tipo=sel('tipo'), des=tipo===DES, sinpax=SINPAX.indexOf(tipo)>-1;
+    var L=['¡Hola, Fast Pan y Pasteles! Soy '+nombre.value.trim()+'. Me gustaría hacer un encargo:',''];
+    L.push('🔖 Código: '+code());
+    if(window.TEMPORADA&&TEMPORADA.linea)L.push(TEMPORADA.linea);
+    L.push('• Encargo: '+tipo);
+    L.push('• Para el '+fmt(fecha.value)+(des?(val('f-zona')?', entrega en '+val('f-zona'):', a domicilio'):', recogida en '+sel('tienda')));
+    if(!sinpax)L.push('• Para: '+sel('pax'));
+    if(val('f-sabor'))L.push('• '+(sinpax?'Me interesa: ':'Nos gusta: ')+val('f-sabor'));
+    if(TARTAS.indexOf(tipo)>-1&&val('f-texto'))L.push('• Texto en la tarta: «'+val('f-texto')+'»');
+    if(val('f-alergias'))L.push('• Alergias o intolerancias: '+val('f-alergias'));
+    if(val('f-tel'))L.push('• Mi teléfono: '+val('f-tel'));
+    if(val('f-notas'))L.push('','Más detalles: '+val('f-notas'));
+    L.push('','¿Me confirmáis disponibilidad y precio? ¡Gracias!');
+    return L.join('\n');
+  }
+  function show(n){
+    step=n; err.hidden=true;
+    var tipo=sel('tipo'), des=tipo===DES, sinpax=SINPAX.indexOf(tipo)>-1;
+    panes.forEach(function(p){p.hidden=+p.dataset.step!==n});
+    document.getElementById('f-tienda-wrap').hidden=des;
+    document.getElementById('f-zona-wrap').hidden=!des;
+    document.getElementById('f-texto-wrap').hidden=TARTAS.indexOf(tipo)<0;
+    var paxW=f.querySelector('[data-step="3"] .bk-opts').parentNode;paxW.hidden=sinpax;
+    document.getElementById('f-pax-h').textContent=sinpax?'¿Qué te apetece?':'¿Para cuántas personas?';
+    back.disabled=n===1;
+    var last=n===N; next.hidden=last; wa.hidden=!last; call.hidden=!last;
+    next.textContent=n===4?'Ver mi encargo':'Siguiente';
+    stepT.textContent=last?'Listo':'Paso '+n+' de 4';
+    bar.style.transform='scaleX('+(Math.min(n,4)/4)+')';
+    if(last){var m=message(),t=TEL[des?'Ajalvir':sel('tienda')]||TEL.Ajalvir;pre.textContent=m;wa.href='mailto:'+MAIL+'?subject='+encodeURIComponent('Encargo '+code()+' · '+tipo)+'&body='+encodeURIComponent(m);call.href='tel:'+t[0];call.querySelector('span').textContent='Prefiero llamar · '+t[1]}
+    f.scrollTop=0;
+    var h3=panes[n-1].querySelector('h3'); if(h3)h3.setAttribute('tabindex','-1');
+    setTimeout(function(){try{(h3||next).focus({preventScroll:true})}catch(x){}},380);
+  }
+  function fail(msg,el){err.textContent=msg;err.hidden=false;if(el){el.setAttribute('aria-invalid','true');el.focus()}}
+  function validate(n){
+    if(n===1&&!sel('tipo')){fail('Elige qué te preparamos.');return false}
+    if(n===2&&!fecha.value){fail('Elige un día en el calendario.');var fb=grid.querySelector('button:not([disabled])');fb&&fb.focus();return false}
+    if(n===4){nombre.removeAttribute('aria-invalid');if(!nombre.value.trim()){fail('Dinos tu nombre para el mensaje.',nombre);return false}}
+    return true;
+  }
+  function go(n){show(n)}
+  next.addEventListener('click',function(){if(validate(step))go(step+1)});
+  back.addEventListener('click',function(){if(step>1)go(step-1)});
+  f.addEventListener('submit',function(e){e.preventDefault();next.click()});
+  f.querySelectorAll('input[name="tipo"]').forEach(function(r){r.addEventListener('change',function(){setTimeout(function(){if(step===1)go(2)},220)})});
+  document.getElementById('f-copy').addEventListener('click',function(){var b=this,ok=function(){b.textContent='Copiado';setTimeout(function(){b.textContent='Copiar mensaje'},1600)};
+    try{navigator.clipboard.writeText(pre.textContent).then(ok,function(){var r=document.createRange();r.selectNodeContents(pre);var s=getSelection();s.removeAllRanges();s.addRange(r)})}catch(x){}});
+  function open(from){
+    opener=from||document.activeElement; bk.hidden=false; document.documentElement.style.overflow='hidden';
+    var preset=from&&from.dataset&&from.dataset.tipo;
+    if(preset){var r=f.querySelector('input[name="tipo"][value="'+preset+'"]');if(r){r.checked=true;show(2)}}
+    else if(step===N)show(4); else show(step);
+    requestAnimationFrame(function(){requestAnimationFrame(function(){bk.classList.add('open')})});
+  }
+  function close(){
+    bk.classList.remove('open'); document.documentElement.style.overflow='';
+    setTimeout(function(){bk.hidden=true},reduced?0:420);
+    if(opener&&opener.focus)try{opener.focus({preventScroll:true})}catch(x){}
+  }
+  document.getElementById('bk-x').addEventListener('click',close);
+  document.getElementById('bk-scrim').addEventListener('click',close);
+  document.addEventListener('keydown',function(e){if(!bk.hidden&&e.key==='Escape')close()});
+  /* todos los enlaces a #encargar abren el panel */
+  document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[href="#encargar"]');if(!a)return;e.preventDefault();open(a)});
+  /* un enlace compartido con #encargar (bio de Instagram, WhatsApp) abre el panel al llegar */
+  if(location.hash==='#encargar')setTimeout(function(){open()},400);
+})();
+
+
+/* ---------- Drawer de reseñas ---------- */
+(function(){var d=document.getElementById('rvd'); if(!d)return;
+ var list=document.getElementById('rvd-list'), map=document.getElementById('rvd-map'), opener=null, filled=false;
+ function open(from){
+   if(!filled){document.querySelectorAll('#resenas .rv').forEach(function(c){var k=c.cloneNode(true);k.removeAttribute('data-reveal');list.appendChild(k)});filled=true}
+   if(!map.src)map.src=map.getAttribute('data-src');
+   opener=from||document.activeElement; d.hidden=false; document.documentElement.style.overflow='hidden'; SFX.play('open');
+   requestAnimationFrame(function(){requestAnimationFrame(function(){d.classList.add('open');var x=d.querySelector('.bk-head [data-rvd-x]');x&&x.focus({preventScroll:true})})});
+ }
+ function close(){ if(d.hidden)return; SFX.play('close'); d.classList.remove('open'); document.documentElement.style.overflow='';
+   setTimeout(function(){d.hidden=true;opener&&opener.focus&&opener.focus({preventScroll:true})},reduced?0:420); }
+ document.addEventListener('click',function(e){var a=e.target.closest('[data-rvd]');if(a){e.preventDefault();open(a);return}
+   if(e.target.closest('[data-rvd-x]'))close()});
+ document.addEventListener('keydown',function(e){if(e.key==='Escape')close()});
+})();
+
+
+
+
+
+/* ---------- Subir arriba ---------- */
+(function(){var b=document.getElementById('totop');
+ b.addEventListener('click',function(){window.scrollTo({top:0,behavior:reduced?'auto':'smooth'})});})();
+
+/* ---------- Animaciones por visibilidad (IntersectionObserver) ---------- */
+(function(){
+  var root=document.documentElement;
+  if(!('IntersectionObserver' in window)||reduced)return;
+  root.classList.add('js-anim');
+  var io=new IntersectionObserver(function(es){var k=0;es.forEach(function(e){if(!e.isIntersecting)return;var el=e.target;el.style.transitionDelay=Math.min(k++*90,450)+'ms';el.classList.add('in');io.unobserve(el);setTimeout(function(){el.style.transitionDelay=''},1500)})},{rootMargin:'0px 0px -8% 0px'});
+  document.querySelectorAll('[data-reveal]').forEach(function(el){io.observe(el)});
+  var bar=document.getElementById('progress'), tk=false;
+  function prog(){tk=false;var H=root.scrollHeight-innerHeight;bar.style.transform='scaleX('+(H>0?Math.min(1,scrollY/H):0)+')'}
+  window.addEventListener('scroll',function(){if(!tk){tk=true;requestAnimationFrame(prog)}},{passive:true});
+})();
+})();
+
+/* ---------- Botones flotantes tras un mínimo scroll (cabecera y barra móvil ocultas al pintar el hero) ---------- */
+(function(){var h=document.documentElement,tk=false;function s(){tk=false;h.classList.toggle('cta-wait',scrollY<=Math.min(120,innerHeight*.15))}
+ s();addEventListener('scroll',function(){if(!tk){tk=true;requestAnimationFrame(s)}},{passive:true});addEventListener('resize',s);})();
+</script>

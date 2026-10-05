@@ -1,0 +1,489 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Aloha en 3D</title>
+<meta name="description" content="Recorrido 3D ilustrativo por la sala de eventos Aloha en San Martín de la Vega.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shrikhand&family=Outfit:wght@400;500;600;700&display=swap">
+<style>
+/* Página del recorrido 3D: plano navegable (arrastrar, zoom, girar e inclinar) con atajos por zona. */
+:root{
+  color-scheme: light;
+  --shell:#FCF2EE;
+  --shell-2:#F7E4DE;
+  --ink:#3A2430;
+  --ink-soft:#7A5F68;
+  --hibiscus:#DD4F78;
+  --hibiscus-ink:#B83A5F;
+  --palm:#2E8A8C;
+  --sun:#F4B184;
+  --line:rgba(58,36,48,.12);
+  --night:#1A0E2E;
+  --neon-pink:#FF4FD8;
+  --neon-blue:#5B7CFF;
+  --on-night:#F5ECFF;
+  --on-night-soft:#B9A8D6;
+  --font-display:"Shrikhand", "Cooper Black", Georgia, serif;
+  --font-body:"Outfit", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --r-sm:12px; --r-md:20px; --r-lg:28px;
+  --shadow:0 30px 60px -30px rgba(58,36,48,.35), 0 8px 20px -10px rgba(58,36,48,.15);
+  --wrap:1180px;
+  --head:72px;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--shell);color:var(--ink);font-family:var(--font-body);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:clip}
+img{max-width:100%;display:block}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--hibiscus);outline-offset:3px;border-radius:6px}
+.wrap{max-width:var(--wrap);margin-inline:auto;padding-inline:clamp(16px,4vw,40px)}
+h1,h2,h3{margin:0;text-wrap:balance;line-height:1.05;letter-spacing:-.02em;font-weight:700}
+p{margin:0}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--palm)}
+.eyebrow::before{content:"";width:22px;height:10px;border-radius:10px 10px 0 0;background:linear-gradient(var(--hibiscus) 0 33%,var(--sun) 33% 66%,var(--palm) 66%);flex:none}
+.display{font-family:var(--font-display);font-weight:400;letter-spacing:0;color:var(--hibiscus)}
+.lead{font-size:clamp(18px,1.6vw,20px);color:var(--ink-soft);max-width:34em}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 24px;border-radius:999px;font:600 16px/1 var(--font-body);text-decoration:none;border:1.5px solid transparent;cursor:pointer;transition:transform .25s cubic-bezier(.2,.7,.2,1),box-shadow .25s,background .25s,border-color .25s}
+.btn-primary{background:var(--hibiscus);color:#fff;box-shadow:0 12px 24px -12px rgba(221,79,120,.8)}
+.btn-primary:hover{background:var(--hibiscus-ink);transform:translateY(-2px) scale(1.02)}
+.btn-ghost{background:transparent;border-color:var(--line);color:var(--ink)}
+.btn-ghost:hover{border-color:var(--ink);transform:translateY(-2px)}
+.btn svg{width:18px;height:18px;flex:none}
+
+/* Cabecera */
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:60;background:rgba(252,242,238,.96);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;height:var(--head)}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+.brand img{width:52px;height:42px;object-fit:cover;border-radius:10px;border:1px solid var(--line)}
+.brand span{font-family:var(--font-display);font-size:22px;color:var(--ink)}
+.nav{display:flex;gap:28px;font-size:15px;font-weight:500}
+.nav a{text-decoration:none;color:var(--ink-soft);position:relative}
+.nav a::after{content:"";position:absolute;left:0;right:0;bottom:-4px;height:2px;background:var(--hibiscus);transform:scaleX(0);transform-origin:left;transition:transform .3s}
+.nav a:hover{color:var(--ink)}
+.nav a:hover::after{transform:scaleX(1)}
+.top .btn{min-height:44px;padding:0 18px;font-size:15px}
+.progress{position:absolute;left:0;bottom:-1px;height:2px;width:100%;background:var(--hibiscus);transform:scaleX(0);transform-origin:left}
+
+/* Recorrido 3D */
+.tour{position:relative;--tour-bg:var(--shell)}
+.tour-stage{position:relative;height:calc(100vh - var(--head));height:calc(100svh - var(--head));min-height:520px;overflow:hidden;background:var(--tour-bg);transition:background-color .4s}
+#tour3d{position:absolute;inset:0;width:100%;height:100%;display:block;outline:none}
+.tour-panel{position:absolute;left:clamp(16px,4vw,48px);top:50%;transform:translateY(-50%);width:min(390px,calc(100% - 32px));background:rgba(252,242,238,.96);border:1px solid var(--line);border-radius:var(--r-lg);padding:26px;display:grid;gap:12px;box-shadow:var(--shadow);transition:background .5s,color .5s,border-color .5s}
+.tour-panel h2{font-size:clamp(28px,2.8vw,38px)}
+.tour-panel p{color:var(--ink-soft);font-size:16px;transition:color .5s}
+.tour-count{font-size:13px;font-weight:600;color:var(--ink-soft);font-variant-numeric:tabular-nums;letter-spacing:.06em}
+.tour-photo{margin:6px 0 0;border-radius:var(--r-md);overflow:hidden;aspect-ratio:16/10}
+.tour-photo img{width:100%;height:100%;object-fit:cover}
+.tour-dots{position:absolute;right:clamp(16px,3vw,40px);top:50%;transform:translateY(-50%);list-style:none;margin:0;padding:0;display:grid;gap:6px}
+.tour-dots button{all:unset;cursor:pointer;display:flex;align-items:center;justify-content:flex-end;gap:12px;font-size:13px;font-weight:600;color:var(--ink-soft);padding:6px 0}
+.tour-dots button span{opacity:0;transform:translateX(6px);transition:opacity .3s,transform .3s;background:rgba(252,242,238,.88);padding:3px 10px;border-radius:999px}
+.tour.is-night .tour-dots button span{background:rgba(26,14,46,.8)}
+.tour-dots button:hover span,.tour-dots button[aria-current="step"] span{opacity:1;transform:none}
+.tour-dots button i{width:10px;height:10px;border-radius:50%;border:2px solid currentColor;transition:background .3s,transform .3s}
+.tour-dots button[aria-current="step"]{color:var(--hibiscus)}
+.tour-dots button[aria-current="step"] i{background:currentColor;transform:scale(1.3)}
+.tour-note{position:absolute;left:50%;bottom:16px;transform:translateX(-50%);font-size:12px;color:var(--ink-soft);background:rgba(252,242,238,.8);padding:4px 12px;border-radius:999px;white-space:nowrap}
+.tour.is-night .tour-panel{background:rgba(26,14,46,.94);color:var(--on-night);border-color:rgba(245,236,255,.16)}
+.tour.is-night .tour-panel p,.tour.is-night .tour-count{color:var(--on-night-soft)}
+.tour.is-night .tour-panel .eyebrow{color:var(--neon-pink)}
+.tour.is-night .tour-dots button{color:var(--on-night-soft)}
+.tour.is-night .tour-dots button[aria-current="step"]{color:var(--neon-pink)}
+.tour.is-night .tour-note{background:rgba(26,14,46,.7);color:var(--on-night-soft)}
+.no3d #tour3d{display:none}
+.no3d .tour-stage{background:var(--shell-2)}
+
+.loading{position:absolute;inset:0;z-index:5;display:grid;place-content:center;justify-items:center;gap:14px;background:var(--shell);font-weight:600;color:var(--ink-soft);transition:opacity .6s}
+.loading.done{opacity:0;pointer-events:none}
+.spin{width:34px;height:34px;border-radius:50%;border:3px solid var(--shell-2);border-top-color:var(--hibiscus);animation:spin .8s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.back{display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:15px;text-decoration:none;color:var(--ink-soft)}
+.back:hover{color:var(--ink)}
+.top-actions{display:flex;align-items:center;gap:20px}
+.end{padding-block:clamp(64px,10vw,120px);text-align:center}
+.end h2{font-size:clamp(36px,5vw,64px);max-width:13em;margin:16px auto 0}
+.end p{color:var(--ink-soft);margin:16px auto 0;max-width:34em}
+.end .ctas{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:28px}
+.nav3d{position:absolute;right:clamp(16px,3vw,40px);bottom:20px;display:flex;gap:8px;z-index:3}
+.nav3d button{all:unset;cursor:pointer;width:44px;height:44px;border-radius:14px;display:grid;place-items:center;background:rgba(255,255,255,.9);border:1px solid var(--line);box-shadow:0 8px 20px -10px rgba(58,36,48,.45);color:var(--ink);transition:transform .2s,background .2s}
+.nav3d button:hover{transform:translateY(-1px);background:#fff}
+.nav3d button:focus-visible{outline:3px solid var(--hibiscus)}
+.nav3d svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+.tour.is-night .nav3d button{background:rgba(26,14,46,.85);color:var(--on-night);border-color:rgba(245,236,255,.16)}
+.nav-hint{position:absolute;left:50%;top:18px;transform:translateX(-50%);z-index:3;margin:0;font-size:13px;font-weight:600;color:#fff;background:rgba(58,36,48,.82);padding:8px 16px;border-radius:999px;white-space:nowrap;pointer-events:none;transition:opacity .5s}
+.nav-hint.off{opacity:0}
+.nav-hint .m{display:none}
+@media (hover:none){.nav-hint .d{display:none}.nav-hint .m{display:inline}}
+.nocontrols .nav3d,.nocontrols .nav-hint,.no3d .nav3d,.no3d .nav-hint{display:none}
+#tour3d{touch-action:none;cursor:grab}#tour3d:active{cursor:grabbing}
+.mbar{display:none}
+@media (max-width:960px){
+  .tour-panel{top:auto;bottom:44px;transform:none;left:16px;width:calc(100% - 32px);padding:16px;grid-template-columns:84px 1fr;gap:4px 14px;align-items:center}
+  .tour-panel>*{grid-column:2}
+  .tour-photo{grid-column:1;grid-row:1/5;margin:0;aspect-ratio:1;align-self:start}
+  .tour-panel h2{font-size:22px}
+  .tour-panel p{font-size:14px;line-height:1.45;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+  .tour-panel .eyebrow{font-size:11px}
+  .tour-dots{top:14px;right:auto;left:16px;transform:none;display:flex;gap:6px;width:calc(100% - 32px)}
+  .tour-dots li{flex:1}
+  .tour-dots button{display:block;height:4px;padding:6px 0;width:100%}
+  .tour-dots button span{display:none}
+  .tour-dots button i{display:block;width:100%;height:4px;border:none;border-radius:4px;background:var(--line);transform:none!important}
+  .tour-dots button[aria-current="step"] i,.tour-dots button.done i{background:var(--hibiscus)}
+  .tour.is-night .tour-dots button i{background:rgba(245,236,255,.2)}
+  .tour.is-night .tour-dots button[aria-current="step"] i,.tour.is-night .tour-dots button.done i{background:var(--neon-pink)}
+  .tour-note{bottom:12px;font-size:11px}
+  .tour-stage{height:calc(100svh - var(--head) - 64px)}
+  .nav3d{top:34px;bottom:auto;right:16px;gap:6px;flex-direction:column}
+  .nav3d button{width:40px;height:40px;border-radius:12px}
+  .nav-hint{top:64px;font-size:11.5px;padding:6px 12px;max-width:calc(100% - 90px);white-space:normal;text-align:center}
+}
+@media (max-width:640px){
+  body{font-size:16px;padding-bottom:84px}
+  .back span{display:none}
+  .top .btn{display:none}
+  .mbar{display:flex;gap:10px;position:fixed;left:0;right:0;bottom:0;z-index:70;padding:12px 16px calc(12px + env(safe-area-inset-bottom,0px));background:rgba(252,242,238,.97);border-top:1px solid var(--line)}
+  .mbar .btn{flex:1;min-height:50px}
+  .mbar .btn-ghost{flex:0 0 auto;padding:0 18px}
+  .tour-panel{bottom:calc(86px + env(safe-area-inset-bottom,0px))}
+  .tour-note{bottom:auto;top:34px}
+  .end .ctas .btn{flex:1 1 100%}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-cal" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4.5" width="18" height="16.5" rx="2.5"/><path d="M3 9.5h18M8 2.5v4M16 2.5v4"/><path d="M8.5 15l2.3 2.3 4.7-4.6"/></g></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></symbol>
+  <symbol id="i-ig" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8" fill="currentColor"/></g></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 22s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></g></symbol>
+</svg>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="index.html" aria-label="Aloha Eventos, volver a la portada">
+      <img src="img/logo.jpg" alt="Logotipo de Aloha Eventos">
+      <span>Aloha</span>
+    </a>
+    <div class="top-actions">
+      <a class="back" href="index.html"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M19 12H5M11 18l-6-6 6-6"/></svg>Volver<span>&nbsp;a la web</span></a>
+      <a class="btn btn-primary" href="index.html#reservar"><svg><use href="#i-cal"/></svg>Reservar</a>
+    </div>
+  </div>
+  <div class="progress" id="progress"></div>
+</header>
+<main>
+  <section class="tour" id="tour" aria-label="Recorrido 3D por el local">
+    <div class="tour-stage">
+      <canvas id="tour3d" aria-hidden="true"></canvas>
+      <div class="loading" id="loading" aria-hidden="true"><span class="spin"></span>Montando la sala…</div>
+      <div class="tour-panel" id="tour-panel" aria-live="polite">
+        <figure class="tour-photo" id="tour-photo"><img id="tour-img" src="img/salon.jpg" alt=""></figure>
+        <span class="tour-count" id="tour-count">01 / 07</span>
+        <span class="eyebrow" id="tour-eyebrow">Recorrido por el local</span>
+        <h2 id="tour-title">Así es Aloha por dentro.</h2>
+        <p id="tour-text">Dos salas en un mismo local: la principal, con cinco zonas, y la Sala Gamer al fondo. Muévete por el plano o toca una zona.</p>
+      </div>
+      <ol class="tour-dots" id="tour-dots"></ol>
+      <div class="nav3d" role="toolbar" aria-label="Controles del plano">
+        <button type="button" id="nav-in" aria-label="Acercar"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></button>
+        <button type="button" id="nav-out" aria-label="Alejar"><svg viewBox="0 0 24 24"><path d="M5 12h14"/></svg></button>
+        <button type="button" id="nav-plan" aria-label="Ver en planta"><svg viewBox="0 0 24 24"><path d="M4 4h16v16H4zM4 10h7v10M11 4v6h9"/></svg></button>
+        <button type="button" id="nav-home" aria-label="Vista general"><svg viewBox="0 0 24 24"><path d="M4 11l8-7 8 7M6 9.5V20h12V9.5"/></svg></button>
+      </div>
+      <p class="nav-hint" id="nav-hint"><span class="d">Arrastra para moverte · rueda para el zoom · clic derecho para girar e inclinar</span><span class="m">Arrastra para moverte · pellizca para el zoom · dos dedos para girar</span></p>
+      <p class="tour-note">Recreación ilustrativa del local, no a escala</p>
+    </div>
+  </section>
+  <section class="end">
+    <div class="wrap">
+      <span class="eyebrow">Reserva tu fecha</span>
+      <h2>¿Te lo imaginas aquí? <span class="display">Ven a verlo.</span></h2>
+      <p>Llámanos, te enseñamos la sala en persona y te decimos qué días quedan libres.</p>
+      <div class="ctas">
+        <a class="btn btn-primary" href="index.html#reservar"><svg><use href="#i-cal"/></svg>Reservar</a>
+        <a class="btn btn-ghost" href="index.html">Volver a la web</a>
+      </div>
+    </div>
+  </section>
+</main>
+<div class="mbar">
+  <a class="btn btn-primary" href="index.html#reservar"><svg><use href="#i-cal"/></svg>Reservar</a>
+  <a class="btn btn-ghost" href="https://www.instagram.com/alohaeventos.smv/" target="_blank" rel="noopener" aria-label="Instagram"><svg><use href="#i-ig"/></svg></a>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+<script>
+(function(){
+"use strict";
+var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+var hasGsap = !!window.gsap;
+var HEAD = 72;
+/* ---------- Datos del recorrido ---------- */
+var STEPS=[
+  {eb:'Recorrido por el local',t:'Así es Aloha por dentro.',p:'Dos salas en un mismo local: la principal, con cinco zonas, y la Sala Gamer al fondo. Muévete por el plano o toca una zona.',img:'img/salon.jpg',alt:'Vista general del salón con mesas, vitrina y el parque de bolas al fondo',cam:[4.5,19,22.5],look:[4,0,-1]},
+  {eb:'Sala principal',t:'Parque de bolas.',p:'La zona más grande: varias alturas, redes, tobogán y una gran piscina de bolas. Al lado, un pequeño campo de fútbol para los que prefieren el balón.',img:'img/parque-bolas.jpg',alt:'Parque de bolas con redes de colores',cam:[-.4,7,8.6],look:[-5.3,1.1,-.4]},
+  {eb:'Sala principal',t:'Zona baby.',p:'Un rincón tranquilo para los más pequeños, con su propio espacio de juego.',img:'img/zona-baby.jpg',alt:'Zona baby con tipi, arenero de bolas y mural de selva',cam:[2.2,4.4,2.4],look:[-.2,.7,-3.2]},
+  {eb:'Sala principal',t:'Zona disfraces.',p:'Para los que prefieren ser otra persona por una tarde.',img:'',alt:'',cam:[5.6,3.8,1.2],look:[3.4,1,-3.6]},
+  {eb:'Sala principal',t:'Zona relax.',p:'Sofá y mesas para los adultos, a la vista del parque.',img:'img/zona-relax.jpg',alt:'Zona relax con sofá amarillo y mesas',cam:[2.6,4.6,9.5],look:[0,.5,2.4]},
+  {eb:'Sala principal',t:'Cocina y candy bar.',p:'Una cocina para preparar la merienda y sacar la tarta, y un candy bar decorado a medida.',img:'img/candy-bar.jpg',alt:'Candy bar con tarta de chuches y globos',cam:[9.2,5,6.8],look:[5.8,.8,-.4]},
+  {eb:'Sala Gamer',t:'Y al fondo, la Sala Gamer.',p:'PS5, air hockey, diana, máquina arcade y karaoke bajo luces de neón. Para los mayores y los adultos que se apuntan.',img:'img/sala-gamer.jpg',alt:'Sala Gamer con televisor y neones',cam:[12.4,5.6,7.4],look:[12.2,.9,-2.2]}
+];
+var N=STEPS.length;
+var tour=document.getElementById('tour');
+var dotsEl=document.getElementById('tour-dots');
+var panel=document.getElementById('tour-panel');
+var cur=-1, tourST=null;
+STEPS.forEach(function(s,i){
+  var li=document.createElement('li');
+  li.innerHTML='<button type="button" aria-label="'+s.t.replace(/\.$/,'')+'"><span>'+s.t.replace(/\.$/,'').replace('Y al fondo, la ','')+'</span><i></i></button>';
+  li.firstChild.addEventListener('click',function(){goStep(i)});
+  dotsEl.appendChild(li);
+});
+function setStep(i, animate){
+  if(i===cur) return; cur=i; var s=STEPS[i];
+  var swap=function(){
+    document.getElementById('tour-count').textContent=String(i+1).padStart(2,'0')+' / '+String(N).padStart(2,'0');
+    document.getElementById('tour-eyebrow').textContent=s.eb;
+    document.getElementById('tour-title').textContent=s.t;
+    document.getElementById('tour-text').textContent=s.p;
+    var ph=document.getElementById('tour-photo'), im=document.getElementById('tour-img');
+    if(s.img){ph.hidden=false;im.src=s.img;im.alt=s.alt}else{ph.hidden=true}
+  };
+  dotsEl.querySelectorAll('button').forEach(function(b,k){
+    if(k===i)b.setAttribute('aria-current','step');else b.removeAttribute('aria-current');
+    b.classList.toggle('done',k<i);
+  });
+  if(animate && hasGsap && !reduced){
+    gsap.killTweensOf(panel.children);
+    gsap.to(panel.children,{y:-10,opacity:0,duration:.18,stagger:.02,ease:'power2.in',onComplete:function(){
+      swap(); gsap.fromTo(panel.children,{y:14,opacity:0},{y:0,opacity:1,duration:.45,stagger:.05,ease:'power3.out'});
+    }});
+  } else swap();
+}
+function goStep(i){ setStep(i,true); }
+setStep(0,false);
+
+/* ---------- Escena 3D ---------- */
+var three=null;
+function build3D(){
+  if(!window.THREE) { tour.classList.add('no3d'); return null; }
+  var canvas=document.getElementById('tour3d');
+  var renderer;
+  try{ renderer=new THREE.WebGLRenderer({canvas:canvas,antialias:true,alpha:false}); }catch(e){ tour.classList.add('no3d'); return null; }
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio||1,1.5));
+  renderer.shadowMap.enabled=true; renderer.shadowMap.type=THREE.PCFShadowMap; renderer.shadowMap.autoUpdate=false; renderer.shadowMap.needsUpdate=true;
+  renderer.outputEncoding=THREE.sRGBEncoding;
+  var scene=new THREE.Scene();
+  var SHELL=new THREE.Color('#FCF2EE'), NIGHT=new THREE.Color('#1A0E2E'), bg=SHELL.clone();
+  scene.background=bg;
+  scene.fog=new THREE.Fog(bg,48,95);
+  var camera=new THREE.PerspectiveCamera(38,1,.1,200);
+
+  var hemi=new THREE.HemisphereLight(0xfff4ef,0xe7c3bb,.95); scene.add(hemi);
+  var sun=new THREE.DirectionalLight(0xfff0e6,.85); sun.position.set(-6,16,10); sun.castShadow=true;
+  sun.shadow.mapSize.set(1024,1024); var sc=sun.shadow.camera; sc.left=-14;sc.right=20;sc.top=12;sc.bottom=-12;sc.near=1;sc.far=50; sun.shadow.bias=-.0005; sun.shadow.radius=4;
+  scene.add(sun);
+
+  function M(c,o){var m=new THREE.MeshStandardMaterial(Object.assign({color:c,roughness:.78,metalness:0,flatShading:true},o||{}));return m}
+  function B(c){return new THREE.MeshBasicMaterial({color:c})}
+  function add(geo,mat,x,y,z,parent){var m=new THREE.Mesh(geo,mat);m.position.set(x,y,z);m.castShadow=true;m.receiveShadow=true;(parent||scene).add(m);return m}
+  function box(w,h,d,mat,x,y,z,p){return add(new THREE.BoxGeometry(w,h,d),mat,x,y,z,p)}
+  function cyl(rt,rb,h,mat,x,y,z,seg,p){return add(new THREE.CylinderGeometry(rt,rb,h,seg||14),mat,x,y,z,p)}
+  function sph(r,mat,x,y,z,p){return add(new THREE.SphereGeometry(r,14,10),mat,x,y,z,p)}
+  function tube(a,b,r,mat){var v=new THREE.Vector3().subVectors(b,a);var len=v.length();var m=cyl(r,r,len,mat,0,0,0,8);m.position.copy(a).add(b).multiplyScalar(.5);m.quaternion.setFromUnitVectors(new THREE.Vector3(0,1,0),v.normalize());return m}
+  function canvasTex(w,h,draw){var c=document.createElement('canvas');c.width=w;c.height=h;draw(c.getContext('2d'),w,h);var t=new THREE.CanvasTexture(c);t.encoding=THREE.sRGBEncoding;t.anisotropy=4;return t}
+
+  /* Suelo y muros de la sala principal */
+  var floorTex=canvasTex(512,320,function(g,w,h){g.fillStyle='#F3DED6';g.fillRect(0,0,w,h);g.strokeStyle='rgba(150,110,110,.18)';g.lineWidth=2;for(var x=0;x<=w;x+=32){g.beginPath();g.moveTo(x,0);g.lineTo(x,h);g.stroke()}for(var y=0;y<=h;y+=32){g.beginPath();g.moveTo(0,y);g.lineTo(w,y);g.stroke()}});
+  box(16,.2,10,new THREE.MeshStandardMaterial({map:floorTex,roughness:.9}),0,-.1,0);
+  var wallM=M('#F7E4DE');
+  box(16.4,1.5,.2,wallM,0,.75,-5.1); box(.2,1.5,10.2,wallM,-8.1,.75,0);
+  var trim=M('#DD4F78'); box(16.4,.08,.24,trim,0,1.52,-5.1); box(.24,.08,10.2,trim,-8.1,1.52,0);
+
+  /* Parque de bolas */
+  var cols=['#F2C230','#59B84A','#7B4FC0','#E0443C','#3A6FD8'];
+  var px=[-7.4,-5.9,-4.4,-2.9], pz=[-4.4,-2.5,-.6,1.4];
+  var k=0; px.forEach(function(x){pz.forEach(function(z){cyl(.07,.07,3,M(cols[k++%4]),x,1.5,z,8)})});
+  [1.5,3].forEach(function(y,yi){
+    pz.forEach(function(z,zi){tube(new THREE.Vector3(px[0],y,z),new THREE.Vector3(px[3],y,z),.06,M(cols[(zi+yi)%4]))});
+    px.forEach(function(x,xi){tube(new THREE.Vector3(x,y,pz[0]),new THREE.Vector3(x,y,pz[2]),.06,M(cols[(xi+yi+1)%4]))});
+  });
+  box(2.9,.08,1.9,M('#3A6FD8'),-6.65,1.5,-3.45); box(1.5,.08,1.9,M('#59B84A'),-3.65,1.5,-1.55); box(1.5,.08,2,M('#F2C230'),-6.65,3,.4); box(1.5,.08,1.9,M('#E0443C'),-3.65,3,-3.45);
+  var net=new THREE.Mesh(new THREE.PlaneGeometry(4.5,1.5,16,6),new THREE.MeshBasicMaterial({color:'#F2C230',wireframe:true,transparent:true,opacity:.8}));
+  net.position.set(-5.15,2.25,1.4); scene.add(net);
+  var net2=net.clone(); net2.rotation.y=Math.PI/2; net2.scale.set(1.29,1,1); net2.position.set(-2.9,2.25,-1.5); scene.add(net2);
+  var slide=box(.7,.06,2.6,M('#E0443C'),-3.65,.8,.3); slide.rotation.x=-.58;
+  [[-7.2,-4.3,'#3A6FD8'],[-6.2,-4.3,'#F2C230'],[-5.2,-4.3,'#59B84A'],[-4.2,-4.3,'#E0443C']].forEach(function(t,i){for(var j=0;j<2;j++)box(.98,.05,.98,M(['#3A6FD8','#F2C230','#59B84A','#E0443C'][(i+j)%4]),t[0]+.5,.03,-4.2+j*1);});
+  var pitM=M('#ffffff'); [[-5.9,-2.3,3,.06],[-5.9,1.2,3,.06]].forEach(function(r){box(r[2],.45,r[3],pitM,r[0],.22,r[1])}); [[-7.4,-.55],[-4.4,-.55]].forEach(function(r){box(.06,.45,3.5,pitM,r[0],.22,r[1])});
+  function ballPit(n,x0,x1,z0,z1,r,ymax){
+    var g=new THREE.SphereGeometry(r,10,8), m=new THREE.MeshStandardMaterial({roughness:.4});
+    var im=new THREE.InstancedMesh(g,m,n), d=new THREE.Object3D(), c=new THREE.Color(), pal=['#F06AA8','#8E5BD6','#4C8DF0','#ffffff','#F2C230'];
+    for(var i=0;i<n;i++){d.position.set(x0+Math.random()*(x1-x0),r+Math.random()*ymax,z0+Math.random()*(z1-z0));d.updateMatrix();im.setMatrixAt(i,d.matrix);im.setColorAt(i,c.set(pal[i%pal.length]))}
+    im.castShadow=true;im.receiveShadow=true;scene.add(im);return im;
+  }
+  ballPit(900,-7.3,-4.5,-2.2,1.1,.1,.26);
+
+  /* Parque de fútbol */
+  box(3.2,.04,2.1,M('#5BAE5B'),-5.8,.02,3.7);
+  var lineM=B('#ffffff'); box(.04,.01,1.9,lineM,-5.8,.05,3.7); var cc=new THREE.Mesh(new THREE.RingGeometry(.32,.36,32),lineM); cc.rotation.x=-Math.PI/2; cc.position.set(-5.8,.05,3.7); scene.add(cc);
+  [-7.3,-4.3].forEach(function(x){var gm=M('#ffffff');cyl(.035,.035,.55,gm,x,.28,3.3,8);cyl(.035,.035,.55,gm,x,.28,4.1,8);tube(new THREE.Vector3(x,.55,3.3),new THREE.Vector3(x,.55,4.1),.035,gm)});
+  var ball=sph(.13,M('#ffffff'),-5.2,.13,3.9);
+
+  /* Zona baby */
+  box(3.4,.05,2.8,M('#7CC46B'),-.2,.03,-3.2);
+  var mural=canvasTex(512,180,function(g,w,h){g.fillStyle='#E4EDDD';g.fillRect(0,0,w,h);var gr=['#5E9B5A','#7DB46C','#3F7A4A','#9CC58A'];for(var i=0;i<70;i++){g.fillStyle=gr[i%4];g.beginPath();g.ellipse(Math.random()*w,h*.25+Math.random()*h*.8,14+Math.random()*30,6+Math.random()*12,Math.random()*3,0,7);g.fill()}g.fillStyle='#C27B4C';g.beginPath();g.ellipse(120,70,10,14,0,0,7);g.fill();g.beginPath();g.ellipse(380,50,9,12,0,0,7);g.fill()});
+  var mm=new THREE.Mesh(new THREE.PlaneGeometry(3.6,1.3),new THREE.MeshStandardMaterial({map:mural,roughness:1})); mm.position.set(-.2,.75,-4.99); scene.add(mm);
+  var tipi=add(new THREE.ConeGeometry(.7,1.7,6),M('#D6E6F2'),.8,.86,-3.9); tipi.rotation.y=.3;
+  var tipiStripe=add(new THREE.ConeGeometry(.42,.6,6,1,true),M('#7FA8D6'),.8,1.42,-3.9);
+  var wood=M('#C99A5B'); box(1.5,.25,.1,wood,-1.1,.15,-2.1); box(1.5,.25,.1,wood,-1.1,.15,-3.1); box(.1,.25,1.1,wood,-1.85,.15,-2.6); box(.1,.25,1.1,wood,-.35,.15,-2.6);
+  ballPit(70,-1.75,-.45,-3,-2.2,.08,.08);
+  box(.6,.04,.6,M('#ffffff'),.4,.45,-2.2); [[.15,-1.95],[.65,-1.95],[.15,-2.45],[.65,-2.45]].forEach(function(p){cyl(.03,.03,.42,M('#ffffff'),p[0],.22,p[1],6)});
+  box(.15,.12,.15,M('#E0443C'),.3,.53,-2.25); box(.15,.12,.15,M('#3A6FD8'),.5,.53,-2.15);
+
+  /* Zona disfraces */
+  var rackM=M('#3A2430'); cyl(.03,.03,1.6,rackM,2.4,.8,-3.9,8); cyl(.03,.03,1.6,rackM,4.0,.8,-3.9,8); tube(new THREE.Vector3(2.4,1.55,-3.9),new THREE.Vector3(4,1.55,-3.9),.03,rackM);
+  ['#DD4F78','#F4B184','#2E8A8C','#7B4FC0','#F2C230','#5B7CFF'].forEach(function(c,i){var h=box(.06,.75,.42,M(c),2.6+i*.27,1.12,-3.9);h.rotation.y=.2*(i%2?1:-1)});
+  box(.9,1.7,.06,M('#DD4F78'),4.6,.9,-4.94); var glass=box(.75,1.5,.02,new THREE.MeshStandardMaterial({color:'#DCEFF6',roughness:.1,metalness:.6}),4.6,.9,-4.9);
+  box(.8,.45,.5,M('#B97D4B'),2.9,.23,-2.9); var hat=cyl(.18,.24,.2,M('#2E8A8C'),2.9,.56,-2.9); cyl(.32,.32,.03,M('#2E8A8C'),2.9,.47,-2.9);
+
+  /* Zona relax */
+  cyl(1.4,1.4,.03,M('#EBD3BE'),.1,.02,2.6,32);
+  var sofaM=M('#E6B530'); box(2.4,.4,.8,sofaM,.1,.3,4.05); box(2.4,.65,.22,sofaM,.1,.75,4.36); box(.22,.55,.8,sofaM,-1.1,.45,4.05); box(.22,.55,.8,sofaM,1.3,.45,4.05);
+  [[-.7,2.2],[.9,2.4]].forEach(function(t){cyl(.42,.42,.04,M('#ffffff'),t[0],.56,t[1],24);cyl(.04,.04,.54,M('#3A2430'),t[0],.28,t[1],6)});
+  var chairM=M('#9FC9C9'); [[-1.4,2],[-.7,1.4],[1.6,2.7],[.9,1.6]].forEach(function(c){cyl(.2,.17,.05,chairM,c[0],.42,c[1],12);cyl(.025,.025,.4,M('#3A2430'),c[0],.2,c[1],6)});
+  cyl(.2,.16,.4,M('#C99A5B'),2.1,.2,4.2,10); add(new THREE.ConeGeometry(.35,1.1,7),M('#4F8F55'),2.1,.95,4.2);
+
+  /* Cocina */
+  box(3.2,.9,.7,M('#ffffff'),6.2,.45,-4.6); box(3.2,.05,.72,M('#E8D5CF'),6.2,.92,-4.6);
+  box(1.8,.5,.8,M('#ffffff'),6.2,.25,-2.6); var vit=box(1.8,.55,.8,new THREE.MeshStandardMaterial({color:'#ffffff',transparent:true,opacity:.28,roughness:.05}),6.2,.78,-2.6); vit.castShadow=false;
+  cyl(.25,.25,.15,M('#F6C9C3'),5.8,.6,-2.6,16); cyl(.18,.18,.12,M('#DD4F78'),6.6,.58,-2.6,16);
+
+  /* Candy bar con arco de globos */
+  box(2.4,.8,.8,M('#F7C6D9'),5.8,.4,2.6); box(2.5,.06,.86,M('#ffffff'),5.8,.82,2.6);
+  cyl(.34,.34,.18,M('#F6C9C3'),5.5,.94,2.6,20); cyl(.25,.25,.16,M('#9FD8D3'),5.5,1.11,2.6,20); cyl(.15,.15,.14,M('#F4B184'),5.5,1.26,2.6,20);
+  [6.2,6.6].forEach(function(x){var j=cyl(.1,.1,.3,new THREE.MeshStandardMaterial({color:'#ffffff',transparent:true,opacity:.5}),x,1,2.5,12);});
+  var bal=['#F7B7C9','#ffffff','#BFE6DF','#F4C3A3','#D9C3EE','#DD4F78'];
+  for(var a=0;a<=28;a++){var th=Math.PI*a/28;var bx=5.8+Math.cos(th)*1.7,by=Math.sin(th)*2.3;for(var q=0;q<2;q++){sph(.17+Math.random()*.1,M(bal[(a*2+q)%bal.length],{roughness:.35,flatShading:false}),bx+(Math.random()-.5)*.25,by+(Math.random()-.5)*.25,3.15+(q?.18:-.1))}}
+
+  /* Sala Gamer */
+  var gFloor=box(6,.2,6,M('#241238'),12,-.1,-2);
+  var gWall=M('#2C1748');
+  box(6.2,2.5,.2,gWall,12,1.25,-5.1); box(.2,2.5,6.2,gWall,15.1,1.25,-2); box(.2,2.5,3,gWall,9,1.25,-3.5); box(.2,2.5,1.6,gWall,9,1.25,.2); box(.2,.5,1.4,gWall,9,2.25,-1.3);
+  var neonP=B('#FF4FD8'), neonB=B('#5B7CFF');
+  [[9.6,2.3,10.8,2.3],[10.8,2.3,11.4,1.9],[11.4,1.9,12.6,1.9],[12.6,1.9,13.2,2.3],[13.2,2.3,14.8,2.3]].forEach(function(s){var a=new THREE.Vector3(s[0],s[1],-4.98),b=new THREE.Vector3(s[2],s[3],-4.98);var m=tube(a,b,.035,neonP);m.castShadow=false});
+  var nb=tube(new THREE.Vector3(14.97,2,-4.8),new THREE.Vector3(14.97,2,.8),.035,neonB); nb.castShadow=false;
+  var nb2=tube(new THREE.Vector3(9.4,2.05,-4.97),new THREE.Vector3(14.8,2.05,-4.97),.03,neonB); nb2.castShadow=false;
+  var screen=canvasTex(320,180,function(g,w,h){var gr=g.createLinearGradient(0,0,0,h);gr.addColorStop(0,'#5BC0FF');gr.addColorStop(.55,'#BCE7FF');gr.addColorStop(.56,'#6E7B8F');gr.addColorStop(1,'#3B4252');g.fillStyle=gr;g.fillRect(0,0,w,h);g.fillStyle='#ffffff';for(var i=0;i<6;i++)g.fillRect(150-i*4,110+i*12,12+i*2,6);g.fillStyle='#E0443C';g.fillRect(130,135,60,26);g.fillStyle='#222';g.fillRect(132,158,14,10);g.fillRect(174,158,14,10);g.fillStyle='#F2C230';g.font='bold 18px sans-serif';g.fillText('1st  01:02',14,26)});
+  box(1.9,1.08,.08,M('#111111'),11,1.5,-4.95);
+  var scr=new THREE.Mesh(new THREE.PlaneGeometry(1.78,.98),new THREE.MeshBasicMaterial({map:screen})); scr.position.set(11,1.5,-4.9); scene.add(scr);
+  box(1.6,.45,.45,M('#ffffff'),11,.23,-4.7); box(.1,.42,.3,M('#ffffff'),12,.21,-4.7); box(.1,.42,.3,M('#111111'),12.02,.21,-4.69).scale.set(.3,.9,.9);
+  var arc=new THREE.Group(); scene.add(arc); arc.position.set(14.35,0,-4.2); arc.rotation.y=-.5;
+  box(.8,1.9,.7,M('#F0E6F5'),0,.95,0,arc); box(.82,.25,.72,M('#DD4F78'),0,1.95,0,arc);
+  var asc=new THREE.Mesh(new THREE.PlaneGeometry(.6,.45),B('#7D5BFF')); asc.position.set(0,1.45,.36); arc.add(asc);
+  box(.8,.08,.3,M('#3A2430'),0,1.1,.45,arc);
+  var dart=canvasTex(128,128,function(g){var rs=[[62,'#111'],[56,'#E0443C'],[50,'#111'],[40,'#F4EBD0'],[30,'#59B84A'],[22,'#F4EBD0'],[8,'#E0443C']];rs.forEach(function(r){g.fillStyle=r[1];g.beginPath();g.arc(64,64,r[0],0,7);g.fill()})});
+  var db=new THREE.Mesh(new THREE.CircleGeometry(.36,32),new THREE.MeshStandardMaterial({map:dart,roughness:.9})); db.position.set(14.98,1.6,-2.3); db.rotation.y=-Math.PI/2; scene.add(db);
+  var ah=new THREE.Group(); scene.add(ah); ah.position.set(12.2,0,-1.4);
+  box(1.3,.7,2.2,M('#ffffff'),0,.35,0,ah); box(1.2,.04,2.1,M('#5B7CFF'),0,.72,0,ah); box(1.34,.1,.08,M('#E0443C'),0,.76,1.08,ah); box(1.34,.1,.08,M('#E0443C'),0,.76,-1.08,ah);
+  cyl(.07,.07,.03,M('#111111'),.2,.76,.2,12,ah); cyl(.1,.1,.08,M('#DD4F78'),-.2,.8,.7,12,ah); cyl(.1,.1,.08,M('#F2C230'),.1,.8,-.75,12,ah);
+  cyl(.02,.02,1.4,M('#222222'),10,.7,-.2,6); sph(.07,M('#222222'),10,1.45,-.2); cyl(.25,.25,.02,M('#222222'),10,.01,-.2,16);
+  var pinkL=new THREE.PointLight(0xff4fd8,.4,9,1.5); pinkL.position.set(11,2.1,-3.8); scene.add(pinkL);
+  var blueL=new THREE.PointLight(0x5b7cff,.4,9,1.5); blueL.position.set(14,2,-1); scene.add(blueL);
+  var arcL=new THREE.PointLight(0x7d5bff,.2,3,2); arcL.position.set(14,1.5,-3.6); scene.add(arcL);
+
+  /* Cámara: controles de plano (arrastrar, zoom, girar e inclinar) */
+  camera.position.set(4.5,19,22.5);
+  var controls=null;
+  if(THREE.MapControls){
+    controls=new THREE.MapControls(camera,canvas);
+    controls.enableDamping=true; controls.dampingFactor=.09; controls.screenSpacePanning=false;
+    controls.minDistance=2.5; controls.maxDistance=40; controls.maxPolarAngle=1.38; controls.minPolarAngle=0;
+    controls.zoomSpeed=.9; controls.rotateSpeed=.6; controls.panSpeed=.9;
+    controls.target.set(4,0,-1);
+    if(controls.listenToKeyEvents) controls.listenToKeyEvents(window);
+  } else { camera.lookAt(4,0,-1); tour.classList.add('nocontrols'); }
+  var visible=true, w=0, h=0, night=0, fly=null, BOUNDS={x0:-8.5,x1:15.5,z0:-5.5,z1:5.5};
+  function size(){var r=canvas.getBoundingClientRect();if(r.width===w&&r.height===h)return;w=r.width;h=r.height;renderer.setSize(w,h,false);camera.aspect=w/h;camera.fov=w<h?52:38;if(w>960&&w>h)camera.setViewOffset(w,h,-Math.min(230,w*.15),0,w,h);else if(w<=960)camera.setViewOffset(w,h,0,h*.18,w,h);else camera.clearViewOffset();camera.updateProjectionMatrix()}
+  window.addEventListener('resize',function(){kick()});
+  function smooth(t){return t*t*(3-2*t)}
+  /* Vuelo hasta una zona: interpola cámara y punto de mira */
+  function flyTo(pos,look,dur){
+    var portrait=w<h, k=portrait?1.4:1;
+    var L=new THREE.Vector3().fromArray(look), P=new THREE.Vector3().fromArray(pos).sub(L).multiplyScalar(k).add(L);
+    fly={t0:performance.now(),dur:reduced?1:(dur||1300),p0:camera.position.clone(),l0:(controls?controls.target:L).clone(),p1:P,l1:L};
+    kick();
+  }
+  function clampTarget(){ if(!controls)return; var t=controls.target, dx=0, dz=0;
+    if(t.x<BOUNDS.x0)dx=BOUNDS.x0-t.x; else if(t.x>BOUNDS.x1)dx=BOUNDS.x1-t.x;
+    if(t.z<BOUNDS.z0)dz=BOUNDS.z0-t.z; else if(t.z>BOUNDS.z1)dz=BOUNDS.z1-t.z;
+    if(dx||dz){t.x+=dx;t.z+=dz;camera.position.x+=dx;camera.position.z+=dz}
+    if(t.y!==0&&!fly){camera.position.y-=t.y;t.y=0}
+  }
+  /* La zona que se mira manda en el panel */
+  var userMoved=false;
+  function nearest(){ var t=controls.target, d=camera.position.distanceTo(t);
+    if(d>17) return 0;
+    var best=1, bd=1e9; for(var i=1;i<N;i++){var l=STEPS[i].look, q=(l[0]-t.x)*(l[0]-t.x)+(l[2]-t.z)*(l[2]-t.z); if(q<bd){bd=q;best=i}}
+    return best;
+  }
+  if(controls){
+    controls.addEventListener('start',function(){fly=null;userMoved=true;hideHint();kick()});
+    controls.addEventListener('change',function(){kick()});
+  }
+  var running=false, firstDone=false, lastPick=0;
+  function kick(){ if(!running&&visible){running=true;requestAnimationFrame(frame)} }
+  function frame(now){
+    running=false; if(!visible) return;
+    size();
+    var moving=false;
+    if(fly){
+      var t=Math.min(1,(now-fly.t0)/fly.dur), e=smooth(t);
+      camera.position.lerpVectors(fly.p0,fly.p1,e);
+      var l=new THREE.Vector3().lerpVectors(fly.l0,fly.l1,e);
+      /* arco suave: sube un poco a mitad de vuelo */
+      camera.position.y+=Math.sin(Math.PI*e)*1.2;
+      if(controls) controls.target.copy(l); else camera.lookAt(l);
+      if(t>=1) fly=null; moving=true;
+    }
+    if(controls){ if(controls.update()) moving=true; clampTarget(); }
+    /* noche al entrar en la Sala Gamer (según dónde se mire) */
+    var tx=controls?controls.target.x:4, n=Math.min(1,Math.max(0,(tx-8.6)/2));
+    if(camera.position.distanceTo(controls?controls.target:camera.position)>20) n=0;
+    night+=(n-night)*.12; if(Math.abs(n-night)<.003) night=n; else moving=true;
+    hemi.intensity=.95-.72*night; sun.intensity=.85-.7*night;
+    pinkL.intensity=.4+3.2*night; blueL.intensity=.4+2.8*night; arcL.intensity=.2+1.5*night;
+    bg.copy(SHELL).lerp(NIGHT,night); scene.fog.color.copy(bg);
+    tour.classList.toggle('is-night',night>.5);
+    renderer.render(scene,camera);
+    if(userMoved&&controls&&now-lastPick>250){lastPick=now;setStep(nearest(),true)}
+    if(!firstDone){firstDone=true;var ld=document.getElementById('loading');if(ld){ld.classList.add('done')}}
+    if(moving) kick();
+  }
+  if('IntersectionObserver' in window){new IntersectionObserver(function(e){visible=e[0].isIntersecting;kick()},{rootMargin:'100px'}).observe(canvas)}
+  /* Botones del plano */
+  function zoomBy(f){ if(!controls)return; fly=null; var t=controls.target, v=camera.position.clone().sub(t); var d=Math.min(controls.maxDistance,Math.max(controls.minDistance,v.length()*f)); v.setLength(d); fly={t0:performance.now(),dur:350,p0:camera.position.clone(),l0:t.clone(),p1:t.clone().add(v),l1:t.clone()}; hideHint(); kick(); }
+  function planView(){ if(!controls)return; var t=controls.target.clone(); var d=Math.max(14,camera.position.distanceTo(t)); fly={t0:performance.now(),dur:900,p0:camera.position.clone(),l0:t.clone(),p1:new THREE.Vector3(t.x,d,t.z+.01),l1:t}; hideHint(); kick(); }
+  document.getElementById('nav-in').addEventListener('click',function(){zoomBy(.7)});
+  document.getElementById('nav-out').addEventListener('click',function(){zoomBy(1.4)});
+  document.getElementById('nav-plan').addEventListener('click',planView);
+  document.getElementById('nav-home').addEventListener('click',function(){userMoved=false;goStep(0)});
+  kick();
+  return {flyTo:flyTo};
+}
+var hint=document.getElementById('nav-hint');
+function hideHint(){ if(hint&&!hint.classList.contains('off')){hint.classList.add('off')} }
+var three=build3D();
+var ld=document.getElementById('loading'); if(!three && ld) ld.classList.add('done');
+goStep=function(i){ setStep(i,true); if(three){ var s=STEPS[i]; three.flyTo(s.cam,s.look); } };
+if(hasGsap && !reduced){
+  gsap.from('.tour-panel',{x:-40,opacity:0,duration:.9,ease:'power3.out',delay:.3});
+  gsap.from('.tour-dots li',{x:20,opacity:0,stagger:.05,duration:.6,ease:'power3.out',delay:.4});
+}
+})();
+</script>
+</body>
+</html>

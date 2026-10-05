@@ -1,0 +1,1740 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Rótulos en Huelva desde 2011 · Rótulos Luiyi</title>
+<meta name="description" content="Rótulos en Huelva y provincia desde 2011: rótulos luminosos, letras corpóreas, vinilos para escaparates, lonas y rotulación de vehículos y embarcaciones. Lo diseñamos, lo fabricamos a medida y lo instalamos. 5,0★ en Google con 99 reseñas. Taller en Punta Umbría.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;800&family=Instrument+Serif:ital@0;1&family=Pacifico&display=swap">
+<link rel="icon" href="img/emblema.png">
+<style>
+/* Rótulos Luiyi — editorial y sobrio: papel claro, serif fina para titulares, el cobre del logo solo como acento.
+   Un único gesto: el rótulo que se enciende con el nombre del cliente. */
+:root{
+  color-scheme: light;
+  --shell:#F6F4EF;
+  --shell-2:#ECE8E0;
+  --paper:#FBFAF7;
+  --ink:#151515;
+  --ink-soft:#6B675F;
+  --orange:#D49A5E;
+  --hibiscus:#151515;
+  --hibiscus-ink:#151515;
+  --palm:#151515;
+  --sun:#D49A5E;
+  --night:#121214;
+  --line:rgba(21,21,21,.12);
+  --font-display:"Instrument Serif", Georgia, serif;
+  --font-body:"Archivo", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --r-sm:8px; --r-md:12px; --r-lg:16px;
+  --shadow:0 30px 60px -36px rgba(21,21,21,.35);
+  --wrap:1200px;
+  --head:76px;
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html{scroll-behavior:smooth;scroll-padding-top:calc(var(--head) + 12px)}
+body{margin:0;background:var(--shell);color:var(--ink);font-family:var(--font-body);font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:clip}
+img{max-width:100%;display:block}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--orange);outline-offset:3px;border-radius:4px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+.wrap{max-width:var(--wrap);margin-inline:auto;padding-inline:clamp(20px,4vw,48px)}
+h1,h2,h3{margin:0;text-wrap:balance;font-family:var(--font-display);font-weight:400;line-height:1.02;letter-spacing:-.015em}
+h1 em,h2 em{font-style:italic;color:var(--ink)}
+h1 em::after,h2 em::after{content:"";display:inline-block;width:.16em;height:.16em;margin-left:.06em;border-radius:50%;background:var(--orange);vertical-align:.05em}
+h3{font-size:26px}
+p{margin:0}
+.eyebrow{display:inline-block;font-size:12.5px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-soft)}
+.lead{font-size:clamp(17px,1.4vw,19px);color:var(--ink-soft);max-width:36em}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 28px;border-radius:999px;font:600 15.5px/1 var(--font-body);letter-spacing:.01em;text-decoration:none;border:1px solid transparent;cursor:pointer;transition:background .25s,color .25s,border-color .25s,transform .25s}
+.btn svg{width:18px;height:18px;flex:none}
+.btn-primary{background:var(--ink);color:#fff}
+.btn-primary:hover{background:var(--orange)}
+.btn-ghost{background:transparent;border-color:var(--line);color:var(--ink)}
+.btn-ghost:hover{border-color:var(--ink)}
+.btn-light{background:#fff;color:var(--ink)}
+.btn-light:hover{background:var(--orange);color:#fff}
+/* Al pasar el ratón, el botón arranca como un luminoso: dos parpadeos y se queda encendido */
+@media (hover:hover){
+  .btn-primary:hover,.btn-light:hover{box-shadow:0 0 0 1px rgba(212,154,94,.7),0 0 16px rgba(212,154,94,.6),0 0 44px rgba(212,154,94,.38);animation:btn-ignite .6s step-end both}
+}
+@keyframes btn-ignite{
+  0%,18%,38%{background:#3A2418;color:rgba(255,255,255,.5);box-shadow:none}
+  10%,30%,52%,100%{background:var(--orange);color:#fff;box-shadow:0 0 0 1px rgba(212,154,94,.7),0 0 16px rgba(212,154,94,.6),0 0 44px rgba(212,154,94,.38)}
+}
+.link{display:inline-flex;align-items:center;gap:8px;font-weight:600;text-decoration:none;border-bottom:1px solid var(--line);padding-bottom:2px;transition:border-color .2s,gap .2s}
+.link svg{width:16px;height:16px}
+.link:hover{border-color:var(--ink);gap:12px}
+.sec{padding-block:clamp(84px,11vw,148px)}
+.sec-head{display:grid;gap:18px;max-width:780px;margin-bottom:clamp(40px,5vw,64px)}
+.sec-head h2,.book-cta h2,.visit h2,.sketch-copy h2{font-size:clamp(40px,5.2vw,72px)}
+.band-white{background:var(--paper)}
+.band-ink{background:var(--night);color:#F4F1EA}
+.band-ink .eyebrow,.band-ink .lead{color:rgba(244,241,234,.62)}
+.band-ink h2 em{color:#F4F1EA}
+.hide-m{}
+
+/* Entrada: en cada carga, los rombos del logo en el centro y rótulos que se van encendiendo alrededor.
+   El estado base de cada rótulo es encendido; la animación parte de apagado, así sin animaciones se ven encendidos. */
+.intro{position:fixed;inset:0;z-index:300;display:grid;place-items:center;overflow:hidden;background:var(--night);transition:opacity .55s ease,visibility 0s .55s}
+.intro.out{opacity:0;visibility:hidden;pointer-events:none}
+.intro::before{content:"";position:absolute;inset:0;background:rgba(255,255,255,.045);-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='32'%3E%3Cpath d='M0 .7h64M0 16.7h64M.7 0v16M32.7 16v16' stroke='%23000' stroke-width='1.4' fill='none'/%3E%3C/svg%3E") 0 0/84px auto;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='32'%3E%3Cpath d='M0 .7h64M0 16.7h64M.7 0v16M32.7 16v16' stroke='%23000' stroke-width='1.4' fill='none'/%3E%3C/svg%3E") 0 0/84px auto}
+.intro-core{position:relative;display:grid;justify-items:center;gap:18px;color:#F4F1EA}
+.intro-core b{font:400 clamp(24px,3vw,34px)/1 var(--font-display);letter-spacing:-.01em}
+.intro .rhombs{width:clamp(96px,13vw,148px)}
+.is{position:absolute;white-space:nowrap;transform:rotate(var(--r,0deg));animation:.75s step-end var(--d,0s) both}
+.is.n{font:400 clamp(30px,6vw,80px)/1 "Pacifico","Brush Script MT",cursive;color:color-mix(in srgb,var(--c) 16%,#fff);filter:drop-shadow(0 0 .035em var(--c)) drop-shadow(0 0 .12em var(--c)) drop-shadow(0 0 .36em color-mix(in srgb,var(--c) 70%,transparent));animation-name:is-neon}
+.is.c{font:800 clamp(18px,3.2vw,44px)/1 var(--font-body);letter-spacing:.03em;color:#0D0D0F;filter:drop-shadow(0 0 .05em var(--c)) drop-shadow(0 0 .2em var(--c)) drop-shadow(0 0 .5em color-mix(in srgb,var(--c) 65%,transparent));animation-name:is-halo}
+.is.b{font:800 clamp(15px,2.6vw,34px)/1 var(--font-body);letter-spacing:.03em;padding:.55em .9em;border-radius:.2em;background:#FFFDF8;color:var(--c);box-shadow:0 0 0 .18em #0B0B0D,0 0 1.2em rgba(255,240,214,.55),0 0 3.4em rgba(255,232,196,.3);animation-name:is-box}
+@keyframes is-neon{0%,28%,52%{color:color-mix(in srgb,var(--c) 22%,#3A3A40);filter:none}20%,45%,70%,100%{color:color-mix(in srgb,var(--c) 16%,#fff);filter:drop-shadow(0 0 .035em var(--c)) drop-shadow(0 0 .12em var(--c)) drop-shadow(0 0 .36em color-mix(in srgb,var(--c) 70%,transparent))}}
+@keyframes is-halo{0%,28%,52%{color:#2C2C31;filter:drop-shadow(0 .03em 0 #000)}20%,45%,70%,100%{color:#0D0D0F;filter:drop-shadow(0 0 .05em var(--c)) drop-shadow(0 0 .2em var(--c)) drop-shadow(0 0 .5em color-mix(in srgb,var(--c) 65%,transparent))}}
+@keyframes is-box{0%,28%,52%{background:#55555B;color:color-mix(in srgb,var(--c) 55%,#2A2A2E);box-shadow:0 0 0 .18em #0B0B0D}20%,45%,70%,100%{background:#FFFDF8;color:var(--c);box-shadow:0 0 0 .18em #0B0B0D,0 0 1.2em rgba(255,240,214,.55),0 0 3.4em rgba(255,232,196,.3)}}
+
+/* Cabecera */
+.top{position:fixed;top:0;left:0;right:0;padding-top:env(safe-area-inset-top,0px);z-index:60;background:rgba(246,244,239,.88);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;height:var(--head)}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none}
+.brand img{height:34px;width:auto}
+.brand span{font:400 23px var(--font-display);letter-spacing:-.01em}
+.nav{display:flex;gap:clamp(18px,2.2vw,32px);font-size:14.5px;font-weight:500}
+.nav a{text-decoration:none;color:var(--ink-soft);white-space:nowrap}
+.nav a:hover{color:var(--ink)}
+.top .btn{min-height:42px;padding:0 20px;font-size:14.5px}
+.top .btn svg{display:none}
+/* Sobre las zonas de noche (hero y bandas oscuras) la cabecera pasa a vidrio oscuro */
+.top{transition:background .4s,color .4s}
+.top.dark{background:rgba(18,18,20,.42);color:#F4F1EA}
+.top.dark .brand img{box-shadow:0 0 0 1px rgba(244,241,234,.25);border-radius:50%}
+.top.dark .nav a{color:rgba(244,241,234,.7)}
+.top.dark .nav a:hover{color:#F4F1EA}
+.top.dark .btn-primary{background:#F4F1EA;color:#151515}
+.top.dark .progress{background:var(--orange)}
+/* "Presupuesto" llama la atención: cada 7 s parpadea dos veces como un luminoso, se queda encendido un momento y vuelve a su estado.
+   Entre parpadeos no se toca nada (los tramos sin fotograma usan el color normal del botón), y al pasar el ratón manda su propio encendido. */
+.top .btn-primary:not(:hover),.mbar .btn-primary{animation:cta-blink 7s step-end infinite}
+@keyframes cta-blink{
+  80%,85%{background:var(--orange);color:#fff;box-shadow:0 0 0 1px rgba(212,154,94,.7),0 0 16px rgba(212,154,94,.6),0 0 44px rgba(212,154,94,.38)}
+  82.5%,87.5%{background:#3A2418;color:rgba(255,255,255,.5);box-shadow:none}
+  90%{background:var(--orange);color:#fff;box-shadow:0 0 0 1px rgba(212,154,94,.7),0 0 16px rgba(212,154,94,.6),0 0 44px rgba(212,154,94,.38)}
+}
+.progress{position:absolute;left:0;bottom:-1px;height:1px;width:100%;background:var(--ink);transform:scaleX(0);transform-origin:left}
+
+.hero-ctas{display:flex;flex-wrap:wrap;gap:22px;margin-top:34px;align-items:center}
+.g-rate{display:inline-flex;align-items:center;gap:8px;margin-top:34px;color:var(--ink-soft);text-decoration:none;font-size:14px}
+.g-rate .stars{display:flex;gap:1px;color:var(--orange)}.g-rate svg{width:13px;height:13px}
+.g-rate b{color:var(--ink)}
+
+
+
+/* Simulador de rótulos. Todo lo de dentro del escenario se mide en cqw para que escale con él. */
+.lab{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:clamp(24px,3.4vw,56px);align-items:start}
+.lab-stage{
+  --c:#D49A5E; --ci:#D49A5E; --ct:#fff; --glow:var(--c);
+  --wall:#17161A; --mortar:rgba(255,255,255,.05); --frame:#0B0B0D; --glass:#6B4A1F; --floor:#0C0C0E;
+  --tube:color-mix(in srgb,var(--c) 22%,#3A3A40);
+  position:relative;container-type:inline-size;aspect-ratio:4/3;max-width:100%;border-radius:var(--r-lg);overflow:hidden;isolation:isolate;background:var(--wall);box-shadow:0 0 0 1px rgba(244,241,234,.1),var(--shadow);transition:background .6s}
+.lab-stage[data-mode="day"]{--wall:#D8D1C4;--mortar:rgba(21,21,21,.08);--frame:#2A2A2E;--glass:#A9BBC4;--floor:#B9B2A6;--tube:color-mix(in srgb,var(--c) 55%,#E8E4DC)}
+.lab-stage[data-type="box"]{--glow:#FFE6C2}
+.lab-wall{position:absolute;inset:0;background:var(--mortar);-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='32'%3E%3Cpath d='M0 .7h64M0 16.7h64M.7 0v16M32.7 16v16' stroke='%23000' stroke-width='1.4' fill='none'/%3E%3C/svg%3E") 0 0/9cqw auto;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='32'%3E%3Cpath d='M0 .7h64M0 16.7h64M.7 0v16M32.7 16v16' stroke='%23000' stroke-width='1.4' fill='none'/%3E%3C/svg%3E") 0 0/9cqw auto}
+.lab-wash{position:absolute;inset:0;background:radial-gradient(62% 48% at 50% 27%,color-mix(in srgb,var(--glow) 44%,transparent),transparent 72%);mix-blend-mode:screen;opacity:0;transition:opacity .09s}
+.lab-stage.on .lab-wash{opacity:1}
+.lab-sign{position:absolute;left:0;right:0;top:20.5cqw;width:max-content;margin-inline:auto;transform:translateY(-50%);display:grid;place-items:center;white-space:nowrap;line-height:1;transition:background .09s,box-shadow .09s}
+.lab-text{display:inline-block;min-width:.5em;min-height:1em;font-size:13cqw;transition:color .09s,filter .09s}
+.lab-text span{transition:opacity .05s}
+.lab-text span.buzz{opacity:.3}
+/* Letra */
+.lab-stage[data-font="script"] .lab-text{font-family:"Pacifico","Brush Script MT",cursive;padding:0 .12em}
+.lab-stage[data-font="sans"] .lab-text{font-family:var(--font-body);font-weight:800;text-transform:uppercase;letter-spacing:.03em}
+.lab-stage[data-font="serif"] .lab-text{font-family:var(--font-display);letter-spacing:.01em}
+/* Neón: tubo apagado y tubo encendido */
+.lab-stage[data-type="neon"] .lab-text{color:var(--tube)}
+.lab-stage.on[data-type="neon"] .lab-text{color:color-mix(in srgb,var(--c) 16%,#fff);filter:drop-shadow(0 0 .035em var(--c)) drop-shadow(0 0 .12em var(--c)) drop-shadow(0 0 .36em color-mix(in srgb,var(--c) 70%,transparent))}
+.lab-stage[data-mode="day"][data-type="neon"] .lab-text{filter:drop-shadow(.02em .035em .02em rgba(0,0,0,.3))}
+/* Letras corpóreas 3D: de noche, halo por detrás; de día, volumen */
+.lab-stage[data-type="corp"] .lab-text{color:#2C2C31;filter:drop-shadow(0 .03em 0 #000)}
+.lab-stage.on[data-type="corp"] .lab-text{color:#0D0D0F;filter:drop-shadow(0 0 .05em var(--c)) drop-shadow(0 0 .2em var(--c)) drop-shadow(0 0 .5em color-mix(in srgb,var(--c) 65%,transparent))}
+.lab-stage[data-mode="day"][data-type="corp"] .lab-text{color:var(--ci);filter:drop-shadow(.025em .035em 0 color-mix(in srgb,var(--ci) 55%,#000)) drop-shadow(.05em .09em .08em rgba(0,0,0,.3))}
+/* Letras en pared (solo si no hay 3D): letra de color con su sombra sobre el muro */
+.lab-stage[data-type="wall"] .lab-text{color:var(--ci);filter:drop-shadow(.03em .05em .04em rgba(0,0,0,.45))}
+/* Luminoso: cajón de luz */
+.lab-stage[data-type="box"] .lab-sign{padding:3.2cqw 5cqw;border-radius:.8cqw;background:#55555B;box-shadow:0 0 0 .7cqw var(--frame)}
+.lab-stage[data-type="box"] .lab-text{color:color-mix(in srgb,var(--ci) 55%,#2A2A2E)}
+.lab-stage.on[data-type="box"] .lab-sign{background:#FFFDF8;box-shadow:0 0 0 .7cqw var(--frame),0 0 5cqw rgba(255,240,214,.55),0 0 14cqw rgba(255,232,196,.3)}
+.lab-stage.on[data-type="box"] .lab-text{color:var(--ci)}
+.lab-stage[data-mode="day"][data-type="box"] .lab-sign{background:#FBFAF7;box-shadow:0 0 0 .7cqw var(--frame),0 1.4cqw 2cqw -1cqw rgba(0,0,0,.45)}
+.lab-stage[data-mode="day"][data-type="box"] .lab-text{color:var(--ci)}
+/* Fachada: frontal rotulado de lado a lado, sobre el escaparate */
+.lab-stage[data-type="fascia"] .lab-sign{left:7cqw;right:7cqw;width:auto;top:31.5cqw;height:12cqw;border-radius:.6cqw;background:color-mix(in srgb,var(--c) 30%,#1A1A1E);box-shadow:0 0 0 .5cqw var(--frame)}
+.lab-stage[data-type="fascia"] .lab-text{color:color-mix(in srgb,var(--ct) 40%,#3A3A40)}
+.lab-stage.on[data-type="fascia"] .lab-sign{background:var(--c) linear-gradient(180deg,rgba(255,255,255,.3),rgba(255,255,255,0) 65%);box-shadow:0 0 0 .5cqw var(--frame),0 0 7cqw color-mix(in srgb,var(--c) 45%,transparent)}
+.lab-stage.on[data-type="fascia"] .lab-text{color:var(--ct)}
+.lab-stage[data-mode="day"][data-type="fascia"] .lab-sign{background:var(--c);box-shadow:0 0 0 .5cqw var(--frame),0 1.4cqw 2cqw -1cqw rgba(0,0,0,.45)}
+.lab-stage[data-mode="day"][data-type="fascia"] .lab-text{color:var(--ct)}
+/* Furgoneta: el nombre va en el lateral de carga */
+.lab-van{display:none;position:absolute;left:6cqw;bottom:3.5cqw;width:88cqw;height:auto;transition:filter .6s}
+.lab-van .v-body{fill:#F3F1EC;stroke:#1B1B1E;stroke-width:1.5}
+.lab-van .v-stripe{fill:var(--ci)}
+.lab-stage[data-type="van"] .lab-van{display:block}
+.lab-stage[data-type="van"] .lab-shop,.lab-stage[data-type="van"] .lab-wash,.lab-stage[data-type="van"] .lab-floor::before{display:none}
+.lab-stage[data-type="van"] .lab-sign{left:12.6cqw;right:37.9cqw;top:49.5cqw;transition:filter .6s}
+.lab-stage[data-type="van"] .lab-text{color:var(--ci)}
+.lab-stage[data-type="van"]:not([data-mode="day"]) .lab-van,.lab-stage[data-type="van"]:not([data-mode="day"]) .lab-sign{filter:brightness(.45)}
+.lab-3d{display:none;position:absolute;inset:0;width:100%;height:100%;touch-action:pan-y;cursor:grab}
+.lab-3d:active{cursor:grabbing}
+.lab-hint{display:none;position:absolute;z-index:2;left:12px;bottom:12px;padding:8px 12px;border-radius:999px;background:rgba(21,21,21,.6);color:#fff;font:600 12.5px/1 var(--font-body);pointer-events:none}
+.lab-stage.v3d .lab-3d,.lab-stage.v3d .lab-hint{display:block}
+.lab-stage.v3d .lab-van,.lab-stage.v3d .lab-sign{display:none}
+.lab-stage.v3d .lab-floor{height:31cqw}
+.lab-stage.v3d .lab-shop,.lab-stage.v3d .lab-wash,.lab-stage.v3d .lab-floor::before{display:none}
+/* Escaparate, puerta y acera */
+.lab-shop{position:absolute;left:9cqw;right:9cqw;bottom:9cqw;height:27cqw;display:grid;grid-template-columns:1fr 16cqw;gap:2.4cqw}
+.lab-shop i{position:relative;display:block;overflow:hidden;border:.8cqw solid var(--frame);background-color:var(--glass);background-image:linear-gradient(180deg,rgba(0,0,0,.42),rgba(0,0,0,0) 75%);transition:background-color .6s,border-color .6s}
+.lab-shop i::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,color-mix(in srgb,var(--glow) 40%,transparent),transparent 55%);opacity:0;transition:opacity .09s}
+.lab-stage.on .lab-shop i::after{opacity:1}
+.lab-win{margin-bottom:4.5cqw}
+.lab-win::before{content:"";position:absolute;z-index:1;left:50%;top:0;bottom:0;width:.8cqw;margin-left:-.4cqw;background:var(--frame);transition:background .6s}
+.lab-door{border-bottom-width:0}
+.lab-door::before{content:"";position:absolute;z-index:1;left:1.6cqw;top:46%;width:.8cqw;height:5cqw;border-radius:1cqw;background:#C9C6C0}
+.lab-floor{position:absolute;left:0;right:0;bottom:0;height:9cqw;background:var(--floor);box-shadow:inset 0 .3cqw 0 rgba(255,255,255,.07);transition:background .6s}
+.lab-floor::before{content:"";position:absolute;inset:0;background:radial-gradient(46% 130% at 50% 0,color-mix(in srgb,var(--glow) 55%,transparent),transparent 70%);opacity:0;transition:opacity .09s}
+.lab-stage.on .lab-floor::before{opacity:.8}
+.lab-mode{all:unset;box-sizing:border-box;cursor:pointer;position:absolute;z-index:2;top:12px;right:12px;display:inline-flex;align-items:center;gap:8px;height:36px;padding:0 14px 0 11px;border-radius:999px;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.12);color:#fff;font:600 13px/1 var(--font-body);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}
+.lab-stage[data-mode="day"] .lab-mode{border-color:rgba(21,21,21,.18);background:rgba(255,255,255,.5);color:#151515}
+.lab-mode svg{width:16px;height:16px}
+.lab-mode:focus-visible{outline:2px solid var(--orange);outline-offset:2px}
+/* Mandos, sobre la banda oscura */
+.lab-ctl{display:grid;gap:22px;min-width:0}
+.lab-f{display:grid;gap:10px;min-width:0}
+.lab-l{font-size:12.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:rgba(244,241,234,.62)}
+.lab-input{display:block;width:100%;min-width:0;height:54px;padding:0 20px;border-radius:999px;border:1px solid rgba(244,241,234,.22);background:rgba(255,255,255,.06);font:500 17px var(--font-body);color:#F4F1EA;-webkit-appearance:none;appearance:none}
+.lab-input::placeholder{color:rgba(244,241,234,.5)}
+.lab-input:focus{outline:none;border-color:#F4F1EA;box-shadow:0 0 0 3px rgba(212,154,94,.4)}
+.lab-chips,.lab-colors{display:flex;flex-wrap:wrap;gap:6px}
+.lab-chips button{all:unset;box-sizing:border-box;cursor:pointer;height:38px;padding:0 15px;border-radius:999px;border:1px solid rgba(244,241,234,.22);font:600 14px/36px var(--font-body);color:rgba(244,241,234,.74);transition:background .2s,color .2s,border-color .2s}
+.lab-chips button:hover{color:#F4F1EA;border-color:#F4F1EA}
+.lab-chips button[aria-pressed="true"]{background:#F4F1EA;border-color:#F4F1EA;color:#151515}
+.lab-colors{gap:2px;margin-left:-6px}
+.lab-colors button{all:unset;cursor:pointer;width:34px;height:34px;border-radius:50%;display:grid;place-items:center;transition:box-shadow .2s}
+.lab-colors button::before{content:"";width:22px;height:22px;border-radius:50%;background:var(--sw);box-shadow:inset 0 0 0 1px rgba(255,255,255,.25);transition:transform .2s}
+.lab-colors button:hover::before{transform:scale(1.12)}
+.lab-colors button[aria-pressed="true"]{box-shadow:inset 0 0 0 2px #F4F1EA}
+.lab-chips button:focus-visible,.lab-colors button:focus-visible{outline:2px solid var(--orange);outline-offset:2px}
+.lab-go{display:flex;flex-wrap:wrap;align-items:center;gap:10px 18px;padding-top:4px}
+.lab-note{font-size:13.5px;color:rgba(244,241,234,.62)}
+
+/* Manifiesto */
+.manifesto .wrap{display:grid;gap:28px}
+.mani{font:400 clamp(36px,5vw,72px)/1.06 var(--font-display);letter-spacing:-.015em;max-width:20ch}
+.mani .w{display:inline-block;transition:opacity .5s ease,color .5s ease}
+.js-anim .mani .w{opacity:.18}
+.js-anim .mani.lit .w{opacity:1}
+.mani .w.hot{font-style:italic;color:var(--orange)}
+
+/* Portfolio */
+.filters{display:flex;flex-wrap:wrap;gap:6px 26px;margin-bottom:28px}
+.filters button{all:unset;cursor:pointer;font-size:15px;font-weight:500;color:var(--ink-soft);padding:4px 0;border-bottom:1px solid transparent}
+.filters button.on{color:var(--ink);border-bottom-color:var(--ink)}
+.filters button:hover{color:var(--ink)}
+.filters button:focus-visible{outline:2px solid var(--orange)}
+.works{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:200px;grid-auto-flow:dense;gap:16px}
+.work{all:unset;cursor:zoom-in;position:relative;display:block;height:100%;border-radius:var(--r-md);overflow:hidden;background:var(--shell-2)}
+.work img{width:100%;height:100%;object-fit:cover;transition:transform .9s cubic-bezier(.2,.7,.2,1)}
+.work:hover img{transform:scale(1.06)}
+.work.pop{animation:pop .55s cubic-bezier(.2,.7,.2,1) both}
+@keyframes pop{from{opacity:0;transform:translateY(14px) scale(.98)}to{opacity:1;transform:none}}
+.work::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(0,0,0,.45),transparent 40%);opacity:0;transition:opacity .3s}
+.work span{position:absolute;z-index:1;left:14px;bottom:12px;color:#fff;font-size:13px;font-weight:600;letter-spacing:.02em;opacity:0;transform:translateY(6px);transition:opacity .3s,transform .3s}
+.work:hover span,.work:focus-visible span{opacity:1;transform:none}
+.work:hover::after,.work:focus-visible::after{opacity:1}
+.work:focus-visible{outline:2px solid var(--orange);outline-offset:2px}
+.work.big{grid-column:span 2;grid-row:span 2}
+.work.tall{grid-row:span 2}
+.work.out,.work.more{display:none}
+.works-more{display:flex;justify-content:center;margin-top:28px}
+.lb{position:fixed;inset:0;z-index:150;background:rgba(14,14,16,.94);display:grid;place-items:center;gap:18px;padding:64px 16px 24px;grid-template-rows:1fr auto}
+.lb img{max-width:min(1000px,100%);max-height:100%;border-radius:8px;object-fit:contain;align-self:center}
+.lb-x{all:unset;cursor:pointer;position:absolute;top:14px;right:18px;width:44px;height:44px;display:grid;place-items:center;color:#fff;font-size:32px}
+.lb-nav{all:unset;cursor:pointer;position:absolute;top:50%;transform:translateY(-50%);width:48px;height:48px;border-radius:50%;display:grid;place-items:center;color:#fff;background:rgba(255,255,255,.14);transition:background .2s}
+.lb-nav:hover{background:rgba(255,255,255,.26)}
+.lb-nav.prev{left:14px}.lb-nav.next{right:14px}
+.lb-nav svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.lb-x:focus-visible,.lb-nav:focus-visible{outline:2px solid var(--orange);outline-offset:2px}
+.lb-foot{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:12px 22px;color:rgba(255,255,255,.78);font-size:14px;font-variant-numeric:tabular-nums}
+
+.tel{display:inline-flex;align-items:center;gap:8px;font-weight:600;text-decoration:none;font-variant-numeric:tabular-nums}
+.tel svg{width:17px;height:17px;color:var(--ink-soft)}
+.tel:hover{color:var(--orange)}
+/* Sectores */
+.sectors{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(20px,2.4vw,32px)}
+.sector{display:grid;gap:6px;text-decoration:none}
+.sector img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:var(--r-md);margin-bottom:10px;transition:transform .8s cubic-bezier(.2,.7,.2,1)}
+.sector:hover img{transform:scale(1.02)}
+.sector b{font:400 26px/1.15 var(--font-display)}
+.sector span{color:var(--ink-soft);font-size:15.5px}
+.sector:hover b{color:var(--orange)}
+/* Servicios */
+.svc{display:grid;grid-template-columns:1fr 1fr 1fr;gap:clamp(28px,4vw,56px);border-top:1px solid var(--line);padding-top:36px}
+.svc h3{font-size:30px;margin-bottom:18px}
+.svc ul{list-style:none;margin:0;padding:0;display:grid}
+.svc li{padding:10px 0;border-bottom:1px solid var(--line)}
+.svc-logo{display:grid;gap:16px;align-content:start}
+.svc-logo p{color:var(--ink-soft)}
+.svc-logo .link{justify-self:start}
+
+/* Del boceto a la fachada */
+.sketch-sec{background:var(--paper)}
+.sketch-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(36px,5vw,80px);align-items:center}
+.sketch-copy .sec-head{margin-bottom:36px}
+.stages{list-style:none;margin:0;padding:0;display:grid;border-top:1px solid var(--line)}
+.stages li{display:grid;grid-template-columns:48px 1fr;gap:10px;padding:18px 0;border-bottom:1px solid var(--line);cursor:pointer;transition:opacity .3s;opacity:.42}
+.stages li.on{opacity:1}
+.stages b{font:400 22px/1.2 var(--font-display);color:var(--orange)}
+.stages h3{font-size:26px}
+.stages p{color:var(--ink-soft);font-size:15.5px;margin-top:6px;max-height:0;overflow:hidden;transition:max-height .5s ease}
+.stages li.on p{max-height:120px}
+.board{position:relative;margin:0;border-radius:var(--r-lg);background:#fff;border:1px solid var(--line);overflow:hidden;transition:background .8s}
+.board svg{display:block;width:100%;height:auto}
+.board .pencil path{stroke-dasharray:1;stroke-dashoffset:1;transition:stroke-dashoffset 1.6s cubic-bezier(.4,0,.2,1)}
+.board .pencil .dim{stroke:var(--orange);stroke-width:1.2}
+.board[data-s="1"] .pencil path,.board[data-s="2"] .pencil path,.board[data-s="3"] .pencil path{stroke-dashoffset:0}
+.board .pencil path:nth-child(2){transition-delay:.15s}.board .pencil path:nth-child(3){transition-delay:.3s}.board .pencil path:nth-child(4){transition-delay:.5s}.board .pencil path:nth-child(5){transition-delay:.8s}.board .pencil path:nth-child(6){transition-delay:.9s}
+.board[data-s="0"] .pencil path:nth-child(4){stroke-dashoffset:.55}
+.board .fab{opacity:0;transition:opacity .8s}
+.board[data-s="2"] .fab,.board[data-s="3"] .fab{opacity:1}
+.board[data-s="2"] .pencil .dim,.board[data-s="3"] .pencil .dim{opacity:0;transition:opacity .4s}
+.board .word{font:800 40px var(--font-body);letter-spacing:3px;fill:transparent;stroke:#2a2a2a;stroke-width:.8;opacity:0;transition:opacity .6s .9s,fill .8s}
+.board[data-s="1"] .word,.board[data-s="2"] .word,.board[data-s="3"] .word{opacity:1}
+.board[data-s="2"] .word,.board[data-s="3"] .word{fill:var(--orange);stroke:none}
+.board .lit{opacity:0;transition:opacity 1s}
+.board[data-s="3"]{background:#141416}
+.board[data-s="3"] .lit{opacity:1;animation:ignite 1s steps(1) both}
+@keyframes ignite{0%{opacity:0}14%{opacity:1}22%{opacity:0}34%{opacity:1}42%{opacity:.25}56%,100%{opacity:1}}
+.board[data-s="3"] svg rect[fill="url(#grid)"]{opacity:.12}
+
+/* Reseñas */
+.rv-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(24px,3vw,44px)}
+.rv{margin:0;display:grid;gap:18px;align-content:start;padding-top:22px;border-top:1px solid var(--ink)}
+.rv-top{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.rv-stars{display:flex;gap:2px;color:var(--orange)}.rv-stars svg{width:14px;height:14px}
+.rv-tag{font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft)}
+.rv blockquote{margin:0;font:400 clamp(21px,1.8vw,25px)/1.3 var(--font-display)}
+.rv figcaption{display:flex;align-items:center;gap:10px}
+.rv figcaption i{display:none}
+.rv figcaption span{display:grid;line-height:1.3}.rv figcaption b{font-weight:600;font-size:15px}.rv figcaption small{color:var(--ink-soft);font-size:13px}
+.rv-more{display:flex;flex-wrap:wrap;gap:6px 16px;align-items:baseline;margin:40px 0 0;font-size:14px;color:var(--ink-soft)}
+.rv-more a{font-weight:600;color:var(--ink);text-decoration:none;border-bottom:1px solid var(--line)}
+
+/* Presupuesto */
+.book-cta{display:grid;grid-template-columns:1fr auto;gap:40px;align-items:end}
+.book-cta>div{display:grid;gap:18px}
+.book-perks{list-style:none;margin:6px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:8px 28px;font-size:14.5px;color:rgba(244,241,234,.62)}
+.book-cta .btn{min-height:58px;padding:0 34px;font-size:16px}
+
+.draft{outline:2px dashed #E5B300;outline-offset:-12px}
+.incl{list-style:none;margin:0;padding:0;display:grid;gap:10px;font-size:18px}
+mark{background:#FFE58A;padding:0 4px;border-radius:4px}
+
+/* Visita */
+.visit{display:grid;grid-template-columns:1fr 1fr;gap:clamp(36px,6vw,96px);align-items:start}
+.visit>div:first-child{display:grid;gap:18px;justify-items:start}
+.hours{border-collapse:collapse;margin-top:8px;font-size:16px}
+.hours th{text-align:left;font-weight:500;padding:10px 32px 10px 0}
+.hours td{padding:10px 0;color:var(--ink-soft);font-variant-numeric:tabular-nums}
+.hours tr{border-bottom:1px solid var(--line)}
+.contact{list-style:none;margin:6px 0 0;padding:0;display:grid;gap:12px}
+.contact li{display:flex;align-items:flex-start;gap:12px}
+.contact svg{width:18px;height:18px;flex:none;color:var(--ink-soft);margin-top:4px}
+.contact a{text-decoration:none}
+.contact a:hover{color:var(--orange)}
+.faq{display:grid;border-top:1px solid var(--line)}
+.faq details{border-bottom:1px solid var(--line)}
+.faq summary{cursor:pointer;list-style:none;padding:20px 0;font:400 22px/1.25 var(--font-display);display:flex;justify-content:space-between;gap:16px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font:300 24px/1 var(--font-body);color:var(--ink-soft);transition:transform .25s}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq details p{padding:0 0 22px;color:var(--ink-soft)}
+
+/* Cierre */
+.final{padding-block:clamp(100px,13vw,170px);text-align:center;border-top:1px solid var(--line)}
+.final .wrap{display:grid;justify-items:center;gap:26px}
+.final .eyebrow{color:var(--ink-soft)}
+.final h2{font-size:clamp(40px,5.6vw,84px);line-height:1}
+.final h2 em{display:block}
+.final .hero-ctas{justify-content:center;margin-top:0}
+.final .g-rate{margin-top:0}
+.foot .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;font-size:13.5px;color:var(--ink-soft);padding-block:26px;border-top:1px solid var(--line)}
+
+/* Animaciones */
+.js-anim [data-reveal]{opacity:0;transform:translateY(24px);transition:opacity 1s cubic-bezier(.2,.7,.2,1),transform 1s cubic-bezier(.2,.7,.2,1)}
+.js-anim [data-reveal].in{opacity:1;transform:none}
+@keyframes rise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+.totop{background:#fff!important;color:var(--ink)!important;border-color:var(--line)!important;-webkit-backdrop-filter:none!important;backdrop-filter:none!important}
+
+.mbar{display:none}
+
+@media (max-width:960px){
+  .nav{display:none}
+  .visit,.book-cta,.sketch-grid,.lab{grid-template-columns:1fr}
+  .board{order:-1}
+  .svc{grid-template-columns:1fr}
+  .works{grid-template-columns:repeat(3,1fr)}
+  .rv-grid{grid-template-columns:1fr}
+  .sectors{grid-template-columns:1fr 1fr}
+}
+@media (max-width:640px){
+  body{font-size:16px;padding-bottom:84px}
+  .hide-m{display:none}
+  .top .btn{display:none}
+  .brand img{height:28px}
+  .hero-ctas{margin-top:22px}
+  .sectors{gap:18px 12px}
+  .sector b{font-size:21px}
+  .sector span{font-size:14px}
+  .g-rate{margin-top:18px}
+  .hero-ctas{order:2;gap:12px;margin-top:18px}
+  .lab-go .btn{width:100%}
+  .lab-note{text-align:center;width:100%}
+  .works{grid-template-columns:1fr 1fr;grid-auto-rows:140px;gap:10px}
+  .work.big{grid-column:span 2;grid-row:span 2}
+  .work span{opacity:1;transform:none;font-size:12px}
+  .work::after{opacity:1}
+  .book-cta .btn{width:100%}
+  .final .hero-ctas{flex-direction:column;width:100%}.final .hero-ctas .btn{width:100%}
+  .mbar{display:flex;gap:6px;position:fixed;left:12px;right:12px;bottom:calc(10px + env(safe-area-inset-bottom,0px));z-index:70;padding:6px;border-radius:999px;background:rgba(246,244,239,.92);-webkit-backdrop-filter:blur(18px) saturate(1.5);backdrop-filter:blur(18px) saturate(1.5);border:1px solid rgba(21,21,21,.1);box-shadow:0 14px 34px -14px rgba(21,21,21,.45);transition:background .4s,border-color .4s}
+  .mbar.dark{background:rgba(18,18,20,.86);border-color:rgba(255,255,255,.16)}
+  .mbar .btn{flex:1;min-height:48px;white-space:nowrap}
+  .mbar .btn-primary{transition:background .4s}
+  .mbar.dark .btn-primary{background:var(--orange)}
+  .mbar .btn-ghost{flex:0 0 48px;width:48px;padding:0;border-color:transparent;background:rgba(21,21,21,.07)}
+  .mbar.dark .btn-ghost{background:rgba(255,255,255,.16);color:#fff}
+  .mbar .btn-ghost svg{width:20px;height:20px}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+
+/* Temporadas: cerca de una fecha fuerte (Black Friday, Navidad, rebajas, septiembre) el eyebrow del hero pasa a píldora de línea fina
+   con un punto naranja latiendo, y aparece un enlace discreto a presupuesto. Sin decoración: el naranja solo como acento. */
+@keyframes t-pulso{70%{box-shadow:0 0 0 7px rgba(212,154,94,0)}100%{box-shadow:0 0 0 0 rgba(212,154,94,0)}}
+
+
+/* Botones flotantes (cabecera y barra móvil): aparecen tras un mínimo scroll, no al pintar el hero */
+.top .btn-primary{transition:opacity .35s,transform .35s cubic-bezier(.2,.7,.2,1),background .25s,box-shadow .25s}
+html.cta-wait .top .btn-primary{opacity:0;transform:translateY(-8px);pointer-events:none}
+.mbar{transition:transform .35s cubic-bezier(.2,.7,.2,1),opacity .35s,background .4s,border-color .4s}
+html.cta-wait .mbar{transform:translateY(150%)!important;opacity:0!important;pointer-events:none}
+
+/* Loader y cargador del simulador: el emblema RL del logo con un anillo cobre que se dibuja */
+.emb{position:relative;display:grid;place-items:center;width:clamp(104px,13vw,140px);aspect-ratio:1}
+.emb img{width:86%;height:auto;border-radius:50%}
+.emb svg{position:absolute;inset:0;width:100%;height:100%;transform:rotate(-90deg);overflow:visible}
+.emb circle{fill:none;stroke:var(--orange);stroke-width:2.2;stroke-linecap:round;stroke-dasharray:302;stroke-dashoffset:302;animation:emb-ring 1.6s cubic-bezier(.6,.1,.3,1) .1s forwards}
+.emb.sm{width:96px}
+.emb.sm circle{animation:emb-spin 1.4s ease-in-out infinite}
+@keyframes emb-ring{to{stroke-dashoffset:0}}
+@keyframes emb-spin{0%{stroke-dashoffset:302}60%{stroke-dashoffset:0}100%{stroke-dashoffset:-302}}
+/* Clientes que salen en su web, en texto */
+.clients{display:flex;flex-wrap:wrap;align-items:baseline;gap:8px 26px;margin:56px 0 0;padding-top:26px;border-top:1px solid var(--line);color:var(--ink-soft);font-size:14px}
+.clients span{font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;margin-right:6px}
+.clients b{font:400 clamp(20px,1.8vw,24px)/1.2 var(--font-display);color:var(--ink)}
+.rv-grid .rv:nth-child(n+4){display:none}
+.brand img{border-radius:50%}
+
+
+/* Hero: cinta de trabajos. Papel claro, titular grande arriba a la izquierda, nota y botón a la derecha en la misma franja;
+   debajo, dos cintas de trabajos reales que corren en sentidos opuestos, algo inclinadas, y se paran al pasar el ratón. */
+.hero{position:relative;overflow:hidden;background:var(--shell);color:var(--ink);padding:calc(var(--head) + clamp(28px,6vh,72px)) 0 clamp(56px,8vh,96px)}
+.cw-top{display:grid;grid-template-columns:minmax(0,1.45fr) minmax(330px,.85fr);gap:clamp(28px,5vw,88px);align-items:end}
+.cw-top>*{min-width:0}
+.cw-head h1{margin-top:clamp(12px,2vh,22px);font-size:clamp(46px,min(6.6vw,13.5svh),112px);line-height:.96;letter-spacing:-.025em}
+.cw-head h1 em{font-style:italic;color:#A0642A;white-space:nowrap}
+.cw-side{display:grid;justify-items:start;gap:0;padding-bottom:.6em}
+.cw-sub{font-size:16px;line-height:1.6;color:var(--ink-soft);max-width:30em}
+.cw-ctas{display:flex;flex-wrap:wrap;align-items:center;gap:14px 24px;margin-top:22px}
+.cw-ctas .btn{max-width:100%;white-space:normal;text-align:center}
+.hero .g-rate{order:-1;margin:0 0 18px;font-size:14.5px;white-space:nowrap}
+.hero .g-rate b{font-size:17px}
+/* Cintas: el escenario recorta la inclinación (y no deja arrastrarla con el dedo) */
+.cw-stage{overflow-x:auto;overflow-y:hidden;scrollbar-width:none;touch-action:pan-y;padding-block:28px 6px;margin-top:clamp(8px,3vh,44px)}
+.cw-stage::-webkit-scrollbar{display:none}
+.cw-belts{--bh:clamp(150px,min(17vw,27svh),250px);display:grid;gap:14px;margin:0 -6vw;transform:rotate(-2.6deg);transform-origin:center}
+.cw-belt{overflow-x:auto;overflow-y:hidden;scrollbar-width:none;padding-block:4px}
+.cw-belt::-webkit-scrollbar{display:none}
+.cw-track{display:flex;gap:14px;width:max-content;will-change:transform}
+.cw-it{position:relative;margin:0;flex:none;height:var(--bh);border-radius:10px;overflow:hidden;background:var(--shell-2);box-shadow:0 18px 34px -24px rgba(21,21,21,.55)}
+.cw-it img{height:100%;width:auto;object-fit:cover;transition:transform .6s cubic-bezier(.2,.7,.2,1)}
+.cw-it figcaption{position:absolute;left:10px;bottom:10px;padding:5px 11px;border-radius:999px;background:rgba(251,250,247,.92);color:#151515;font-size:12.5px;font-weight:600;letter-spacing:.01em;line-height:1.2;white-space:nowrap}
+@media (hover:hover){.cw-it:hover img{transform:scale(1.05)}}
+@media (prefers-reduced-motion:no-preference){
+  .cw-on .cw-track{animation:cw-run var(--dur,60s) linear infinite}
+  .cw-on .cw-r .cw-track{animation-direction:reverse}
+  .cw-belts:hover .cw-track{animation-play-state:paused}
+}
+@keyframes cw-run{to{transform:translateX(-50%)}}
+/* Temporadas */
+.hero .eyebrow.t-on{display:inline-flex;align-items:center;gap:10px;padding:6px 14px 6px 12px;border-radius:999px;border:1px solid var(--line);color:var(--ink);letter-spacing:.16em}
+.hero .eyebrow.t-on::before{content:"";width:6px;height:6px;border-radius:50%;flex:none;background:var(--orange);box-shadow:0 0 0 0 rgba(212,154,94,.6);animation:t-pulso 2s ease-out infinite}
+.hero .hero-micro{margin-top:16px;font-size:15px}
+.hero .hero-micro svg{color:var(--orange)}
+.js-anim .cw-top>*>*{animation:rise 1s cubic-bezier(.2,.7,.2,1) both}
+.js-anim .cw-side>*{animation-delay:.15s}
+.js-anim .cw-belts{animation:cw-in 1.2s .25s cubic-bezier(.2,.7,.2,1) both}
+@keyframes cw-in{from{opacity:0;transform:rotate(-2.6deg) translateY(40px)}}
+@media (max-width:960px){
+  .cw-top{grid-template-columns:1fr;gap:20px;align-items:start}
+  .cw-side{padding-bottom:0}
+}
+@media (max-width:640px){
+  .hero{padding-top:calc(var(--head) + 22px);padding-bottom:44px}
+  .hero .eb-dot,.hero .eb-2{display:none}
+  .cw-head h1{font-size:clamp(36px,11.6vw,56px)}
+  .cw-top{gap:14px}
+  .hero .g-rate{margin-bottom:12px}
+  .cw-sub{font-size:15.5px}
+  .cw-ctas{margin-top:16px;width:100%;gap:12px}
+  .cw-ctas .btn{width:100%}
+  .hero .tel{display:none}
+  .cw-belts{--bh:clamp(130px,42vw,190px);margin-inline:-12vw}
+  .cw-stage{margin-top:6px;padding-top:18px}
+  .cw-r{display:none}
+  .hero .eyebrow.t-on{font-size:11px;letter-spacing:.12em;padding:5px 12px 5px 10px}
+}
+@media (max-width:640px) and (max-height:760px){.cw-sub{display:none}}
+@media (min-width:641px) and (max-height:620px){.cw-sub{display:none}.cw-head .eyebrow{display:none}.hero{padding-top:calc(var(--head) + 18px)}.cw-stage{margin-top:0}}
+@media (max-width:360px){.hero .eyebrow{font-size:11px;letter-spacing:.12em}.cw-ctas .btn{padding:0 18px;font-size:14.5px}.hero .g-rate{font-size:13px}}
+
+/* ---- Paneles laterales ---- */
+.bk{position:fixed;inset:0;z-index:120}
+.bk[hidden]{display:none}
+.bk-scrim{position:absolute;inset:0;background:rgba(18,18,20,.55);opacity:0;transition:opacity .35s ease}
+.bk.open .bk-scrim{opacity:1}
+.bk-panel{position:absolute;top:0;right:0;bottom:0;width:min(480px,100%);background:var(--shell);display:flex;flex-direction:column;box-shadow:-30px 0 80px -30px rgba(18,18,20,.45);transform:translateX(100%);transition:transform .42s cubic-bezier(.2,.8,.2,1)}
+.bk.open .bk-panel{transform:none}
+.bk-head{display:grid;grid-template-columns:44px 1fr 44px;align-items:center;gap:8px;padding:calc(10px + env(safe-area-inset-top,0px)) 12px 10px;border-bottom:1px solid var(--line);background:#fff}
+.bk-head .t{text-align:center;display:grid;gap:2px}
+.bk-head .t span{font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft)}
+.bk-head .t b{font-family:var(--font-display);font-weight:400;font-size:20px;color:var(--hibiscus);line-height:1.1}
+.bk-ib{all:unset;cursor:pointer;width:44px;height:44px;border-radius:50%;display:grid;place-items:center;color:var(--ink)}
+.bk-ib:hover{background:var(--shell-2)}
+.bk-ib:focus-visible{outline:3px solid var(--hibiscus)}
+.bk-ib svg{width:22px;height:22px}
+.bk-ib[disabled]{visibility:hidden}
+.bk-prog{height:4px;background:var(--shell-2)}
+.bk-prog i{display:block;height:100%;background:linear-gradient(90deg,var(--hibiscus),var(--sun));transform-origin:left;transition:transform .35s ease}
+.bk-body{flex:1;overflow-y:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch;padding:28px 22px 24px}
+.bk-pane{display:grid;gap:18px;align-content:start}
+.bk-pane[hidden]{display:none}
+.bk-pane h3{font-size:clamp(26px,6vw,32px);line-height:1.1}
+.bk-pane .sub{color:var(--ink-soft);margin-top:-8px}
+.bk-opts{display:grid;gap:10px}
+.bk-opts label{position:relative;cursor:pointer;display:block}
+.bk-opts input{position:absolute;opacity:0;inset:0;margin:0;cursor:pointer}
+.bk-opts span{display:flex;align-items:center;justify-content:space-between;min-height:58px;padding:0 18px;border-radius:16px;border:1.5px solid var(--line);background:#fff;font-size:17px;font-weight:600;transition:border-color .2s,background .2s,color .2s}
+.bk-opts span::after{content:"";width:22px;height:22px;border-radius:50%;border:2px solid var(--line);flex:none;transition:all .2s}
+.bk-opts input[type=checkbox]+span::after{border-radius:7px}
+.bk-opts input:checked+span{border-color:var(--hibiscus);background:#FFF1E8;color:var(--hibiscus-ink)}
+.bk-opts input:checked+span::after{border-color:var(--hibiscus);background:var(--hibiscus) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='none' stroke='white' stroke-width='3.2' stroke-linecap='round' stroke-linejoin='round' d='M6 12l4 4 8-8'/%3E%3C/svg%3E") center/14px no-repeat}
+.bk-opts input:focus-visible+span{outline:3px solid var(--hibiscus);outline-offset:2px}
+.bk-opts.row{grid-template-columns:repeat(auto-fit,minmax(0,1fr));gap:8px}
+.bk-opts.row span{justify-content:center;min-height:50px;padding:0 10px;font-size:15px;text-align:center}
+.bk-opts.row span::after{display:none}
+.bk-field{display:grid;gap:8px;min-width:0}
+.bk-field>span{font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-soft)}
+.bk-field input,.bk-field textarea{display:block;width:100%;min-width:0;max-width:100%;min-height:56px;padding:14px 16px;border-radius:14px;border:1.5px solid var(--line);background:#fff;font:500 17px var(--font-body);color:var(--ink);-webkit-appearance:none;appearance:none}
+.bk-field input[type=date]{text-align:left}
+.bk-field input::-webkit-date-and-time-value{text-align:left}
+.bk-field textarea{min-height:96px;resize:vertical}
+.cal{background:#fff;border:1.5px solid var(--line);border-radius:18px;padding:10px 12px 14px}
+.cal-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:6px}
+.cal-head b{font-size:17px}
+.cal-head .bk-ib[disabled]{visibility:visible;opacity:.25;cursor:default}
+.cal-dow,.cal-grid{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:4px;text-align:center}
+.cal-dow span{font-size:12px;font-weight:700;color:var(--ink-soft);padding:4px 0}
+.cal-dow .we,.cal-grid .we{color:var(--hibiscus)}
+.cal-grid button{all:unset;box-sizing:border-box;cursor:pointer;aspect-ratio:1;max-height:48px;width:100%;display:grid;place-items:center;border-radius:12px;font-weight:600;font-size:15px;font-variant-numeric:tabular-nums;color:var(--ink);transition:background .15s,color .15s}
+.cal-grid button.we{color:var(--hibiscus)}
+.cal-grid button:hover:not([disabled]){background:var(--shell-2)}
+.cal-grid button[disabled]{opacity:.28;cursor:default}
+.cal-grid button{position:relative}
+.cal-grid button.today{opacity:1;color:var(--ink);box-shadow:inset 0 0 0 2px var(--sun);background:#FFF6EE}
+.cal-grid button.today::after{content:"";position:absolute;left:50%;bottom:12%;width:5px;height:5px;margin-left:-2.5px;border-radius:50%;background:#E0864A}
+.cal-legend{display:flex;align-items:center;gap:6px;margin:10px 2px 0;font-size:13px;font-weight:600;color:var(--ink-soft)}
+.cal-legend i{width:14px;height:14px;border-radius:5px;box-shadow:inset 0 0 0 2px var(--sun);background:#FFF6EE;position:relative;flex:none}
+.cal-legend i::after{content:"";position:absolute;left:50%;bottom:2px;width:4px;height:4px;margin-left:-2px;border-radius:50%;background:#E0864A}
+.cal-grid button[aria-pressed="true"]{background:var(--hibiscus);color:#fff}
+.cal-grid button:focus-visible{outline:3px solid var(--hibiscus);outline-offset:1px}
+.cal-sel{margin:4px 0 0;font-weight:600;color:var(--ink-soft)}
+.cal-sel.on{color:var(--hibiscus-ink)}
+.bk-field input:focus,.bk-field textarea:focus{outline:none;border-color:var(--hibiscus)}
+.bk-field input[aria-invalid="true"]{border-color:#C6283D;background:#FFF2F4}
+.stepper{display:grid;grid-template-columns:56px 1fr 56px;align-items:center;background:#fff;border:1.5px solid var(--line);border-radius:16px;overflow:hidden}
+.stepper button{all:unset;cursor:pointer;height:56px;display:grid;place-items:center;font-size:26px;font-weight:600;color:var(--hibiscus)}
+.stepper button:active{background:var(--shell-2)}
+.stepper button:focus-visible{outline:3px solid var(--hibiscus);outline-offset:-3px}
+.stepper output{text-align:center;font-size:22px;font-weight:700;font-variant-numeric:tabular-nums}
+.bk-foot{padding:12px 22px calc(14px + env(safe-area-inset-bottom,0px));border-top:1px solid var(--line);background:#fff;display:grid;gap:8px}
+.bk-foot .btn{width:100%;min-height:56px;font-size:17px}
+.bk-foot [hidden]{display:none!important}
+.f-error{margin:0;color:#B3213A;font-weight:600;font-size:15px}
+.btn-wa{background:#1FA855;color:#fff;box-shadow:0 12px 24px -12px rgba(31,168,85,.8);width:100%;white-space:nowrap}
+.btn-wa:hover{background:#178F47}
+.btn-wa svg{width:22px;height:22px}
+.f-preview{margin:0;white-space:pre-wrap;font:16px/1.5 var(--font-body);background:#E7FFDB;border-radius:16px 16px 16px 4px;padding:16px 18px;color:#123;box-shadow:0 1px 0 rgba(0,0,0,.06)}
+.f-copy{all:unset;cursor:pointer;justify-self:center;font-size:14px;font-weight:600;color:var(--hibiscus-ink);text-decoration:underline;text-underline-offset:3px;padding:4px 8px}
+.f-copy:focus-visible{outline:3px solid var(--hibiscus);border-radius:6px}
+.f-hint{margin:0;font-size:13px;color:var(--ink-soft);text-align:center}
+
+
+.hrs{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.stepper.sm{grid-template-columns:40px 1fr 40px;border-radius:14px}
+.stepper.sm button{height:44px;font-size:22px}
+.stepper.sm button[disabled]{opacity:.25;cursor:default}
+.stepper.sm output{font-size:18px}
+.hrs-out{margin:-4px 0 0;font-size:14px;font-weight:600;color:var(--hibiscus-ink)}
+/* Panel compacto: ningún paso necesita scroll */
+.bk-body{padding:18px 18px 14px}
+.bk-pane{gap:14px}
+.bk-pane h3{font-size:24px}
+.bk-pane .sub{margin-top:-6px;font-size:15px}
+.bk-field{gap:6px}
+.bk-field>span{font-size:12px}
+.bk-opts{gap:8px}
+.bk-opts span{min-height:50px;font-size:16px;border-radius:14px}
+.bk-opts.row span{min-height:44px}
+.bk-opts.grid2{grid-template-columns:1fr 1fr}
+.bk-opts.grid2 span{min-height:44px;padding:0 12px;font-size:14px}
+.bk-opts.grid2 span::after{width:18px;height:18px}
+.bk-field input,.bk-field textarea{min-height:48px;padding:11px 14px;font-size:16px}
+.bk-field textarea{min-height:76px}
+.stepper{grid-template-columns:52px 1fr 52px}
+.stepper button{height:48px}
+.cal{padding:6px 8px 10px}
+.cal-head{margin-bottom:2px}
+.cal-head .bk-ib{width:38px;height:38px}
+.cal-dow span{padding:2px 0}
+.cal-grid{gap:2px}
+.cal-grid button{aspect-ratio:auto;height:clamp(34px,5.2vh,44px)}
+.cal-legend{margin-top:6px;font-size:12px}
+.cal-sel{margin:0;font-size:14px}
+.f-preview{font-size:14px;padding:12px 14px}
+.bk-foot{padding:10px 18px calc(10px + env(safe-area-inset-bottom,0px));gap:6px}
+.bk-foot .btn{min-height:50px}
+.bk-head{padding-block:calc(6px + env(safe-area-inset-top,0px)) 6px}
+@media (max-height:700px){
+  .bk-pane h3{font-size:22px}
+  .bk-opts span{min-height:46px}
+  .bk-opts.row span,.bk-opts.grid2 span{min-height:40px}
+  .stepper button{height:44px}
+  .cal-grid button{height:32px;font-size:14px}
+  .bk-body{padding-top:14px}
+  .f-preview{font-size:13px;line-height:1.4;padding:10px 12px}
+  .bk-pane .sub{font-size:13.5px}
+}
+@media (max-height:620px){.bk-pane{gap:10px}.bk-pane h3{font-size:20px}.f-preview{font-size:12.5px;line-height:1.35}}
+.rvd-body{display:grid;grid-template-columns:minmax(0,1fr);gap:18px;align-content:start;overflow-x:hidden;overscroll-behavior-x:none;touch-action:pan-y}
+.rvd .bk-panel{overflow-x:hidden;max-width:100vw}
+.rvd-body>*,.rvd-list>*{min-width:0;max-width:100%}
+.rvd-list .rv,.rvd-list .rv *{overflow-wrap:anywhere}
+.rvd-list .rv-top{flex-wrap:wrap}.rvd-list .rv-tag{white-space:normal}
+.rvd-sum{display:grid;grid-template-columns:auto minmax(0,1fr);gap:22px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:var(--r-md);padding:18px 20px}
+.rvd-score{display:grid;justify-items:center;gap:4px}
+.rvd-score b{font-size:44px;line-height:1;font-weight:700;color:var(--ink)}
+.rvd-score small{font-size:13px;color:var(--ink-soft)}
+.rvd-dist{list-style:none;margin:0;padding:0;display:grid;gap:5px;font-size:13px;color:var(--ink-soft)}
+.rvd-dist li{display:grid;grid-template-columns:12px 1fr 22px;gap:8px;align-items:center}
+.rvd-dist i{height:8px;border-radius:99px;background:var(--shell-2);overflow:hidden}.rvd-dist b{display:block;height:100%;background:#F5B400;border-radius:99px}
+.rvd-dist em{font-style:normal;text-align:right}
+.rvd-h{margin:6px 0 0;font-size:17px}
+.rvd-list{display:grid;grid-template-columns:minmax(0,1fr);gap:12px}
+.rvd-list .rv{background:#fff;opacity:1!important;transform:none!important}
+.rvd-map{border-radius:var(--r-md);overflow:hidden;border:1px solid var(--line);background:var(--shell-2);height:300px;flex:none}
+.rvd-map iframe{width:100%;height:100%;border:0;display:block}
+.rvd-note{margin:0;font-size:13px;color:var(--ink-soft)}
+.rvd-foot{padding:12px 16px calc(12px + env(safe-area-inset-bottom,0px));border-top:1px solid var(--line);background:#fff}
+.rvd-foot .btn{width:100%}
+/* Simulador en panel lateral; los tres rombos del logo hacen de cargador */
+.sim .bk-panel{width:min(1120px,100%);background:var(--night);color:#F4F1EA;box-shadow:-30px 0 80px -30px rgba(0,0,0,.6)}
+.sim .bk-head{background:var(--night);border-bottom-color:rgba(244,241,234,.14)}
+.sim .bk-head .t span{color:rgba(244,241,234,.62)}
+.sim .bk-head .t b{color:#F4F1EA}
+.sim .bk-ib{color:#F4F1EA}
+.sim .bk-ib:hover{background:rgba(255,255,255,.1)}
+.sim-main{position:relative;flex:1;min-height:0;display:flex;flex-direction:column}
+.sim-body{flex:1;min-height:0;overflow-y:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch;padding:clamp(18px,3vw,36px);padding-bottom:calc(clamp(18px,3vw,36px) + env(safe-area-inset-bottom,0px))}
+.sim-load{position:absolute;inset:0;z-index:5;display:grid;place-content:center;justify-items:center;gap:22px;background:var(--night);color:rgba(244,241,234,.7);font-size:14px;font-weight:600;letter-spacing:.04em;transition:opacity .4s}
+.sim-load.done{opacity:0;pointer-events:none}
+.rhombs{width:112px;height:auto;overflow:visible}
+.rhombs path{transform-box:fill-box;transform-origin:center;animation:rhomb 1.35s ease-in-out infinite}
+.rhombs .r-top{fill:#F4F1EA}
+.rhombs .r-l{fill:#D49A5E;animation-delay:.18s}
+.rhombs .r-r{fill:#D49A5E;animation-delay:.36s}
+@keyframes rhomb{0%,65%,100%{opacity:.2;transform:scale(.82)}28%{opacity:1;transform:scale(1)}}
+/* Subir arriba */
+.totop{position:fixed;right:20px;bottom:24px;z-index:65;width:48px;height:48px;border-radius:50%;border:1px solid rgba(255,255,255,.6);background:rgba(255,255,255,.72);-webkit-backdrop-filter:blur(14px) saturate(1.6);backdrop-filter:blur(14px) saturate(1.6);color:var(--ink);display:grid;place-items:center;cursor:pointer;box-shadow:0 10px 30px -10px rgba(21,21,21,.3);opacity:0;transform:translateY(12px) scale(.9);pointer-events:none;transition:opacity .3s,transform .3s}
+.totop.on{opacity:1;transform:none;pointer-events:auto}
+.totop:hover{transform:translateY(-2px)}
+.totop svg{width:22px;height:22px}
+@media (max-width:960px){.totop{bottom:calc(86px + env(safe-area-inset-bottom,0px));right:16px;width:44px;height:44px}}
+@media (max-width:640px){.bk-panel{width:100%;transform:translateY(100%);box-shadow:none}}
+.bk-head .t b{font-family:var(--font-display);font-weight:400;color:var(--ink)}
+.bk-opts input:checked+span{background:#FFF1E8}
+.btn-wa{font-size:16px}
+.bk-pane h3:focus{outline:none}
+.bk-opts.grid2.tight span{min-height:44px;padding:0 12px;font-size:14.5px}
+@media (max-height:700px){.bk-opts.grid2.tight span{min-height:38px;font-size:14px}}
+
+</style>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-pen" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M4 20h4L19 9a2.8 2.8 0 0 0-4-4L4 16zM13.5 6.5l4 4"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 22s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></g></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="M3.5 6.5l8.5 6.5 8.5-6.5"/></g></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2.8l2.8 5.9 6.4.8-4.7 4.4 1.2 6.4L12 17.2l-5.7 3.1 1.2-6.4L2.8 9.5l6.4-.8z"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-sun" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></g></symbol>
+  <symbol id="i-moon" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></symbol>
+</svg>
+
+<div class="intro" id="intro" aria-hidden="true">
+  <span class="is n" style="--c:#FF2E88;--d:.15s;--r:-6deg;left:8%;top:9%">Luminosos</span>
+  <span class="is b" style="--c:#C8853F;--d:.4s;--r:3deg;right:6%;top:20%">VINILOS</span>
+  <span class="is n" style="--c:#2D7DFF;--d:.65s;--r:2deg;left:14%;top:29%">Escaparates</span>
+  <span class="is c" style="--c:#FFE2B0;--d:.85s;--r:-3deg;left:6%;bottom:24%">CORPÓREAS</span>
+  <span class="is n" style="--c:#1FD27A;--d:1.05s;--r:-4deg;right:8%;bottom:14%">Vehículos</span>
+  <span class="is n" style="--c:#E0A35F;--d:1.25s;--r:5deg;left:22%;bottom:6%">Lonas</span>
+  <div class="intro-core">
+    <span class="emb"><img src="img/emblema.png" alt=""><svg viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="48"/></svg></span>
+    <b>Rótulos Luiyi</b>
+  </div>
+</div>
+<noscript><style>.intro{display:none}</style></noscript>
+
+<header class="top" id="top">
+  <div class="wrap">
+    <a class="brand" href="#hero" aria-label="Rótulos Luiyi, inicio"><img src="img/emblema.png" alt=""><span>Rótulos Luiyi</span></a>
+    <nav class="nav" aria-label="Secciones">
+      <a href="#simulador">Simulador</a>
+      <a href="#trabajos">Trabajos</a>
+      <a href="#proceso">Proceso</a>
+      <a href="#resenas">Reseñas</a>
+      <a href="#visita">Contacto</a>
+    </nav>
+    <a class="btn btn-primary" href="#presupuesto">Presupuesto</a>
+  </div>
+  <div class="progress" id="progress"></div>
+</header>
+
+<main>
+  <section class="hero cw" id="hero">
+    <div class="cw-top wrap">
+      <div class="cw-head">
+        <span class="eyebrow" data-t="eyebrow">Rótulos y vinilos<span class="eb-dot"> · </span><span class="eb-2">Huelva · desde 2011</span></span>
+        <h1>Que tu negocio brille <em>en Huelva</em></h1>
+      </div>
+      <div class="cw-side">
+        <p class="hero-sub cw-sub" data-t="sub">Rótulos luminosos, letras corpóreas, vinilos para escaparates y rotulación de vehículos en toda la provincia de Huelva. Lo diseñamos contigo, lo fabricamos a medida y lo instalamos nosotros.</p>
+        <div class="cw-ctas">
+          <a class="btn btn-primary" href="#simulador"><span data-t="cta">Probar el simulador de rótulos</span> <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          <a class="tel" href="tel:+34615599805"><svg><use href="#i-phone"/></svg>615 59 98 05</a>
+        </div>
+        <a class="link hero-micro" href="#presupuesto" data-t="micro" hidden></a>
+        <a class="g-rate" href="#resenas" data-rvd><span class="stars"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></span><b>5,0</b><span>en Google · 99 reseñas</span></a>
+      </div>
+    </div>
+    <div class="cw-stage"><div class="cw-belts" role="region" aria-label="Trabajos de Rótulos Luiyi">
+      <div class="cw-belt"><div class="cw-track"><figure class="cw-it"><img src="img/w-corporeas-1.jpg" alt="Letras corpóreas, trabajo de Rótulos Luiyi" width="1000" height="698"><figcaption>Letras corpóreas</figcaption></figure><figure class="cw-it"><img src="img/w-luminoso-1.jpg" alt="Rótulo luminoso, trabajo de Rótulos Luiyi" width="1000" height="493"><figcaption>Rótulo luminoso</figcaption></figure><figure class="cw-it"><img src="img/w-vehiculos-1.jpg" alt="Rotulación de vehículos, trabajo de Rótulos Luiyi" width="1000" height="750"><figcaption>Rotulación de vehículos</figcaption></figure><figure class="cw-it"><img src="img/w-nautica-1.jpg" alt="Rotulación náutica, trabajo de Rótulos Luiyi" width="1000" height="750"><figcaption>Rotulación náutica</figcaption></figure><figure class="cw-it"><img src="img/w-corporeas-5.jpg" alt="Fachada de tienda, trabajo de Rótulos Luiyi" width="1000" height="750" loading="lazy"><figcaption>Fachada de tienda</figcaption></figure><figure class="cw-it"><img src="img/w-lonas-1.jpg" alt="Lona para fachada, trabajo de Rótulos Luiyi" width="1000" height="750" loading="lazy"><figcaption>Lona para fachada</figcaption></figure><figure class="cw-it"><img src="img/w-vinilos-4.jpg" alt="Vinilo impreso, trabajo de Rótulos Luiyi" width="1000" height="1000" loading="lazy"><figcaption>Vinilo impreso</figcaption></figure><figure class="cw-it"><img src="img/w-textil-3.jpg" alt="Textil personalizado, trabajo de Rótulos Luiyi" width="750" height="1000" loading="lazy"><figcaption>Textil personalizado</figcaption></figure></div></div>
+      <div class="cw-belt cw-r"><div class="cw-track"><figure class="cw-it"><img src="img/w-luminoso-3.jpg" alt="Rótulo luminoso, trabajo de Rótulos Luiyi" width="1000" height="461" loading="lazy"><figcaption>Rótulo luminoso</figcaption></figure><figure class="cw-it"><img src="img/w-corporeas-3.jpg" alt="Letras corpóreas, trabajo de Rótulos Luiyi" width="998" height="749" loading="lazy"><figcaption>Letras corpóreas</figcaption></figure><figure class="cw-it"><img src="img/w-vehiculos-5.jpg" alt="Rotulación de vehículos, trabajo de Rótulos Luiyi" width="1000" height="750" loading="lazy"><figcaption>Rotulación de vehículos</figcaption></figure><figure class="cw-it"><img src="img/w-vinilos-1.jpg" alt="Vinilo sobre cristal, trabajo de Rótulos Luiyi" width="998" height="749" loading="lazy"><figcaption>Vinilo sobre cristal</figcaption></figure><figure class="cw-it"><img src="img/w-corporeas-4.jpg" alt="Letras corpóreas, trabajo de Rótulos Luiyi" width="998" height="749" loading="lazy"><figcaption>Letras corpóreas</figcaption></figure><figure class="cw-it"><img src="img/w-nautica-3.jpg" alt="Rotulación náutica, trabajo de Rótulos Luiyi" width="1000" height="750" loading="lazy"><figcaption>Rotulación náutica</figcaption></figure><figure class="cw-it"><img src="img/w-vehiculos-6.jpg" alt="Rotulación de remolque, trabajo de Rótulos Luiyi" width="1000" height="750" loading="lazy"><figcaption>Rotulación de remolque</figcaption></figure><figure class="cw-it"><img src="img/w-lonas-2.jpg" alt="Lonas para eventos, trabajo de Rótulos Luiyi" width="1000" height="750" loading="lazy"><figcaption>Lonas para eventos</figcaption></figure></div></div>
+    </div></div>
+  </section>
+
+  <section class="sec manifesto" id="manifiesto">
+    <div class="wrap">
+      <span class="eyebrow">Lo que nos importa</span>
+      <h2 class="mani" id="mani">Tu tienda necesita destacar desde la calle. Y sabemos que el tiempo es importante para tu negocio.</h2>
+      <p class="lead">Por eso trabajamos con materiales de alta calidad, plazos rápidos y atención cercana: rótulos con todo tipo de iluminación, letras corpóreas, vinilo de corte, lonas e impresión en gran formato, hechos a la medida de lo que necesitas.</p>
+    </div>
+  </section>
+
+  <section class="sec band-ink" id="simulador">
+    <div class="wrap book-cta" data-reveal>
+      <div>
+        <span class="eyebrow">Simulador de rótulos</span>
+        <h2>Pruébalo con <em>tu nombre</em></h2>
+        <p class="lead">Escribe el nombre de tu negocio y míralo como neón, en letras corpóreas, en un luminoso, en la fachada, en letras corpóreas de volumen o en una furgoneta, las dos en 3D para girarlas. De día y de noche.</p>
+      </div>
+      <a class="btn btn-light" href="#simulador">Abrir el simulador <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+    </div>
+  </section>
+
+  <section class="sec band-white" id="trabajos">
+    <div class="wrap">
+      <div class="sec-head" data-reveal>
+        <span class="eyebrow">Trabajos realizados</span>
+        <h2>Ya brillan <em>por toda Huelva</em></h2>
+        <p class="lead">Fachadas, escaparates, furgonetas, barcos y ropa de trabajo: diseñados, fabricados e instalados por nosotros.</p>
+      </div>
+      <div class="filters" role="group" aria-label="Filtrar trabajos">
+        <button type="button" class="on" data-f="all">Todos</button>
+        <button type="button" data-f="luminoso">Luminosos</button>
+        <button type="button" data-f="corporeas">Letras corpóreas</button>
+        <button type="button" data-f="vinilos">Vinilos y escaparates</button>
+        <button type="button" data-f="vehiculos">Vehículos</button>
+        <button type="button" data-f="nautica">Náutica</button>
+        <button type="button" data-f="lonas">Lonas</button>
+        <button type="button" data-f="textil">Textil</button>
+      </div>
+      <div class="works" id="works"></div>
+      <div class="works-more"><button type="button" class="btn btn-ghost" id="works-more">Ver más trabajos</button></div>
+    </div>
+  </section>
+
+  <section class="sec" id="servicios">
+    <div class="wrap">
+      <div class="sec-head" data-reveal>
+        <span class="eyebrow">Todo lo que hacemos</span>
+        <h2>Todo lo que tu marca necesita <em>para abrir</em></h2>
+        <p class="lead">A empresas y grandes compañías les damos todo el material necesario para la apertura y el desarrollo de sus negocios.</p>
+      </div>
+      <div class="svc">
+        <div data-reveal><h3>Rótulos</h3><ul><li>Rótulos luminosos e iluminación LED</li><li>Letras corpóreas (también en poliespán)</li><li>Neón LED</li><li>Placas de Dibond y de PVC</li><li>Vinilos y vinilado de escaparates</li><li>Lonas, banderolas e impresión en gran formato</li><li>Rotulación de vehículos comerciales</li></ul></div>
+        <div data-reveal><h3>Textil y merchandising</h3><ul><li>Camisetas, polos y sudaderas</li><li>Ropa de trabajo, gorras y delantales</li><li>Vinilo textil, sublimación, serigrafía, bordado y transfer</li><li>Llaveros, bolígrafos, sellos y tazas</li><li>Calendarios, memorias USB y alfombrillas</li></ul></div>
+        <div class="svc-logo" data-reveal><h3>Papelería</h3><p>Flyers, dípticos, trípticos, tarjetas de visita, catálogos, pegatinas y sobres. Desde pequeño formato hasta gran tamaño, en tiradas cortas o grandes.</p><a class="link" href="#presupuesto" data-tipo="Papelería">Consultar <svg><use href="#i-arrow"/></svg></a></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="sectores">
+    <div class="wrap">
+      <div class="sec-head" data-reveal>
+        <span class="eyebrow">Para cada negocio</span>
+        <h2>Rótulos para negocios <em>como el tuyo</em></h2>
+      </div>
+      <div class="sectors">
+        <a class="sector" href="#presupuesto" data-reveal><img src="img/w-luminoso-1.jpg" alt="Rótulo luminoso de una pizzería, de noche" loading="lazy"><b>Restauración</b><span>Luminosos que se ven de noche desde la otra acera.</span></a>
+        <a class="sector" href="#presupuesto" data-reveal><img src="img/w-corporeas-5.jpg" alt="Fachada de una tienda con letras corpóreas" loading="lazy"><b>Tiendas y comercios</b><span>Fachadas y escaparates que invitan a entrar.</span></a>
+        <a class="sector" href="#presupuesto" data-reveal><img src="img/w-corporeas-4.jpg" alt="Letras corpóreas de una clínica dental" loading="lazy"><b>Clínicas y farmacias</b><span>Letras corpóreas y vinilos para fachada e interior.</span></a>
+        <a class="sector" href="#presupuesto" data-reveal><img src="img/w-corporeas-1.jpg" alt="Letras corpóreas de una notaría" loading="lazy"><b>Oficinas y despachos</b><span>Tu nombre en volumen, en la puerta o en la fachada.</span></a>
+        <a class="sector" href="#presupuesto" data-reveal><img src="img/w-vehiculos-1.jpg" alt="Furgoneta de empresa rotulada" loading="lazy"><b>Flotas de vehículos</b><span>Furgonetas y coches que hacen publicidad allá donde van.</span></a>
+        <a class="sector" href="#presupuesto" data-reveal><img src="img/w-nautica-1.jpg" alt="Embarcación rotulada con vinilo" loading="lazy"><b>Náutica</b><span>Vinilos para embarcaciones y motores fueraborda.</span></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec sketch-sec" id="proceso">
+    <div class="wrap sketch-grid">
+      <div class="sketch-copy">
+        <div class="sec-head" data-reveal>
+          <span class="eyebrow">De la idea a tu fachada</span>
+          <h2>Cada rótulo empieza <em>con una idea</em></h2>
+          <p class="lead">Nos encargamos de todo el proceso. Tú nos cuentas qué necesitas; nosotros lo diseñamos, lo fabricamos y lo montamos.</p>
+        </div>
+        <ol class="stages" id="stages">
+          <li data-s="0" class="on"><b>01</b><div><h3>Asesoría</h3><p>Te aconsejamos y te guiamos para que elijas lo mejor para tu negocio, con atención cercana.</p></div></li>
+          <li data-s="1"><b>02</b><div><h3>Diseño</h3><p>Diseños gráficos personalizados, que reflejan la imagen y las necesidades de cada cliente.</p></div></li>
+          <li data-s="2"><b>03</b><div><h3>Fabricación a medida</h3><p>Con materiales de alta calidad y adaptados a tu proyecto: luminosos, corpóreas, vinilo, lona, Dibond…</p></div></li>
+          <li data-s="3"><b>04</b><div><h3>Instalación</h3><p>Nuestros montadores lo instalan en Huelva y sus municipios. Tu negocio, a la vista.</p></div></li>
+        </ol>
+      </div>
+      <figure class="board" id="board" data-s="0" aria-label="Ilustración del proceso: de un boceto a lápiz al rótulo encendido">
+        <svg viewBox="0 0 600 460" class="draw" aria-hidden="true">
+          <defs><pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M20 0H0V20" fill="none" stroke="rgba(18,18,18,.07)"/></pattern>
+            <filter id="glow" x="-30%" y="-60%" width="160%" height="220%"><feGaussianBlur stdDeviation="8" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>
+          <rect width="600" height="460" fill="url(#grid)"/>
+          <g class="pencil" fill="none" stroke="#2a2a2a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path pathLength="1" d="M60 420V70h480v350"/>
+            <path pathLength="1" d="M40 420h520"/>
+            <path pathLength="1" d="M150 250h300v170M300 250v170"/>
+            <path pathLength="1" d="M95 105h410v95H95z"/>
+            <path pathLength="1" class="dim" d="M95 225h410M95 218v14M505 218v14"/>
+            <path pathLength="1" class="dim" d="M530 105v95M523 105h14M523 200h14"/>
+          </g>
+          <g class="fab">
+            <rect x="95" y="105" width="410" height="95" rx="4" fill="#fff" stroke="#121212" stroke-width="7"/>
+            <rect x="150" y="250" width="300" height="170" fill="#1b2128"/><rect x="160" y="260" width="133" height="160" fill="#26303a"/><rect x="307" y="260" width="133" height="160" fill="#26303a"/>
+          </g>
+          <text class="word" x="300" y="168" text-anchor="middle">TU NEGOCIO</text>
+          <g class="lit"><rect x="95" y="105" width="410" height="95" rx="4" fill="rgba(255,190,120,.35)" filter="url(#glow)"/></g>
+        </svg>
+      </figure>
+    </div>
+  </section>
+
+  <section class="sec band-white" id="resenas">
+    <div class="wrap">
+      <div class="sec-head" data-reveal>
+        <span class="eyebrow">Reseñas de Google</span>
+        <h2>5,0 de media en 99 reseñas. <em>Lo cuentan sus clientes</em></h2>
+      </div>
+      <div class="rv-grid" id="rv-grid"></div>
+      <p class="rv-more"><a href="#resenas" data-rvd>Ver todas las reseñas →</a> <span>Fragmentos literales de reseñas de 5 estrellas en Google.</span></p>
+      <p class="clients" data-reveal><span>Han confiado en nosotros</span><b>Repsol</b><b>MGS Seguros</b><b>Austral</b><b>Antonio España e Hijos</b><b>Puertos de Andalucía</b><b>Ayuntamiento de Punta Umbría</b></p>
+    </div>
+  </section>
+
+  <section class="sec band-ink" id="presupuesto">
+    <div class="wrap book-cta" data-reveal>
+      <div>
+        <span class="eyebrow">Presupuesto sin compromiso</span>
+        <h2>Cuéntanos tu idea. <em>Nosotros la llevamos a cabo</em></h2>
+        <p class="lead">Cuatro preguntas rápidas y tu solicitud sale ya escrita por WhatsApp, con un código propio.</p>
+        <ul class="book-perks"><li>Sin registrarte</li><li>Menos de un minuto</li><li>O llámanos al 615 59 98 05</li></ul>
+      </div>
+      <a class="btn btn-light" href="#presupuesto">Pedir presupuesto</a>
+    </div>
+  </section>
+
+  <section class="sec band-white draft" id="borrador" hidden>
+    <div class="wrap">
+      <div class="sec-head"><span class="eyebrow">Borrador · Datos por confirmar</span><h2>Plazos y garantía <em>claros</em></h2></div>
+      <ul class="incl">
+        <li>Plazo habitual de fabricación e instalación: <mark>[__ días]</mark></li>
+        <li>Garantía de los rótulos luminosos: <mark>[__ años]</mark></li>
+        <li>Precios orientativos (vinilo de escaparate, rotulación de furgoneta…): <mark>[desde __ €]</mark></li>
+        <li>¿Los clientes del logo de su web se pueden nombrar? <mark>[Repsol, MGS, Austral…]</mark></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="sec" id="visita">
+    <div class="wrap visit">
+      <div data-reveal>
+        <span class="eyebrow">Contacto y taller</span>
+        <h2>Pásate por <em>el taller</em></h2>
+        <table class="hours" aria-label="Horario">
+          <tr><th>Lunes a viernes · invierno</th><td>08:30–14:45 y 17:00–20:00</td></tr>
+          <tr><th>Lunes a viernes · verano</th><td>08:30–15:00</td></tr>
+          <tr><th>Sábado y domingo</th><td>Cerrado</td></tr>
+        </table>
+        <ul class="contact">
+          <li><svg><use href="#i-pin"/></svg><a href="https://www.google.com/maps/search/?api=1&amp;query=ROTULOS%20LUIYI%2C%20C%2F%20Miguel%20Redondo%20Gonzalez%2C%2021100%20Punta%20Umbr%C3%ADa" target="_blank" rel="noopener">C/ Miguel Redondo González, local 2-A · 21100 Punta Umbría (Huelva)</a></li>
+          <li><svg><use href="#i-phone"/></svg><a href="tel:+34615599805">615 59 98 05</a> · <a href="tel:+34615599633">615 59 96 33</a></li>
+          <li><svg><use href="#i-mail"/></svg><a href="mailto:comercial@rotulosluiyi.com">comercial@rotulosluiyi.com</a></li>
+        </ul>
+      </div>
+      <div class="faq" data-reveal>
+        <details open><summary>¿Cuánto cuesta un rótulo?</summary><p>Depende del tipo, el tamaño, el material y la instalación. Cuéntanos tu proyecto y te preparamos el presupuesto, sin compromiso.</p></details>
+        <details><summary>¿Trabajáis fuera de Punta Umbría?</summary><p>Sí. Empezamos en la costa y hoy trabajamos en toda la provincia de Huelva, con montadores en Huelva y sus municipios.</p></details>
+        <details><summary>¿Lo instaláis vosotros?</summary><p>Sí. Lo diseñamos, lo fabricamos a medida y lo montamos: somos especialistas en montajes de todo tipo de rótulos.</p></details>
+        <details><summary>¿Rotuláis vehículos y barcos?</summary><p>Sí: furgonetas, coches, camiones y remolques, y también hemos vinilado embarcaciones y motores fueraborda. Mira algunos trabajos en la galería.</p></details>
+        <details><summary>¿Hacéis ropa y regalos con mi logo?</summary><p>Sí: camisetas, polos, sudaderas y ropa de trabajo (vinilo textil, sublimación, serigrafía, bordado o transfer), y merchandising como llaveros, bolígrafos, tazas o calendarios.</p></details>
+        <details><summary>¿Tenéis WhatsApp?</summary><p>Sí, en el 615 59 96 33. El botón de presupuesto te deja el mensaje ya escrito.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="final">
+    <div class="wrap">
+      <span class="eyebrow">Rótulos Luiyi</span>
+      <h2>Que tu negocio brille <em>en Huelva</em></h2>
+      <div class="hero-ctas">
+        <a class="btn btn-primary" href="#presupuesto">Pedir presupuesto</a>
+        <a class="btn btn-ghost" href="tel:+34615599805"><svg><use href="#i-phone"/></svg>Llamar</a>
+      </div>
+      <a class="g-rate" href="#resenas" data-rvd><span class="stars"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></span><b>5,0</b><span>· 99 reseñas en Google</span></a>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap"><span>Rótulos Luiyi · C/ Miguel Redondo González, local 2-A · 21100 Punta Umbría (Huelva)</span><span>615 59 98 05 · comercial@rotulosluiyi.com · <a href="https://www.instagram.com/rotulos_luiyi/" target="_blank" rel="noopener">Instagram</a> · <a href="https://www.facebook.com/rotulos.luiyi" target="_blank" rel="noopener">Facebook</a></span></div>
+</footer>
+<button class="totop" id="totop" type="button" aria-label="Subir arriba"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="M12 19V5M5 12l7-7 7 7"/></svg></button>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Trabajo ampliado" hidden><button type="button" class="lb-x" aria-label="Cerrar">×</button><button type="button" class="lb-nav prev" data-lb="-1" aria-label="Trabajo anterior"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg></button><img id="lb-img" alt=""><button type="button" class="lb-nav next" data-lb="1" aria-label="Trabajo siguiente"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></button><div class="lb-foot"><span id="lb-cap"></span><a class="btn btn-light" id="lb-go" href="#presupuesto">Quiero uno así</a></div></div>
+
+<div class="bk rvd" id="rvd" role="dialog" aria-modal="true" aria-labelledby="rvd-title" hidden>
+  <div class="bk-scrim" data-rvd-x></div>
+  <div class="bk-panel">
+    <header class="bk-head">
+      <span></span>
+      <div class="t"><span>Google</span><b id="rvd-title">Reseñas</b></div>
+      <button type="button" class="bk-ib" data-rvd-x aria-label="Cerrar"><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" d="M6 6l12 12M18 6L6 18"/></svg></button>
+    </header>
+    <div class="bk-body rvd-body">
+      <div class="rvd-sum">
+        <div class="rvd-score"><b>5,0</b><span class="rv-stars"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></span><small>99 reseñas</small></div>
+        <ul class="rvd-dist" aria-label="Reparto de estrellas"><li><span>5</span><i><b style="width:96%"></b></i><em>95</em></li><li><span>4</span><i><b style="width:4%"></b></i><em>4</em></li><li><span>3</span><i><b style="width:0%"></b></i><em>0</em></li><li><span>2</span><i><b style="width:0%"></b></i><em>0</em></li><li><span>1</span><i><b style="width:0%"></b></i><em>0</em></li></ul>
+      </div>
+      <h3 class="rvd-h">Reseñas de 5 estrellas</h3>
+      <div class="rvd-list" id="rvd-list"></div>
+      <h3 class="rvd-h">Su ficha en Google Maps</h3>
+      <div class="rvd-map"><iframe id="rvd-map" title="Rótulos Luiyi en Google Maps" data-src="https://maps.google.com/maps?q=ROTULOS%20LUIYI%2C%20C%2F%20Miguel%20Redondo%20Gonzalez%2C%2021100%20Punta%20Umbr%C3%ADa&amp;hl=es&amp;z=15&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+      <p class="rvd-note">Google no permite mostrar aquí su lista completa de reseñas; puedes leerlas todas en su ficha.</p>
+    </div>
+    <footer class="rvd-foot"><a class="btn btn-ghost" href="https://www.google.com/maps/search/?api=1&amp;query=ROTULOS%20LUIYI%2C%20C%2F%20Miguel%20Redondo%20Gonzalez%2C%2021100%20Punta%20Umbr%C3%ADa" target="_blank" rel="noopener">Ver las 99 en Google</a></footer>
+  </div>
+</div>
+
+<div class="bk sim" id="sim" role="dialog" aria-modal="true" aria-labelledby="sim-title" hidden>
+  <div class="bk-scrim" data-sim-x></div>
+  <div class="bk-panel">
+    <header class="bk-head">
+      <span></span>
+      <div class="t"><span>Pruébalo con tu nombre</span><b id="sim-title">Simulador de rótulos</b></div>
+      <button type="button" class="bk-ib" data-sim-x aria-label="Cerrar"><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" d="M6 6l12 12M18 6L6 18"/></svg></button>
+    </header>
+    <div class="sim-main">
+      <div class="sim-body">
+      <div class="lab" id="lab">
+        <div class="lab-stage on" id="lab-stage" data-type="neon" data-font="script" data-mode="night">
+          <div class="lab-wall" aria-hidden="true"></div>
+          <div class="lab-wash" aria-hidden="true"></div>
+          <div class="lab-shop" aria-hidden="true"><i class="lab-win"></i><i class="lab-door"></i></div>
+          <div class="lab-floor" aria-hidden="true"></div>
+          <svg class="lab-van" viewBox="0 0 400 180" aria-hidden="true">
+            <ellipse cx="200" cy="174" rx="186" ry="5" fill="rgba(0,0,0,.28)"/>
+            <path class="v-body" d="M20 150V54Q20 40 34 40H268Q282 40 291 51L322 92Q326 97 333 98L366 104Q380 107 380 120V150Z"/>
+            <path class="v-stripe" d="M21 118H240L256 140H21Z"/>
+            <path d="M20 140H380V150H20Z" fill="#2B2B30"/>
+            <path d="M276 52H284Q290 52 294 57L318 90H276Z" fill="#26303A"/>
+            <path d="M266 44V140" stroke="rgba(0,0,0,.22)" stroke-width="1.2" fill="none"/>
+            <rect x="270" y="100" width="11" height="3" rx="1.5" fill="#55555B"/>
+            <path d="M368 108L379 111V121H370Z" fill="#FFD98A"/>
+            <circle cx="96" cy="150" r="29" fill="#1B1B1E"/><circle cx="316" cy="150" r="29" fill="#1B1B1E"/>
+            <circle cx="96" cy="150" r="24" fill="#0E0E10"/><circle cx="316" cy="150" r="24" fill="#0E0E10"/>
+            <circle cx="96" cy="150" r="11" fill="#8E8E93"/><circle cx="316" cy="150" r="11" fill="#8E8E93"/>
+            <circle cx="96" cy="150" r="4" fill="#2B2B30"/><circle cx="316" cy="150" r="4" fill="#2B2B30"/>
+          </svg>
+          <canvas class="lab-3d" id="lab-3d" aria-hidden="true"></canvas>
+          <div class="lab-sign"><span class="lab-text" id="lab-text">Rótulos Luiyi</span></div>
+          <span class="lab-hint">Arrastra para girar</span>
+          <button type="button" class="lab-mode" id="lab-mode"><svg aria-hidden="true"><use href="#i-sun"/></svg>Ver de día</button>
+        </div>
+        <div class="lab-ctl">
+          <div class="lab-f"><label class="lab-l" for="lab-input">Nombre de tu negocio</label>
+            <input class="lab-input" id="lab-input" type="text" maxlength="26" autocomplete="off" spellcheck="false" placeholder="Escribe el nombre de tu negocio"></div>
+          <div class="lab-f"><span class="lab-l" id="lab-l-type">Tipo de rótulo</span>
+            <div class="lab-chips lab-types" role="group" aria-labelledby="lab-l-type">
+              <button type="button" data-t="neon" aria-pressed="true">Neón</button>
+              <button type="button" data-t="corp" aria-pressed="false">Corpóreas 3D</button>
+              <button type="button" data-t="wall" aria-pressed="false">Letras en pared</button>
+              <button type="button" data-t="box" aria-pressed="false">Luminoso</button>
+              <button type="button" data-t="fascia" aria-pressed="false">Fachada</button>
+              <button type="button" data-t="van" aria-pressed="false">Furgoneta</button>
+            </div></div>
+          <div class="lab-f"><span class="lab-l" id="lab-l-font">Letra</span>
+            <div class="lab-chips lab-fonts" role="group" aria-labelledby="lab-l-font">
+              <button type="button" data-f="script" aria-pressed="true">Manuscrita</button>
+              <button type="button" data-f="sans" aria-pressed="false">Palo seco</button>
+              <button type="button" data-f="serif" aria-pressed="false">Clásica</button>
+            </div></div>
+          <div class="lab-f"><span class="lab-l" id="lab-l-col">Color</span>
+            <div class="lab-colors" role="group" aria-labelledby="lab-l-col">
+              <button type="button" data-n="cobre" data-c="#E0A35F" data-ci="#B9824A" data-ct="#FFFFFF" style="--sw:#E0A35F" aria-label="Cobre" aria-pressed="true"></button>
+              <button type="button" data-n="blanco cálido" data-c="#FFE2B0" data-ci="#151515" data-ct="#151515" style="--sw:#FFE2B0" aria-label="Blanco cálido" aria-pressed="false"></button>
+              <button type="button" data-n="rosa" data-c="#FF2E88" data-ci="#F0187A" data-ct="#FFFFFF" style="--sw:#FF2E88" aria-label="Rosa" aria-pressed="false"></button>
+              <button type="button" data-n="rojo" data-c="#FF2A2A" data-ci="#E01B1B" data-ct="#FFFFFF" style="--sw:#FF2A2A" aria-label="Rojo" aria-pressed="false"></button>
+              <button type="button" data-n="azul" data-c="#2D7DFF" data-ci="#1F63E0" data-ct="#FFFFFF" style="--sw:#2D7DFF" aria-label="Azul" aria-pressed="false"></button>
+              <button type="button" data-n="verde" data-c="#1FD27A" data-ci="#0E9F58" data-ct="#0B2A1A" style="--sw:#1FD27A" aria-label="Verde" aria-pressed="false"></button>
+            </div></div>
+          <div class="lab-go"><a class="btn btn-light" href="#presupuesto" data-from-lab>Quiero este rótulo <svg aria-hidden="true"><use href="#i-arrow"/></svg></a><span class="lab-note">Es una simulación. El diseño final lo hacemos contigo.</span></div>
+        </div>
+      </div>
+      </div>
+      <div class="sim-load" id="sim-load" role="status">
+        <span class="emb sm"><img src="img/emblema.png" alt=""><svg viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="48"/></svg></span>
+        <span>Encendiendo el simulador…</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="bk" id="bk" role="dialog" aria-modal="true" aria-labelledby="bk-title" hidden>
+  <div class="bk-scrim" id="bk-scrim"></div>
+  <div class="bk-panel">
+    <header class="bk-head">
+      <button type="button" class="bk-ib" id="bk-back" aria-label="Paso anterior"><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M15 18l-6-6 6-6"/></svg></button>
+      <div class="t"><span id="bk-step">Paso 1 de 4</span><b id="bk-title">Tu presupuesto</b></div>
+      <button type="button" class="bk-ib" id="bk-x" aria-label="Cerrar"><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" d="M6 6l12 12M18 6L6 18"/></svg></button>
+    </header>
+    <div class="bk-prog"><i id="bk-bar" style="transform:scaleX(.25)"></i></div>
+    <form class="bk-body" id="book-form" novalidate>
+      <section class="bk-pane" data-step="1">
+        <h3>¿Qué necesitas?</h3>
+        <div class="bk-opts grid2 tight">
+          <label><input type="radio" name="tipo" value="Rótulo luminoso"><span>Rótulo luminoso</span></label>
+          <label><input type="radio" name="tipo" value="Letras corpóreas"><span>Letras corpóreas</span></label>
+          <label><input type="radio" name="tipo" value="Neón LED"><span>Neón LED</span></label>
+          <label><input type="radio" name="tipo" value="Vinilos o escaparate"><span>Vinilos / escaparate</span></label>
+          <label><input type="radio" name="tipo" value="Rotulación de vehículo"><span>Vehículo</span></label>
+          <label><input type="radio" name="tipo" value="Rotulación náutica"><span>Barco</span></label>
+          <label><input type="radio" name="tipo" value="Lona o banderola"><span>Lona / banderola</span></label>
+          <label><input type="radio" name="tipo" value="Textil o merchandising"><span>Textil / regalos</span></label>
+          <label><input type="radio" name="tipo" value="Papelería"><span>Papelería</span></label>
+          <label><input type="radio" name="tipo" value="Otro / no lo sé"><span>Otro / no lo sé</span></label>
+        </div>
+      </section>
+      <section class="bk-pane" data-step="2" hidden>
+        <h3>Tu rótulo</h3>
+        <label class="bk-field"><span>Texto o nombre del negocio</span><input type="text" id="f-texto" placeholder="Chiringuito La Ría"></label>
+        <div class="bk-field"><span>¿Tienes logotipo o diseño?</span>
+          <div class="bk-opts row">
+            <label><input type="radio" name="logo" value="Tengo logotipo" checked><span>Sí, lo tengo</span></label>
+            <label><input type="radio" name="logo" value="Necesito que me hagáis el diseño"><span>Diseñádmelo</span></label>
+          </div>
+        </div>
+        <label class="bk-field"><span>Medidas aproximadas (si las sabes)</span><input type="text" id="f-medidas" placeholder="3 m de ancho por 60 cm de alto"></label>
+      </section>
+      <section class="bk-pane" data-step="3" hidden>
+        <h3>¿Dónde va?</h3>
+        <label class="bk-field"><span>Localidad</span><input type="text" id="f-donde" placeholder="Punta Umbría, Huelva, Lepe…"></label>
+        <div class="bk-field"><span>Instalación</span>
+          <div class="bk-opts row">
+            <label><input type="radio" name="inst" value="Con instalación" checked><span>Instaladlo vosotros</span></label>
+            <label><input type="radio" name="inst" value="Sin instalación (lo recojo)"><span>Lo recojo</span></label>
+          </div>
+        </div>
+        <label class="bk-field"><span>Algo más (opcional)</span><input type="text" id="f-notas" placeholder="Fachada blanca, para antes del verano…"></label>
+      </section>
+      <section class="bk-pane" data-step="4" hidden>
+        <h3>¿Quién eres?</h3>
+        <label class="bk-field"><span>Tu nombre</span><input type="text" id="f-nombre" autocomplete="given-name" placeholder="Laura"></label>
+        <label class="bk-field"><span>Negocio o empresa (opcional)</span><input type="text" id="f-empresa" autocomplete="organization" placeholder="Chiringuito La Ría"></label>
+      </section>
+      <section class="bk-pane" data-step="5" hidden>
+        <h3>Tu solicitud está lista</h3>
+        <p class="sub">Te respondemos para asesorarte y darte el presupuesto.</p>
+        <pre class="f-preview" id="f-preview"></pre>
+        <button type="button" class="f-copy" id="f-copy">Copiar mensaje</button>
+      </section>
+    </form>
+    <footer class="bk-foot">
+      <p class="f-error" id="f-error" role="alert" hidden></p>
+      <button type="button" class="btn btn-primary" id="bk-next">Siguiente</button>
+      <a class="btn btn-wa" id="f-wa" href="#" target="_blank" rel="noopener" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .2-1.3c-.1-.1-.3-.2-.6-.3z"/></svg>Enviar por WhatsApp</a>
+    </footer>
+  </div>
+</div>
+
+<div class="mbar">
+  <a class="btn btn-primary" href="#presupuesto"><span data-t="mbar">Pedir presupuesto</span></a>
+  <a class="btn btn-ghost" href="tel:+34615599805" aria-label="Llamar al 615 59 98 05"><svg><use href="#i-phone"/></svg></a>
+</div>
+
+<script>
+(function(){
+"use strict";
+var reduced=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+var SFX={play:function(){}};
+
+/* ---------- Temporadas de Rótulos Luiyi: fechas fuertes para el comercio que rotula su escaparate o renueva su imagen ---------- */
+/* Solo servicios de su web (vinilos para escaparates, lonas, banderolas, impresión en gran formato, rótulos, diseño). Sin precios, plazos ni descuentos.
+   Estilo contenido: sin decoración, el cobre de marca solo como acento en la píldora del eyebrow. */
+window.TEMPORADAS=[
+  {id:'septiembre',nombre:'Vuelta de vacaciones',desde:'08-25',hasta:'09-30',prioridad:1,
+   textos:{eyebrow:'Septiembre · imagen nueva',
+     sub:'Acaba el verano en la costa: buen momento para renovar tu imagen. Diseñamos tu rótulo, tu fachada o tus vinilos, los fabricamos a medida y los montamos nosotros.',
+     micro:'Pedir presupuesto para renovar tu imagen <svg aria-hidden="true"><use href="#i-arrow"/></svg>'},
+   wa:'🗓️ Quiero renovar la imagen del negocio tras el verano'},
+  {id:'black-friday',nombre:'Black Friday',evento:'black-friday',antes:24,prioridad:2,
+   textos:{eyebrow:'Black Friday · {cuenta}',
+     sub:'Prepara el escaparate para tu campaña: vinilos para escaparates, lonas y banderolas, diseñados con tu imagen y colocados por nuestro equipo.',
+     micro:'Pedir presupuesto para tu escaparate <svg aria-hidden="true"><use href="#i-arrow"/></svg>'},
+   marcar:['input[name="tipo"][value="Vinilos o escaparate"]'],wa:'🛍️ Es para la campaña de Black Friday ({fecha})'},
+  {id:'navidad',nombre:'Navidad',evento:'navidad',desde:'11-28',hasta:'12-18',prioridad:2,
+   textos:{eyebrow:'Navidad · {cuenta}',
+     sub:'Viste tu escaparate para las fiestas con vinilos e impresión en gran formato, diseñados con tu imagen y colocados por nuestro equipo.',
+     micro:'Pedir presupuesto para tu escaparate <svg aria-hidden="true"><use href="#i-arrow"/></svg>'},
+   marcar:['input[name="tipo"][value="Vinilos o escaparate"]'],wa:'🎄 Es para el escaparate de Navidad'},
+  {id:'rebajas',nombre:'Rebajas de invierno',evento:'rebajas-invierno',antes:14,prioridad:2,
+   textos:{eyebrow:'Rebajas · {cuenta}',
+     sub:'Que tus rebajas se vean desde la calle: vinilos de escaparate, lonas y banderolas, diseñados con tu imagen y colocados por nuestro equipo.',
+     micro:'Pedir presupuesto para tu escaparate <svg aria-hidden="true"><use href="#i-arrow"/></svg>'},
+   marcar:['input[name="tipo"][value="Vinilos o escaparate"]'],wa:'🏷️ Es para el escaparate de rebajas (desde el {fecha})'}
+];
+/* ---------- Temporadas: la landing cambia sola cuando se acerca una fecha clave del oficio ---------- */
+/* Configura window.TEMPORADAS antes de este bloque (ver references/temporadas/README.md).
+   Pruebas: ?temporada=<id> fuerza una, ?temporada=no las apaga, ?fecha=2027-02-10 simula el día.
+   Selector para enseñarlas: #temporadas en la dirección (en local), 5 toques seguidos en el logo de la cabecera o la tecla T (también dentro del visor del Artifact). */
+(function(){
+var CFG=window.TEMPORADAS||[]; if(!CFG.length)return;
+var MESES=['enero','febrero','marzo','abril','mayo','junio','julio','agosto','septiembre','octubre','noviembre','diciembre'];
+var DAY=864e5;
+function d(y,m,dd){return new Date(y,m-1,dd)}
+function nth(y,m,dow,n){var f=d(y,m,1);return d(y,m,1+(dow-f.getDay()+7)%7+7*(n-1))}       /* n-ésimo día de la semana (0=domingo) del mes */
+function pascua(y){var a=y%19,b=Math.floor(y/100),c=y%100,e=(19*a+b-Math.floor(b/4)-Math.floor((b-Math.floor((8*b+13)/25)+1)/3)+15)%30,
+  f=(32+2*(b%4)+2*Math.floor(c/4)-e-c%4)%7,g=Math.floor((a+11*e+22*f)/451),m=Math.floor((e+f-7*g+114)/31);return d(y,m,(e+f-7*g+114)%31+1)}
+function mas(x,n){return new Date(x.getFullYear(),x.getMonth(),x.getDate()+n)}
+/* Calendario de España. Cada evento devuelve el día clave de ese año. */
+var EV={
+  'reyes':function(y){return d(y,1,6)},
+  'rebajas-invierno':function(y){return d(y,1,7)},
+  'san-valentin':function(y){return d(y,2,14)},
+  'carnaval':function(y){return mas(pascua(y),-47)},            /* martes de carnaval */
+  'dia-padre':function(y){return d(y,3,19)},
+  'semana-santa':function(y){return mas(pascua(y),-3)},         /* jueves santo */
+  'pascua':pascua,
+  'sant-jordi':function(y){return d(y,4,23)},                   /* solo Cataluña */
+  'dia-madre':function(y){return nth(y,5,0,1)},                 /* primer domingo de mayo */
+  'san-isidro':function(y){return d(y,5,15)},                   /* solo Madrid capital */
+  'san-juan':function(y){return d(y,6,24)},
+  'dia-abuelos':function(y){return d(y,7,26)},
+  'vuelta-cole':function(y){return d(y,9,8)},                   /* aproximado: varía por comunidad */
+  'halloween':function(y){return d(y,10,31)},
+  'todos-santos':function(y){return d(y,11,1)},
+  'black-friday':function(y){return mas(nth(y,11,4,4),1)},      /* viernes tras el 4.º jueves */
+  'navidad':function(y){return d(y,12,25)},
+  'nochevieja':function(y){return d(y,12,31)}
+};
+function md(s,y){var p=s.split('-');return d(y,+p[0],+p[1])}
+function antes(t){return t.antes==null?14:t.antes}
+/* Ventanas [inicio, fin, día clave] de una temporada alrededor del año y */
+function ventanas(t,y){var out=[];for(var k=y-1;k<=y+1;k++){
+  if(t.desde){var a=md(t.desde,k),b=md(t.hasta,k);if(b<a)b=md(t.hasta,k+1);out.push([a,b,t.evento?EV[t.evento](b.getFullYear()):b])}
+  else{var e=t.fecha?md(t.fecha,k):EV[t.evento]&&EV[t.evento](k);if(e)out.push([mas(e,-antes(t)),mas(e,t.despues||0),e])}}
+  return out}
+function elegir(hoy){var best=null;hoy=new Date(hoy.getFullYear(),hoy.getMonth(),hoy.getDate());
+  CFG.forEach(function(t){ventanas(t,hoy.getFullYear()).forEach(function(w){if(hoy<w[0]||hoy>w[1])return;
+    var pr=t.prioridad!=null?t.prioridad:(t.desde?1:2),falta=Math.round((w[2]-hoy)/DAY);
+    if(!best||pr>best.pr||(pr===best.pr&&Math.abs(falta)<Math.abs(best.falta)))best={t:t,pr:pr,falta:falta,dia:w[2]}})});
+  return best}
+/* Forzar una temporada aunque hoy no toque: la muestra como si faltaran unos días */
+function forzar(id,hoy){var t=CFG.filter(function(x){return x.id===id})[0];if(!t)return null;
+  var w=ventanas(t,hoy.getFullYear()).filter(function(w){return w[1]>=hoy})[0],falta=Math.round((w[2]-hoy)/DAY);
+  if(hoy<w[0])falta=Math.min(antes(t),9);return {t:t,falta:falta,dia:w[2]}}
+function rellenar(s,b){if(!s)return s;var n=b.falta,f=b.dia.getDate()+' de '+MESES[b.dia.getMonth()];
+  var cuenta=n>1?'Faltan '+n+' días':n===1?'Es mañana':n===0?'Es hoy':'';
+  return s.replace(/\{cuenta\}/g,cuenta).replace(/\{dias\}/g,n).replace(/\{fecha\}/g,f).replace(/\{anio\}/g,b.dia.getFullYear())}
+
+var q=new URLSearchParams(location.search),forzada=q.get('temporada'),sim=q.get('fecha'),hoy=new Date();
+if(sim&&/^\d{4}-\d\d-\d\d$/.test(sim)){var p=sim.split('-');hoy=d(+p[0],+p[1],+p[2])}
+hoy=new Date(hoy.getFullYear(),hoy.getMonth(),hoy.getDate());
+window.TEMPORADA_ELEGIR=function(x){var b=elegir(x);return b?b.t.id:null};   /* para scripts/temporadas.js */
+var root=document.documentElement,reducido=matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+/* Estado original, para poder volver a la versión de todo el año al cambiar de temporada desde el selector */
+var CLAVES={};CFG.forEach(function(t){Object.keys(t.textos||{}).forEach(function(k){CLAVES[k]=1})});   /* solo las claves que usa alguna temporada: otros data-t de la página no se tocan */
+var T=[].slice.call(document.querySelectorAll('[data-t]')).filter(function(el){return CLAVES[el.getAttribute('data-t')]}).map(function(el){return [el,el.innerHTML,el.hidden]});
+var fotosOrig=[],tokens=[],marcados=[],deco=null;
+function limpiar(){
+  T.forEach(function(o){o[0].innerHTML=o[1];o[0].hidden=o[2];o[0].classList.remove('t-on')});
+  tokens.forEach(function(k){root.style.removeProperty(k)});tokens=[];
+  fotosOrig.forEach(function(o){if(o[0].tagName==='SOURCE')o[0].srcset=o[1];else{o[0].src=o[1];if(o[2])o[0].srcset=o[2]}});fotosOrig=[];
+  marcados.forEach(function(el){el.checked=false});marcados=[];
+  if(deco){deco();deco=null}
+  root.removeAttribute('data-temporada');window.TEMPORADA=null}
+function aplicar(b){
+  limpiar();var id=b?b.t.id:null;
+  /* Bloques solo de temporada: data-temporada-solo="san-valentin dia-madre" (empiezan con hidden) y data-temporada-fuera="…" */
+  document.querySelectorAll('[data-temporada-solo]').forEach(function(el){el.hidden=!(id&&el.getAttribute('data-temporada-solo').split(/\s+/).indexOf(id)>-1)});
+  document.querySelectorAll('[data-temporada-fuera]').forEach(function(el){el.hidden=!!(id&&el.getAttribute('data-temporada-fuera').split(/\s+/).indexOf(id)>-1)});
+  if(!b)return;
+  var t=b.t;root.setAttribute('data-temporada',id);
+  /* Colores: sobrescribe tokens de :root (solo acentos; el fondo y la tinta no se tocan) */
+  if(t.tema)Object.keys(t.tema).forEach(function(k){root.style.setProperty(k,t.tema[k]);tokens.push(k)});
+  /* Textos: cualquier elemento con data-t="clave". El HTML trae el texto de todo el año; si estaba hidden, se muestra */
+  if(t.textos)Object.keys(t.textos).forEach(function(k){document.querySelectorAll('[data-t="'+k+'"]').forEach(function(el){el.innerHTML=rellenar(t.textos[k],b);el.hidden=false;el.classList.add('t-on')})});
+  /* Fotos: {selector: ruta}. Solo fotos reales del negocio para esa fecha */
+  if(t.fotos)Object.keys(t.fotos).forEach(function(s){document.querySelectorAll(s).forEach(function(el){
+    if(el.tagName==='SOURCE'){fotosOrig.push([el,el.srcset]);el.srcset=t.fotos[s]}else{fotosOrig.push([el,el.src,el.getAttribute('srcset')]);el.removeAttribute('srcset');el.src=t.fotos[s]}})});
+  /* Marcar opciones del panel de encargo/reserva (solo si no hay ninguna marcada en ese grupo) */
+  if(t.marcar)t.marcar.forEach(function(s){var el=document.querySelector(s);if(el&&!document.querySelector('input[name="'+el.name+'"]:checked')){el.checked=true;marcados.push(el)}});
+  window.TEMPORADA={id:id,nombre:t.nombre||id,dias:b.falta,fecha:b.dia,linea:rellenar(t.wa,b)||''};   /* el panel añade TEMPORADA.linea al mensaje de WhatsApp */
+  try{document.dispatchEvent(new CustomEvent('temporada',{detail:window.TEMPORADA}))}catch(e){}
+  if(t.deco&&!reducido)deco=decorar(t)}
+
+/* Decoración ligera en el hero: petalos, corazones, nieve, hojas, confeti o estrellas. Nunca sobre el texto ni con movimiento reducido */
+function decorar(t){
+  var host=document.querySelector(t.decoEn||'#hero');if(!host)return null;
+  var cv=document.createElement('canvas');cv.className='t-deco';cv.setAttribute('aria-hidden','true');
+  cv.style.cssText='position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:1';
+  host.insertBefore(cv,host.children[1]||null);
+  var cx=cv.getContext('2d'),W=0,H=0,DPR=Math.min(devicePixelRatio||1,1.5),P=[],raf=0,last=0;
+  var COL=t.decoColores||{petalos:['#F5B8C9','#FFD9E2','#E88AA6'],corazones:['#FF6B8B','#FFB3C4','#E0325A'],nieve:['#FFFFFF'],hojas:['#C9733B','#E0A04A','#9C4A24'],confeti:['#FFD166','#EF476F','#06D6A0','#4CC9F0'],estrellas:['#FFE8A3','#FFFFFF']}[t.deco]||['#fff'];
+  function size(){var r=host.getBoundingClientRect();W=r.width;H=r.height;cv.width=W*DPR;cv.height=H*DPR;cx.setTransform(DPR,0,0,DPR,0,0)}
+  function nuevo(top){var s=t.deco==='nieve'?2+Math.random()*3:t.deco==='estrellas'?1.5+Math.random()*2.5:7+Math.random()*7;
+    return {x:Math.random()*W,y:top?-20:Math.random()*H,s:s,vy:(t.deco==='estrellas'?0:.25+Math.random()*.5)*(s>6?1:.7),vx:(Math.random()-.5)*.3,a:Math.random()*6.3,va:(Math.random()-.5)*.03,f:Math.random()*6.3,c:COL[Math.floor(Math.random()*COL.length)]}}
+  function forma(p){cx.save();cx.translate(p.x,p.y);cx.rotate(p.a);cx.fillStyle=p.c;cx.globalAlpha=t.deco==='estrellas'?.4+.5*Math.abs(Math.sin(p.f)):.85;var s=p.s;cx.beginPath();
+    if(t.deco==='corazones'){cx.moveTo(0,s*.35);cx.bezierCurveTo(-s,-s*.3,-s*.4,-s,0,-s*.45);cx.bezierCurveTo(s*.4,-s,s,-s*.3,0,s*.35)}
+    else if(t.deco==='nieve'||t.deco==='estrellas')cx.arc(0,0,s/2,0,7);
+    else if(t.deco==='confeti')cx.rect(-s/2,-s/4,s,s/2);
+    else cx.ellipse(0,0,s/2,s*(t.deco==='hojas'?.28:.34),0,0,7);
+    cx.fill();cx.restore()}
+  function paso(ts){raf=requestAnimationFrame(paso);if(ts-last<30)return;last=ts;
+    var r=host.getBoundingClientRect();if(r.bottom<0||r.top>innerHeight)return;   /* fuera de pantalla: no pinta */
+    cx.clearRect(0,0,W,H);P.forEach(function(p,i){p.f+=.03;p.y+=p.vy;p.x+=p.vx+Math.sin(p.f)*.35;p.a+=p.va;if(p.y>H+20)P[i]=nuevo(true);forma(p)})}
+  function arranca(){cancelAnimationFrame(raf);if(!document.hidden)raf=requestAnimationFrame(paso)}
+  size();var n=Math.min(t.decoCuantos||22,Math.round(W*H/40000)+6);for(var i=0;i<n;i++)P.push(nuevo(false));
+  addEventListener('resize',size);document.addEventListener('visibilitychange',arranca);arranca();
+  return function(){cancelAnimationFrame(raf);removeEventListener('resize',size);document.removeEventListener('visibilitychange',arranca);cv.remove()}}
+
+var hoyB=elegir(hoy);
+aplicar(forzada==='no'?null:forzada?forzar(forzada,hoy):hoyB);
+
+/* ---------- Selector de temporadas: solo con #temporadas en la dirección, para enseñárselas al cliente ---------- */
+/* El visor del Artifact no pasa el #hash al iframe: también se abre con 5 toques seguidos en el logo de la cabecera (.brand) o con la tecla T */
+var sel=null,manual=false;
+function selector(){
+  if(location.hash!=='#temporadas'&&!manual){if(sel){sel.remove();sel=null}return}
+  if(sel)return;
+  var st=document.createElement('style');st.textContent='.t-sel{position:fixed;left:12px;right:12px;bottom:calc(14px + env(safe-area-inset-bottom,0px));z-index:150;margin:0 auto;max-width:max-content;display:flex;align-items:center;gap:6px;padding:6px;border-radius:18px;background:rgba(20,20,20,.82);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);color:#fff;font:600 13px/1.2 system-ui,-apple-system,sans-serif;box-shadow:0 14px 34px -12px rgba(0,0,0,.6);overflow-x:auto;scrollbar-width:none}'
+   +'.t-sel::-webkit-scrollbar{display:none}.t-sel b{padding:0 6px 0 8px;font-size:11px;letter-spacing:.08em;text-transform:uppercase;opacity:.6;white-space:nowrap}'
+   +'.t-sel button{all:unset;cursor:pointer;white-space:nowrap;padding:9px 12px;border-radius:12px;color:#fff}.t-sel button:hover{background:rgba(255,255,255,.12)}.t-sel button[aria-pressed="true"]{background:#fff;color:#111}'
+   +'.t-sel button small{display:block;font-size:10px;font-weight:500;opacity:.65;margin-top:2px}.t-sel .x{opacity:.7;padding:9px 10px}'
+   +'@media (max-width:640px){.t-sel{bottom:calc(84px + env(safe-area-inset-bottom,0px));max-width:none}}';
+  sel=document.createElement('div');sel.className='t-sel';sel.setAttribute('role','toolbar');sel.setAttribute('aria-label','Ver la landing en cada temporada');
+  sel.appendChild(st);
+  function hint(t){var w=ventanas(t,hoy.getFullYear()).filter(function(w){return w[1]>=hoy})[0],f=function(x){return x.getDate()+' '+MESES[x.getMonth()].slice(0,3)};return f(w[0])+' – '+f(w[1])}
+  var h='<b>Temporadas</b><button type="button" data-id="@hoy">Hoy<small>'+(hoyB?(hoyB.t.nombre||hoyB.t.id):'sin temporada')+'</small></button><button type="button" data-id="">Todo el año<small>versión base</small></button>';
+  CFG.forEach(function(t){h+='<button type="button" data-id="'+t.id+'">'+(t.nombre||t.id)+'<small>'+hint(t)+'</small></button>'});
+  sel.insertAdjacentHTML('beforeend',h+'<button type="button" class="x" aria-label="Cerrar el selector">✕</button>');
+  var elegido='@hoy';
+  function marca(){sel.querySelectorAll('button[data-id]').forEach(function(x){x.setAttribute('aria-pressed',String(x.dataset.id===elegido))})}
+  sel.addEventListener('click',function(e){var x=e.target.closest('button');if(!x)return;
+    if(x.classList.contains('x')){manual=false;if(location.hash==='#temporadas')history.replaceState(null,'',location.pathname+location.search);selector();return}
+    elegido=x.dataset.id;aplicar(elegido==='@hoy'?hoyB:elegido?forzar(elegido,hoy):null);marca();window.scrollTo({top:0,behavior:'smooth'})});
+  document.body.appendChild(sel);marca()}
+selector();addEventListener('hashchange',selector);
+var toques=[];
+document.addEventListener('click',function(e){if(!e.target.closest||!e.target.closest(window.TEMPORADAS_DISPARADOR||'.brand'))return;var n=Date.now();
+  toques=toques.filter(function(t){return n-t<2500});toques.push(n);if(toques.length>=5){toques=[];manual=true;selector()}});
+document.addEventListener('keydown',function(e){if((e.key==='t'||e.key==='T')&&!e.metaKey&&!e.ctrlKey&&!e.altKey&&!/INPUT|TEXTAREA|SELECT/.test(e.target.tagName)&&!e.target.isContentEditable){manual=!sel;if(!manual&&location.hash==='#temporadas')history.replaceState(null,'',location.pathname+location.search);selector()}});
+})();
+
+
+/* ---------- Entrada: se queda lo justo para que se enciendan los rótulos y la letra esté cargada ---------- */
+var introGone=false,introCbs=[];
+function afterIntro(fn){if(introGone)fn();else introCbs.push(fn)}
+(function(){var el=document.getElementById('intro');
+  function done(){if(introGone)return;introGone=true;if(el){el.classList.add('out');setTimeout(function(){el.hidden=true},700)}
+    introCbs.forEach(function(f){try{f()}catch(e){}})}
+  if(!el){done();return}
+  var min=reduced?700:2200,t0=performance.now(),cap=setTimeout(done,min+2500);
+  function go(){setTimeout(function(){clearTimeout(cap);done()},Math.max(0,min-(performance.now()-t0)))}
+  if(document.fonts&&document.fonts.ready)document.fonts.ready.then(go,go);else go();
+})();
+
+/* ---------- Carrusel de trabajos reales (hero) ---------- */
+(function(){
+  var box=document.getElementById('showcase'); if(!box)return;
+  /* [foto, título, detalle, color del rótulo de la foto: el neón del titular se pone de ese color] */
+  var S=[['img/w-luminoso-1.jpg','Rótulo luminoso','de una pizzería, de noche','#FF2E9A'],['img/w-corporeas-3.jpg','Letras corpóreas','sobre fachada','#FFE2B0'],['img/w-vehiculos-1.jpg','Rotulación','de furgonetas de empresa','#FF7A1F'],['img/w-nautica-1.jpg','Rotulación náutica','con vinilo','#FF2A2A'],['img/w-vinilos-1.jpg','Vinilo','sobre cristal','#E0A35F'],['img/w-corporeas-5.jpg','Fachada','de tienda','#FFC46B'],['img/w-lonas-1.jpg','Lona','para fachada','#2DA8FF']];
+  var hero=document.getElementById('hero');
+  function tint(first){if(!hero)return;var c=box.offsetParent?S[cur][3]:'';   /* con el carrusel oculto (móvil) se queda el naranja de marca */
+    function set(){if(c)hero.style.setProperty('--neon',c);else hero.style.removeProperty('--neon')}
+    /* cambia con un parpadeo, como al cambiar un tubo; la primera vez, sin él */
+    if(first||reduced||!hero.classList.contains('on2')){set();return}
+    hero.classList.remove('on2');setTimeout(function(){set();hero.classList.add('on2')},120)}
+  var wrap=document.getElementById('sc-slides'),cap=document.getElementById('sc-cap'),cnt=document.getElementById('sc-count'),bar=document.getElementById('sc-prog');
+  wrap.innerHTML=S.map(function(s,i){return '<img src="'+s[0]+'" alt="'+s[1]+' '+s[2]+', trabajo de Rótulos Luiyi"'+(i?' loading="lazy"':' fetchpriority="high"')+'>'}).join('');
+  var imgs=[].slice.call(wrap.children),cur=-1,DUR=5200,t0=0,raf=0,paused=false,vis=true;
+  function pad(n){return String(n).padStart(2,'0')}
+  function go(i){var first=cur<0;cur=(i+S.length)%S.length;imgs.forEach(function(im,k){im.classList.toggle('on',k===cur)});
+    cap.innerHTML=S[cur][1]+' <em>'+S[cur][2]+'</em>';cnt.textContent=pad(cur+1)+' / '+pad(S.length);t0=performance.now();tint(first)}
+  function loop(now){raf=0;if(reduced)return;if(!paused&&vis){var p=(now-t0)/DUR;if(p>=1){go(cur+1);p=0}bar.style.transform='scaleX('+Math.min(1,p)+')'}else t0=now-(parseFloat((bar.style.transform.match(/[\d.]+/)||[0])[0])*DUR);raf=requestAnimationFrame(loop)}
+  document.getElementById('sc-next').addEventListener('click',function(){go(cur+1)});
+  document.getElementById('sc-prev').addEventListener('click',function(){go(cur-1)});
+  var ctl=box.querySelector('.sc-ctl');ctl.addEventListener('mouseenter',function(){paused=true});ctl.addEventListener('mouseleave',function(){paused=false});
+  var x0=null;box.addEventListener('touchstart',function(e){x0=e.touches[0].clientX},{passive:true});
+  box.addEventListener('touchend',function(e){if(x0===null)return;var dx=e.changedTouches[0].clientX-x0;if(Math.abs(dx)>40)go(cur+(dx<0?1:-1));x0=null});
+  box.addEventListener('keydown',function(e){if(e.key==='ArrowRight')go(cur+1);if(e.key==='ArrowLeft')go(cur-1)});
+  function see(){var r=box.getBoundingClientRect();vis=r.width>0&&r.bottom>0&&r.top<innerHeight}
+  see();window.addEventListener('scroll',see,{passive:true});window.addEventListener('resize',see);
+  go(0); if(!reduced)raf=requestAnimationFrame(loop);
+})();
+
+/* ---------- Hero: dos cintas de trabajos que corren en sentidos opuestos ---------- */
+(function(){var h=document.getElementById('hero');if(!h)return;
+  var belts=h.querySelector('.cw-belts');
+  if(!belts||reduced)return;
+  [].forEach.call(belts.querySelectorAll('.cw-track'),function(t){
+    /* se duplica el contenido para que la cinta no tenga fin; la copia no se lee ni se enfoca */
+    var c=t.innerHTML;t.insertAdjacentHTML('beforeend',c);
+    [].forEach.call(t.children,function(f,i){if(i>=t.children.length/2){f.setAttribute('aria-hidden','true');var im=f.querySelector('img');im.alt='';im.loading='lazy'}});
+    function speed(){var w=t.scrollWidth/2;if(w)t.style.setProperty('--dur',Math.round(w/(innerWidth<641?34:42))+'s')}
+    speed();addEventListener('resize',speed);[].forEach.call(t.querySelectorAll('img'),function(im){if(!im.complete)im.addEventListener('load',speed,{once:true})});
+  });
+  belts.classList.add('cw-on');
+  /* fuera de pantalla o con la pestaña oculta, las cintas se paran */
+  var tk=false;function vis(){tk=false;var r=belts.getBoundingClientRect(),on=r.bottom>0&&r.top<innerHeight&&!document.hidden;[].forEach.call(belts.querySelectorAll('.cw-track'),function(t){t.style.animationPlayState=on?'':'paused'})}
+  vis();addEventListener('scroll',function(){if(!tk){tk=true;requestAnimationFrame(vis)}},{passive:true});document.addEventListener('visibilitychange',vis);
+})();
+
+/* ---------- Simulador de rótulos ---------- */
+(function(){
+  var stage=document.getElementById('lab-stage'); if(!stage)return;
+  var txt=document.getElementById('lab-text'),inp=document.getElementById('lab-input'),modeB=document.getElementById('lab-mode');
+  function q(sel){return [].slice.call(document.querySelectorAll(sel))}
+  var types=q('.lab-types button'),fonts=q('.lab-fonts button'),cols=q('.lab-colors button');
+  /* [valor del formulario de presupuesto, nombre para el mensaje] */
+  var TYPE={neon:['Neón personalizado','Neón'],corp:['Letras corpóreas','Letras corpóreas 3D con volumen'],wall:['Letras corpóreas','Letras corpóreas sobre pared, en dos líneas'],box:['Rótulo luminoso','Rótulo luminoso'],fascia:['Fachada','Fachada rotulada'],van:['Rotulación de vehículo','Rotulación de furgoneta']};
+  /* cuerpo máximo y ancho útil, en fracción del ancho del escenario */
+  var BASE={neon:.15,corp:.15,wall:.15,box:.11,fascia:.075,van:.085},AVAIL={neon:.86,corp:.86,wall:.86,box:.72,fascia:.76,van:.45};
+  var FK={script:1,sans:.77,serif:.95},DFONT={neon:'script',corp:'sans',wall:'sans',box:'sans',fascia:'sans',van:'sans'},FNAME={script:'manuscrita',sans:'de palo seco',serif:'clásica'};
+  var DEF='Rótulos Luiyi',DEMO=['Chiringuito La Ría','Bar Manolo','Flores Carmen','Óptica Sol','Café Central'];
+  var type='neon',font='script',fontPicked=false,autoDay=false,colName='naranja',colCi='#D49A5E',colC='#D49A5E',shown='',target=DEF,touched=false,vis=false,started=false,tk=0,demoT=0,di=0;
+  function clean(v){return v.replace(/\s+/g,' ').trim()}
+  function press(list,b){list.forEach(function(x){x.setAttribute('aria-pressed',x===b)})}
+  function draw(t){shown=t;V3.dirty=true;txt.textContent='';Array.from(t).forEach(function(ch){var sp=document.createElement('span');sp.textContent=ch;txt.appendChild(sp)})}
+  /* Ajusta el cuerpo de letra para que el texto (o el que va a escribirse) quepa */
+  function fit(ref){var W=stage.clientWidth;if(!W)return;var max=BASE[type]*FK[font]*W,avail=W*AVAIL[type],cur=shown;
+    if(ref&&ref!==cur)draw(ref);
+    txt.style.fontSize=max+'px';var w=txt.getBoundingClientRect().width;
+    if(w>avail)txt.style.fontSize=Math.max(W*.035,max*avail/w)+'px';
+    if(ref&&ref!==cur)draw(cur)}
+  /* Arranque con parpadeo, como un tubo de verdad */
+  function ignite(){var k=++tk;if(stage.dataset.mode==='day'){stage.classList.remove('on');return}
+    if(reduced){stage.classList.add('on');return}
+    [[0,0],[140,1],[210,0],[290,1],[330,0],[470,1],[520,0],[570,1]].forEach(function(p){setTimeout(function(){if(k===tk)stage.classList.toggle('on',!!p[1])},p[0])})}
+  function setFont(f){font=f;V3.dirty=true;stage.dataset.font=f;fonts.forEach(function(x){x.setAttribute('aria-pressed',x.dataset.f===f)})}
+  function setMode(day){V3.dirty=true;stage.dataset.mode=day?'day':'night';
+    modeB.innerHTML='<svg aria-hidden="true"><use href="#i-'+(day?'moon':'sun')+'"/></svg>'+(day?'Ver de noche':'Ver de día')}
+  function stopDemo(){if(touched)return;touched=true;clearTimeout(demoT);if(shown!==target){draw(target);fit()}}
+  function demo(){if(touched)return;if(!vis){demoT=setTimeout(demo,900);return}
+    var name=DEMO[di++%DEMO.length],cur=Array.from(shown);target=name;
+    (function erase(){if(touched)return;
+      if(cur.length){cur.pop();draw(cur.join(''));demoT=setTimeout(erase,28);return}
+      fit(name);var ch=Array.from(name),i=0;
+      (function typeIt(){if(touched)return;i++;draw(ch.slice(0,i).join(''));demoT=setTimeout(i<ch.length?typeIt:demo,i<ch.length?70:3200)})()})()}
+  function buzz(){setTimeout(buzz,2600+Math.random()*3800);
+    if(!vis||type!=='neon'||!stage.classList.contains('on'))return;
+    var sp=txt.children;if(!sp.length)return;var el=sp[Math.floor(Math.random()*sp.length)];
+    [[0,1],[80,0],[150,1],[210,0]].forEach(function(p){setTimeout(function(){el.classList.toggle('buzz',!!p[1])},p[0])})}
+  inp.addEventListener('focus',function(){if(touched)return;touched=true;clearTimeout(demoT);target=DEF;draw(clean(inp.value)||DEF);fit()});
+  inp.addEventListener('input',function(){touched=true;clearTimeout(demoT);draw(clean(inp.value)||DEF);fit()});
+  types.forEach(function(b){b.addEventListener('click',function(){stopDemo();type=b.dataset.t;stage.dataset.type=type;press(types,b);
+    if(!fontPicked)setFont(DFONT[type]);
+    /* los dos tipos en 3D se ven mejor de día; al salir de ellos se vuelve a la noche si la cambiamos nosotros */
+    var is3=type==='van'||type==='corp'||type==='wall';
+    if(is3&&stage.dataset.mode!=='day'){autoDay=true;setMode(true)}else if(!is3&&autoDay){autoDay=false;setMode(false)}
+    V3.dirty=true;fit();ignite();if(is3)loadVan();syncVan()})});
+  fonts.forEach(function(b){b.addEventListener('click',function(){stopDemo();fontPicked=true;setFont(b.dataset.f);fit();ignite()})});
+  cols.forEach(function(b){b.addEventListener('click',function(){stopDemo();colName=b.dataset.n;colCi=b.dataset.ci;colC=b.dataset.c;V3.dirty=true;
+    stage.style.setProperty('--c',b.dataset.c);stage.style.setProperty('--ci',b.dataset.ci);stage.style.setProperty('--ct',b.dataset.ct);
+    press(cols,b);ignite()})});
+  modeB.addEventListener('click',function(){autoDay=false;setMode(stage.dataset.mode!=='day');ignite()});
+  /* ---- Furgoneta en 3D con three.js: se descarga al llegar al simulador; mientras tanto, o si falla, queda la plana ---- */
+  var V3={ready:false,loading:false,failed:false,dirty:true,yaw:-.55,ph:0,raf:0};
+  function vanOn(){return (type==='van'||type==='corp'||type==='wall')&&V3.ready}
+  function loadVan(){if(V3.ready||V3.loading||V3.failed)return;V3.loading=true;
+    var sc=document.createElement('script');sc.src='https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js';
+    sc.onload=function(){V3.loading=false;try{buildVan();V3.ready=true}catch(e){V3.failed=true}syncVan()};
+    sc.onerror=function(){V3.loading=false;V3.failed=true};document.head.appendChild(sc)}
+  function buildVan(){var T=window.THREE,cv=document.getElementById('lab-3d');
+    var r=new T.WebGLRenderer({canvas:cv,alpha:true,antialias:true});r.setPixelRatio(Math.min(2,window.devicePixelRatio||1));r.outputEncoding=T.sRGBEncoding;
+    var scene=new T.Scene(),cam=new T.PerspectiveCamera(30,4/3,.1,50);cam.position.set(0,2,7.6);cam.lookAt(0,.9,0);
+    var hemi=new T.HemisphereLight(0xffffff,0x8a8478,1),sun=new T.DirectionalLight(0xffffff,.7),lamp=new T.PointLight(0xffc98a,0,16);
+    sun.position.set(3,6,5);lamp.position.set(.5,3.4,3);scene.add(hemi,sun,lamp);
+    var van=new T.Group();scene.add(van);
+    function lin(c){return new T.Color(c).convertSRGBToLinear()}
+    function mat(c,o){o=o||{};o.color=lin(c);if(o.emissive!==undefined)o.emissive=lin(o.emissive);if(o.roughness===undefined)o.roughness=.55;return new T.MeshStandardMaterial(o)}
+    function add(g,m,x,y,z){var k=new T.Mesh(g,m);k.position.set(x||0,y||0,z||0);van.add(k);return k}
+    /* el mismo perfil lateral que la furgoneta plana (viewBox 400x180), a escala 1:100 y con el suelo en y=0 */
+    function X(x){return (x-200)/100} function Y(y){return (150-y)/100+.25}
+    var Wd=1.5,bev=.04,side=Wd/2,sh=new T.Shape();
+    sh.moveTo(X(20),Y(150));sh.lineTo(X(20),Y(54));sh.quadraticCurveTo(X(20),Y(40),X(34),Y(40));sh.lineTo(X(268),Y(40));sh.quadraticCurveTo(X(282),Y(40),X(291),Y(51));
+    sh.lineTo(X(322),Y(92));sh.quadraticCurveTo(X(326),Y(97),X(333),Y(98));sh.lineTo(X(366),Y(104));sh.quadraticCurveTo(X(380),Y(107),X(380),Y(120));sh.lineTo(X(380),Y(150));sh.closePath();
+    var body=new T.ExtrudeGeometry(sh,{depth:Wd-2*bev,bevelEnabled:true,bevelThickness:bev,bevelSize:bev,bevelSegments:3,curveSegments:10});body.translate(0,0,-(Wd-2*bev)/2);
+    add(body,mat(0xF3F1EC,{roughness:.45,metalness:.05}));
+    add(new T.BoxGeometry(3.7,.11,Wd+.02),mat(0x2B2B30),0,.3,0);                      /* faldón y paragolpes */
+    add(new T.BoxGeometry(.012,.96,Wd+.012),mat(0x9A9790),X(266),.83,0);              /* junta de la puerta */
+    var glass=mat(0x1E2A33,{roughness:.12,metalness:.6,side:T.DoubleSide});
+    var ws=new T.Shape();ws.moveTo(X(276),Y(52));ws.lineTo(X(284),Y(52));ws.quadraticCurveTo(X(290),Y(52),X(294),Y(57));ws.lineTo(X(318),Y(90));ws.lineTo(X(276),Y(90));ws.closePath();
+    var wg=new T.ShapeGeometry(ws);add(wg,glass,0,0,side+.006);add(wg,glass,0,0,-side-.006);
+    var shield=new T.PlaneGeometry(Wd-.22,.44);shield.rotateY(Math.PI/2);                /* parabrisas, sobre el plano inclinado del morro */
+    add(shield,glass,X(306.5)+.798*(bev+.008),Y(71.5)+.603*(bev+.008),0).rotation.z=.647;
+    var tyre=new T.CylinderGeometry(.24,.24,.2,36);tyre.rotateX(Math.PI/2);
+    var hub=new T.CylinderGeometry(.11,.11,.21,24);hub.rotateX(Math.PI/2);
+    var arch=new T.CylinderGeometry(.29,.29,.012,36);arch.rotateX(Math.PI/2);
+    [X(96),X(316)].forEach(function(x){[1,-1].forEach(function(k){add(arch,mat(0x1B1B1E),x,.25,k*(side+.002));add(tyre,mat(0x0E0E10,{roughness:.9}),x,.25,k*(side-.06));add(hub,mat(0x8E8E93,{metalness:.5,roughness:.35}),x,.25,k*(side-.058))})});
+    var head=mat(0xFFE2A8,{emissive:0xFFD98A,emissiveIntensity:.3}),tail=mat(0xB3121A,{emissive:0xFF2A2A,emissiveIntensity:.25});
+    [1,-1].forEach(function(k){add(new T.BoxGeometry(.03,.1,.24),head,1.845,Y(114),k*.5);add(new T.BoxGeometry(.03,.24,.08),tail,-1.845,.78,k*.66)});
+    /* rotulación: el texto y la franja se pintan en lienzos y se pegan a los dos laterales y a la trasera */
+    function decal(w,h,cw,ch){var c=document.createElement('canvas');c.width=cw;c.height=ch;var tx=new T.CanvasTexture(c);tx.encoding=T.sRGBEncoding;tx.anisotropy=r.capabilities.getMaxAnisotropy();
+      var m=new T.Mesh(new T.PlaneGeometry(w,h),new T.MeshStandardMaterial({map:tx,transparent:true,roughness:.5}));van.add(m);return {c:c,tx:tx,m:m}}
+    var L=decal(2.25,.92,1100,450),R=decal(2.25,.92,1100,450),B=decal(1.02,.5,750,368);
+    L.m.position.set(-.575,.81,side+.004);R.m.position.set(-.575,.81,-side-.004);R.m.rotation.y=Math.PI;B.m.position.set(-1.846,.86,0);B.m.rotation.y=-Math.PI/2;
+    var blob=document.createElement('canvas');blob.width=blob.height=128;var bg=blob.getContext('2d'),gr=bg.createRadialGradient(64,64,6,64,64,64);
+    gr.addColorStop(0,'rgba(0,0,0,.5)');gr.addColorStop(1,'rgba(0,0,0,0)');bg.fillStyle=gr;bg.fillRect(0,0,128,128);
+    var shadow=new T.Mesh(new T.PlaneGeometry(5.2,2.7),new T.MeshBasicMaterial({map:new T.CanvasTexture(blob),transparent:true,depthWrite:false}));shadow.rotation.x=-Math.PI/2;shadow.position.y=.004;van.add(shadow);
+    cv.addEventListener('pointerdown',function(e){V3.drag=true;V3.px=e.clientX;try{cv.setPointerCapture(e.pointerId)}catch(x){}});
+    cv.addEventListener('pointermove',function(e){if(!V3.drag)return;V3.yaw+=(e.clientX-V3.px)*.01;V3.px=e.clientX});
+    ['pointerup','pointercancel'].forEach(function(n){cv.addEventListener(n,function(){V3.drag=false})});
+
+    /* ---- Letras corpóreas: el texto se pinta en un lienzo y se apila en capas para darle fondo; van de pie sobre una peana ---- */
+    var N=72,DEP=.5,PW=4.4,PH=1.6,cc=document.createElement('canvas');cc.width=1024;cc.height=372;
+    var ctx2=new T.CanvasTexture(cc);ctx2.encoding=T.sRGBEncoding;ctx2.anisotropy=r.capabilities.getMaxAnisotropy();
+    var gc=document.createElement('canvas');gc.width=512;gc.height=186;var gtx=new T.CanvasTexture(gc);
+    var s2=new T.Scene(),cam2=new T.PerspectiveCamera(30,4/3,2,60);cam2.position.set(0,2,7.6);cam2.lookAt(0,.9,0);
+    var hemi2=new T.HemisphereLight(0xffffff,0x8a8478,1),sun2=new T.DirectionalLight(0xffffff,.7);sun2.position.set(3,6,5);s2.add(hemi2,sun2);
+    var grp=new T.Group(),letters=new T.Group(),pg=new T.PlaneGeometry(PW,PH),mats=[];s2.add(grp);grp.add(letters);
+    function solid(sd){sd.fragmentShader=sd.fragmentShader.replace('#include <dithering_fragment>','#include <dithering_fragment>\n\tgl_FragColor.a=1.0;')}
+    for(var i=0;i<N;i++){var lm=new T.MeshBasicMaterial({map:ctx2,alphaTest:.4,side:T.DoubleSide});lm.onBeforeCompile=solid;mats.push(lm);var lk=new T.Mesh(pg,lm);lk.position.z=-DEP/2+DEP*i/(N-1);letters.add(lk)}
+    var glow=new T.Mesh(pg,new T.MeshBasicMaterial({map:gtx,transparent:true,blending:T.AdditiveBlending,depthWrite:false,side:T.DoubleSide}));glow.position.z=-DEP/2-.03;glow.scale.set(1.04,1.12,1);letters.add(glow);
+    var plinth=new T.Mesh(new T.BoxGeometry(1,.14,1),mat(0xF4F2EE,{roughness:.6}));plinth.position.y=.07;grp.add(plinth);
+    var sh2=new T.Mesh(new T.PlaneGeometry(1,2.3),new T.MeshBasicMaterial({map:new T.CanvasTexture(blob),transparent:true,depthWrite:false}));sh2.rotation.x=-Math.PI/2;sh2.position.y=.004;grp.add(sh2);
+    var wallM=new T.Mesh(new T.PlaneGeometry(40,14),mat(0xDAD8D3,{roughness:.9}));wallM.position.set(0,2,-.09);grp.add(wallM);
+    var drop=new T.Mesh(pg,new T.MeshBasicMaterial({map:gtx,color:0x000000,transparent:true,opacity:.45,depthWrite:false}));drop.position.set(.05,1.14,-.085);grp.add(drop);
+    V3.corp={wall:wallM,drop:drop,scene:s2,cam:cam2,grp:grp,letters:letters,mats:mats,glow:glow,plinth:plinth,shadow:sh2,c:cc,tx:ctx2,gc:gc,gtx:gtx,hemi:hemi2,sun:sun2,PW:PW,PH:PH};
+    V3.r=r;V3.scene=scene;V3.cam=cam;V3.van=van;V3.L=L;V3.R=R;V3.B=B;V3.hemi=hemi;V3.sun=sun;V3.lamp=lamp;V3.head=head;V3.tail=tail;
+    if(document.fonts&&document.fonts.load)['400 40px Pacifico','800 40px Archivo','400 40px "Instrument Serif"'].forEach(function(f){document.fonts.load(f).then(function(){V3.dirty=true},function(){})})}
+  var CF={script:['400','"Pacifico", cursive'],sans:['800','"Archivo", sans-serif'],serif:['400','"Instrument Serif", serif']};
+  function vanText(g,cx,cy,maxW,maxH){var t=font==='sans'?shown.toUpperCase():shown,f=CF[font],px=maxH*(font==='sans'?.62:.8);
+    g.font=f[0]+' '+px+'px '+f[1];var w=g.measureText(t).width;if(w>maxW){px*=maxW/w;g.font=f[0]+' '+px+'px '+f[1]}
+    g.fillStyle=colCi;g.textAlign='center';g.textBaseline='middle';g.fillText(t,cx,cy)}
+  function paintCorp(){var K=V3.corp,c=K.c,g=c.getContext('2d'),w=c.width,h=c.height,wallT=type==='wall',f=CF[font];
+    /* en pared, como el rótulo de la autoescuela: lo de antes del último espacio va pequeño y manuscrito arriba, la última palabra en grande */
+    var full=shown||' ',sp=full.lastIndexOf(' '),top=wallT&&sp>0?full.slice(0,sp):'',main=top?full.slice(sp+1):full;
+    if(font==='sans')main=main.toUpperCase();
+    var col=wallT?colCi:colC,acc=colName==='rojo'?'#1F63E0':'#E01B1B';
+    function setF(F,px){g.font=F[0]+' '+px+'px '+F[1]}
+    function ink(F,t,px){setF(F,px);var m=g.measureText(t);return {w:m.width,a:m.actualBoundingBoxAscent||px*.72,d:m.actualBoundingBoxDescent||0}}
+    g.textAlign='left';g.textBaseline='alphabetic';
+    /* el texto llena el lienzo todo lo que puede: ancho o alto, lo que antes tope */
+    var px=h*.5,M=ink(f,main,px),k=Math.min(w*.92/Math.max(1,M.w),h*(top?.52:.84)/Math.max(1,M.a+M.d));px*=k;M=ink(f,main,px);
+    var tp=0,Tk={a:0,d:0,w:0},gap=0;
+    if(top){tp=px*.46;Tk=ink(CF.script,top,tp);tp*=Math.min(1,M.w*.82/Math.max(1,Tk.w));Tk=ink(CF.script,top,tp);gap=px*.1}
+    var blockH=M.a+M.d+Tk.a+Tk.d+gap,y0=(h-blockH)/2,x0=(w-M.w)/2;
+    g.clearRect(0,0,w,h);
+    if(top){var ty=y0+Tk.a,tx=x0+M.w-Tk.w;setF(CF.script,tp);g.fillStyle=acc;g.fillText(top,tx,ty);
+      var room=Math.min(tx-x0-tp*.3,tp*2.4),bh=tp*.075;if(room>tp*.8)for(var i=0;i<3;i++){var bw=room*(.56+.22*i);g.fillRect(tx-tp*.3-bw,ty-tp*.5+i*bh*2.6,bw,bh)}}   /* las tres rayas */
+    setF(f,px);g.fillStyle=col;g.fillText(main,x0,y0+Tk.a+Tk.d+gap+M.a);K.tx.needsUpdate=true;
+    var gg=K.gc.getContext('2d');gg.clearRect(0,0,K.gc.width,K.gc.height);gg.shadowColor='#fff';gg.shadowBlur=18;gg.drawImage(c,0,0,K.gc.width,K.gc.height);gg.drawImage(c,0,0,K.gc.width,K.gc.height);K.gtx.needsUpdate=true;
+    /* corpóreas: de pie sobre la peana, que se ajusta al ancho. En pared: finas, separadas del muro y con su sombra */
+    var u=K.PW/w,inkH=blockH*u,inkW=M.w*u,day=stage.dataset.mode==='day',n=K.mats.length;
+    K.letters.scale.z=wallT?.2:1;K.letters.position.y=wallT?1.2:.14+inkH/2;
+    K.plinth.visible=K.shadow.visible=!wallT;K.plinth.scale.x=inkW+.6;K.shadow.scale.x=inkW+1.6;
+    K.wall.visible=wallT;K.drop.visible=wallT&&day;
+    /* de día, cara de color y canto más oscuro; de noche, cara encendida, canto en sombra y halo */
+    K.mats.forEach(function(mt,i){mt.color.setScalar(i===n-1?1:day?.62:.16)});
+    K.glow.visible=!day;K.glow.material.color.set(col).convertSRGBToLinear();
+    K.hemi.intensity=day?1:.2;K.sun.intensity=day?.7:.06}
+  function paintVan(){if(type!=='van'){paintCorp();return}
+    [[V3.L,false],[V3.R,true]].forEach(function(p){var c=p[0].c,g=c.getContext('2d'),w=c.width,h=c.height;g.clearRect(0,0,w,h);
+      /* franja inferior, con el corte en diagonal siempre hacia el morro */
+      g.fillStyle=colCi;g.beginPath();
+      if(!p[1]){g.moveTo(0,.76*h);g.lineTo(.93*w,.76*h);g.lineTo(w,h);g.lineTo(0,h)}else{g.moveTo(w,.76*h);g.lineTo(.07*w,.76*h);g.lineTo(0,h);g.lineTo(w,h)}
+      g.closePath();g.fill();vanText(g,w/2,.38*h,w*.88,h*.5);p[0].tx.needsUpdate=true});
+    var c=V3.B.c,g=c.getContext('2d');g.clearRect(0,0,c.width,c.height);vanText(g,c.width/2,c.height/2,c.width*.9,c.height*.5);V3.B.tx.needsUpdate=true;
+    var day=stage.dataset.mode==='day';V3.hemi.intensity=day?1:.3;V3.sun.intensity=day?.7:.1;V3.lamp.intensity=day?0:1.2;V3.head.emissiveIntensity=day?.3:1.6;V3.tail.emissiveIntensity=day?.25:1.2}
+  function frame(now){V3.raf=0;if(!vanOn()||!vis)return;
+    var W=stage.clientWidth,H=stage.clientHeight;if(W!==V3.w||H!==V3.h){V3.w=W;V3.h=H;V3.r.setSize(W,H,false);[V3.cam,V3.corp.cam].forEach(function(c){c.aspect=W/H;c.updateProjectionMatrix()})}
+    if(V3.dirty){V3.dirty=false;paintVan()}
+    var dt=Math.min(.05,(now-(V3.t||now))/1000);V3.t=now;
+    if(!V3.drag&&!reduced)V3.ph+=dt*.5;                                               /* vaivén suave mientras nadie la arrastra */
+    var a=V3.yaw+.3*Math.sin(V3.ph);
+    if(type==='wall')a=Math.max(-1,Math.min(1,a));   /* la pared no se ve por detrás */
+    if(type!=='van'){V3.corp.grp.rotation.y=a;V3.r.render(V3.corp.scene,V3.corp.cam)}else{V3.van.rotation.y=a;V3.r.render(V3.scene,V3.cam)}
+    V3.raf=requestAnimationFrame(frame)}
+  function syncVan(){var on=vanOn();stage.classList.toggle('v3d',on);if(on&&vis&&!V3.raf){V3.t=0;V3.raf=requestAnimationFrame(frame)}}
+  window.__LAB={typeName:function(){return TYPE[type][0]},spec:function(){return TYPE[type][1]+', color '+colName+', letra '+FNAME[font]},get text(){return clean(inp.value)},busy:function(){return !V3.ready&&!V3.failed},show:function(v){seen(v)}};
+  draw(clean(inp.value)||DEF);if(inp.value)touched=true;fit();
+  if('ResizeObserver' in window)new ResizeObserver(function(){fit()}).observe(stage);else window.addEventListener('resize',function(){fit()});
+  if(document.fonts){if(document.fonts.ready)document.fonts.ready.then(function(){fit()});if(document.fonts.addEventListener)document.fonts.addEventListener('loadingdone',function(){fit()})}
+  if(!reduced)stage.classList.remove('on');
+  /* lo llama el panel al abrirse y al cerrarse: la primera vez se enciende y se descarga la furgoneta 3D */
+  function seen(v){vis=v;if(v)loadVan();syncVan();if(reduced)return;if(v&&started)ignite();if(v&&!started){started=true;setTimeout(ignite,250);setTimeout(buzz,5000)}}
+})();
+
+/* ---------- Simulador: se abre en un panel lateral, con los rombos del logo como cargador ---------- */
+(function(){var d=document.getElementById('sim');if(!d)return;
+  var load=document.getElementById('sim-load'),opener=null,first=true,tm=0;
+  function open(from){opener=from||document.activeElement;d.hidden=false;document.documentElement.style.overflow='hidden';
+    load.classList.remove('done');clearTimeout(tm);
+    var t0=Date.now(),min=first?1300:650;first=false;
+    /* los rombos se quedan hasta que la furgoneta 3D está lista (o ha fallado), con un mínimo y un máximo */
+    (function wait(){var L=window.__LAB,ok=!L||!L.busy||!L.busy(),el=Date.now()-t0;
+      if((ok&&el>=min)||el>5000)load.classList.add('done');else tm=setTimeout(wait,120)})();
+    setTimeout(function(){if(!d.hidden&&window.__LAB)window.__LAB.show(true)},reduced?0:300);
+    requestAnimationFrame(function(){requestAnimationFrame(function(){d.classList.add('open');
+      var x=d.querySelector('.bk-head [data-sim-x]');if(x)try{x.focus({preventScroll:true})}catch(e){}})})}
+  /* keep: se cierra para dar paso al presupuesto, que mantiene bloqueado el scroll de la página */
+  function close(keep){if(d.hidden)return;clearTimeout(tm);if(window.__LAB)window.__LAB.show(false);d.classList.remove('open');if(!keep)document.documentElement.style.overflow='';
+    setTimeout(function(){d.hidden=true;if(!keep&&opener&&opener.focus)try{opener.focus({preventScroll:true})}catch(e){}},reduced?0:420)}
+  document.addEventListener('click',function(e){var t=e.target;if(!t.closest)return;
+    var a=t.closest('a[href="#simulador"]');if(a){e.preventDefault();open(a);return}
+    if(t.closest('[data-sim-x]')){close();return}
+    if(t.closest('#sim [data-from-lab]'))close(true)});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!d.hidden)close()});
+  if(location.hash==='#simulador')open(null);
+})();
+
+/* ---------- Manifiesto: se enciende palabra a palabra ---------- */
+(function(){var m=document.getElementById('mani');if(!m)return;var HOT=/^(destacar|calle|tiempo)$/i;
+  m.innerHTML=m.textContent.split(' ').map(function(w,i){return '<span class="w'+(HOT.test(w.replace(/[,.]/g,''))?' hot':'')+'" style="transition-delay:'+(i*45)+'ms">'+w+'</span>'}).join(' ');})();
+
+/* ---------- Trabajos con filtros y visor ---------- */
+(function(){var el=document.getElementById('works');if(!el)return;
+  var W=[['luminoso',3,'Rótulo luminoso'],['corporeas',6,'Letras corpóreas'],['vinilos',7,'Vinilos y escaparates'],['vehiculos',7,'Rotulación de vehículo'],['nautica',3,'Rotulación náutica'],['lonas',4,'Lonas y banderolas'],['textil',4,'Textil personalizado']];
+  var items=[];W.forEach(function(c){for(var i=1;i<=c[1];i++)items.push([c[0],'img/w-'+c[0]+'-'+i+'.jpg',c[2]])});
+  /* mezcla estable para que "Todos" no salga agrupado */
+  var order=[];for(var k=0;k<7;k++)W.forEach(function(c){var it=items.filter(function(x){return x[0]===c[0]})[k];if(it)order.push(it)});
+  var BIG={0:'big',5:'tall',9:'big',14:'tall',18:'big'};
+  el.innerHTML=order.map(function(x,i){return '<button type="button" class="work '+(BIG[i]||'')+'" data-c="'+x[0]+'" data-t="'+x[2]+'"><img src="'+x[1]+'" alt="'+x[2]+' realizado por Rótulos Luiyi" loading="lazy"><span>'+x[2]+'</span></button>'}).join('');
+  var LIM=innerWidth<=640?8:12, mb=document.getElementById('works-more'), f='all', all=false;
+  var works=[].slice.call(el.querySelectorAll('.work')), fb=[].slice.call(document.querySelectorAll('.filters button'));
+  function seen(w){return !w.classList.contains('out')&&!w.classList.contains('more')}
+  /* anim: 'all' reanima toda la rejilla (cambio de filtro); 'new' solo lo que aparece ("ver más") */
+  function apply(anim){var n=0,k=0,pop=[];
+    works.forEach(function(w){var was=seen(w),hit=f==='all'||w.dataset.c===f,more=hit&&!all&&f==='all'&&++n>LIM;
+      w.classList.toggle('out',!hit);w.classList.toggle('more',more);w.classList.remove('pop');
+      if(hit&&!more&&(anim==='all'||(anim==='new'&&!was))){w.style.animationDelay=Math.min(k++*40,400)+'ms';pop.push(w)}});
+    if(pop.length){void el.offsetWidth;pop.forEach(function(w){w.classList.add('pop')})}
+    mb.parentNode.hidden=all||f!=='all'}
+  fb.forEach(function(b){b.setAttribute('aria-pressed',b.dataset.f===f);b.addEventListener('click',function(){
+    fb.forEach(function(x){x.classList.toggle('on',x===b);x.setAttribute('aria-pressed',x===b)});f=b.dataset.f;apply('all')})});
+  mb.addEventListener('click',function(){all=true;apply('new')}); apply();
+  var lb=document.getElementById('lb'),li=document.getElementById('lb-img'),go=document.getElementById('lb-go'),cap=document.getElementById('lb-cap'),list=[],at=0,opener=null;
+  function showAt(i){at=(i+list.length)%list.length;var w=list[at],im=w.querySelector('img');li.src=im.src;li.alt=im.alt;go.dataset.tipo=w.dataset.t;cap.textContent=w.dataset.t+' · '+(at+1)+' / '+list.length}
+  el.addEventListener('click',function(e){var w=e.target.closest('.work');if(!w)return;list=works.filter(seen);opener=w;lb.hidden=false;showAt(list.indexOf(w));
+    try{lb.querySelector('.lb-x').focus({preventScroll:true})}catch(x){}});
+  function close(){lb.hidden=true;if(opener)try{opener.focus({preventScroll:true})}catch(x){}}
+  lb.addEventListener('click',function(e){var n=e.target.closest('[data-lb]');if(n){showAt(at+(+n.dataset.lb));return}if(e.target===lb||e.target.closest('.lb-x'))close()});
+  go.addEventListener('click',function(){lb.hidden=true});
+  document.addEventListener('keydown',function(e){if(lb.hidden)return;if(e.key==='Escape')close();else if(e.key==='ArrowRight')showAt(at+1);else if(e.key==='ArrowLeft')showAt(at-1)});
+})();
+
+/* ---------- Del boceto a la fachada: avanza solo al verse; también se elige a mano ---------- */
+(function(){var board=document.getElementById('board'),list=document.getElementById('stages');if(!board)return;
+  var lis=[].slice.call(list.querySelectorAll('li')),cur=0,timer=null,auto=true;
+  function go(i){cur=i;board.dataset.s=i;lis.forEach(function(l,k){l.classList.toggle('on',k===i)})}
+  function tick(){if(!auto)return;go((cur+1)%4);timer=setTimeout(tick,cur===3?4200:2600)}
+  lis.forEach(function(l,k){l.addEventListener('click',function(){auto=false;clearTimeout(timer);go(k)})});
+  if(reduced){go(3);return}
+  if('IntersectionObserver' in window)new IntersectionObserver(function(e){if(e[0].isIntersecting&&!timer&&auto){go(0);timer=setTimeout(tick,1800)}},{threshold:.45}).observe(board);
+  else go(3);
+})();
+
+/* ---------- Reseñas reales de Google (texto literal) ---------- */
+var REV=[
+  ['Miriam de los R.','Luminoso','hace un año','Les solicité un luminoso personalizado, y me lo hicieron tal y como quería, aconsejándole y guiándome para tener lo mejor. Y así fue. Muchas gracias por el trato y ser tan resolutivos. Me encantó el trabajo.'],
+  ['Maria del Carmen M.','Vinilo','hace 2 meses','Nos han colocado un vinilo en puertas terraza lavadero Islantilla, la verdad q ha quedado muy bien han sido rápidos y formales.'],
+  ['HELHEIM CA','Empresa','hace 3 años','Ha sido un servicio genial! Profesionalidad, servicio personalizado, gran atencion, amplia variedad de servicios, buenos consejos, soluciones ajustadas a las necesidades del cliente... sin duda nos fidelizamos como clientes fijos'],
+  ['Veronica R.','Textil','hace un año','Espectacular Rapidez,precio y calidad increíbles Sin duda alguna volveremos a comprar y lo recomiendo 100*100.'],
+  ['Ninette S.','Servicio','hace 6 meses','Servicio muy profesional. Volveremos a vernos sin duda. Recomendable 100x100']
+];
+var COLS=['#D49A5E','#121212','#8E6238','#5E5A52'], STAR='<svg><use href="#i-star"/></svg>';
+var grid=document.getElementById('rv-grid');
+if(grid) grid.innerHTML=REV.map(function(r,i){return '<figure class="rv" data-reveal><div class="rv-top"><span class="rv-stars" aria-label="5 de 5 estrellas">'+STAR+STAR+STAR+STAR+STAR+'</span><span class="rv-tag">'+r[1]+'</span></div><blockquote>«'+r[3]+'»</blockquote><figcaption><i style="background:'+COLS[i%4]+'">'+r[0][0]+'</i><span><b>'+r[0]+'</b><small>'+r[2]+' · Google</small></span></figcaption></figure>'}).join('');
+
+/* ---------- Borradores ---------- */
+(function(){function sync(){var on=location.hash==='#borradores';document.querySelectorAll('.draft').forEach(function(d){d.hidden=!on});if(on){var t=document.querySelector('.draft');t&&setTimeout(function(){t.scrollIntoView()},300)}}
+ sync();window.addEventListener('hashchange',sync)})();
+
+/* ---------- Presupuesto: panel paso a paso que acaba en WhatsApp ---------- */
+(function(){
+  var WA='34615599633', N=5; /* el del botón de WhatsApp de su web */
+  var bk=document.getElementById('bk'); if(!bk)return;
+  var f=document.getElementById('book-form'), panes=[].slice.call(f.querySelectorAll('.bk-pane'));
+  var back=document.getElementById('bk-back'), next=document.getElementById('bk-next'), wa=document.getElementById('f-wa');
+  var err=document.getElementById('f-error'), bar=document.getElementById('bk-bar'), stepT=document.getElementById('bk-step');
+  var nombre=document.getElementById('f-nombre'), pre=document.getElementById('f-preview');
+  function sel(n){var e=f.querySelector('input[name="'+n+'"]:checked');return e?e.value:''}
+  function val(id){var e=document.getElementById(id);return e?e.value.trim():''}
+  var _code='';
+  function code(){if(!_code){var d=new Date(),r='',A='ABCDEFGHJKLMNPQRSTUVWXYZ23456789';for(var i=0;i<3;i++)r+=A[Math.floor(Math.random()*A.length)];_code='LUI-'+String(d.getDate()).padStart(2,'0')+String(d.getMonth()+1).padStart(2,'0')+'-'+r}return _code}
+  function message(){
+    var L=['¡Hola, Rótulos Luiyi! Soy '+nombre.value.trim()+(val('f-empresa')?', de '+val('f-empresa'):'')+'. Os pido presupuesto:',''];
+    L.push('🔖 Código: '+code());
+    if(window.TEMPORADA&&TEMPORADA.linea)L.push(TEMPORADA.linea);
+    L.push('• Qué necesito: '+sel('tipo'));
+    if(val('f-texto'))L.push('• Texto del rótulo: «'+val('f-texto')+'»');
+    L.push('• '+sel('logo'));
+    if(labSpec)L.push('• Lo he probado en vuestra web como: '+labSpec);
+    if(val('f-medidas'))L.push('• Medidas aproximadas: '+val('f-medidas'));
+    if(val('f-donde'))L.push('• Localidad: '+val('f-donde'));
+    L.push('• '+sel('inst'));
+    if(val('f-notas'))L.push('','Más detalles: '+val('f-notas'));
+    L.push('','¿Me asesoráis y me decís precio y plazo? ¡Gracias!');
+    return L.join('\n');
+  }
+  var step=1, opener=null, labSpec='';
+  function show(n){
+    step=n; err.hidden=true;
+    panes.forEach(function(p){p.hidden=+p.dataset.step!==n});
+    back.disabled=n===1;
+    var last=n===N; next.hidden=last; wa.hidden=!last;
+    next.textContent=n===4?'Ver mi solicitud':'Siguiente';
+    stepT.textContent=last?'Listo':'Paso '+n+' de 4';
+    bar.style.transform='scaleX('+(Math.min(n,4)/4)+')';
+    if(last){var m=message();pre.textContent=m;wa.href='https://wa.me/'+WA+'?text='+encodeURIComponent(m)}
+    f.scrollTop=0;
+    var h3=panes[n-1].querySelector('h3'); if(h3)h3.setAttribute('tabindex','-1');
+    setTimeout(function(){try{(h3||next).focus({preventScroll:true})}catch(x){}},380);
+  }
+  function fail(msg,el){err.textContent=msg;err.hidden=false;if(el){el.setAttribute('aria-invalid','true');el.focus()}}
+  function validate(n){
+    if(n===1&&!sel('tipo')){fail('Elige qué necesitas.');return false}
+    if(n===4){nombre.removeAttribute('aria-invalid');if(!nombre.value.trim()){fail('Dinos tu nombre para el mensaje.',nombre);return false}}
+    return true;
+  }
+  next.addEventListener('click',function(){if(validate(step))show(step+1)});
+  back.addEventListener('click',function(){if(step>1)show(step-1)});
+  f.addEventListener('submit',function(e){e.preventDefault();next.click()});
+  f.querySelectorAll('input[name="tipo"]').forEach(function(r){r.addEventListener('change',function(){setTimeout(function(){if(step===1)show(2)},220)})});
+  document.getElementById('f-copy').addEventListener('click',function(){var b=this,ok=function(){b.textContent='Copiado';setTimeout(function(){b.textContent='Copiar mensaje'},1600)};
+    try{navigator.clipboard.writeText(pre.textContent).then(ok,function(){var r=document.createRange();r.selectNodeContents(pre);var s=getSelection();s.removeAllRanges();s.addRange(r)})}catch(x){}});
+  function pick(v){var r=f.querySelector('input[name="tipo"][value="'+v+'"]');if(r){r.checked=true;return true}return false}
+  var MAP={'Rótulo luminoso':'Rótulo luminoso','Letras corpóreas':'Letras corpóreas','Fachada':'Rótulo luminoso','Rotulación de vehículo':'Rotulación de vehículo','Neón':'Neón LED','Neón personalizado':'Neón LED','Neón LED':'Neón LED','Vinilos y escaparates':'Vinilos o escaparate','Rotulación náutica':'Rotulación náutica','Lonas y banderolas':'Lona o banderola','Textil personalizado':'Textil o merchandising','Papelería':'Papelería'};
+  function open(from){
+    opener=from||document.activeElement; bk.hidden=false; document.documentElement.style.overflow='hidden';
+    var ds=from&&from.dataset||{};
+    if(ds.fromLab!==undefined&&window.__LAB){pick(MAP[window.__LAB.typeName()]||'Otro / no lo sé');if(window.__LAB.text)document.getElementById('f-texto').value=window.__LAB.text;labSpec=window.__LAB.spec();show(2)}
+    else if(ds.tipo&&MAP[ds.tipo]&&pick(MAP[ds.tipo]))show(2);
+    else if(ds.logo){pick('Otro / no lo sé');f.querySelector('input[name="logo"][value^="Necesito"]').checked=true;show(2)}
+    else if(step===N)show(4); else show(step);
+    requestAnimationFrame(function(){requestAnimationFrame(function(){bk.classList.add('open')})});
+  }
+  function close(){
+    bk.classList.remove('open'); document.documentElement.style.overflow='';
+    setTimeout(function(){bk.hidden=true},reduced?0:420);
+    if(opener&&opener.focus)try{opener.focus({preventScroll:true})}catch(x){}
+  }
+  document.getElementById('bk-x').addEventListener('click',close);
+  document.getElementById('bk-scrim').addEventListener('click',close);
+  document.addEventListener('keydown',function(e){if(!bk.hidden&&e.key==='Escape')close()});
+  document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[href="#presupuesto"]');if(!a)return;e.preventDefault();open(a)});
+})();
+
+
+/* ---------- Drawer de reseñas ---------- */
+(function(){var d=document.getElementById('rvd'); if(!d)return;
+ var list=document.getElementById('rvd-list'), map=document.getElementById('rvd-map'), opener=null, filled=false;
+ function open(from){
+   if(!filled){document.querySelectorAll('#resenas .rv').forEach(function(c){var k=c.cloneNode(true);k.removeAttribute('data-reveal');list.appendChild(k)});filled=true}
+   if(!map.src)map.src=map.getAttribute('data-src');
+   opener=from||document.activeElement; d.hidden=false; document.documentElement.style.overflow='hidden'; SFX.play('open');
+   requestAnimationFrame(function(){requestAnimationFrame(function(){d.classList.add('open');var x=d.querySelector('.bk-head [data-rvd-x]');x&&x.focus({preventScroll:true})})});
+ }
+ function close(){ if(d.hidden)return; SFX.play('close'); d.classList.remove('open'); document.documentElement.style.overflow='';
+   setTimeout(function(){d.hidden=true;opener&&opener.focus&&opener.focus({preventScroll:true})},reduced?0:420); }
+ document.addEventListener('click',function(e){var a=e.target.closest('[data-rvd]');if(a){e.preventDefault();open(a);return}
+   if(e.target.closest('[data-rvd-x]'))close()});
+ document.addEventListener('keydown',function(e){if(e.key==='Escape')close()});
+})();
+
+
+
+/* ---------- Subir arriba ---------- */
+/* Por scroll y no por IntersectionObserver: dentro del visor (iframe) no detecta bien el hero.
+   La barra móvil se oscurece sobre las zonas de noche (hero y bandas oscuras). */
+(function(){var b=document.getElementById('totop'),hero=document.getElementById('hero'),mbar=document.querySelector('.mbar'),top=document.getElementById('top'),darks=[].slice.call(document.querySelectorAll('.band-ink')),tk=false;
+ function sync(){tk=false;var end=hero.offsetTop+hero.offsetHeight;b.classList.toggle('on',scrollY>end-innerHeight/2);
+  function over(y){return darks.some(function(s){var r=s.getBoundingClientRect();return r.top<y&&r.bottom>y})}
+  if(top)top.classList.toggle('dark',over(top.offsetHeight/2));
+  if(mbar)mbar.classList.toggle('dark',over(innerHeight-34))}
+ sync();window.addEventListener('scroll',function(){if(!tk){tk=true;requestAnimationFrame(sync)}},{passive:true});window.addEventListener('resize',sync);
+ b.addEventListener('click',function(){window.scrollTo({top:0,behavior:reduced?'auto':'smooth'})});})();
+
+/* ---------- Animaciones por visibilidad ---------- */
+(function(){
+  var root=document.documentElement;
+  if(!('IntersectionObserver' in window)||reduced)return;
+  root.classList.add('js-anim');
+  var io=new IntersectionObserver(function(es){var k=0;es.forEach(function(e){if(!e.isIntersecting)return;var el=e.target;el.style.transitionDelay=Math.min(k++*90,450)+'ms';el.classList.add('in');io.unobserve(el);setTimeout(function(){el.style.transitionDelay=''},1500)})},{rootMargin:'0px 0px -8% 0px'});
+  document.querySelectorAll('[data-reveal]').forEach(function(el){io.observe(el)});
+  var m=document.getElementById('mani');
+  if(m)new IntersectionObserver(function(e,o){if(e[0].isIntersecting){m.classList.add('lit');o.disconnect()}},{threshold:.4}).observe(m);
+  /* Cifras del hero: cuentan hasta su valor al entrar en pantalla */
+  var fo=new IntersectionObserver(function(es,o){es.forEach(function(e){if(!e.isIntersecting)return;o.unobserve(e.target);
+    var b=e.target,to=+b.dataset.count,from=+b.dataset.from||0,t0=performance.now(),D=1100;
+    (function step(now){var p=Math.min(1,Math.max(0,(now-t0)/D));b.textContent=Math.round(from+(to-from)*(1-Math.pow(1-p,3)));if(p<1)requestAnimationFrame(step)})(t0)})},{threshold:.6});
+  document.querySelectorAll('.facts b[data-count]').forEach(function(b){fo.observe(b)});
+  var bar=document.getElementById('progress'), tk=false;
+  function prog(){tk=false;var H=root.scrollHeight-innerHeight;bar.style.transform='scaleX('+(H>0?Math.min(1,scrollY/H):0)+')'}
+  window.addEventListener('scroll',function(){if(!tk){tk=true;requestAnimationFrame(prog)}},{passive:true});
+})();
+})();
+
+/* ---------- Botones flotantes tras un mínimo scroll (cabecera y barra móvil ocultas al pintar el hero) ---------- */
+(function(){var h=document.documentElement,tk=false;function s(){tk=false;h.classList.toggle('cta-wait',scrollY<=Math.min(120,innerHeight*.15))}
+ s();addEventListener('scroll',function(){if(!tk){tk=true;requestAnimationFrame(s)}},{passive:true});addEventListener('resize',s);})();
+</script>

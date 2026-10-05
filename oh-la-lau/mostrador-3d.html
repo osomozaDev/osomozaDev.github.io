@@ -1,0 +1,348 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>El mostrador azul · Oh la Lau!</title>
+<meta name="description" content="Asómate al mostrador de Oh la Lau! en 3D: croissants, caracolas, tartaletas, limón y merengue… Toca, mira la foto real y prepara tu bandeja para encargarla por WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;600;700;800&family=Fraunces:ital,opsz,wght@0,9..144,500;1,9..144,400&display=swap">
+<style>
+:root{color-scheme:light;--shell:#FBF6EF;--shell-2:#F1E7DA;--ink:#2B1E19;--ink-soft:#6B5A50;--hibiscus:#B3343F;--hibiscus-ink:#8E2632;--jungle:#2B1E19;--sun:#E8C27A;--azul:#DCE5EF;--line:rgba(43,30,25,.13);--font-display:"Fraunces",Georgia,serif;--font-body:"Figtree",system-ui,-apple-system,"Segoe UI",sans-serif}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html,body{margin:0;height:100%;overflow:hidden;background:#EDE6DC;color:var(--ink);font-family:var(--font-body);-webkit-font-smoothing:antialiased}
+canvas#c{position:fixed;inset:0;width:100%;height:100%;display:block;touch-action:none;outline:none}
+.top{position:fixed;top:0;left:0;right:0;z-index:5;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:calc(12px + env(safe-area-inset-top,0px)) 16px 12px;pointer-events:none}
+.top>*{pointer-events:auto}
+.pill{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 16px;border-radius:999px;background:rgba(251,246,239,.9);border:1px solid var(--line);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);color:var(--ink);text-decoration:none;font:700 15px var(--font-body);cursor:pointer;white-space:nowrap;box-shadow:0 10px 24px -14px rgba(43,30,25,.5)}
+.pill svg{width:20px;height:20px;flex:none}
+.back{padding-left:10px}
+.ttl{display:grid;text-align:center;line-height:1.15;padding:6px 16px;border-radius:18px;background:rgba(251,246,239,.75);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px)}
+.ttl small{font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--hibiscus-ink)}
+.ttl b{font:italic 400 clamp(20px,2.6vw,28px)/1.1 var(--font-display)}
+.tray-btn b{min-width:24px;height:24px;padding:0 7px;border-radius:999px;display:grid;place-items:center;background:var(--hibiscus);color:#fff;font-size:13px}
+.tray-btn.bump{animation:bump .45s cubic-bezier(.3,1.6,.5,1)}
+@keyframes bump{40%{transform:scale(1.12)}}
+.views{position:fixed;left:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:5;display:flex;gap:6px;padding:5px;border-radius:999px;background:rgba(251,246,239,.9);border:1px solid var(--line);box-shadow:0 10px 24px -14px rgba(43,30,25,.5)}
+.views button{all:unset;cursor:pointer;min-height:38px;padding:0 14px;border-radius:999px;font-weight:700;font-size:14px;color:var(--ink-soft)}
+.views button[aria-pressed="true"]{background:var(--jungle);color:#fff}
+.views button:focus-visible{outline:3px solid var(--hibiscus)}
+.hint{position:fixed;left:50%;bottom:calc(76px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);z-index:5;display:inline-flex;align-items:center;gap:10px;padding:12px 18px;border-radius:999px;background:var(--jungle);color:#fff;box-shadow:0 14px 30px -14px rgba(0,0,0,.6);font-weight:700;font-size:15px;white-space:nowrap;transition:opacity .4s,transform .4s;pointer-events:none}
+.hint svg{width:20px;height:20px;color:var(--sun)}
+.hint.gone{opacity:0;transform:translate(-50%,12px)}
+.toast{position:fixed;left:50%;top:calc(80px + env(safe-area-inset-top,0px));transform:translate(-50%,-10px);z-index:9;padding:12px 20px;border-radius:999px;background:var(--jungle);color:#fff;font-weight:700;font-size:15px;opacity:0;transition:opacity .3s,transform .3s;pointer-events:none;white-space:nowrap;max-width:calc(100% - 32px);overflow:hidden;text-overflow:ellipsis}
+.toast.on{opacity:1;transform:translate(-50%,0)}
+.label{position:fixed;z-index:4;left:0;top:0;padding:6px 12px;border-radius:999px;background:rgba(251,246,239,.95);font:italic 500 14px var(--font-display);white-space:nowrap;pointer-events:none;transform:translate(-50%,-140%);box-shadow:0 8px 18px -10px rgba(0,0,0,.5);opacity:0;transition:opacity .2s}
+.label.on{opacity:1}
+/* ficha del producto: lateral en PC, hoja inferior en móvil */
+.sheet{position:fixed;z-index:8;top:calc(76px + env(safe-area-inset-top,0px));right:16px;bottom:16px;width:min(360px,calc(100% - 32px));border-radius:24px;background:var(--shell);box-shadow:0 30px 60px -20px rgba(43,30,25,.55);display:flex;flex-direction:column;overflow:hidden;transform:translateX(calc(100% + 24px));transition:transform .45s cubic-bezier(.2,.8,.2,1)}
+.sheet.on{transform:none}
+.sheet .ph{position:relative;flex:1 1 auto;min-height:120px;background:var(--shell-2)}
+.sheet .ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.sheet .ph small{position:absolute;left:12px;bottom:12px;padding:5px 10px;border-radius:999px;background:rgba(251,246,239,.92);font-size:12px;font-weight:700;color:var(--ink-soft)}
+.x{all:unset;cursor:pointer;position:absolute;top:10px;right:10px;width:40px;height:40px;border-radius:50%;display:grid;place-items:center;background:rgba(251,246,239,.92);color:var(--ink)}
+.x svg{width:20px;height:20px}.x:focus-visible{outline:3px solid var(--hibiscus)}
+.sheet .bd{flex:none;display:grid;gap:10px;padding:18px 20px 20px}
+.sheet h2{margin:0;font:500 26px/1.1 var(--font-display);letter-spacing:-.01em}
+.sheet p{margin:0;color:var(--ink-soft);font-size:15.5px;line-height:1.5}
+.qty{display:flex;align-items:center;gap:10px}
+.qty button{all:unset;cursor:pointer;width:44px;height:44px;border-radius:50%;display:grid;place-items:center;border:1.5px solid var(--line);font-size:22px;font-weight:700;color:var(--hibiscus)}
+.qty button:focus-visible{outline:3px solid var(--hibiscus)}
+.qty output{min-width:28px;text-align:center;font-weight:800;font-size:18px}
+.qty span{font-size:14px;color:var(--ink-soft)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:50px;padding:0 18px;border-radius:999px;font:700 15px/1.15 var(--font-body);text-decoration:none;border:1.5px solid transparent;cursor:pointer;white-space:nowrap;width:100%}
+.btn svg{width:18px;height:18px;flex:none}
+.btn-primary{background:var(--hibiscus);color:#fff;box-shadow:0 12px 24px -12px rgba(179,52,63,.85)}
+.btn-ghost{background:#fff;border-color:var(--line);color:var(--ink)}
+/* bandeja */
+.tray{position:fixed;z-index:10;inset:0;display:grid;place-items:end center;background:rgba(28,19,15,.45);opacity:0;pointer-events:none;transition:opacity .3s}
+.tray.on{opacity:1;pointer-events:auto}
+.tray-in{width:min(460px,100%);max-height:85vh;margin:0 0 env(safe-area-inset-bottom,0px);border-radius:24px 24px 0 0;background:var(--shell);padding:20px 20px calc(20px + env(safe-area-inset-bottom,0px));display:grid;gap:12px;transform:translateY(30px);transition:transform .4s cubic-bezier(.2,.8,.2,1);overflow:auto}
+.tray.on .tray-in{transform:none}
+@media (min-width:700px){.tray{place-items:center}.tray-in{border-radius:24px}}
+.tray h2{margin:0;font:500 26px/1.1 var(--font-display)}
+.tray ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.tray li{display:grid;grid-template-columns:52px 1fr auto;gap:12px;align-items:center;padding:8px;border-radius:16px;background:#fff;border:1px solid var(--line)}
+.tray li img{width:52px;height:52px;border-radius:12px;object-fit:cover}
+.tray li b{font-weight:700}
+.tray li .qty button{width:36px;height:36px;font-size:18px}
+.tray .empty{color:var(--ink-soft)}
+.tray .fine{margin:0;font-size:13px;color:var(--ink-soft);text-align:center}
+.tray .row{display:flex;gap:8px}
+.note{position:fixed;right:16px;bottom:calc(18px + env(safe-area-inset-bottom,0px));z-index:4;font-size:12px;color:var(--ink-soft)}
+.loading{position:fixed;inset:0;z-index:20;display:grid;place-items:center;background:var(--jungle);color:var(--sun);font:italic 400 24px var(--font-display);transition:opacity .5s}
+.loading.done{opacity:0;pointer-events:none}
+.no3d{position:fixed;inset:0;z-index:15;overflow:auto;padding:90px 16px 24px;background:var(--shell)}
+.no3d h2{margin:0 0 6px;font:500 30px/1.1 var(--font-display);text-align:center}
+.no3d>p{text-align:center;color:var(--ink-soft);margin:0 0 18px}
+.no3d .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:12px;max-width:900px;margin:0 auto}
+.no3d button{all:unset;cursor:pointer;display:grid;gap:6px;font-weight:700;font-size:14px}
+.no3d button img{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:14px}
+@media (max-width:700px){
+  .sheet{top:auto;left:8px;right:8px;bottom:calc(8px + env(safe-area-inset-bottom,0px));width:auto;height:min(72vh,560px);transform:translateY(calc(100% + 24px))}
+  .ttl small{display:none}.back span{display:none}.tray-btn span{display:none}
+  .note{display:none}
+  .views{left:50%;transform:translateX(-50%)}
+  .hint{bottom:calc(78px + env(safe-area-inset-bottom,0px));font-size:14px}
+}
+@media (max-width:380px){.top{padding-inline:10px;gap:6px}.ttl{padding:6px 10px}.ttl b{font-size:18px}.tray-btn{padding:0 10px;gap:6px}.views button{padding:0 11px}}
+.views button{white-space:nowrap}
+@media (max-height:520px){.sheet .ph{min-height:80px}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+</head>
+<body>
+<canvas id="c" tabindex="0" aria-label="Mostrador de Oh la Lau! en 3D. Toca un pastel para verlo."></canvas>
+
+<header class="top">
+  <a class="pill back" href="index.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M15 18l-6-6 6-6"/></svg><span>Oh la Lau!</span></a>
+  <div class="ttl"><small>La vitrina en 3D</small><b>El mostrador azul</b></div>
+  <button type="button" class="pill tray-btn" id="tray-btn" aria-label="Ver tu bandeja"><svg viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10h18l-2 10H5zM7.5 10l3-6M16.5 10l-3-6"/></g></svg><span>Tu bandeja</span><b id="tray-n">0</b></button>
+</header>
+
+<div class="views" role="group" aria-label="Vistas">
+  <button type="button" data-v="front" aria-pressed="true">Vitrina</button>
+  <button type="button" data-v="wide" aria-pressed="false">General</button>
+  <button type="button" data-v="top" aria-pressed="false">Arriba</button>
+</div>
+<p class="hint" id="hint"><svg viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 13V5.5a1.5 1.5 0 0 1 3 0V12M11 11V4.5a1.5 1.5 0 0 1 3 0V12M14 11V6.5a1.5 1.5 0 0 1 3 0V14c0 4-2.5 7-6 7s-5-2-6.5-4.5L3 13.5a1.6 1.6 0 0 1 2.6-1.8L8 14"/></g></svg>Toca un pastel de la vitrina</p>
+<div class="label" id="label"></div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<p class="note">Recreación ilustrativa · las fotos son reales</p>
+
+<aside class="sheet" id="sheet" aria-labelledby="s-h" aria-hidden="true">
+  <div class="ph"><img id="s-img" alt=""><small>Foto real de su Instagram</small><button type="button" class="x" id="s-x" aria-label="Cerrar"><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" d="M6 6l12 12M18 6L6 18"/></svg></button></div>
+  <div class="bd">
+    <h2 id="s-h"></h2>
+    <p id="s-p"></p>
+    <div class="qty" id="s-qty"><button type="button" id="s-minus" aria-label="Uno menos">−</button><output id="s-n">1</output><span id="s-unit">unidades</span><button type="button" id="s-plus" aria-label="Uno más">+</button></div>
+    <button type="button" class="btn btn-primary" id="s-add">Añadir a mi bandeja</button>
+    <a class="btn btn-primary" id="s-cake" href="index.html?encargo=tarta#encargar" hidden>Encargar esta tarta</a>
+  </div>
+</aside>
+
+<div class="tray" id="tray" role="dialog" aria-modal="true" aria-labelledby="t-h">
+  <div class="tray-in">
+    <h2 id="t-h">Tu bandeja</h2>
+    <ul id="t-list"></ul>
+    <p class="empty" id="t-empty">Aún está vacía. Toca un pastel de la vitrina y añádelo.</p>
+    <p class="fine">Te respondemos por WhatsApp con disponibilidad y precio. Sin compromiso.</p>
+    <div class="row"><button type="button" class="btn btn-ghost" id="t-close">Seguir mirando</button><a class="btn btn-primary" id="t-go" href="index.html?encargo=bandeja#encargar">Encargar mi bandeja</a></div>
+  </div>
+</div>
+
+<div class="loading" id="loading">Abriendo la vitrina…</div>
+<div class="no3d" id="no3d" hidden><h2>La vitrina de Oh la Lau!</h2><p>Tu navegador no puede mostrar el 3D: aquí la tienes en fotos. Toca para añadir a tu bandeja.</p><div class="grid" id="no3d-grid"></div></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+<script>
+(function(){
+"use strict";
+var reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
+var $=function(id){return document.getElementById(id)};
+
+/* catálogo: solo lo que se ve en su Instagram, con su foto real. Sin precios. */
+var P={
+  croissant:{n:'Croissants de mantequilla',p:'Hojaldre de mantequilla hecho en nuestro obrador. «De los mejores que he comido», dice una reseña reciente.',img:'img/croissants.jpg',u:['croissant','croissants']},
+  caracola:{n:'Caracolas de nata',p:'Hojaldre en espiral relleno de nata y con azúcar glas por encima.',img:'img/caracolas-nata.jpg',u:['caracola','caracolas']},
+  napolitana:{n:'Napolitanas y bollería',p:'Recién horneadas, para el desayuno o la merienda.',img:'img/napolitanas.jpg',u:['napolitana','napolitanas']},
+  tartaleta:{n:'Tartaletas de fruta',p:'Fruta fresca sobre crema y masa quebrada, con la placa de chocolate de la casa.',img:'img/tartaletas.jpg',u:['tartaleta','tartaletas']},
+  limon:{n:'Limón y merengue',p:'Crema de limón con merengue tostado. Uno de los favoritos de las reseñas.',img:'img/limon-merengue.jpg',u:['vasito','vasitos']},
+  bizcochito:{n:'Bizcochitos de chocolate',p:'Esponjosos, con pepitas y un corazón de chocolate.',img:'img/bizcochitos.jpg',u:['bizcochito','bizcochitos']},
+  relleno:{n:'Croissants rellenos',p:'Dulces (crema, chocolate, pistacho) o salados para el desayuno.',img:'img/croissants-rellenos.jpg',u:['croissant relleno','croissants rellenos']},
+  tarta:{n:'Tarta de chocolate',p:'Para celebrar, por encargo. Dinos el día y para cuántas personas y te la preparamos.',img:'img/tarta-chocolate.jpg',cake:true}
+};
+var tray={};
+function toast(m){var t=$('toast');t.textContent=m;t.classList.add('on');clearTimeout(toast.k);toast.k=setTimeout(function(){t.classList.remove('on')},1800)}
+function units(k,n){return n+' '+(n===1?P[k].u[0]:P[k].u[1])}
+function trayUpd(){var tot=0,L=[];Object.keys(tray).forEach(function(k){if(tray[k]>0){tot+=tray[k];L.push(units(k,tray[k]))}});
+  $('tray-n').textContent=tot;var b=$('tray-btn');b.classList.remove('bump');void b.offsetWidth;b.classList.add('bump');
+  $('t-go').href='index.html?encargo=bandeja&nota='+encodeURIComponent('Mi bandeja: '+L.join(', '))+'#encargar';
+  $('t-go').style.opacity=tot?1:.5;$('t-go').style.pointerEvents=tot?'auto':'none';
+  var ul=$('t-list');ul.innerHTML='';$('t-empty').hidden=tot>0;
+  Object.keys(tray).forEach(function(k){if(!(tray[k]>0))return;var li=document.createElement('li');
+    li.innerHTML='<img src="'+P[k].img+'" alt=""><span><b>'+P[k].n+'</b></span><div class="qty"><button type="button" data-k="'+k+'" data-d="-1" aria-label="Uno menos">−</button><output>'+tray[k]+'</output><button type="button" data-k="'+k+'" data-d="1" aria-label="Uno más">+</button></div>';ul.appendChild(li)})}
+$('t-list').addEventListener('click',function(e){var b=e.target.closest('button[data-k]');if(!b)return;var k=b.dataset.k;tray[k]=Math.max(0,(tray[k]||0)+(+b.dataset.d));trayUpd()});
+function trayOpen(on){$('tray').classList.toggle('on',on);if(on)$('t-close').focus()}
+$('tray-btn').addEventListener('click',function(){trayOpen(true)});
+$('t-close').addEventListener('click',function(){trayOpen(false)});
+$('tray').addEventListener('click',function(e){if(e.target===this)trayOpen(false)});
+trayUpd();$('tray-n').textContent='0';
+
+/* ficha */
+var cur=null,qty=1,onPick=function(){};
+function sheet(k){cur=k;qty=1;var p=P[k];$('s-img').src=p.img;$('s-img').alt=p.n;$('s-h').textContent=p.n;$('s-p').textContent=p.p;
+  $('s-qty').hidden=$('s-add').hidden=!!p.cake;$('s-cake').hidden=!p.cake;$('s-n').textContent=qty;if(!p.cake)$('s-unit').textContent=p.u[1];
+  $('sheet').classList.add('on');$('sheet').setAttribute('aria-hidden','false');$('hint').classList.add('gone')}
+function sheetClose(){$('sheet').classList.remove('on');$('sheet').setAttribute('aria-hidden','true');cur=null;onPick(null)}
+$('s-x').addEventListener('click',sheetClose);
+$('s-minus').addEventListener('click',function(){qty=Math.max(1,qty-1);$('s-n').textContent=qty});
+$('s-plus').addEventListener('click',function(){qty=Math.min(24,qty+1);$('s-n').textContent=qty});
+$('s-add').addEventListener('click',function(){tray[cur]=(tray[cur]||0)+qty;trayUpd();toast('A tu bandeja: '+units(cur,qty));hop(cur);sheetClose()});
+document.addEventListener('keydown',function(e){if(e.key==='Escape'){if($('tray').classList.contains('on'))trayOpen(false);else sheetClose()}});
+var hop=function(){};
+
+function fallback(){$('no3d').hidden=false;$('loading').classList.add('done');var g=$('no3d-grid');
+  Object.keys(P).forEach(function(k){var b=document.createElement('button');b.type='button';b.innerHTML='<img src="'+P[k].img+'" alt="">'+P[k].n;b.addEventListener('click',function(){sheet(k)});g.appendChild(b)})}
+if(!window.THREE){fallback();return}
+var canvas=$('c'),renderer;
+try{renderer=new THREE.WebGLRenderer({canvas:canvas,antialias:true})}catch(e){fallback();return}
+renderer.setPixelRatio(Math.min(devicePixelRatio||1,1.5));
+renderer.shadowMap.enabled=true;renderer.shadowMap.type=THREE.PCFSoftShadowMap;
+
+var scene=new THREE.Scene();scene.background=new THREE.Color('#EDE6DC');
+var camera=new THREE.PerspectiveCamera(40,1,.05,40);
+var controls=new THREE.OrbitControls(camera,canvas);
+controls.enablePan=false;controls.enableDamping=true;controls.dampingFactor=.08;
+controls.minDistance=1.1;controls.maxDistance=5.2;controls.minPolarAngle=.15;controls.maxPolarAngle=1.62;controls.minAzimuthAngle=-1.15;controls.maxAzimuthAngle=1.15;
+
+scene.add(new THREE.HemisphereLight('#FFF7EA','#7A6A5A',.7));
+var key=new THREE.DirectionalLight('#FFF1DC',.75);key.position.set(2.5,4,3);key.castShadow=true;key.shadow.mapSize.set(1024,1024);
+key.shadow.camera.left=-3;key.shadow.camera.right=3;key.shadow.camera.top=3;key.shadow.camera.bottom=-1;key.shadow.radius=3;key.shadow.bias=-.0008;scene.add(key);
+
+/* texturas pintadas: azulejo blanco, papel pintado de flores y suelo de madera */
+function tex(w,h,draw,rx,ry){var c=document.createElement('canvas');c.width=w;c.height=h;draw(c.getContext('2d'),w,h);var t=new THREE.CanvasTexture(c);t.wrapS=t.wrapT=THREE.RepeatWrapping;t.repeat.set(rx||1,ry||1);t.anisotropy=4;return t}
+var tiles=tex(256,128,function(x,w,h){x.fillStyle='#DCD7CF';x.fillRect(0,0,w,h);x.fillStyle='#FFFFFF';
+  [[0,0],[128,0],[-64,64],[64,64],[192,64]].forEach(function(p){x.fillRect(p[0]+3,p[1]+3,122,58)})},12,20);
+var flowers=tex(256,256,function(x,w,h){x.fillStyle='#F7F1E6';x.fillRect(0,0,w,h);x.strokeStyle='#8FA37A';x.lineWidth=2;
+  for(var i=0;i<6;i++){var bx=(i%3)*90+20,by=Math.floor(i/3)*128+10;x.beginPath();x.moveTo(bx,by+120);x.bezierCurveTo(bx+30,by+80,bx-20,by+40,bx+20,by);x.stroke();
+    [['#E79AA8',bx+20,by+4],['#F2C2A0',bx+4,by+50],['#E79AA8',bx+24,by+82]].forEach(function(f){x.fillStyle=f[0];for(var k=0;k<5;k++){x.beginPath();x.arc(f[1]+Math.cos(k*1.26)*5,f[2]+Math.sin(k*1.26)*5,4.5,0,7);x.fill()}x.fillStyle='#E8C27A';x.beginPath();x.arc(f[1],f[2],2.5,0,7);x.fill()})}},4,3);
+var wood=tex(256,256,function(x,w,h){for(var i=0;i<8;i++){x.fillStyle=['#B98A5E','#A9784C','#C29467','#B07F52'][i%4];x.fillRect(0,i*32,w,32);x.fillStyle='rgba(0,0,0,.12)';x.fillRect(0,i*32,w,1.5);x.fillRect((i*97)%w,i*32,1.5,32)}},4,4);
+function plane(w,h,mat){var m=new THREE.Mesh(new THREE.PlaneGeometry(w,h),mat);m.receiveShadow=true;scene.add(m);return m}
+var floor=plane(9,6,new THREE.MeshStandardMaterial({map:wood,roughness:.8}));floor.rotation.x=-Math.PI/2;floor.position.z=1;
+var back=plane(9,3.4,new THREE.MeshStandardMaterial({map:tiles,roughness:.5}));back.position.set(0,1.7,-1.25);
+var left=plane(5,3.4,new THREE.MeshStandardMaterial({map:flowers,roughness:.9}));left.rotation.y=Math.PI/2;left.position.set(-3.2,1.7,1.2);
+var right=plane(5,3.4,new THREE.MeshStandardMaterial({map:flowers,roughness:.9}));right.rotation.y=-Math.PI/2;right.position.set(3.2,1.7,1.2);
+/* el logo de la pared (el de verdad, sobre un círculo de metacrilato) */
+new THREE.TextureLoader().load('img/logo.png',function(t){var m=new THREE.Mesh(new THREE.PlaneGeometry(1.15,1.15),new THREE.MeshStandardMaterial({map:t,transparent:true,roughness:.6}));m.position.set(-.35,2.2,-1.23);scene.add(m);
+  var disc=new THREE.Mesh(new THREE.CircleGeometry(.62,48),new THREE.MeshPhysicalMaterial({color:'#ffffff',transparent:true,opacity:.18,roughness:.1,clearcoat:1}));disc.position.set(-.35,2.2,-1.235);scene.add(disc)});
+
+/* el mostrador azul con cuarterones y tiradores dorados */
+function box(w,h,d,mat,x,y,z,parent){var m=new THREE.Mesh(new THREE.BoxGeometry(w,h,d),mat);m.position.set(x,y,z);m.castShadow=true;m.receiveShadow=true;(parent||scene).add(m);return m}
+var blue=new THREE.MeshStandardMaterial({color:'#8EA5C3',roughness:.55}),blueD=new THREE.MeshStandardMaterial({color:'#7F97B7',roughness:.6}),
+    marble=new THREE.MeshStandardMaterial({color:'#F7F3EC',roughness:.25}),gold=new THREE.MeshStandardMaterial({color:'#D6AE5C',metalness:.8,roughness:.3}),
+    glass=new THREE.MeshPhysicalMaterial({color:'#ffffff',transparent:true,opacity:.13,roughness:.05,clearcoat:1,depthWrite:false}),
+    steel=new THREE.MeshStandardMaterial({color:'#C9C4BC',metalness:.7,roughness:.35}),paper=new THREE.MeshStandardMaterial({color:'#FFFFFF',roughness:.9});
+box(3.3,.95,.75,blue,0,.475,0);
+for(var i=0;i<4;i++){var px=-1.2+i*.8;box(.66,.62,.02,blueD,px,.47,.38);box(.56,.52,.02,blue,px,.47,.395);var kn=new THREE.Mesh(new THREE.SphereGeometry(.022,12,10),gold);kn.position.set(px,.86,.41);scene.add(kn)}
+box(3.4,.05,.82,marble,0,.975,0);
+/* vitrina: cristal, perfil de acero y balda de cristal */
+var VX0=-1.55,VX1=.55,VZ=0,VD=.62,VH=.5,VY=1.0,vw=VX1-VX0,vc=(VX0+VX1)/2;
+var gl=new THREE.Mesh(new THREE.BoxGeometry(vw,VH,VD),glass);gl.position.set(vc,VY+VH/2,VZ);gl.renderOrder=2;scene.add(gl);
+[[vw,.015,.015,vc,VY+VH,VZ+VD/2],[vw,.015,.015,vc,VY+VH,VZ-VD/2],[.015,VH,.015,VX0,VY+VH/2,VZ+VD/2],[.015,VH,.015,VX1,VY+VH/2,VZ+VD/2],[.015,VH,.015,VX0,VY+VH/2,VZ-VD/2],[.015,VH,.015,VX1,VY+VH/2,VZ-VD/2]].forEach(function(b){box(b[0],b[1],b[2],steel,b[3],b[4],b[5])});
+var shelf=new THREE.Mesh(new THREE.BoxGeometry(vw-.04,.012,VD-.2),glass);shelf.position.set(vc,VY+.25,VZ-.06);scene.add(shelf);
+var shelfEdge=box(vw-.04,.012,.01,steel,vc,VY+.25,VZ+.04);
+box(vw-.02,.012,VD-.02,new THREE.MeshStandardMaterial({color:'#FBF7F0',roughness:.6}),vc,VY+.006,VZ);
+/* lámparas colgantes */
+[-1.1,.2,1.3].forEach(function(x){var s=new THREE.Mesh(new THREE.SphereGeometry(.2,24,12,0,Math.PI*2,0,Math.PI/2),new THREE.MeshStandardMaterial({color:'#FBF8F2',roughness:.4,side:THREE.DoubleSide,emissive:'#FFF3D6',emissiveIntensity:.15}));s.position.set(x,2.55,.05);scene.add(s);
+  var cord=new THREE.Mesh(new THREE.CylinderGeometry(.006,.006,.9,6),steel);cord.position.set(x,3.0,.05);scene.add(cord);
+  var bulb=new THREE.PointLight('#FFD9A0',.35,3.2,2);bulb.position.set(x,2.45,.05);scene.add(bulb)});
+
+/* pasteles: geometría sencilla y materiales propios de cada producto (para resaltarlos) */
+var groups={},pickables=[];
+function mats(k,list){var o={};Object.keys(list).forEach(function(n){o[n]=new THREE.MeshStandardMaterial(list[n])});(groups[k]=groups[k]||{items:[],mats:o});return o}
+function add(k,obj,x,y,z,ry){obj.position.set(x,y,z);obj.rotation.y=ry||0;obj.traverse(function(m){if(m.isMesh){m.castShadow=true;m.userData.k=k;pickables.push(m)}});obj.userData.base=obj.position.y;groups[k].items.push(obj);scene.add(obj)}
+function sph(r,mat,x,y,z,sx,sy,sz){var m=new THREE.Mesh(new THREE.SphereGeometry(r,14,10),mat);m.position.set(x,y,z);m.scale.set(sx||1,sy||1,sz||1);return m}
+function tray3(x,z,w,d,y){var t=new THREE.Mesh(new THREE.BoxGeometry(w,.006,d),paper);t.position.set(x,y+.003,z);t.receiveShadow=true;scene.add(t)}
+function croissantG(m,s,extra){var g=new THREE.Group();s=s||1;
+  for(var i=-2;i<=2;i++){var t=Math.abs(i)/2,r=.03*(1-.38*t)*s;g.add(sph(r,i%2?m.d:m.a,i*.026*s,r*.75,-(i*i)*.009*s,1.25,.8,1))}
+  if(extra)g.add(sph(.02*s,extra,.05*s,.022*s,-.03*s,1.3,.6,1.1));return g}
+/* croissants (balda) */
+var mC=mats('croissant',{a:{color:'#C07A34',roughness:.45},d:{color:'#9C5A24',roughness:.5}});
+tray3(-1.15,-.06,.6,.32,VY+.256);[[-1.33,-.12],[-1.13,-.02],[-.95,-.13],[-1.25,.03]].forEach(function(p,i){add('croissant',croissantG(mC),p[0],VY+.262,p[1],.4*i-.3)});
+/* caracolas de nata */
+var mK=mats('caracola',{a:{color:'#C58A45',roughness:.55},c:{color:'#FFFDF6',roughness:.5}});
+tray3(-.55,-.06,.5,.32,VY+.256);[[-.7,-.12],[-.5,-.02],[-.38,-.14]].forEach(function(p){var g=new THREE.Group(),t=new THREE.Mesh(new THREE.TorusGeometry(.04,.022,10,24),mK.a);t.rotation.x=Math.PI/2;t.scale.z=.7;t.position.y=.03;g.add(t);
+  var c=new THREE.Mesh(new THREE.CylinderGeometry(.045,.05,.03,20),mK.c);c.position.y=.012;g.add(c);var top=sph(.035,mK.a,0,.05,0,1,.45,1);g.add(top);add('caracola',g,p[0],VY+.262,p[1])});
+/* napolitanas */
+var mN=mats('napolitana',{a:{color:'#C98B45',roughness:.5},ch:{color:'#3E2216',roughness:.4}});
+tray3(.2,-.06,.6,.32,VY+.256);[[.02,-.12],[.2,-.02],[.38,-.12],[.3,.03]].forEach(function(p,i){var g=new THREE.Group(),b=new THREE.Mesh(new THREE.BoxGeometry(.11,.035,.075),mN.a);b.position.y=.02;g.add(b);
+  [-.025,0,.025].forEach(function(dx){var s=new THREE.Mesh(new THREE.BoxGeometry(.008,.004,.07),mN.ch);s.position.set(dx,.039,0);g.add(s)});add('napolitana',g,p[0],VY+.262,p[1],.25*i)});
+/* tartaletas (abajo) */
+var mT=mats('tartaleta',{a:{color:'#D9A35A',roughness:.6},c:{color:'#F6E6C6',roughness:.6},r:{color:'#C8202E',roughness:.3},b:{color:'#2A1530',roughness:.3},p:{color:'#3A1E14',roughness:.4},y:{color:'#F0B04A',roughness:.4}});
+tray3(-1.2,.08,.55,.36,VY);[[-1.38,.0],[-1.2,.16],[-1.02,.02],[-1.25,-.12]].forEach(function(p,i){var g=new THREE.Group(),base=new THREE.Mesh(new THREE.CylinderGeometry(.05,.045,.025,20),mT.a);base.position.y=.0125;g.add(base);
+  var cr=new THREE.Mesh(new THREE.CylinderGeometry(.045,.045,.006,20),mT.c);cr.position.y=.027;g.add(cr);
+  for(var k=0;k<3;k++){var a=k*2.1+i;g.add(sph(.014,mT.r,Math.cos(a)*.025,.036,Math.sin(a)*.025,1,.6,1.2))}
+  g.add(sph(.012,mT.y,-.012,.034,.02,1.4,.5,1));for(k=0;k<5;k++)g.add(sph(.006,mT.b,.012+Math.cos(k*1.3)*.006,.04+(k%2)*.004,-.006+Math.sin(k*1.3)*.006));
+  var pl=new THREE.Mesh(new THREE.BoxGeometry(.03,.003,.03),mT.p);pl.position.set(-.01,.045,-.015);pl.rotation.set(.5,.4,.2);g.add(pl);add('tartaleta',g,p[0],VY+.006,p[1])});
+/* limón y merengue en vasito */
+var mL=mats('limon',{y:{color:'#F2C84B',roughness:.35},w:{color:'#FFFBF2',roughness:.6},t:{color:'#C9874A',roughness:.6}});
+var cupGlass=new THREE.MeshPhysicalMaterial({color:'#ffffff',transparent:true,opacity:.25,roughness:.05,clearcoat:1});
+tray3(-.55,.08,.55,.36,VY);[[-.72,.0],[-.55,.14],[-.4,.0],[-.6,-.13]].forEach(function(p){var g=new THREE.Group(),cup=new THREE.Mesh(new THREE.CylinderGeometry(.033,.03,.06,20,1,true),cupGlass);cup.position.y=.03;g.add(cup);
+  var y=new THREE.Mesh(new THREE.CylinderGeometry(.031,.029,.045,20),mL.y);y.position.y=.024;g.add(y);
+  var m=new THREE.Mesh(new THREE.ConeGeometry(.034,.055,20),mL.w);m.position.y=.073;g.add(m);var tip=new THREE.Mesh(new THREE.ConeGeometry(.012,.02,12),mL.t);tip.position.y=.093;g.add(tip);
+  add('limon',g,p[0],VY+.006,p[1])});
+/* bizcochitos */
+var mB=mats('bizcochito',{a:{color:'#D49A4E',roughness:.55},ch:{color:'#3A2016',roughness:.35}});
+tray3(.1,.08,.6,.36,VY);[[-.08,.0],[.1,.15],[.28,.02],[.12,-.12],[.32,.17]].forEach(function(p){var g=new THREE.Group(),t=new THREE.Mesh(new THREE.TorusGeometry(.03,.018,10,22),mB.a);t.rotation.x=Math.PI/2;t.scale.z=1.3;t.position.y=.022;g.add(t);
+  g.add(sph(.019,mB.ch,0,.03,0,1,.8,1));for(var k=0;k<6;k++){var a=k*1.05;g.add(sph(.005,mB.ch,Math.cos(a)*.03,.044,Math.sin(a)*.03))}add('bizcochito',g,p[0],VY+.006,p[1])});
+/* tabla de pizarra con croissants rellenos (sobre el mostrador) */
+var slate=box(.62,.02,.26,new THREE.MeshStandardMaterial({color:'#2E2F33',roughness:.85}),1.1,1.01,.2);
+var mR=mats('relleno',{a:{color:'#C07A34',roughness:.45},d:{color:'#9C5A24',roughness:.5},pi:{color:'#8FB03E',roughness:.7},ch:{color:'#3A2016',roughness:.35}});
+[[.9,.2,mR.pi],[1.1,.2,mR.ch],[1.3,.2,mR.pi]].forEach(function(p,i){add('relleno',croissantG(mR,1.1,p[2]),p[0],1.02,p[1],.2*i)});
+/* tarta de chocolate en su peana de cristal */
+var mX=mats('tarta',{c:{color:'#3B2016',roughness:.45},r:{color:'#4A2A1C',roughness:.4},g:{color:'#E6B54A',metalness:.8,roughness:.25},m:{color:'#E79AA8',roughness:.5}});
+(function(){var g=new THREE.Group(),stem=new THREE.Mesh(new THREE.CylinderGeometry(.02,.05,.14,16),cupGlass);stem.position.y=.07;g.add(stem);
+  var dish=new THREE.Mesh(new THREE.CylinderGeometry(.2,.2,.012,32),cupGlass);dish.position.y=.146;g.add(dish);
+  var cake=new THREE.Mesh(new THREE.CylinderGeometry(.15,.15,.14,32),mX.c);cake.position.y=.22;g.add(cake);
+  for(var k=0;k<14;k++){var a=k/14*Math.PI*2;g.add(sph(.026,mX.r,Math.cos(a)*.12,.295,Math.sin(a)*.12,1,.7,1))}
+  for(k=0;k<6;k++){var a2=k/6*Math.PI*2;g.add(sph(.022,mX.r,Math.cos(a2)*.06,.3,Math.sin(a2)*.06,1,.7,1))}
+  var pl=new THREE.Mesh(new THREE.BoxGeometry(.06,.05,.004),mX.c);pl.position.set(-.03,.34,.02);pl.rotation.z=.3;g.add(pl);
+  for(k=0;k<3;k++){var leaf=new THREE.Mesh(new THREE.PlaneGeometry(.03,.025),mX.g);leaf.material.side=THREE.DoubleSide;leaf.position.set(.04+k*.02,.32,-.03+k*.02);leaf.rotation.set(-1,k,0);g.add(leaf)}
+  g.add(sph(.02,mX.m,.06,.325,.05,1,.8,1));add('tarta',g,1.1,1.0,-.15)})();
+
+/* cámara: vistas y transición suave */
+var VIEWS={front:{p:[-.1,1.7,2.75],t:[-.3,1.1,0]},wide:{p:[1.6,2.0,3.6],t:[0,1.05,0]},top:{p:[-.3,2.75,1.05],t:[-.4,1.0,0]}};
+var fly=null;
+function view(k){var v=VIEWS[k];fly={t:0,p0:camera.position.clone(),t0:controls.target.clone(),p1:new THREE.Vector3().fromArray(v.p),t1:new THREE.Vector3().fromArray(v.t)};
+  if(reduced||!fly.p0.lengthSq()){camera.position.copy(fly.p1);controls.target.copy(fly.t1);fly=null}
+  document.querySelectorAll('.views button').forEach(function(b){b.setAttribute('aria-pressed',b.dataset.v===k)})}
+function focus(k){var it=groups[k].items,c=new THREE.Vector3();it.forEach(function(o){c.add(o.position)});c.multiplyScalar(1/it.length);
+  var dir=camera.position.clone().sub(controls.target).normalize();var dist=innerWidth<700?1.25:1.05;
+  fly={t:0,p0:camera.position.clone(),t0:controls.target.clone(),t1:c.clone().add(new THREE.Vector3(innerWidth<700?0:.18,innerWidth<700?-.12:0,0)),p1:null};fly.p1=fly.t1.clone().add(dir.multiplyScalar(dist));
+  if(reduced){camera.position.copy(fly.p1);controls.target.copy(fly.t1);fly=null}}
+document.querySelectorAll('.views button').forEach(function(b){b.addEventListener('click',function(){sheetClose();view(b.dataset.v)})});
+
+/* resaltar y elegir */
+var hover=null,picked=null;
+function glow(k,on){if(!k)return;var m=groups[k].mats;Object.keys(m).forEach(function(n){m[n].emissive=new THREE.Color(on?'#5A3A10':'#000000');m[n].emissiveIntensity=on?.35:0})}
+onPick=function(k){if(picked&&picked!==k)glow(picked,false);picked=k;if(k)glow(k,true)};
+var ray=new THREE.Raycaster(),ptr=new THREE.Vector2();
+function pick(x,y){ptr.set(x/innerWidth*2-1,-(y/innerHeight)*2+1);ray.setFromCamera(ptr,camera);var h=ray.intersectObjects(pickables,false)[0];return h?h.object.userData.k:null}
+var down=null;
+canvas.addEventListener('pointerdown',function(e){down=[e.clientX,e.clientY,Date.now()]});
+canvas.addEventListener('pointerup',function(e){if(!down)return;var dx=e.clientX-down[0],dy=e.clientY-down[1],q=Date.now()-down[2]<600;down=null;if(dx*dx+dy*dy>64||!q)return;
+  var k=pick(e.clientX,e.clientY);if(k){onPick(k);sheet(k);focus(k);hopOne(k)}else if(picked)sheetClose()});
+var lab=$('label');
+canvas.addEventListener('pointermove',function(e){if(e.pointerType!=='mouse')return;var k=pick(e.clientX,e.clientY);
+  if(k!==hover){if(hover&&hover!==picked)glow(hover,false);hover=k;if(k)glow(k,true)}
+  canvas.style.cursor=k?'pointer':'grab';lab.classList.toggle('on',!!k);if(k){lab.textContent=P[k].n;lab.style.left=e.clientX+'px';lab.style.top=e.clientY+'px'}});
+canvas.addEventListener('pointerleave',function(){lab.classList.remove('on');if(hover&&hover!==picked)glow(hover,false);hover=null});
+/* teclado: flechas recorren los productos, Intro abre la ficha */
+var order=Object.keys(P),ki=-1;
+canvas.addEventListener('keydown',function(e){if(e.key==='ArrowRight'||e.key==='ArrowLeft'){e.preventDefault();ki=(ki+(e.key==='ArrowRight'?1:order.length-1))%order.length;var k=order[ki];onPick(k);sheet(k);focus(k)}});
+
+/* saltito al tocar o añadir */
+var hops=[];
+function hopOne(k){groups[k].items.forEach(function(o,i){hops.push({o:o,t:-i*.06})})}
+hop=hopOne;
+
+function resize(){var w=innerWidth,h=innerHeight;renderer.setSize(w,h,false);camera.aspect=w/h;camera.fov=w<h?58:40;camera.updateProjectionMatrix()}
+addEventListener('resize',resize);resize();
+if(innerWidth<innerHeight){VIEWS.front={p:[-.5,1.62,2.35],t:[-.5,1.1,0]};VIEWS.wide={p:[1.4,2.2,4.6],t:[0,1.05,0]}}
+camera.position.set(0,0,0);view('front');
+var clock=new THREE.Clock(),running=true;
+document.addEventListener('visibilitychange',function(){running=!document.hidden;if(running){clock.getDelta();loop()}});
+function loop(){if(!running)return;requestAnimationFrame(loop);var dt=Math.min(clock.getDelta(),.05);
+  if(fly){fly.t=Math.min(1,fly.t+dt/.9);var e=1-Math.pow(1-fly.t,3);camera.position.lerpVectors(fly.p0,fly.p1,e);controls.target.lerpVectors(fly.t0,fly.t1,e);if(fly.t>=1)fly=null}
+  for(var i=hops.length-1;i>=0;i--){var h=hops[i];h.t+=dt;var k=Math.max(0,h.t)/.45;h.o.position.y=h.o.userData.base+Math.sin(Math.min(1,k)*Math.PI)*.05;if(k>=1){h.o.position.y=h.o.userData.base;hops.splice(i,1)}}
+  controls.update();renderer.render(scene,camera)}
+loop();
+setTimeout(function(){$('loading').classList.add('done')},350);
+})();
+</script>
+</body>
+</html>

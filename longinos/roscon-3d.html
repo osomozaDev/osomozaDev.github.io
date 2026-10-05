@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>¿Dónde está el haba? · Pastelería Longinos</title>
+<meta name="description" content="Corta un roscón en 3D porción a porción y encuentra la figurita y el haba. Un juego de Pastelería Longinos, en Madrid desde 1929.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Belgrano&family=Figtree:wght@400;600;700;800&display=swap">
+<style>
+:root{color-scheme:light;--shell:#FFFFFF;--ink:#212226;--ink-soft:#5B5A58;--hibiscus:#D44203;--hibiscus-ink:#A93300;--jungle:#212226;--sun:#FF8A4C;--line:rgba(33,34,38,.13);--font-display:"Belgrano",Georgia,serif;--font-body:"Figtree",system-ui,-apple-system,"Segoe UI",sans-serif}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html,body{margin:0;height:100%;overflow:hidden;background:#212226;color:var(--ink);font-family:var(--font-body);-webkit-font-smoothing:antialiased}
+canvas#c{position:fixed;inset:0;width:100%;height:100%;display:block;touch-action:none;outline:none}
+.top{position:fixed;top:0;left:0;right:0;z-index:5;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:calc(12px + env(safe-area-inset-top,0px)) 16px 12px;background:linear-gradient(180deg,rgba(24,25,28,.62),rgba(24,25,28,0));color:#fff;pointer-events:none}
+.top>*{pointer-events:auto}
+.back{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 16px 0 10px;border-radius:999px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);color:#fff;text-decoration:none;font-weight:700;font-size:15px}
+.back svg{width:20px;height:20px}
+.ttl{display:grid;text-align:center;line-height:1.15}
+.ttl small{font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--sun)}
+.ttl b{font:400 clamp(22px,3vw,30px)/1.1 var(--font-display)}
+.count{min-width:44px;min-height:44px;padding:0 14px;border-radius:999px;display:grid;place-items:center;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);font-weight:700;font-size:14px;white-space:nowrap}
+.hint{position:fixed;left:50%;bottom:calc(26px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);z-index:5;display:inline-flex;align-items:center;gap:10px;padding:12px 18px;border-radius:999px;background:rgba(255,255,255,.95);box-shadow:0 14px 30px -14px rgba(0,0,0,.6);font-weight:700;font-size:15px;white-space:nowrap;transition:opacity .4s,transform .4s}
+.hint svg{width:20px;height:20px;color:var(--hibiscus)}
+.hint.gone{opacity:0;transform:translate(-50%,12px);pointer-events:none}
+.toast{position:fixed;left:50%;top:calc(84px + env(safe-area-inset-top,0px));transform:translate(-50%,-10px);z-index:6;padding:12px 20px;border-radius:999px;background:var(--jungle);color:#fff;font-weight:700;font-size:16px;opacity:0;transition:opacity .3s,transform .3s;pointer-events:none;white-space:nowrap;max-width:calc(100% - 32px);overflow:hidden;text-overflow:ellipsis}
+.toast.on{opacity:1;transform:translate(-50%,0)}
+.card{position:fixed;z-index:7;left:50%;bottom:calc(16px + env(safe-area-inset-bottom,0px));transform:translate(-50%,24px);width:min(440px,calc(100% - 24px));padding:22px 22px 18px;border-radius:24px;background:var(--shell);box-shadow:0 30px 60px -20px rgba(0,0,0,.6);display:grid;gap:10px;text-align:center;opacity:0;pointer-events:none;transition:opacity .35s,transform .45s cubic-bezier(.2,.8,.2,1)}
+.card.on{opacity:1;transform:translate(-50%,0);pointer-events:auto}
+.card .ico{font-size:40px;line-height:1}
+.card h2{margin:0;font:500 clamp(26px,4vw,32px)/1.1 var(--font-display);letter-spacing:-.01em}
+.card h2 i{color:var(--hibiscus)}
+.card p{margin:0;color:var(--ink-soft);font-size:16px;line-height:1.5}
+.card .row{display:flex;gap:8px;margin-top:6px}
+.btn{flex:1;display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:50px;padding:0 18px;border-radius:999px;font:700 15px/1.15 var(--font-body);text-decoration:none;border:1.5px solid transparent;cursor:pointer;white-space:nowrap}
+.btn svg{width:18px;height:18px;flex:none}
+.btn-primary{background:var(--hibiscus);color:#fff;box-shadow:0 12px 24px -12px rgba(212,66,3,.85)}
+.btn-ghost{background:#fff;border-color:var(--line);color:var(--ink)}
+.note{position:fixed;right:14px;bottom:calc(10px + env(safe-area-inset-bottom,0px));z-index:4;font-size:12px;color:rgba(255,255,255,.6)}
+.loading{position:fixed;inset:0;z-index:20;display:grid;place-items:center;background:var(--jungle);color:var(--sun);font:400 24px var(--font-display);transition:opacity .5s}
+.loading.done{opacity:0;pointer-events:none}
+.no3d{position:fixed;inset:0;z-index:15;display:grid;place-items:center;padding:24px;background:var(--shell);text-align:center}
+.no3d div{display:grid;gap:14px;max-width:420px;justify-items:center}
+.no3d img{width:220px;aspect-ratio:3/4;object-fit:cover;border-radius:18px}
+.no3d h2{margin:0;font:500 30px/1.1 var(--font-display)}
+@media (max-width:560px){.ttl small{display:none}.back span{display:none}.back{padding:0 12px}.note{display:none}.hint{font-size:14px}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<canvas id="c" tabindex="0" aria-label="Roscón de Reyes en 3D. Toca una porción para cortarla."></canvas>
+
+<header class="top">
+  <a class="back" href="index.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M15 18l-6-6 6-6"/></svg><span>Longinos</span></a>
+  <div class="ttl"><small>Juego de Reyes</small><b>¿Dónde está el haba?</b></div>
+  <span class="count" id="count" aria-live="polite">0/8</span>
+</header>
+
+<p class="hint" id="hint"><svg viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 13V5.5a1.5 1.5 0 0 1 3 0V12M11 11V4.5a1.5 1.5 0 0 1 3 0V12M14 11V6.5a1.5 1.5 0 0 1 3 0V14c0 4-2.5 7-6 7s-5-2-6.5-4.5L3 13.5a1.6 1.6 0 0 1 2.6-1.8L8 14"/></g></svg>Toca una porción para cortarla</p>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<div class="card" id="card" role="dialog" aria-live="polite">
+  <div class="ico" id="c-ico">👑</div>
+  <h2 id="c-h">¡La figurita!</h2>
+  <p id="c-p">Este año eres el rey de la casa.</p>
+  <div class="row">
+    <button type="button" class="btn btn-ghost" id="c-again">Seguir cortando</button>
+    <a class="btn btn-primary" id="c-cta" href="index.html?encargo=roscon#encargar"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg>Reservar roscón</a>
+  </div>
+</div>
+
+<p class="note">Recreación ilustrativa · roscón de obrador</p>
+<div class="loading" id="loading">Horneando el roscón…</div>
+<div class="no3d" id="no3d" hidden><div><img src="img/roscon.jpg" alt="Roscón de Reyes de Longinos con fruta escarchada, almendra y nata"><h2>Este juego necesita 3D</h2><p>Tu navegador no puede mostrarlo, pero el roscón de verdad sí puedes reservarlo.</p><a class="btn btn-primary" href="index.html?encargo=roscon#encargar">Reservar roscón</a><a class="btn btn-ghost" href="index.html">Volver</a></div></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+<script>
+(function(){
+"use strict";
+var reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
+var $=function(id){return document.getElementById(id)};
+function fail(){$('no3d').hidden=false;$('loading').classList.add('done')}
+if(!window.THREE){fail();return}
+var canvas=$('c'),renderer;
+try{renderer=new THREE.WebGLRenderer({canvas:canvas,antialias:true})}catch(e){fail();return}
+renderer.setPixelRatio(Math.min(devicePixelRatio||1,1.5));
+renderer.shadowMap.enabled=true;renderer.shadowMap.type=THREE.PCFSoftShadowMap;
+
+var scene=new THREE.Scene();scene.background=new THREE.Color('#212226');scene.fog=new THREE.Fog('#212226',14,26);
+var camera=new THREE.PerspectiveCamera(38,1,.1,60);camera.position.set(0,5,6.4);
+var controls=new THREE.OrbitControls(camera,canvas);
+controls.target.set(0,.25,0);controls.enablePan=false;controls.enableDamping=true;controls.dampingFactor=.08;
+controls.minDistance=4.2;controls.maxDistance=12;controls.minPolarAngle=.35;controls.maxPolarAngle=1.22;
+controls.autoRotate=!reduced;controls.autoRotateSpeed=.7;
+controls.addEventListener('start',function(){controls.autoRotate=false});
+
+/* luces cálidas de pastelería */
+scene.add(new THREE.HemisphereLight('#FFF4E2','#5A3A2A',.75));
+var sun=new THREE.DirectionalLight('#FFE6C4',1.05);sun.position.set(3.5,7,4);sun.castShadow=true;
+sun.shadow.mapSize.set(1024,1024);sun.shadow.camera.left=-4;sun.shadow.camera.right=4;sun.shadow.camera.top=4;sun.shadow.camera.bottom=-4;sun.shadow.radius=4;sun.shadow.bias=-.0006;
+scene.add(sun);
+var rim=new THREE.PointLight('#FFD39A',.5,14);rim.position.set(-4,3,-3);scene.add(rim);
+
+/* texturas pintadas en canvas: el papel naranja de envolver de Longinos y blonda de papel */
+function canvasTex(w,h,draw,rep){var c=document.createElement('canvas');c.width=w;c.height=h;draw(c.getContext('2d'),w,h);var t=new THREE.CanvasTexture(c);if(rep){t.wrapS=t.wrapT=THREE.RepeatWrapping;t.repeat.set(rep,rep)}t.anisotropy=4;return t}
+var vichy=canvasTex(256,256,function(x,w){x.fillStyle='#A83604';x.fillRect(0,0,w,w);x.fillStyle='rgba(255,255,255,.14)';x.font='italic 700 34px Georgia,serif';x.textAlign='center';x.textBaseline='middle';x.save();x.translate(w/2,w*.3);x.rotate(-.18);x.fillText('Longinos',0,0);x.restore();x.save();x.translate(0,w*.8);x.rotate(-.18);x.fillText('Longinos',0,0);x.restore();x.save();x.translate(w,w*.8);x.rotate(-.18);x.fillText('Longinos',0,0);x.restore()},9);
+var cloth=new THREE.Mesh(new THREE.CircleGeometry(12,64),new THREE.MeshStandardMaterial({map:vichy,roughness:.95}));
+cloth.rotation.x=-Math.PI/2;cloth.receiveShadow=true;scene.add(cloth);
+var doily=canvasTex(512,512,function(x,w){var c=w/2;x.clearRect(0,0,w,w);x.fillStyle='#fff';x.beginPath();
+  for(var i=0;i<=96;i++){var a=i/96*Math.PI*2,r=c*(.94+.05*Math.cos(a*48));x.lineTo(c+Math.cos(a)*r,c+Math.sin(a)*r)}x.fill();
+  x.globalCompositeOperation='destination-out';for(var k=0;k<3;k++){var rr=c*(.55+k*.13);for(i=0;i<36+k*12;i++){var a2=i/(36+k*12)*Math.PI*2;x.beginPath();x.arc(c+Math.cos(a2)*rr,c+Math.sin(a2)*rr,c*.018,0,7);x.fill()}}});
+var plateM=new THREE.MeshStandardMaterial({color:'#FFFDF8',roughness:.35,metalness:.05});
+var plate=new THREE.Mesh(new THREE.CylinderGeometry(2.75,2.55,.12,72),plateM);plate.position.y=.06;plate.receiveShadow=true;plate.castShadow=true;scene.add(plate);
+var rimG=new THREE.Mesh(new THREE.TorusGeometry(2.7,.035,10,96),new THREE.MeshStandardMaterial({color:'#D9B25E',metalness:.8,roughness:.3}));rimG.rotation.x=Math.PI/2;rimG.position.y=.12;scene.add(rimG);
+var lace=new THREE.Mesh(new THREE.CircleGeometry(2.55,64),new THREE.MeshStandardMaterial({map:doily,transparent:true,roughness:1}));lace.rotation.x=-Math.PI/2;lace.position.y=.125;lace.receiveShadow=true;scene.add(lace);
+
+/* el roscón: 8 porciones hechas con LatheGeometry (bizcocho, nata y bizcocho) con tapas en los cortes */
+var N=8,R=1.55,ARC=Math.PI*2/N,GAP=.012,Y0=.13;
+function ell(cx,cy,rx,ry,a0,a1,n){var p=[];for(var i=0;i<=n;i++){var a=a0+(a1-a0)*i/n;p.push(new THREE.Vector2(cx+Math.cos(a)*rx,cy+Math.sin(a)*ry))}return p}
+var PROF={
+  bot:ell(R,.14,.6,.15,Math.PI,2*Math.PI,14).concat([new THREE.Vector2(R+.6,.2),new THREE.Vector2(R-.6,.2)]),
+  cream:(function(){var p=[];for(var i=0;i<=24;i++){var t=i/24,x=R-.6+1.2*t;p.push(new THREE.Vector2(x,.2))}
+     for(i=24;i>=0;i--){var t2=i/24,x2=R-.66+1.32*t2;p.push(new THREE.Vector2(x2,.36+.03*Math.sin(t2*Math.PI*9)))}return p})(),
+  top:[new THREE.Vector2(R-.62,.35),new THREE.Vector2(R+.62,.35)].concat(ell(R,.36,.62,.36,0,Math.PI,18))
+};
+var MAT={
+  bread:new THREE.MeshStandardMaterial({color:'#A55E2B',roughness:.5,side:THREE.DoubleSide}),
+  crumb:new THREE.MeshStandardMaterial({color:'#F1D29A',roughness:.9,side:THREE.DoubleSide}),
+  cream:new THREE.MeshStandardMaterial({color:'#FFFBF2',roughness:.55,side:THREE.DoubleSide}),
+  sugar:new THREE.MeshStandardMaterial({color:'#FFFFFF',roughness:.4}),
+  almond:new THREE.MeshStandardMaterial({color:'#E8C99A',roughness:.6}),
+  cherry:new THREE.MeshPhysicalMaterial({color:'#9E1424',roughness:.15,clearcoat:1}),
+  fruitO:new THREE.MeshPhysicalMaterial({color:'#F0A23A',roughness:.25,transmission:0,transparent:true,opacity:.92,clearcoat:.8}),
+  fruitG:new THREE.MeshPhysicalMaterial({color:'#8DB33B',roughness:.25,transparent:true,opacity:.92,clearcoat:.8}),
+  gold:new THREE.MeshStandardMaterial({color:'#E6B54A',metalness:.85,roughness:.25,emissive:'#5A3A00',emissiveIntensity:.25}),
+  bean:new THREE.MeshStandardMaterial({color:'#8A6A3C',roughness:.6})
+};
+function cap(shapePts,phi,mat){var s=new THREE.Shape(shapePts);var g=new THREE.ShapeGeometry(s);g.rotateY(phi-Math.PI/2);return new THREE.Mesh(g,mat)}
+function domeY(r){var d=(r-R)/.62;return .36+.36*Math.sqrt(Math.max(0,1-d*d))}
+var slices=[],pickables=[];
+for(var i=0;i<N;i++){
+  var g=new THREE.Group(),p0=i*ARC+GAP,len=ARC-GAP*2,mid=p0+len/2;
+  g.userData={i:i,mid:mid,open:false,t:0};
+  [['bot',MAT.bread],['cream',MAT.cream],['top',MAT.bread]].forEach(function(L){
+    var m=new THREE.Mesh(new THREE.LatheGeometry(PROF[L[0]],22,p0,len),L[1]);m.castShadow=true;m.receiveShadow=true;g.add(m);pickables.push(m);m.userData.slice=g;
+    var capMat=L[0]==='cream'?MAT.cream:MAT.crumb;
+    [p0,p0+len].forEach(function(ph){var c=cap(PROF[L[0]],ph,capMat);g.add(c);pickables.push(c);c.userData.slice=g})});
+  /* decoración: perlas de azúcar, almendra laminada, fruta escarchada y alguna guinda */
+  var dummy=new THREE.Object3D(),sug=new THREE.InstancedMesh(new THREE.BoxGeometry(.045,.035,.045),MAT.sugar,60);
+  for(var k=0;k<60;k++){var ph=p0+.04+Math.random()*(len-.08),r=R+(Math.random()-.5)*.95;dummy.position.set(Math.sin(ph)*r,domeY(r)+.01,Math.cos(ph)*r);dummy.rotation.set(Math.random()*3,Math.random()*3,Math.random()*3);dummy.updateMatrix();sug.setMatrixAt(k,dummy.matrix)}
+  sug.castShadow=true;g.add(sug);pickables.push(sug);sug.userData.slice=g;
+  for(k=0;k<4;k++){var a=new THREE.Mesh(new THREE.CylinderGeometry(.1,.1,.018,14),MAT.almond);a.scale.z=.6;ph=p0+.08+Math.random()*(len-.16);r=R+(Math.random()-.5)*.7;
+    a.position.set(Math.sin(ph)*r,domeY(r)+.03,Math.cos(ph)*r);a.rotation.set((Math.random()-.5)*.9,Math.random()*3,(Math.random()-.5)*.9);a.castShadow=true;g.add(a)}
+  for(k=0;k<2;k++){var f=new THREE.Mesh(new THREE.BoxGeometry(.16,.1,.13),k?MAT.fruitG:MAT.fruitO);ph=p0+len*(.3+.4*k)+(Math.random()-.5)*.05;r=R+(Math.random()-.5)*.35;
+    f.position.set(Math.sin(ph)*r,domeY(r)+.05,Math.cos(ph)*r);f.rotation.set(Math.random(),Math.random()*3,Math.random());f.castShadow=true;g.add(f);pickables.push(f);f.userData.slice=g}
+  if(i%2===0){var ch=new THREE.Mesh(new THREE.SphereGeometry(.1,18,14),MAT.cherry);ch.position.set(Math.sin(mid)*R,domeY(R)+.07,Math.cos(mid)*R);ch.castShadow=true;g.add(ch);pickables.push(ch);ch.userData.slice=g}
+  g.position.y=Y0;scene.add(g);slices.push(g);
+}
+/* sorpresas: la figurita (una corona dorada) y el haba */
+function crown(){var c=new THREE.Group(),b=new THREE.Mesh(new THREE.CylinderGeometry(.13,.13,.1,20,1,true),MAT.gold);b.material.side=THREE.DoubleSide;c.add(b);
+  for(var k=0;k<5;k++){var t=new THREE.Mesh(new THREE.ConeGeometry(.035,.09,8),MAT.gold);var a=k/5*Math.PI*2;t.position.set(Math.cos(a)*.13,.09,Math.sin(a)*.13);c.add(t);
+    var gem=new THREE.Mesh(new THREE.SphereGeometry(.022,10,8),MAT.cherry);gem.position.set(Math.cos(a)*.135,.0,Math.sin(a)*.135);c.add(gem)}return c}
+function bean(){var b=new THREE.Mesh(new THREE.SphereGeometry(.11,20,14),MAT.bean);b.scale.set(1.25,.55,.8);var g=new THREE.Group();g.add(b);return g}
+var prizes={};
+function deal(){var a=Math.floor(Math.random()*N),b;do{b=Math.floor(Math.random()*N)}while(b===a);prizes={};prizes[a]='figurita';prizes[b]='haba'}
+var props={figurita:crown(),haba:bean()};
+Object.keys(props).forEach(function(k){var o=props[k];o.visible=false;o.traverse(function(m){m.castShadow=true});scene.add(o)});
+
+/* bucle */
+var clock=new THREE.Clock(),running=true,anims=[];
+function tween(dur,fn,done){anims.push({t:0,d:dur,fn:fn,done:done})}
+function ease(t){return 1-Math.pow(1-t,3)}
+function resize(){var w=innerWidth,h=innerHeight;renderer.setSize(w,h,false);camera.aspect=w/h;
+  camera.fov=w<h?50:38;camera.updateProjectionMatrix();
+  if(!resize.done){resize.done=1;if(w<h)camera.position.set(0,7.2,8.4)}}
+addEventListener('resize',resize);resize();
+document.addEventListener('visibilitychange',function(){running=!document.hidden;if(running){clock.getDelta();loop()}});
+var tAll=0;
+function loop(){if(!running)return;requestAnimationFrame(loop);var dt=Math.min(clock.getDelta(),.05);tAll+=dt;
+  for(var i=anims.length-1;i>=0;i--){var a=anims[i];a.t+=dt;var k=Math.min(1,a.t/a.d);a.fn(k);if(k>=1){anims.splice(i,1);a.done&&a.done()}}
+  Object.keys(props).forEach(function(k){var o=props[k];if(o.visible&&o.userData.spin)o.rotation.y+=dt*1.6});
+  /* la porción que invita a tocarla se mueve un poco hasta el primer toque */
+  if(tease){var s=slices[tease.i];s.position.y=Y0+Math.max(0,Math.sin(tAll*3))*.06}
+  controls.update();renderer.render(scene,camera)}
+loop();
+setTimeout(function(){$('loading').classList.add('done')},350);
+
+/* juego */
+var opened=0,found={},tease=reduced?null:{i:0};
+function toast(m){var t=$('toast');t.textContent=m;t.classList.add('on');clearTimeout(toast.k);toast.k=setTimeout(function(){t.classList.remove('on')},1800)}
+function card(ico,h,p,end){$('c-ico').textContent=ico;$('c-h').innerHTML=h;$('c-p').textContent=p;$('c-again').textContent=end?'Otro roscón':'Seguir cortando';$('card').dataset.end=end?'1':'';$('card').classList.add('on')}
+$('c-again').addEventListener('click',function(){$('card').classList.remove('on');if($('card').dataset.end)reset()});
+function cut(s){
+  if(s.userData.open||$('card').classList.contains('on'))return;
+  if(tease){slices[tease.i].position.y=Y0;tease=null}
+  $('hint').classList.add('gone');
+  s.userData.open=true;opened++;$('count').textContent=opened+'/'+N;
+  var m=s.userData.mid,dx=Math.sin(m),dz=Math.cos(m),prize=prizes[s.userData.i],axis=new THREE.Vector3(dz,0,-dx);
+  tween(reduced?.01:.7,function(k){var e=ease(k);s.position.set(dx*.85*e,Y0+.25*Math.sin(e*Math.PI)+.02*e,dz*.85*e);s.quaternion.setFromAxisAngle(axis,-.18*e)},function(){
+    if(!prize){toast(['Nada por aquí… prueba otra','Solo roscón (y nata)','¡Qué buena pinta! Pero nada','Sigue, que está cerca'][opened%4]);check();return}
+    var o=props[prize],r=R+.1;o.position.set(dx*(r+.85),Y0+.3,dz*(r+.85));o.scale.setScalar(.01);o.visible=true;o.userData.spin=true;
+    tween(reduced?.01:.9,function(k){var e=ease(k);o.position.y=Y0+.3+1.0*e;o.scale.setScalar(.01+1.8*e)},function(){
+      found[prize]=true;
+      if(prize==='figurita')card('👑','¡La <i>figurita</i>!',found.haba?'Y el haba ya salió: ¡roscón resuelto! Corona para ti este año.':'Este año eres el rey de la casa. Ojo, que el haba sigue escondida…',!!found.haba);
+      else card('🫘','¡El <i>haba</i>!','Ya sabes lo que toca: este año el roscón lo pagas tú. Mejor resérvalo con tiempo.',!!found.figurita);
+    })});
+}
+function check(){if(opened===N&&!(found.figurita&&found.haba))reset()}
+function reset(){
+  opened=0;found={};$('count').textContent='0/'+N;deal();
+  Object.keys(props).forEach(function(k){props[k].visible=false});
+  slices.forEach(function(s){var p=s.position.clone(),r=s.quaternion.clone();s.userData.open=false;
+    tween(reduced?.01:.6,function(k){var e=ease(k);s.position.lerpVectors(p,new THREE.Vector3(0,Y0,0),e);s.quaternion.slerpQuaternions?s.quaternion.slerpQuaternions(r,new THREE.Quaternion(),e):THREE.Quaternion.slerp(r,new THREE.Quaternion(),s.quaternion,e)})});
+  toast('Roscón nuevo: ¡a cortar!');
+}
+deal();
+
+/* tocar sin arrastrar = cortar */
+var ray=new THREE.Raycaster(),ptr=new THREE.Vector2(),down=null;
+canvas.addEventListener('pointerdown',function(e){down=[e.clientX,e.clientY,Date.now()]});
+canvas.addEventListener('pointerup',function(e){if(!down)return;var dx=e.clientX-down[0],dy=e.clientY-down[1];var quick=Date.now()-down[2]<600;down=null;
+  if(dx*dx+dy*dy>64||!quick)return;
+  ptr.set(e.clientX/innerWidth*2-1,-(e.clientY/innerHeight)*2+1);ray.setFromCamera(ptr,camera);
+  var hit=ray.intersectObjects(pickables,false)[0];if(hit&&hit.object.userData.slice)cut(hit.object.userData.slice)});
+canvas.addEventListener('pointermove',function(e){if(e.pointerType!=='mouse')return;ptr.set(e.clientX/innerWidth*2-1,-(e.clientY/innerHeight)*2+1);ray.setFromCamera(ptr,camera);
+  var hit=ray.intersectObjects(pickables,false)[0];canvas.style.cursor=hit&&!hit.object.userData.slice.userData.open?'pointer':'grab'});
+/* teclado: Intro corta la siguiente porción entera */
+canvas.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();var s=slices.filter(function(x){return !x.userData.open})[0];s&&cut(s)}});
+})();
+</script>
+</body>
+</html>
