@@ -158,6 +158,18 @@ p{margin:0}
 @keyframes deckin{from{opacity:0;transform:translateY(-44%) rotate(6deg) scale(.9)}to{opacity:1;transform:translateY(-50%)}}
 @media (prefers-reduced-motion:reduce){.seal{animation:none}.card{transition:none}}
 
+
+/* Hero: tinta en agua (vídeo de Seedance) fundida sobre la fachada con "screen": el negro desaparece y queda la tinta */
+.hero-vid{position:absolute;inset:0;z-index:1;pointer-events:none;overflow:hidden;opacity:0;transition:opacity 1.6s ease;-webkit-mask-image:linear-gradient(90deg,transparent 18%,#000 58%);mask-image:linear-gradient(90deg,transparent 18%,#000 58%)}
+.hero-vid.on{opacity:.9}
+.hero-vid video{width:100%;height:100%;object-fit:cover;mix-blend-mode:screen;filter:saturate(1.15) contrast(1.05)}
+@media (max-width:960px){.hero-vid{-webkit-mask-image:linear-gradient(180deg,#000 30%,transparent 72%);mask-image:linear-gradient(180deg,#000 30%,transparent 72%)}}
+/* Cierre: prácticas sobre látex en vídeo */
+.final-vid{position:absolute;inset:0;z-index:-2;overflow:hidden}
+.final-vid video{width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity 1.2s}
+.final-vid video.on{opacity:1}
+@media (prefers-reduced-motion:reduce){.hero-vid,.final-vid video{display:none}}
+
 /* Cifras */
 .facts{background:var(--jungle);color:#F2ECE3;border-top:1px solid rgba(255,255,255,.08)}
 .facts ul{list-style:none;margin:0;padding:26px 0;display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
@@ -298,7 +310,8 @@ mark{background:#FFE58A;padding:0 4px;border-radius:4px}
 
 /* Cierre y pie */
 .final{padding-block:clamp(80px,11vw,140px);text-align:center;position:relative;overflow:hidden;isolation:isolate}
-.final::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(15,12,11,.82),rgba(15,12,11,.92)),url("img/practica-modelo-w.jpg") center 35%/cover}
+.final{background:#0F0C0B url("img/practica-modelo-w.jpg") center 35%/cover}
+.final::before{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(70% 60% at 50% 45%,rgba(15,12,11,.82),rgba(15,12,11,.45))}
 .final .wrap{display:grid;justify-items:center;gap:18px}
 .final h2{font-size:clamp(42px,6vw,82px);max-width:11em}
 .final h2 .display{display:block}
@@ -527,6 +540,7 @@ html.cta-wait .mbar{transform:translateY(150%)!important;opacity:0!important;poi
 <main>
   <section class="hero" id="hero">
     <picture class="hero-bg" aria-hidden="true"><source media="(max-width:640px)" srcset="img/hero-m.jpg"><img src="img/hero.jpg" alt="" fetchpriority="high" decoding="async"></picture>
+    <div class="hero-vid" aria-hidden="true"><video id="hero-video" muted loop playsinline preload="none" data-src="img/tinta.mp4" data-src-m="img/tinta-m.mp4"></video></div>
     <div class="hero-inner wrap">
       <span class="eyebrow" data-t="eyebrow">Escuela oficial · Alcorcón, Madrid</span>
       <h1 data-t="h1">Tu pasión, hecha oficio. <span class="display">Del látex a la piel.</span></h1>
@@ -732,6 +746,7 @@ html.cta-wait .mbar{transform:translateY(150%)!important;opacity:0!important;poi
   </section>
 
   <section class="final band-jungle">
+    <div class="final-vid" aria-hidden="true"><video id="final-video" muted loop playsinline preload="none" data-src="img/practica.mp4" data-src-m="img/practica-m.mp4"></video></div>
     <div class="wrap">
       <span class="eyebrow">Akira School</span>
       <h2>Tu pasión, hecha oficio. <span class="display">Empieza aquí.</span></h2>
@@ -1217,6 +1232,19 @@ var AREAS=[
   window.addEventListener('scroll',function(){if(!tk){tk=true;requestAnimationFrame(prog)}},{passive:true});
 })();
 })();
+
+
+/* ---------- Vídeos de ambiente (Seedance): el del hero tras el loader; el del cierre al acercarse. Sin movimiento reducido no se cargan ---------- */
+(function(){if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+ var m=innerWidth<641;
+ function arranca(v,on){if(!v||v.src)return;v.src=v.dataset[m?'srcM':'src'];function ok(){on.classList.add('on')}v.addEventListener('playing',ok,{once:true});v.addEventListener('timeupdate',ok,{once:true});var p=v.play();p&&p.catch(function(){})}
+ var hv=document.getElementById('hero-video'),fv=document.getElementById('final-video');
+ function hero(){arranca(hv,hv.parentNode)}
+ if(document.readyState==='complete')setTimeout(hero,600);else addEventListener('load',function(){setTimeout(hero,600)});
+ /* pausa fuera de pantalla y con la pestaña oculta (por scroll, que dentro del visor el IntersectionObserver no es fiable) */
+ var tk=false;function sync(){tk=false;[hv,fv].forEach(function(v){if(!v||!v.src)return;var r=v.getBoundingClientRect(),vis=r.bottom>0&&r.top<innerHeight&&!document.hidden;if(vis&&v.paused){var p=v.play();p&&p.catch(function(){})}else if(!vis&&!v.paused)v.pause()});
+  if(fv&&!fv.src&&fv.getBoundingClientRect().top<innerHeight*1.6)arranca(fv,fv)}
+ addEventListener('scroll',function(){if(!tk){tk=true;requestAnimationFrame(sync)}},{passive:true});document.addEventListener('visibilitychange',sync);sync();})();
 
 /* ---------- Botones flotantes tras un mínimo scroll (cabecera y barra móvil ocultas al pintar el hero) ---------- */
 (function(){var h=document.documentElement,tk=false;function s(){tk=false;h.classList.toggle('cta-wait',scrollY<=Math.min(120,innerHeight*.15))}
