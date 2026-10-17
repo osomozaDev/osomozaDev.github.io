@@ -1,0 +1,1331 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Fotografía inmobiliaria en Murcia y Alicante · CostaFoto</title>
+<meta name="description" content="Fotografía inmobiliaria profesional en la Región de Murcia y la provincia de Alicante: fotos editadas en Lightroom con plano CubiCasa PLUS incluido, vídeo y reels, dron y tours virtuales Matterport 3D. Partner de Idealista desde 2023, más de 350 tours realizados. Desde 80 € + IVA, entrega en 24–48 h.">
+<meta name="theme-color" content="#151215">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300;1,9..144,400&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="icon" href="img/icono.png">
+<style>
+/* CostaFoto — fotografía inmobiliaria. Editorial y luminoso como sus fotos: papel claro, Fraunces fina para titulares,
+   el magenta de su logotipo solo como acento. Un único gesto: el visor de la cámara que dispara sus fotos reales. */
+:root{
+  color-scheme: light;
+  --shell:#F5F2EF;
+  --shell-2:#EAE5E1;
+  --paper:#FCFAF8;
+  --ink:#171316;
+  --ink-soft:#6A6166;
+  --mag:#D10074;
+  --mag-ink:#A3005A;
+  --wine:#6B0D3B;
+  --hibiscus:#D10074;
+  --hibiscus-ink:#A3005A;
+  --palm:#171316;
+  --sun:#D10074;
+  --night:#141114;
+  --line:rgba(23,19,22,.12);
+  --font-display:"Fraunces", Georgia, serif;
+  --font-body:"Manrope", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono:"JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  --r-sm:8px; --r-md:14px; --r-lg:18px;
+  --shadow:0 30px 60px -36px rgba(23,19,22,.4);
+  --wrap:1200px;
+  --head:74px;
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html{scroll-behavior:smooth;scroll-padding-top:calc(var(--head) + 12px)}
+body{margin:0;background:var(--shell);color:var(--ink);font-family:var(--font-body);font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:clip}
+img,video{max-width:100%;display:block}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--mag);outline-offset:3px;border-radius:4px}
+.wrap{max-width:var(--wrap);margin-inline:auto;padding-inline:clamp(20px,4vw,48px)}
+h1,h2,h3{margin:0;text-wrap:balance;font-family:var(--font-display);font-weight:300;line-height:1.04;letter-spacing:-.02em;font-optical-sizing:auto}
+h1 em,h2 em{font-style:italic;color:var(--ink)}
+h2 em::after{content:"";display:inline-block;width:.15em;height:.15em;margin-left:.06em;border-radius:50%;background:var(--mag);vertical-align:.05em}
+h3{font-size:24px;font-weight:400}
+p{margin:0}
+.eyebrow{display:inline-block;font-size:12.5px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-soft)}
+.lead{font-size:clamp(17px,1.4vw,19px);color:var(--ink-soft);max-width:36em}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 28px;border-radius:999px;font:700 15.5px/1.15 var(--font-body);letter-spacing:.01em;text-decoration:none;border:1px solid transparent;cursor:pointer;transition:background .25s,color .25s,border-color .25s,transform .25s,box-shadow .25s}
+.btn svg{width:19px;height:19px;flex:none}
+.btn-primary{background:var(--mag);color:#fff;box-shadow:0 12px 30px -14px rgba(209,0,116,.65)}
+.btn-primary:hover{background:var(--mag-ink);transform:translateY(-1px)}
+.btn-ghost{background:transparent;border-color:var(--line);color:var(--ink)}
+.btn-ghost:hover{border-color:var(--ink)}
+.btn-light{background:#fff;color:var(--ink)}
+.btn-light:hover{background:var(--mag);color:#fff}
+.link{display:inline-flex;align-items:center;gap:8px;font-weight:700;text-decoration:none;border-bottom:1px solid var(--line);padding-bottom:2px;transition:border-color .2s,gap .2s}
+.link svg{width:17px;height:17px}
+.link:hover{border-color:currentColor;gap:12px}
+.sec{padding-block:clamp(84px,11vw,148px)}
+.sec-head{display:grid;gap:18px;max-width:780px;margin-bottom:clamp(40px,5vw,64px)}
+.sec-head h2,.book-cta h2,.visit h2,.tour-copy h2,.plan-grid h2,.me-grid h2{font-size:clamp(40px,5.2vw,72px)}
+.band-white{background:var(--paper)}
+.band-ink{background:var(--night);color:#F5F1EE}
+.band-ink .eyebrow,.band-ink .lead{color:rgba(245,241,238,.64)}
+.band-ink h2 em{color:#F5F1EE}
+
+/* Loader con el logo: las esquinas del visor se cierran sobre el logotipo y salta un destello de flash */
+.intro{position:fixed;inset:0;z-index:300;display:grid;place-items:center;overflow:hidden;background:radial-gradient(80% 70% at 50% 45%,#2A1622 0%,var(--night) 70%);transition:opacity .55s ease,visibility 0s .55s}
+.intro.out{opacity:0;visibility:hidden;pointer-events:none}
+.intro-core{position:relative;display:grid;justify-items:center;gap:22px;color:#F5F1EE}
+.intro-core small{font-size:12px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:rgba(245,241,238,.6);text-align:center;padding-inline:20px}
+.intro-vf{position:relative;display:grid;place-items:center;padding:30px 34px}
+.intro-vf img{width:clamp(170px,22vw,230px);height:auto}
+.intro-vf .c{position:absolute;width:22px;height:22px;border:0 solid var(--mag);animation:vf-in .8s cubic-bezier(.2,.8,.2,1) both}
+.intro-vf .c.tl{left:0;top:0;border-left-width:2px;border-top-width:2px;--dx:-14px;--dy:-14px}
+.intro-vf .c.tr{right:0;top:0;border-right-width:2px;border-top-width:2px;--dx:14px;--dy:-14px}
+.intro-vf .c.bl{left:0;bottom:0;border-left-width:2px;border-bottom-width:2px;--dx:-14px;--dy:14px}
+.intro-vf .c.br{right:0;bottom:0;border-right-width:2px;border-bottom-width:2px;--dx:14px;--dy:14px}
+@keyframes vf-in{from{transform:translate(var(--dx),var(--dy));opacity:0}}
+.intro-flash{position:absolute;inset:0;background:#fff;opacity:0;pointer-events:none;animation:flash .5s ease-out .62s both}
+@keyframes flash{0%{opacity:0}12%{opacity:.55}100%{opacity:0}}
+.intro-vf.sm{padding:20px 24px}.intro-vf.sm img{width:150px}
+.intro-vf.sm .c{animation:vf-pulse 1.3s ease-in-out infinite alternate}
+@keyframes vf-pulse{to{transform:translate(calc(var(--dx)*-.4),calc(var(--dy)*-.4))}}
+
+/* Cabecera */
+.top{position:fixed;top:0;left:0;right:0;padding-top:env(safe-area-inset-top,0px);z-index:60;background:rgba(245,242,239,.88);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);transition:background .4s,color .4s}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;height:var(--head)}
+.brand{display:flex;align-items:center;text-decoration:none}
+.brand img{height:40px;width:auto}
+.brand .b-dark{display:none}
+.top.dark .b-dark{display:block}.top.dark .b-light{display:none}
+.nav{display:flex;gap:clamp(18px,2.2vw,32px);font-size:14.5px;font-weight:600}
+.nav a{text-decoration:none;color:var(--ink-soft);white-space:nowrap}
+.nav a:hover{color:var(--ink)}
+.top .btn{min-height:42px;padding:0 20px;font-size:14.5px}
+.top.dark{background:rgba(20,17,20,.42);color:#F5F1EE}
+.top.dark .nav a{color:rgba(245,241,238,.72)}
+.top.dark .nav a:hover{color:#fff}
+.progress{position:absolute;left:0;bottom:-1px;height:2px;width:100%;background:var(--mag);transform:scaleX(0);transform-origin:left}
+
+.hero-ctas{display:flex;flex-wrap:wrap;gap:22px;margin-top:34px;align-items:center}
+
+/* ===== HERO PROPIO ===== */
+/* Hero «visor»: fondo de noche (como una sesión twilight), y a la derecha el visor de la cámara con sus fotos reales:
+   esquinas, rejilla de tercios, punto de enfoque, datos y contador. Al disparar, las láminas del obturador se cierran y entra la siguiente. */
+.hero.vf{position:relative;isolation:isolate;overflow:hidden;color:#F5F1EE;
+  background:radial-gradient(70% 80% at 78% 40%,#3A1630 0%,#1E1219 45%,var(--night) 80%);
+  padding:calc(var(--head) + clamp(30px,4.5vw,64px)) 0 0}
+.hero.vf::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;opacity:.6;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 .05 0'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E")}
+.vf-grid{position:relative;z-index:1;display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(28px,4.5vw,72px);align-items:center}
+.vf-grid>*{min-width:0}
+.vf .hero-copy{display:grid;justify-items:start}
+.vf .eyebrow{color:rgba(245,241,238,.7)}
+.vf h1{font-size:clamp(46px,5.6vw,88px);line-height:.98;margin-top:20px;letter-spacing:-.03em;font-weight:300}
+.vf h1 em{display:block;color:#fff;font-style:italic}
+.vf h1 em::after{content:"";display:inline-block;width:.14em;height:.14em;margin-left:.05em;border-radius:50%;background:var(--mag);vertical-align:.06em}
+.vf .hero-sub{margin-top:24px;max-width:30em;font-size:clamp(16px,1.25vw,18px);color:rgba(245,241,238,.8)}
+.vf .hero-ctas{margin-top:32px;gap:16px 26px}
+.vf .link-3d{color:#fff;border-bottom-color:rgba(255,255,255,.3)}
+.vf .link-3d svg{color:#FF5CB0}
+.vf .hero-note{margin-top:16px;font-size:14px;color:rgba(245,241,238,.62)}
+/* el visor */
+.vf-cam{position:relative;margin:0;--w:min(100%,calc((100svh - var(--head) - 150px) * 1.5),740px);width:var(--w);justify-self:end}
+.vf-frame{position:relative;aspect-ratio:3/2;border-radius:var(--r-md);overflow:hidden;background:#000;cursor:pointer;box-shadow:0 0 0 1px rgba(255,255,255,.1),0 40px 90px -30px rgba(0,0,0,.8),0 0 120px -40px rgba(209,0,116,.45);container-type:inline-size}
+.vf-shot{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .5s ease}
+.vf-shot.on{opacity:1}
+@keyframes kb{from{transform:scale(1.04)}to{transform:none}}
+.vf-hud{position:absolute;inset:0;pointer-events:none;color:#fff;font:500 clamp(10px,1.7cqw,12.5px)/1 var(--mono);letter-spacing:.06em;text-shadow:0 1px 6px rgba(0,0,0,.55)}
+.vf-grid3{position:absolute;inset:0;background:
+  linear-gradient(90deg,transparent calc(33.33% - .5px),rgba(255,255,255,.3) 0,rgba(255,255,255,.3) calc(33.33% + .5px),transparent 0,transparent calc(66.66% - .5px),rgba(255,255,255,.3) 0,rgba(255,255,255,.3) calc(66.66% + .5px),transparent 0),
+  linear-gradient(0deg,transparent calc(33.33% - .5px),rgba(255,255,255,.3) 0,rgba(255,255,255,.3) calc(33.33% + .5px),transparent 0,transparent calc(66.66% - .5px),rgba(255,255,255,.3) 0,rgba(255,255,255,.3) calc(66.66% + .5px),transparent 0);opacity:.75}
+.vf-hud .c{position:absolute;width:6cqw;height:6cqw;max-width:34px;max-height:34px;border:0 solid #fff;opacity:.95}
+.vf-hud .c.tl{left:3.2cqw;top:3.2cqw;border-left-width:2px;border-top-width:2px}
+.vf-hud .c.tr{right:3.2cqw;top:3.2cqw;border-right-width:2px;border-top-width:2px}
+.vf-hud .c.bl{left:3.2cqw;bottom:3.2cqw;border-left-width:2px;border-bottom-width:2px}
+.vf-hud .c.br{right:3.2cqw;bottom:3.2cqw;border-right-width:2px;border-bottom-width:2px}
+.vf-focus{position:absolute;left:50%;top:50%;width:9cqw;height:7cqw;margin:-3.5cqw 0 0 -4.5cqw;border:1.5px solid #fff;border-radius:3px;opacity:.9;transition:transform .3s,border-color .3s}
+.vf-frame.ready .vf-focus{animation:af 4.2s ease-in-out infinite}
+@keyframes af{0%,8%{transform:scale(1.35);border-color:#fff;opacity:.5}16%,80%{transform:scale(1);border-color:#7CFF9B;opacity:1}90%,100%{transform:scale(1);border-color:#fff;opacity:.9}}
+.vf-top{position:absolute;left:5.6cqw;top:5cqw;display:flex;align-items:center;gap:8px;text-transform:uppercase}
+.vf-dot{width:7px;height:7px;border-radius:50%;background:var(--mag);box-shadow:0 0 10px var(--mag)}
+.vf-bot{position:absolute;right:5.6cqw;top:5cqw;display:flex;gap:14px;text-transform:uppercase}
+.vf-n{font-variant-numeric:tabular-nums}
+/* obturador: dos láminas que se cierran y se abren */
+.vf-iris{position:absolute;inset:0;pointer-events:none;z-index:3}
+.vf-iris i{position:absolute;left:0;right:0;height:51%;background:#050405;transform:translateY(-101%)}
+.vf-iris i+i{bottom:0;transform:translateY(101%)}
+.vf-iris i:first-child{top:0}
+.vf-frame.shoot .vf-iris i{animation:blade .5s cubic-bezier(.6,0,.3,1) both}
+.vf-frame.shoot .vf-iris i+i{animation-name:blade2}
+@keyframes blade{0%{transform:translateY(-101%)}34%,46%{transform:translateY(0)}100%{transform:translateY(-101%)}}
+@keyframes blade2{0%{transform:translateY(101%)}34%,46%{transform:translateY(0)}100%{transform:translateY(101%)}}
+/* sello de prueba: +350 tours (dato de su web; aún no tiene reseñas en Google) */
+.vf-seal{position:absolute;z-index:4;left:-22px;bottom:-26px;display:flex;align-items:center;gap:12px;padding:12px 18px 12px 16px;border-radius:16px;background:#fff;color:var(--ink);text-decoration:none;box-shadow:0 22px 50px -20px rgba(0,0,0,.65);transform:rotate(-3deg);transition:transform .25s}
+.vf-seal:hover{transform:rotate(0) translateY(-2px)}
+.vf-seal b{font:300 40px/1 var(--font-display);letter-spacing:-.03em;color:var(--mag)}
+.vf-seal span{font-size:12.5px;font-weight:700;line-height:1.25;letter-spacing:.02em}
+.vf-shoot{all:unset;box-sizing:border-box;cursor:pointer;position:absolute;z-index:4;right:22px;bottom:-30px;width:64px;height:64px;border-radius:50%;background:rgba(255,255,255,.14);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border:2px solid #fff;display:grid;place-items:center;box-shadow:0 18px 40px -16px rgba(0,0,0,.7);transition:transform .2s}
+.vf-shoot i{width:44px;height:44px;border-radius:50%;background:#fff;transition:transform .15s,background .2s}
+.vf-shoot:hover i{background:#FFD1E8}
+.vf-shoot:active i{transform:scale(.86)}
+.vf-shoot:focus-visible{outline:2px solid #fff;outline-offset:4px}
+.js-anim .vf-cam{animation:vf-rise 1s cubic-bezier(.2,.7,.2,1) both}
+html.loading .vf-cam,html.loading .vf .hero-copy>*{animation-play-state:paused}
+@keyframes vf-rise{from{opacity:0;transform:translateY(30px) scale(.98)}}
+.js-anim .vf .hero-copy>*{animation:rise .9s cubic-bezier(.2,.7,.2,1) both}
+.js-anim .vf .hero-copy>:nth-child(2){animation-delay:.08s}.js-anim .vf .hero-copy>:nth-child(3){animation-delay:.16s}.js-anim .vf .hero-copy>:nth-child(4){animation-delay:.24s}.js-anim .vf .hero-copy>:nth-child(5){animation-delay:.3s}
+/* tira de datos al pie del hero */
+.vf-strip{position:relative;z-index:1;margin-top:clamp(56px,6vw,84px);padding-block:20px clamp(22px,3vw,30px);border-top:1px solid rgba(255,255,255,.12)}
+.vf-strip p{font:400 12.5px/1.7 var(--mono);color:rgba(245,241,238,.6);letter-spacing:.02em}
+.vf-strip b{color:#fff;font-weight:500}
+.vf-strip span{margin:0 10px;color:rgba(245,241,238,.3)}
+
+/* Temporadas: el eyebrow pasa a píldora con punto magenta latiendo */
+.hero .eyebrow.t-on{display:inline-flex;align-items:center;gap:10px;padding:6px 14px 6px 12px;border-radius:999px;border:1px solid rgba(245,241,238,.25);color:#F5F1EE;letter-spacing:.16em}
+.hero .eyebrow.t-on::before{content:"";width:6px;height:6px;border-radius:50%;flex:none;background:var(--mag);box-shadow:0 0 0 0 rgba(209,0,116,.6);animation:t-pulso 2s ease-out infinite}
+@keyframes t-pulso{70%{box-shadow:0 0 0 7px rgba(209,0,116,0)}100%{box-shadow:0 0 0 0 rgba(209,0,116,0)}}
+
+@media (max-width:960px){
+  .vf-grid{grid-template-columns:1fr}
+  .vf-cam{order:-1;justify-self:stretch;--w:100%}
+  .vf-strip span:nth-of-type(n+3),.vf-strip b:nth-of-type(n+4){display:none}
+}
+@media (min-width:641px) and (max-width:960px){.vf-cam{--w:min(100%,calc((52svh) * 1.5));justify-self:center}}
+@media (max-width:640px){
+  .hero.vf{padding-top:var(--head)}
+  .vf-grid{gap:0}
+  .vf-cam{margin-inline:calc(-1 * clamp(20px,4vw,48px));width:auto}
+  .vf-frame{aspect-ratio:auto;height:min(64vw,32svh);border-radius:0;box-shadow:none}
+  .vf-hud .c{width:22px;height:22px}
+  .vf-top{display:none}
+  .vf-bot{top:auto;left:5.6cqw;bottom:5cqw;justify-content:space-between}
+  .vf-seal{left:auto;right:12px;bottom:auto;top:10px;padding:7px 11px 7px 10px;gap:8px;border-radius:12px;transform:none}
+  .vf-seal b{font-size:24px}.vf-seal span{font-size:10.5px}
+  .vf-shoot{right:14px;bottom:-24px;width:50px;height:50px}.vf-shoot i{width:34px;height:34px}
+  .vf .hero-copy{padding-top:20px}
+  .vf .eb-2{display:none}
+  .vf h1{font-size:clamp(34px,10.4vw,52px);margin-top:10px}
+  .vf .hero-sub{margin-top:12px;font-size:15.5px}
+  .vf .hero-ctas{margin-top:18px;gap:12px;width:100%}
+  .vf .hero-ctas>.btn{width:100%}
+  .vf .hero-note{margin-top:10px;font-size:13px}
+  .vf-strip{margin-top:30px}
+  .vf-strip p{font-size:11.5px}
+}
+@media (max-width:640px) and (max-height:760px){.vf .hero-sub{display:none}}
+@media (max-width:360px){.vf .link-3d{font-size:14.5px}}
+@media (min-width:961px) and (max-height:600px){
+  .hero.vf{padding-top:calc(var(--head) + 16px)}
+  .vf h1{font-size:clamp(40px,4.4vw,60px);margin-top:12px}
+  .vf .hero-sub{display:none}
+  .vf .hero-ctas{margin-top:18px}
+  .vf-cam{--w:min(100%,calc((100svh - var(--head) - 60px) * 1.5),740px)}
+  .vf-seal{bottom:-14px}.vf-shoot{bottom:-18px}
+}
+@media (prefers-reduced-motion:reduce){.vf-shot{transition:none}}
+/* ===== /HERO PROPIO ===== */
+
+/* Manifiesto */
+.manifesto .wrap{display:grid;gap:28px}
+.mani{font:300 clamp(34px,4.8vw,68px)/1.08 var(--font-display);letter-spacing:-.02em;max-width:22ch}
+.mani .w{display:inline-block;transition:opacity .5s ease,color .5s ease}
+.js-anim .mani .w{opacity:.18}
+.js-anim .mani.lit .w{opacity:1}
+.mani .w.hot{font-style:italic;color:var(--mag)}
+
+/* Galería */
+.gal{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:clamp(150px,17vw,230px);gap:14px}
+.ph{all:unset;cursor:zoom-in;position:relative;display:block;border-radius:var(--r-md);overflow:hidden;background:var(--shell-2)}
+.ph img{width:100%;height:100%;object-fit:cover;transition:transform .9s cubic-bezier(.2,.7,.2,1)}
+.ph:hover img{transform:scale(1.05)}
+.ph.big{grid-column:span 2;grid-row:span 2}
+.ph.wide{grid-column:span 2}
+.ph::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(0,0,0,.45),transparent 42%)}
+.ph span{position:absolute;z-index:1;left:14px;bottom:12px;color:#fff;font:500 12px/1 var(--mono);letter-spacing:.06em;text-transform:uppercase}
+.ph:focus-visible{outline:2px solid var(--mag);outline-offset:2px}
+.lb{position:fixed;inset:0;z-index:150;background:rgba(14,12,14,.95);display:grid;place-items:center;gap:18px;padding:64px 16px 24px;grid-template-rows:1fr auto}
+.lb img{max-width:min(1000px,100%);max-height:100%;border-radius:8px;object-fit:contain;align-self:center}
+.lb-x{all:unset;cursor:pointer;position:absolute;top:14px;right:18px;width:44px;height:44px;display:grid;place-items:center;color:#fff;font-size:32px}
+.lb-nav{all:unset;cursor:pointer;position:absolute;top:50%;transform:translateY(-50%);width:48px;height:48px;border-radius:50%;display:grid;place-items:center;color:#fff;background:rgba(255,255,255,.14);transition:background .2s}
+.lb-nav:hover{background:rgba(255,255,255,.26)}
+.lb-nav.prev{left:14px}.lb-nav.next{right:14px}
+.lb-nav svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.lb-foot{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:12px 22px;color:rgba(255,255,255,.78);font-size:14px;font-variant-numeric:tabular-nums}
+
+/* Servicios */
+.svc4{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(24px,3vw,44px);border-top:1px solid var(--line);padding-top:32px}
+.svc4 article{display:grid;gap:12px;align-content:start}
+.svc4 b{font:500 13px var(--mono);color:var(--mag)}
+.svc4 h3{font-size:28px;line-height:1.1}
+.svc4 p{color:var(--ink-soft);font-size:16px}
+
+/* Vídeo de dron */
+.air{position:relative;height:clamp(260px,32vw,440px);overflow:hidden;background:#0d0b0d;color:#fff}
+.air video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.air::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(10,8,10,.7),transparent 55%)}
+.air-cap{position:absolute;z-index:1;left:0;right:0;bottom:clamp(20px,3vw,36px);display:grid;gap:8px}
+.air-cap .eyebrow{color:rgba(255,255,255,.75)}
+.air-cap p{font:300 clamp(26px,3.4vw,46px)/1.08 var(--font-display);letter-spacing:-.02em}
+.air-cap em{font-style:italic}
+
+/* Tour Matterport */
+.tour-grid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:clamp(36px,5vw,80px);align-items:start}
+.tour-copy{display:grid;gap:20px}
+.tour-ben{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:14px}
+.tour-ben h3{font-size:22px;margin-bottom:10px;color:#fff}
+.tour-ben ul{list-style:none;margin:0;padding:0;display:grid}
+.tour-ben li{padding:9px 0 9px 22px;border-bottom:1px solid rgba(255,255,255,.1);position:relative;font-size:15.5px;color:rgba(245,241,238,.82)}
+.tour-ben li::before{content:"";position:absolute;left:2px;top:17px;width:8px;height:8px;border-radius:50%;background:var(--mag)}
+.tour-side{display:grid;gap:18px}
+.tour-card{position:relative;display:block;aspect-ratio:4/3;border-radius:var(--r-lg);overflow:hidden;text-decoration:none;color:#fff;box-shadow:0 30px 70px -30px rgba(0,0,0,.8)}
+.tour-card img{width:100%;height:100%;object-fit:cover;transition:transform 1s cubic-bezier(.2,.7,.2,1)}
+.tour-card:hover img{transform:scale(1.04)}
+.tour-card::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(10,8,10,.75),rgba(10,8,10,.05) 60%)}
+.tc-play{position:absolute;z-index:1;left:50%;top:44%;width:84px;height:84px;margin:-42px 0 0 -42px;border-radius:50%;display:grid;place-items:center;background:rgba(209,0,116,.92);box-shadow:0 0 0 10px rgba(209,0,116,.25);animation:tc 2.4s ease-in-out infinite}
+.tc-play svg{width:36px;height:36px}
+@keyframes tc{50%{box-shadow:0 0 0 18px rgba(209,0,116,.08)}}
+.tc-t{position:absolute;z-index:1;left:22px;right:22px;bottom:18px;display:grid;gap:2px}
+.tc-t b{font:400 26px/1.1 var(--font-display)}
+.tc-t small{font-size:13.5px;color:rgba(255,255,255,.75)}
+.tour-price{display:grid;grid-template-columns:1.3fr 1fr;gap:12px}
+.tour-price>div{padding:18px 20px;border:1px solid rgba(255,255,255,.14);border-radius:var(--r-md);display:grid;gap:4px;align-content:start}
+.tp-k{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(245,241,238,.6);margin-bottom:4px}
+.tour-price p{font-size:15px;color:rgba(245,241,238,.8)}
+.tour-price p b{font:400 24px var(--font-display);color:#fff;margin-right:6px}
+.tour-price small{font-size:12.5px;color:rgba(245,241,238,.55);margin-top:6px}
+/* Panel del tour */
+.mp .bk-panel{width:min(1180px,100%);background:var(--night);color:#F5F1EE}
+.mp .bk-head{background:var(--night);border-bottom-color:rgba(255,255,255,.12)}
+.mp .bk-head .t span{color:rgba(245,241,238,.6)}
+.mp .bk-head .t b{color:#fff}
+.mp .bk-ib{color:#fff}.mp .bk-ib:hover{background:rgba(255,255,255,.1)}
+.mp-main{position:relative;flex:1;min-height:0;background:#000}
+.mp-main iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.mp-load{position:absolute;inset:0;display:grid;place-content:center;justify-items:center;gap:16px;background:var(--night);color:rgba(245,241,238,.7);font-size:14px;font-weight:700;transition:opacity .4s}
+.mp-load.done{opacity:0;pointer-events:none}
+.mp-foot{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px 20px;padding:12px 18px calc(12px + env(safe-area-inset-bottom,0px));border-top:1px solid rgba(255,255,255,.12)}
+.mp-foot p{font-size:14px;color:rgba(245,241,238,.7);max-width:36em}
+.mp-foot div{display:flex;flex-wrap:wrap;gap:10px}
+.mp-foot .btn{min-height:46px;padding:0 20px;font-size:14.5px}
+.mp-foot .btn-ghost{color:#fff;border-color:rgba(255,255,255,.25)}
+
+/* Plano */
+.plan-grid{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(36px,5vw,80px);align-items:center}
+.plan-grid>div{display:grid;gap:20px;justify-items:start}
+.plan{margin:0;background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);padding:clamp(12px,2vw,24px);box-shadow:var(--shadow)}
+.plan img{width:100%;height:auto}
+.plan figcaption{margin-top:10px;font:400 12px var(--mono);color:var(--ink-soft);letter-spacing:.02em}
+
+/* Tarifas */
+.packs{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(16px,2vw,26px)}
+.pack{display:grid;gap:6px;align-content:start;padding:28px 26px 26px;border-radius:var(--r-lg);background:#fff;border:1px solid var(--line)}
+.pack.hot{border-color:var(--mag);box-shadow:0 30px 60px -36px rgba(209,0,116,.55)}
+.pk-k{font:400 30px/1.1 var(--font-display)}
+.pack small{font-size:14px;color:var(--ink-soft)}
+.pk-p{font:300 58px/1 var(--font-display);letter-spacing:-.03em;margin:16px 0 10px;color:var(--ink)}
+.pk-p i{font:600 14px var(--font-body);font-style:normal;color:var(--ink-soft);margin-left:6px;letter-spacing:0}
+.pack ul{list-style:none;margin:0 0 20px;padding:0;display:grid}
+.pack li{padding:9px 0 9px 26px;border-top:1px solid var(--line);font-size:15.5px;position:relative}
+.pack li::before{content:"";position:absolute;left:0;top:13px;width:14px;height:8px;border-left:2px solid var(--mag);border-bottom:2px solid var(--mag);transform:rotate(-45deg)}
+.pack .btn{width:100%;margin-top:auto}
+.extras{margin-top:clamp(40px,5vw,64px);display:grid;grid-template-columns:minmax(0,.6fr) minmax(0,1.4fr);gap:10px 48px;align-items:start}
+.extras h3{font-size:30px}
+.extras ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:0 32px}
+.extras li{display:flex;align-items:baseline;gap:10px;padding:13px 0;border-bottom:1px solid var(--line)}
+.extras li span{flex:1;font-weight:600;font-size:15.5px}
+.extras li small{display:block;font-weight:400;font-size:13.5px;color:var(--ink-soft)}
+.extras li b{font:400 22px var(--font-display);color:var(--mag);white-space:nowrap}
+.extras li s{font-size:13.5px;color:var(--ink-soft)}
+.ex-note{grid-column:2;font-size:13.5px;color:var(--ink-soft);margin-top:6px}
+
+/* Sobre mí */
+.me-grid{display:grid;grid-template-columns:minmax(0,.75fr) minmax(0,1.25fr);gap:clamp(36px,6vw,96px);align-items:center}
+.me-grid>div{display:grid;gap:20px}
+.me{position:relative;margin:0;border-radius:var(--r-lg);background:radial-gradient(90% 80% at 50% 30%,#F6D7E7,#E9C3D6 60%,#D9A9C1);overflow:hidden;aspect-ratio:1}
+.me>img{position:absolute;left:50%;bottom:0;width:92%;transform:translateX(-50%)}
+.me-badge{position:absolute;left:14px;bottom:14px;padding:10px 14px;border-radius:12px;background:rgba(255,255,255,.9)}
+.me-badge img{height:28px;width:auto}
+.me-p{color:var(--ink-soft)}
+.me-ideal{display:grid;gap:4px;padding:18px 20px;border-left:3px solid #C7E300;background:#fff;border-radius:0 12px 12px 0}
+.me-ideal b{font-size:15.5px}.me-ideal span{font-size:14.5px;color:var(--ink-soft)}
+
+/* Reserva */
+.book-cta{display:grid;grid-template-columns:1fr auto;gap:40px;align-items:end}
+.book-cta>div{display:grid;gap:18px}
+.book-perks{list-style:none;margin:6px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:8px 28px;font-size:14.5px;color:rgba(245,241,238,.62)}
+.book-cta .btn{min-height:58px;padding:0 34px;font-size:16px}
+.draft{outline:2px dashed #E5B300;outline-offset:-12px}
+.incl{list-style:none;margin:0;padding:0;display:grid;gap:10px;font-size:18px}
+mark{background:#FFE58A;padding:0 4px;border-radius:4px}
+
+/* Contacto */
+.visit{display:grid;grid-template-columns:1fr 1fr;gap:clamp(36px,6vw,96px);align-items:start}
+.visit>div:first-child{display:grid;gap:18px;justify-items:start}
+.contact{list-style:none;margin:6px 0 0;padding:0;display:grid;gap:12px}
+.contact li{display:flex;align-items:flex-start;gap:12px}
+.contact svg{width:18px;height:18px;flex:none;color:var(--mag);margin-top:4px}
+.contact a{text-decoration:none;font-weight:600}
+.contact a:hover{color:var(--mag)}
+.faq{display:grid;border-top:1px solid var(--line)}
+.faq details{border-bottom:1px solid var(--line)}
+.faq summary{cursor:pointer;list-style:none;padding:20px 0;font:400 21px/1.25 var(--font-display);display:flex;justify-content:space-between;gap:16px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font:300 24px/1 var(--font-body);color:var(--ink-soft);transition:transform .25s}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq details p{padding:0 0 22px;color:var(--ink-soft)}
+
+/* Cierre */
+.final{padding-block:clamp(100px,13vw,170px);text-align:center;border-top:1px solid var(--line)}
+.final .wrap{display:grid;justify-items:center;gap:26px}
+.final-logo{height:46px;width:auto}
+.final h2{font-size:clamp(40px,5.6vw,84px);line-height:1}
+.final h2 em{display:block}
+.final .hero-ctas{justify-content:center;margin-top:0}
+.foot .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;font-size:13.5px;color:var(--ink-soft);padding-block:26px;border-top:1px solid var(--line)}
+
+/* Animaciones */
+.js-anim [data-reveal]{opacity:0;transform:translateY(24px);transition:opacity 1s cubic-bezier(.2,.7,.2,1),transform 1s cubic-bezier(.2,.7,.2,1)}
+.js-anim [data-reveal].in{opacity:1;transform:none}
+@keyframes rise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+.totop{background:#fff!important;color:var(--ink)!important;border-color:var(--line)!important;-webkit-backdrop-filter:none!important;backdrop-filter:none!important}
+
+/* Paneles con la paleta de la marca */
+.bk-opts input:checked+span{background:#FDEAF4!important;border-color:var(--mag);color:var(--mag-ink)}
+.bk-opts.row span{line-height:1.2}
+.f-preview{white-space:pre-wrap;word-break:break-word;background:#fff;border:1px solid var(--line);border-radius:12px;margin:0;font:13.5px/1.5 var(--font-body)}
+.f-copy{all:unset;cursor:pointer;justify-self:start;font-weight:700;font-size:14.5px;border-bottom:1px solid var(--line)}
+.f-error{margin:0;color:#B3003F;font-size:14px;font-weight:600}
+.bk-foot{display:grid}
+.btn-wa{background:#1FAF5A;color:#fff}
+
+.mbar{display:none}
+
+@media (max-width:960px){
+  .nav{display:none}
+  .visit,.book-cta,.tour-grid,.plan-grid,.me-grid,.extras{grid-template-columns:1fr}
+  .svc4{grid-template-columns:1fr 1fr}
+  .packs{grid-template-columns:1fr}
+  .pack{max-width:560px}
+  .ex-note{grid-column:auto}
+  .me{max-width:420px}
+}
+@media (max-width:640px){
+  :root{--head:64px}
+  body{font-size:16px;padding-bottom:84px}
+  .top .btn{display:none}
+  .brand img{height:32px}
+  .gal{grid-template-columns:1fr 1fr;grid-auto-rows:130px;gap:10px}
+  .svc4{grid-template-columns:1fr;gap:26px}
+  .tour-ben{grid-template-columns:1fr}
+  .tour-price{grid-template-columns:1fr}
+  .extras ul{grid-template-columns:1fr}
+  .book-cta .btn{width:100%}
+  .final .hero-ctas{flex-direction:column;width:100%}.final .hero-ctas .btn{width:100%}
+  .mp-foot .btn{flex:1}
+  .mbar{display:flex;gap:6px;position:fixed;left:12px;right:12px;bottom:calc(10px + env(safe-area-inset-bottom,0px));z-index:70;padding:6px;border-radius:999px;background:rgba(245,242,239,.9);-webkit-backdrop-filter:blur(18px) saturate(1.5);backdrop-filter:blur(18px) saturate(1.5);border:1px solid rgba(23,19,22,.1);box-shadow:0 14px 34px -14px rgba(23,19,22,.45)}
+  .mbar.dark{background:rgba(20,17,20,.6);border-color:rgba(255,255,255,.16)}
+  .mbar .btn{flex:1;min-height:48px;white-space:nowrap;box-shadow:none}
+  .mbar .btn-ghost{flex:0 0 48px;width:48px;padding:0;border-color:transparent;background:rgba(23,19,22,.07)}
+  .mbar.dark .btn-ghost{background:rgba(255,255,255,.16);color:#fff}
+  .mbar .btn-ghost svg{width:20px;height:20px}
+  .mbar.off{transform:translateY(150%);opacity:0;pointer-events:none}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+
+/* Botones flotantes (cabecera y barra móvil): aparecen tras un mínimo scroll, no al pintar el hero */
+.top .btn-primary{transition:opacity .35s,transform .35s cubic-bezier(.2,.7,.2,1),background .25s,box-shadow .25s}
+html.cta-wait .top .btn-primary{opacity:0;transform:translateY(-8px);pointer-events:none}
+.mbar{transition:transform .35s cubic-bezier(.2,.7,.2,1),opacity .35s,background .4s,border-color .4s}
+html.cta-wait .mbar{transform:translateY(150%)!important;opacity:0!important;pointer-events:none}
+h2 em.nd::after{content:none}
+@container (max-width:560px){.vf-top{display:none}}
+
+/* ---- Paneles laterales ---- */
+.bk{position:fixed;inset:0;z-index:120}
+.bk[hidden]{display:none}
+.bk-scrim{position:absolute;inset:0;background:rgba(18,18,20,.55);opacity:0;transition:opacity .35s ease}
+.bk.open .bk-scrim{opacity:1}
+.bk-panel{position:absolute;top:0;right:0;bottom:0;width:min(480px,100%);background:var(--shell);display:flex;flex-direction:column;box-shadow:-30px 0 80px -30px rgba(18,18,20,.45);transform:translateX(100%);transition:transform .42s cubic-bezier(.2,.8,.2,1)}
+.bk.open .bk-panel{transform:none}
+.bk-head{display:grid;grid-template-columns:44px 1fr 44px;align-items:center;gap:8px;padding:calc(10px + env(safe-area-inset-top,0px)) 12px 10px;border-bottom:1px solid var(--line);background:#fff}
+.bk-head .t{text-align:center;display:grid;gap:2px}
+.bk-head .t span{font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft)}
+.bk-head .t b{font-family:var(--font-display);font-weight:400;font-size:20px;color:var(--hibiscus);line-height:1.1}
+.bk-ib{all:unset;cursor:pointer;width:44px;height:44px;border-radius:50%;display:grid;place-items:center;color:var(--ink)}
+.bk-ib:hover{background:var(--shell-2)}
+.bk-ib:focus-visible{outline:3px solid var(--hibiscus)}
+.bk-ib svg{width:22px;height:22px}
+.bk-ib[disabled]{visibility:hidden}
+.bk-prog{height:4px;background:var(--shell-2)}
+.bk-prog i{display:block;height:100%;background:linear-gradient(90deg,var(--hibiscus),var(--sun));transform-origin:left;transition:transform .35s ease}
+.bk-body{flex:1;overflow-y:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch;padding:28px 22px 24px}
+.bk-pane{display:grid;gap:18px;align-content:start}
+.bk-pane[hidden]{display:none}
+.bk-pane h3{font-size:clamp(26px,6vw,32px);line-height:1.1}
+.bk-pane .sub{color:var(--ink-soft);margin-top:-8px}
+.bk-opts{display:grid;gap:10px}
+.bk-opts label{position:relative;cursor:pointer;display:block}
+.bk-opts input{position:absolute;opacity:0;inset:0;margin:0;cursor:pointer}
+.bk-opts span{display:flex;align-items:center;justify-content:space-between;min-height:58px;padding:0 18px;border-radius:16px;border:1.5px solid var(--line);background:#fff;font-size:17px;font-weight:600;transition:border-color .2s,background .2s,color .2s}
+.bk-opts span::after{content:"";width:22px;height:22px;border-radius:50%;border:2px solid var(--line);flex:none;transition:all .2s}
+.bk-opts input[type=checkbox]+span::after{border-radius:7px}
+.bk-opts input:checked+span{border-color:var(--hibiscus);background:#FFF1E3;color:var(--hibiscus-ink)}
+.bk-opts input:checked+span::after{border-color:var(--hibiscus);background:var(--hibiscus) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='none' stroke='white' stroke-width='3.2' stroke-linecap='round' stroke-linejoin='round' d='M6 12l4 4 8-8'/%3E%3C/svg%3E") center/14px no-repeat}
+.bk-opts input:focus-visible+span{outline:3px solid var(--hibiscus);outline-offset:2px}
+.bk-opts.row{grid-template-columns:repeat(auto-fit,minmax(0,1fr));gap:8px}
+.bk-opts.row span{justify-content:center;min-height:50px;padding:0 10px;font-size:15px;text-align:center}
+.bk-opts.row span::after{display:none}
+.bk-field{display:grid;gap:8px;min-width:0}
+.bk-field>span{font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-soft)}
+.bk-field input,.bk-field textarea{display:block;width:100%;min-width:0;max-width:100%;min-height:56px;padding:14px 16px;border-radius:14px;border:1.5px solid var(--line);background:#fff;font:500 17px var(--font-body);color:var(--ink);-webkit-appearance:none;appearance:none}
+.bk-field input[type=date]{text-align:left}
+.bk-field input::-webkit-date-and-time-value{text-align:left}
+.bk-field textarea{min-height:96px;resize:vertical}
+.cal{background:#fff;border:1.5px solid var(--line);border-radius:18px;padding:10px 12px 14px}
+.cal-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:6px}
+.cal-head b{font-size:17px}
+.cal-head .bk-ib[disabled]{visibility:visible;opacity:.25;cursor:default}
+.cal-dow,.cal-grid{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:4px;text-align:center}
+.cal-dow span{font-size:12px;font-weight:700;color:var(--ink-soft);padding:4px 0}
+.cal-dow .we,.cal-grid .we{color:var(--hibiscus)}
+.cal-grid button{all:unset;box-sizing:border-box;cursor:pointer;aspect-ratio:1;max-height:48px;width:100%;display:grid;place-items:center;border-radius:12px;font-weight:600;font-size:15px;font-variant-numeric:tabular-nums;color:var(--ink);transition:background .15s,color .15s}
+.cal-grid button.we{color:var(--hibiscus)}
+.cal-grid button:hover:not([disabled]){background:var(--shell-2)}
+.cal-grid button[disabled]{opacity:.28;cursor:default}
+.cal-grid button{position:relative}
+.cal-grid button.today{opacity:1;color:var(--ink);box-shadow:inset 0 0 0 2px var(--sun);background:#FFF6EE}
+.cal-grid button.today::after{content:"";position:absolute;left:50%;bottom:12%;width:5px;height:5px;margin-left:-2.5px;border-radius:50%;background:#E0864A}
+.cal-legend{display:flex;align-items:center;gap:6px;margin:10px 2px 0;font-size:13px;font-weight:600;color:var(--ink-soft)}
+.cal-legend i{width:14px;height:14px;border-radius:5px;box-shadow:inset 0 0 0 2px var(--sun);background:#FFF6EE;position:relative;flex:none}
+.cal-legend i::after{content:"";position:absolute;left:50%;bottom:2px;width:4px;height:4px;margin-left:-2px;border-radius:50%;background:#E0864A}
+.cal-grid button[aria-pressed="true"]{background:var(--hibiscus);color:#fff}
+.cal-grid button:focus-visible{outline:3px solid var(--hibiscus);outline-offset:1px}
+.cal-sel{margin:4px 0 0;font-weight:600;color:var(--ink-soft)}
+.cal-sel.on{color:var(--hibiscus-ink)}
+.bk-field input:focus,.bk-field textarea:focus{outline:none;border-color:var(--hibiscus)}
+.bk-field input[aria-invalid="true"]{border-color:#C6283D;background:#FFF2F4}
+.stepper{display:grid;grid-template-columns:56px 1fr 56px;align-items:center;background:#fff;border:1.5px solid var(--line);border-radius:16px;overflow:hidden}
+.stepper button{all:unset;cursor:pointer;height:56px;display:grid;place-items:center;font-size:26px;font-weight:600;color:var(--hibiscus)}
+.stepper button:active{background:var(--shell-2)}
+.stepper button:focus-visible{outline:3px solid var(--hibiscus);outline-offset:-3px}
+.stepper output{text-align:center;font-size:22px;font-weight:700;font-variant-numeric:tabular-nums}
+.bk-foot{padding:12px 22px calc(14px + env(safe-area-inset-bottom,0px));border-top:1px solid var(--line);background:#fff;display:grid;gap:8px}
+.bk-foot .btn{width:100%;min-height:56px;font-size:17px}
+.bk-foot [hidden]{display:none!important}
+.f-error{margin:0;color:#B3213A;font-weight:600;font-size:15px}
+.btn-wa{background:#1FA855;color:#fff;box-shadow:0 12px 24px -12px rgba(31,168,85,.8);width:100%;white-space:nowrap}
+.btn-wa:hover{background:#178F47}
+.btn-wa svg{width:22px;height:22px}
+.f-preview{margin:0;white-space:pre-wrap;font:16px/1.5 var(--font-body);background:#E7FFDB;border-radius:16px 16px 16px 4px;padding:16px 18px;color:#123;box-shadow:0 1px 0 rgba(0,0,0,.06)}
+.f-copy{all:unset;cursor:pointer;justify-self:center;font-size:14px;font-weight:600;color:var(--hibiscus-ink);text-decoration:underline;text-underline-offset:3px;padding:4px 8px}
+.f-copy:focus-visible{outline:3px solid var(--hibiscus);border-radius:6px}
+.f-hint{margin:0;font-size:13px;color:var(--ink-soft);text-align:center}
+
+
+.hrs{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.stepper.sm{grid-template-columns:40px 1fr 40px;border-radius:14px}
+.stepper.sm button{height:44px;font-size:22px}
+.stepper.sm button[disabled]{opacity:.25;cursor:default}
+.stepper.sm output{font-size:18px}
+.hrs-out{margin:-4px 0 0;font-size:14px;font-weight:600;color:var(--hibiscus-ink)}
+/* Panel compacto: ningún paso necesita scroll */
+.bk-body{padding:18px 18px 14px}
+.bk-pane{gap:14px}
+.bk-pane h3{font-size:24px}
+.bk-pane .sub{margin-top:-6px;font-size:15px}
+.bk-field{gap:6px}
+.bk-field>span{font-size:12px}
+.bk-opts{gap:8px}
+.bk-opts span{min-height:50px;font-size:16px;border-radius:14px}
+.bk-opts.row span{min-height:44px}
+.bk-opts.grid2{grid-template-columns:1fr 1fr}
+.bk-opts.grid2 span{min-height:44px;padding:0 12px;font-size:14px}
+.bk-opts.grid2 span::after{width:18px;height:18px}
+.bk-field input,.bk-field textarea{min-height:48px;padding:11px 14px;font-size:16px}
+.bk-field textarea{min-height:76px}
+.stepper{grid-template-columns:52px 1fr 52px}
+.stepper button{height:48px}
+.cal{padding:6px 8px 10px}
+.cal-head{margin-bottom:2px}
+.cal-head .bk-ib{width:38px;height:38px}
+.cal-dow span{padding:2px 0}
+.cal-grid{gap:2px}
+.cal-grid button{aspect-ratio:auto;height:clamp(34px,5.2vh,44px)}
+.cal-legend{margin-top:6px;font-size:12px}
+.cal-sel{margin:0;font-size:14px}
+.f-preview{font-size:14px;padding:12px 14px}
+.bk-foot{padding:10px 18px calc(10px + env(safe-area-inset-bottom,0px));gap:6px}
+.bk-foot .btn{min-height:50px}
+.bk-head{padding-block:calc(6px + env(safe-area-inset-top,0px)) 6px}
+@media (max-height:700px){
+  .bk-pane h3{font-size:22px}
+  .bk-opts span{min-height:46px}
+  .bk-opts.row span,.bk-opts.grid2 span{min-height:40px}
+  .stepper button{height:44px}
+  .cal-grid button{height:32px;font-size:14px}
+  .bk-body{padding-top:14px}
+  .f-preview{font-size:13px;line-height:1.4;padding:10px 12px}
+  .bk-pane .sub{font-size:13.5px}
+}
+@media (max-height:620px){.bk-pane{gap:10px}.bk-pane h3{font-size:20px}.f-preview{font-size:12.5px;line-height:1.35}}
+.rvd-body{display:grid;grid-template-columns:minmax(0,1fr);gap:18px;align-content:start;overflow-x:hidden;overscroll-behavior-x:none;touch-action:pan-y}
+.rvd .bk-panel{overflow-x:hidden;max-width:100vw}
+.rvd-body>*,.rvd-list>*{min-width:0;max-width:100%}
+.rvd-list .rv,.rvd-list .rv *{overflow-wrap:anywhere}
+.rvd-list .rv-top{flex-wrap:wrap}.rvd-list .rv-tag{white-space:normal}
+.rvd-sum{display:grid;grid-template-columns:auto minmax(0,1fr);gap:22px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:var(--r-md);padding:18px 20px}
+.rvd-score{display:grid;justify-items:center;gap:4px}
+.rvd-score b{font-size:44px;line-height:1;font-weight:700;color:var(--ink)}
+.rvd-score small{font-size:13px;color:var(--ink-soft)}
+.rvd-dist{list-style:none;margin:0;padding:0;display:grid;gap:5px;font-size:13px;color:var(--ink-soft)}
+.rvd-dist li{display:grid;grid-template-columns:12px 1fr 22px;gap:8px;align-items:center}
+.rvd-dist i{height:8px;border-radius:99px;background:var(--shell-2);overflow:hidden}.rvd-dist b{display:block;height:100%;background:#F5B400;border-radius:99px}
+.rvd-dist em{font-style:normal;text-align:right}
+.rvd-h{margin:6px 0 0;font-size:17px}
+.rvd-list{display:grid;grid-template-columns:minmax(0,1fr);gap:12px}
+.rvd-list .rv{background:#fff;opacity:1!important;transform:none!important}
+.rvd-map{border-radius:var(--r-md);overflow:hidden;border:1px solid var(--line);background:var(--shell-2);height:300px;flex:none}
+.rvd-map iframe{width:100%;height:100%;border:0;display:block}
+.rvd-note{margin:0;font-size:13px;color:var(--ink-soft)}
+.rvd-foot{padding:12px 16px calc(12px + env(safe-area-inset-bottom,0px));border-top:1px solid var(--line);background:#fff}
+.rvd-foot .btn{width:100%}
+/* Simulador en panel lateral; los tres rombos del logo hacen de cargador */
+.sim .bk-panel{width:min(1120px,100%);background:var(--night);color:#F4F1EA;box-shadow:-30px 0 80px -30px rgba(0,0,0,.6)}
+.sim .bk-head{background:var(--night);border-bottom-color:rgba(244,241,234,.14)}
+.sim .bk-head .t span{color:rgba(244,241,234,.62)}
+.sim .bk-head .t b{color:#F4F1EA}
+.sim .bk-ib{color:#F4F1EA}
+.sim .bk-ib:hover{background:rgba(255,255,255,.1)}
+.sim-main{position:relative;flex:1;min-height:0;display:flex;flex-direction:column}
+.sim-body{flex:1;min-height:0;overflow-y:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch;padding:clamp(18px,3vw,36px);padding-bottom:calc(clamp(18px,3vw,36px) + env(safe-area-inset-bottom,0px))}
+.sim-load{position:absolute;inset:0;z-index:5;display:grid;place-content:center;justify-items:center;gap:22px;background:var(--night);color:rgba(244,241,234,.7);font-size:14px;font-weight:600;letter-spacing:.04em;transition:opacity .4s}
+.sim-load.done{opacity:0;pointer-events:none}
+.rhombs{width:112px;height:auto;overflow:visible}
+.rhombs path{transform-box:fill-box;transform-origin:center;animation:rhomb 1.35s ease-in-out infinite}
+.rhombs .r-top{fill:#F4F1EA}
+.rhombs .r-l{fill:#F58200;animation-delay:.18s}
+.rhombs .r-r{fill:#F58200;animation-delay:.36s}
+@keyframes rhomb{0%,65%,100%{opacity:.2;transform:scale(.82)}28%{opacity:1;transform:scale(1)}}
+/* Subir arriba */
+.totop{position:fixed;right:20px;bottom:24px;z-index:65;width:48px;height:48px;border-radius:50%;border:1px solid rgba(255,255,255,.6);background:rgba(255,255,255,.72);-webkit-backdrop-filter:blur(14px) saturate(1.6);backdrop-filter:blur(14px) saturate(1.6);color:var(--ink);display:grid;place-items:center;cursor:pointer;box-shadow:0 10px 30px -10px rgba(21,21,21,.3);opacity:0;transform:translateY(12px) scale(.9);pointer-events:none;transition:opacity .3s,transform .3s}
+.totop.on{opacity:1;transform:none;pointer-events:auto}
+.totop:hover{transform:translateY(-2px)}
+.totop svg{width:22px;height:22px}
+@media (max-width:960px){.totop{bottom:calc(86px + env(safe-area-inset-bottom,0px));right:16px;width:44px;height:44px}}
+@media (max-width:640px){.bk-panel{width:100%;transform:translateY(100%);box-shadow:none}}
+.bk-head .t b{font-family:var(--font-display);font-weight:400;color:var(--ink)}
+.bk-opts input:checked+span{background:#FFF1E3}
+.btn-wa{font-size:16px}
+.bk-pane h3:focus{outline:none}
+.bk-opts.grid2.tight span{min-height:44px;padding:0 12px;font-size:14.5px}
+@media (max-height:700px){.bk-opts.grid2.tight span{min-height:38px;font-size:14px}}
+
+</style>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-phone" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 22s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></g></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="M3.5 6.5l8.5 6.5 8.5-6.5"/></g></symbol>
+  <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .2-1.3c-.1-.1-.3-.2-.6-.3z"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-cube" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M12 2.5l8.5 4.8v9.4L12 21.5l-8.5-4.8V7.3z"/><path d="M3.8 7.4L12 12l8.2-4.6M12 12v9.3"/></g></symbol>
+  <symbol id="i-cam" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M3 8.5A2.5 2.5 0 0 1 5.5 6h2l1.6-2h5.8l1.6 2h2A2.5 2.5 0 0 1 21 8.5v9a2.5 2.5 0 0 1-2.5 2.5h-13A2.5 2.5 0 0 1 3 17.5z"/><circle cx="12" cy="13" r="4"/></g></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="M5 12.5l4.5 4.5L19 7.5"/></symbol>
+</svg>
+
+<div class="intro" id="intro" aria-hidden="true">
+  <div class="intro-core">
+    <span class="intro-vf"><i class="c tl"></i><i class="c tr"></i><i class="c bl"></i><i class="c br"></i><img src="img/logo-blanco.png" alt=""></span>
+    <small>Fotografía inmobiliaria · Murcia y Alicante</small>
+  </div>
+  <i class="intro-flash"></i>
+</div>
+<noscript><style>.intro{display:none}</style></noscript>
+
+<header class="top dark" id="top">
+  <div class="wrap">
+    <a class="brand" href="#hero" aria-label="CostaFoto, inicio"><img class="b-dark" src="img/logo-blanco.png" alt=""><img class="b-light" src="img/logo.png" alt=""></a>
+    <nav class="nav" aria-label="Secciones">
+      <a href="#trabajos">Fotos</a>
+      <a href="#servicios">Servicios</a>
+      <a href="#tour">Tour 3D</a>
+      <a href="#tarifas">Tarifas</a>
+      <a href="#marek">Sobre mí</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <a class="btn btn-primary" href="#reservar">Pedir sesión</a>
+  </div>
+  <div class="progress" id="progress"></div>
+</header>
+
+<main>
+  <section class="hero vf" id="hero">
+    <div class="wrap vf-grid">
+      <div class="hero-copy">
+        <span class="eyebrow" data-t="eyebrow">Fotografía inmobiliaria<span class="eb-2"> · Murcia y Alicante</span></span>
+        <h1 id="vf-h1" data-t="h1">Que se enamoren <em>antes de la visita</em></h1>
+        <p class="hero-sub" data-t="sub">Fotos editadas en Lightroom con plano CubiCasa incluido, vídeo y reels, dron y tours Matterport 3D para inmobiliarias y propietarios de la Región de Murcia y la provincia de Alicante. Entrega en 24–48 h.</p>
+        <div class="hero-ctas">
+          <a class="btn btn-primary" href="#reservar"><svg aria-hidden="true"><use href="#i-wa"/></svg><span data-t="cta">Pedir mi sesión</span></a>
+          <a class="link link-3d" href="#tour3d"><svg aria-hidden="true"><use href="#i-cube"/></svg>Pasear por una villa en 3D</a>
+        </div>
+        <p class="hero-note" data-t="micro">Respuesta por WhatsApp · desde 80 € + IVA con plano incluido</p>
+      </div>
+
+      <figure class="vf-cam" id="vf" aria-label="Fotografías reales de CostaFoto en el visor de una cámara">
+        <div class="vf-frame" id="vf-frame">
+          <img class="vf-shot on" src="img/salon-vistas.jpg" alt="Salón con vistas a la sierra, fotografiado por CostaFoto" fetchpriority="high" data-cap="Salón con vistas">
+          <img class="vf-shot" src="img/cocina.jpg" alt="Cocina abierta con isla, fotografiada por CostaFoto" loading="lazy" data-cap="Cocina con isla">
+          <img class="vf-shot" src="img/dormitorio.jpg" alt="Dormitorio principal con terraza, fotografiado por CostaFoto" loading="lazy" data-cap="Dormitorio principal">
+          <img class="vf-shot" src="img/salon-terraza.jpg" alt="Salón abierto a la terraza, fotografiado por CostaFoto" loading="lazy" data-cap="Salón y terraza">
+          <img class="vf-shot" src="img/comedor.jpg" alt="Comedor y salón diáfanos, fotografiados por CostaFoto" loading="lazy" data-cap="Comedor y salón">
+          <img class="vf-shot" src="img/salon.jpg" alt="Salón luminoso con salida al jardín, fotografiado por CostaFoto" loading="lazy" data-cap="Salón al jardín">
+          <div class="vf-hud" aria-hidden="true">
+            <span class="vf-grid3"></span>
+            <i class="c tl"></i><i class="c tr"></i><i class="c bl"></i><i class="c br"></i>
+            <span class="vf-focus"></span>
+            <span class="vf-top"><b class="vf-dot"></b>HDR · gran angular · Lightroom</span>
+            <span class="vf-bot"><span id="vf-cap">Salón con vistas</span><span class="vf-n" id="vf-n">01 / 06</span></span>
+          </div>
+          <span class="vf-iris" aria-hidden="true"><i></i><i></i></span>
+        </div>
+        <a class="vf-seal" href="#tour"><b>+350</b><span>tours Matterport<br>realizados</span></a>
+        <button type="button" class="vf-shoot" id="vf-shoot" aria-label="Disparar: ver la siguiente foto"><i></i></button>
+      </figure>
+    </div>
+    <div class="wrap vf-strip">
+      <p><b>Partner de Idealista</b> desde 2023<span>·</span><b>Plano CubiCasa PLUS</b> en cada sesión<span>·</span><b>24–48 h</b> de entrega<span>·</span><b>Piloto de dron</b> con seguro<span>·</span><b>ES · EN · PL</b></p>
+    </div>
+  </section>
+
+  <section class="sec manifesto" id="manifiesto">
+    <div class="wrap">
+      <span class="eyebrow">Marketing visual inmobiliario</span>
+      <h2 class="mani" id="mani">La primera visita a una casa ya no se hace en la puerta: se hace en la pantalla del móvil.</h2>
+      <p class="lead">Capturamos la mejor versión de cada estancia con iluminación técnica y edición de alto nivel, y lo entregamos listo para Idealista, tu web o WhatsApp.</p>
+    </div>
+  </section>
+
+  <section class="sec band-white" id="trabajos">
+    <div class="wrap">
+      <div class="sec-head" data-reveal>
+        <span class="eyebrow">Galería</span>
+        <h2>Cada estancia, <em>en su mejor versión</em></h2>
+        <p class="lead">Fotografía real de viviendas en la Costa Cálida y la Costa Blanca: luz natural, líneas rectas y colores fieles.</p>
+      </div>
+      <div class="gal" id="gal">
+        <button type="button" class="ph big" data-cap="Salón con vistas a la sierra"><img src="img/salon-vistas.jpg" alt="Salón con vistas a la sierra" loading="lazy"><span>Salón con vistas</span></button>
+        <button type="button" class="ph" data-cap="Cocina abierta con isla"><img src="img/cocina-s.jpg" data-full="img/cocina.jpg" alt="Cocina abierta con isla" loading="lazy"><span>Cocina</span></button>
+        <button type="button" class="ph" data-cap="Dormitorio principal con salida a la terraza"><img src="img/dormitorio-s.jpg" data-full="img/dormitorio.jpg" alt="Dormitorio principal con salida a la terraza" loading="lazy"><span>Dormitorio</span></button>
+        <button type="button" class="ph" data-cap="Salón abierto a la terraza"><img src="img/salon-terraza-s.jpg" data-full="img/salon-terraza.jpg" alt="Salón abierto a la terraza" loading="lazy"><span>Salón y terraza</span></button>
+        <button type="button" class="ph" data-cap="Comedor y salón diáfanos"><img src="img/comedor-s.jpg" data-full="img/comedor.jpg" alt="Comedor y salón diáfanos" loading="lazy"><span>Comedor</span></button>
+        <button type="button" class="ph wide" data-cap="Salón luminoso con salida al jardín"><img src="img/salon.jpg" alt="Salón luminoso con salida al jardín" loading="lazy"><span>Salón al jardín</span></button>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="servicios">
+    <div class="wrap">
+      <div class="sec-head" data-reveal>
+        <span class="eyebrow">Servicios</span>
+        <h2>Todo lo que tu anuncio <em>necesita para destacar</em></h2>
+      </div>
+      <div class="svc4">
+        <article data-reveal><b>01</b><h3>Fotografía profesional</h3><p>La mejor versión de cada estancia, con iluminación técnica y edición de alto nivel en Adobe Lightroom. Siempre con el plano CubiCasa PLUS incluido.</p></article>
+        <article data-reveal><b>02</b><h3>Vídeo y reels</h3><p>Recorridos cinematográficos horizontales para YouTube y vídeos verticales dinámicos para Reels y TikTok, grabados con estabilizador.</p></article>
+        <article data-reveal><b>03</b><h3>Matterport 3D y planos</h3><p>Tours virtuales inmersivos Matterport con planos de planta CubiCasa PLUS de ultraprecisión, listos en 24 h.</p></article>
+        <article data-reveal><b>04</b><h3>Fotos y vídeo con dron</h3><p>Vista aérea del entorno, la parcela y perspectivas únicas desde las alturas. Piloto certificado, con seguro y conforme a la normativa española.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="air" id="dron" aria-label="Vídeo aéreo de la Costa Cálida y Murcia">
+    <video id="air-v" muted loop playsinline preload="none" poster="img/dron-poster.jpg"><source src="img/dron.mp4" type="video/mp4"></video>
+    <div class="air-cap wrap"><span class="eyebrow">Desde el aire</span><p>La Manga y Murcia, <em>grabadas con nuestro dron</em></p></div>
+  </section>
+
+  <section class="sec band-ink" id="tour">
+    <div class="wrap tour-grid">
+      <div class="tour-copy" data-reveal>
+        <span class="eyebrow">Tour virtual Matterport 3D</span>
+        <h2>Que la visiten <em>las 24 horas</em></h2>
+        <p class="lead">Muestra tus propiedades a cualquier hora y desde cualquier país, y ahorra visitas improductivas. Partner oficial de Matterport, con más de 350 tours realizados.</p>
+        <div class="tour-ben">
+          <div><h3>Para la agencia</h3><ul><li>Visitas físicas solo con compradores de verdad interesados</li><li>Enlace directo para Idealista, tu web o WhatsApp</li><li>Planos 2D/3D CubiCasa PLUS integrados</li><li>Al vender, el hueco queda libre para otra vivienda</li></ul></div>
+          <div><h3>Para el comprador</h3><ul><li>Recorre cada esquina con total fidelidad</li><li>Vista de maqueta (dollhouse) para entender la distribución</li><li>Se abre en segundos en el navegador, sin apps</li><li>Regla virtual para ver si caben sus muebles</li></ul></div>
+        </div>
+      </div>
+      <div class="tour-side" data-reveal>
+        <a class="tour-card" href="#tour3d"><img src="img/salon-terraza.jpg" alt="Villa del tour de demostración" loading="lazy"><span class="tc-play"><svg aria-hidden="true"><use href="#i-cube"/></svg></span><span class="tc-t"><b>Entrar en la villa</b><small>Demo real en Matterport · pulsa y pasea</small></span></a>
+        <div class="tour-price">
+          <div><span class="tp-k">Creación del tour</span><p><b>50 €</b> 1 vivienda</p><p><b>90 €</b> 2 el mismo día</p><p><b>120 €</b> 3 el mismo día</p><small>Escaneo con cámara Ricoh Z1 · pago único</small></div>
+          <div><span class="tp-k">Alojamiento</span><p><b>15 €</b>/mes</p><small>5 tours activos a la vez. Vendida una, entra otra.</small></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec band-white" id="plano">
+    <div class="wrap plan-grid">
+      <div data-reveal>
+        <span class="eyebrow">CubiCasa Preferred PRO</span>
+        <h2>El plano, <em>de serie</em></h2>
+        <p class="lead">A cada sesión de fotos le acompaña su plano CubiCasa PLUS, con las medidas exactas de cada estancia. Quien mira el anuncio entiende la casa de un vistazo.</p>
+        <a class="link" href="#reservar">Pedir sesión con plano <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      </div>
+      <figure class="plan" data-reveal><img src="img/plano-cubicasa.jpg" alt="Ejemplo real de plano de planta procesado con CubiCasa PLUS" loading="lazy"><figcaption>Ejemplo real de plano procesado con CubiCasa PLUS</figcaption></figure>
+    </div>
+  </section>
+
+  <section class="sec" id="tarifas">
+    <div class="wrap">
+      <div class="sec-head" data-reveal>
+        <span class="eyebrow">Tarifas claras</span>
+        <h2>Precios cerrados, <em>sin sorpresas</em></h2>
+        <p class="lead">Todos los packs incluyen fotografía profesional y plano CubiCasa PLUS. Precios netos, más IVA.</p>
+      </div>
+      <div class="packs">
+        <article class="pack" data-reveal><span class="pk-k">Apartamento</span><small>Hasta 99 m²</small><p class="pk-p">80 €<i>+ IVA</i></p><ul><li>Fotografía profesional completa</li><li>Plano CubiCasa PLUS incluido</li><li>Edición profesional en Lightroom</li><li>Entrega en 24–48 h</li></ul><a class="btn btn-ghost" href="#reservar" data-pack="Apartamento (hasta 99 m²)">Pedir este pack</a></article>
+        <article class="pack hot" data-reveal><span class="pk-k">Casa</span><small>Desde 100 m²</small><p class="pk-p">115 €<i>+ IVA</i></p><ul><li>Fotografía profesional completa</li><li>Plano CubiCasa PLUS incluido</li><li>Edición en alta resolución</li><li>Entrega en 24–48 h</li></ul><a class="btn btn-primary" href="#reservar" data-pack="Casa (desde 100 m²)">Pedir este pack</a></article>
+        <article class="pack" data-reveal><span class="pk-k">Villa</span><small>Desde 180 m²</small><p class="pk-p">150 €<i>+ IVA</i></p><ul><li>Sin límite de estancias</li><li>Plano CubiCasa PLUS incluido</li><li>Edición de alto nivel para fincas y villas</li><li>Entrega en 24–48 h</li></ul><a class="btn btn-ghost" href="#reservar" data-pack="Villa (desde 180 m²)">Pedir este pack</a></article>
+      </div>
+      <div class="extras" data-reveal>
+        <h3>Añádelo a tu pack</h3>
+        <ul>
+          <li><span>Vídeo YouTube <small>recorrido horizontal de 1–2 min</small></span><b>60 €</b><s>109 €</s></li>
+          <li><span>Reel / TikTok <small>vídeo vertical de hasta 60 s</small></span><b>80 €</b><s>109 €</s></li>
+          <li><span>Dron <small>1 min de vídeo + 5 fotos aéreas</small></span><b>60 €</b><s>120 €</s></li>
+          <li><span>Sesión twilight <small>fotos auténticas a la hora dorada o de noche</small></span><b>+100 €</b></li>
+          <li><span>3 reels el mismo día <small>a la carta</small></span><b>221 €</b></li>
+          <li><span>Solo plano CubiCasa PLUS <small>a la carta</small></span><b>60 €</b></li>
+        </ul>
+        <p class="ex-note">Precio con pack y, tachado, a la carta. Todo más IVA.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec band-white" id="marek">
+    <div class="wrap me-grid">
+      <figure class="me" data-reveal><img src="img/marek.png" alt="Marek, fotógrafo de CostaFoto" loading="lazy"><span class="me-badge"><img src="img/logo.png" alt="CostaFoto"></span></figure>
+      <div data-reveal>
+        <span class="eyebrow">Sobre mí</span>
+        <h2>¡Hola, <em class="nd">soy Marek!</em></h2>
+        <p class="lead">Desde 2023 ayudo a los profesionales inmobiliarios a destacar sus propiedades con marketing visual de alta gama. Trabajo en la Región de Murcia, Cartagena y Alicante, y creo contenido inmersivo que hace que cada anuncio marque la diferencia.</p>
+        <p class="me-p">Fotografía profesional, vídeo cinematográfico y tours Matterport 3D, con planos precisos de CubiCasa y todo optimizado para portales como Idealista. Como piloto de dron certificado, trabajo con seguro y cumpliendo la normativa aeronáutica española. Te atiendo en español, inglés o polaco.</p>
+        <div class="me-ideal"><b>Partner oficial de Idealista</b><span>Desde 2023, con contrato firmado con Idealista para la realización de sus servicios audiovisuales e inmobiliarios en España.</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec band-ink" id="reservar">
+    <div class="wrap book-cta" data-reveal>
+      <div>
+        <span class="eyebrow">Reserva sin compromiso</span>
+        <h2>Cuéntame tu inmueble. <em>Yo me encargo del resto</em></h2>
+        <p class="lead">Cuatro preguntas rápidas y tu solicitud sale ya escrita por WhatsApp, con un código propio.</p>
+        <ul class="book-perks"><li>Sin registrarte</li><li>Menos de un minuto</li><li>O escríbeme al 644 43 71 22</li></ul>
+      </div>
+      <a class="btn btn-light" href="#reservar"><svg aria-hidden="true"><use href="#i-wa"/></svg>Pedir mi sesión</a>
+    </div>
+  </section>
+
+  <section class="sec band-white draft" id="borrador" hidden>
+    <div class="wrap">
+      <div class="sec-head"><span class="eyebrow">Borrador · Datos por confirmar</span><h2>Lo que dicen <em>las agencias</em></h2></div>
+      <ul class="incl">
+        <li>Su ficha de Google (CostaFoto.es, «Fotógrafo comercial») aún no tiene reseñas: <mark>[pedir 3–5 reseñas a agencias clientes]</mark></li>
+        <li>Instagram / TikTok de CostaFoto: <mark>[@usuario]</mark></li>
+        <li>Agencias con las que trabaja (con permiso para nombrarlas): <mark>[nombres o logos]</mark></li>
+        <li>Fotos de exteriores, piscinas y twilight propias: <mark>[3–6 fotos]</mark></li>
+        <li>Horario de atención: <mark>[L–V __:__–__:__]</mark></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="sec" id="contacto">
+    <div class="wrap visit">
+      <div data-reveal>
+        <span class="eyebrow">Contacto</span>
+        <h2>¿Hablamos de tu <em class="nd">próximo inmueble?</em></h2>
+        <p class="lead">Trabajo en toda la Región de Murcia y la provincia de Alicante: Murcia, Cartagena, la Costa Cálida, Alicante, Torrevieja, Orihuela Costa y la Costa Blanca.</p>
+        <ul class="contact">
+          <li><svg><use href="#i-wa"/></svg><a href="https://wa.me/34644437122" target="_blank" rel="noopener">644 43 71 22</a> · WhatsApp y teléfono</li>
+          <li><svg><use href="#i-mail"/></svg><a href="mailto:marek@costafoto.es">marek@costafoto.es</a></li>
+          <li><svg><use href="#i-pin"/></svg><a href="https://www.google.com/maps/place/CostaFoto.es/data=!4m7!3m6!1s0x2d4b5255090cfac3:0x4f3a88a403488e81!8m2!3d37.9740499!4d-0.9568371!16s%2Fg%2F11yryj9ct0" target="_blank" rel="noopener">Región de Murcia y provincia de Alicante</a></li>
+        </ul>
+      </div>
+      <div class="faq" data-reveal>
+        <details open><summary>¿Cuánto cuesta una sesión?</summary><p>Desde 80 € + IVA un apartamento de hasta 99 m², 115 € una casa desde 100 m² y 150 € una villa desde 180 m². Siempre con plano CubiCasa PLUS incluido.</p></details>
+        <details><summary>¿Cuándo tengo las fotos?</summary><p>En 24–48 horas, editadas y listas para publicar en Idealista, tu web o enviar por WhatsApp.</p></details>
+        <details><summary>¿Cómo funciona el tour Matterport?</summary><p>Escaneo la vivienda con una cámara Ricoh Z1 (50 €, o menos si son varias el mismo día) y el tour queda alojado por 15 € al mes, con 5 tours activos a la vez. Cuando una se vende, su hueco queda libre para otra.</p></details>
+        <details><summary>¿Hacéis fotos de noche o con dron?</summary><p>Sí: sesión twilight a la hora dorada o de noche para destacar las luces, y fotos y vídeo con dron con piloto certificado y seguro.</p></details>
+        <details><summary>¿Atiendes a propietarios particulares?</summary><p>Sí. Trabajo con agencias y con propietarios que venden o alquilan su vivienda. Te atiendo en español, inglés o polaco.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="final">
+    <div class="wrap">
+      <img class="final-logo" src="img/logo.png" alt="CostaFoto Real Estate Media" loading="lazy">
+      <h2>Que se enamoren <em>antes de la visita</em></h2>
+      <div class="hero-ctas">
+        <a class="btn btn-primary" href="#reservar"><svg aria-hidden="true"><use href="#i-wa"/></svg>Pedir mi sesión</a>
+        <a class="btn btn-ghost" href="#tour3d"><svg aria-hidden="true"><use href="#i-cube"/></svg>Ver el tour 3D</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap"><span>CostaFoto.es · Fotografía inmobiliaria en la Región de Murcia y la provincia de Alicante</span><span>644 43 71 22 · marek@costafoto.es</span></div>
+</footer>
+<button class="totop" id="totop" type="button" aria-label="Subir arriba"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="M12 19V5M5 12l7-7 7 7"/></svg></button>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Foto ampliada" hidden><button type="button" class="lb-x" aria-label="Cerrar">×</button><button type="button" class="lb-nav prev" data-lb="-1" aria-label="Foto anterior"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg></button><img id="lb-img" alt=""><button type="button" class="lb-nav next" data-lb="1" aria-label="Foto siguiente"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></button><div class="lb-foot"><span id="lb-cap"></span><a class="btn btn-light" id="lb-go" href="#reservar">Quiero fotos así</a></div></div>
+
+<div class="bk mp" id="mp" role="dialog" aria-modal="true" aria-labelledby="mp-title" hidden>
+  <div class="bk-scrim" data-mp-x></div>
+  <div class="bk-panel">
+    <header class="bk-head">
+      <span></span>
+      <div class="t"><span>Demo real · Matterport</span><b id="mp-title">Pasea por la villa</b></div>
+      <button type="button" class="bk-ib" data-mp-x aria-label="Cerrar"><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" d="M6 6l12 12M18 6L6 18"/></svg></button>
+    </header>
+    <div class="mp-main">
+      <iframe id="mp-frame" title="Tour virtual Matterport 3D de una villa, hecho por CostaFoto" data-src="https://my.matterport.com/show/?m=ZrUNb8CmqHf&amp;play=1" allowfullscreen allow="xr-spatial-tracking; fullscreen"></iframe>
+      <div class="mp-load" id="mp-load"><span class="intro-vf sm"><i class="c tl"></i><i class="c tr"></i><i class="c bl"></i><i class="c br"></i><img src="img/logo-blanco.png" alt=""></span><span>Abriendo el tour 3D…</span></div>
+    </div>
+    <footer class="mp-foot">
+      <p>Toca el suelo para avanzar, arrastra para mirar y prueba la vista de maqueta y la regla.</p>
+      <div><a class="btn btn-ghost" href="https://my.matterport.com/show/?m=ZrUNb8CmqHf&amp;play=1" target="_blank" rel="noopener">Abrir a pantalla completa</a><a class="btn btn-primary" href="#reservar" data-pick="Tour virtual Matterport 3D">Quiero un tour así</a></div>
+    </footer>
+  </div>
+</div>
+
+<div class="bk" id="bk" role="dialog" aria-modal="true" aria-labelledby="bk-title" hidden>
+  <div class="bk-scrim" id="bk-scrim"></div>
+  <div class="bk-panel">
+    <header class="bk-head">
+      <button type="button" class="bk-ib" id="bk-back" aria-label="Paso anterior"><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M15 18l-6-6 6-6"/></svg></button>
+      <div class="t"><span id="bk-step">Paso 1 de 4</span><b id="bk-title">Tu sesión</b></div>
+      <button type="button" class="bk-ib" id="bk-x" aria-label="Cerrar"><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" d="M6 6l12 12M18 6L6 18"/></svg></button>
+    </header>
+    <div class="bk-prog"><i id="bk-bar" style="transform:scaleX(.25)"></i></div>
+    <form class="bk-body" id="book-form" novalidate>
+      <section class="bk-pane" data-step="1">
+        <h3>¿Qué necesitas?</h3>
+        <p class="sub">Marca todo lo que quieras.</p>
+        <div class="bk-opts grid2 tight">
+          <label><input type="checkbox" name="srv" value="Fotografía + plano CubiCasa"><span>Fotos + plano</span></label>
+          <label><input type="checkbox" name="srv" value="Tour virtual Matterport 3D"><span>Tour 3D</span></label>
+          <label><input type="checkbox" name="srv" value="Vídeo YouTube"><span>Vídeo YouTube</span></label>
+          <label><input type="checkbox" name="srv" value="Reel / TikTok"><span>Reel / TikTok</span></label>
+          <label><input type="checkbox" name="srv" value="Dron"><span>Dron</span></label>
+          <label><input type="checkbox" name="srv" value="Sesión twilight"><span>Twilight</span></label>
+        </div>
+      </section>
+      <section class="bk-pane" data-step="2" hidden>
+        <h3>El inmueble</h3>
+        <div class="bk-field"><span>Tipo</span>
+          <div class="bk-opts row">
+            <label><input type="radio" name="tipo" value="Apartamento (hasta 99 m²)"><span>Piso<br>&lt;99 m²</span></label>
+            <label><input type="radio" name="tipo" value="Casa (desde 100 m²)"><span>Casa<br>100+ m²</span></label>
+            <label><input type="radio" name="tipo" value="Villa (desde 180 m²)"><span>Villa<br>180+ m²</span></label>
+          </div>
+        </div>
+        <label class="bk-field"><span>Localidad</span><input type="text" id="f-donde" placeholder="Cartagena, Torrevieja, La Manga…"></label>
+      </section>
+      <section class="bk-pane" data-step="3" hidden>
+        <h3>¿Cuándo y para quién?</h3>
+        <label class="bk-field"><span>Fecha o días que te van bien</span><input type="text" id="f-cuando" placeholder="Esta semana, el jueves por la mañana…"></label>
+        <div class="bk-field"><span>Soy</span>
+          <div class="bk-opts row">
+            <label><input type="radio" name="quien" value="Agencia inmobiliaria" checked><span>Agencia</span></label>
+            <label><input type="radio" name="quien" value="Propietario/a"><span>Propietario</span></label>
+          </div>
+        </div>
+        <label class="bk-field"><span>Algo más (opcional)</span><input type="text" id="f-notas" placeholder="Piscina, vistas al mar, 2 viviendas el mismo día…"></label>
+      </section>
+      <section class="bk-pane" data-step="4" hidden>
+        <h3>¿Quién eres?</h3>
+        <label class="bk-field"><span>Tu nombre</span><input type="text" id="f-nombre" autocomplete="given-name" placeholder="Laura"></label>
+        <label class="bk-field"><span>Agencia (opcional)</span><input type="text" id="f-empresa" autocomplete="organization" placeholder="Inmobiliaria Mar Menor"></label>
+      </section>
+      <section class="bk-pane" data-step="5" hidden>
+        <h3>Tu solicitud está lista</h3>
+        <p class="sub">Te respondo para confirmar día, hora y precio.</p>
+        <pre class="f-preview" id="f-preview"></pre>
+        <button type="button" class="f-copy" id="f-copy">Copiar mensaje</button>
+      </section>
+    </form>
+    <footer class="bk-foot">
+      <p class="f-error" id="f-error" role="alert" hidden></p>
+      <button type="button" class="btn btn-primary" id="bk-next">Siguiente</button>
+      <a class="btn btn-wa" id="f-wa" href="#" target="_blank" rel="noopener" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-wa"/></svg>Enviar por WhatsApp</a>
+    </footer>
+  </div>
+</div>
+
+<div class="mbar">
+  <a class="btn btn-primary" href="#reservar"><span data-t="mbar">Pedir mi sesión</span></a>
+  <a class="btn btn-ghost" href="tel:+34644437122" aria-label="Llamar al 644 43 71 22"><svg><use href="#i-phone"/></svg></a>
+</div>
+
+<script>
+(function(){
+"use strict";
+var reduced=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+/* ---------- Temporadas de CostaFoto: momentos en que la agencia renueva o prepara sus anuncios ---------- */
+/* Solo servicios de su web (fotos + plano CubiCasa, vídeo, reels, dron, twilight, Matterport). Sin precios nuevos, plazos ni descuentos.
+   Sin decoración: el magenta de marca solo como acento en la píldora del eyebrow. */
+window.TEMPORADAS=[
+  {id:'enero',nombre:'Año nuevo',desde:'01-02',hasta:'01-31',prioridad:1,
+   textos:{eyebrow:'Enero · anuncios nuevos',
+     sub:'Empieza el año con los anuncios renovados: fotos con plano CubiCasa, vídeo, dron y tours Matterport 3D en la Región de Murcia y la provincia de Alicante. Entrega en 24–48 h.',
+     cta:'Renovar mis anuncios',mbar:'Renovar anuncios'},
+   wa:'🗓️ Quiero renovar las fotos de mis anuncios para el nuevo año'},
+  {id:'antes-verano',nombre:'Antes del verano',desde:'04-15',hasta:'06-20',prioridad:1,
+   textos:{eyebrow:'Antes del verano',
+     sub:'Que tu vivienda en la costa luzca antes del verano: fotos a pleno sol, sesión twilight a la hora dorada, reels y vídeo con dron sobre la Costa Cálida y la Costa Blanca.',
+     cta:'Reservar mi sesión'},
+   wa:'☀️ Me gustaría tenerlo listo antes del verano'},
+  {id:'septiembre',nombre:'Vuelta al mercado',desde:'09-01',hasta:'09-30',prioridad:1,
+   textos:{eyebrow:'Septiembre · vuelta al mercado',
+     sub:'Vuelve del verano con la cartera al día: fotos con plano CubiCasa, vídeo, dron y tours Matterport 3D para tus nuevas captaciones, entregados en 24–48 h.',
+     cta:'Reservar mi sesión'},
+   wa:'🗓️ Es para las captaciones de septiembre'}
+];
+/* ---------- Temporadas: la landing cambia sola cuando se acerca una fecha clave del oficio ---------- */
+/* Configura window.TEMPORADAS antes de este bloque (ver references/temporadas/README.md).
+   Pruebas: ?temporada=<id> fuerza una, ?temporada=no las apaga, ?fecha=2027-02-10 simula el día.
+   Selector para enseñarlas: #temporadas en la dirección (en local), 5 toques seguidos en el logo de la cabecera o la tecla T (también dentro del visor del Artifact). */
+(function(){
+var CFG=window.TEMPORADAS||[]; if(!CFG.length)return;
+var MESES=['enero','febrero','marzo','abril','mayo','junio','julio','agosto','septiembre','octubre','noviembre','diciembre'];
+var DAY=864e5;
+function d(y,m,dd){return new Date(y,m-1,dd)}
+function nth(y,m,dow,n){var f=d(y,m,1);return d(y,m,1+(dow-f.getDay()+7)%7+7*(n-1))}       /* n-ésimo día de la semana (0=domingo) del mes */
+function pascua(y){var a=y%19,b=Math.floor(y/100),c=y%100,e=(19*a+b-Math.floor(b/4)-Math.floor((b-Math.floor((8*b+13)/25)+1)/3)+15)%30,
+  f=(32+2*(b%4)+2*Math.floor(c/4)-e-c%4)%7,g=Math.floor((a+11*e+22*f)/451),m=Math.floor((e+f-7*g+114)/31);return d(y,m,(e+f-7*g+114)%31+1)}
+function mas(x,n){return new Date(x.getFullYear(),x.getMonth(),x.getDate()+n)}
+/* Calendario de España. Cada evento devuelve el día clave de ese año. */
+var EV={
+  'reyes':function(y){return d(y,1,6)},
+  'rebajas-invierno':function(y){return d(y,1,7)},
+  'san-valentin':function(y){return d(y,2,14)},
+  'carnaval':function(y){return mas(pascua(y),-47)},            /* martes de carnaval */
+  'dia-padre':function(y){return d(y,3,19)},
+  'semana-santa':function(y){return mas(pascua(y),-3)},         /* jueves santo */
+  'pascua':pascua,
+  'sant-jordi':function(y){return d(y,4,23)},                   /* solo Cataluña */
+  'dia-madre':function(y){return nth(y,5,0,1)},                 /* primer domingo de mayo */
+  'san-isidro':function(y){return d(y,5,15)},                   /* solo Madrid capital */
+  'san-juan':function(y){return d(y,6,24)},
+  'dia-abuelos':function(y){return d(y,7,26)},
+  'vuelta-cole':function(y){return d(y,9,8)},                   /* aproximado: varía por comunidad */
+  'halloween':function(y){return d(y,10,31)},
+  'todos-santos':function(y){return d(y,11,1)},
+  'black-friday':function(y){return mas(nth(y,11,4,4),1)},      /* viernes tras el 4.º jueves */
+  'navidad':function(y){return d(y,12,25)},
+  'nochevieja':function(y){return d(y,12,31)}
+};
+function md(s,y){var p=s.split('-');return d(y,+p[0],+p[1])}
+function antes(t){return t.antes==null?14:t.antes}
+/* Ventanas [inicio, fin, día clave] de una temporada alrededor del año y */
+function ventanas(t,y){var out=[];for(var k=y-1;k<=y+1;k++){
+  if(t.desde){var a=md(t.desde,k),b=md(t.hasta,k);if(b<a)b=md(t.hasta,k+1);out.push([a,b,t.evento?EV[t.evento](b.getFullYear()):b])}
+  else{var e=t.fecha?md(t.fecha,k):EV[t.evento]&&EV[t.evento](k);if(e)out.push([mas(e,-antes(t)),mas(e,t.despues||0),e])}}
+  return out}
+function elegir(hoy){var best=null;hoy=new Date(hoy.getFullYear(),hoy.getMonth(),hoy.getDate());
+  CFG.forEach(function(t){ventanas(t,hoy.getFullYear()).forEach(function(w){if(hoy<w[0]||hoy>w[1])return;
+    var pr=t.prioridad!=null?t.prioridad:(t.desde?1:2),falta=Math.round((w[2]-hoy)/DAY);
+    if(!best||pr>best.pr||(pr===best.pr&&Math.abs(falta)<Math.abs(best.falta)))best={t:t,pr:pr,falta:falta,dia:w[2]}})});
+  return best}
+/* Forzar una temporada aunque hoy no toque: la muestra como si faltaran unos días */
+function forzar(id,hoy){var t=CFG.filter(function(x){return x.id===id})[0];if(!t)return null;
+  var w=ventanas(t,hoy.getFullYear()).filter(function(w){return w[1]>=hoy})[0],falta=Math.round((w[2]-hoy)/DAY);
+  if(hoy<w[0])falta=Math.min(antes(t),9);return {t:t,falta:falta,dia:w[2]}}
+function rellenar(s,b){if(!s)return s;var n=b.falta,f=b.dia.getDate()+' de '+MESES[b.dia.getMonth()];
+  var cuenta=n>1?'Faltan '+n+' días':n===1?'Es mañana':n===0?'Es hoy':'';
+  return s.replace(/\{cuenta\}/g,cuenta).replace(/\{dias\}/g,n).replace(/\{fecha\}/g,f).replace(/\{anio\}/g,b.dia.getFullYear())}
+
+var q=new URLSearchParams(location.search),forzada=q.get('temporada'),sim=q.get('fecha'),hoy=new Date();
+if(sim&&/^\d{4}-\d\d-\d\d$/.test(sim)){var p=sim.split('-');hoy=d(+p[0],+p[1],+p[2])}
+hoy=new Date(hoy.getFullYear(),hoy.getMonth(),hoy.getDate());
+window.TEMPORADA_ELEGIR=function(x){var b=elegir(x);return b?b.t.id:null};   /* para scripts/temporadas.js */
+var root=document.documentElement,reducido=matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+/* Estado original, para poder volver a la versión de todo el año al cambiar de temporada desde el selector */
+var CLAVES={};CFG.forEach(function(t){Object.keys(t.textos||{}).forEach(function(k){CLAVES[k]=1})});   /* solo las claves que usa alguna temporada: otros data-t de la página no se tocan */
+var T=[].slice.call(document.querySelectorAll('[data-t]')).filter(function(el){return CLAVES[el.getAttribute('data-t')]}).map(function(el){return [el,el.innerHTML,el.hidden]});
+var fotosOrig=[],tokens=[],marcados=[],deco=null;
+function limpiar(){
+  T.forEach(function(o){o[0].innerHTML=o[1];o[0].hidden=o[2];o[0].classList.remove('t-on')});
+  tokens.forEach(function(k){root.style.removeProperty(k)});tokens=[];
+  fotosOrig.forEach(function(o){if(o[0].tagName==='SOURCE')o[0].srcset=o[1];else{o[0].src=o[1];if(o[2])o[0].srcset=o[2]}});fotosOrig=[];
+  marcados.forEach(function(el){el.checked=false});marcados=[];
+  if(deco){deco();deco=null}
+  root.removeAttribute('data-temporada');window.TEMPORADA=null}
+function aplicar(b){
+  limpiar();var id=b?b.t.id:null;
+  /* Bloques solo de temporada: data-temporada-solo="san-valentin dia-madre" (empiezan con hidden) y data-temporada-fuera="…" */
+  document.querySelectorAll('[data-temporada-solo]').forEach(function(el){el.hidden=!(id&&el.getAttribute('data-temporada-solo').split(/\s+/).indexOf(id)>-1)});
+  document.querySelectorAll('[data-temporada-fuera]').forEach(function(el){el.hidden=!!(id&&el.getAttribute('data-temporada-fuera').split(/\s+/).indexOf(id)>-1)});
+  if(!b)return;
+  var t=b.t;root.setAttribute('data-temporada',id);
+  /* Colores: sobrescribe tokens de :root (solo acentos; el fondo y la tinta no se tocan) */
+  if(t.tema)Object.keys(t.tema).forEach(function(k){root.style.setProperty(k,t.tema[k]);tokens.push(k)});
+  /* Textos: cualquier elemento con data-t="clave". El HTML trae el texto de todo el año; si estaba hidden, se muestra */
+  if(t.textos)Object.keys(t.textos).forEach(function(k){document.querySelectorAll('[data-t="'+k+'"]').forEach(function(el){el.innerHTML=rellenar(t.textos[k],b);el.hidden=false;el.classList.add('t-on')})});
+  /* Fotos: {selector: ruta}. Solo fotos reales del negocio para esa fecha */
+  if(t.fotos)Object.keys(t.fotos).forEach(function(s){document.querySelectorAll(s).forEach(function(el){
+    if(el.tagName==='SOURCE'){fotosOrig.push([el,el.srcset]);el.srcset=t.fotos[s]}else{fotosOrig.push([el,el.src,el.getAttribute('srcset')]);el.removeAttribute('srcset');el.src=t.fotos[s]}})});
+  /* Marcar opciones del panel de encargo/reserva (solo si no hay ninguna marcada en ese grupo) */
+  if(t.marcar)t.marcar.forEach(function(s){var el=document.querySelector(s);if(el&&!document.querySelector('input[name="'+el.name+'"]:checked')){el.checked=true;marcados.push(el)}});
+  window.TEMPORADA={id:id,nombre:t.nombre||id,dias:b.falta,fecha:b.dia,linea:rellenar(t.wa,b)||''};   /* el panel añade TEMPORADA.linea al mensaje de WhatsApp */
+  try{document.dispatchEvent(new CustomEvent('temporada',{detail:window.TEMPORADA}))}catch(e){}
+  if(t.deco&&!reducido)deco=decorar(t)}
+
+/* Decoración ligera en el hero: petalos, corazones, nieve, hojas, confeti o estrellas. Nunca sobre el texto ni con movimiento reducido */
+function decorar(t){
+  var host=document.querySelector(t.decoEn||'#hero');if(!host)return null;
+  var cv=document.createElement('canvas');cv.className='t-deco';cv.setAttribute('aria-hidden','true');
+  cv.style.cssText='position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:1';
+  host.insertBefore(cv,host.children[1]||null);
+  var cx=cv.getContext('2d'),W=0,H=0,DPR=Math.min(devicePixelRatio||1,1.5),P=[],raf=0,last=0;
+  var COL=t.decoColores||{petalos:['#F5B8C9','#FFD9E2','#E88AA6'],corazones:['#FF6B8B','#FFB3C4','#E0325A'],nieve:['#FFFFFF'],hojas:['#C9733B','#E0A04A','#9C4A24'],confeti:['#FFD166','#EF476F','#06D6A0','#4CC9F0'],estrellas:['#FFE8A3','#FFFFFF']}[t.deco]||['#fff'];
+  function size(){var r=host.getBoundingClientRect();W=r.width;H=r.height;cv.width=W*DPR;cv.height=H*DPR;cx.setTransform(DPR,0,0,DPR,0,0)}
+  function nuevo(top){var s=t.deco==='nieve'?2+Math.random()*3:t.deco==='estrellas'?1.5+Math.random()*2.5:7+Math.random()*7;
+    return {x:Math.random()*W,y:top?-20:Math.random()*H,s:s,vy:(t.deco==='estrellas'?0:.25+Math.random()*.5)*(s>6?1:.7),vx:(Math.random()-.5)*.3,a:Math.random()*6.3,va:(Math.random()-.5)*.03,f:Math.random()*6.3,c:COL[Math.floor(Math.random()*COL.length)]}}
+  function forma(p){cx.save();cx.translate(p.x,p.y);cx.rotate(p.a);cx.fillStyle=p.c;cx.globalAlpha=t.deco==='estrellas'?.4+.5*Math.abs(Math.sin(p.f)):.85;var s=p.s;cx.beginPath();
+    if(t.deco==='corazones'){cx.moveTo(0,s*.35);cx.bezierCurveTo(-s,-s*.3,-s*.4,-s,0,-s*.45);cx.bezierCurveTo(s*.4,-s,s,-s*.3,0,s*.35)}
+    else if(t.deco==='nieve'||t.deco==='estrellas')cx.arc(0,0,s/2,0,7);
+    else if(t.deco==='confeti')cx.rect(-s/2,-s/4,s,s/2);
+    else cx.ellipse(0,0,s/2,s*(t.deco==='hojas'?.28:.34),0,0,7);
+    cx.fill();cx.restore()}
+  function paso(ts){raf=requestAnimationFrame(paso);if(ts-last<30)return;last=ts;
+    var r=host.getBoundingClientRect();if(r.bottom<0||r.top>innerHeight)return;   /* fuera de pantalla: no pinta */
+    cx.clearRect(0,0,W,H);P.forEach(function(p,i){p.f+=.03;p.y+=p.vy;p.x+=p.vx+Math.sin(p.f)*.35;p.a+=p.va;if(p.y>H+20)P[i]=nuevo(true);forma(p)})}
+  function arranca(){cancelAnimationFrame(raf);if(!document.hidden)raf=requestAnimationFrame(paso)}
+  size();var n=Math.min(t.decoCuantos||22,Math.round(W*H/40000)+6);for(var i=0;i<n;i++)P.push(nuevo(false));
+  addEventListener('resize',size);document.addEventListener('visibilitychange',arranca);arranca();
+  return function(){cancelAnimationFrame(raf);removeEventListener('resize',size);document.removeEventListener('visibilitychange',arranca);cv.remove()}}
+
+var hoyB=elegir(hoy);
+aplicar(forzada==='no'?null:forzada?forzar(forzada,hoy):hoyB);
+
+/* ---------- Selector de temporadas: solo con #temporadas en la dirección, para enseñárselas al cliente ---------- */
+/* El visor del Artifact no pasa el #hash al iframe: también se abre con 5 toques seguidos en el logo de la cabecera (.brand) o con la tecla T */
+var sel=null,manual=false;
+function selector(){
+  if(location.hash!=='#temporadas'&&!manual){if(sel){sel.remove();sel=null}return}
+  if(sel)return;
+  var st=document.createElement('style');st.textContent='.t-sel{position:fixed;left:12px;right:12px;bottom:calc(14px + env(safe-area-inset-bottom,0px));z-index:150;margin:0 auto;max-width:max-content;display:flex;align-items:center;gap:6px;padding:6px;border-radius:18px;background:rgba(20,20,20,.82);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);color:#fff;font:600 13px/1.2 system-ui,-apple-system,sans-serif;box-shadow:0 14px 34px -12px rgba(0,0,0,.6);overflow-x:auto;scrollbar-width:none}'
+   +'.t-sel::-webkit-scrollbar{display:none}.t-sel b{padding:0 6px 0 8px;font-size:11px;letter-spacing:.08em;text-transform:uppercase;opacity:.6;white-space:nowrap}'
+   +'.t-sel button{all:unset;cursor:pointer;white-space:nowrap;padding:9px 12px;border-radius:12px;color:#fff}.t-sel button:hover{background:rgba(255,255,255,.12)}.t-sel button[aria-pressed="true"]{background:#fff;color:#111}'
+   +'.t-sel button small{display:block;font-size:10px;font-weight:500;opacity:.65;margin-top:2px}.t-sel .x{opacity:.7;padding:9px 10px}'
+   +'@media (max-width:640px){.t-sel{bottom:calc(84px + env(safe-area-inset-bottom,0px));max-width:none}}';
+  sel=document.createElement('div');sel.className='t-sel';sel.setAttribute('role','toolbar');sel.setAttribute('aria-label','Ver la landing en cada temporada');
+  sel.appendChild(st);
+  function hint(t){var w=ventanas(t,hoy.getFullYear()).filter(function(w){return w[1]>=hoy})[0],f=function(x){return x.getDate()+' '+MESES[x.getMonth()].slice(0,3)};return f(w[0])+' – '+f(w[1])}
+  var h='<b>Temporadas</b><button type="button" data-id="@hoy">Hoy<small>'+(hoyB?(hoyB.t.nombre||hoyB.t.id):'sin temporada')+'</small></button><button type="button" data-id="">Todo el año<small>versión base</small></button>';
+  CFG.forEach(function(t){h+='<button type="button" data-id="'+t.id+'">'+(t.nombre||t.id)+'<small>'+hint(t)+'</small></button>'});
+  sel.insertAdjacentHTML('beforeend',h+'<button type="button" class="x" aria-label="Cerrar el selector">✕</button>');
+  var elegido='@hoy';
+  function marca(){sel.querySelectorAll('button[data-id]').forEach(function(x){x.setAttribute('aria-pressed',String(x.dataset.id===elegido))})}
+  sel.addEventListener('click',function(e){var x=e.target.closest('button');if(!x)return;
+    if(x.classList.contains('x')){manual=false;if(location.hash==='#temporadas')history.replaceState(null,'',location.pathname+location.search);selector();return}
+    elegido=x.dataset.id;aplicar(elegido==='@hoy'?hoyB:elegido?forzar(elegido,hoy):null);marca();window.scrollTo({top:0,behavior:'smooth'})});
+  document.body.appendChild(sel);marca()}
+selector();addEventListener('hashchange',selector);
+var toques=[];
+document.addEventListener('click',function(e){if(!e.target.closest||!e.target.closest(window.TEMPORADAS_DISPARADOR||'.brand'))return;var n=Date.now();
+  toques=toques.filter(function(t){return n-t<2500});toques.push(n);if(toques.length>=5){toques=[];manual=true;selector()}});
+document.addEventListener('keydown',function(e){if((e.key==='t'||e.key==='T')&&!e.metaKey&&!e.ctrlKey&&!e.altKey&&!/INPUT|TEXTAREA|SELECT/.test(e.target.tagName)&&!e.target.isContentEditable){manual=!sel;if(!manual&&location.hash==='#temporadas')history.replaceState(null,'',location.pathname+location.search);selector()}});
+})();
+
+
+/* ---------- Loader con el logo: visor que enfoca y un destello de flash. Se va con load (mín. 0,9 s, máx. 3 s) ---------- */
+var introGone=false,introCbs=[];
+function afterIntro(fn){if(introGone)fn();else introCbs.push(fn)}
+(function(){var el=document.getElementById('intro'),root=document.documentElement;
+  function done(){if(introGone)return;introGone=true;root.classList.remove('loading');if(el){el.classList.add('out');setTimeout(function(){el.hidden=true},700)}
+    introCbs.forEach(function(f){try{f()}catch(e){}})}
+  if(!el){done();return}
+  root.classList.add('loading');
+  var min=reduced?500:900,t0=performance.now(),cap=setTimeout(done,3000);
+  function go(){setTimeout(function(){clearTimeout(cap);done()},Math.max(0,min-(performance.now()-t0)))}
+  if(document.readyState==='complete')go();else window.addEventListener('load',go);
+})();
+
+/* ===== HERO PROPIO ===== */
+/* ---------- Hero «visor»: sus fotos reales en el visor de la cámara; cada pocos segundos (o al pulsar el disparador) se dispara y entra la siguiente ---------- */
+(function(){
+  var fr=document.getElementById('vf-frame'); if(!fr)return;
+  var shots=[].slice.call(fr.querySelectorAll('.vf-shot')),cap=document.getElementById('vf-cap'),num=document.getElementById('vf-n'),btn=document.getElementById('vf-shoot');
+  var at=0,busy=false,timer=0,vis=true,n=shots.length;
+  function pad(k){return (k<10?'0':'')+k}
+  function show(i){at=(i+n)%n;shots.forEach(function(s,k){s.classList.toggle('on',k===at)});cap.textContent=shots[at].dataset.cap;num.textContent=pad(at+1)+' / '+pad(n);
+    var nx=shots[(at+1)%n];if(nx.loading==='lazy')nx.loading='eager'}
+  function fire(){if(busy)return;busy=true;
+    if(reduced){show(at+1);busy=false;return}
+    fr.classList.remove('shoot');void fr.offsetWidth;fr.classList.add('shoot');
+    setTimeout(function(){show(at+1)},170);
+    setTimeout(function(){fr.classList.remove('shoot');busy=false},520)}
+  function rearm(){clearInterval(timer);timer=0;if(!reduced&&vis)timer=setInterval(function(){if(!document.hidden)fire()},4200)}
+  btn.addEventListener('click',function(){fire();rearm()});
+  fr.addEventListener('click',function(){fire();rearm()});
+  function see(){var r=fr.getBoundingClientRect(),v=r.bottom>0&&r.top<innerHeight;if(v!==vis){vis=v;rearm()}}
+  window.addEventListener('scroll',see,{passive:true});
+  show(0);afterIntro(function(){fr.classList.add('ready');rearm()});
+})();
+/* ===== /HERO PROPIO ===== */
+
+/* ---------- Manifiesto: se revela palabra a palabra ---------- */
+(function(){var m=document.getElementById('mani');if(!m)return;var HOT=/^(pantalla|móvil)$/i;
+  m.innerHTML=m.textContent.split(' ').map(function(w,i){return '<span class="w'+(HOT.test(w.replace(/[,.:]/g,''))?' hot':'')+'" style="transition-delay:'+(i*45)+'ms">'+w+'</span>'}).join(' ');})();
+
+/* ---------- Galería con visor ---------- */
+(function(){var el=document.getElementById('gal');if(!el)return;
+  var ph=[].slice.call(el.querySelectorAll('.ph')),lb=document.getElementById('lb'),li=document.getElementById('lb-img'),cap=document.getElementById('lb-cap'),at=0,opener=null;
+  function showAt(i){at=(i+ph.length)%ph.length;var w=ph[at],im=w.querySelector('img');li.src=im.dataset.full||im.src;li.alt=im.alt;cap.textContent=w.dataset.cap+' · '+(at+1)+' / '+ph.length}
+  el.addEventListener('click',function(e){var w=e.target.closest('.ph');if(!w)return;opener=w;lb.hidden=false;showAt(ph.indexOf(w));try{lb.querySelector('.lb-x').focus({preventScroll:true})}catch(x){}});
+  function close(){lb.hidden=true;if(opener)try{opener.focus({preventScroll:true})}catch(x){}}
+  lb.addEventListener('click',function(e){var n=e.target.closest('[data-lb]');if(n){showAt(at+(+n.dataset.lb));return}if(e.target===lb||e.target.closest('.lb-x'))close()});
+  document.getElementById('lb-go').addEventListener('click',function(){lb.hidden=true});
+  document.addEventListener('keydown',function(e){if(lb.hidden)return;if(e.key==='Escape')close();else if(e.key==='ArrowRight')showAt(at+1);else if(e.key==='ArrowLeft')showAt(at-1)});
+})();
+
+/* ---------- Tour Matterport en panel: el iframe se carga solo al abrir ---------- */
+(function(){var d=document.getElementById('mp');if(!d)return;
+  var fr=document.getElementById('mp-frame'),load=document.getElementById('mp-load'),opener=null;
+  fr.addEventListener('load',function(){if(fr.src)setTimeout(function(){load.classList.add('done')},400)});
+  function open(from){opener=from||document.activeElement;d.hidden=false;document.documentElement.style.overflow='hidden';
+    if(!fr.src){fr.src=fr.dataset.src;setTimeout(function(){load.classList.add('done')},6000)}
+    requestAnimationFrame(function(){requestAnimationFrame(function(){d.classList.add('open');var x=d.querySelector('[data-mp-x].bk-ib');if(x)try{x.focus({preventScroll:true})}catch(e){}})})}
+  function close(keep){if(d.hidden)return;d.classList.remove('open');if(!keep)document.documentElement.style.overflow='';
+    setTimeout(function(){d.hidden=true;if(!keep&&opener&&opener.focus)try{opener.focus({preventScroll:true})}catch(e){}},reduced?0:420)}
+  document.addEventListener('click',function(e){var t=e.target;if(!t.closest)return;
+    var a=t.closest('a[href="#tour3d"]');if(a){e.preventDefault();open(a);return}
+    if(t.closest('[data-mp-x]')){close();return}
+    if(t.closest('#mp a[href="#reservar"]'))close(true)},true);
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!d.hidden)close()});
+})();
+
+/* ---------- Vídeo de dron: se descarga y reproduce solo cuando se ve ---------- */
+(function(){var v=document.getElementById('air-v');if(!v)return;var on=false,tk=false;
+  if(reduced){return}
+  function chk(){tk=false;var r=v.getBoundingClientRect(),s=r.bottom>0&&r.top<innerHeight&&!document.hidden;if(s===on)return;on=s;
+    if(s){if(v.preload==='none')v.preload='auto';var p=v.play();if(p&&p.catch)p.catch(function(){})}else v.pause()}
+  window.addEventListener('scroll',function(){if(!tk){tk=true;requestAnimationFrame(chk)}},{passive:true});document.addEventListener('visibilitychange',chk);chk();
+})();
+
+/* ---------- Borradores: se ven solo con #borradores ---------- */
+(function(){function sync(){var on=location.hash==='#borradores';document.querySelectorAll('.draft').forEach(function(d){d.hidden=!on});if(on){var t=document.querySelector('.draft');t&&setTimeout(function(){t.scrollIntoView()},300)}}
+ sync();window.addEventListener('hashchange',sync)})();
+
+/* ---------- Reserva: panel paso a paso que acaba en WhatsApp ---------- */
+(function(){
+  var WA='34644437122', N=5; /* WhatsApp de su web: wa.me/34644437122 */
+  var bk=document.getElementById('bk'); if(!bk)return;
+  var f=document.getElementById('book-form'), panes=[].slice.call(f.querySelectorAll('.bk-pane'));
+  var back=document.getElementById('bk-back'), next=document.getElementById('bk-next'), wa=document.getElementById('f-wa');
+  var err=document.getElementById('f-error'), bar=document.getElementById('bk-bar'), stepT=document.getElementById('bk-step');
+  var nombre=document.getElementById('f-nombre'), pre=document.getElementById('f-preview');
+  function sel(n){var e=f.querySelector('input[name="'+n+'"]:checked');return e?e.value:''}
+  function all(n){return [].slice.call(f.querySelectorAll('input[name="'+n+'"]:checked')).map(function(e){return e.value})}
+  function val(id){var e=document.getElementById(id);return e?e.value.trim():''}
+  var _code='';
+  function code(){if(!_code){var d=new Date(),r='',A='ABCDEFGHJKLMNPQRSTUVWXYZ23456789';for(var i=0;i<3;i++)r+=A[Math.floor(Math.random()*A.length)];_code='CF-'+String(d.getDate()).padStart(2,'0')+String(d.getMonth()+1).padStart(2,'0')+'-'+r}return _code}
+  function message(){
+    var L=['¡Hola, Marek! Soy '+nombre.value.trim()+(val('f-empresa')?', de '+val('f-empresa'):'')+'. Quiero pedir una sesión:',''];
+    L.push('🔖 Código: '+code());
+    if(window.TEMPORADA&&TEMPORADA.linea)L.push(TEMPORADA.linea);
+    L.push('• Servicios: '+all('srv').join(', '));
+    if(sel('tipo'))L.push('• Inmueble: '+sel('tipo'));
+    if(val('f-donde'))L.push('• Localidad: '+val('f-donde'));
+    if(val('f-cuando'))L.push('• Cuándo: '+val('f-cuando'));
+    L.push('• '+sel('quien'));
+    if(val('f-notas'))L.push('','Más detalles: '+val('f-notas'));
+    L.push('','¿Me confirmas disponibilidad y precio? ¡Gracias!');
+    return L.join('\n');
+  }
+  var step=1, opener=null;
+  function show(n){
+    step=n; err.hidden=true;
+    panes.forEach(function(p){p.hidden=+p.dataset.step!==n});
+    back.disabled=n===1;
+    var last=n===N; next.hidden=last; wa.hidden=!last;
+    next.textContent=n===4?'Ver mi solicitud':'Siguiente';
+    stepT.textContent=last?'Listo':'Paso '+n+' de 4';
+    bar.style.transform='scaleX('+(Math.min(n,4)/4)+')';
+    if(last){var m=message();pre.textContent=m;wa.href='https://wa.me/'+WA+'?text='+encodeURIComponent(m)}
+    f.scrollTop=0;
+    var h3=panes[n-1].querySelector('h3'); if(h3)h3.setAttribute('tabindex','-1');
+    setTimeout(function(){try{(h3||next).focus({preventScroll:true})}catch(x){}},380);
+  }
+  function fail(msg,el){err.textContent=msg;err.hidden=false;if(el){el.setAttribute('aria-invalid','true');el.focus()}}
+  function validate(n){
+    if(n===1&&!all('srv').length){fail('Marca al menos un servicio.');return false}
+    if(n===2&&!sel('tipo')){fail('Elige el tipo de inmueble.');return false}
+    if(n===4){nombre.removeAttribute('aria-invalid');if(!nombre.value.trim()){fail('Dime tu nombre para el mensaje.',nombre);return false}}
+    return true;
+  }
+  next.addEventListener('click',function(){if(validate(step))show(step+1)});
+  back.addEventListener('click',function(){if(step>1)show(step-1)});
+  f.addEventListener('submit',function(e){e.preventDefault();next.click()});
+  document.getElementById('f-copy').addEventListener('click',function(){var b=this,ok=function(){b.textContent='Copiado';setTimeout(function(){b.textContent='Copiar mensaje'},1600)};
+    try{navigator.clipboard.writeText(pre.textContent).then(ok,function(){var r=document.createRange();r.selectNodeContents(pre);var s=getSelection();s.removeAllRanges();s.addRange(r)})}catch(x){}});
+  function check(name,v){var r=f.querySelector('input[name="'+name+'"][value="'+v+'"]');if(r){r.checked=true;return true}return false}
+  function open(from){
+    opener=from||document.activeElement; bk.hidden=false; document.documentElement.style.overflow='hidden';
+    var ds=from&&from.dataset||{};
+    if(ds.pack){check('srv','Fotografía + plano CubiCasa');check('tipo',ds.pack);show(2)}
+    else if(ds.pick){check('srv',ds.pick);show(2)}
+    else if(step===N)show(4); else show(step);
+    requestAnimationFrame(function(){requestAnimationFrame(function(){bk.classList.add('open')})});
+  }
+  function close(){
+    bk.classList.remove('open'); document.documentElement.style.overflow='';
+    setTimeout(function(){bk.hidden=true},reduced?0:420);
+    if(opener&&opener.focus)try{opener.focus({preventScroll:true})}catch(x){}
+  }
+  window.__openBk=open;
+  document.getElementById('bk-x').addEventListener('click',close);
+  document.getElementById('bk-scrim').addEventListener('click',close);
+  document.addEventListener('keydown',function(e){if(!bk.hidden&&e.key==='Escape')close()});
+  document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[href="#reservar"]');if(!a)return;e.preventDefault();open(a)});
+  /* un enlace compartido con #reservar abre el panel al llegar (fuera del visor del Artifact) */
+  if(location.hash==='#reservar')setTimeout(function(){open(null)},600);
+})();
+
+
+/* ---------- Cabecera de vidrio, barra móvil y ↑, por scroll (el IntersectionObserver falla dentro del visor) ---------- */
+/* Cabecera y barra se oscurecen sobre el hero y las bandas oscuras. La barra no tapa ni el titular ni el botón del hero. */
+(function(){var b=document.getElementById('totop'),hero=document.getElementById('hero'),mbar=document.querySelector('.mbar'),top=document.getElementById('top'),
+  h1=document.getElementById('vf-h1'),cta=hero.querySelector('.hero-ctas .btn'),darks=[hero].concat([].slice.call(document.querySelectorAll('.band-ink,.air'))),tk=false;
+ function sync(){tk=false;var end=hero.offsetTop+hero.offsetHeight;b.classList.toggle('on',scrollY>end-innerHeight/2);
+  function over(y){return darks.some(function(s){var r=s.getBoundingClientRect();return r.top<y&&r.bottom>y})}
+  if(top)top.classList.toggle('dark',over(top.offsetHeight/2));
+  if(mbar){mbar.classList.toggle('dark',over(innerHeight-34));
+    var lim=innerHeight-84,hb=h1.getBoundingClientRect(),cb=cta.getBoundingClientRect();
+    mbar.classList.toggle('off',(hb.bottom>lim&&hb.top<innerHeight)||(cb.bottom>0&&cb.top<innerHeight&&cb.bottom>lim-10))}}
+ sync();window.addEventListener('scroll',function(){if(!tk){tk=true;requestAnimationFrame(sync)}},{passive:true});window.addEventListener('resize',sync);
+ b.addEventListener('click',function(){window.scrollTo({top:0,behavior:reduced?'auto':'smooth'})});})();
+
+/* ---------- Animaciones por visibilidad ---------- */
+(function(){
+  var root=document.documentElement;
+  if(!('IntersectionObserver' in window)||reduced)return;
+  root.classList.add('js-anim');
+  var io=new IntersectionObserver(function(es){var k=0;es.forEach(function(e){if(!e.isIntersecting)return;var el=e.target;el.style.transitionDelay=Math.min(k++*90,450)+'ms';el.classList.add('in');io.unobserve(el);setTimeout(function(){el.style.transitionDelay=''},1500)})},{rootMargin:'0px 0px -8% 0px'});
+  document.querySelectorAll('[data-reveal]').forEach(function(el){io.observe(el)});
+  var m=document.getElementById('mani');
+  if(m)new IntersectionObserver(function(e,o){if(e[0].isIntersecting){m.classList.add('lit');o.disconnect()}},{threshold:.4}).observe(m);
+  var bar=document.getElementById('progress'), tk=false;
+  function prog(){tk=false;var H=root.scrollHeight-innerHeight;bar.style.transform='scaleX('+(H>0?Math.min(1,scrollY/H):0)+')'}
+  window.addEventListener('scroll',function(){if(!tk){tk=true;requestAnimationFrame(prog)}},{passive:true});
+})();
+})();
+
+/* ---------- Botones flotantes tras un mínimo scroll (cabecera y barra móvil ocultas al pintar el hero) ---------- */
+(function(){var h=document.documentElement,tk=false;function s(){tk=false;h.classList.toggle('cta-wait',scrollY<=Math.min(120,innerHeight*.15))}
+ s();addEventListener('scroll',function(){if(!tk){tk=true;requestAnimationFrame(s)}},{passive:true});addEventListener('resize',s);})();
+</script>

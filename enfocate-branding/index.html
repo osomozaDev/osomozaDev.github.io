@@ -1,0 +1,1416 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Fotógrafo de marca personal y empresa en A Coruña · Enfócate</title>
+<meta name="description" content="Enfócate, Fotografía y Branding: Diego Silva, fotógrafo en A Coruña especializado en marca personal, fotografía corporativa para pymes, eventos, producto e inmobiliaria. Sesiones con asesoría previa de estilo. 5,0★ en Google con 56 reseñas.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;1,6..96,400;1,6..96,500&family=Outfit:wght@300;400;500;600&display=swap">
+<link rel="icon" href="img/iris.png">
+<style>
+/* Enfócate, Fotografía y Branding — editorial de estudio: papel claro, Bodoni para titulares, el verde agua del diafragma del logo solo como acento.
+   Un único gesto: el visor de cámara del hero, cuyo diafragma se cierra y se abre para pasar de un trabajo real al siguiente, y enfoca. */
+:root{
+  color-scheme: light;
+  --shell:#F3F1EC;
+  --shell-2:#E7E4DC;
+  --paper:#FAF9F6;
+  --ink:#121413;
+  --ink-soft:#626862;
+  --teal:#569E95;
+  --teal-2:#B2CEC9;
+  --teal-ink:#2F6F67;
+  --hibiscus:#2F6F67;
+  --hibiscus-ink:#245A53;
+  --palm:#121413;
+  --sun:#569E95;
+  --night:#0D100F;
+  --line:rgba(18,20,19,.13);
+  --font-display:"Bodoni Moda", "Didot", Georgia, serif;
+  --font-body:"Outfit", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --r-sm:6px; --r-md:12px; --r-lg:16px;
+  --shadow:0 30px 60px -36px rgba(18,20,19,.4);
+  --wrap:1220px;
+  --head:74px;
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html{scroll-behavior:smooth;scroll-padding-top:calc(var(--head) + 12px)}
+body{margin:0;background:var(--shell);color:var(--ink);font-family:var(--font-body);font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:clip}
+img{max-width:100%;display:block}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--teal);outline-offset:3px;border-radius:4px}
+.wrap{max-width:var(--wrap);margin-inline:auto;padding-inline:clamp(20px,4vw,48px)}
+h1,h2,h3{margin:0;text-wrap:balance;font-family:var(--font-display);font-weight:400;line-height:1.04;letter-spacing:-.02em}
+h1 em,h2 em{font-style:italic}
+h1 em::after,h2 em::after{content:"";display:inline-block;width:.15em;height:.15em;margin-left:.05em;border-radius:50%;background:var(--teal);vertical-align:.02em}
+h3{font-size:26px}
+p{margin:0}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:12.5px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-soft)}
+.eyebrow::before{content:"";width:22px;height:1px;background:currentColor;opacity:.6}
+.lead{font-size:clamp(17px,1.4vw,19px);color:var(--ink-soft);max-width:36em;font-weight:300}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 28px;border-radius:999px;font:500 15.5px/1 var(--font-body);letter-spacing:.01em;text-decoration:none;border:1px solid transparent;cursor:pointer;transition:background .25s,color .25s,border-color .25s,transform .25s;text-align:center}
+.btn svg{width:19px;height:19px;flex:none}
+.btn-primary{background:var(--ink);color:#fff}
+.btn-primary:hover{background:var(--teal-ink)}
+.btn-ghost{background:transparent;border-color:var(--line);color:var(--ink)}
+.btn-ghost:hover{border-color:var(--ink)}
+.btn-light{background:#F2F0EA;color:var(--ink)}
+.btn-light:hover{background:var(--teal);color:#fff}
+.link{display:inline-flex;align-items:center;gap:8px;font-weight:500;text-decoration:none;border-bottom:1px solid var(--line);padding-bottom:2px;transition:border-color .2s,gap .2s}
+.link svg{width:16px;height:16px}
+.link:hover{border-color:currentColor;gap:12px}
+.sec{padding-block:clamp(84px,11vw,148px)}
+.sec-head{display:grid;gap:18px;max-width:800px;margin-bottom:clamp(40px,5vw,64px)}
+.sec-head h2,.book-cta h2,.visit h2,.about h2{font-size:clamp(40px,5.2vw,74px)}
+.band-white{background:var(--paper)}
+.band-ink{background:var(--night);color:#F2F0EA}
+.band-ink .eyebrow,.band-ink .lead{color:rgba(242,240,234,.66)}
+.hide-m{}
+
+/* Loader con el logo: el diafragma del logo, un anillo que se dibuja y el nombre */
+.loader{position:fixed;inset:0;z-index:200;display:grid;place-items:center;background:radial-gradient(50% 45% at 50% 45%,rgba(86,158,149,.2),transparent 70%),var(--night);color:#F2F0EA;transition:opacity .7s cubic-bezier(.2,.7,.2,1),visibility 0s .7s;animation:ld-safety 0s 4s forwards}
+.loader.out{opacity:0;visibility:hidden}
+@keyframes ld-safety{to{opacity:0;visibility:hidden}}
+.ld-in{display:grid;justify-items:center;gap:14px;transition:transform .7s cubic-bezier(.2,.7,.2,1)}
+.loader.out .ld-in{transform:scale(.92) translateY(-8px)}
+.ld-mark{position:relative;width:clamp(132px,12vw,170px);aspect-ratio:1;display:grid;place-items:center}
+.ld-mark img{width:62%;height:62%;border-radius:50%;background:#F2F0EA;padding:10%;box-shadow:0 18px 40px -16px rgba(0,0,0,.7);animation:ld-turn 2.4s cubic-bezier(.6,.1,.3,1) infinite}
+.ld-ring{position:absolute;inset:0;transform:rotate(-90deg)}
+.ld-ring circle{fill:none;stroke:rgba(242,240,234,.14);stroke-width:1.5}
+.ld-ring .ld-arc{stroke:var(--teal);stroke-width:2.5;stroke-linecap:round;stroke-dasharray:100;stroke-dashoffset:100;animation:ld-draw 1.1s cubic-bezier(.6,.1,.3,1) forwards}
+.ld-name{font:italic 400 clamp(30px,2.6vw,40px)/1 var(--font-display);letter-spacing:-.01em;margin-top:6px;animation:ld-up .8s .15s cubic-bezier(.2,.7,.2,1) both}
+.ld-sub{font-size:11.5px;font-weight:500;letter-spacing:.3em;text-transform:uppercase;color:var(--teal-2);animation:ld-up .8s .3s cubic-bezier(.2,.7,.2,1) both}
+@keyframes ld-draw{to{stroke-dashoffset:0}}
+@keyframes ld-turn{50%{transform:rotate(60deg) scale(.94)}}
+@keyframes ld-up{from{opacity:0;transform:translateY(10px)}}
+.loading .hero-copy>*,.loading .vf{animation-play-state:paused!important}
+@media (prefers-reduced-motion:reduce){.ld-mark img,.ld-ring .ld-arc{animation:none;stroke-dashoffset:0}}
+
+/* Cabecera */
+.top{position:fixed;top:0;left:0;right:0;padding-top:env(safe-area-inset-top,0px);z-index:60;background:rgba(243,241,236,.88);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);transition:background .4s,color .4s}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;height:var(--head)}
+.brand{display:flex;align-items:center;text-decoration:none}
+.brand img{height:30px;width:auto;transition:filter .4s}
+.nav{display:flex;gap:clamp(18px,2.2vw,32px);font-size:14.5px;font-weight:400}
+.nav a{text-decoration:none;color:var(--ink-soft);white-space:nowrap}
+.nav a:hover{color:var(--ink)}
+.top .btn{min-height:42px;padding:0 20px;font-size:14.5px}
+.top .btn svg{display:none}
+.top.dark{background:rgba(13,16,15,.45);color:#F2F0EA}
+.top.dark .brand img{filter:invert(1) hue-rotate(180deg) brightness(1.05)}
+.top.dark .nav a{color:rgba(242,240,234,.72)}
+.top.dark .nav a:hover{color:#F2F0EA}
+.top.dark .btn-primary{background:#F2F0EA;color:var(--ink)}
+.top.dark .btn-primary:hover{background:var(--teal);color:#fff}
+.progress{position:absolute;left:0;bottom:-1px;height:1px;width:100%;background:var(--teal);transform:scaleX(0);transform-origin:left}
+
+/* Hero: el visor */
+.hero{position:relative;isolation:isolate;overflow:hidden;background:var(--night);color:#F2F0EA;--ink-soft:rgba(242,240,234,.7);--line:rgba(242,240,234,.18);min-height:100vh;min-height:100svh;display:flex;align-items:center;padding:calc(var(--head) + clamp(20px,3vw,40px)) 0 clamp(28px,4vw,48px)}
+.hero-amb{position:absolute;inset:0;overflow:hidden;z-index:-2;pointer-events:none}
+.hero-amb img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:blur(64px) saturate(1.25) brightness(.42);opacity:0;transition:opacity 1.4s ease}
+.hero-amb img.on{opacity:.9}
+.hero::after{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:linear-gradient(90deg,rgba(13,16,15,.86),rgba(13,16,15,.45) 55%,rgba(13,16,15,.25)),radial-gradient(1px 1px at 50% 50%,rgba(255,255,255,.05),transparent)}
+.hero-grid{width:100%;display:grid;grid-template-columns:minmax(0,.84fr) minmax(0,1.16fr);gap:clamp(32px,4.5vw,72px);align-items:center}
+.hero-grid>*{min-width:0}
+.hero-copy{display:grid;justify-items:start}
+.hero .eyebrow{color:var(--teal-2)}
+.hero h1{font-size:clamp(46px,5.6vw,92px);margin-top:20px;line-height:.98}
+.hero h1 em{display:block}
+.hero-sub{margin-top:24px;max-width:30em;font-size:clamp(17px,1.3vw,19px);font-weight:300;color:rgba(242,240,234,.82)}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:14px 22px;margin-top:32px;align-items:center}
+.hero-ctas .btn{white-space:normal}
+.hero-micro{margin-top:14px;font-size:13.5px;color:rgba(242,240,234,.6);letter-spacing:.02em}
+.hero-quote{margin:28px 0 0;padding-left:16px;border-left:1px solid var(--teal);max-width:28em}
+.hero-quote q{font:italic 400 clamp(17px,1.35vw,20px)/1.4 var(--font-display);quotes:"«" "»"}
+.hero-quote cite{display:block;margin-top:6px;font-style:normal;font-size:13px;color:rgba(242,240,234,.58)}
+.hero .link{color:#F2F0EA;border-bottom-color:rgba(242,240,234,.3);font-size:15px}
+
+.vf{position:relative;margin:0;justify-self:end;width:min(100%,calc((100svh - var(--head) - 170px)*1.5));display:grid;gap:14px}
+.vf-frame{position:relative;aspect-ratio:3/2;overflow:hidden;border-radius:4px;background:#050606;cursor:pointer;box-shadow:0 40px 90px -40px rgba(0,0,0,.9),0 0 0 1px rgba(242,240,234,.08);touch-action:pan-y;outline-offset:4px}
+.vf-shots img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;filter:blur(7px);transition:opacity .2s linear}
+.vf-shots img.on{opacity:1}
+.vf-shots img.sharp{filter:blur(0);transition:opacity .2s linear,filter .55s cubic-bezier(.3,.7,.2,1)}
+/* Marcas del visor: esquinas, punto de enfoque y lectura inferior */
+.vf-ui{position:absolute;inset:0;z-index:3;pointer-events:none;color:#F2F0EA}
+.vf-c{position:absolute;width:26px;height:26px;border:1.5px solid rgba(242,240,234,.85)}
+.vf-c.tl{left:16px;top:16px;border-right:0;border-bottom:0}.vf-c.tr{right:16px;top:16px;border-left:0;border-bottom:0}
+.vf-c.bl{left:16px;bottom:16px;border-right:0;border-top:0}.vf-c.br{right:16px;bottom:16px;border-left:0;border-top:0}
+.vf-af{position:absolute;left:var(--afx,50%);top:var(--afy,42%);width:clamp(54px,8%,84px);aspect-ratio:1;transform:translate(-50%,-50%) scale(1.25);opacity:0;transition:transform .35s cubic-bezier(.3,.7,.2,1),opacity .25s,left .5s,top .5s}
+.vf-af i{position:absolute;width:12px;height:12px;border:1.5px solid currentColor}
+.vf-af i:nth-child(1){left:0;top:0;border-right:0;border-bottom:0}.vf-af i:nth-child(2){right:0;top:0;border-left:0;border-bottom:0}
+.vf-af i:nth-child(3){left:0;bottom:0;border-right:0;border-top:0}.vf-af i:nth-child(4){right:0;bottom:0;border-left:0;border-top:0}
+.vf.hunt .vf-af{opacity:1;transform:translate(-50%,-50%) scale(1.25)}
+.vf.lock .vf-af{opacity:1;transform:translate(-50%,-50%) scale(1);color:#7FD6C9;filter:drop-shadow(0 0 6px rgba(127,214,201,.6))}
+.vf-read{position:absolute;left:48px;right:48px;bottom:18px;display:flex;justify-content:space-between;gap:12px;font-size:11.5px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;text-shadow:0 1px 8px rgba(0,0,0,.6);font-variant-numeric:tabular-nums}
+.vf-read b{font-weight:500;display:inline-flex;align-items:center;gap:8px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.vf-read b::before{content:"";width:7px;height:7px;border-radius:50%;background:#7FD6C9;flex:none}
+.vf-iris{position:absolute;inset:0;z-index:4;width:100%;height:100%;pointer-events:none}
+.vf-flash{position:absolute;inset:0;z-index:5;background:#fff;opacity:0;pointer-events:none}
+.vf-flash.go{animation:flash .45s ease-out}
+@keyframes flash{0%{opacity:.55}100%{opacity:0}}
+.vf-bar{display:flex;align-items:center;justify-content:space-between;gap:16px}
+.vf-cap{font:400 clamp(20px,1.7vw,26px)/1.2 var(--font-display);min-width:0}
+.vf-cap em{font-style:italic;color:rgba(242,240,234,.6)}
+.vf-ctl{display:flex;align-items:center;gap:8px;flex:none}
+.vf-ctl button{all:unset;cursor:pointer;box-sizing:border-box;width:42px;height:42px;border-radius:50%;display:grid;place-items:center;border:1px solid rgba(242,240,234,.24);transition:border-color .2s,background .2s}
+.vf-ctl button:hover{border-color:#F2F0EA}
+.vf-ctl button:focus-visible{outline:2px solid var(--teal);outline-offset:2px}
+.vf-ctl svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.vf-ctl .shutter{width:58px;height:58px;border:2px solid #F2F0EA;padding:5px}
+.vf-ctl .shutter span{display:block;width:100%;height:100%;border-radius:50%;background:#F2F0EA;transition:transform .15s,background .2s}
+.vf-ctl .shutter:hover span{background:var(--teal-2)}
+.vf-ctl .shutter:active span{transform:scale(.86)}
+.vf-count{font-size:12.5px;letter-spacing:.14em;color:rgba(242,240,234,.6);font-variant-numeric:tabular-nums;margin-right:4px}
+/* Sello de Google sobre el visor */
+.rate-stk{position:absolute;z-index:7;left:-26px;top:-22px;display:grid;grid-template-columns:auto auto;align-items:center;gap:2px 10px;padding:12px 16px 12px 14px;border-radius:16px;background:#fff;color:var(--ink);text-decoration:none;transform:rotate(-4deg);box-shadow:0 22px 40px -16px rgba(0,0,0,.65);transition:transform .3s}
+.rate-stk:hover{transform:rotate(-1deg) scale(1.04)}
+.rate-stk .stars{grid-column:1/-1;display:flex;gap:2px;color:#F5B400}.rate-stk svg{width:18px;height:18px}
+.rate-stk b{font:500 40px/1 var(--font-display);letter-spacing:-.02em}
+.rate-stk small{font-size:13px;line-height:1.25;font-weight:500;color:#5b605b}
+
+/* Reseñas: Diego difuminado detrás */
+.reviews{position:relative;isolation:isolate;overflow:hidden}
+.reviews::before{content:"";position:absolute;inset:0;z-index:-2;background:url(img/about.jpg) 88% 30%/auto 130% no-repeat;filter:blur(7px) grayscale(.2);opacity:.5}
+.reviews::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,var(--paper) 30%,rgba(250,249,246,.86) 62%,rgba(250,249,246,.6))}
+.rv-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(24px,3vw,44px)}
+.rv{margin:0;display:grid;gap:18px;align-content:start;padding:22px 0 0;border-top:1px solid var(--ink)}
+.rv-top{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.rv-stars{display:flex;gap:2px;color:#F5B400}.rv-stars svg{width:14px;height:14px}
+.rv-tag{font-size:11.5px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-soft)}
+.rv blockquote{margin:0;font:400 clamp(20px,1.7vw,24px)/1.35 var(--font-display)}
+.rv figcaption{display:flex;align-items:center;gap:10px}
+.rv figcaption i{display:none}
+.rv figcaption span{display:grid;line-height:1.3}.rv figcaption b{font-weight:500;font-size:15px}.rv figcaption small{color:var(--ink-soft);font-size:13px}
+#rv-grid .rv-x{display:none}
+.rv-more{display:flex;flex-wrap:wrap;gap:6px 16px;align-items:baseline;margin:40px 0 0;font-size:14px;color:var(--ink-soft)}
+.rv-more a{font-weight:500;color:var(--ink);text-decoration:none;border-bottom:1px solid var(--line)}
+.web-q{display:grid;grid-template-columns:repeat(2,1fr);gap:18px 44px;margin-top:56px;padding-top:30px;border-top:1px solid var(--line)}
+.web-q>span{grid-column:1/-1}
+.web-q figure{margin:0;display:grid;gap:6px}
+.web-q blockquote{margin:0;font-size:16px;font-weight:300;color:var(--ink)}
+.web-q figcaption{font-size:13px;color:var(--ink-soft)}
+
+/* Servicios */
+.svcs{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(22px,2.6vw,36px)}
+.svc{all:unset;cursor:pointer;display:grid;gap:6px;align-content:start}
+.svc figure{margin:0 0 12px;position:relative;overflow:hidden;border-radius:var(--r-md);aspect-ratio:4/3;background:var(--shell-2)}
+.svc img{width:100%;height:100%;object-fit:cover;transition:transform .9s cubic-bezier(.2,.7,.2,1),filter .5s}
+.svc:hover img{transform:scale(1.04)}
+.svc b{font:400 27px/1.15 var(--font-display);display:flex;align-items:baseline;gap:10px}
+.svc b small{font:500 12px var(--font-body);letter-spacing:.16em;color:var(--teal-ink)}
+.svc span{color:var(--ink-soft);font-size:15.5px;font-weight:300}
+.svc:hover b{color:var(--teal-ink)}
+.svc:focus-visible{outline:2px solid var(--teal);outline-offset:6px;border-radius:var(--r-md)}
+.svc-also{margin-top:40px;display:flex;flex-wrap:wrap;gap:10px 24px;align-items:center;font-size:15.5px;color:var(--ink-soft)}
+
+/* Portfolio */
+.filters{display:flex;flex-wrap:wrap;gap:6px 24px;margin-bottom:28px}
+.filters button{all:unset;cursor:pointer;font-size:15px;font-weight:400;color:var(--ink-soft);padding:4px 0;border-bottom:1px solid transparent}
+.filters button.on{color:var(--ink);border-bottom-color:var(--ink)}
+.filters button:hover{color:var(--ink)}
+.filters button:focus-visible{outline:2px solid var(--teal)}
+.works{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:210px;grid-auto-flow:dense;gap:14px}
+.work{all:unset;cursor:zoom-in;position:relative;display:block;height:100%;border-radius:var(--r-sm);overflow:hidden;background:var(--shell-2)}
+.work img{width:100%;height:100%;object-fit:cover;transition:transform .9s cubic-bezier(.2,.7,.2,1)}
+.work:hover img{transform:scale(1.05)}
+.work.pop{animation:pop .55s cubic-bezier(.2,.7,.2,1) both}
+@keyframes pop{from{opacity:0;transform:translateY(14px) scale(.98)}to{opacity:1;transform:none}}
+.work::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(0,0,0,.5),transparent 42%);opacity:0;transition:opacity .3s}
+.work span{position:absolute;z-index:1;left:14px;bottom:12px;color:#fff;font-size:12px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;opacity:0;transform:translateY(6px);transition:opacity .3s,transform .3s}
+.work:hover span,.work:focus-visible span{opacity:1;transform:none}
+.work:hover::after,.work:focus-visible::after{opacity:1}
+.work:focus-visible{outline:2px solid var(--teal);outline-offset:2px}
+.work.big{grid-column:span 2;grid-row:span 2}
+.work.tall{grid-row:span 2}
+.work.out,.work.more{display:none}
+.works-more{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:28px}
+.lb{position:fixed;inset:0;z-index:150;background:rgba(10,12,11,.95);display:grid;place-items:center;gap:18px;padding:64px 16px 24px;grid-template-rows:1fr auto}
+.lb img{max-width:min(1000px,100%);max-height:100%;border-radius:4px;object-fit:contain;align-self:center}
+.lb-x{all:unset;cursor:pointer;position:absolute;top:14px;right:18px;width:44px;height:44px;display:grid;place-items:center;color:#fff;font-size:32px}
+.lb-nav{all:unset;cursor:pointer;position:absolute;top:50%;transform:translateY(-50%);width:48px;height:48px;border-radius:50%;display:grid;place-items:center;color:#fff;background:rgba(255,255,255,.14);transition:background .2s}
+.lb-nav:hover{background:rgba(255,255,255,.26)}
+.lb-nav.prev{left:14px}.lb-nav.next{right:14px}
+.lb-nav svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.lb-x:focus-visible,.lb-nav:focus-visible{outline:2px solid var(--teal);outline-offset:2px}
+.lb-foot{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:12px 22px;color:rgba(255,255,255,.78);font-size:14px;font-variant-numeric:tabular-nums}
+
+/* Manifiesto */
+.manifesto .wrap{display:grid;gap:28px}
+.mani{font:400 clamp(34px,4.8vw,70px)/1.08 var(--font-display);letter-spacing:-.02em;max-width:21ch}
+.mani .w{display:inline-block;transition:opacity .5s ease,color .5s ease}
+.js-anim .mani .w{opacity:.16}
+.js-anim .mani.lit .w{opacity:1}
+.mani .w.hot{font-style:italic;color:var(--teal-ink)}
+.mani-by{display:flex;align-items:center;gap:14px;font-size:14.5px;color:var(--ink-soft)}
+.mani-by img{width:48px;height:48px;border-radius:50%;object-fit:cover;object-position:50% 25%}
+
+/* Sobre Diego */
+.about{display:grid;grid-template-columns:.8fr 1.2fr;gap:clamp(36px,6vw,96px);align-items:center}
+.about-img{margin:0;position:relative}
+.about-img img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:50% 20%;border-radius:var(--r-md);filter:grayscale(.15)}
+.about-img figcaption{position:absolute;left:16px;bottom:16px;padding:8px 14px;border-radius:999px;background:rgba(255,255,255,.9);font-size:13px;font-weight:500}
+.about-copy{display:grid;gap:22px;justify-items:start}
+.about-copy p{color:var(--ink-soft);font-weight:300;max-width:36em}
+.about-copy p b{color:var(--ink);font-weight:500}
+.facts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));width:100%;border-top:1px solid var(--line);margin-top:8px}
+.facts div{display:grid;gap:4px;padding:20px 18px 6px 0}
+.facts div+div{padding-left:18px;border-left:1px solid var(--line)}
+.facts b{font:400 clamp(28px,2.6vw,40px)/1 var(--font-display);font-variant-numeric:tabular-nums}
+.facts span{font-size:14px;color:var(--ink-soft);font-weight:300}
+.expo{font-size:14.5px;color:var(--ink-soft)}
+.expo b{display:block;font-size:11.5px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--ink);margin-bottom:6px}
+
+/* Así es una sesión */
+.steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(20px,2.4vw,36px);counter-reset:s}
+.steps li{display:grid;gap:10px;align-content:start;padding-top:22px;border-top:1px solid var(--line);position:relative}
+.steps li::before{content:"";position:absolute;left:0;top:-4px;width:7px;height:7px;border-radius:50%;background:var(--teal)}
+.steps b{font:italic 400 15px var(--font-display);color:var(--teal-ink)}
+.steps h3{font-size:26px}
+.steps p{color:var(--ink-soft);font-size:15.5px;font-weight:300}
+
+/* Tarifas */
+.tabs{display:inline-flex;gap:4px;padding:4px;border-radius:999px;background:var(--shell-2);margin-bottom:28px}
+.tabs button{all:unset;cursor:pointer;padding:10px 20px;border-radius:999px;font-size:15px;font-weight:500;color:var(--ink-soft)}
+.tabs button[aria-pressed="true"]{background:#fff;color:var(--ink);box-shadow:0 4px 14px -8px rgba(0,0,0,.35)}
+.tabs button:focus-visible{outline:2px solid var(--teal)}
+.plans{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(16px,2vw,28px)}
+.plan{display:grid;gap:16px;align-content:start;padding:28px 26px;border-radius:var(--r-lg);background:#fff;border:1px solid var(--line)}
+.plan.feat{background:var(--ink);color:#F2F0EA;border-color:var(--ink)}
+.plan.feat .plan-for,.plan.feat li{color:rgba(242,240,234,.72)}
+.plan h3{font-size:28px}
+.plan-for{font-size:14.5px;color:var(--ink-soft);margin-top:-8px}
+.plan-price{font:400 54px/1 var(--font-display);letter-spacing:-.03em}
+.plan-price small{font:400 15px var(--font-body);letter-spacing:0;margin-left:4px}
+.plan ul{list-style:none;margin:0;padding:0;display:grid;gap:8px;font-size:15px;color:var(--ink-soft)}
+.plan li{display:flex;gap:10px}
+.plan li::before{content:"";flex:none;width:6px;height:6px;margin-top:.62em;border-radius:50%;background:var(--teal)}
+.plan .btn{justify-self:start;margin-top:6px}
+.plan.feat .btn{background:#F2F0EA;color:var(--ink)}
+.plan.feat .btn:hover{background:var(--teal);color:#fff}
+.plans-note{margin-top:22px;font-size:14px;color:var(--ink-soft)}
+
+/* Pedir sesión */
+.book-cta{display:grid;grid-template-columns:1fr auto;gap:40px;align-items:end}
+.book-cta>div{display:grid;gap:18px}
+.book-cta h2 em{color:var(--teal-2)}
+.book-perks{list-style:none;margin:6px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:8px 28px;font-size:14.5px;color:rgba(242,240,234,.66)}
+.book-cta .btn{min-height:58px;padding:0 34px;font-size:16px}
+
+.draft{outline:2px dashed #E5B300;outline-offset:-12px}
+.incl{list-style:none;margin:0;padding:0;display:grid;gap:10px;font-size:18px}
+mark{background:#FFE58A;padding:0 4px;border-radius:4px}
+
+/* Contacto */
+.visit{display:grid;grid-template-columns:1fr 1fr;gap:clamp(36px,6vw,96px);align-items:start}
+.visit>div:first-child{display:grid;gap:18px;justify-items:start}
+.hours{border-collapse:collapse;margin-top:8px;font-size:16px}
+.hours th{text-align:left;font-weight:400;padding:10px 28px 10px 0}
+.hours td{padding:10px 0;color:var(--ink-soft);font-variant-numeric:tabular-nums}
+.hours tr{border-bottom:1px solid var(--line)}
+.contact{list-style:none;margin:6px 0 0;padding:0;display:grid;gap:12px}
+.contact li{display:flex;align-items:flex-start;gap:12px}
+.contact svg{width:18px;height:18px;flex:none;color:var(--ink-soft);margin-top:4px}
+.contact a{text-decoration:none}
+.contact a:hover{color:var(--teal-ink)}
+.faq{display:grid;border-top:1px solid var(--line)}
+.faq details{border-bottom:1px solid var(--line)}
+.faq summary{cursor:pointer;list-style:none;padding:20px 0;font:400 22px/1.25 var(--font-display);display:flex;justify-content:space-between;gap:16px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font:300 24px/1 var(--font-body);color:var(--ink-soft);transition:transform .25s}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq details p{padding:0 0 22px;color:var(--ink-soft);font-weight:300}
+
+/* Cierre */
+.final{padding-block:clamp(100px,13vw,170px);text-align:center;border-top:1px solid var(--line)}
+.final .wrap{display:grid;justify-items:center;gap:26px}
+.final h2{font-size:clamp(42px,5.8vw,88px);line-height:1}
+.final h2 em{display:block}
+.final .hero-ctas{justify-content:center;margin-top:0}
+.g-rate{display:inline-flex;align-items:center;gap:8px;color:var(--ink-soft);text-decoration:none;font-size:14px}
+.g-rate .stars{display:flex;gap:1px;color:#F5B400}.g-rate svg{width:13px;height:13px}
+.g-rate b{color:var(--ink)}
+.foot .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;font-size:13.5px;color:var(--ink-soft);padding-block:26px;border-top:1px solid var(--line)}
+.foot a{text-decoration:none}
+
+/* Animaciones */
+.js-anim [data-reveal]{opacity:0;transform:translateY(24px);transition:opacity 1s cubic-bezier(.2,.7,.2,1),transform 1s cubic-bezier(.2,.7,.2,1)}
+.js-anim [data-reveal].in{opacity:1;transform:none}
+.js-anim .hero-copy>*{animation:rise 1s cubic-bezier(.2,.7,.2,1) both}
+.js-anim .vf{animation:rise 1.1s .15s cubic-bezier(.2,.7,.2,1) both}
+.js-anim .hero-copy>:nth-child(2){animation-delay:.08s}.js-anim .hero-copy>:nth-child(3){animation-delay:.16s}.js-anim .hero-copy>:nth-child(4){animation-delay:.24s}.js-anim .hero-copy>:nth-child(5){animation-delay:.32s}.js-anim .hero-copy>:nth-child(6){animation-delay:.4s}
+@keyframes rise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+.totop{background:#fff!important;color:var(--ink)!important;border-color:var(--line)!important;-webkit-backdrop-filter:none!important;backdrop-filter:none!important}
+
+.mbar{display:none}
+
+/* PC bajo: todo cabe en el primer pantallazo */
+@media (min-width:961px) and (max-height:760px){
+  .hero h1{font-size:clamp(40px,4.6vw,70px);margin-top:14px}
+  .hero-sub{margin-top:16px;font-size:16.5px}
+  .hero-ctas{margin-top:22px}
+  .hero-quote{margin-top:18px}
+  .vf{width:min(100%,calc((100svh - var(--head) - 120px)*1.5))}
+}
+@media (min-width:961px) and (max-height:560px){
+  .hero-quote,.hero-micro{display:none}
+  .hero-sub{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+  .vf-bar{display:none}
+  .vf{width:min(100%,calc((100svh - var(--head) - 50px)*1.5))}
+  .rate-stk{left:-14px;top:-10px;padding:8px 12px 9px;gap:2px 8px}.rate-stk b{font-size:28px}.rate-stk svg{width:13px;height:13px}.rate-stk small{font-size:11.5px}
+}
+
+@media (max-width:960px){
+  .nav{display:none}
+  .hero{display:block;min-height:0;padding:var(--head) 0 40px}
+  .hero::after{background:linear-gradient(180deg,rgba(13,16,15,.2),rgba(13,16,15,.86) 52%,rgba(13,16,15,.95))}
+  .hero-grid{grid-template-columns:1fr;gap:26px;padding-inline:0}
+  .hero-copy{padding-inline:clamp(20px,4vw,48px)}
+  .vf{order:-1;width:100%;justify-self:stretch;gap:0}
+  .vf-frame{aspect-ratio:auto;height:min(58vw,34svh);border-radius:0;box-shadow:none}
+  .vf-bar{display:none}
+  .vf-c{width:18px;height:18px}.vf-c.tl,.vf-c.bl{left:12px}.vf-c.tr,.vf-c.br{right:12px}.vf-c.tl,.vf-c.tr{top:12px}.vf-c.bl,.vf-c.br{bottom:12px}
+  .vf-read{left:38px;right:38px;bottom:13px;font-size:10px;letter-spacing:.14em}
+  .rate-stk{left:auto;right:14px;top:auto;bottom:-20px;transform:rotate(3deg)}
+  .rate-stk:hover{transform:rotate(1deg)}
+  .about,.visit,.book-cta{grid-template-columns:1fr}
+  .about-img{max-width:440px}
+  .svcs{grid-template-columns:1fr 1fr}
+  .works{grid-template-columns:repeat(3,1fr)}
+  .rv-grid{grid-template-columns:1fr}
+  .steps{grid-template-columns:1fr 1fr}
+  .plans{grid-template-columns:1fr}
+  .reviews::before{background-position:100% 0;background-size:auto 70%}
+}
+@media (max-width:640px){
+  body{font-size:16px;padding-bottom:84px}
+  .hide-m{display:none}
+  .top .btn{display:none}
+  .brand img{height:25px}
+  .vf-frame{height:min(64vw,31svh)}
+  .rate-stk{padding:8px 12px 9px;border-radius:13px;gap:1px 8px;bottom:-18px}
+  .rate-stk b{font-size:27px}.rate-stk svg{width:13px;height:13px}.rate-stk small{font-size:11px}
+  .vf-read b span{display:none}
+  .hero .eyebrow{font-size:11px;letter-spacing:.14em;margin-top:6px}
+  .hero .eyebrow::before{width:14px}
+  .hero h1{font-size:clamp(30px,10.4vw,52px);margin-top:12px}
+  .hero-sub{margin-top:14px;font-size:15.5px}
+  .hero-ctas{margin-top:20px;width:100%}
+  .hero-ctas .btn{width:100%}
+  .hero-ctas .link{display:none}
+  .hero-quote{margin-top:22px}
+  .svcs{grid-template-columns:1fr;gap:28px}
+  .svc b{font-size:24px}
+  .works{grid-template-columns:1fr 1fr;grid-auto-rows:150px;gap:8px}
+  .work.big{grid-column:span 2;grid-row:span 2}
+  .work span{opacity:1;transform:none;font-size:10.5px}
+  .work::after{opacity:1}
+  .web-q{grid-template-columns:1fr}
+  .steps{grid-template-columns:1fr;gap:26px}
+  .facts div{padding:16px 10px 4px 0}.facts div+div{padding-left:10px}
+  .facts b{font-size:26px}.facts span{font-size:12.5px}
+  .tabs{display:flex}.tabs button{flex:1;text-align:center;padding:10px 8px;font-size:14px}
+  .plan-price{font-size:46px}
+  .book-cta .btn{width:100%}
+  .reviews::after{background:linear-gradient(180deg,rgba(250,249,246,.92),var(--paper) 40%)}
+  .final .hero-ctas{flex-direction:column;width:100%}.final .hero-ctas .btn{width:100%}
+  .mbar{display:flex;gap:6px;position:fixed;left:12px;right:12px;bottom:calc(10px + env(safe-area-inset-bottom,0px));z-index:70;padding:6px;border-radius:999px;background:rgba(243,241,236,.92);-webkit-backdrop-filter:blur(18px) saturate(1.5);backdrop-filter:blur(18px) saturate(1.5);border:1px solid rgba(18,20,19,.1);box-shadow:0 14px 34px -14px rgba(18,20,19,.45)}
+  .mbar.dark{background:rgba(13,16,15,.84);border-color:rgba(255,255,255,.16)}
+  .mbar .btn{flex:1;min-height:48px;white-space:nowrap}
+  .mbar.dark .btn-primary{background:var(--teal-ink)}
+  .mbar .btn-ghost{flex:0 0 48px;width:48px;padding:0;border-color:transparent;background:rgba(18,20,19,.07)}
+  .mbar.dark .btn-ghost{background:rgba(255,255,255,.16);color:#fff}
+  .mbar .btn-ghost svg{width:20px;height:20px}
+}
+@media (max-width:640px) and (max-height:700px){
+  .hero-sub .hide-s{display:none}
+}
+@media (max-width:380px){
+  .hero-quote{display:none}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+
+/* Temporadas: el eyebrow pasa a píldora de línea fina con un punto verde agua latiendo */
+.hero .eyebrow.t-on{padding:6px 14px 6px 12px;border-radius:999px;border:1px solid rgba(242,240,234,.24);color:#F2F0EA;letter-spacing:.16em}
+.hero .eyebrow.t-on::before{width:6px;height:6px;border-radius:50%;opacity:1;flex:none;background:#7FD6C9;box-shadow:0 0 0 0 rgba(127,214,201,.55);animation:t-pulso 2s ease-out infinite}
+@keyframes t-pulso{70%{box-shadow:0 0 0 7px rgba(127,214,201,0)}100%{box-shadow:0 0 0 0 rgba(127,214,201,0)}}
+@media (max-width:640px){.hero .eyebrow.t-on{font-size:10.5px;letter-spacing:.1em;padding:5px 12px 5px 10px}}
+
+/* Botones flotantes (cabecera y barra móvil): aparecen tras un mínimo scroll, no al pintar el hero */
+.top .btn-primary{transition:opacity .35s,transform .35s cubic-bezier(.2,.7,.2,1),background .25s}
+html.cta-wait .top .btn-primary{opacity:0;transform:translateY(-8px);pointer-events:none}
+.mbar{transition:transform .35s cubic-bezier(.2,.7,.2,1),opacity .35s,background .4s,border-color .4s}
+html.cta-wait .mbar,.mbar.off{transform:translateY(150%)!important;opacity:0!important;pointer-events:none}
+
+/* ---- Paneles laterales ---- */
+.bk{position:fixed;inset:0;z-index:120}
+.bk[hidden]{display:none}
+.bk-scrim{position:absolute;inset:0;background:rgba(18,18,20,.55);opacity:0;transition:opacity .35s ease}
+.bk.open .bk-scrim{opacity:1}
+.bk-panel{position:absolute;top:0;right:0;bottom:0;width:min(480px,100%);background:var(--shell);display:flex;flex-direction:column;box-shadow:-30px 0 80px -30px rgba(18,18,20,.45);transform:translateX(100%);transition:transform .42s cubic-bezier(.2,.8,.2,1)}
+.bk.open .bk-panel{transform:none}
+.bk-head{display:grid;grid-template-columns:44px 1fr 44px;align-items:center;gap:8px;padding:calc(10px + env(safe-area-inset-top,0px)) 12px 10px;border-bottom:1px solid var(--line);background:#fff}
+.bk-head .t{text-align:center;display:grid;gap:2px}
+.bk-head .t span{font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft)}
+.bk-head .t b{font-family:var(--font-display);font-weight:400;font-size:20px;color:var(--hibiscus);line-height:1.1}
+.bk-ib{all:unset;cursor:pointer;width:44px;height:44px;border-radius:50%;display:grid;place-items:center;color:var(--ink)}
+.bk-ib:hover{background:var(--shell-2)}
+.bk-ib:focus-visible{outline:3px solid var(--hibiscus)}
+.bk-ib svg{width:22px;height:22px}
+.bk-ib[disabled]{visibility:hidden}
+.bk-prog{height:4px;background:var(--shell-2)}
+.bk-prog i{display:block;height:100%;background:linear-gradient(90deg,var(--hibiscus),var(--sun));transform-origin:left;transition:transform .35s ease}
+.bk-body{flex:1;overflow-y:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch;padding:28px 22px 24px}
+.bk-pane{display:grid;gap:18px;align-content:start}
+.bk-pane[hidden]{display:none}
+.bk-pane h3{font-size:clamp(26px,6vw,32px);line-height:1.1}
+.bk-pane .sub{color:var(--ink-soft);margin-top:-8px}
+.bk-opts{display:grid;gap:10px}
+.bk-opts label{position:relative;cursor:pointer;display:block}
+.bk-opts input{position:absolute;opacity:0;inset:0;margin:0;cursor:pointer}
+.bk-opts span{display:flex;align-items:center;justify-content:space-between;min-height:58px;padding:0 18px;border-radius:16px;border:1.5px solid var(--line);background:#fff;font-size:17px;font-weight:600;transition:border-color .2s,background .2s,color .2s}
+.bk-opts span::after{content:"";width:22px;height:22px;border-radius:50%;border:2px solid var(--line);flex:none;transition:all .2s}
+.bk-opts input[type=checkbox]+span::after{border-radius:7px}
+.bk-opts input:checked+span{border-color:var(--hibiscus);background:#E4F1EE;color:var(--hibiscus-ink)}
+.bk-opts input:checked+span::after{border-color:var(--hibiscus);background:var(--hibiscus) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='none' stroke='white' stroke-width='3.2' stroke-linecap='round' stroke-linejoin='round' d='M6 12l4 4 8-8'/%3E%3C/svg%3E") center/14px no-repeat}
+.bk-opts input:focus-visible+span{outline:3px solid var(--hibiscus);outline-offset:2px}
+.bk-opts.row{grid-template-columns:repeat(auto-fit,minmax(0,1fr));gap:8px}
+.bk-opts.row span{justify-content:center;min-height:50px;padding:0 10px;font-size:15px;text-align:center}
+.bk-opts.row span::after{display:none}
+.bk-field{display:grid;gap:8px;min-width:0}
+.bk-field>span{font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-soft)}
+.bk-field input,.bk-field textarea{display:block;width:100%;min-width:0;max-width:100%;min-height:56px;padding:14px 16px;border-radius:14px;border:1.5px solid var(--line);background:#fff;font:500 17px var(--font-body);color:var(--ink);-webkit-appearance:none;appearance:none}
+.bk-field input[type=date]{text-align:left}
+.bk-field input::-webkit-date-and-time-value{text-align:left}
+.bk-field textarea{min-height:96px;resize:vertical}
+.cal{background:#fff;border:1.5px solid var(--line);border-radius:18px;padding:10px 12px 14px}
+.cal-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:6px}
+.cal-head b{font-size:17px}
+.cal-head .bk-ib[disabled]{visibility:visible;opacity:.25;cursor:default}
+.cal-dow,.cal-grid{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:4px;text-align:center}
+.cal-dow span{font-size:12px;font-weight:700;color:var(--ink-soft);padding:4px 0}
+.cal-dow .we,.cal-grid .we{color:var(--hibiscus)}
+.cal-grid button{all:unset;box-sizing:border-box;cursor:pointer;aspect-ratio:1;max-height:48px;width:100%;display:grid;place-items:center;border-radius:12px;font-weight:600;font-size:15px;font-variant-numeric:tabular-nums;color:var(--ink);transition:background .15s,color .15s}
+.cal-grid button.we{color:var(--hibiscus)}
+.cal-grid button:hover:not([disabled]){background:var(--shell-2)}
+.cal-grid button[disabled]{opacity:.28;cursor:default}
+.cal-grid button{position:relative}
+.cal-grid button.today{opacity:1;color:var(--ink);box-shadow:inset 0 0 0 2px var(--sun);background:#EEF6F4}
+.cal-grid button.today::after{content:"";position:absolute;left:50%;bottom:12%;width:5px;height:5px;margin-left:-2.5px;border-radius:50%;background:#3F8178}
+.cal-legend{display:flex;align-items:center;gap:6px;margin:10px 2px 0;font-size:13px;font-weight:600;color:var(--ink-soft)}
+.cal-legend i{width:14px;height:14px;border-radius:5px;box-shadow:inset 0 0 0 2px var(--sun);background:#EEF6F4;position:relative;flex:none}
+.cal-legend i::after{content:"";position:absolute;left:50%;bottom:2px;width:4px;height:4px;margin-left:-2px;border-radius:50%;background:#3F8178}
+.cal-grid button[aria-pressed="true"]{background:var(--hibiscus);color:#fff}
+.cal-grid button:focus-visible{outline:3px solid var(--hibiscus);outline-offset:1px}
+.cal-sel{margin:4px 0 0;font-weight:600;color:var(--ink-soft)}
+.cal-sel.on{color:var(--hibiscus-ink)}
+.bk-field input:focus,.bk-field textarea:focus{outline:none;border-color:var(--hibiscus)}
+.bk-field input[aria-invalid="true"]{border-color:#C6283D;background:#FFF2F4}
+.stepper{display:grid;grid-template-columns:56px 1fr 56px;align-items:center;background:#fff;border:1.5px solid var(--line);border-radius:16px;overflow:hidden}
+.stepper button{all:unset;cursor:pointer;height:56px;display:grid;place-items:center;font-size:26px;font-weight:600;color:var(--hibiscus)}
+.stepper button:active{background:var(--shell-2)}
+.stepper button:focus-visible{outline:3px solid var(--hibiscus);outline-offset:-3px}
+.stepper output{text-align:center;font-size:22px;font-weight:700;font-variant-numeric:tabular-nums}
+.bk-foot{padding:12px 22px calc(14px + env(safe-area-inset-bottom,0px));border-top:1px solid var(--line);background:#fff;display:grid;gap:8px}
+.bk-foot .btn{width:100%;min-height:56px;font-size:17px}
+.bk-foot [hidden]{display:none!important}
+.f-error{margin:0;color:#B3213A;font-weight:600;font-size:15px}
+.btn-wa{background:#1FA855;color:#fff;box-shadow:0 12px 24px -12px rgba(31,168,85,.8);width:100%;white-space:nowrap}
+.btn-wa:hover{background:#178F47}
+.btn-wa svg{width:22px;height:22px}
+.f-preview{margin:0;white-space:pre-wrap;font:16px/1.5 var(--font-body);background:#E7FFDB;border-radius:16px 16px 16px 4px;padding:16px 18px;color:#123;box-shadow:0 1px 0 rgba(0,0,0,.06)}
+.f-copy{all:unset;cursor:pointer;justify-self:center;font-size:14px;font-weight:600;color:var(--hibiscus-ink);text-decoration:underline;text-underline-offset:3px;padding:4px 8px}
+.f-copy:focus-visible{outline:3px solid var(--hibiscus);border-radius:6px}
+.f-hint{margin:0;font-size:13px;color:var(--ink-soft);text-align:center}
+
+
+.hrs{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.stepper.sm{grid-template-columns:40px 1fr 40px;border-radius:14px}
+.stepper.sm button{height:44px;font-size:22px}
+.stepper.sm button[disabled]{opacity:.25;cursor:default}
+.stepper.sm output{font-size:18px}
+.hrs-out{margin:-4px 0 0;font-size:14px;font-weight:600;color:var(--hibiscus-ink)}
+/* Panel compacto: ningún paso necesita scroll */
+.bk-body{padding:18px 18px 14px}
+.bk-pane{gap:14px}
+.bk-pane h3{font-size:24px}
+.bk-pane .sub{margin-top:-6px;font-size:15px}
+.bk-field{gap:6px}
+.bk-field>span{font-size:12px}
+.bk-opts{gap:8px}
+.bk-opts span{min-height:50px;font-size:16px;border-radius:14px}
+.bk-opts.row span{min-height:44px}
+.bk-opts.grid2{grid-template-columns:1fr 1fr}
+.bk-opts.grid2 span{min-height:44px;padding:0 12px;font-size:14px}
+.bk-opts.grid2 span::after{width:18px;height:18px}
+.bk-field input,.bk-field textarea{min-height:48px;padding:11px 14px;font-size:16px}
+.bk-field textarea{min-height:76px}
+.stepper{grid-template-columns:52px 1fr 52px}
+.stepper button{height:48px}
+.cal{padding:6px 8px 10px}
+.cal-head{margin-bottom:2px}
+.cal-head .bk-ib{width:38px;height:38px}
+.cal-dow span{padding:2px 0}
+.cal-grid{gap:2px}
+.cal-grid button{aspect-ratio:auto;height:clamp(34px,5.2vh,44px)}
+.cal-legend{margin-top:6px;font-size:12px}
+.cal-sel{margin:0;font-size:14px}
+.f-preview{font-size:14px;padding:12px 14px}
+.bk-foot{padding:10px 18px calc(10px + env(safe-area-inset-bottom,0px));gap:6px}
+.bk-foot .btn{min-height:50px}
+.bk-head{padding-block:calc(6px + env(safe-area-inset-top,0px)) 6px}
+@media (max-height:700px){
+  .bk-pane h3{font-size:22px}
+  .bk-opts span{min-height:46px}
+  .bk-opts.row span,.bk-opts.grid2 span{min-height:40px}
+  .stepper button{height:44px}
+  .cal-grid button{height:32px;font-size:14px}
+  .bk-body{padding-top:14px}
+  .f-preview{font-size:13px;line-height:1.4;padding:10px 12px}
+  .bk-pane .sub{font-size:13.5px}
+}
+@media (max-height:620px){.bk-pane{gap:10px}.bk-pane h3{font-size:20px}.f-preview{font-size:12.5px;line-height:1.35}}
+.rvd-body{display:grid;grid-template-columns:minmax(0,1fr);gap:18px;align-content:start;overflow-x:hidden;overscroll-behavior-x:none;touch-action:pan-y}
+.rvd .bk-panel{overflow-x:hidden;max-width:100vw}
+.rvd-body>*,.rvd-list>*{min-width:0;max-width:100%}
+.rvd-list .rv,.rvd-list .rv *{overflow-wrap:anywhere}
+.rvd-list .rv-top{flex-wrap:wrap}.rvd-list .rv-tag{white-space:normal}
+.rvd-sum{display:grid;grid-template-columns:auto minmax(0,1fr);gap:22px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:var(--r-md);padding:18px 20px}
+.rvd-score{display:grid;justify-items:center;gap:4px}
+.rvd-score b{font-size:44px;line-height:1;font-weight:700;color:var(--ink)}
+.rvd-score small{font-size:13px;color:var(--ink-soft)}
+.rvd-dist{list-style:none;margin:0;padding:0;display:grid;gap:5px;font-size:13px;color:var(--ink-soft)}
+.rvd-dist li{display:grid;grid-template-columns:12px 1fr 22px;gap:8px;align-items:center}
+.rvd-dist i{height:8px;border-radius:99px;background:var(--shell-2);overflow:hidden}.rvd-dist b{display:block;height:100%;background:#F5B400;border-radius:99px}
+.rvd-dist em{font-style:normal;text-align:right}
+.rvd-h{margin:6px 0 0;font-size:17px}
+.rvd-list{display:grid;grid-template-columns:minmax(0,1fr);gap:12px}
+.rvd-list .rv{background:#fff;opacity:1!important;transform:none!important}
+.rvd-map{border-radius:var(--r-md);overflow:hidden;border:1px solid var(--line);background:var(--shell-2);height:300px;flex:none}
+.rvd-map iframe{width:100%;height:100%;border:0;display:block}
+.rvd-note{margin:0;font-size:13px;color:var(--ink-soft)}
+.rvd-foot{padding:12px 16px calc(12px + env(safe-area-inset-bottom,0px));border-top:1px solid var(--line);background:#fff}
+.rvd-foot .btn{width:100%}
+/* Subir arriba */
+.totop{position:fixed;right:20px;bottom:24px;z-index:65;width:48px;height:48px;border-radius:50%;border:1px solid rgba(255,255,255,.6);background:rgba(255,255,255,.72);-webkit-backdrop-filter:blur(14px) saturate(1.6);backdrop-filter:blur(14px) saturate(1.6);color:var(--ink);display:grid;place-items:center;cursor:pointer;box-shadow:0 10px 30px -10px rgba(21,21,21,.3);opacity:0;transform:translateY(12px) scale(.9);pointer-events:none;transition:opacity .3s,transform .3s}
+.totop.on{opacity:1;transform:none;pointer-events:auto}
+.totop:hover{transform:translateY(-2px)}
+.totop svg{width:22px;height:22px}
+@media (max-width:960px){.totop{bottom:calc(86px + env(safe-area-inset-bottom,0px));right:16px;width:44px;height:44px}}
+@media (max-width:640px){.bk-panel{width:100%;transform:translateY(100%);box-shadow:none}}
+.bk-head .t b{font-family:var(--font-display);font-weight:400;color:var(--ink)}
+.bk-opts input:checked+span{background:#E4F1EE}
+.btn-wa{font-size:16px}
+.bk-pane h3:focus{outline:none}
+.bk-opts.grid2.tight span{min-height:44px;padding:0 12px;font-size:14.5px}
+@media (max-height:700px){.bk-opts.grid2.tight span{min-height:38px;font-size:14px}}
+
+</style>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-cam" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h3l1.6-2.4h6.8L17 8h3a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1z"/><circle cx="12" cy="13" r="3.6"/></g></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 22s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></g></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="M3.5 6.5l8.5 6.5 8.5-6.5"/></g></symbol>
+  <symbol id="i-ig" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8" fill="currentColor"/></g></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2.8l2.8 5.9 6.4.8-4.7 4.4 1.2 6.4L12 17.2l-5.7 3.1 1.2-6.4L2.8 9.5l6.4-.8z"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></symbol>
+</svg>
+
+<div class="loader" id="loader" aria-hidden="true">
+  <div class="ld-in">
+    <div class="ld-mark"><svg class="ld-ring" viewBox="0 0 140 140"><circle cx="70" cy="70" r="66"/><circle class="ld-arc" cx="70" cy="70" r="66" pathLength="100"/></svg><img src="img/iris.png" alt=""></div>
+    <b class="ld-name">enfócate</b>
+    <small class="ld-sub">Fotografía y branding</small>
+  </div>
+</div>
+<script>
+/* ---------- Loader con el logo: en cada entrada o recarga; se va al cargar la página (mín. 0,9 s, máx. 3 s) ---------- */
+(function(){var d=document.documentElement,l=document.getElementById('loader'),t0=Date.now(),done=false;d.classList.add('loading');
+ function go(){if(done)return;done=true;setTimeout(function(){l.classList.add('out');d.classList.remove('loading');setTimeout(function(){l.remove()},900)},Math.max(0,900-(Date.now()-t0)))}
+ if(document.readyState==='complete')go();else window.addEventListener('load',go);setTimeout(go,3000);})();
+</script>
+
+<header class="top dark" id="top">
+  <div class="wrap">
+    <a class="brand" href="#hero" aria-label="Enfócate, Fotografía y Branding, inicio"><img src="img/logo.png" alt="Enfócate"></a>
+    <nav class="nav" aria-label="Secciones">
+      <a href="#servicios">Servicios</a>
+      <a href="#trabajos">Trabajos</a>
+      <a href="#diego">Sobre mí</a>
+      <a href="#tarifas">Tarifas</a>
+      <a href="#resenas">Reseñas</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <a class="btn btn-primary" href="#reservar"><span data-t="mbar">Cuéntame tu idea</span></a>
+  </div>
+  <div class="progress" id="progress"></div>
+</header>
+
+<main>
+  <section class="hero" id="hero">
+    <div class="hero-amb" id="hero-amb" aria-hidden="true"></div>
+    <div class="hero-grid wrap">
+      <div class="hero-copy">
+        <span class="eyebrow" data-t="eyebrow">Fotógrafo en A Coruña<span class="hide-m">&nbsp;· Diego Silva</span></span>
+        <h1 data-t="h1">Tu mejor versión, <em>enfocada</em></h1>
+        <p class="hero-sub" data-t="sub">Fotografía de marca personal, corporativa y de producto en A Coruña y toda Galicia. <span class="hide-s">Preparamos juntos la sesión, te guío delante de la cámara y te llevas fotos listas para tu web, LinkedIn y redes.</span></p>
+        <div class="hero-ctas">
+          <a class="btn btn-light" href="#reservar"><svg aria-hidden="true"><use href="#i-cam"/></svg><span data-t="cta">Cuéntame tu idea</span></a>
+          <a class="link" href="#trabajos">Ver trabajos <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        </div>
+        <p class="hero-micro" data-t="micro">Respuesta por WhatsApp · sin compromiso</p>
+        <blockquote class="hero-quote"><q>Tiene mucho talento y muy buen ojo, y me propuso ideas que encajaban perfectamente con lo que yo buscaba.</q><cite>Jessica M. · reseña de Google</cite></blockquote>
+      </div>
+
+      <figure class="vf" id="vf" aria-roledescription="carrusel" aria-label="Trabajos reales de Enfócate">
+        <div class="vf-frame" id="vf-frame" tabindex="0" role="button" aria-label="Disparar: ver el siguiente trabajo">
+          <div class="vf-shots" id="vf-shots"></div>
+          <svg class="vf-iris" id="vf-iris" viewBox="0 0 300 200" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><path id="vf-blades" fill="#0B0E0D" fill-rule="evenodd" d=""/><path id="vf-edges" fill="none" stroke="rgba(127,214,201,.45)" stroke-width=".6" d=""/></svg>
+          <div class="vf-flash" id="vf-flash"></div>
+          <div class="vf-ui" aria-hidden="true">
+            <i class="vf-c tl"></i><i class="vf-c tr"></i><i class="vf-c bl"></i><i class="vf-c br"></i>
+            <span class="vf-af" id="vf-af"><i></i><i></i><i></i><i></i></span>
+            <span class="vf-read"><b id="vf-tag">Marca personal</b><span id="vf-num">01 / 08</span></span>
+          </div>
+        </div>
+        <a class="rate-stk" href="#resenas" data-rvd aria-label="5,0 de 5 en Google con 56 reseñas"><span class="stars"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></span><b>5,0</b><small>56 reseñas<br>en Google</small></a>
+        <figcaption class="vf-bar">
+          <span class="vf-cap" id="vf-cap" aria-live="polite"></span>
+          <span class="vf-ctl"><span class="vf-count" id="vf-count"></span><button type="button" id="vf-prev" aria-label="Trabajo anterior"><svg viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"/></svg></button><button type="button" class="shutter" id="vf-shoot" aria-label="Disparar: siguiente trabajo"><span></span></button><button type="button" id="vf-next" aria-label="Trabajo siguiente"><svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg></button></span>
+        </figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="sec reviews band-white" id="resenas">
+    <div class="wrap">
+      <div class="sec-head" data-reveal>
+        <span class="eyebrow">Reseñas de Google</span>
+        <h2>5,0 en 56 reseñas. <em>Hasta a quien no le gustan las fotos</em></h2>
+      </div>
+      <div class="rv-grid" id="rv-grid"></div>
+      <p class="rv-more"><a href="#resenas" data-rvd>Ver las reseñas →</a> <span>Fragmentos literales de reseñas de 5 estrellas en Google.</span></p>
+      <div class="web-q" data-reveal>
+        <span class="eyebrow">Y en su web</span>
+        <figure><blockquote>«Las fotos que Diego me hizo, en varias ocasiones han mejorado mi marca personal. Entendió rápidamente la idea que yo necesitaba transmitir a mis clientes.»</blockquote><figcaption>Marta Leiva · Aceleradora Comercial</figcaption></figure>
+        <figure><blockquote>«Consiguió sacar la parte divertida de cada uno de los miembros del equipo.»</blockquote><figcaption>Raquel Tuñas · Directora Comercial</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="servicios">
+    <div class="wrap">
+      <div class="sec-head" data-reveal>
+        <span class="eyebrow">Qué puedo hacer por tu marca</span>
+        <h2>Fotos que trabajan <em>como tu mejor comercial</em></h2>
+        <p class="lead">Imágenes que aumentan la confianza en tu marca y en tu producto, y que enseñan tu manera particular de hacer las cosas.</p>
+      </div>
+      <div class="svcs">
+        <button type="button" class="svc" data-tipo="Marca personal" data-reveal><figure><img src="img/w-marca-2.jpg" alt="Sesión de marca personal en una cafetería" loading="lazy"></figure><b>Marca personal <small>LIFESTYLE</small></b><span>Tu día a día profesional, genuino y en tu entorno. Un banco de fotos para tu web, Instagram o LinkedIn.</span></button>
+        <button type="button" class="svc" data-tipo="Fotos de empresa" data-reveal><figure><img src="img/w-corp-1.jpg" alt="Fotografía corporativa del equipo de una farmacia" loading="lazy"></figure><b>Corporativa para pymes</b><span>Tu equipo, tus instalaciones y tu forma de trabajar, con imágenes cercanas que conectan con tus clientes.</span></button>
+        <button type="button" class="svc" data-tipo="Retrato corporativo" data-reveal><figure><img src="img/h-retrato.jpg" alt="Retrato corporativo en clave baja" loading="lazy"></figure><b>Retrato corporativo</b><span>Mi apuesta más personal: en pocos minutos se van las inseguridades ante la cámara y sale lo mejor de ti.</span></button>
+        <button type="button" class="svc" data-tipo="Evento corporativo" data-reveal><figure><img src="img/w-eventos-1.jpg" alt="Ponente durante un evento corporativo" loading="lazy"></figure><b>Eventos corporativos</b><span>El testimonio de lo que pasó: para quien no pudo ir y el recuerdo de quien sí fue.</span></button>
+        <button type="button" class="svc" data-tipo="Producto o gastronomía" data-reveal><figure><img src="img/h-producto.jpg" alt="Fotografía publicitaria de una bota de montaña" loading="lazy"></figure><b>Producto y gastronomía</b><span>Para tienda online, catálogo y redes: la sensación de tener el producto en las manos, o de que entren ganas de comer.</span></button>
+        <button type="button" class="svc" data-tipo="Inmobiliaria" data-reveal><figure><img src="img/w-inmo-1.jpg" alt="Casa de madera fotografiada para su venta" loading="lazy"></figure><b>Inmobiliaria</b><span>Fotografía, vídeo y tour virtual con un único proveedor, para que la luz sea igual en los tres formatos.</span></button>
+      </div>
+      <p class="svc-also" data-reveal>También sesiones de book, pareja y familia, y reportajes de boda. <a class="link" href="#reservar" data-tipo="Book, pareja o familia">Consultar una sesión <svg aria-hidden="true"><use href="#i-arrow"/></svg></a></p>
+    </div>
+  </section>
+
+  <section class="sec band-white" id="trabajos">
+    <div class="wrap">
+      <div class="sec-head" data-reveal>
+        <span class="eyebrow">Portfolio</span>
+        <h2>Trabajos reales, <em>de aquí</em></h2>
+        <p class="lead">Despachos, farmacias, ingenierías, centros tecnológicos, marcas de producto y personas que querían una imagen a su altura.</p>
+      </div>
+      <div class="filters" role="group" aria-label="Filtrar trabajos">
+        <button type="button" class="on" data-f="all">Todos</button>
+        <button type="button" data-f="marca">Marca personal</button>
+        <button type="button" data-f="corp">Empresas</button>
+        <button type="button" data-f="retrato">Retrato</button>
+        <button type="button" data-f="eventos">Eventos</button>
+        <button type="button" data-f="producto">Producto</button>
+        <button type="button" data-f="inmo">Inmobiliaria</button>
+        <button type="button" data-f="sesion">Sesiones</button>
+      </div>
+      <div class="works" id="works"></div>
+      <div class="works-more"><button type="button" class="btn btn-ghost" id="works-more">Ver más trabajos</button><a class="btn btn-ghost" href="https://enfocatebranding.myportfolio.com" target="_blank" rel="noopener">Portfolio completo</a></div>
+    </div>
+  </section>
+
+  <section class="sec manifesto" id="manifiesto">
+    <div class="wrap">
+      <span class="eyebrow">Por qué importa</span>
+      <h2 class="mani" id="mani">La fotografía es como la gravedad: hace su función tanto si crees en ella como si no.</h2>
+      <p class="lead">La buena fotografía te ayuda a vender; la mala perjudica y daña la reputación de tu negocio. Una buena foto puede convertirse en tu mejor comercial.</p>
+      <p class="mani-by"><img src="img/about.jpg" alt="" loading="lazy"><span>Diego Silva · Enfócate</span></p>
+    </div>
+  </section>
+
+  <section class="sec band-white" id="diego">
+    <div class="wrap about">
+      <figure class="about-img" data-reveal><img src="img/about.jpg" alt="Diego Silva, fotógrafo de Enfócate" loading="lazy"><figcaption>Diego Silva</figcaption></figure>
+      <div class="about-copy" data-reveal>
+        <span class="eyebrow">Sobre mí</span>
+        <h2>Hola, soy Diego. <em>Te ayudo a posar sin posar</em></h2>
+        <p>Estudié la diplomatura de <b>Publicidad</b> y el ciclo superior de <b>Fotografía</b>, y desde entonces no he dejado de explorar este oficio. Con los años me especialicé en <b>fotografía corporativa, de producto y de personal branding</b>.</p>
+        <p>El retrato corporativo es mi apuesta más personal: una especie de coaching fotográfico para quitarte en pocos minutos las inseguridades ante la cámara y captar lo mejor que tienes. Soy fotógrafo en Coruña, pero me desplazo por toda Galicia.</p>
+        <div class="facts">
+          <div><b>+150</b><span>sesiones a mis espaldas</span></div>
+          <div><b>5,0</b><span>de media en Google</span></div>
+          <div><b>Galicia</b><span>me desplazo a tu empresa</span></div>
+        </div>
+        <p class="expo"><b>Exposiciones</b>Parlamento de Galicia, Deputación de Lugo, Círculo de Empresarios de Vigo, Forum Metropolitano de A Coruña y Centro Sociocultural del Ensanche de Santiago, entre otras.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="sesion">
+    <div class="wrap">
+      <div class="sec-head" data-reveal>
+        <span class="eyebrow">Cómo trabajamos</span>
+        <h2>Así es una sesión <em>conmigo</em></h2>
+      </div>
+      <ol class="steps">
+        <li data-reveal><b>01</b><h3>Asesoría previa</h3><p>Planificamos localizaciones, tipo de luz, paleta de colores y estilismo según lo que quieres transmitir.</p></li>
+        <li data-reveal><b>02</b><h3>La sesión</h3><p>Aprovechamos la luz natural y te guío en todo momento, para que te olvides de la cámara y fluya.</p></li>
+        <li data-reveal><b>03</b><h3>Eliges tus favoritas</h3><p>Te envío una galería privada de selección en un máximo de 3 días laborables.</p></li>
+        <li data-reveal><b>04</b><h3>Tu banco de fotos</h3><p>Editado y optimizado para web y redes, en un plazo de 7 a 12 días laborables.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="sec band-white" id="tarifas">
+    <div class="wrap">
+      <div class="sec-head" data-reveal>
+        <span class="eyebrow">Tarifas</span>
+        <h2>Elige tu sesión. <em>Sin sorpresas</em></h2>
+        <p class="lead">Las sesiones de marca personal incluyen una asesoría previa de branding y estilo.</p>
+      </div>
+      <div class="tabs" role="group" aria-label="Tipo de tarifa"><button type="button" data-plan="marca" aria-pressed="true">Marca personal</button><button type="button" data-plan="corp" aria-pressed="false">Empresas</button></div>
+      <div class="plans" data-plans="marca">
+        <article class="plan"><h3>Mini</h3><p class="plan-for">Para arrancar o renovar tus redes</p><p class="plan-price">250<small>€</small></p><ul><li>12 fotos</li><li>Asesoramiento básico</li><li>Edición de color</li><li>1 cambio de ropa · 1 hora · 1 ubicación</li></ul><a class="btn btn-ghost" href="#reservar" data-tipo="Marca personal" data-pack="Sesión Mini">Reservar Mini</a></article>
+        <article class="plan feat"><h3>Base</h3><p class="plan-for">Perfecta para lanzar tu nueva web</p><p class="plan-price">350<small>€</small></p><ul><li>20 fotos</li><li>Planificación avanzada</li><li>Edición de color</li><li>3 cambios de ropa · 2 horas · 2 ubicaciones</li></ul><a class="btn" href="#reservar" data-tipo="Marca personal" data-pack="Sesión Base">Reservar Base</a></article>
+        <article class="plan"><h3>Maxi</h3><p class="plan-for">Un banco de imagen para todo el año</p><p class="plan-price">450<small>€</small></p><ul><li>50 fotos con retoque avanzado</li><li>Y 100 fotos con edición base</li><li>Hasta 5 cambios de ropa · hasta 3 horas</li><li>3–4 ubicaciones</li></ul><a class="btn btn-ghost" href="#reservar" data-tipo="Marca personal" data-pack="Sesión Maxi">Reservar Maxi</a></article>
+      </div>
+      <div class="plans" data-plans="corp" hidden>
+        <article class="plan"><h3>Estándar</h3><p class="plan-for">Para equipos pequeños</p><p class="plan-price">350<small>€</small></p><ul><li>20 fotos</li><li>Edición de color</li><li>3 escenas · 1 localización</li><li>De 1 a 4 retratos</li></ul><a class="btn btn-ghost" href="#reservar" data-tipo="Fotos de empresa" data-pack="Paquete Estándar">Lo quiero</a></article>
+        <article class="plan feat"><h3>Profesional</h3><p class="plan-for">Para enseñar equipo e instalaciones</p><p class="plan-price">490<small>€</small></p><ul><li>50 fotos</li><li>Edición y retoque</li><li>5 escenas · 2 localizaciones</li><li>De 5 a 9 retratos</li></ul><a class="btn" href="#reservar" data-tipo="Fotos de empresa" data-pack="Paquete Profesional">Lo quiero</a></article>
+        <article class="plan"><h3>A medida</h3><p class="plan-for">Para lo que tu empresa necesite</p><p class="plan-price" style="font-size:40px">Consultar</p><ul><li>Edición y retoque avanzado</li><li>Los retratos y localizaciones que necesites</li><li>300 fotos sin editar</li></ul><a class="btn btn-ghost" href="#reservar" data-tipo="Fotos de empresa" data-pack="Paquete a medida">Lo quiero</a></article>
+      </div>
+      <p class="plans-note">Tarifas publicadas en enfocatebranding.es. ¿Eventos, producto, inmobiliaria o boda? Cuéntame tu proyecto y te preparo el presupuesto.</p>
+    </div>
+  </section>
+
+  <section class="sec band-ink" id="pedir">
+    <div class="wrap book-cta" data-reveal>
+      <div>
+        <span class="eyebrow">Trabajemos juntos</span>
+        <h2>¿Hablamos de <em>tu próxima sesión?</em></h2>
+        <p class="lead">Cuatro preguntas rápidas y tu mensaje sale ya escrito por WhatsApp, con un código propio.</p>
+        <ul class="book-perks"><li>Sin registrarte</li><li>Menos de un minuto</li><li>O escribe a hola@enfocatebranding.es</li></ul>
+      </div>
+      <a class="btn btn-light" href="#reservar"><svg aria-hidden="true"><use href="#i-cam"/></svg>Cuéntame tu idea</a>
+    </div>
+  </section>
+
+  <section class="sec band-white draft" id="borrador" hidden>
+    <div class="wrap">
+      <div class="sec-head"><span class="eyebrow">Borrador · Datos por confirmar</span><h2>Datos <em>por confirmar</em></h2></div>
+      <ul class="incl">
+        <li>Dirección: la web dice <mark>Rúa Ribeira Sacra 31</mark>; Google, <mark>Av. Novo Mesoiro 2 (WeKCo)</mark>. ¿Cuál vale?</li>
+        <li>Teléfono: la web usa <mark>722 153 354</mark> (WhatsApp) y <mark>626 145 164</mark> en el pie. ¿Cuál publicamos?</li>
+        <li>Tarifas vigentes e IVA: <mark>[¿siguen los 250/350/450 € y 350/490 €? ¿IVA incluido?]</mark></li>
+        <li>Clientes que se puedan nombrar: <mark>[Cetim, Hume Ingeniería, Caruncho &amp; Tomé, LiveGens, Le Barbier…]</mark></li>
+        <li>Tarifas de boda actualizadas: <mark>[la web muestra las de 2023]</mark></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="sec" id="contacto">
+    <div class="wrap visit">
+      <div data-reveal>
+        <span class="eyebrow">Contacto</span>
+        <h2>Ven a vernos <em>o te visito</em></h2>
+        <table class="hours" aria-label="Horario de atención">
+          <tr><th>Lunes a viernes</th><td>10:30–13:30 · 16:00–19:00</td></tr>
+          <tr><th>Sábado</th><td>10:30–13:00</td></tr>
+        </table>
+        <ul class="contact">
+          <li><svg><use href="#i-pin"/></svg><a href="https://www.google.com/maps/place/Enf%C3%B3cate:+Fotograf%C3%ADa+y+Branding/@43.3261939,-8.4324399,17z/data=!4m6!3m5!1s0xd2e632cd6c8da6d:0x3d9f0e424972cd16!8m2!3d43.3261939!4d-8.4324399!16s%2Fg%2F11fxwlxms4" target="_blank" rel="noopener">Av. Novo Mesoiro, 2 (WeKCo) · 15190 A Coruña</a></li>
+          <li><svg><use href="#i-phone"/></svg><a href="tel:+34722153354">722 153 354</a> · llamada o WhatsApp</li>
+          <li><svg><use href="#i-mail"/></svg><a href="mailto:hola@enfocatebranding.es">hola@enfocatebranding.es</a></li>
+          <li><svg><use href="#i-ig"/></svg><a href="https://www.instagram.com/enfocate_branding" target="_blank" rel="noopener">@enfocate_branding</a></li>
+        </ul>
+      </div>
+      <div class="faq" data-reveal>
+        <details open><summary>¿Y si no sé posar?</summary><p>Estaré contigo durante toda la sesión para darte consejos y guiarte. Si lo prefieres, te envío antes algunas poses para que la sesión fluya con naturalidad.</p></details>
+        <details><summary>¿Dónde se hace la sesión?</summary><p>En A Coruña y alrededores: cafeterías con encanto, estudios de luz natural, coworkings o exteriores urbanos que encajen con tu marca. Para empresas, me desplazo por toda Galicia.</p></details>
+        <details><summary>¿Cuándo tengo las fotos?</summary><p>La galería de selección te llega en un máximo de 3 días laborables. Una vez elijas tus favoritas, recibes el banco de fotos editado en 7 a 12 días laborables.</p></details>
+        <details><summary>En mi equipo a nadie le gusta salir en fotos</summary><p>No se trata de ser fotogénico, sino de poner cara a vuestro proyecto y generar confianza. Parte de mi trabajo es acompañaros en todo el proceso para que os sintáis cómodos.</p></details>
+        <details><summary>¿Cómo reservo?</summary><p>Cuéntame tu idea por WhatsApp o por correo: tipo de sesión, disponibilidad y posibles localizaciones. Te respondo y fijamos la fecha que mejor te venga.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="final">
+    <div class="wrap">
+      <span class="eyebrow">Enfócate · Fotografía y branding</span>
+      <h2>Tu mejor versión, <em>enfocada</em></h2>
+      <div class="hero-ctas">
+        <a class="btn btn-primary" href="#reservar"><svg aria-hidden="true"><use href="#i-cam"/></svg>Cuéntame tu idea</a>
+        <a class="btn btn-ghost" href="tel:+34722153354"><svg aria-hidden="true"><use href="#i-phone"/></svg>Llamar</a>
+      </div>
+      <a class="g-rate" href="#resenas" data-rvd><span class="stars"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></span><b>5,0</b><span>· 56 reseñas en Google</span></a>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap"><span>Enfócate, Fotografía y Branding · Diego Silva · A Coruña</span><span><a href="tel:+34722153354">722 153 354</a> · <a href="mailto:hola@enfocatebranding.es">hola@enfocatebranding.es</a> · <a href="https://www.instagram.com/enfocate_branding" target="_blank" rel="noopener">Instagram</a></span></div>
+</footer>
+<button class="totop" id="totop" type="button" aria-label="Subir arriba"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="M12 19V5M5 12l7-7 7 7"/></svg></button>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Trabajo ampliado" hidden><button type="button" class="lb-x" aria-label="Cerrar">×</button><button type="button" class="lb-nav prev" data-lb="-1" aria-label="Trabajo anterior"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg></button><img id="lb-img" alt=""><button type="button" class="lb-nav next" data-lb="1" aria-label="Trabajo siguiente"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></button><div class="lb-foot"><span id="lb-cap"></span><a class="btn btn-light" id="lb-go" href="#reservar">Quiero algo así</a></div></div>
+
+<div class="bk rvd" id="rvd" role="dialog" aria-modal="true" aria-labelledby="rvd-title" hidden>
+  <div class="bk-scrim" data-rvd-x></div>
+  <div class="bk-panel">
+    <header class="bk-head">
+      <span></span>
+      <div class="t"><span>Google</span><b id="rvd-title">Reseñas</b></div>
+      <button type="button" class="bk-ib" data-rvd-x aria-label="Cerrar"><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" d="M6 6l12 12M18 6L6 18"/></svg></button>
+    </header>
+    <div class="bk-body rvd-body">
+      <div class="rvd-sum">
+        <div class="rvd-score"><b>5,0</b><span class="rv-stars"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></span><small>56 reseñas</small></div>
+        <ul class="rvd-dist" aria-label="Reparto de estrellas"><li><span>5</span><i><b style="width:98.2%"></b></i><em>55</em></li><li><span>4</span><i><b style="width:1.8%"></b></i><em>1</em></li><li><span>3</span><i><b style="width:0%"></b></i><em>0</em></li><li><span>2</span><i><b style="width:0%"></b></i><em>0</em></li><li><span>1</span><i><b style="width:0%"></b></i><em>0</em></li></ul>
+      </div>
+      <h3 class="rvd-h">Reseñas de 5 estrellas</h3>
+      <div class="rvd-list" id="rvd-list"></div>
+      <h3 class="rvd-h">Su ficha en Google Maps</h3>
+      <div class="rvd-map"><iframe id="rvd-map" title="Enfócate en Google Maps" data-src="https://maps.google.com/maps?q=Enf%C3%B3cate%3A%20Fotograf%C3%ADa%20y%20Branding%2C%20A%20Coru%C3%B1a&amp;hl=es&amp;z=15&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+      <p class="rvd-note">Google no permite mostrar aquí su lista completa de reseñas; puedes leerlas todas en su ficha.</p>
+    </div>
+    <footer class="rvd-foot"><a class="btn btn-ghost" href="https://www.google.com/maps/place/Enf%C3%B3cate:+Fotograf%C3%ADa+y+Branding/@43.3261939,-8.4324399,17z/data=!4m6!3m5!1s0xd2e632cd6c8da6d:0x3d9f0e424972cd16!8m2!3d43.3261939!4d-8.4324399!16s%2Fg%2F11fxwlxms4" target="_blank" rel="noopener">Ver las 56 en Google</a></footer>
+  </div>
+</div>
+
+<div class="bk" id="bk" role="dialog" aria-modal="true" aria-labelledby="bk-title" hidden>
+  <div class="bk-scrim" id="bk-scrim"></div>
+  <div class="bk-panel">
+    <header class="bk-head">
+      <button type="button" class="bk-ib" id="bk-back" aria-label="Paso anterior"><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M15 18l-6-6 6-6"/></svg></button>
+      <div class="t"><span id="bk-step">Paso 1 de 4</span><b id="bk-title">Tu sesión</b></div>
+      <button type="button" class="bk-ib" id="bk-x" aria-label="Cerrar"><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" d="M6 6l12 12M18 6L6 18"/></svg></button>
+    </header>
+    <div class="bk-prog"><i id="bk-bar" style="transform:scaleX(.25)"></i></div>
+    <form class="bk-body" id="book-form" novalidate>
+      <section class="bk-pane" data-step="1">
+        <h3>¿Qué necesitas?</h3>
+        <div class="bk-opts grid2 tight">
+          <label><input type="radio" name="tipo" value="Marca personal"><span>Marca personal</span></label>
+          <label><input type="radio" name="tipo" value="Fotos de empresa"><span>Fotos de empresa</span></label>
+          <label><input type="radio" name="tipo" value="Retrato corporativo"><span>Retrato corporativo</span></label>
+          <label><input type="radio" name="tipo" value="Evento corporativo"><span>Evento</span></label>
+          <label><input type="radio" name="tipo" value="Producto o gastronomía"><span>Producto o comida</span></label>
+          <label><input type="radio" name="tipo" value="Inmobiliaria"><span>Inmobiliaria</span></label>
+          <label><input type="radio" name="tipo" value="Book, pareja o familia"><span>Book, pareja, familia</span></label>
+          <label><input type="radio" name="tipo" value="Boda"><span>Boda</span></label>
+        </div>
+      </section>
+      <section class="bk-pane" data-step="2" hidden>
+        <h3>¿Para qué son las fotos?</h3>
+        <div class="bk-opts grid2 tight">
+          <label><input type="checkbox" name="uso" value="web"><span>Mi web</span></label>
+          <label><input type="checkbox" name="uso" value="LinkedIn"><span>LinkedIn</span></label>
+          <label><input type="checkbox" name="uso" value="Instagram y redes"><span>Instagram y redes</span></label>
+          <label><input type="checkbox" name="uso" value="tienda online o catálogo"><span>Tienda o catálogo</span></label>
+          <label><input type="checkbox" name="uso" value="prensa o ponencias"><span>Prensa, ponencias</span></label>
+          <label><input type="checkbox" name="uso" value="un regalo o recuerdo"><span>Regalo o recuerdo</span></label>
+        </div>
+        <label class="bk-field"><span>Tu idea (opcional)</span><input type="text" id="f-idea" placeholder="Fotos naturales en mi estudio, con el equipo…"></label>
+      </section>
+      <section class="bk-pane" data-step="3" hidden>
+        <h3>¿Cuándo y dónde?</h3>
+        <label class="bk-field"><span>Fecha aproximada</span><input type="text" id="f-fecha" placeholder="Finales de mes, un sábado por la mañana…"></label>
+        <label class="bk-field"><span>Lugar</span><input type="text" id="f-donde" placeholder="A Coruña, en mi oficina, en exterior…"></label>
+        <div class="bk-field"><span>¿Cuántas personas salen?</span>
+          <div class="bk-opts row">
+            <label><input type="radio" name="pers" value="Solo yo" checked><span>Solo yo</span></label>
+            <label><input type="radio" name="pers" value="De 2 a 4 personas"><span>2 a 4</span></label>
+            <label><input type="radio" name="pers" value="5 personas o más"><span>5 o más</span></label>
+          </div>
+        </div>
+      </section>
+      <section class="bk-pane" data-step="4" hidden>
+        <h3>¿Quién eres?</h3>
+        <label class="bk-field"><span>Tu nombre</span><input type="text" id="f-nombre" autocomplete="given-name" placeholder="Laura"></label>
+        <label class="bk-field"><span>Empresa o proyecto (opcional)</span><input type="text" id="f-empresa" autocomplete="organization" placeholder="Estudio Laura Pérez"></label>
+      </section>
+      <section class="bk-pane" data-step="5" hidden>
+        <h3>Tu mensaje está listo</h3>
+        <p class="sub">Te respondo para preparar la sesión contigo.</p>
+        <pre class="f-preview" id="f-preview"></pre>
+        <button type="button" class="f-copy" id="f-copy">Copiar mensaje</button>
+      </section>
+    </form>
+    <footer class="bk-foot">
+      <p class="f-error" id="f-error" role="alert" hidden></p>
+      <button type="button" class="btn btn-primary" id="bk-next">Siguiente</button>
+      <a class="btn btn-wa" id="f-wa" href="#" target="_blank" rel="noopener" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .2-1.3c-.1-.1-.3-.2-.6-.3z"/></svg>Enviar por WhatsApp</a>
+    </footer>
+  </div>
+</div>
+
+<div class="mbar">
+  <a class="btn btn-primary" href="#reservar"><span data-t="mbar">Cuéntame tu idea</span></a>
+  <a class="btn btn-ghost" href="tel:+34722153354" aria-label="Llamar al 722 153 354"><svg><use href="#i-phone"/></svg></a>
+</div>
+
+<script>
+(function(){
+"use strict";
+var reduced=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+var SFX={play:function(){}};
+
+/* ---------- Temporadas de Enfócate: fechas fuertes de un fotógrafo de marca personal, empresa y sesiones en A Coruña ---------- */
+/* Solo servicios de su web (marca personal, corporativa, sesiones de pareja/book/familia «para regalar», bodas). Sin precios, ofertas ni plazos inventados. */
+window.TEMPORADAS=[
+  {id:'ano-nuevo',nombre:'Año nuevo',desde:'01-02',hasta:'01-23',prioridad:1,
+   textos:{eyebrow:'Año nuevo · fotos nuevas',
+     sub:'Empieza el año con fotos que te representen en tu web, LinkedIn y redes. <span class="hide-s">Sesiones de marca personal en A Coruña con asesoría previa de estilo.</span>',
+     cta:'Renovar mis fotos',mbar:'Renovar mis fotos'},
+   marcar:['input[name="tipo"][value="Marca personal"]'],wa:'🗓️ Quiero renovar mis fotos este año'},
+  {id:'san-valentin',nombre:'San Valentín',evento:'san-valentin',antes:21,prioridad:3,
+   textos:{eyebrow:'San Valentín · {cuenta}',h1:'Una sesión <em>para los dos</em>',
+     sub:'Sesiones de pareja naturales en A Coruña: buscamos un lugar especial para vosotros. <span class="hide-s">Puede ser la sorpresa perfecta para el {fecha}.</span>',
+     cta:'Regalar una sesión',mbar:'Regalar una sesión'},
+   marcar:['input[name="tipo"][value="Book, pareja o familia"]','input[name="uso"][value="un regalo o recuerdo"]'],wa:'💘 Es para San Valentín ({fecha})'},
+  {id:'bodas',nombre:'Temporada de bodas',desde:'02-20',hasta:'05-31',prioridad:1,
+   textos:{eyebrow:'Temporada de bodas',
+     sub:'Reportajes de boda en A Coruña y Galicia, naturales y espontáneos o con posados preparados. <span class="hide-s">Contadme vuestra fecha.</span>',
+     cta:'Consultar nuestra fecha',mbar:'Consultar fecha'},
+   marcar:['input[name="tipo"][value="Boda"]'],wa:'💍 Es para nuestra boda'},
+  {id:'septiembre',nombre:'Vuelta del verano',desde:'08-25',hasta:'09-30',prioridad:1,
+   textos:{eyebrow:'Septiembre · imagen nueva',
+     sub:'Vuelve del verano con fotos nuevas para tu web, LinkedIn y redes: marca personal y fotografía corporativa para tu equipo. <span class="hide-s">En A Coruña y toda Galicia.</span>'},
+   wa:'🗓️ Quiero renovar las fotos tras el verano'},
+  {id:'navidad',nombre:'Navidad',evento:'navidad',desde:'11-25',hasta:'12-22',prioridad:2,
+   textos:{eyebrow:'Navidad · {cuenta}',h1:'Este año, <em>regala fotos</em>',
+     sub:'Sesiones de book, pareja o familia en A Coruña para regalar estas fiestas. <span class="hide-s">Cuéntame a quién se la regalas y la preparamos juntos.</span>',
+     cta:'Regalar una sesión',mbar:'Regalar una sesión'},
+   marcar:['input[name="tipo"][value="Book, pareja o familia"]','input[name="uso"][value="un regalo o recuerdo"]'],wa:'🎄 Es un regalo de Navidad'}
+];
+/* ---------- Temporadas: la landing cambia sola cuando se acerca una fecha clave del oficio ---------- */
+/* Configura window.TEMPORADAS antes de este bloque (ver references/temporadas/README.md).
+   Pruebas: ?temporada=<id> fuerza una, ?temporada=no las apaga, ?fecha=2027-02-10 simula el día.
+   Selector para enseñarlas: #temporadas en la dirección (en local), 5 toques seguidos en el logo de la cabecera o la tecla T (también dentro del visor del Artifact). */
+(function(){
+var CFG=window.TEMPORADAS||[]; if(!CFG.length)return;
+var MESES=['enero','febrero','marzo','abril','mayo','junio','julio','agosto','septiembre','octubre','noviembre','diciembre'];
+var DAY=864e5;
+function d(y,m,dd){return new Date(y,m-1,dd)}
+function nth(y,m,dow,n){var f=d(y,m,1);return d(y,m,1+(dow-f.getDay()+7)%7+7*(n-1))}       /* n-ésimo día de la semana (0=domingo) del mes */
+function pascua(y){var a=y%19,b=Math.floor(y/100),c=y%100,e=(19*a+b-Math.floor(b/4)-Math.floor((b-Math.floor((8*b+13)/25)+1)/3)+15)%30,
+  f=(32+2*(b%4)+2*Math.floor(c/4)-e-c%4)%7,g=Math.floor((a+11*e+22*f)/451),m=Math.floor((e+f-7*g+114)/31);return d(y,m,(e+f-7*g+114)%31+1)}
+function mas(x,n){return new Date(x.getFullYear(),x.getMonth(),x.getDate()+n)}
+/* Calendario de España. Cada evento devuelve el día clave de ese año. */
+var EV={
+  'reyes':function(y){return d(y,1,6)},
+  'rebajas-invierno':function(y){return d(y,1,7)},
+  'san-valentin':function(y){return d(y,2,14)},
+  'carnaval':function(y){return mas(pascua(y),-47)},            /* martes de carnaval */
+  'dia-padre':function(y){return d(y,3,19)},
+  'semana-santa':function(y){return mas(pascua(y),-3)},         /* jueves santo */
+  'pascua':pascua,
+  'sant-jordi':function(y){return d(y,4,23)},                   /* solo Cataluña */
+  'dia-madre':function(y){return nth(y,5,0,1)},                 /* primer domingo de mayo */
+  'san-isidro':function(y){return d(y,5,15)},                   /* solo Madrid capital */
+  'san-juan':function(y){return d(y,6,24)},
+  'dia-abuelos':function(y){return d(y,7,26)},
+  'vuelta-cole':function(y){return d(y,9,8)},                   /* aproximado: varía por comunidad */
+  'halloween':function(y){return d(y,10,31)},
+  'todos-santos':function(y){return d(y,11,1)},
+  'black-friday':function(y){return mas(nth(y,11,4,4),1)},      /* viernes tras el 4.º jueves */
+  'navidad':function(y){return d(y,12,25)},
+  'nochevieja':function(y){return d(y,12,31)}
+};
+function md(s,y){var p=s.split('-');return d(y,+p[0],+p[1])}
+function antes(t){return t.antes==null?14:t.antes}
+/* Ventanas [inicio, fin, día clave] de una temporada alrededor del año y */
+function ventanas(t,y){var out=[];for(var k=y-1;k<=y+1;k++){
+  if(t.desde){var a=md(t.desde,k),b=md(t.hasta,k);if(b<a)b=md(t.hasta,k+1);out.push([a,b,t.evento?EV[t.evento](b.getFullYear()):b])}
+  else{var e=t.fecha?md(t.fecha,k):EV[t.evento]&&EV[t.evento](k);if(e)out.push([mas(e,-antes(t)),mas(e,t.despues||0),e])}}
+  return out}
+function elegir(hoy){var best=null;hoy=new Date(hoy.getFullYear(),hoy.getMonth(),hoy.getDate());
+  CFG.forEach(function(t){ventanas(t,hoy.getFullYear()).forEach(function(w){if(hoy<w[0]||hoy>w[1])return;
+    var pr=t.prioridad!=null?t.prioridad:(t.desde?1:2),falta=Math.round((w[2]-hoy)/DAY);
+    if(!best||pr>best.pr||(pr===best.pr&&Math.abs(falta)<Math.abs(best.falta)))best={t:t,pr:pr,falta:falta,dia:w[2]}})});
+  return best}
+/* Forzar una temporada aunque hoy no toque: la muestra como si faltaran unos días */
+function forzar(id,hoy){var t=CFG.filter(function(x){return x.id===id})[0];if(!t)return null;
+  var w=ventanas(t,hoy.getFullYear()).filter(function(w){return w[1]>=hoy})[0],falta=Math.round((w[2]-hoy)/DAY);
+  if(hoy<w[0])falta=Math.min(antes(t),9);return {t:t,falta:falta,dia:w[2]}}
+function rellenar(s,b){if(!s)return s;var n=b.falta,f=b.dia.getDate()+' de '+MESES[b.dia.getMonth()];
+  var cuenta=n>1?'Faltan '+n+' días':n===1?'Es mañana':n===0?'Es hoy':'';
+  return s.replace(/\{cuenta\}/g,cuenta).replace(/\{dias\}/g,n).replace(/\{fecha\}/g,f).replace(/\{anio\}/g,b.dia.getFullYear())}
+
+var q=new URLSearchParams(location.search),forzada=q.get('temporada'),sim=q.get('fecha'),hoy=new Date();
+if(sim&&/^\d{4}-\d\d-\d\d$/.test(sim)){var p=sim.split('-');hoy=d(+p[0],+p[1],+p[2])}
+hoy=new Date(hoy.getFullYear(),hoy.getMonth(),hoy.getDate());
+window.TEMPORADA_ELEGIR=function(x){var b=elegir(x);return b?b.t.id:null};   /* para scripts/temporadas.js */
+var root=document.documentElement,reducido=matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+/* Estado original, para poder volver a la versión de todo el año al cambiar de temporada desde el selector */
+var CLAVES={};CFG.forEach(function(t){Object.keys(t.textos||{}).forEach(function(k){CLAVES[k]=1})});   /* solo las claves que usa alguna temporada: otros data-t de la página no se tocan */
+var T=[].slice.call(document.querySelectorAll('[data-t]')).filter(function(el){return CLAVES[el.getAttribute('data-t')]}).map(function(el){return [el,el.innerHTML,el.hidden]});
+var fotosOrig=[],tokens=[],marcados=[],deco=null;
+function limpiar(){
+  T.forEach(function(o){o[0].innerHTML=o[1];o[0].hidden=o[2];o[0].classList.remove('t-on')});
+  tokens.forEach(function(k){root.style.removeProperty(k)});tokens=[];
+  fotosOrig.forEach(function(o){if(o[0].tagName==='SOURCE')o[0].srcset=o[1];else{o[0].src=o[1];if(o[2])o[0].srcset=o[2]}});fotosOrig=[];
+  marcados.forEach(function(el){el.checked=false});marcados=[];
+  if(deco){deco();deco=null}
+  root.removeAttribute('data-temporada');window.TEMPORADA=null}
+function aplicar(b){
+  limpiar();var id=b?b.t.id:null;
+  /* Bloques solo de temporada: data-temporada-solo="san-valentin dia-madre" (empiezan con hidden) y data-temporada-fuera="…" */
+  document.querySelectorAll('[data-temporada-solo]').forEach(function(el){el.hidden=!(id&&el.getAttribute('data-temporada-solo').split(/\s+/).indexOf(id)>-1)});
+  document.querySelectorAll('[data-temporada-fuera]').forEach(function(el){el.hidden=!!(id&&el.getAttribute('data-temporada-fuera').split(/\s+/).indexOf(id)>-1)});
+  if(!b)return;
+  var t=b.t;root.setAttribute('data-temporada',id);
+  /* Colores: sobrescribe tokens de :root (solo acentos; el fondo y la tinta no se tocan) */
+  if(t.tema)Object.keys(t.tema).forEach(function(k){root.style.setProperty(k,t.tema[k]);tokens.push(k)});
+  /* Textos: cualquier elemento con data-t="clave". El HTML trae el texto de todo el año; si estaba hidden, se muestra */
+  if(t.textos)Object.keys(t.textos).forEach(function(k){document.querySelectorAll('[data-t="'+k+'"]').forEach(function(el){el.innerHTML=rellenar(t.textos[k],b);el.hidden=false;el.classList.add('t-on')})});
+  /* Fotos: {selector: ruta}. Solo fotos reales del negocio para esa fecha */
+  if(t.fotos)Object.keys(t.fotos).forEach(function(s){document.querySelectorAll(s).forEach(function(el){
+    if(el.tagName==='SOURCE'){fotosOrig.push([el,el.srcset]);el.srcset=t.fotos[s]}else{fotosOrig.push([el,el.src,el.getAttribute('srcset')]);el.removeAttribute('srcset');el.src=t.fotos[s]}})});
+  /* Marcar opciones del panel de encargo/reserva (solo si no hay ninguna marcada en ese grupo) */
+  if(t.marcar)t.marcar.forEach(function(s){var el=document.querySelector(s);if(el&&!document.querySelector('input[name="'+el.name+'"]:checked')){el.checked=true;marcados.push(el)}});
+  window.TEMPORADA={id:id,nombre:t.nombre||id,dias:b.falta,fecha:b.dia,linea:rellenar(t.wa,b)||''};   /* el panel añade TEMPORADA.linea al mensaje de WhatsApp */
+  try{document.dispatchEvent(new CustomEvent('temporada',{detail:window.TEMPORADA}))}catch(e){}
+  if(t.deco&&!reducido)deco=decorar(t)}
+
+/* Decoración ligera en el hero: petalos, corazones, nieve, hojas, confeti o estrellas. Nunca sobre el texto ni con movimiento reducido */
+function decorar(t){
+  var host=document.querySelector(t.decoEn||'#hero');if(!host)return null;
+  var cv=document.createElement('canvas');cv.className='t-deco';cv.setAttribute('aria-hidden','true');
+  cv.style.cssText='position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:1';
+  host.insertBefore(cv,host.children[1]||null);
+  var cx=cv.getContext('2d'),W=0,H=0,DPR=Math.min(devicePixelRatio||1,1.5),P=[],raf=0,last=0;
+  var COL=t.decoColores||{petalos:['#F5B8C9','#FFD9E2','#E88AA6'],corazones:['#FF6B8B','#FFB3C4','#E0325A'],nieve:['#FFFFFF'],hojas:['#C9733B','#E0A04A','#9C4A24'],confeti:['#FFD166','#EF476F','#06D6A0','#4CC9F0'],estrellas:['#FFE8A3','#FFFFFF']}[t.deco]||['#fff'];
+  function size(){var r=host.getBoundingClientRect();W=r.width;H=r.height;cv.width=W*DPR;cv.height=H*DPR;cx.setTransform(DPR,0,0,DPR,0,0)}
+  function nuevo(top){var s=t.deco==='nieve'?2+Math.random()*3:t.deco==='estrellas'?1.5+Math.random()*2.5:7+Math.random()*7;
+    return {x:Math.random()*W,y:top?-20:Math.random()*H,s:s,vy:(t.deco==='estrellas'?0:.25+Math.random()*.5)*(s>6?1:.7),vx:(Math.random()-.5)*.3,a:Math.random()*6.3,va:(Math.random()-.5)*.03,f:Math.random()*6.3,c:COL[Math.floor(Math.random()*COL.length)]}}
+  function forma(p){cx.save();cx.translate(p.x,p.y);cx.rotate(p.a);cx.fillStyle=p.c;cx.globalAlpha=t.deco==='estrellas'?.4+.5*Math.abs(Math.sin(p.f)):.85;var s=p.s;cx.beginPath();
+    if(t.deco==='corazones'){cx.moveTo(0,s*.35);cx.bezierCurveTo(-s,-s*.3,-s*.4,-s,0,-s*.45);cx.bezierCurveTo(s*.4,-s,s,-s*.3,0,s*.35)}
+    else if(t.deco==='nieve'||t.deco==='estrellas')cx.arc(0,0,s/2,0,7);
+    else if(t.deco==='confeti')cx.rect(-s/2,-s/4,s,s/2);
+    else cx.ellipse(0,0,s/2,s*(t.deco==='hojas'?.28:.34),0,0,7);
+    cx.fill();cx.restore()}
+  function paso(ts){raf=requestAnimationFrame(paso);if(ts-last<30)return;last=ts;
+    var r=host.getBoundingClientRect();if(r.bottom<0||r.top>innerHeight)return;   /* fuera de pantalla: no pinta */
+    cx.clearRect(0,0,W,H);P.forEach(function(p,i){p.f+=.03;p.y+=p.vy;p.x+=p.vx+Math.sin(p.f)*.35;p.a+=p.va;if(p.y>H+20)P[i]=nuevo(true);forma(p)})}
+  function arranca(){cancelAnimationFrame(raf);if(!document.hidden)raf=requestAnimationFrame(paso)}
+  size();var n=Math.min(t.decoCuantos||22,Math.round(W*H/40000)+6);for(var i=0;i<n;i++)P.push(nuevo(false));
+  addEventListener('resize',size);document.addEventListener('visibilitychange',arranca);arranca();
+  return function(){cancelAnimationFrame(raf);removeEventListener('resize',size);document.removeEventListener('visibilitychange',arranca);cv.remove()}}
+
+var hoyB=elegir(hoy);
+aplicar(forzada==='no'?null:forzada?forzar(forzada,hoy):hoyB);
+
+/* ---------- Selector de temporadas: solo con #temporadas en la dirección, para enseñárselas al cliente ---------- */
+/* El visor del Artifact no pasa el #hash al iframe: también se abre con 5 toques seguidos en el logo de la cabecera (.brand) o con la tecla T */
+var sel=null,manual=false;
+function selector(){
+  if(location.hash!=='#temporadas'&&!manual){if(sel){sel.remove();sel=null}return}
+  if(sel)return;
+  var st=document.createElement('style');st.textContent='.t-sel{position:fixed;left:12px;right:12px;bottom:calc(14px + env(safe-area-inset-bottom,0px));z-index:150;margin:0 auto;max-width:max-content;display:flex;align-items:center;gap:6px;padding:6px;border-radius:18px;background:rgba(20,20,20,.82);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);color:#fff;font:600 13px/1.2 system-ui,-apple-system,sans-serif;box-shadow:0 14px 34px -12px rgba(0,0,0,.6);overflow-x:auto;scrollbar-width:none}'
+   +'.t-sel::-webkit-scrollbar{display:none}.t-sel b{padding:0 6px 0 8px;font-size:11px;letter-spacing:.08em;text-transform:uppercase;opacity:.6;white-space:nowrap}'
+   +'.t-sel button{all:unset;cursor:pointer;white-space:nowrap;padding:9px 12px;border-radius:12px;color:#fff}.t-sel button:hover{background:rgba(255,255,255,.12)}.t-sel button[aria-pressed="true"]{background:#fff;color:#111}'
+   +'.t-sel button small{display:block;font-size:10px;font-weight:500;opacity:.65;margin-top:2px}.t-sel .x{opacity:.7;padding:9px 10px}'
+   +'@media (max-width:640px){.t-sel{bottom:calc(84px + env(safe-area-inset-bottom,0px));max-width:none}}';
+  sel=document.createElement('div');sel.className='t-sel';sel.setAttribute('role','toolbar');sel.setAttribute('aria-label','Ver la landing en cada temporada');
+  sel.appendChild(st);
+  function hint(t){var w=ventanas(t,hoy.getFullYear()).filter(function(w){return w[1]>=hoy})[0],f=function(x){return x.getDate()+' '+MESES[x.getMonth()].slice(0,3)};return f(w[0])+' – '+f(w[1])}
+  var h='<b>Temporadas</b><button type="button" data-id="@hoy">Hoy<small>'+(hoyB?(hoyB.t.nombre||hoyB.t.id):'sin temporada')+'</small></button><button type="button" data-id="">Todo el año<small>versión base</small></button>';
+  CFG.forEach(function(t){h+='<button type="button" data-id="'+t.id+'">'+(t.nombre||t.id)+'<small>'+hint(t)+'</small></button>'});
+  sel.insertAdjacentHTML('beforeend',h+'<button type="button" class="x" aria-label="Cerrar el selector">✕</button>');
+  var elegido='@hoy';
+  function marca(){sel.querySelectorAll('button[data-id]').forEach(function(x){x.setAttribute('aria-pressed',String(x.dataset.id===elegido))})}
+  sel.addEventListener('click',function(e){var x=e.target.closest('button');if(!x)return;
+    if(x.classList.contains('x')){manual=false;if(location.hash==='#temporadas')history.replaceState(null,'',location.pathname+location.search);selector();return}
+    elegido=x.dataset.id;aplicar(elegido==='@hoy'?hoyB:elegido?forzar(elegido,hoy):null);marca();window.scrollTo({top:0,behavior:'smooth'})});
+  document.body.appendChild(sel);marca()}
+selector();addEventListener('hashchange',selector);
+var toques=[];
+document.addEventListener('click',function(e){if(!e.target.closest||!e.target.closest(window.TEMPORADAS_DISPARADOR||'.brand'))return;var n=Date.now();
+  toques=toques.filter(function(t){return n-t<2500});toques.push(n);if(toques.length>=5){toques=[];manual=true;selector()}});
+document.addEventListener('keydown',function(e){if((e.key==='t'||e.key==='T')&&!e.metaKey&&!e.ctrlKey&&!e.altKey&&!/INPUT|TEXTAREA|SELECT/.test(e.target.tagName)&&!e.target.isContentEditable){manual=!sel;if(!manual&&location.hash==='#temporadas')history.replaceState(null,'',location.pathname+location.search);selector()}});
+})();
+
+
+/* ---------- Visor del hero: el diafragma se cierra, cambia de trabajo, se abre y enfoca ---------- */
+(function(){
+  var vf=document.getElementById('vf'); if(!vf)return;
+  /* [foto, etiqueta del visor, título, detalle, punto de enfoque x %, y %] — todo trabajos reales de su portfolio */
+  var S=[
+    ['img/h-retrato.jpg','Retrato','Retrato de marca personal','en clave baja',52,34],
+    ['img/h-lifestyle.jpg','Marca personal','Sesión lifestyle','para una copywriter de viajes',58,30],
+    ['img/h-corporativa.jpg','Empresas','Fotografía corporativa','para un despacho de abogados',46,30],
+    ['img/h-eventos.jpg','Eventos','Evento corporativo','25 aniversario de Cogami',40,40],
+    ['img/h-producto.jpg','Producto','Fotografía publicitaria','de calzado de montaña',50,48],
+    ['img/h-gastro.jpg','Gastronomía','Fotografía gastronómica','tarta de Santiago',50,50],
+    ['img/h-inmobiliaria.jpg','Inmobiliaria','Fotografía inmobiliaria','de una vivienda',50,55],
+    ['img/h-pareja.jpg','Sesiones','Sesión de pareja','al atardecer',36,38]
+  ];
+  var frame=document.getElementById('vf-frame'),shots=document.getElementById('vf-shots'),amb=document.getElementById('hero-amb'),
+      blades=document.getElementById('vf-blades'),edges=document.getElementById('vf-edges'),flash=document.getElementById('vf-flash'),
+      cap=document.getElementById('vf-cap'),cnt=document.getElementById('vf-count'),tag=document.getElementById('vf-tag'),num=document.getElementById('vf-num');
+  shots.innerHTML=S.map(function(s,i){return '<img src="'+s[0]+'" alt="'+s[2]+' '+s[3]+', trabajo de Enfócate"'+(i?' loading="lazy"':' fetchpriority="high"')+'>'}).join('');
+  amb.innerHTML=S.map(function(s,i){return '<img src="'+s[0]+'" alt=""'+(i?' loading="lazy"':'')+'>'}).join('');
+  var imgs=[].slice.call(shots.children),ambs=[].slice.call(amb.children),cur=0,busy=false,timer=0,hover=false,vis=true;
+  function pad(n){return String(n).padStart(2,'0')}
+  /* Diafragma de 6 láminas: hexágono que gira al cerrarse y las aristas de cada lámina prolongadas hacia fuera */
+  function iris(r,rot){
+    if(r>=186){blades.setAttribute('d','');edges.setAttribute('d','');return}
+    var cx=150,cy=100,p=[],i,d='M0 0H300V200H0Z',e='';
+    /* recorta cada arista al marco (Liang–Barsky) para que nada salga del visor */
+    function clip(x0,y0,x1,y1){var t0=0,t1=1,dx=x1-x0,dy=y1-y0,P=[-dx,dx,-dy,dy],Q=[x0,300-x0,y0,200-y0];
+      for(var k=0;k<4;k++){if(P[k]===0){if(Q[k]<0)return '';continue}var r=Q[k]/P[k];if(P[k]<0){if(r>t1)return '';if(r>t0)t0=r}else{if(r<t0)return '';if(r<t1)t1=r}}
+      return 'M'+(x0+t0*dx).toFixed(2)+' '+(y0+t0*dy).toFixed(2)+'L'+(x0+t1*dx).toFixed(2)+' '+(y0+t1*dy).toFixed(2)}
+    for(i=0;i<6;i++){var a=rot+i*Math.PI/3;p.push([cx+r*Math.cos(a),cy+r*Math.sin(a)])}
+    d+='M'+p.map(function(q){return Math.max(0,Math.min(300,q[0])).toFixed(2)+' '+Math.max(0,Math.min(200,q[1])).toFixed(2)}).join('L')+'Z';
+    for(i=0;i<6;i++){var A=p[i],B=p[(i+1)%6],dx=B[0]-A[0],dy=B[1]-A[1],L=Math.hypot(dx,dy)||1;
+      e+=clip(B[0],B[1],B[0]+dx/L*420,B[1]+dy/L*420)}
+    blades.setAttribute('d',d);edges.setAttribute('d',e)}
+  function tween(from,to,ms,ease,done){var t0=performance.now();
+    (function f(now){var k=Math.min(1,(now-t0)/ms),v=ease(k);iris(from[0]+(to[0]-from[0])*v,from[1]+(to[1]-from[1])*v);if(k<1)requestAnimationFrame(f);else done&&done()})(t0)}
+  function inQ(k){return k*k*k} function outQ(k){return 1-Math.pow(1-k,3)}
+  function label(){var s=S[cur];cap.innerHTML=s[2]+' <em>'+s[3]+'</em>';cnt.textContent=pad(cur+1)+' / '+pad(S.length);
+    tag.innerHTML=s[1]+'<span> · Enfócate</span>';num.textContent=pad(cur+1)+' / '+pad(S.length);
+    vf.style.setProperty('--afx',s[4]+'%');vf.style.setProperty('--afy',s[5]+'%')}
+  function show(i){cur=(i+S.length)%S.length;imgs.forEach(function(im,k){im.classList.toggle('on',k===cur);if(k!==cur)im.classList.remove('sharp')});
+    ambs.forEach(function(im,k){im.classList.toggle('on',k===cur)});label()}
+  function focus(){vf.classList.remove('lock');vf.classList.add('hunt');
+    setTimeout(function(){imgs[cur].classList.add('sharp')},reduced?0:180);
+    setTimeout(function(){vf.classList.remove('hunt');vf.classList.add('lock');busy=false;plan()},reduced?0:620)}
+  function go(i){if(busy)return;busy=true;clearTimeout(timer);vf.classList.remove('lock','hunt');
+    if(reduced){show(i);imgs[cur].classList.add('sharp');busy=false;plan();return}
+    tween([200,0],[0,-1.05],300,inQ,function(){
+      show(i);flash.classList.remove('go');void flash.offsetWidth;flash.classList.add('go');
+      setTimeout(function(){tween([0,-1.05],[200,0],420,outQ,focus)},60)})}
+  function plan(){clearTimeout(timer);timer=setTimeout(function(){if(hover||!vis||document.hidden){plan();return}go(cur+1)},4600)}
+  document.getElementById('vf-next').addEventListener('click',function(){go(cur+1)});
+  document.getElementById('vf-prev').addEventListener('click',function(){go(cur-1)});
+  document.getElementById('vf-shoot').addEventListener('click',function(){go(cur+1)});
+  frame.addEventListener('click',function(){if(!moved)go(cur+1)});
+  frame.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();go(cur+1)}if(e.key==='ArrowRight')go(cur+1);if(e.key==='ArrowLeft')go(cur-1)});
+  frame.addEventListener('mouseenter',function(){hover=true});frame.addEventListener('mouseleave',function(){hover=false});
+  var x0=null,moved=false;frame.addEventListener('touchstart',function(e){x0=e.touches[0].clientX;moved=false},{passive:true});
+  frame.addEventListener('touchend',function(e){if(x0===null)return;var dx=e.changedTouches[0].clientX-x0;if(Math.abs(dx)>40){moved=true;go(cur+(dx<0?1:-1));setTimeout(function(){moved=false},400)}x0=null});
+  function see(){var r=vf.getBoundingClientRect();vis=r.width>0&&r.bottom>0&&r.top<innerHeight}
+  see();addEventListener('scroll',see,{passive:true});addEventListener('resize',see);
+  show(0);
+  if(reduced){imgs[0].classList.add('sharp');plan();return}
+  /* al irse el loader, el diafragma se abre sobre el primer trabajo y enfoca */
+  iris(0,-1.05);busy=true;
+  (function wait(){if(document.documentElement.classList.contains('loading')){setTimeout(wait,80);return}
+    setTimeout(function(){tween([0,-1.05],[200,0],620,outQ,focus)},250)})();
+})();
+
+/* ---------- Manifiesto: se enciende palabra a palabra ---------- */
+(function(){var m=document.getElementById('mani');if(!m)return;var HOT=/^(gravedad|crees|no)$/i;
+  m.innerHTML=m.textContent.split(' ').map(function(w,i){return '<span class="w'+(HOT.test(w.replace(/[,.:]/g,''))?' hot':'')+'" style="transition-delay:'+(i*45)+'ms">'+w+'</span>'}).join(' ');})();
+
+/* ---------- Trabajos con filtros y visor ---------- */
+(function(){var el=document.getElementById('works');if(!el)return;
+  /* [categoría, foto, pie, forma] */
+  var T={marca:'Marca personal',corp:'Fotografía corporativa',retrato:'Retrato corporativo',eventos:'Eventos corporativos',producto:'Producto y publicidad',inmo:'Inmobiliaria',sesion:'Sesiones',ciudad:'Reportaje · A Coruña'};
+  var TIPO={marca:'Marca personal',corp:'Fotos de empresa',retrato:'Retrato corporativo',eventos:'Evento corporativo',producto:'Producto o gastronomía',inmo:'Inmobiliaria',sesion:'Book, pareja o familia',ciudad:'Fotos de empresa'};
+  var items=[
+    ['marca','w-marca-1','tall'],['corp','w-corp-1','big'],['retrato','w-retrato-1','tall'],['producto','h-producto',''],['eventos','w-eventos-2',''],
+    ['inmo','w-inmo-1',''],['marca','w-marca-2',''],['sesion','w-sesion-3','tall'],['producto','h-gastro','big'],['corp','w-corp-3',''],
+    ['retrato','w-retrato-2','tall'],['eventos','w-eventos-1',''],['marca','w-marca-4','tall'],['inmo','w-inmo-2',''],['corp','w-corp-2',''],
+    ['ciudad','w-ciudad-1',''],['producto','w-producto-1','tall'],['marca','w-marca-3',''],['sesion','w-sesion-1',''],['eventos','w-eventos-3',''],
+    ['retrato','w-retrato-3','tall'],['corp','w-corp-4',''],['producto','w-producto-4',''],['inmo','w-inmo-3',''],['marca','w-marca-5',''],
+    ['producto','w-producto-2',''],['sesion','w-sesion-2',''],['producto','w-producto-3',''],['ciudad','w-ciudad-2',''],['retrato','h-retrato',''],
+    ['corp','h-corporativa',''],['eventos','h-eventos',''],['marca','h-lifestyle',''],['inmo','h-inmobiliaria',''],['sesion','h-pareja','']
+  ];
+  el.innerHTML=items.map(function(x){return '<button type="button" class="work '+x[2]+'" data-c="'+x[0]+'"><img src="img/'+x[1]+'.jpg" alt="'+T[x[0]]+', trabajo de Enfócate" loading="lazy"><span>'+T[x[0]]+'</span></button>'}).join('');
+  var LIM=innerWidth<=640?9:14, mb=document.getElementById('works-more'), f='all', all=false;
+  var works=[].slice.call(el.querySelectorAll('.work')), fb=[].slice.call(document.querySelectorAll('.filters button'));
+  function seen(w){return !w.classList.contains('out')&&!w.classList.contains('more')}
+  function apply(anim){var n=0,k=0,pop=[];
+    works.forEach(function(w){var was=seen(w),hit=f==='all'||w.dataset.c===f,more=hit&&!all&&f==='all'&&++n>LIM;
+      w.classList.toggle('out',!hit);w.classList.toggle('more',more);w.classList.remove('pop');
+      if(hit&&!more&&(anim==='all'||(anim==='new'&&!was))){w.style.animationDelay=Math.min(k++*40,400)+'ms';pop.push(w)}});
+    if(pop.length){void el.offsetWidth;pop.forEach(function(w){w.classList.add('pop')})}
+    mb.hidden=all||f!=='all'}
+  fb.forEach(function(b){b.setAttribute('aria-pressed',b.dataset.f===f);b.addEventListener('click',function(){
+    fb.forEach(function(x){x.classList.toggle('on',x===b);x.setAttribute('aria-pressed',x===b)});f=b.dataset.f;apply('all')})});
+  mb.addEventListener('click',function(){all=true;apply('new')}); apply();
+  var lb=document.getElementById('lb'),li=document.getElementById('lb-img'),go=document.getElementById('lb-go'),cap=document.getElementById('lb-cap'),list=[],at=0,opener=null;
+  function showAt(i){at=(i+list.length)%list.length;var w=list[at],im=w.querySelector('img'),c=w.dataset.c;li.src=im.src;li.alt=im.alt;go.dataset.tipo=TIPO[c];go.dataset.work=T[c];cap.textContent=T[c]+' · '+(at+1)+' / '+list.length}
+  el.addEventListener('click',function(e){var w=e.target.closest('.work');if(!w)return;list=works.filter(seen);opener=w;lb.hidden=false;showAt(list.indexOf(w));
+    try{lb.querySelector('.lb-x').focus({preventScroll:true})}catch(x){}});
+  function close(){lb.hidden=true;if(opener)try{opener.focus({preventScroll:true})}catch(x){}}
+  lb.addEventListener('click',function(e){var n=e.target.closest('[data-lb]');if(n){showAt(at+(+n.dataset.lb));return}if(e.target===lb||e.target.closest('.lb-x'))close()});
+  go.addEventListener('click',function(){lb.hidden=true});
+  document.addEventListener('keydown',function(e){if(lb.hidden)return;if(e.key==='Escape')close();else if(e.key==='ArrowRight')showAt(at+1);else if(e.key==='ArrowLeft')showAt(at-1)});
+})();
+
+/* ---------- Tarifas: marca personal o empresas ---------- */
+(function(){var bs=[].slice.call(document.querySelectorAll('.tabs button')),ps=[].slice.call(document.querySelectorAll('[data-plans]'));
+  bs.forEach(function(b){b.addEventListener('click',function(){bs.forEach(function(x){x.setAttribute('aria-pressed',x===b)});ps.forEach(function(p){p.hidden=p.dataset.plans!==b.dataset.plan})})})})();
+
+/* ---------- Reseñas reales de Google (texto literal; los recortes van con «…») ---------- */
+var REV=[
+  ['Jessica M.','Sesión de fotos','hace un mes','Quedé encantada con las fotos. Diego fue súper minucioso durante toda la sesión y se notó desde el principio. […] El resultado final superó mis expectativas. Lo recomiendo sin dudarlo.'],
+  ['Nadja V.','Sesión de fotos','hace 3 meses','Si podría poner 10 estrellas, los pondría! […] No soy una persona que le gusta mucho sacarse las fotos porqué me siento incomoda. Pero con Diego eso no pasa.'],
+  ['Alejandro G.','Fotos profesionales','hace 3 años','Buscaba hacerme unas fotos profesionales y realmente estoy encantado con el resultado y con el trato. Diego es un profesional que te hace sentir cómodo y te ayuda a sacar lo mejor de ti.'],
+  ['Xose Manuel F.','Marca personal','hace 3 años','Si quieres mejorar tu imagen y marca personal (o la de tu equipo o empresa) no dudes en hacer una sesión con Diego. Es un gran profesional y su trabajo es de altísima calidad…'],
+  ['Rebeca F.','Marca personal','hace 4 años','Acudí a Diego buscando un fotógrafo especializado en fotografia de marca personal y el resultado fue excelente. No solo preparó nuestra sesión por adelantado, preguntandome cuáles eran mis objetivos e ideas…']
+];
+var STAR='<svg><use href="#i-star"/></svg>';
+function rvHTML(r,i){return '<figure class="rv'+(i>2?' rv-x':'')+'" data-reveal><div class="rv-top"><span class="rv-stars" aria-label="5 de 5 estrellas">'+STAR+STAR+STAR+STAR+STAR+'</span><span class="rv-tag">'+r[1]+'</span></div><blockquote>«'+r[3]+'»</blockquote><figcaption><i>'+r[0][0]+'</i><span><b>'+r[0]+'</b><small>'+r[2]+' · Google</small></span></figcaption></figure>'}
+var grid=document.getElementById('rv-grid');
+if(grid) grid.innerHTML=REV.map(rvHTML).join('');
+
+/* ---------- Borradores ---------- */
+(function(){function sync(){var on=location.hash==='#borradores';document.querySelectorAll('.draft').forEach(function(d){d.hidden=!on});if(on){var t=document.querySelector('.draft');t&&setTimeout(function(){t.scrollIntoView()},300)}}
+ sync();window.addEventListener('hashchange',sync)})();
+
+/* ---------- Tu sesión: panel paso a paso que acaba en WhatsApp ---------- */
+(function(){
+  var WA='34722153354', N=5; /* su web: «puedes enviarme un WhatsApp o llamarme en el +34 722 153 354» */
+  var bk=document.getElementById('bk'); if(!bk)return;
+  var f=document.getElementById('book-form'), panes=[].slice.call(f.querySelectorAll('.bk-pane'));
+  var back=document.getElementById('bk-back'), next=document.getElementById('bk-next'), wa=document.getElementById('f-wa');
+  var err=document.getElementById('f-error'), bar=document.getElementById('bk-bar'), stepT=document.getElementById('bk-step');
+  var nombre=document.getElementById('f-nombre'), pre=document.getElementById('f-preview');
+  function sel(n){var e=f.querySelector('input[name="'+n+'"]:checked');return e?e.value:''}
+  function multi(n){return [].slice.call(f.querySelectorAll('input[name="'+n+'"]:checked')).map(function(e){return e.value})}
+  function val(id){var e=document.getElementById(id);return e?e.value.trim():''}
+  function list(a){return a.length>1?a.slice(0,-1).join(', ')+' y '+a[a.length-1]:a[0]||''}
+  var _code='';
+  function code(){if(!_code){var d=new Date(),r='',A='ABCDEFGHJKLMNPQRSTUVWXYZ23456789';for(var i=0;i<3;i++)r+=A[Math.floor(Math.random()*A.length)];_code='ENF-'+String(d.getDate()).padStart(2,'0')+String(d.getMonth()+1).padStart(2,'0')+'-'+r}return _code}
+  var pack='', work='';
+  function message(){
+    var L=['¡Hola, Diego! Soy '+nombre.value.trim()+(val('f-empresa')?', de '+val('f-empresa'):'')+'. Te escribo desde tu web:',''];
+    L.push('🔖 Código: '+code());
+    if(window.TEMPORADA&&TEMPORADA.linea)L.push(TEMPORADA.linea);
+    L.push('• Qué necesito: '+sel('tipo')+(pack?' ('+pack+')':''));
+    if(work)L.push('• Me ha gustado este trabajo: '+work);
+    var u=multi('uso');if(u.length)L.push('• Para: '+list(u));
+    L.push('• '+sel('pers'));
+    if(val('f-fecha'))L.push('• Fecha aproximada: '+val('f-fecha'));
+    if(val('f-donde'))L.push('• Lugar: '+val('f-donde'));
+    if(val('f-idea'))L.push('','Mi idea: '+val('f-idea'));
+    L.push('','¿Me dices disponibilidad y presupuesto? ¡Gracias!');
+    return L.join('\n');
+  }
+  var step=1, opener=null;
+  function show(n){
+    step=n; err.hidden=true;
+    panes.forEach(function(p){p.hidden=+p.dataset.step!==n});
+    back.disabled=n===1;
+    var last=n===N; next.hidden=last; wa.hidden=!last;
+    next.textContent=n===4?'Ver mi mensaje':'Siguiente';
+    stepT.textContent=last?'Listo':'Paso '+n+' de 4';
+    bar.style.transform='scaleX('+(Math.min(n,4)/4)+')';
+    if(last){var m=message();pre.textContent=m;wa.href='https://wa.me/'+WA+'?text='+encodeURIComponent(m)}
+    f.scrollTop=0;
+    var h3=panes[n-1].querySelector('h3'); if(h3)h3.setAttribute('tabindex','-1');
+    setTimeout(function(){try{(h3||next).focus({preventScroll:true})}catch(x){}},380);
+  }
+  function fail(msg,el){err.textContent=msg;err.hidden=false;if(el){el.setAttribute('aria-invalid','true');el.focus()}}
+  function validate(n){
+    if(n===1&&!sel('tipo')){fail('Elige qué necesitas.');return false}
+    if(n===4){nombre.removeAttribute('aria-invalid');if(!nombre.value.trim()){fail('Dime tu nombre para el mensaje.',nombre);return false}}
+    return true;
+  }
+  next.addEventListener('click',function(){if(validate(step))show(step+1)});
+  back.addEventListener('click',function(){if(step>1)show(step-1)});
+  f.addEventListener('submit',function(e){e.preventDefault();next.click()});
+  f.querySelectorAll('input[name="tipo"]').forEach(function(r){r.addEventListener('change',function(){pack='';setTimeout(function(){if(step===1)show(2)},220)})});
+  document.getElementById('f-copy').addEventListener('click',function(){var b=this,ok=function(){b.textContent='Copiado';setTimeout(function(){b.textContent='Copiar mensaje'},1600)};
+    try{navigator.clipboard.writeText(pre.textContent).then(ok,function(){var r=document.createRange();r.selectNodeContents(pre);var s=getSelection();s.removeAllRanges();s.addRange(r)})}catch(x){}});
+  function pick(v){var r=f.querySelector('input[name="tipo"][value="'+v+'"]');if(r){r.checked=true;return true}return false}
+  function open(from){
+    opener=from||document.activeElement; bk.hidden=false; document.documentElement.style.overflow='hidden';
+    var ds=from&&from.dataset||{};
+    work=ds.work||'';
+    if(ds.tipo&&pick(ds.tipo)){pack=ds.pack||'';show(2)}
+    else if(step===N)show(4); else show(step);
+    requestAnimationFrame(function(){requestAnimationFrame(function(){bk.classList.add('open')})});
+  }
+  function close(){
+    bk.classList.remove('open'); document.documentElement.style.overflow='';
+    setTimeout(function(){bk.hidden=true},reduced?0:420);
+    if(opener&&opener.focus)try{opener.focus({preventScroll:true})}catch(x){}
+  }
+  window.__openBk=open;
+  document.getElementById('bk-x').addEventListener('click',close);
+  document.getElementById('bk-scrim').addEventListener('click',close);
+  document.addEventListener('keydown',function(e){if(!bk.hidden&&e.key==='Escape')close()});
+  document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[href="#reservar"],button.svc');if(!a)return;e.preventDefault();open(a)});
+  /* un enlace compartido con #reservar (bio de Instagram, WhatsApp) abre el panel al llegar */
+  if(location.hash==='#reservar')setTimeout(function(){open(null)},600);
+})();
+
+
+
+/* ---------- Drawer de reseñas ---------- */
+(function(){var d=document.getElementById('rvd'); if(!d)return;
+ var list=document.getElementById('rvd-list'), map=document.getElementById('rvd-map'), opener=null, filled=false;
+ function open(from){
+   if(!filled){document.querySelectorAll('#resenas .rv').forEach(function(c){var k=c.cloneNode(true);k.removeAttribute('data-reveal');list.appendChild(k)});filled=true}
+   if(!map.src)map.src=map.getAttribute('data-src');
+   opener=from||document.activeElement; d.hidden=false; document.documentElement.style.overflow='hidden'; SFX.play('open');
+   requestAnimationFrame(function(){requestAnimationFrame(function(){d.classList.add('open');var x=d.querySelector('.bk-head [data-rvd-x]');x&&x.focus({preventScroll:true})})});
+ }
+ function close(){ if(d.hidden)return; SFX.play('close'); d.classList.remove('open'); document.documentElement.style.overflow='';
+   setTimeout(function(){d.hidden=true;opener&&opener.focus&&opener.focus({preventScroll:true})},reduced?0:420); }
+ document.addEventListener('click',function(e){var a=e.target.closest('[data-rvd]');if(a){e.preventDefault();open(a);return}
+   if(e.target.closest('[data-rvd-x]'))close()});
+ document.addEventListener('keydown',function(e){if(e.key==='Escape')close()});
+})();
+
+
+
+/* ---------- Cabecera, barra móvil y subir arriba ---------- */
+/* Por scroll y no por IntersectionObserver: dentro del visor (iframe) no detecta bien el hero.
+   Cabecera y barra se oscurecen sobre las zonas de noche; la barra no sale mientras se ven el botón o el titular del hero. */
+(function(){var b=document.getElementById('totop'),hero=document.getElementById('hero'),mbar=document.querySelector('.mbar'),top=document.getElementById('top'),
+  h1=hero.querySelector('h1'),cta=hero.querySelector('.hero-ctas .btn'),darks=[].slice.call(document.querySelectorAll('.hero,.band-ink')),tk=false;
+ function sync(){tk=false;var end=hero.offsetTop+hero.offsetHeight;b.classList.toggle('on',scrollY>end-innerHeight/2);
+  function over(y){return darks.some(function(s){var r=s.getBoundingClientRect();return r.top<y&&r.bottom>y})}
+  if(top)top.classList.toggle('dark',over(top.offsetHeight/2));
+  if(mbar){mbar.classList.toggle('dark',over(innerHeight-34));
+    var c=cta.getBoundingClientRect(),h=h1.getBoundingClientRect();
+    mbar.classList.toggle('off',(c.width>0&&c.bottom>0&&c.top<innerHeight-70)||(h.bottom>0&&h.bottom>innerHeight-84))}}
+ sync();window.addEventListener('scroll',function(){if(!tk){tk=true;requestAnimationFrame(sync)}},{passive:true});window.addEventListener('resize',sync);
+ b.addEventListener('click',function(){window.scrollTo({top:0,behavior:reduced?'auto':'smooth'})});})();
+
+/* ---------- Animaciones por visibilidad ---------- */
+(function(){
+  var root=document.documentElement;
+  if(!('IntersectionObserver' in window)||reduced)return;
+  root.classList.add('js-anim');
+  var io=new IntersectionObserver(function(es){var k=0;es.forEach(function(e){if(!e.isIntersecting)return;var el=e.target;el.style.transitionDelay=Math.min(k++*90,450)+'ms';el.classList.add('in');io.unobserve(el);setTimeout(function(){el.style.transitionDelay=''},1500)})},{rootMargin:'0px 0px -8% 0px'});
+  document.querySelectorAll('[data-reveal]').forEach(function(el){io.observe(el)});
+  var m=document.getElementById('mani');
+  if(m)new IntersectionObserver(function(e,o){if(e[0].isIntersecting){m.classList.add('lit');o.disconnect()}},{threshold:.4}).observe(m);
+  var bar=document.getElementById('progress'), tk=false;
+  function prog(){tk=false;var H=root.scrollHeight-innerHeight;bar.style.transform='scaleX('+(H>0?Math.min(1,scrollY/H):0)+')'}
+  window.addEventListener('scroll',function(){if(!tk){tk=true;requestAnimationFrame(prog)}},{passive:true});
+})();
+})();
+
+/* ---------- Botones flotantes tras un mínimo scroll (cabecera y barra móvil ocultas al pintar el hero) ---------- */
+(function(){var h=document.documentElement,tk=false;function s(){tk=false;h.classList.toggle('cta-wait',scrollY<=Math.min(120,innerHeight*.15))}
+ s();addEventListener('scroll',function(){if(!tk){tk=true;requestAnimationFrame(s)}},{passive:true});addEventListener('resize',s);})();
+</script>

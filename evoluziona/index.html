@@ -1,0 +1,1257 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Evoluziona · Mantenimiento informático para empresas en Bizkaia</title>
+<meta name="description" content="Evoluziona, en Erandio (Bizkaia): departamento de informática externo para pymes y refuerzo para equipos de IT. Mantenimiento integral desde 180 € por equipo y año sin límite de horas, ciberseguridad WatchGuard, Microsoft 365 y equipos. Certificación ENS categoría media.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600&family=IBM+Plex+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap">
+<link rel="icon" href="img/logo-helice.png">
+<style>
+/* Evoluziona — técnico oscuro (Oxide): grafito y el magenta de la hélice de su logo. Sin fotos de banco: el gesto es su consola de vigilancia. */
+:root{
+  color-scheme: light;
+  --shell:#F6F5F8; --shell-2:#ECE9F1;
+  --ink:#17141D; --ink-soft:#5D5869;
+  --hibiscus:#C2109C; --hibiscus-ink:#9C0B7E; --sun:#F59BE0;
+  --accent-ink:#A20C84; --accent-soft:rgba(194,16,156,.09); --accent-on-dark:#F49BDF; --accent-glow:rgba(194,16,156,.5);
+  --dark:#121016; --dark-rgb:18 16 22;
+  --ok:#3BE08E; --warn:#FFB547; --bad:#FF5C6C;
+  --line:rgba(23,20,29,.12);
+  --font-display:"Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-body:"IBM Plex Sans", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono:"IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  --h-weight:600;
+  --r-sm:10px; --r-md:14px; --r-lg:20px; --r-btn:12px;
+  --shadow:0 30px 60px -30px rgba(18,16,22,.4),0 8px 20px -10px rgba(18,16,22,.14);
+  --wrap:1200px; --head:70px; --logo-h:30px;
+}
+.brand .logo-dark{display:none}
+.top.glass .brand .logo-light{display:none}.top.glass .brand .logo-dark{display:block}
+.eyebrow{font-family:var(--font-mono);font-weight:600;letter-spacing:.08em}
+.ld-mark img{--ld-pad:22%}
+@media (max-width:640px){:root{--head:62px;--logo-h:26px}}
+
+/* ===== Base común (kit de la tanda B2B): estructura, cabecera, loader, hero, secciones, barra móvil ===== */
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html{scroll-behavior:smooth;scroll-padding-top:calc(var(--head) + 12px)}
+body{margin:0;background:var(--shell);color:var(--ink);font-family:var(--font-body);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:clip}
+img,video{max-width:100%;display:block}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--hibiscus);outline-offset:3px;border-radius:6px}
+.wrap{max-width:var(--wrap);margin-inline:auto;padding-inline:clamp(16px,4vw,40px)}
+h1,h2,h3{margin:0;text-wrap:balance;line-height:1.05;letter-spacing:-.025em;font-weight:var(--h-weight,700);font-family:var(--font-display)}
+p{margin:0}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:12.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-ink)}
+.eyebrow::before{content:"";width:18px;height:2px;flex:none;background:currentColor;border-radius:2px}
+.hl{color:var(--accent-ink)}
+.lead{font-size:clamp(17px,1.5vw,19.5px);color:var(--ink-soft);max-width:36em}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 24px;border-radius:var(--r-btn,999px);font:600 16px/1.15 var(--font-body);text-decoration:none;border:1.5px solid transparent;cursor:pointer;transition:transform .25s cubic-bezier(.2,.7,.2,1),box-shadow .25s,background .25s,border-color .25s;text-align:center}
+.btn svg{width:19px;height:19px;flex:none}
+.btn-primary{background:var(--hibiscus);color:var(--on-accent,#fff);box-shadow:0 12px 24px -12px var(--accent-glow,rgba(0,0,0,.5))}
+.btn-primary:hover{background:var(--hibiscus-ink);transform:translateY(-2px)}
+.btn-ghost{background:transparent;border-color:var(--line);color:var(--ink)}
+.btn-ghost:hover{border-color:var(--ink);transform:translateY(-2px)}
+.btn-dark{background:var(--dark);color:#fff}
+.btn-dark:hover{transform:translateY(-2px)}
+.sec{padding-block:clamp(72px,10vw,124px)}
+.sec-head{display:grid;gap:16px;max-width:780px;margin-bottom:clamp(34px,5vw,54px)}
+.sec-head h2,.split-txt h2,.cta-band h2,.visit h2{font-size:clamp(32px,4.2vw,54px)}
+.sec-head h2 .hl,.split-txt h2 .hl,.visit h2 .hl{display:block}
+.band-2{background:var(--shell-2)}
+.band-white{background:#fff}
+.band-dark{background:var(--dark);color:var(--dark-ink,#F3F4F6)}
+.band-dark .eyebrow{color:var(--accent-on-dark,var(--sun))}
+.band-dark .hl{color:var(--accent-on-dark,var(--sun))}
+.band-dark .lead{color:rgba(255,255,255,.74)}
+
+/* Cabecera */
+.top{position:fixed;top:0;left:0;right:0;padding-top:env(safe-area-inset-top,0px);z-index:60;background:var(--top-bg,rgba(255,255,255,.86));-webkit-backdrop-filter:blur(18px) saturate(1.5);backdrop-filter:blur(18px) saturate(1.5);border-bottom:1px solid var(--line);transition:background .4s,border-color .4s}
+.top.glass{background:linear-gradient(180deg,rgb(var(--dark-rgb) / .55),rgb(var(--dark-rgb) / .12));border-bottom-color:rgba(255,255,255,.14)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;height:var(--head)}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;flex:none;-webkit-tap-highlight-color:transparent}
+.brand img{height:var(--logo-h,34px);width:auto}
+.brand .logo-dark{display:none}
+.top.glass .brand .logo-light{display:none}.top.glass .brand .logo-dark{display:block}
+.nav{display:flex;gap:26px;font-size:15px;font-weight:500}
+.nav a{text-decoration:none;color:var(--ink-soft);white-space:nowrap}
+.nav a:hover{color:var(--hibiscus)}
+.top.glass .nav a{color:rgba(255,255,255,.86)}
+.top .btn{min-height:44px;padding:0 18px;font-size:15px}
+.progress{position:absolute;left:0;bottom:-1px;height:2px;width:100%;background:var(--hibiscus);transform:scaleX(0);transform-origin:left}
+.top.glass .progress{opacity:0}
+
+/* Loader con el logo */
+.loader{position:fixed;inset:0;z-index:200;display:grid;place-items:center;background:radial-gradient(60% 50% at 50% 45%,var(--accent-glow,rgba(255,255,255,.12)),transparent 70%),var(--dark);color:#fff;transition:opacity .7s cubic-bezier(.2,.7,.2,1),visibility 0s .7s;animation:ld-safety 0s 4s forwards}
+.loader.out{opacity:0;visibility:hidden}
+@keyframes ld-safety{to{opacity:0;visibility:hidden}}
+.ld-in{display:grid;justify-items:center;gap:14px;transition:transform .7s cubic-bezier(.2,.7,.2,1)}
+.loader.out .ld-in{transform:scale(.92) translateY(-8px)}
+.ld-mark{position:relative;width:clamp(140px,13vw,180px);aspect-ratio:1;display:grid;place-items:center}
+.ld-mark img{width:74%;height:74%;object-fit:contain;border-radius:50%;background:var(--ld-disc,#fff);padding:var(--ld-pad,16%);box-shadow:0 18px 40px -16px rgba(0,0,0,.6);animation:ld-breathe 1.8s ease-in-out infinite}
+.ld-ring{position:absolute;inset:0;transform:rotate(-90deg)}
+.ld-ring circle{fill:none;stroke:rgba(255,255,255,.14);stroke-width:2}
+.ld-ring .ld-arc{stroke:var(--accent-on-dark,var(--sun));stroke-width:2.5;stroke-linecap:round;stroke-dasharray:100;stroke-dashoffset:100;animation:ld-draw 1.1s cubic-bezier(.6,.1,.3,1) forwards}
+.ld-name{font:var(--h-weight,700) clamp(26px,2.4vw,36px)/1 var(--font-display);letter-spacing:-.02em;margin-top:6px;animation:ld-up .8s .15s cubic-bezier(.2,.7,.2,1) both}
+.ld-sub{font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--accent-on-dark,var(--sun));animation:ld-up .8s .3s cubic-bezier(.2,.7,.2,1) both;text-align:center;padding-inline:16px}
+@keyframes ld-draw{to{stroke-dashoffset:0}}
+@keyframes ld-breathe{50%{transform:scale(1.04)}}
+@keyframes ld-up{from{opacity:0;transform:translateY(10px)}}
+.loading .hero-copy>*,.loading .gesture{animation-play-state:paused!important}
+@media (prefers-reduced-motion:reduce){.ld-mark img,.ld-ring .ld-arc{animation:none;stroke-dashoffset:0}}
+
+/* Hero: fondo oscuro, texto a la izquierda y el gesto del oficio a la derecha */
+.hero{position:relative;min-height:100vh;min-height:100svh;max-height:1040px;overflow:hidden;background:var(--dark);color:#fff;display:flex;isolation:isolate}
+.hero-bg{position:absolute;inset:0;z-index:0;overflow:hidden}
+.hero-bg img,.hero-bg video{width:100%;height:100%;object-fit:cover}
+.hero-bg::after{content:"";position:absolute;inset:0;background:var(--hero-veil,linear-gradient(90deg,rgb(var(--dark-rgb) / .94) 0%,rgb(var(--dark-rgb) / .8) 45%,rgb(var(--dark-rgb) / .55) 100%))}
+.hero-grid{position:relative;z-index:2;width:100%;display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:clamp(28px,4vw,64px);align-items:center;padding-top:calc(var(--head) + 24px);padding-bottom:40px}
+.hero-copy{min-width:0;display:grid;justify-items:start;gap:0}
+.hero-copy>*{min-width:0;max-width:100%}
+.hero .eyebrow{color:var(--accent-on-dark,var(--sun))}
+.hero h1{font-size:clamp(44px,5.4vw,82px);margin-top:18px;max-width:11.5em}
+.hero h1 .hl{display:block;color:var(--accent-on-dark,var(--sun))}
+.hero-sub{margin-top:20px;max-width:34em;font-size:clamp(17px,1.35vw,19.5px);color:rgba(255,255,255,.86)}
+.hero-quote{margin-top:18px;font-size:14.5px;font-style:italic;color:rgba(255,255,255,.82);max-width:34em}
+.hero-quote small{font-style:normal;opacity:.75}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px;align-items:center}
+.hero-ctas .btn{white-space:normal}
+.hero .btn-ghost{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.28);color:#fff}
+.hero .btn-ghost:hover{border-color:#fff}
+.hero-micro{flex-basis:100%;font-size:13px;color:rgba(255,255,255,.72)}
+.gesture{position:relative;min-width:0;justify-self:center;width:100%;max-width:var(--g-max,560px)}
+/* sello de la nota de Google sobre el gesto */
+.rate-stk{position:absolute;z-index:7;right:-2%;top:-4%;display:grid;grid-template-columns:auto auto;align-items:center;gap:2px 10px;padding:12px 16px 12px 14px;border-radius:18px;background:#fff;color:#16181D;text-decoration:none;transform:rotate(3deg);box-shadow:0 22px 40px -16px rgba(0,0,0,.6);transition:transform .3s}
+.rate-stk:hover{transform:rotate(1deg) scale(1.04)}
+.rate-stk .stars{grid-column:1/-1;display:flex;gap:2px;color:#F5B400}.rate-stk svg{width:18px;height:18px}
+.rate-stk b{font:700 38px/1 var(--font-display);letter-spacing:-.02em}
+.rate-stk small{font-size:13px;line-height:1.25;font-weight:600;color:#5A5F6B}
+/* banda de datos bajo el hero */
+.facts{display:flex;flex-wrap:wrap;gap:10px 28px;margin-top:28px;padding-top:20px;border-top:1px solid rgba(255,255,255,.14);font-size:14px;color:rgba(255,255,255,.75);list-style:none;padding-left:0}
+.facts b{display:block;font:700 22px/1.1 var(--font-display);color:#fff;letter-spacing:-.01em}
+
+/* Reseñas */
+.rv-grid{columns:3 300px;column-gap:20px}
+.rv{break-inside:avoid;margin:0 0 20px;padding:22px;border:1px solid var(--line);border-radius:var(--r-md);background:#fff;display:grid;gap:14px;transition:transform .3s,box-shadow .3s}
+.rv:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
+.rv-top{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.rv-stars{display:flex;gap:2px;color:#F5B400}.rv-stars svg{width:16px;height:16px}
+.rv-tag{font-size:12px;font-weight:700;color:var(--accent-ink);background:var(--accent-soft);padding:4px 10px;border-radius:999px;white-space:nowrap}
+.rv blockquote{margin:0;font-size:16px;line-height:1.55;color:var(--ink)}
+.rv figcaption{display:flex;align-items:center;gap:10px}
+.rv figcaption i{width:36px;height:36px;border-radius:50%;display:grid;place-items:center;color:#fff;font-style:normal;font-weight:700;flex:none}
+.rv figcaption span{display:grid;line-height:1.25}.rv figcaption small{color:var(--ink-soft);font-size:13px}
+.rv-more{display:flex;flex-wrap:wrap;gap:6px 16px;align-items:baseline;margin:8px 0 0;font-size:14px;color:var(--ink-soft)}
+.rv-more a{font-weight:700;color:var(--accent-ink);text-decoration:none}
+
+/* Tarjetas de servicio */
+.svc-grid{display:grid;grid-template-columns:repeat(var(--svc-cols,3),minmax(0,1fr));gap:20px}
+.svc{display:grid;align-content:start;gap:12px;padding:26px;background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);text-decoration:none;color:inherit;transition:transform .3s,box-shadow .3s,border-color .3s;position:relative;overflow:hidden}
+.svc:hover{transform:translateY(-4px);box-shadow:var(--shadow);border-color:transparent}
+.svc .ic{width:46px;height:46px;border-radius:14px;display:grid;place-items:center;background:var(--accent-soft);color:var(--accent-ink)}
+.svc .ic svg{width:24px;height:24px}
+.svc h3{font-size:22px;letter-spacing:-.015em}
+.svc p{color:var(--ink-soft);font-size:15.5px}
+.svc ul{margin:2px 0 0;padding:0;list-style:none;display:grid;gap:6px;font-size:14.5px;color:var(--ink-soft)}
+.svc ul li::before{content:"";display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--hibiscus);margin-right:9px;vertical-align:middle}
+.svc .go{margin-top:auto;padding-top:6px;display:inline-flex;align-items:center;gap:8px;font-weight:700;font-size:15px;color:var(--accent-ink)}
+.svc .go svg{width:16px;height:16px;transition:transform .25s}
+.svc:hover .go svg{transform:translateX(4px)}
+.svc-img{margin:-26px -26px 6px;aspect-ratio:16/10;overflow:hidden}
+.svc-img img{width:100%;height:100%;object-fit:cover;transition:transform .8s cubic-bezier(.2,.7,.2,1)}
+.svc:hover .svc-img img{transform:scale(1.04)}
+
+/* Marcas y clientes en texto */
+.marquee{overflow-x:auto;overflow-y:hidden;scrollbar-width:none;-webkit-mask:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
+.mq-track{display:flex;gap:48px;width:max-content;animation:mq 40s linear infinite;padding-block:6px}
+.mq-track span{font:600 clamp(18px,2vw,24px)/1.2 var(--font-display);letter-spacing:-.01em;color:var(--ink-soft);white-space:nowrap}
+.band-dark .mq-track span{color:rgba(255,255,255,.62)}
+@keyframes mq{to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){.mq-track{animation:none;flex-wrap:wrap;width:auto}}
+
+/* Bloques partidos */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,6vw,88px);align-items:center}
+.split-img{margin:0;border-radius:var(--r-lg);overflow:hidden;box-shadow:var(--shadow);position:relative}
+.split-img img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.split-img figcaption{position:absolute;left:14px;bottom:14px;padding:7px 12px;border-radius:999px;background:rgba(255,255,255,.92);color:#16181D;font-size:13px;font-weight:600}
+.split-txt{display:grid;gap:18px;justify-items:start}
+.split-txt p{color:var(--ink-soft)}
+.band-dark .split-txt p{color:rgba(255,255,255,.74)}
+.ticks{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.ticks li{display:flex;gap:10px;align-items:flex-start}
+.ticks li::before{content:"";flex:none;width:20px;height:20px;margin-top:3px;border-radius:50%;background:var(--accent-soft) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M6 12.5l4 4 8-9' fill='none' stroke='%23000' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/12px no-repeat}
+.band-dark .ticks li::before{background-color:rgba(255,255,255,.9)}
+.quote{margin:4px 0 6px;padding:18px 20px;border-left:3px solid var(--hibiscus);background:rgba(255,255,255,.7);border-radius:0 var(--r-sm) var(--r-sm) 0;font-size:17px;line-height:1.5;font-style:italic}
+.quote cite{display:block;margin-top:10px;font-style:normal;font-size:13px;font-weight:600;color:var(--ink-soft)}
+
+/* Pasos */
+.steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(var(--steps,3),minmax(0,1fr));gap:20px;counter-reset:st}
+.steps li{display:grid;gap:10px;align-content:start;padding:26px;border-radius:var(--r-lg);background:#fff;border:1px solid var(--line)}
+.steps b{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;background:var(--accent-soft);color:var(--accent-ink);font:700 18px var(--font-display)}
+.steps h3{font-size:21px}
+.steps p{color:var(--ink-soft);font-size:15.5px}
+
+/* Banda de llamada a la acción */
+.cta-band{display:grid;grid-template-columns:1fr auto;gap:32px;align-items:end}
+.cta-band>div{display:grid;gap:16px}
+.perks{list-style:none;margin:6px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:8px 20px;font-size:15px;color:rgba(255,255,255,.8)}
+.perks li::before{content:"✓ ";color:var(--accent-on-dark,var(--sun));font-weight:700}
+.cta-band .btn{min-height:58px;padding:0 30px;font-size:17px}
+
+/* Borrador */
+.draft{outline:3px dashed #E5B300;outline-offset:-12px}
+.incl{list-style:none;margin:0;padding:0;display:grid;gap:10px;font-size:18px}
+mark{background:#FFE58A;padding:0 4px;border-radius:4px;color:#16181D}
+
+/* Visita y FAQ */
+.visit{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,6vw,88px);align-items:start}
+.visit>div:first-child{display:grid;gap:16px;justify-items:start}
+.hours{border-collapse:collapse;margin-top:8px;font-size:16px}
+.hours th{text-align:left;font-weight:600;padding:8px 24px 8px 0;color:var(--ink)}
+.hours td{padding:8px 0;color:var(--ink-soft);font-variant-numeric:tabular-nums}
+.hours tr+tr{border-top:1px solid var(--line)}
+.contact{list-style:none;margin:6px 0 0;padding:0;display:grid;gap:10px}
+.contact li{display:flex;align-items:center;gap:10px}
+.contact svg{width:20px;height:20px;flex:none;color:var(--accent-ink)}
+.contact a{text-decoration:none;font-weight:500;overflow-wrap:anywhere}
+.contact a:hover{color:var(--hibiscus)}
+.faq{display:grid;gap:10px}
+.faq details{background:#fff;border:1px solid var(--line);border-radius:var(--r-md);padding:4px 20px}
+.faq summary{cursor:pointer;list-style:none;padding:16px 0;font-weight:700;display:flex;justify-content:space-between;gap:12px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font-size:22px;line-height:1;color:var(--hibiscus);transition:transform .25s}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq details p{padding:0 0 18px;color:var(--ink-soft)}
+
+/* Cierre y pie */
+.final{padding-block:clamp(80px,11vw,140px);text-align:center}
+.final .wrap{display:grid;justify-items:center;gap:18px}
+.final h2{font-size:clamp(38px,5.4vw,72px);max-width:13em}
+.final h2 .hl{display:block}
+.final .hero-ctas{justify-content:center;margin-top:8px}
+.final-logo{height:52px;width:auto}
+.g-rate{display:inline-flex;align-items:center;gap:8px;padding:8px 14px;border-radius:999px;background:#fff;border:1px solid var(--line);color:var(--ink);text-decoration:none;font-size:14px}
+.g-rate .stars{display:flex;gap:1px;color:#F5B400}.g-rate svg{width:15px;height:15px}
+.foot{background:var(--dark);color:rgba(255,255,255,.7);overflow:hidden}
+.wordmark{font:var(--h-weight,700) clamp(56px,13vw,200px)/.9 var(--font-display);letter-spacing:-.04em;text-align:center;color:rgba(255,255,255,.07);white-space:nowrap;padding-top:22px}
+.foot .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;font-size:14px;padding-block:22px;border-top:1px solid rgba(255,255,255,.12)}
+
+/* Animaciones de entrada */
+.js-anim [data-reveal]{opacity:0;transform:translateY(28px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1)}
+.js-anim [data-reveal].in{opacity:1;transform:none}
+.js-anim .hero-copy>*{animation:rise .9s cubic-bezier(.2,.7,.2,1) both}
+.js-anim .hero-copy>:nth-child(2){animation-delay:.1s}.js-anim .hero-copy>:nth-child(3){animation-delay:.2s}.js-anim .hero-copy>:nth-child(4){animation-delay:.3s}.js-anim .hero-copy>:nth-child(5){animation-delay:.4s}.js-anim .hero-copy>:nth-child(6){animation-delay:.5s}
+.js-anim .gesture{animation:gin 1.1s .25s cubic-bezier(.2,.75,.2,1) both}
+@keyframes rise{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
+@keyframes gin{from{opacity:0;transform:translateY(26px) scale(.96)}to{opacity:1;transform:none}}
+
+/* Temporadas: el eyebrow del hero se vuelve una píldora con punto latiendo */
+.hero .eyebrow.t-on{padding:6px 14px 6px 10px;border-radius:999px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.22);color:#fff;-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}
+.hero .eyebrow.t-on::before{width:8px;height:8px;border-radius:50%;background:var(--accent-on-dark,var(--sun));box-shadow:0 0 0 0 var(--accent-on-dark,var(--sun));animation:t-pulso 1.8s ease-out infinite}
+@keyframes t-pulso{70%{box-shadow:0 0 0 8px transparent}100%{box-shadow:0 0 0 0 transparent}}
+@media (prefers-reduced-motion:reduce){.hero .eyebrow.t-on::before{animation:none}}
+
+.mbar{display:none}
+
+@media (max-width:1100px){.nav a:nth-child(n+4){display:none}}
+@media (max-width:960px){
+  .nav{display:none}
+  .svc-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .split,.visit,.cta-band{grid-template-columns:1fr}
+  .split.rev .split-img{order:-1}
+  .steps{grid-template-columns:1fr}
+  .hero{min-height:0;max-height:none}
+  .hero-grid{grid-template-columns:minmax(0,1fr);gap:22px;padding-top:calc(var(--head) + 18px);padding-bottom:44px}
+  .gesture{order:-1;max-width:var(--g-max-m,460px)}
+  .hero-bg::after{background:var(--hero-veil-m,linear-gradient(180deg,rgb(var(--dark-rgb) / .78),rgb(var(--dark-rgb) / .94) 55%))}
+  .js-anim .gesture{animation-name:gin}
+}
+@media (max-width:640px){
+  body{font-size:16px;padding-bottom:76px}
+  .hide-m{display:none}
+  .top .btn{display:none}
+  .hero h1{font-size:clamp(32px,10.4vw,50px);margin-top:12px}
+  .hero .eyebrow{font-size:11px;letter-spacing:.1em;white-space:nowrap;max-width:100%;overflow:hidden;text-overflow:ellipsis}
+  .hero-sub{margin-top:12px;font-size:16px}
+  .hero-ctas{margin-top:18px}
+  .hero-micro{font-size:12.5px}
+  .facts{gap:8px 18px;margin-top:20px;padding-top:14px}
+  .facts b{font-size:18px}
+  .rate-stk{padding:8px 11px 9px;border-radius:14px;gap:1px 7px}
+  .rate-stk b{font-size:26px}
+  .rate-stk svg{width:13px;height:13px}
+  .rate-stk small{font-size:11px}
+  .svc-grid{grid-template-columns:1fr}
+  .rv-grid{columns:auto;display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;margin-inline:-16px;padding:4px 16px 14px;scrollbar-width:none}
+  .rv-grid::-webkit-scrollbar{display:none}
+  .rv{flex:0 0 84%;margin:0;scroll-snap-align:center}
+  .cta-band .btn{width:100%}
+  .final .hero-ctas{width:100%}.final .hero-ctas .btn{flex:1}
+  .mbar{display:flex;gap:6px;position:fixed;left:12px;right:12px;bottom:calc(10px + env(safe-area-inset-bottom,0px));z-index:70;padding:6px;border-radius:999px;background:rgba(255,255,255,.8);-webkit-backdrop-filter:blur(18px) saturate(1.5);backdrop-filter:blur(18px) saturate(1.5);border:1px solid var(--line);box-shadow:0 14px 34px -14px rgba(0,0,0,.45);transition:transform .35s cubic-bezier(.2,.7,.2,1),opacity .35s,background .4s,border-color .4s}
+  .mbar.glass{background:rgb(var(--dark-rgb) / .5);border-color:rgba(255,255,255,.18)}
+  .mbar.off{transform:translateY(150%);opacity:0;pointer-events:none}
+  .mbar .btn{flex:1;min-height:48px;white-space:nowrap;padding:0 16px;border-radius:999px}
+  .mbar .btn-ghost{flex:0 0 48px;width:48px;padding:0;border-color:transparent;background:rgba(0,0,0,.06)}
+  .mbar.glass .btn-ghost{background:rgba(255,255,255,.16);color:#fff}
+}
+@media (max-width:340px){.hero h1{font-size:31px}.hero-sub{font-size:15px}}
+
+/* Botones flotantes: aparecen tras un mínimo scroll, no al pintar el hero */
+.top .btn-primary{transition:opacity .35s,transform .35s cubic-bezier(.2,.7,.2,1),background .25s,box-shadow .25s}
+html.cta-wait .top .btn-primary{opacity:0;transform:translateY(-8px);pointer-events:none}
+html.cta-wait .mbar{transform:translateY(150%)!important;opacity:0!important;pointer-events:none}
+
+/* Panel: envío por correo o teléfono cuando no hay WhatsApp */
+.btn-mail{background:var(--hibiscus);color:var(--on-accent,#fff);width:100%}
+.send-alt{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;font-size:14px;color:var(--ink-soft)}
+.send-alt a{color:var(--accent-ink);font-weight:700}
+.marquee::-webkit-scrollbar{display:none}
+@media (max-width:360px){.final h2{font-size:32px}.sec-head h2,.split-txt h2,.cta-band h2,.visit h2{font-size:29px}}
+h1,h2,h3{overflow-wrap:break-word}
+
+/* Hero de Evoluziona: consola de vigilancia remota; al pulsar «Simular un ataque» llega una amenaza y se neutraliza sola */
+.hero{background:radial-gradient(55% 60% at 80% 40%,rgba(194,16,156,.28),transparent 70%),radial-gradient(40% 50% at 10% 100%,rgba(59,224,142,.08),transparent 70%),var(--dark)}
+.hero::before{content:"";position:absolute;inset:0;z-index:0;background-image:radial-gradient(rgba(255,255,255,.07) 1px,transparent 1.2px);background-size:22px 22px;-webkit-mask:linear-gradient(90deg,transparent,#000 40%);mask:linear-gradient(90deg,transparent,#000 40%)}
+.hero h1{font-size:clamp(40px,4.6vw,70px);letter-spacing:-.035em}
+@media (max-width:960px){.gesture.con{order:0;margin-top:8px}}
+.hero .eyebrow::before{width:8px;height:8px;border-radius:50%;background:var(--ok);box-shadow:0 0 10px var(--ok)}
+.gesture.con{max-width:540px;width:min(540px,100%)}
+.con-win{position:relative;border-radius:16px;background:linear-gradient(180deg,#1E1A25,#17141D);border:1px solid rgba(255,255,255,.1);box-shadow:0 50px 90px -40px rgba(0,0,0,.9),0 0 0 1px rgba(194,16,156,.12),0 0 80px -30px rgba(194,16,156,.5);overflow:hidden;font-family:var(--font-mono);color:#E9E4F0}
+.con-bar{display:flex;align-items:center;gap:8px;padding:12px 14px;border-bottom:1px solid rgba(255,255,255,.08);font-size:12px;color:rgba(233,228,240,.62)}
+.con-bar i{width:10px;height:10px;border-radius:50%;background:#3A3442}
+.con-bar span{margin-left:6px;flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.con-bar em{font-style:normal;display:inline-flex;align-items:center;gap:6px;color:var(--ok)}
+.con-bar em::before{content:"";width:7px;height:7px;border-radius:50%;background:currentColor;box-shadow:0 0 8px currentColor;animation:pulse 1.6s ease-in-out infinite}
+@keyframes pulse{50%{opacity:.35}}
+.con-sum{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(255,255,255,.06);border-bottom:1px solid rgba(255,255,255,.08)}
+.con-sum div{background:#17141D;padding:12px 14px;display:grid;gap:2px}
+.con-sum b{font:600 22px/1 var(--font-display);color:#fff}
+.con-sum small{font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;color:rgba(233,228,240,.55)}
+.con-list{list-style:none;margin:0;padding:6px 0}
+.con-list li{display:grid;grid-template-columns:18px 1fr auto;align-items:center;gap:10px;padding:9px 14px;font-size:13px;transition:background .4s}
+.con-list li .d{width:9px;height:9px;border-radius:50%;background:var(--ok);box-shadow:0 0 8px rgba(59,224,142,.6)}
+.con-list li .n{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:#F3EEF8}
+.con-list li .s{font-size:11.5px;color:rgba(233,228,240,.58);white-space:nowrap}
+.con-list li.warn{background:rgba(255,92,108,.12)}
+.con-list li.warn .d{background:var(--bad);box-shadow:0 0 12px var(--bad);animation:pulse .6s steps(2) infinite}
+.con-list li.warn .s{color:#FF9AA4}
+.con-list li.fixed{background:rgba(59,224,142,.08)}
+.con-list li.fixed .s{color:var(--ok)}
+.con-log{margin:0;padding:10px 14px 14px;border-top:1px solid rgba(255,255,255,.08);font-size:11.5px;line-height:1.55;color:rgba(233,228,240,.62);min-height:calc(4.7em + 24px);max-height:calc(4.7em + 24px);overflow:hidden}
+.con-log p{margin:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.con-log p b{color:var(--accent-on-dark);font-weight:600}
+.con-log p.ok b{color:var(--ok)}
+.con-log p.bad b{color:#FF9AA4}
+.con-act{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:14px;flex-wrap:wrap}
+.con-btn{all:unset;box-sizing:border-box;cursor:pointer;display:inline-flex;align-items:center;gap:9px;min-height:44px;padding:0 16px;border-radius:12px;background:rgba(255,92,108,.14);border:1px solid rgba(255,92,108,.4);color:#FFD5DA;font:600 14px/1 var(--font-body);transition:background .25s,transform .25s}
+.con-btn:hover{background:rgba(255,92,108,.24);transform:translateY(-1px)}
+.con-btn:focus-visible{outline:3px solid var(--accent-on-dark);outline-offset:3px}
+.con-btn svg{width:17px;height:17px}
+.con-btn[disabled]{opacity:.55;cursor:default;transform:none}
+.con-note{font-size:12px;color:rgba(255,255,255,.5)}
+.ens-stk{position:absolute;z-index:7;right:-5%;top:-7%;display:flex;align-items:center;gap:10px;padding:8px 12px 8px 8px;border-radius:14px;background:#fff;color:#16181D;text-decoration:none;transform:rotate(3deg);box-shadow:0 22px 40px -16px rgba(0,0,0,.6);font-size:12.5px;line-height:1.2;font-weight:600}
+.ens-stk img{width:46px;height:auto;border-radius:6px}
+.ens-stk b{display:block;font:700 15px/1.1 var(--font-display)}
+@media (max-width:960px){.gesture.con{max-width:520px}}
+@media (max-width:640px){
+  .con-sum b{font-size:17px}.con-sum div{padding:8px 10px}.con-sum small{font-size:9px}
+  .con-list{padding:2px 0}.con-list li{padding:6px 12px;font-size:12px}
+  .con-list li:nth-child(n+4){display:none}
+  .con-log{min-height:calc(3.1em + 16px);max-height:calc(3.1em + 16px);padding:7px 12px 9px;font-size:11px}
+  .con-bar{padding:9px 12px;font-size:11px}
+  .con-act{margin-top:10px}.con-note{display:none}
+  .con-btn{min-height:40px;font-size:13px}
+  .ens-stk{right:2%;top:-16px;padding:6px 9px 6px 6px;font-size:10.5px}.ens-stk img{width:34px}.ens-stk b{font-size:12.5px}
+}
+@media (max-height:520px) and (min-width:961px){.con-list li:nth-child(n+4){display:none}.con-log{display:none}}
+@media (prefers-reduced-motion:reduce){.con-bar em::before,.con-list li.warn .d{animation:none}}
+
+/* ---- Paneles laterales ---- */
+.bk{position:fixed;inset:0;z-index:120}
+.bk[hidden]{display:none}
+.bk-scrim{position:absolute;inset:0;background:rgba(18,18,20,.55);opacity:0;transition:opacity .35s ease}
+.bk.open .bk-scrim{opacity:1}
+.bk-panel{position:absolute;top:0;right:0;bottom:0;width:min(480px,100%);background:var(--shell);display:flex;flex-direction:column;box-shadow:-30px 0 80px -30px rgba(18,18,20,.45);transform:translateX(100%);transition:transform .42s cubic-bezier(.2,.8,.2,1)}
+.bk.open .bk-panel{transform:none}
+.bk-head{display:grid;grid-template-columns:44px 1fr 44px;align-items:center;gap:8px;padding:calc(10px + env(safe-area-inset-top,0px)) 12px 10px;border-bottom:1px solid var(--line);background:#fff}
+.bk-head .t{text-align:center;display:grid;gap:2px}
+.bk-head .t span{font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft)}
+.bk-head .t b{font-family:var(--font-display);font-weight:400;font-size:20px;color:var(--hibiscus);line-height:1.1}
+.bk-ib{all:unset;cursor:pointer;width:44px;height:44px;border-radius:50%;display:grid;place-items:center;color:var(--ink)}
+.bk-ib:hover{background:var(--shell-2)}
+.bk-ib:focus-visible{outline:3px solid var(--hibiscus)}
+.bk-ib svg{width:22px;height:22px}
+.bk-ib[disabled]{visibility:hidden}
+.bk-prog{height:4px;background:var(--shell-2)}
+.bk-prog i{display:block;height:100%;background:linear-gradient(90deg,var(--hibiscus),var(--sun));transform-origin:left;transition:transform .35s ease}
+.bk-body{flex:1;overflow-y:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch;padding:28px 22px 24px}
+.bk-pane{display:grid;gap:18px;align-content:start}
+.bk-pane[hidden]{display:none}
+.bk-pane h3{font-size:clamp(26px,6vw,32px);line-height:1.1}
+.bk-pane .sub{color:var(--ink-soft);margin-top:-8px}
+.bk-opts{display:grid;gap:10px}
+.bk-opts label{position:relative;cursor:pointer;display:block}
+.bk-opts input{position:absolute;opacity:0;inset:0;margin:0;cursor:pointer}
+.bk-opts span{display:flex;align-items:center;justify-content:space-between;min-height:58px;padding:0 18px;border-radius:16px;border:1.5px solid var(--line);background:#fff;font-size:17px;font-weight:600;transition:border-color .2s,background .2s,color .2s}
+.bk-opts span::after{content:"";width:22px;height:22px;border-radius:50%;border:2px solid var(--line);flex:none;transition:all .2s}
+.bk-opts input[type=checkbox]+span::after{border-radius:7px}
+.bk-opts input:checked+span{border-color:var(--hibiscus);background:#FFF1E8;color:var(--hibiscus-ink)}
+.bk-opts input:checked+span::after{border-color:var(--hibiscus);background:var(--hibiscus) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='none' stroke='white' stroke-width='3.2' stroke-linecap='round' stroke-linejoin='round' d='M6 12l4 4 8-8'/%3E%3C/svg%3E") center/14px no-repeat}
+.bk-opts input:focus-visible+span{outline:3px solid var(--hibiscus);outline-offset:2px}
+.bk-opts.row{grid-template-columns:repeat(auto-fit,minmax(0,1fr));gap:8px}
+.bk-opts.row span{justify-content:center;min-height:50px;padding:0 10px;font-size:15px;text-align:center}
+.bk-opts.row span::after{display:none}
+.bk-field{display:grid;gap:8px;min-width:0}
+.bk-field>span{font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-soft)}
+.bk-field input,.bk-field textarea{display:block;width:100%;min-width:0;max-width:100%;min-height:56px;padding:14px 16px;border-radius:14px;border:1.5px solid var(--line);background:#fff;font:500 17px var(--font-body);color:var(--ink);-webkit-appearance:none;appearance:none}
+.bk-field input[type=date]{text-align:left}
+.bk-field input::-webkit-date-and-time-value{text-align:left}
+.bk-field textarea{min-height:96px;resize:vertical}
+.cal{background:#fff;border:1.5px solid var(--line);border-radius:18px;padding:10px 12px 14px}
+.cal-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:6px}
+.cal-head b{font-size:17px}
+.cal-head .bk-ib[disabled]{visibility:visible;opacity:.25;cursor:default}
+.cal-dow,.cal-grid{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:4px;text-align:center}
+.cal-dow span{font-size:12px;font-weight:700;color:var(--ink-soft);padding:4px 0}
+.cal-dow .we,.cal-grid .we{color:var(--hibiscus)}
+.cal-grid button{all:unset;box-sizing:border-box;cursor:pointer;aspect-ratio:1;max-height:48px;width:100%;display:grid;place-items:center;border-radius:12px;font-weight:600;font-size:15px;font-variant-numeric:tabular-nums;color:var(--ink);transition:background .15s,color .15s}
+.cal-grid button.we{color:var(--hibiscus)}
+.cal-grid button:hover:not([disabled]){background:var(--shell-2)}
+.cal-grid button[disabled]{opacity:.28;cursor:default}
+.cal-grid button{position:relative}
+.cal-grid button.today{opacity:1;color:var(--ink);box-shadow:inset 0 0 0 2px var(--sun);background:#FFF6EE}
+.cal-grid button.today::after{content:"";position:absolute;left:50%;bottom:12%;width:5px;height:5px;margin-left:-2.5px;border-radius:50%;background:#E0864A}
+.cal-legend{display:flex;align-items:center;gap:6px;margin:10px 2px 0;font-size:13px;font-weight:600;color:var(--ink-soft)}
+.cal-legend i{width:14px;height:14px;border-radius:5px;box-shadow:inset 0 0 0 2px var(--sun);background:#FFF6EE;position:relative;flex:none}
+.cal-legend i::after{content:"";position:absolute;left:50%;bottom:2px;width:4px;height:4px;margin-left:-2px;border-radius:50%;background:#E0864A}
+.cal-grid button[aria-pressed="true"]{background:var(--hibiscus);color:#fff}
+.cal-grid button:focus-visible{outline:3px solid var(--hibiscus);outline-offset:1px}
+.cal-sel{margin:4px 0 0;font-weight:600;color:var(--ink-soft)}
+.cal-sel.on{color:var(--hibiscus-ink)}
+.bk-field input:focus,.bk-field textarea:focus{outline:none;border-color:var(--hibiscus)}
+.bk-field input[aria-invalid="true"]{border-color:#C6283D;background:#FFF2F4}
+.stepper{display:grid;grid-template-columns:56px 1fr 56px;align-items:center;background:#fff;border:1.5px solid var(--line);border-radius:16px;overflow:hidden}
+.stepper button{all:unset;cursor:pointer;height:56px;display:grid;place-items:center;font-size:26px;font-weight:600;color:var(--hibiscus)}
+.stepper button:active{background:var(--shell-2)}
+.stepper button:focus-visible{outline:3px solid var(--hibiscus);outline-offset:-3px}
+.stepper output{text-align:center;font-size:22px;font-weight:700;font-variant-numeric:tabular-nums}
+.bk-foot{padding:12px 22px calc(14px + env(safe-area-inset-bottom,0px));border-top:1px solid var(--line);background:#fff;display:grid;gap:8px}
+.bk-foot .btn{width:100%;min-height:56px;font-size:17px}
+.bk-foot [hidden]{display:none!important}
+.f-error{margin:0;color:#B3213A;font-weight:600;font-size:15px}
+.btn-wa{background:#1FA855;color:#fff;box-shadow:0 12px 24px -12px rgba(31,168,85,.8);width:100%;white-space:nowrap}
+.btn-wa:hover{background:#178F47}
+.btn-wa svg{width:22px;height:22px}
+.f-preview{margin:0;white-space:pre-wrap;font:16px/1.5 var(--font-body);background:#E7FFDB;border-radius:16px 16px 16px 4px;padding:16px 18px;color:#123;box-shadow:0 1px 0 rgba(0,0,0,.06)}
+.f-copy{all:unset;cursor:pointer;justify-self:center;font-size:14px;font-weight:600;color:var(--hibiscus-ink);text-decoration:underline;text-underline-offset:3px;padding:4px 8px}
+.f-copy:focus-visible{outline:3px solid var(--hibiscus);border-radius:6px}
+.f-hint{margin:0;font-size:13px;color:var(--ink-soft);text-align:center}
+
+
+.hrs{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.stepper.sm{grid-template-columns:40px 1fr 40px;border-radius:14px}
+.stepper.sm button{height:44px;font-size:22px}
+.stepper.sm button[disabled]{opacity:.25;cursor:default}
+.stepper.sm output{font-size:18px}
+.hrs-out{margin:-4px 0 0;font-size:14px;font-weight:600;color:var(--hibiscus-ink)}
+/* Panel compacto: ningún paso necesita scroll */
+.bk-body{padding:18px 18px 14px}
+.bk-pane{gap:14px}
+.bk-pane h3{font-size:24px}
+.bk-pane .sub{margin-top:-6px;font-size:15px}
+.bk-field{gap:6px}
+.bk-field>span{font-size:12px}
+.bk-opts{gap:8px}
+.bk-opts span{min-height:50px;font-size:16px;border-radius:14px}
+.bk-opts.row span{min-height:44px}
+.bk-opts.grid2{grid-template-columns:1fr 1fr}
+.bk-opts.grid2 span{min-height:44px;padding:0 12px;font-size:14px}
+.bk-opts.grid2 span::after{width:18px;height:18px}
+.bk-field input,.bk-field textarea{min-height:48px;padding:11px 14px;font-size:16px}
+.bk-field textarea{min-height:76px}
+.stepper{grid-template-columns:52px 1fr 52px}
+.stepper button{height:48px}
+.cal{padding:6px 8px 10px}
+.cal-head{margin-bottom:2px}
+.cal-head .bk-ib{width:38px;height:38px}
+.cal-dow span{padding:2px 0}
+.cal-grid{gap:2px}
+.cal-grid button{aspect-ratio:auto;height:clamp(34px,5.2vh,44px)}
+.cal-legend{margin-top:6px;font-size:12px}
+.cal-sel{margin:0;font-size:14px}
+.f-preview{font-size:14px;padding:12px 14px}
+.bk-foot{padding:10px 18px calc(10px + env(safe-area-inset-bottom,0px));gap:6px}
+.bk-foot .btn{min-height:50px}
+.bk-head{padding-block:calc(6px + env(safe-area-inset-top,0px)) 6px}
+@media (max-height:700px){
+  .bk-pane h3{font-size:22px}
+  .bk-opts span{min-height:46px}
+  .bk-opts.row span,.bk-opts.grid2 span{min-height:40px}
+  .stepper button{height:44px}
+  .cal-grid button{height:32px;font-size:14px}
+  .bk-body{padding-top:14px}
+  .f-preview{font-size:13px;line-height:1.4;padding:10px 12px}
+  .bk-pane .sub{font-size:13.5px}
+}
+@media (max-height:620px){.bk-pane{gap:10px}.bk-pane h3{font-size:20px}.f-preview{font-size:12.5px;line-height:1.35}}
+.rvd-body{display:grid;grid-template-columns:minmax(0,1fr);gap:18px;align-content:start;overflow-x:hidden;overscroll-behavior-x:none;touch-action:pan-y}
+.rvd .bk-panel{overflow-x:hidden;max-width:100vw}
+.rvd-body>*,.rvd-list>*{min-width:0;max-width:100%}
+.rvd-list .rv,.rvd-list .rv *{overflow-wrap:anywhere}
+.rvd-list .rv-top{flex-wrap:wrap}.rvd-list .rv-tag{white-space:normal}
+.rvd-sum{display:grid;grid-template-columns:auto minmax(0,1fr);gap:22px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:var(--r-md);padding:18px 20px}
+.rvd-score{display:grid;justify-items:center;gap:4px}
+.rvd-score b{font-size:44px;line-height:1;font-weight:700;color:var(--ink)}
+.rvd-score small{font-size:13px;color:var(--ink-soft)}
+.rvd-dist{list-style:none;margin:0;padding:0;display:grid;gap:5px;font-size:13px;color:var(--ink-soft)}
+.rvd-dist li{display:grid;grid-template-columns:12px 1fr 22px;gap:8px;align-items:center}
+.rvd-dist i{height:8px;border-radius:99px;background:var(--shell-2);overflow:hidden}.rvd-dist b{display:block;height:100%;background:#F5B400;border-radius:99px}
+.rvd-dist em{font-style:normal;text-align:right}
+.rvd-h{margin:6px 0 0;font-size:17px}
+.rvd-list{display:grid;grid-template-columns:minmax(0,1fr);gap:12px}
+.rvd-list .rv{background:#fff;opacity:1!important;transform:none!important}
+.rvd-map{border-radius:var(--r-md);overflow:hidden;border:1px solid var(--line);background:var(--shell-2);height:300px;flex:none}
+.rvd-map iframe{width:100%;height:100%;border:0;display:block}
+.rvd-note{margin:0;font-size:13px;color:var(--ink-soft)}
+.rvd-foot{padding:12px 16px calc(12px + env(safe-area-inset-bottom,0px));border-top:1px solid var(--line);background:#fff}
+.rvd-foot .btn{width:100%}
+/* Simulador en panel lateral; los tres rombos del logo hacen de cargador */
+.sim .bk-panel{width:min(1120px,100%);background:var(--night);color:#F4F1EA;box-shadow:-30px 0 80px -30px rgba(0,0,0,.6)}
+.sim .bk-head{background:var(--night);border-bottom-color:rgba(244,241,234,.14)}
+.sim .bk-head .t span{color:rgba(244,241,234,.62)}
+.sim .bk-head .t b{color:#F4F1EA}
+.sim .bk-ib{color:#F4F1EA}
+.sim .bk-ib:hover{background:rgba(255,255,255,.1)}
+.sim-main{position:relative;flex:1;min-height:0;display:flex;flex-direction:column}
+.sim-body{flex:1;min-height:0;overflow-y:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch;padding:clamp(18px,3vw,36px);padding-bottom:calc(clamp(18px,3vw,36px) + env(safe-area-inset-bottom,0px))}
+.sim-load{position:absolute;inset:0;z-index:5;display:grid;place-content:center;justify-items:center;gap:22px;background:var(--night);color:rgba(244,241,234,.7);font-size:14px;font-weight:600;letter-spacing:.04em;transition:opacity .4s}
+.sim-load.done{opacity:0;pointer-events:none}
+.rhombs{width:112px;height:auto;overflow:visible}
+.rhombs path{transform-box:fill-box;transform-origin:center;animation:rhomb 1.35s ease-in-out infinite}
+.rhombs .r-top{fill:#F4F1EA}
+.rhombs .r-l{fill:#FF6600;animation-delay:.18s}
+.rhombs .r-r{fill:#FF6600;animation-delay:.36s}
+@keyframes rhomb{0%,65%,100%{opacity:.2;transform:scale(.82)}28%{opacity:1;transform:scale(1)}}
+/* Subir arriba */
+.totop{position:fixed;right:20px;bottom:24px;z-index:65;width:48px;height:48px;border-radius:50%;border:1px solid rgba(255,255,255,.6);background:rgba(255,255,255,.72);-webkit-backdrop-filter:blur(14px) saturate(1.6);backdrop-filter:blur(14px) saturate(1.6);color:var(--ink);display:grid;place-items:center;cursor:pointer;box-shadow:0 10px 30px -10px rgba(21,21,21,.3);opacity:0;transform:translateY(12px) scale(.9);pointer-events:none;transition:opacity .3s,transform .3s}
+.totop.on{opacity:1;transform:none;pointer-events:auto}
+.totop:hover{transform:translateY(-2px)}
+.totop svg{width:22px;height:22px}
+@media (max-width:960px){.totop{bottom:calc(86px + env(safe-area-inset-bottom,0px));right:16px;width:44px;height:44px}}
+@media (max-width:640px){.bk-panel{width:100%;transform:translateY(100%);box-shadow:none}}
+.bk-head .t b{font-family:var(--font-display);font-weight:400;color:var(--ink)}
+.bk-opts input:checked+span{background:#FFF1E8}
+.btn-wa{font-size:16px}
+.bk-pane h3:focus{outline:none}
+.bk-opts.grid2.tight span{min-height:44px;padding:0 12px;font-size:14.5px}
+@media (max-height:700px){.bk-opts.grid2.tight span{min-height:38px;font-size:14px}}
+
+/* Evoluziona: situaciones, cifras, cuota y ENS */
+.sit-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.sit{display:grid;gap:18px;align-content:space-between;padding:28px;border-radius:var(--r-lg);border:1px solid var(--line);background:var(--shell);text-decoration:none;transition:transform .3s,box-shadow .3s,border-color .3s}
+.sit:hover{transform:translateY(-4px);box-shadow:var(--shadow);border-color:transparent}
+.sit q{font:500 clamp(20px,2vw,25px)/1.3 var(--font-display);letter-spacing:-.015em;quotes:"«" "»"}
+.sit span{display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:15px;color:var(--accent-ink)}
+.sit span svg{width:16px;height:16px;transition:transform .25s}.sit:hover span svg{transform:translateX(4px)}
+.num-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:rgba(255,255,255,.1);border-radius:var(--r-lg);overflow:hidden}
+.num-grid div{background:var(--dark);padding:28px 24px;display:grid;gap:10px;align-content:start}
+.num-grid b{font:600 clamp(28px,3vw,40px)/1 var(--font-display);letter-spacing:-.03em;color:var(--accent-on-dark)}
+.num-grid span{color:rgba(255,255,255,.75);font-size:15px}
+.num-src{margin-top:18px;font-size:13px;color:rgba(255,255,255,.5)}
+.price-card{padding:clamp(28px,4vw,44px);border-radius:var(--r-lg);background:var(--dark);color:#fff;display:grid;gap:18px;box-shadow:var(--shadow);position:relative;overflow:hidden}
+.price-card::after{content:"";position:absolute;right:-80px;top:-80px;width:240px;height:240px;border-radius:50%;background:radial-gradient(circle,rgba(194,16,156,.55),transparent 70%)}
+.price-card small{font:600 12.5px var(--font-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--accent-on-dark)}
+.pc-big{display:grid;gap:4px}.pc-big span{color:rgba(255,255,255,.6);font-size:14px}
+.pc-big b{font:600 clamp(56px,7vw,88px)/1 var(--font-display);letter-spacing:-.04em}
+.pc-big em{font-style:normal;color:rgba(255,255,255,.75)}
+.price-card ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.price-card li::before{content:"✓ ";color:var(--ok);font-weight:700}
+.pc-foot{font-size:12.5px;color:rgba(255,255,255,.5)}
+.ens-fig{margin:0;justify-self:center;max-width:300px;border-radius:var(--r-md);overflow:hidden;box-shadow:var(--shadow)}
+.partners{margin-top:clamp(40px,6vw,72px)}
+@media (max-width:960px){.num-grid{grid-template-columns:1fr 1fr}}
+@media (max-width:640px){.sit-grid{grid-template-columns:1fr}.num-grid{grid-template-columns:1fr}.ens-fig{max-width:220px}}
+
+</style>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-go" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h4l2-6 4 12 2-6h6"/></g></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 22s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></g></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="M3.5 6.5l8.5 6.5 8.5-6.5"/></g></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2.8l2.8 5.9 6.4.8-4.7 4.4 1.2 6.4L12 17.2l-5.7 3.1 1.2-6.4L2.8 9.5l6.4-.8z"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M12 3l8 3v6c0 4.5-3.4 8.3-8 9-4.6-.7-8-4.5-8-9V6zM8.5 12l2.5 2.5 4.5-5"/></symbol>
+  <symbol id="i-gear" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M4.9 19.1L7 17M17 7l2.1-2.1" stroke-linecap="round"/></g></symbol>
+  <symbol id="i-cloud" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M7 18a5 5 0 0 1-.6-10A6 6 0 0 1 18 9a4.5 4.5 0 0 1-.5 9z"/></symbol>
+  <symbol id="i-server" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="7" rx="2"/><rect x="3" y="13" width="18" height="7" rx="2"/><path d="M7 7.5h.01M7 16.5h.01" stroke-linecap="round" stroke-width="3"/></g></symbol>
+  <symbol id="i-bolt" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M13 2L4 14h7l-1 8 9-12h-7z"/></symbol>
+</svg>
+
+<div class="loader" id="loader" aria-hidden="true">
+  <div class="ld-in">
+    <div class="ld-mark"><svg class="ld-ring" viewBox="0 0 140 140"><circle cx="70" cy="70" r="66"/><circle class="ld-arc" cx="70" cy="70" r="66" pathLength="100"/></svg><img src="img/logo-helice.png" alt=""></div>
+    <b class="ld-name">evoluziona</b>
+    <small class="ld-sub">Mantenimiento informático · Bizkaia</small>
+  </div>
+</div>
+<script>
+/* ---------- Loader con el logo: en cada entrada o recarga; se va al cargar la página (mín. 0,9 s, máx. 3 s) ---------- */
+(function(){var d=document.documentElement,l=document.getElementById('loader'),t0=Date.now(),done=false;d.classList.add('loading');
+ function go(){if(done)return;done=true;setTimeout(function(){l.classList.add('out');d.classList.remove('loading');setTimeout(function(){l.remove()},900)},Math.max(0,900-(Date.now()-t0)))}
+ if(document.readyState==='complete')go();else window.addEventListener('load',go);setTimeout(go,3000);})();
+</script>
+
+<header class="top glass" id="top">
+  <div class="wrap">
+    <a class="brand" href="#hero" aria-label="Evoluziona, inicio"><img class="logo-light" src="img/logo.png" alt="Evoluziona"><img class="logo-dark" src="img/logo-blanco.png" alt=""></a>
+    <nav class="nav" aria-label="Secciones">
+      <a href="#situaciones">¿Te reconoces?</a>
+      <a href="#servicios">Cómo te ayudamos</a>
+      <a href="#cuota">Cuota</a>
+      <a href="#seguridad">Seguridad</a>
+      <a href="#visita">Contacto</a>
+    </nav>
+    <a class="btn btn-primary" href="#consulta"><svg><use href="#i-go"/></svg>Estudio previo</a>
+  </div>
+  <div class="progress" id="progress"></div>
+</header>
+
+<main>
+  <section class="hero" id="hero">
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <span class="eyebrow" data-t="eyebrow">Mantenimiento informático<span class="hide-m"> · Erandio, Bizkaia</span></span>
+        <h1 data-t="h1">Tu informática, vigilada. <span class="hl">Tú, a lo tuyo.</span></h1>
+        <p class="hero-sub" data-t="sub">Departamento de informática externo para pymes y refuerzo para equipos de IT. <span class="hide-m">Mantenimiento integral, seguridad, Microsoft 365 y equipos, con vigilancia remota 24 horas, 365 días.</span></p>
+        <div class="hero-ctas">
+          <a class="btn btn-primary" href="#consulta"><svg><use href="#i-go"/></svg><span data-t="cta">Pedir un estudio previo</span></a>
+          <a class="btn btn-ghost" href="#situaciones">¿Te reconoces?</a>
+          <small class="hero-micro" data-t="micro">Te respondemos personalmente · sin compromiso</small>
+        </div>
+        <ul class="facts">
+          <li><b>180 €</b>por equipo y año, desde</li>
+          <li><b>Sin límite</b>de horas</li>
+          <li><b>24/7</b>vigilancia remota</li>
+        </ul>
+      </div>
+      <div class="gesture con" id="con">
+        <div class="con-win" role="group" aria-label="Demostración de la consola de vigilancia">
+          <div class="con-bar"><i></i><i></i><i></i><span>evoluziona · vigilancia remota</span><em>En línea</em></div>
+          <div class="con-sum"><div><b>24/7</b><small>365 días</small></div><div><b id="con-ok">0</b><small>resueltas</small></div><div><b>0 h</b><small>de parada</small></div></div>
+          <ul class="con-list">
+            <li><span class="d"></span><span class="n">Servidor · copias de seguridad</span><span class="s">Copia OK</span></li>
+            <li><span class="d"></span><span class="n">Correo · Microsoft 365</span><span class="s">Protegido</span></li>
+            <li><span class="d"></span><span class="n">PC recepción · Windows</span><span class="s">Al día</span></li>
+            <li><span class="d"></span><span class="n">Portátil comercial · VPN</span><span class="s">Conectado</span></li>
+            <li><span class="d"></span><span class="n">Wifi oficina · cortafuegos</span><span class="s">Seguro</span></li>
+          </ul>
+          <div class="con-log" aria-live="polite"><p><b>08:00</b> Actualizaciones revisadas en todos los equipos</p></div>
+        </div>
+        <div class="con-act"><button type="button" class="con-btn" id="con-sim"><svg><use href="#i-bolt"/></svg>Simular un ataque</button><span class="con-note">Demostración: así lo resolvemos antes de que lo notes.</span></div>
+        <a class="ens-stk" href="#seguridad"><img src="img/ens.jpg" alt=""><span><b>Certificado ENS</b>categoría media</span></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec band-white" id="situaciones">
+    <div class="wrap">
+      <div class="sec-head" data-reveal>
+        <span class="eyebrow">¿Te reconoces?</span>
+        <h2>Si alguna de estas frases es tuya, <span class="hl">hablamos.</span></h2>
+      </div>
+      <div class="sit-grid">
+        <a class="sit" href="#consulta" data-tipo="Mantenimiento integral" data-op="Pequeña empresa sin informático" data-reveal><q>Tengo una pequeña empresa y necesito ayuda profesional con la informática.</q><span>Hacemos de vuestro departamento de informática <svg><use href="#i-arrow"/></svg></span></a>
+        <a class="sit" href="#consulta" data-tipo="Mantenimiento integral" data-op="Departamento de IT desbordado" data-reveal><q>Somos un departamento IT y estamos totalmente desbordados…</q><span>Os reforzamos cuando lo necesitáis <svg><use href="#i-arrow"/></svg></span></a>
+        <a class="sit" href="#consulta" data-tipo="Seguridad o virus" data-op="Nos ha entrado un virus" data-reveal><q>Nos ha entrado un virus, están todos los ordenadores afectados… ¿Qué podemos hacer?</q><span>Lo contenemos y blindamos el sistema <svg><use href="#i-arrow"/></svg></span></a>
+        <a class="sit" href="#consulta" data-tipo="Protección de datos" data-op="Adaptarnos al RGPD" data-reveal><q>Necesito adaptar mi sistema informático al RGPD, ¿qué tengo que hacer?</q><span>Control de datos en cada dispositivo <svg><use href="#i-arrow"/></svg></span></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec band-dark datos" aria-labelledby="datos-h">
+    <div class="wrap">
+      <div class="sec-head" data-reveal>
+        <span class="eyebrow">Por qué importa</span>
+        <h2 id="datos-h">Optimizar y proteger tu sistema <span class="hl">ahorra tiempo y dinero.</span></h2>
+      </div>
+      <div class="num-grid">
+        <div data-reveal><b>20.000–50.000 €</b><span>puede costarle a una pyme un ataque de seguridad</span></div>
+        <div data-reveal><b>243 días</b><span>puede tardar en detectarse un malware, y 50 en resolverse</span></div>
+        <div data-reveal><b>30 %</b><span>de ahorro anual en software con una gestión adecuada</span></div>
+        <div data-reveal><b>21 %</b><span>de ahorro en equipamiento al pasar a la nube</span></div>
+      </div>
+      <p class="num-src">Datos: BSA-The Software Alliance e Instituto Nacional de Ciberseguridad, citados en la web de Evoluziona.</p>
+    </div>
+  </section>
+
+  <section class="sec" id="servicios">
+    <div class="wrap">
+      <div class="sec-head" data-reveal>
+        <span class="eyebrow">Cómo te ayudamos</span>
+        <h2>El sistema informático como un todo. <span class="hl">Personas incluidas.</span></h2>
+        <p class="lead">De nada sirven los mejores equipos si el equipo no sabe usarlos de forma eficaz y segura. Por eso planificamos, instalamos, vigilamos y formamos.</p>
+      </div>
+      <div class="svc-grid" style="--svc-cols:2">
+        <a class="svc" href="#consulta" data-tipo="Mantenimiento integral" data-reveal><span class="ic"><svg><use href="#i-gear"/></svg></span><h3>Mantenimiento integral</h3><p>Preventivo y proactivo para no tener que ser correctivos. Y si algo pasa, lo solucionamos al momento, incluso antes de que lo detectes.</p><ul><li>Asesoramiento y estudio previo</li><li>Interconexión de oficinas por VPN</li><li>Copias de seguridad y migración a la nube</li><li>Consultoría continua y planes de inversión</li></ul><span class="go">Consultar <svg><use href="#i-arrow"/></svg></span></a>
+        <a class="svc" href="#consulta" data-tipo="Seguridad o virus" data-reveal><span class="ic"><svg><use href="#i-shield"/></svg></span><h3>Seguridad</h3><p>Monitorizamos y protegemos toda la red, desde el entorno local hasta las conexiones remotas, la wifi y los móviles.</p><ul><li>Cortafuegos perimetral y switching</li><li>Copias en local y en la nube</li><li>Cámaras de vigilancia IP</li><li>Control de datos para el RGPD</li></ul><span class="go">Consultar <svg><use href="#i-arrow"/></svg></span></a>
+        <a class="svc" href="#consulta" data-tipo="Microsoft 365 y licencias" data-reveal><span class="ic"><svg><use href="#i-cloud"/></svg></span><h3>Software y licencias</h3><p>Software legal, conectado a la nube y con pago por uso: más seguridad y productividad, con un coste exacto y previsible.</p><ul><li>Microsoft 365 desde 6,70 € por usuario al mes (sin IVA)</li><li>Azure y SharePoint para trabajar en equipo</li><li>Antivirus EPDR de WatchGuard</li><li>Adobe, Presto, Autocad… nos encargamos</li></ul><span class="go">Consultar <svg><use href="#i-arrow"/></svg></span></a>
+        <a class="svc" href="#consulta" data-tipo="Equipos y servidores" data-reveal><span class="ic"><svg><use href="#i-server"/></svg></span><h3>Hardware y virtual</h3><p>Te asesoramos sobre los dispositivos adecuados a tu actividad y nos encargamos de todo: compra, instalación, configuración y mantenimiento.</p><ul><li>Servidores en la nube Azure, con pago por uso</li><li>Equipos seminuevos de alta gama, con 1 o 2 años de garantía</li><li>Wifi avanzada para hoteles, oficinas y naves</li><li>Impresoras, cámaras y control de presencia</li></ul><span class="go">Consultar <svg><use href="#i-arrow"/></svg></span></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec band-2" id="cuota">
+    <div class="wrap split">
+      <div class="split-txt" data-reveal>
+        <span class="eyebrow">Cuota anual de mantenimiento</span>
+        <h2>Un precio por equipo. <span class="hl">Las horas, sin contar.</span></h2>
+        <p>Cuotas desde 180 € por equipo y año, sin límite de horas: trabajas todo el año con tranquilidad, sabiendo que Evoluziona responde a cualquier problema de tu equipo y tu software.</p>
+        <ul class="ticks">
+          <li>Vigilancia remota 24 horas, 365 días</li>
+          <li>Actualizaciones hechas sin que tengas que preocuparte</li>
+          <li>Os mantenemos informados de cambios y novedades</li>
+        </ul>
+        <a class="btn btn-dark" href="#consulta" data-tipo="Mantenimiento integral"><svg><use href="#i-go"/></svg>Calcular mi cuota</a>
+      </div>
+      <div class="price-card" data-reveal>
+        <small>Mantenimiento integral</small>
+        <p class="pc-big"><span>desde</span><b>180 €</b><em>por equipo · año</em></p>
+        <ul><li>Sin límite de horas</li><li>Preventivo y proactivo</li><li>Soporte remoto al momento</li></ul>
+        <p class="pc-foot">Precio publicado en su web. El total depende del número de equipos.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="seguridad">
+    <div class="wrap split rev">
+      <div class="split-txt" data-reveal>
+        <span class="eyebrow">Confianza verificada</span>
+        <h2>Certificación ENS. <span class="hl">Y partners de los mejores.</span></h2>
+        <p>Evoluziona tiene la certificación de conformidad con el Esquema Nacional de Seguridad, categoría media (RD 311/2022), y es partner de WatchGuard, Cisco Meraki, HP y Microsoft.</p>
+        <p>Con Adaptive Defense 360 de WatchGuard, la protección usa big data e inteligencia artificial para clasificar cada proceso de tu red y bloquear lo malicioso incluso antes de que actúe.</p>
+        <a class="btn btn-ghost" href="https://www.evoluziona.eu/file/Certificado%20ENS_signed.pdf" target="_blank" rel="noopener">Ver el certificado ENS</a>
+      </div>
+      <figure class="ens-fig" data-reveal><img src="img/ens.jpg" alt="Sello de certificación de conformidad con el Esquema Nacional de Seguridad, categoría media, RD 311/2022" loading="lazy"></figure>
+    </div>
+    <div class="marquee partners" aria-label="Partners y tecnologías"><div class="mq-track" data-mq="partners"></div></div>
+  </section>
+
+  <section class="sec band-2" id="como">
+    <div class="wrap">
+      <div class="sec-head" data-reveal>
+        <span class="eyebrow">Cómo trabajamos</span>
+        <h2>Desde el minuto 0. <span class="hl">Sin dejar cabos sueltos.</span></h2>
+      </div>
+      <ol class="steps" style="--steps:4">
+        <li data-reveal><b>01</b><h3>Estudio previo</h3><p>Analizamos el sistema y vuestras necesidades, y proponemos mejoras de seguridad y rendimiento.</p></li>
+        <li data-reveal><b>02</b><h3>Instalación</h3><p>Instalamos y configuramos equipos y software con un método propio orientado a la máxima eficacia.</p></li>
+        <li data-reveal><b>03</b><h3>Vigilancia</h3><p>Lo vigilamos todo en remoto, 24/7, para anticiparnos a los problemas antes de que os afecten.</p></li>
+        <li data-reveal><b>04</b><h3>Formación</h3><p>Asesoramos y formamos a tu equipo para que conozca los riesgos y actúe siempre de forma segura.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="sec band-dark" id="consulta">
+    <div class="wrap cta-band" data-reveal>
+      <div>
+        <span class="eyebrow">Estudio previo sin compromiso</span>
+        <h2>Cuéntanos cómo trabajáis. <span class="hl">Te decimos cómo blindarlo.</span></h2>
+        <p class="lead">Tres preguntas rápidas y tu consulta sale ya escrita, con un código propio.</p>
+        <ul class="perks"><li>Sin registrarte</li><li>Menos de un minuto</li><li>O llama al 94 479 05 04</li></ul>
+      </div>
+      <a class="btn btn-primary" href="#consulta"><svg><use href="#i-go"/></svg>Pedir estudio previo</a>
+    </div>
+  </section>
+
+  <section class="sec band-2 draft" id="borrador" hidden>
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">Borrador · Datos por confirmar con Evoluziona</span>
+        <h2>Esto falta <span class="hl">para completar la web.</span></h2>
+      </div>
+      <ul class="incl">
+        <li>Reseñas: su ficha de Google tiene una sola valoración (5★, sin texto). Pedir reseñas a clientes: <mark>[enlace de la ficha]</mark></li>
+        <li>Horario de atención: <mark>[L–V __:__–__:__]</mark></li>
+        <li>¿Tenéis WhatsApp para consultas? <mark>[___ ___ ___]</mark></li>
+        <li>Promoción «un mes gratis» en suscripciones Microsoft o WatchGuard: ¿sigue vigente? <mark>[sí / no]</mark></li>
+        <li>Clientes o casos que se puedan citar (con permiso): <mark>[…]</mark></li>
+        <li>Fotos reales del equipo y la oficina (las de su web son de banco): <mark>[…]</mark></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="sec" id="visita">
+    <div class="wrap visit">
+      <div data-reveal>
+        <span class="eyebrow">Hablamos</span>
+        <h2>En Erandio, <span class="hl">junto a Bilbao.</span></h2>
+        <ul class="contact">
+          <li><svg><use href="#i-pin"/></svg><a href="https://www.google.com/maps/place/EVOLUZIONA+IT,+S.L./data=!4m2!3m1!1s0xd4e517c3d56354b:0xcbada4514836c767" target="_blank" rel="noopener">Zirgariak Etorbidea, 32, oficina 212 · 48950 Erandio (Bizkaia)</a></li>
+          <li><svg><use href="#i-phone"/></svg><a href="tel:+34944790504">94 479 05 04</a></li>
+          <li><svg><use href="#i-mail"/></svg><a href="mailto:info@evoluziona.eu">info@evoluziona.eu</a></li>
+        </ul>
+      </div>
+      <div class="faq" data-reveal>
+        <details open><summary>¿Cuánto cuesta el mantenimiento?</summary><p>Hay cuotas desde 180 € por equipo y año, sin límite de horas. El total depende de cuántos equipos tengáis y de lo que necesitéis.</p></details>
+        <details><summary>¿Trabajáis con empresas que ya tienen informático?</summary><p>Sí: colaboran con departamentos de IT que necesitan un refuerzo extra, y hacen de departamento de informática para pequeñas empresas.</p></details>
+        <details><summary>¿Tenéis que venir para resolver un problema?</summary><p>Casi nunca: vigilan el sistema en remoto 24/7 y resuelven sobre la marcha. Si hace falta, se desplazan.</p></details>
+        <details><summary>¿Qué es el estudio previo?</summary><p>Un análisis de vuestro sistema y necesidades con una propuesta de mejoras de seguridad y rendimiento, antes de empezar.</p></details>
+        <details><summary>¿Nos ayudáis con el RGPD?</summary><p>Sí: control exhaustivo de datos en todos los dispositivos y ubicaciones, con soluciones como WatchGuard Data Control.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="final band-white">
+    <div class="wrap">
+      <img class="final-logo" src="img/logo.png" alt="" loading="lazy">
+      <h2>Cuidamos de tu sistema. <span class="hl">Tú, de tu empresa.</span></h2>
+      <div class="hero-ctas">
+        <a class="btn btn-primary" href="#consulta"><svg><use href="#i-go"/></svg>Pedir estudio previo</a>
+        <a class="btn btn-ghost" href="tel:+34944790504"><svg><use href="#i-phone"/></svg>Llamar</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wordmark" aria-hidden="true">evoluziona</div>
+  <div class="wrap"><span>Evoluziona IT, S.L. · Zirgariak Etorbidea, 32, of. 212 · 48950 Erandio (Bizkaia)</span><span>94 479 05 04 · info@evoluziona.eu</span></div>
+</footer>
+
+<button class="totop" id="totop" type="button" aria-label="Subir arriba"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="M12 19V5M5 12l7-7 7 7"/></svg></button>
+
+<div class="bk" id="bk" role="dialog" aria-modal="true" aria-labelledby="bk-title" hidden>
+  <div class="bk-scrim" id="bk-scrim"></div>
+  <div class="bk-panel">
+    <header class="bk-head">
+      <button type="button" class="bk-ib" id="bk-back" aria-label="Paso anterior"><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M15 18l-6-6 6-6"/></svg></button>
+      <div class="t"><span id="bk-step">Paso 1 de 3</span><b id="bk-title">Tu consulta</b></div>
+      <button type="button" class="bk-ib" id="bk-x" aria-label="Cerrar"><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" d="M6 6l12 12M18 6L6 18"/></svg></button>
+    </header>
+    <div class="bk-prog"><i id="bk-bar" style="transform:scaleX(.33)"></i></div>
+    <form class="bk-body" id="book-form" novalidate>
+      <section class="bk-pane" data-step="1">
+        <h3 id="f-q1">¿Qué necesitas?</h3>
+        <div class="bk-opts grid2" id="f-tipos"></div>
+      </section>
+      <section class="bk-pane" data-step="2" hidden>
+        <h3 id="f-q2">Cuéntanos un poco más</h3>
+        <div class="bk-opts grid2" id="f-opts2" hidden></div>
+        <label class="bk-field"><span>En pocas palabras (opcional)</span><input type="text" id="f-detalle" autocomplete="off"></label>
+      </section>
+      <section class="bk-pane" data-step="3" hidden>
+        <h3 id="f-q3">¿Cómo lo prefieres?</h3>
+        <div class="bk-opts row" id="f-modos"></div>
+        <label class="bk-field"><span>Tu nombre</span><input type="text" id="f-nombre" autocomplete="name" placeholder="Nombre"></label>
+        <label class="bk-field" id="f-empresa-wrap"><span id="f-empresa-l">Empresa (opcional)</span><input type="text" id="f-empresa" autocomplete="organization"></label>
+      </section>
+      <section class="bk-pane" data-step="4" hidden>
+        <h3>Tu consulta está lista</h3>
+        <p class="sub" id="f-sub5"></p>
+        <pre class="f-preview" id="f-preview"></pre>
+        <button type="button" class="f-copy" id="f-copy">Copiar mensaje</button>
+      </section>
+    </form>
+    <footer class="bk-foot">
+      <p class="f-error" id="f-error" role="alert" hidden></p>
+      <button type="button" class="btn btn-primary" id="bk-next">Siguiente</button>
+      <a class="btn btn-wa" id="f-send" href="#" target="_blank" rel="noopener" hidden>Enviar</a>
+      <p class="send-alt" id="f-alt" hidden></p>
+    </footer>
+  </div>
+</div>
+
+<div class="mbar">
+  <a class="btn btn-primary" href="#consulta"><svg><use href="#i-go"/></svg><span data-t="mbar">Pedir estudio previo</span></a>
+  <a class="btn btn-ghost" href="tel:+34944790504" aria-label="Llamar al 94 479 05 04"><svg><use href="#i-phone"/></svg></a>
+</div>
+
+<script>
+(function(){
+"use strict";
+var reduced=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+var SFX={play:function(){}}; /* sin sonidos: negocio B2B */
+window.__reduced=reduced;
+
+/* ---------- Temporadas de Evoluziona: fechas fuertes del mantenimiento informático de empresas ---------- */
+/* Solo servicios reales de su web (auditorías de seguridad, planes de inversión, equipos). Nada de precios ni promociones nuevas. */
+window.TEMPORADAS=[
+  {id:'vuelta-vacaciones',nombre:'Vuelta de vacaciones',desde:'08-25',hasta:'09-20',prioridad:1,tipo:'Mantenimiento integral',
+   textos:{eyebrow:'Vuelta de vacaciones',h1:'De vuelta. <span class="hl">El sistema, a punto.</span>',
+     sub:'Revisamos equipos, actualizaciones, copias de seguridad y conexiones remotas para arrancar el curso sin sustos.',
+     cta:'Revisar nuestro sistema',mbar:'Revisar el sistema'},
+   wa:'🧳 A la vuelta de vacaciones'},
+  {id:'mes-ciberseguridad',nombre:'Mes de la ciberseguridad',desde:'10-01',hasta:'10-31',prioridad:2,tipo:'Seguridad o virus',
+   textos:{eyebrow:'Mes de la ciberseguridad',h1:'¿Blindada? <span class="hl">Lo comprobamos.</span>',
+     sub:'Auditoría de seguridad de tu red, equipos, wifi y conexiones remotas, con propuesta de mejoras. <span class="hide-m">Partners de WatchGuard y Cisco Meraki.</span>',
+     cta:'Pedir auditoría de seguridad',micro:'Te respondemos personalmente · sin compromiso',mbar:'Pedir auditoría'},
+   wa:'🛡️ Mes de la ciberseguridad'},
+  {id:'black-friday',nombre:'Black Friday',evento:'black-friday',antes:12,despues:3,prioridad:3,tipo:'Equipos y servidores',
+   textos:{eyebrow:'Black Friday · {cuenta}',h1:'Antes de comprar equipos, <span class="hl">pregúntanos.</span>',
+     sub:'Te asesoramos sobre los dispositivos adecuados para tu actividad, nuevos o seminuevos de alta gama con garantía, y nos encargamos de instalarlos.',
+     cta:'Asesorarme',mbar:'Asesorarme'},
+   wa:'🛍️ Antes de Black Friday'},
+  {id:'cierre-anio',nombre:'Plan del año nuevo',desde:'12-01',hasta:'12-23',evento:'navidad',prioridad:2,tipo:'Mantenimiento integral',
+   textos:{eyebrow:'Cierre de año · {cuenta} para Navidad',h1:'Planifica <span class="hl">el año que viene.</span>',
+     sub:'Consultoría continua y planes de inversión: qué renovar, qué pasar a la nube y qué licencias necesitáis, antes de que empiece el año.',
+     cta:'Planificar con vosotros',mbar:'Planificar'},
+   wa:'🗓️ Para planificar el año que viene'}
+];
+/* ---------- Temporadas: la landing cambia sola cuando se acerca una fecha clave del oficio ---------- */
+/* Configura window.TEMPORADAS antes de este bloque (ver references/temporadas/README.md).
+   Pruebas: ?temporada=<id> fuerza una, ?temporada=no las apaga, ?fecha=2027-02-10 simula el día.
+   Selector para enseñarlas: #temporadas en la dirección (en local), 5 toques seguidos en el logo de la cabecera o la tecla T (también dentro del visor del Artifact). */
+(function(){
+var CFG=window.TEMPORADAS||[]; if(!CFG.length)return;
+var MESES=['enero','febrero','marzo','abril','mayo','junio','julio','agosto','septiembre','octubre','noviembre','diciembre'];
+var DAY=864e5;
+function d(y,m,dd){return new Date(y,m-1,dd)}
+function nth(y,m,dow,n){var f=d(y,m,1);return d(y,m,1+(dow-f.getDay()+7)%7+7*(n-1))}       /* n-ésimo día de la semana (0=domingo) del mes */
+function pascua(y){var a=y%19,b=Math.floor(y/100),c=y%100,e=(19*a+b-Math.floor(b/4)-Math.floor((b-Math.floor((8*b+13)/25)+1)/3)+15)%30,
+  f=(32+2*(b%4)+2*Math.floor(c/4)-e-c%4)%7,g=Math.floor((a+11*e+22*f)/451),m=Math.floor((e+f-7*g+114)/31);return d(y,m,(e+f-7*g+114)%31+1)}
+function mas(x,n){return new Date(x.getFullYear(),x.getMonth(),x.getDate()+n)}
+/* Calendario de España. Cada evento devuelve el día clave de ese año. */
+var EV={
+  'reyes':function(y){return d(y,1,6)},
+  'rebajas-invierno':function(y){return d(y,1,7)},
+  'san-valentin':function(y){return d(y,2,14)},
+  'carnaval':function(y){return mas(pascua(y),-47)},            /* martes de carnaval */
+  'dia-padre':function(y){return d(y,3,19)},
+  'semana-santa':function(y){return mas(pascua(y),-3)},         /* jueves santo */
+  'pascua':pascua,
+  'sant-jordi':function(y){return d(y,4,23)},                   /* solo Cataluña */
+  'dia-madre':function(y){return nth(y,5,0,1)},                 /* primer domingo de mayo */
+  'san-isidro':function(y){return d(y,5,15)},                   /* solo Madrid capital */
+  'san-juan':function(y){return d(y,6,24)},
+  'dia-abuelos':function(y){return d(y,7,26)},
+  'vuelta-cole':function(y){return d(y,9,8)},                   /* aproximado: varía por comunidad */
+  'halloween':function(y){return d(y,10,31)},
+  'todos-santos':function(y){return d(y,11,1)},
+  'black-friday':function(y){return mas(nth(y,11,4,4),1)},      /* viernes tras el 4.º jueves */
+  'navidad':function(y){return d(y,12,25)},
+  'nochevieja':function(y){return d(y,12,31)}
+};
+function md(s,y){var p=s.split('-');return d(y,+p[0],+p[1])}
+function antes(t){return t.antes==null?14:t.antes}
+/* Ventanas [inicio, fin, día clave] de una temporada alrededor del año y */
+function ventanas(t,y){var out=[];for(var k=y-1;k<=y+1;k++){
+  if(t.desde){var a=md(t.desde,k),b=md(t.hasta,k);if(b<a)b=md(t.hasta,k+1);out.push([a,b,t.evento?EV[t.evento](b.getFullYear()):b])}
+  else{var e=t.fecha?md(t.fecha,k):EV[t.evento]&&EV[t.evento](k);if(e)out.push([mas(e,-antes(t)),mas(e,t.despues||0),e])}}
+  return out}
+function elegir(hoy){var best=null;hoy=new Date(hoy.getFullYear(),hoy.getMonth(),hoy.getDate());
+  CFG.forEach(function(t){ventanas(t,hoy.getFullYear()).forEach(function(w){if(hoy<w[0]||hoy>w[1])return;
+    var pr=t.prioridad!=null?t.prioridad:(t.desde?1:2),falta=Math.round((w[2]-hoy)/DAY);
+    if(!best||pr>best.pr||(pr===best.pr&&Math.abs(falta)<Math.abs(best.falta)))best={t:t,pr:pr,falta:falta,dia:w[2]}})});
+  return best}
+/* Forzar una temporada aunque hoy no toque: la muestra como si faltaran unos días */
+function forzar(id,hoy){var t=CFG.filter(function(x){return x.id===id})[0];if(!t)return null;
+  var w=ventanas(t,hoy.getFullYear()).filter(function(w){return w[1]>=hoy})[0],falta=Math.round((w[2]-hoy)/DAY);
+  if(hoy<w[0])falta=Math.min(antes(t),9);return {t:t,falta:falta,dia:w[2]}}
+function rellenar(s,b){if(!s)return s;var n=b.falta,f=b.dia.getDate()+' de '+MESES[b.dia.getMonth()];
+  var cuenta=n>1?'Faltan '+n+' días':n===1?'Es mañana':n===0?'Es hoy':'';
+  return s.replace(/\{cuenta\}/g,cuenta).replace(/\{dias\}/g,n).replace(/\{fecha\}/g,f).replace(/\{anio\}/g,b.dia.getFullYear())}
+
+var q=new URLSearchParams(location.search),forzada=q.get('temporada'),sim=q.get('fecha'),hoy=new Date();
+if(sim&&/^\d{4}-\d\d-\d\d$/.test(sim)){var p=sim.split('-');hoy=d(+p[0],+p[1],+p[2])}
+hoy=new Date(hoy.getFullYear(),hoy.getMonth(),hoy.getDate());
+window.TEMPORADA_ELEGIR=function(x){var b=elegir(x);return b?b.t.id:null};   /* para scripts/temporadas.js */
+var root=document.documentElement,reducido=matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+/* Estado original, para poder volver a la versión de todo el año al cambiar de temporada desde el selector */
+var CLAVES={};CFG.forEach(function(t){Object.keys(t.textos||{}).forEach(function(k){CLAVES[k]=1})});   /* solo las claves que usa alguna temporada: otros data-t de la página no se tocan */
+var T=[].slice.call(document.querySelectorAll('[data-t]')).filter(function(el){return CLAVES[el.getAttribute('data-t')]}).map(function(el){return [el,el.innerHTML,el.hidden]});
+var fotosOrig=[],tokens=[],marcados=[],deco=null;
+function limpiar(){
+  T.forEach(function(o){o[0].innerHTML=o[1];o[0].hidden=o[2];o[0].classList.remove('t-on')});
+  tokens.forEach(function(k){root.style.removeProperty(k)});tokens=[];
+  fotosOrig.forEach(function(o){if(o[0].tagName==='SOURCE')o[0].srcset=o[1];else{o[0].src=o[1];if(o[2])o[0].srcset=o[2]}});fotosOrig=[];
+  marcados.forEach(function(el){el.checked=false});marcados=[];
+  if(deco){deco();deco=null}
+  root.removeAttribute('data-temporada');window.TEMPORADA=null}
+function aplicar(b){
+  limpiar();var id=b?b.t.id:null;
+  /* Bloques solo de temporada: data-temporada-solo="san-valentin dia-madre" (empiezan con hidden) y data-temporada-fuera="…" */
+  document.querySelectorAll('[data-temporada-solo]').forEach(function(el){el.hidden=!(id&&el.getAttribute('data-temporada-solo').split(/\s+/).indexOf(id)>-1)});
+  document.querySelectorAll('[data-temporada-fuera]').forEach(function(el){el.hidden=!!(id&&el.getAttribute('data-temporada-fuera').split(/\s+/).indexOf(id)>-1)});
+  if(!b)return;
+  var t=b.t;root.setAttribute('data-temporada',id);
+  /* Colores: sobrescribe tokens de :root (solo acentos; el fondo y la tinta no se tocan) */
+  if(t.tema)Object.keys(t.tema).forEach(function(k){root.style.setProperty(k,t.tema[k]);tokens.push(k)});
+  /* Textos: cualquier elemento con data-t="clave". El HTML trae el texto de todo el año; si estaba hidden, se muestra */
+  if(t.textos)Object.keys(t.textos).forEach(function(k){document.querySelectorAll('[data-t="'+k+'"]').forEach(function(el){el.innerHTML=rellenar(t.textos[k],b);el.hidden=false;el.classList.add('t-on')})});
+  /* Fotos: {selector: ruta}. Solo fotos reales del negocio para esa fecha */
+  if(t.fotos)Object.keys(t.fotos).forEach(function(s){document.querySelectorAll(s).forEach(function(el){
+    if(el.tagName==='SOURCE'){fotosOrig.push([el,el.srcset]);el.srcset=t.fotos[s]}else{fotosOrig.push([el,el.src,el.getAttribute('srcset')]);el.removeAttribute('srcset');el.src=t.fotos[s]}})});
+  /* Marcar opciones del panel de encargo/reserva (solo si no hay ninguna marcada en ese grupo) */
+  if(t.marcar)t.marcar.forEach(function(s){var el=document.querySelector(s);if(el&&!document.querySelector('input[name="'+el.name+'"]:checked')){el.checked=true;marcados.push(el)}});
+  window.TEMPORADA={id:id,nombre:t.nombre||id,dias:b.falta,fecha:b.dia,linea:rellenar(t.wa,b)||''};   /* el panel añade TEMPORADA.linea al mensaje de WhatsApp */
+  try{document.dispatchEvent(new CustomEvent('temporada',{detail:window.TEMPORADA}))}catch(e){}
+  if(t.deco&&!reducido)deco=decorar(t)}
+
+/* Decoración ligera en el hero: petalos, corazones, nieve, hojas, confeti o estrellas. Nunca sobre el texto ni con movimiento reducido */
+function decorar(t){
+  var host=document.querySelector(t.decoEn||'#hero');if(!host)return null;
+  var cv=document.createElement('canvas');cv.className='t-deco';cv.setAttribute('aria-hidden','true');
+  cv.style.cssText='position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:1';
+  host.insertBefore(cv,host.children[1]||null);
+  var cx=cv.getContext('2d'),W=0,H=0,DPR=Math.min(devicePixelRatio||1,1.5),P=[],raf=0,last=0;
+  var COL=t.decoColores||{petalos:['#F5B8C9','#FFD9E2','#E88AA6'],corazones:['#FF6B8B','#FFB3C4','#E0325A'],nieve:['#FFFFFF'],hojas:['#C9733B','#E0A04A','#9C4A24'],confeti:['#FFD166','#EF476F','#06D6A0','#4CC9F0'],estrellas:['#FFE8A3','#FFFFFF']}[t.deco]||['#fff'];
+  function size(){var r=host.getBoundingClientRect();W=r.width;H=r.height;cv.width=W*DPR;cv.height=H*DPR;cx.setTransform(DPR,0,0,DPR,0,0)}
+  function nuevo(top){var s=t.deco==='nieve'?2+Math.random()*3:t.deco==='estrellas'?1.5+Math.random()*2.5:7+Math.random()*7;
+    return {x:Math.random()*W,y:top?-20:Math.random()*H,s:s,vy:(t.deco==='estrellas'?0:.25+Math.random()*.5)*(s>6?1:.7),vx:(Math.random()-.5)*.3,a:Math.random()*6.3,va:(Math.random()-.5)*.03,f:Math.random()*6.3,c:COL[Math.floor(Math.random()*COL.length)]}}
+  function forma(p){cx.save();cx.translate(p.x,p.y);cx.rotate(p.a);cx.fillStyle=p.c;cx.globalAlpha=t.deco==='estrellas'?.4+.5*Math.abs(Math.sin(p.f)):.85;var s=p.s;cx.beginPath();
+    if(t.deco==='corazones'){cx.moveTo(0,s*.35);cx.bezierCurveTo(-s,-s*.3,-s*.4,-s,0,-s*.45);cx.bezierCurveTo(s*.4,-s,s,-s*.3,0,s*.35)}
+    else if(t.deco==='nieve'||t.deco==='estrellas')cx.arc(0,0,s/2,0,7);
+    else if(t.deco==='confeti')cx.rect(-s/2,-s/4,s,s/2);
+    else cx.ellipse(0,0,s/2,s*(t.deco==='hojas'?.28:.34),0,0,7);
+    cx.fill();cx.restore()}
+  function paso(ts){raf=requestAnimationFrame(paso);if(ts-last<30)return;last=ts;
+    var r=host.getBoundingClientRect();if(r.bottom<0||r.top>innerHeight)return;   /* fuera de pantalla: no pinta */
+    cx.clearRect(0,0,W,H);P.forEach(function(p,i){p.f+=.03;p.y+=p.vy;p.x+=p.vx+Math.sin(p.f)*.35;p.a+=p.va;if(p.y>H+20)P[i]=nuevo(true);forma(p)})}
+  function arranca(){cancelAnimationFrame(raf);if(!document.hidden)raf=requestAnimationFrame(paso)}
+  size();var n=Math.min(t.decoCuantos||22,Math.round(W*H/40000)+6);for(var i=0;i<n;i++)P.push(nuevo(false));
+  addEventListener('resize',size);document.addEventListener('visibilitychange',arranca);arranca();
+  return function(){cancelAnimationFrame(raf);removeEventListener('resize',size);document.removeEventListener('visibilitychange',arranca);cv.remove()}}
+
+var hoyB=elegir(hoy);
+aplicar(forzada==='no'?null:forzada?forzar(forzada,hoy):hoyB);
+
+/* ---------- Selector de temporadas: solo con #temporadas en la dirección, para enseñárselas al cliente ---------- */
+/* El visor del Artifact no pasa el #hash al iframe: también se abre con 5 toques seguidos en el logo de la cabecera (.brand) o con la tecla T */
+var sel=null,manual=false;
+function selector(){
+  if(location.hash!=='#temporadas'&&!manual){if(sel){sel.remove();sel=null}return}
+  if(sel)return;
+  var st=document.createElement('style');st.textContent='.t-sel{position:fixed;left:12px;right:12px;bottom:calc(14px + env(safe-area-inset-bottom,0px));z-index:150;margin:0 auto;max-width:max-content;display:flex;align-items:center;gap:6px;padding:6px;border-radius:18px;background:rgba(20,20,20,.82);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);color:#fff;font:600 13px/1.2 system-ui,-apple-system,sans-serif;box-shadow:0 14px 34px -12px rgba(0,0,0,.6);overflow-x:auto;scrollbar-width:none}'
+   +'.t-sel::-webkit-scrollbar{display:none}.t-sel b{padding:0 6px 0 8px;font-size:11px;letter-spacing:.08em;text-transform:uppercase;opacity:.6;white-space:nowrap}'
+   +'.t-sel button{all:unset;cursor:pointer;white-space:nowrap;padding:9px 12px;border-radius:12px;color:#fff}.t-sel button:hover{background:rgba(255,255,255,.12)}.t-sel button[aria-pressed="true"]{background:#fff;color:#111}'
+   +'.t-sel button small{display:block;font-size:10px;font-weight:500;opacity:.65;margin-top:2px}.t-sel .x{opacity:.7;padding:9px 10px}'
+   +'@media (max-width:640px){.t-sel{bottom:calc(84px + env(safe-area-inset-bottom,0px));max-width:none}}';
+  sel=document.createElement('div');sel.className='t-sel';sel.setAttribute('role','toolbar');sel.setAttribute('aria-label','Ver la landing en cada temporada');
+  sel.appendChild(st);
+  function hint(t){var w=ventanas(t,hoy.getFullYear()).filter(function(w){return w[1]>=hoy})[0],f=function(x){return x.getDate()+' '+MESES[x.getMonth()].slice(0,3)};return f(w[0])+' – '+f(w[1])}
+  var h='<b>Temporadas</b><button type="button" data-id="@hoy">Hoy<small>'+(hoyB?(hoyB.t.nombre||hoyB.t.id):'sin temporada')+'</small></button><button type="button" data-id="">Todo el año<small>versión base</small></button>';
+  CFG.forEach(function(t){h+='<button type="button" data-id="'+t.id+'">'+(t.nombre||t.id)+'<small>'+hint(t)+'</small></button>'});
+  sel.insertAdjacentHTML('beforeend',h+'<button type="button" class="x" aria-label="Cerrar el selector">✕</button>');
+  var elegido='@hoy';
+  function marca(){sel.querySelectorAll('button[data-id]').forEach(function(x){x.setAttribute('aria-pressed',String(x.dataset.id===elegido))})}
+  sel.addEventListener('click',function(e){var x=e.target.closest('button');if(!x)return;
+    if(x.classList.contains('x')){manual=false;if(location.hash==='#temporadas')history.replaceState(null,'',location.pathname+location.search);selector();return}
+    elegido=x.dataset.id;aplicar(elegido==='@hoy'?hoyB:elegido?forzar(elegido,hoy):null);marca();window.scrollTo({top:0,behavior:'smooth'})});
+  document.body.appendChild(sel);marca()}
+selector();addEventListener('hashchange',selector);
+var toques=[];
+document.addEventListener('click',function(e){if(!e.target.closest||!e.target.closest(window.TEMPORADAS_DISPARADOR||'.brand'))return;var n=Date.now();
+  toques=toques.filter(function(t){return n-t<2500});toques.push(n);if(toques.length>=5){toques=[];manual=true;selector()}});
+document.addEventListener('keydown',function(e){if((e.key==='t'||e.key==='T')&&!e.metaKey&&!e.ctrlKey&&!e.altKey&&!/INPUT|TEXTAREA|SELECT/.test(e.target.tagName)&&!e.target.isContentEditable){manual=!sel;if(!manual&&location.hash==='#temporadas')history.replaceState(null,'',location.pathname+location.search);selector()}});
+})();
+
+
+/* ---------- Datos reales de Evoluziona (su web, octubre de 2026). Su ficha de Google solo tiene 1 valoración sin texto: no hay reseñas que citar. ---------- */
+window.GOOGLE=null;
+window.MQ={partners:['WatchGuard','Cisco Meraki','HP','Microsoft','Microsoft 365','Azure','SharePoint','Dynamics 365','Adaptive Defense 360','WatchGuard Data Control']};
+window.CONSULTA={code:'EVO',titulo:'Tu estudio previo',saludo:'¡Hola, Evoluziona!',intro:'Me gustaría hablar con vosotros:',asunto:'Consulta desde la web',
+  wa:'',mail:'info@evoluziona.eu',tel:'+34944790504',telTxt:'94 479 05 04',
+  q1:'¿En qué os podemos ayudar?',etq1:'Necesito',falta1:'Elige una opción.',
+  tipos:['Mantenimiento integral','Seguridad o virus','Microsoft 365 y licencias','Equipos y servidores','Redes y wifi','Protección de datos'],
+  q2:{'Mantenimiento integral':'¿Qué situación se parece más a la vuestra?','Seguridad o virus':'¿Qué os preocupa?','Microsoft 365 y licencias':'¿Qué necesitáis?','Equipos y servidores':'¿Qué necesitáis?','Redes y wifi':'¿Qué necesitáis?','Protección de datos':'¿Qué necesitáis?'},
+  opciones:{'Mantenimiento integral':['Pequeña empresa sin informático','Departamento de IT desbordado','Sistema nuevo desde cero','Revisar lo que ya tenemos'],
+    'Seguridad o virus':['Nos ha entrado un virus','Auditoría de seguridad','Cortafuegos','Copias de seguridad','Cámaras de vigilancia','Formación del equipo'],
+    'Microsoft 365 y licencias':['Microsoft 365','Correo corporativo','Legalizar software','Antivirus WatchGuard','Otro software (Adobe, Autocad…)'],
+    'Equipos y servidores':['PC y portátiles','Equipos seminuevos','Servidores en la nube (Azure)','Servidor local','Impresoras','Control de presencia'],
+    'Redes y wifi':['Wifi de oficina','Wifi para hotel o nave','Conectar oficinas (VPN)','Switching'],
+    'Protección de datos':['Adaptarnos al RGPD','Control de datos en dispositivos','Certificación ENS']},
+  etq2:'Situación',detalle:'Cuántos equipos tenéis, qué os preocupa…',
+  q3:'¿Cómo lo hablamos?',etq3:'Prefiero',modos:['Llamadme','Visita a la oficina','Videollamada'],
+  empresa:'Empresa',etqDonde:'Localidad',
+  sub5:'Os responden personalmente para preparar el estudio previo.',cierre:'¿Cuándo podemos hablarlo? Gracias.'};
+
+
+/* ---------- Reseñas reales de Google (texto literal, recortado con «…») ---------- */
+(function(){var grid=document.getElementById('rv-grid');if(!grid||!window.REV)return;
+ var STAR='<svg><use href="#i-star"/></svg>',COLS=window.REV_COLS||['#333','#555','#777','#999'];
+ grid.innerHTML=REV.map(function(r,i){return '<figure class="rv" data-reveal><div class="rv-top"><span class="rv-stars" aria-label="5 de 5 estrellas">'+STAR+STAR+STAR+STAR+STAR+'</span><span class="rv-tag">'+r[1]+'</span></div><blockquote>«'+r[3]+'»</blockquote><figcaption><i style="background:'+COLS[i%COLS.length]+'">'+r[0][0]+'</i><span><b>'+r[0]+'</b><small>'+r[2]+' · Google</small></span></figcaption></figure>'}).join('');})();
+
+/* ---------- Drawer de reseñas: resumen de la ficha (nota, reparto, mapa) ---------- */
+(function(){var G=window.GOOGLE,d=document.getElementById('rvd');if(!G||!d)return;
+ var tot=G.dist.reduce(function(a,b){return a+b},0)||1,STAR='<svg><use href="#i-star"/></svg>';
+ d.querySelector('.rvd-score').innerHTML='<b>'+G.nota+'</b><span class="rv-stars">'+STAR+STAR+STAR+STAR+STAR+'</span><small>'+G.n+' reseña'+(G.n===1?'':'s')+'</small>';
+ d.querySelector('.rvd-dist').innerHTML=G.dist.map(function(n,i){return '<li><span>'+(5-i)+'</span><i><b style="width:'+(n/tot*100).toFixed(1)+'%"></b></i><em>'+n+'</em></li>'}).join('');
+ var m=document.getElementById('rvd-map');m.setAttribute('data-src','https://maps.google.com/maps?q='+encodeURIComponent(G.mapq)+'&hl=es&z=16&output=embed');m.title=G.nombre+' en Google Maps';
+ var a=d.querySelector('.rvd-foot a');a.href=G.ficha;a.textContent='Ver '+(G.n>1?'las '+G.n+' reseñas':'la ficha')+' en Google';})();
+
+/* ---------- Cabecera de vidrio, barra móvil y ↑ (por scroll: el IntersectionObserver falla dentro de iframes) ---------- */
+(function(){var top=document.getElementById('top'),hero=document.getElementById('hero'),mbar=document.querySelector('.mbar'),totop=document.getElementById('totop'),
+  h1=document.querySelector('.hero h1'),hcta=document.querySelector('.hero .hero-ctas'),tk=false;
+ function sync(){tk=false;var end=hero.offsetTop+hero.offsetHeight;top.classList.toggle('glass',scrollY<end-top.offsetHeight);
+  if(mbar){mbar.classList.toggle('glass',scrollY+innerHeight-40<end);
+   /* la barra nunca tapa el titular ni el botón del hero */
+   var off=false;if(h1){var q=h1.getBoundingClientRect();if(q.bottom>innerHeight-84&&q.top<innerHeight)off=true}
+   if(hcta){var c=hcta.getBoundingClientRect();if(c.top<innerHeight&&c.bottom>0)off=true}
+   mbar.classList.toggle('off',off)}
+  if(totop)totop.classList.toggle('on',scrollY>end-innerHeight/2)}
+ sync();window.addEventListener('scroll',function(){if(!tk){tk=true;requestAnimationFrame(sync)}},{passive:true});window.addEventListener('resize',sync);
+ if(totop)totop.addEventListener('click',function(){window.scrollTo({top:0,behavior:reduced?'auto':'smooth'})});})();
+
+/* ---------- Consola del hero: vigilancia remota; «Simular un ataque» lanza una amenaza que se neutraliza sola ---------- */
+(function(){var c=document.getElementById('con');if(!c)return;
+ var list=c.querySelector('.con-list'),log=c.querySelector('.con-log'),btn=document.getElementById('con-sim'),cnt=document.getElementById('con-ok'),busy=false,n=0,touched=false;
+ var CASOS=[
+  [1,'Correo con adjunto malicioso','Bloqueado por WatchGuard EPDR'],
+  [0,'Copia de seguridad fallida','Copia relanzada y verificada en la nube'],
+  [3,'Acceso VPN sospechoso','Conexión cortada y contraseña renovada'],
+  [2,'Actualización crítica pendiente','Parche de Windows instalado en remoto'],
+  [4,'Intento de intrusión en la wifi','Equipo aislado en el cortafuegos']
+ ];
+ function hh(){var d=new Date();return ('0'+d.getHours()).slice(-2)+':'+('0'+d.getMinutes()).slice(-2)}
+ function line(cls,t){var p=document.createElement('p');p.className=cls;p.innerHTML='<b>'+hh()+'</b> '+t;log.appendChild(p);while(log.children.length>3)log.removeChild(log.firstChild)}
+ function run(){if(busy)return;busy=true;btn.disabled=true;var k=CASOS[n%CASOS.length],li=list.children[k[0]];n++;
+  var s=li.querySelector('.s'),old=s.textContent;
+  li.className='warn';s.textContent='Alerta';line('bad','⚠ '+li.querySelector('.n').textContent+': '+k[1].toLowerCase());
+  setTimeout(function(){line('','Técnico de Evoluziona conectado en remoto…')},reduced?0:900);
+  setTimeout(function(){li.className='fixed';s.textContent='Resuelto';line('ok','✓ '+k[2]);cnt.textContent=+cnt.textContent+1;
+   setTimeout(function(){li.className='';s.textContent=old;busy=false;btn.disabled=false},reduced?0:2600)},reduced?0:2300)}
+ btn.addEventListener('click',function(){touched=true;run()});
+ /* pista al llegar: una primera amenaza se resuelve sola para enseñar el gesto */
+ setTimeout(function(){if(!touched)run()},4200);
+})();
+
+
+/* ---------- Borradores: se ven solo con #borradores en la dirección ---------- */
+(function(){function sync(){var on=location.hash==='#borradores';document.querySelectorAll('.draft').forEach(function(d){d.hidden=!on});if(on){var t=document.querySelector('.draft');t&&setTimeout(function(){t.scrollIntoView()},300)}}
+ sync();window.addEventListener('hashchange',sync)})();
+
+/* ---------- Consulta: panel paso a paso que acaba en WhatsApp (o correo si no hay WhatsApp) ---------- */
+(function(){
+  var C=window.CONSULTA, bk=document.getElementById('bk'); if(!bk||!C)return;
+  var N=4, f=document.getElementById('book-form'), panes=[].slice.call(f.querySelectorAll('.bk-pane'));
+  var back=document.getElementById('bk-back'), next=document.getElementById('bk-next'), send=document.getElementById('f-send');
+  var err=document.getElementById('f-error'), bar=document.getElementById('bk-bar'), stepT=document.getElementById('bk-step');
+  var nombre=document.getElementById('f-nombre'), pre=document.getElementById('f-preview'), opts2=document.getElementById('f-opts2');
+  function esc(s){return String(s).replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(/</g,'&lt;')}
+  /* textos y opciones del panel, desde la configuración del negocio */
+  document.getElementById('bk-title').textContent=C.titulo;
+  document.getElementById('f-q1').textContent=C.q1;
+  document.getElementById('f-tipos').innerHTML=C.tipos.map(function(t){return '<label><input type="radio" name="tipo" value="'+esc(t)+'"><span>'+t+'</span></label>'}).join('');
+  document.getElementById('f-q3').textContent=C.q3;
+  document.getElementById('f-modos').innerHTML=C.modos.map(function(t,i){return '<label><input type="radio" name="modo" value="'+esc(t)+'"'+(i?'':' checked')+'><span>'+t+'</span></label>'}).join('');
+  document.getElementById('f-detalle').placeholder=C.detalle||'';
+  document.getElementById('f-sub5').textContent=C.sub5||'';
+  if(!C.empresa)document.getElementById('f-empresa-wrap').hidden=true;
+  else document.getElementById('f-empresa-l').textContent=C.empresa;
+  function sel(n){var e=f.querySelector('input[name="'+n+'"]:checked');return e?e.value:''}
+  function val(id){var e=document.getElementById(id);return e?e.value.trim():''}
+  function fill(){var t=sel('tipo'),L=(C.opciones&&C.opciones[t])||[];
+    document.getElementById('f-q2').textContent=(C.q2&&C.q2[t])||C.q2def||'Cuéntanos un poco más';
+    opts2.innerHTML=L.map(function(m){return '<label><input type="checkbox" name="op" value="'+esc(m)+'"><span>'+m+'</span></label>'}).join('');opts2.hidden=!L.length}
+  var _code='';
+  function code(){if(!_code){var d=new Date(),r='',A='ABCDEFGHJKLMNPQRSTUVWXYZ23456789';for(var i=0;i<3;i++)r+=A[Math.floor(Math.random()*A.length)];_code=C.code+'-'+String(d.getDate()).padStart(2,'0')+String(d.getMonth()+1).padStart(2,'0')+'-'+r}return _code}
+  function message(){
+    var op=[].map.call(f.querySelectorAll('input[name="op"]:checked'),function(x){return x.value});
+    var L=[C.saludo+' Soy '+val('f-nombre')+(val('f-empresa')?', de '+val('f-empresa'):'')+'. '+C.intro,''];
+    L.push('🔖 Código: '+code());
+    if(window.TEMPORADA&&TEMPORADA.linea)L.push(TEMPORADA.linea);
+    L.push('• '+C.etq1+': '+sel('tipo'));
+    if(op.length)L.push('• '+(C.etq2||'Detalle')+': '+op.join(', '));
+    if(val('f-detalle'))L.push('• Más detalles: '+val('f-detalle'));
+    L.push('• '+(C.etq3||'Preferencia')+': '+sel('modo'));
+    if(val('f-donde'))L.push('• '+(C.etqDonde||'Localidad')+': '+val('f-donde'));
+    L.push('',C.cierre);
+    return L.join('\n');
+  }
+  var step=1, opener=null;
+  function show(n){
+    step=n; err.hidden=true;
+    panes.forEach(function(p){p.hidden=+p.dataset.step!==n});
+    back.disabled=n===1;
+    var last=n===N; next.hidden=last; send.hidden=!last; document.getElementById('f-alt').hidden=!last;
+    next.textContent=n===3?'Ver mi consulta':'Siguiente';
+    stepT.textContent=last?'Listo':'Paso '+n+' de 3';
+    bar.style.transform='scaleX('+(Math.min(n,3)/3)+')';
+    if(last){var m=message();pre.textContent=m;
+      send.href=C.wa?'https://wa.me/'+C.wa+'?text='+encodeURIComponent(m):'mailto:'+C.mail+'?subject='+encodeURIComponent(C.asunto+' · '+code())+'&body='+encodeURIComponent(m)}
+    f.scrollTop=0;
+    var h3=panes[n-1].querySelector('h3'); if(h3)h3.setAttribute('tabindex','-1');
+    setTimeout(function(){try{(h3||next).focus({preventScroll:true})}catch(x){}},380);
+  }
+  /* botón final: WhatsApp o correo, y la alternativa de llamar */
+  send.className='btn '+(C.wa?'btn-wa':'btn-mail');
+  send.innerHTML=C.wa?'<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .2-1.3c-.1-.1-.3-.2-.6-.3z"/></svg>Enviar por WhatsApp':'<svg><use href="#i-mail"/></svg>Enviar por correo';
+  if(!C.wa)send.removeAttribute('target');
+  document.getElementById('f-alt').innerHTML=C.wa?'<span>¿Prefieres llamar?</span> <a href="tel:'+C.tel+'">'+C.telTxt+'</a>':'<span>¿Prefieres llamar?</span> <a href="tel:'+C.tel+'">'+C.telTxt+'</a><span>· o escribe a</span> <a href="mailto:'+C.mail+'">'+C.mail+'</a>';
+  function fail(msg,el){err.textContent=msg;err.hidden=false;if(el){el.setAttribute('aria-invalid','true');el.focus()}}
+  function validate(n){
+    if(n===1&&!sel('tipo')){fail(C.falta1||'Elige una opción.');return false}
+    if(n===3){nombre.removeAttribute('aria-invalid');if(!nombre.value.trim()){fail('Dinos tu nombre para el mensaje.',nombre);return false}}
+    return true;
+  }
+  next.addEventListener('click',function(){if(validate(step))show(step+1)});
+  back.addEventListener('click',function(){if(step>1)show(step-1)});
+  f.addEventListener('submit',function(e){e.preventDefault();next.click()});
+  f.addEventListener('change',function(e){if(e.target.name==='tipo')fill()});
+  /* 'click' y no 'change': al volver al paso 1 y tocar la opción ya marcada también avanza */
+  f.querySelectorAll('input[name="tipo"]').forEach(function(r){r.addEventListener('click',function(){setTimeout(function(){if(step===1){fill();show(2)}},220)})});
+  document.getElementById('f-copy').addEventListener('click',function(){var b=this,ok=function(){b.textContent='Copiado';setTimeout(function(){b.textContent='Copiar mensaje'},1600)};
+    try{navigator.clipboard.writeText(pre.textContent).then(ok,function(){var r=document.createRange();r.selectNodeContents(pre);var s=getSelection();s.removeAllRanges();s.addRange(r)})}catch(x){}});
+  function open(from){
+    opener=from||document.activeElement; bk.hidden=false; document.documentElement.style.overflow='hidden';
+    var ds=from&&from.dataset||{}, T=window.TEMPORADA, tc=T&&(window.TEMPORADAS||[]).filter(function(x){return x.id===T.id})[0];
+    var pick=ds.tipo||(from&&from.closest&&from.closest('.hero')&&tc&&tc.tipo)||'';
+    if(pick){var r=f.querySelector('input[name="tipo"][value="'+pick+'"]');if(r){r.checked=true;fill();show(2)}else show(1)}
+    else if(step===N)show(3); else show(step);
+    if(ds.op){var o=f.querySelector('input[name="op"][value="'+ds.op+'"]');if(o)o.checked=true}
+    requestAnimationFrame(function(){requestAnimationFrame(function(){bk.classList.add('open')})});
+  }
+  function close(){
+    bk.classList.remove('open'); document.documentElement.style.overflow='';
+    setTimeout(function(){bk.hidden=true},reduced?0:420);
+    if(opener&&opener.focus)try{opener.focus({preventScroll:true})}catch(x){}
+  }
+  window.__abrirConsulta=open;
+  document.getElementById('bk-x').addEventListener('click',close);
+  document.getElementById('bk-scrim').addEventListener('click',close);
+  document.addEventListener('keydown',function(e){if(!bk.hidden&&e.key==='Escape')close()});
+  document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[href="#consulta"]');if(!a)return;e.preventDefault();open(a)});
+  /* un enlace compartido con #consulta (bio de Instagram, WhatsApp) abre el panel al llegar; dentro del visor no llega el hash */
+  if(location.hash==='#consulta')setTimeout(function(){open(null)},600);
+})();
+
+
+/* ---------- Drawer de reseñas ---------- */
+(function(){var d=document.getElementById('rvd'); if(!d)return;
+ var list=document.getElementById('rvd-list'), map=document.getElementById('rvd-map'), opener=null, filled=false;
+ function open(from){
+   if(!filled){document.querySelectorAll('#resenas .rv').forEach(function(c){var k=c.cloneNode(true);k.removeAttribute('data-reveal');list.appendChild(k)});filled=true}
+   if(!map.src)map.src=map.getAttribute('data-src');
+   opener=from||document.activeElement; d.hidden=false; document.documentElement.style.overflow='hidden'; SFX.play('open');
+   requestAnimationFrame(function(){requestAnimationFrame(function(){d.classList.add('open');var x=d.querySelector('.bk-head [data-rvd-x]');x&&x.focus({preventScroll:true})})});
+ }
+ function close(){ if(d.hidden)return; SFX.play('close'); d.classList.remove('open'); document.documentElement.style.overflow='';
+   setTimeout(function(){d.hidden=true;opener&&opener.focus&&opener.focus({preventScroll:true})},reduced?0:420); }
+ document.addEventListener('click',function(e){var a=e.target.closest('[data-rvd]');if(a){e.preventDefault();open(a);return}
+   if(e.target.closest('[data-rvd-x]'))close()});
+ document.addEventListener('keydown',function(e){if(e.key==='Escape')close()});
+})();
+
+
+
+/* ---------- Marcas o clientes en texto (carrusel) ---------- */
+document.querySelectorAll('[data-mq]').forEach(function(el){var L=(window.MQ&&MQ[el.getAttribute('data-mq')])||[];var h=L.map(function(b){return '<span>'+b+'</span>'}).join('');el.innerHTML=h+h});
+
+/* ---------- Animaciones por visibilidad (IntersectionObserver) ---------- */
+(function(){
+  var root=document.documentElement;
+  if(!('IntersectionObserver' in window)||reduced)return;
+  root.classList.add('js-anim');
+  var io=new IntersectionObserver(function(es){var k=0;es.forEach(function(e){if(!e.isIntersecting)return;var el=e.target;el.style.transitionDelay=Math.min(k++*90,450)+'ms';el.classList.add('in');io.unobserve(el);setTimeout(function(){el.style.transitionDelay=''},1500)})},{rootMargin:'0px 0px -8% 0px'});
+  document.querySelectorAll('[data-reveal]').forEach(function(el){io.observe(el)});
+  var bar=document.getElementById('progress'), tk=false;
+  function prog(){tk=false;var H=root.scrollHeight-innerHeight;bar.style.transform='scaleX('+(H>0?Math.min(1,scrollY/H):0)+')'}
+  window.addEventListener('scroll',function(){if(!tk){tk=true;requestAnimationFrame(prog)}},{passive:true});
+})();
+})();
+
+/* ---------- Botones flotantes tras un mínimo scroll (cabecera y barra móvil ocultas al pintar el hero) ---------- */
+(function(){var h=document.documentElement,tk=false;function s(){tk=false;h.classList.toggle('cta-wait',scrollY<=Math.min(120,innerHeight*.15))}
+ s();addEventListener('scroll',function(){if(!tk){tk=true;requestAnimationFrame(s)}},{passive:true});addEventListener('resize',s);})();
+</script>

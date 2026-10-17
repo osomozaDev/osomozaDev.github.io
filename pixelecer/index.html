@@ -1,0 +1,1378 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Productora audiovisual en Pontevedra · Pixelecer</title>
+<meta name="description" content="Pixelecer, productora audiovisual en Pontevedra desde 2016: vídeo corporativo y publicidad, videoclips, documental, grabación con dron (operadores certificados por AESA) y wedding films en Galicia y fuera. 5,0★ en Google con 45 reseñas.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&display=swap">
+<link rel="icon" href="img/logo.png">
+<style>
+/* Pixelecer — productora audiovisual: sala oscura y papel cálido, grotesca con carácter para titulares, el rojo del logotipo solo como piloto de REC.
+   Un único gesto: el hero es el monitor de rodaje; eliges una toma en la línea de tiempo y se hace el corte. */
+:root{
+  color-scheme: light;
+  --shell:#F4F1EB;
+  --shell-2:#E9E4DA;
+  --paper:#FBF9F5;
+  --ink:#141414;
+  --ink-soft:#66625B;
+  --red:#C30000;
+  --rec:#FF2B1C;
+  --hibiscus:#C30000;
+  --hibiscus-ink:#9E0000;
+  --palm:#141414;
+  --sun:#FF2B1C;
+  --night:#0D0D0F;
+  --cream:#F4F1EA;
+  --line:rgba(20,20,20,.12);
+  --font-display:"Bricolage Grotesque", "Arial Narrow", ui-sans-serif, system-ui, sans-serif;
+  --font-body:"DM Sans", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --r-sm:8px; --r-md:12px; --r-lg:16px;
+  --shadow:0 30px 60px -36px rgba(0,0,0,.6);
+  --wrap:1220px;
+  --head:76px;
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html{scroll-behavior:smooth;scroll-padding-top:calc(var(--head) + 12px)}
+body{margin:0;background:var(--shell);color:var(--ink);font-family:var(--font-body);font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:clip}
+img,video{max-width:100%;display:block}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--rec);outline-offset:3px;border-radius:4px}
+.wrap{max-width:var(--wrap);margin-inline:auto;padding-inline:clamp(16px,4vw,48px)}
+h1,h2,h3{margin:0;text-wrap:balance;font-family:var(--font-display);font-weight:800;line-height:.98;letter-spacing:-.035em}
+h2 em,h1 em{font-style:normal;font-weight:400;letter-spacing:-.03em}
+h1 em::after,h2 em::after{content:"";display:inline-block;width:.17em;height:.17em;margin-left:.08em;border-radius:50%;background:var(--rec);vertical-align:.06em}
+h3{font-size:26px;letter-spacing:-.02em}
+p{margin:0}
+.eyebrow{display:inline-block;font-size:12.5px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-soft)}
+.lead{font-size:clamp(17px,1.4vw,19px);color:var(--ink-soft);max-width:36em}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 28px;border-radius:999px;font:600 15.5px/1 var(--font-body);letter-spacing:.01em;text-decoration:none;border:1px solid transparent;cursor:pointer;transition:background .25s,color .25s,border-color .25s,transform .25s,box-shadow .25s}
+.btn svg{width:18px;height:18px;flex:none}
+.btn-primary{background:var(--ink);color:#fff}
+.btn-primary svg{color:var(--rec);width:14px;height:14px}
+.btn-primary:hover{background:var(--red)}
+.btn-primary:hover svg{color:#fff}
+.btn-ghost{background:transparent;border-color:var(--line);color:var(--ink)}
+.btn-ghost:hover{border-color:var(--ink)}
+.btn-light{background:#fff;color:var(--ink)}
+.btn-light:hover{background:var(--red);color:#fff}
+/* Botón REC: un piloto que late; al pasar el ratón se enciende entero */
+.btn-rec{background:var(--cream);color:#141414;padding-left:22px}
+.btn-rec svg{width:16px;height:16px;color:var(--rec);animation:rec-blink 1.6s steps(1) infinite}
+.btn-rec:hover{background:var(--red);color:#fff;box-shadow:0 0 0 4px rgba(255,43,28,.18)}
+.btn-rec:hover svg{color:#fff}
+@keyframes rec-blink{0%,60%{opacity:1}61%,100%{opacity:.25}}
+.link{display:inline-flex;align-items:center;gap:8px;font-weight:600;text-decoration:none;border-bottom:1px solid var(--line);padding-bottom:2px;transition:border-color .2s,gap .2s}
+.link svg{width:16px;height:16px}
+.link:hover{border-color:var(--ink);gap:12px}
+.sec{padding-block:clamp(84px,11vw,144px)}
+.sec-head{display:grid;gap:18px;max-width:800px;margin-bottom:clamp(40px,5vw,64px)}
+.sec-head h2,.book-cta h2,.visit h2{font-size:clamp(40px,5.4vw,76px)}
+.band-white{background:var(--paper)}
+.band-ink{background:var(--night);color:var(--cream);--ink-soft:rgba(244,241,234,.62);--line:rgba(244,241,234,.16)}
+.band-ink .eyebrow,.band-ink .lead{color:rgba(244,241,234,.62)}
+
+/* Loader con el logo: el anillo se dibuja como el aro de un objetivo */
+.intro{position:fixed;inset:0;z-index:300;display:grid;place-items:center;overflow:hidden;background:radial-gradient(60% 60% at 50% 45%,#1d1012,var(--night) 70%);transition:opacity .55s ease,visibility 0s .55s}
+.intro.out{opacity:0;visibility:hidden;pointer-events:none}
+.intro-core{position:relative;display:grid;justify-items:center;gap:18px;color:var(--cream)}
+.intro-core b{font:800 clamp(26px,3.2vw,36px)/1 var(--font-display);letter-spacing:-.03em}
+.intro-core small{text-align:center;max-width:calc(100vw - 32px);font-size:12px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:rgba(244,241,234,.6);margin-top:-8px}
+.disc{position:relative;display:grid;place-items:center;width:clamp(112px,15vw,156px);aspect-ratio:1}
+.disc img{width:84%;height:auto;border-radius:50%;background:#fff;box-shadow:0 20px 60px -20px rgba(255,43,28,.6)}
+.disc .ring{position:absolute;inset:0;width:100%;height:100%;transform:rotate(-90deg);overflow:visible}
+.disc .ring circle{fill:none;stroke:var(--rec);stroke-width:2.2;stroke-linecap:round;stroke-dasharray:1;stroke-dashoffset:1;animation:ring-draw 1.6s cubic-bezier(.6,.1,.3,1) .1s forwards}
+@keyframes ring-draw{to{stroke-dashoffset:0}}
+
+/* Cabecera */
+.top{position:fixed;top:0;left:0;right:0;padding-top:env(safe-area-inset-top,0px);z-index:60;background:rgba(244,241,235,.88);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);transition:background .4s,color .4s}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;height:var(--head)}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none}
+.brand img{height:40px;width:40px;border-radius:50%;background:#fff}
+.brand span{font:800 22px var(--font-display);letter-spacing:-.03em}
+.nav{display:flex;gap:clamp(18px,2.2vw,32px);font-size:14.5px;font-weight:500}
+.nav a{text-decoration:none;color:var(--ink-soft);white-space:nowrap}
+.nav a:hover{color:var(--ink)}
+.top .btn{min-height:42px;padding:0 20px;font-size:14.5px}
+.top.dark{background:rgba(13,13,15,.5);color:var(--cream)}
+.top.dark .nav a{color:rgba(244,241,234,.7)}
+.top.dark .nav a:hover{color:var(--cream)}
+.top.dark .btn-primary{background:var(--cream);color:#141414}
+.top.dark .btn-primary:hover{background:var(--red);color:#fff}
+.top.dark .progress{background:var(--rec)}
+.progress{position:absolute;left:0;bottom:-1px;height:1px;width:100%;background:var(--ink);transform:scaleX(0);transform-origin:left}
+
+/* Hero: sala oscura, el titular a un lado y el monitor de rodaje al otro */
+.hero{position:relative;isolation:isolate;background:var(--night);color:var(--cream);--ink:#F4F1EA;--ink-soft:rgba(244,241,234,.66);--line:rgba(244,241,234,.16);padding:calc(var(--head) + clamp(24px,5vh,72px)) 0 clamp(8px,1.5vw,20px)}
+.hero::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:radial-gradient(48% 60% at 78% 38%,rgba(195,0,0,.18),transparent 70%),radial-gradient(40% 50% at 10% 90%,rgba(255,255,255,.04),transparent 70%)}
+.hero-grid{display:grid;grid-template-columns:1fr 1.05fr;gap:clamp(32px,4.5vw,72px);align-items:center}
+.hero-grid>*{min-width:0}
+.hero-copy{display:grid;justify-items:start}
+.hero h1{font-size:min(clamp(44px,4.7vw,80px),12.5svh);margin-top:20px}
+.hero h1 .n1{display:block}
+.hero h1 em{display:block;color:rgba(244,241,234,.78)}
+.hero-sub{margin-top:24px;max-width:30em;font-size:clamp(16.5px,1.3vw,18.5px);color:var(--ink-soft)}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:14px 24px;margin-top:30px;align-items:center}
+.tel{display:inline-flex;align-items:center;gap:8px;font-weight:600;text-decoration:none;font-variant-numeric:tabular-nums}
+.tel svg{width:17px;height:17px;color:var(--ink-soft)}
+.tel:hover{color:var(--rec)}
+.hero-micro-line{margin-top:14px;font-size:14px;color:var(--ink-soft)}
+.hero-q{margin:26px 0 0;padding-left:16px;border-left:2px solid var(--rec);font:400 clamp(18px,1.5vw,21px)/1.35 var(--font-display);letter-spacing:-.01em;color:var(--cream)}
+.hero-q cite{display:block;margin-top:6px;font:500 13px var(--font-body);font-style:normal;color:var(--ink-soft);letter-spacing:.02em}
+
+/* Monitor */
+.vf{margin:0;display:grid;gap:12px;justify-self:end;width:min(100%,calc((100svh - var(--head) - 150px) * 16 / 9))}
+.vf-screen{position:relative;aspect-ratio:16/9;border-radius:14px;overflow:hidden;background:#000;box-shadow:0 40px 80px -40px rgba(0,0,0,.9),0 0 0 1px rgba(255,255,255,.08)}
+.vf-takes>*{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .18s linear}
+.vf-takes>.on{opacity:1}
+.vf-takes img.on{animation:kb 7s ease-out both}
+@keyframes kb{from{transform:scale(1.08)}to{transform:scale(1)}}
+.vf-ui{position:absolute;inset:0;pointer-events:none;color:#fff;font:600 12px/1 var(--font-body);letter-spacing:.12em;text-shadow:0 1px 3px rgba(0,0,0,.5)}
+.vf-ui::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.42),transparent 26%,transparent 66%,rgba(0,0,0,.5))}
+.vf-ui .c{position:absolute;width:22px;height:22px;border:2px solid rgba(255,255,255,.85)}
+.vf-ui .tl{top:14px;left:14px;border-right:0;border-bottom:0}.vf-ui .tr{top:14px;right:14px;border-left:0;border-bottom:0}
+.vf-ui .bl{bottom:14px;left:14px;border-right:0;border-top:0}.vf-ui .br{bottom:14px;right:14px;border-left:0;border-top:0}
+.vf-rec{position:absolute;top:22px;left:46px;display:flex;align-items:center;gap:7px}
+.vf-rec b{width:10px;height:10px;border-radius:50%;background:var(--rec);box-shadow:0 0 10px var(--rec);animation:rec-blink 1.2s steps(1) infinite}
+.vf-tc{position:absolute;top:22px;right:46px;font-variant-numeric:tabular-nums;letter-spacing:.08em}
+.vf-label{position:absolute;left:46px;bottom:22px;font-size:13px;letter-spacing:.06em;text-transform:none;max-width:52%}
+.vf-cut{position:absolute;inset:0;display:grid;place-items:center;background:#fff;color:#141414;font:800 clamp(28px,4vw,52px)/1 var(--font-display);letter-spacing:-.03em;text-shadow:none;opacity:0}
+.vf-cut.go{animation:cut .42s ease-out}
+@keyframes cut{0%{opacity:.95}30%{opacity:.9}100%{opacity:0}}
+/* Sello de la nota de Google sobre el monitor */
+.rate-stk{position:absolute;right:14px;bottom:14px;z-index:2;display:grid;grid-template-columns:auto auto;grid-template-rows:auto auto;column-gap:10px;align-items:center;padding:10px 14px 10px 12px;border-radius:14px;background:#fff;color:#141414;text-decoration:none;box-shadow:0 14px 30px -12px rgba(0,0,0,.6);transition:transform .25s}
+.rate-stk:hover{transform:translateY(-2px)}
+.rate-stk .stars{grid-column:1/-1;display:flex;gap:1px;color:var(--red)}
+.rate-stk .stars svg{width:13px;height:13px}
+.rate-stk b{font:800 34px/1 var(--font-display);letter-spacing:-.04em}
+.rate-stk small{font-size:12px;line-height:1.25;color:#55524c;font-weight:500}
+/* Línea de tiempo: cada toma con su cabeza lectora */
+.vf-tl{display:grid;grid-template-columns:repeat(5,1fr);gap:8px}
+.vf-tl button{all:unset;cursor:pointer;position:relative;display:grid;gap:6px;min-width:0;padding-top:6px}
+.vf-tl button::before{content:"";position:absolute;top:0;left:0;right:0;height:2px;background:rgba(244,241,234,.16)}
+.vf-tl button i{position:absolute;top:0;left:0;height:2px;width:100%;background:var(--rec);transform:scaleX(0);transform-origin:left}
+.vf-tl img{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:6px;opacity:.5;filter:saturate(.6);transition:opacity .25s,filter .25s}
+.vf-tl span{font-size:12.5px;font-weight:600;color:rgba(244,241,234,.6);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.vf-tl button:hover img,.vf-tl button.on img{opacity:1;filter:none}
+.vf-tl button.on span{color:var(--cream)}
+.vf-tl button:focus-visible{outline:2px solid var(--rec);outline-offset:3px;border-radius:6px}
+
+.facts{display:grid;grid-template-columns:repeat(4,1fr);margin-top:clamp(48px,6vw,88px);border-top:1px solid var(--line)}
+.facts div{display:grid;gap:4px;padding:22px 20px 26px 0;min-width:0}
+.facts div+div{padding-left:20px;border-left:1px solid var(--line)}
+.facts b{font:800 clamp(28px,2.6vw,40px)/1 var(--font-display);letter-spacing:-.03em;font-variant-numeric:tabular-nums}
+.facts span{font-size:14px;color:var(--ink-soft)}
+
+/* Clientes: carrusel en texto */
+.clients{background:var(--night);color:var(--cream);padding:clamp(28px,4vw,48px) 0 clamp(40px,5vw,64px);border-top:1px solid rgba(244,241,234,.08);overflow:hidden}
+.clients .eyebrow{color:rgba(244,241,234,.5);margin-bottom:20px}
+.marq{overflow-x:auto;overflow-y:hidden;scrollbar-width:none;-webkit-mask:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
+.marq-in{display:flex;width:max-content;gap:clamp(36px,5vw,72px);animation:marq 48s linear infinite}
+.marq-in span{font:600 clamp(22px,2.4vw,32px)/1.2 var(--font-display);letter-spacing:-.02em;color:rgba(244,241,234,.72);white-space:nowrap}
+@keyframes marq{to{transform:translateX(calc(-50% - clamp(18px,2.5vw,36px)))}}
+.marq:hover .marq-in{animation-play-state:paused}
+.marq::-webkit-scrollbar{display:none}
+
+/* Manifiesto */
+.manifesto .wrap{display:grid;gap:28px}
+.mani{font:800 clamp(34px,4.8vw,68px)/1.04 var(--font-display);letter-spacing:-.035em;max-width:22ch}
+.mani .w{display:inline-block;transition:opacity .5s ease,color .5s ease}
+.js-anim .mani .w{opacity:.16}
+.js-anim .mani.lit .w{opacity:1}
+.mani .w.hot{color:var(--red)}
+
+/* Portfolio */
+.filters{display:flex;flex-wrap:wrap;gap:6px 26px;margin-bottom:28px}
+.filters button{all:unset;cursor:pointer;font-size:15px;font-weight:500;color:var(--ink-soft);padding:4px 0;border-bottom:1px solid transparent}
+.filters button.on{color:var(--ink);border-bottom-color:var(--rec)}
+.band-ink .filters button.on{color:var(--cream)}
+.filters button:hover{color:var(--cream)}
+.filters button:focus-visible{outline:2px solid var(--rec)}
+.works{display:grid;grid-template-columns:repeat(3,1fr);gap:28px 22px}
+.work{all:unset;cursor:pointer;display:grid;gap:12px;min-width:0}
+.work .th{position:relative;aspect-ratio:16/9;border-radius:var(--r-md);overflow:hidden;background:#1b1b1e}
+.work img{width:100%;height:100%;object-fit:cover;transition:transform .9s cubic-bezier(.2,.7,.2,1)}
+.work:hover img{transform:scale(1.05)}
+.work .pl{position:absolute;left:50%;top:50%;width:58px;height:58px;margin:-29px 0 0 -29px;border-radius:50%;display:grid;place-items:center;background:rgba(13,13,15,.5);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);color:#fff;border:1px solid rgba(255,255,255,.3);transition:background .25s,transform .25s}
+.work .pl svg{width:22px;height:22px;margin-left:3px}
+.work:hover .pl{background:var(--red);transform:scale(1.08)}
+.work b{font:600 19px/1.2 var(--font-display);letter-spacing:-.015em;color:var(--cream)}
+.work small{display:block;margin-top:2px;font-size:13px;color:rgba(244,241,234,.55);letter-spacing:.04em}
+.work:focus-visible{outline:2px solid var(--rec);outline-offset:4px;border-radius:var(--r-md)}
+.work.pop{animation:pop .55s cubic-bezier(.2,.7,.2,1) both}
+@keyframes pop{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+.work.out,.work.more{display:none}
+.works-more{display:flex;justify-content:center;margin-top:36px}
+.band-ink .btn-ghost{color:var(--cream)}
+.band-ink .btn-ghost:hover{border-color:var(--cream)}
+.lb{position:fixed;inset:0;z-index:150;background:rgba(10,10,12,.95);display:grid;place-items:center;gap:18px;padding:64px 16px 24px;grid-template-rows:1fr auto}
+.lb-media{width:min(1100px,100%,calc((100svh - 190px) * 16 / 9));aspect-ratio:16/9;align-self:center;border-radius:10px;overflow:hidden;background:#000}
+.lb-media iframe{width:100%;height:100%;border:0;display:block}
+.lb-x{all:unset;cursor:pointer;position:absolute;top:14px;right:18px;width:44px;height:44px;display:grid;place-items:center;color:#fff;font-size:32px}
+.lb-nav{all:unset;cursor:pointer;position:absolute;top:50%;transform:translateY(-50%);width:48px;height:48px;border-radius:50%;display:grid;place-items:center;color:#fff;background:rgba(255,255,255,.14);transition:background .2s;z-index:1}
+.lb-nav:hover{background:rgba(255,255,255,.26)}
+.lb-nav.prev{left:14px}.lb-nav.next{right:14px}
+.lb-nav svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.lb-x:focus-visible,.lb-nav:focus-visible{outline:2px solid var(--rec);outline-offset:2px}
+.lb-foot{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:12px 22px;color:rgba(255,255,255,.8);font-size:14px}
+
+/* Servicios */
+.svc{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(22px,2.6vw,36px)}
+.svc-card{display:grid;grid-template-rows:auto 1fr;border-radius:var(--r-lg);overflow:hidden;background:var(--paper);border:1px solid var(--line)}
+.svc-card>img{width:100%;aspect-ratio:16/10;object-fit:cover}
+.svc-card>div{display:grid;gap:14px;align-content:start;padding:24px 24px 28px}
+.svc-card h3{font-size:30px}
+.svc-card p{color:var(--ink-soft);font-size:16px}
+.svc-card ul{list-style:none;margin:0;padding:0;display:grid}
+.svc-card li{padding:9px 0;border-bottom:1px solid var(--line);font-size:15.5px}
+.svc-card li::before{content:"";display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--rec);margin:0 10px 2px 0}
+.svc-card .link{justify-self:start;margin-top:6px}
+.awards{display:flex;gap:8px;flex-wrap:wrap}
+.awards img{width:56px;height:56px;border-radius:6px;object-fit:cover}
+
+/* Cómo trabajamos */
+.steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(22px,3vw,44px)}
+.steps li{display:grid;gap:12px;align-content:start}
+.steps figure{position:relative;margin:0 0 8px;border-radius:var(--r-md);overflow:hidden;aspect-ratio:16/10;background:#111}
+.steps figure img{width:100%;height:100%;object-fit:cover}
+.steps figure span{position:absolute;left:14px;top:12px;font:800 15px var(--font-display);color:#fff;background:var(--red);padding:5px 10px;border-radius:999px}
+.steps h3{font-size:30px}
+.steps p{color:var(--ink-soft);font-size:16px}
+
+/* Reseñas */
+.rv-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(24px,3vw,44px)}
+#resenas .rv.x{display:none}
+.rv{margin:0;display:grid;gap:18px;align-content:start;padding-top:22px;border-top:2px solid var(--ink)}
+.rv-top{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.rv-stars{display:flex;gap:2px;color:var(--red)}.rv-stars svg{width:14px;height:14px}
+.rv-tag{font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft)}
+.rv blockquote{margin:0;font:400 clamp(20px,1.7vw,24px)/1.32 var(--font-display);letter-spacing:-.015em}
+.rv figcaption{display:flex;align-items:center;gap:10px}
+.rv figcaption i{display:none}
+.rv figcaption span{display:grid;line-height:1.3}.rv figcaption b{font-weight:600;font-size:15px}.rv figcaption small{color:var(--ink-soft);font-size:13px}
+.rv-more{display:flex;flex-wrap:wrap;gap:6px 16px;align-items:baseline;margin:40px 0 0;font-size:14px;color:var(--ink-soft)}
+.rv-more a{font-weight:600;color:var(--ink);text-decoration:none;border-bottom:1px solid var(--line)}
+
+/* Presupuesto */
+.cta-band{background:radial-gradient(50% 80% at 85% 50%,rgba(195,0,0,.22),transparent 70%),var(--night)}
+.book-cta{display:grid;grid-template-columns:1fr auto;gap:40px;align-items:end}
+.book-cta>div{display:grid;gap:18px}
+.book-perks{list-style:none;margin:6px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:8px 28px;font-size:14.5px;color:rgba(244,241,234,.62)}
+.book-cta .btn{min-height:58px;padding:0 34px;font-size:16px}
+.draft{outline:2px dashed #E5B300;outline-offset:-12px}
+.incl{list-style:none;margin:0;padding:0;display:grid;gap:10px;font-size:18px}
+mark{background:#FFE58A;padding:0 4px;border-radius:4px}
+
+/* Visita */
+.visit{display:grid;grid-template-columns:1fr 1fr;gap:clamp(36px,6vw,96px);align-items:start}
+.visit>*{min-width:0}
+.contact li>span,.contact li{min-width:0;overflow-wrap:anywhere}
+.visit>div:first-child{display:grid;gap:18px;justify-items:start}
+.hours{border-collapse:collapse;margin-top:8px;font-size:16px}
+.hours th{text-align:left;font-weight:500;padding:10px 32px 10px 0}
+.hours td{padding:10px 0;color:var(--ink-soft);font-variant-numeric:tabular-nums}
+.hours tr{border-bottom:1px solid var(--line)}
+.contact{list-style:none;margin:6px 0 0;padding:0;display:grid;gap:12px}
+.contact li{display:flex;align-items:flex-start;gap:12px}
+.contact svg{width:18px;height:18px;flex:none;color:var(--ink-soft);margin-top:4px}
+.contact a{text-decoration:none}
+.contact a:hover{color:var(--red)}
+.faq{display:grid;border-top:1px solid var(--line)}
+.faq details{border-bottom:1px solid var(--line)}
+.faq summary{cursor:pointer;list-style:none;padding:20px 0;font:600 21px/1.25 var(--font-display);letter-spacing:-.015em;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:16px;overflow-wrap:anywhere}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";display:grid;place-items:center;width:24px;height:24px;margin-right:4px;font:300 24px/1 var(--font-body);color:var(--ink-soft);transition:transform .25s}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq details p{padding:0 0 22px;color:var(--ink-soft)}
+
+/* Cierre */
+.final{padding-block:clamp(100px,13vw,170px);text-align:center;border-top:1px solid var(--line)}
+.final .wrap{display:grid;justify-items:center;gap:26px}
+.final h2{font-size:clamp(40px,6vw,92px)}
+.final h2 em{display:block}
+.final .hero-ctas{justify-content:center;margin-top:0}
+.final .btn-rec{background:var(--ink);color:#fff}
+.final .btn-rec:hover{background:var(--red)}
+.g-rate{display:inline-flex;align-items:center;gap:8px;color:var(--ink-soft);text-decoration:none;font-size:14px}
+.g-rate .stars{display:flex;gap:1px;color:var(--red)}.g-rate svg{width:13px;height:13px}
+.g-rate b{color:var(--ink)}
+.foot .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;font-size:13.5px;color:var(--ink-soft);padding-block:26px;border-top:1px solid var(--line)}
+
+/* Animaciones */
+.js-anim [data-reveal]{opacity:0;transform:translateY(24px);transition:opacity 1s cubic-bezier(.2,.7,.2,1),transform 1s cubic-bezier(.2,.7,.2,1)}
+.js-anim [data-reveal].in{opacity:1;transform:none}
+.js-anim .hero-copy>*{animation:rise 1s cubic-bezier(.2,.7,.2,1) both}
+.js-anim .vf{animation:rise 1s .2s cubic-bezier(.2,.7,.2,1) both}
+.js-anim .hero-copy>:nth-child(2){animation-delay:.08s}.js-anim .hero-copy>:nth-child(3){animation-delay:.16s}.js-anim .hero-copy>:nth-child(4){animation-delay:.24s}.js-anim .hero-copy>:nth-child(5){animation-delay:.32s}
+html.loading .hero-copy>*,html.loading .vf{animation-play-state:paused}
+@keyframes rise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+.totop{background:#fff!important;color:var(--ink)!important;border-color:var(--line)!important;-webkit-backdrop-filter:none!important;backdrop-filter:none!important}
+
+.mbar{display:none}
+
+@media (max-width:1100px){
+  .svc{grid-template-columns:1fr 1fr}
+  .svc-card:last-child{grid-column:1/-1;grid-template-columns:1fr 1fr;grid-template-rows:auto}
+  .svc-card:last-child>img{height:100%;aspect-ratio:auto}
+}
+@media (max-width:960px){
+  .nav{display:none}
+  .hero-grid,.visit,.book-cta{grid-template-columns:1fr}
+  .vf{justify-self:stretch;width:100%;max-width:720px;order:-1}
+  .hero-q{display:none}
+  .facts{grid-template-columns:1fr 1fr}
+  .facts div:nth-child(3){padding-left:0;border-left:0}
+  .facts div:nth-child(n+3){border-top:1px solid var(--line)}
+  .works{grid-template-columns:1fr 1fr}
+  .rv-grid,.steps{grid-template-columns:1fr}
+  .steps li{grid-template-columns:200px 1fr;column-gap:22px;align-items:start}
+  .steps figure{grid-row:span 2;margin:0}
+  .svc{grid-template-columns:1fr}
+  .svc-card:last-child{grid-template-columns:1fr}
+}
+@media (max-width:640px){
+  :root{--head:64px}
+  body{font-size:16px;padding-bottom:84px}
+  .top .btn{display:none}
+  .brand img{height:34px;width:34px}
+  .hero{padding-top:calc(var(--head) + 10px)}
+  .hero-grid{gap:16px}
+  .vf{width:min(100%,calc(29svh * 16 / 9));justify-self:center;gap:10px}
+  .vf-screen{border-radius:12px}
+  .vf-ui .c{width:16px;height:16px}
+  .vf-ui .tl,.vf-ui .tr{top:10px}.vf-ui .bl,.vf-ui .br{bottom:10px}.vf-ui .tl,.vf-ui .bl{left:10px}.vf-ui .tr,.vf-ui .br{right:10px}
+  .vf-rec{top:14px;left:32px;font-size:10.5px}.vf-tc{top:14px;right:32px;font-size:10.5px}
+  .vf-label{display:none}
+  .rate-stk{right:auto;left:10px;bottom:10px;padding:7px 10px 7px 9px;border-radius:11px;column-gap:7px}
+  .rate-stk b{font-size:24px}
+  .rate-stk small{font-size:10.5px}
+  .rate-stk .stars svg{width:10px;height:10px}
+  .vf-tl{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none;margin-inline:-2px;padding:0 2px}
+  .vf-tl::-webkit-scrollbar{display:none}
+  .vf-tl button{flex:none;padding:7px 12px;border-radius:999px;border:1px solid rgba(244,241,234,.18);gap:0}
+  .vf-tl button::before,.vf-tl button i,.vf-tl img{display:none}
+  .vf-tl button.on{background:var(--cream);border-color:var(--cream)}
+  .vf-tl button.on span{color:#141414}
+  .vf-tl span{font-size:13px;color:rgba(244,241,234,.75)}
+  .hero .eb-dot,.hero .eb-2{display:none}
+  .hero .eyebrow{font-size:11.5px}
+  .hero h1{font-size:clamp(30px,10.4vw,48px);margin-top:10px;letter-spacing:-.04em}
+  .hero-sub{margin-top:14px;font-size:16px}
+  .hero-ctas{margin-top:20px;gap:12px}
+  .hero .hero-ctas>.btn{width:100%}
+  .hero .tel{display:none}
+  .hero-micro-line{font-size:13.5px;margin-top:10px}
+  .facts{margin-top:40px}
+  .facts div{padding:16px 12px 18px 0}
+  .facts div+div{padding-left:12px}
+  .facts b{font-size:28px}
+  .works{grid-template-columns:1fr;gap:24px}
+  .steps li{grid-template-columns:1fr}
+  .steps figure{grid-row:auto}
+  .book-cta .btn{width:100%}
+  .final .hero-ctas{flex-direction:column;width:100%}.final .hero-ctas .btn{width:100%}
+  .mbar{display:flex;gap:6px;position:fixed;left:12px;right:12px;bottom:calc(10px + env(safe-area-inset-bottom,0px));z-index:70;padding:6px;border-radius:999px;background:rgba(244,241,235,.92);-webkit-backdrop-filter:blur(18px) saturate(1.5);backdrop-filter:blur(18px) saturate(1.5);border:1px solid rgba(20,20,20,.1);box-shadow:0 14px 34px -14px rgba(20,20,20,.45)}
+  .mbar.dark{background:rgba(13,13,15,.86);border-color:rgba(255,255,255,.16)}
+  .mbar .btn{flex:1;min-height:48px;white-space:nowrap;padding:0 18px}
+  .mbar .btn-primary{transition:background .4s}
+  .mbar.dark .btn-primary{background:var(--red)}
+  .mbar.dark .btn-primary svg{color:#fff}
+  .mbar .btn-ghost{flex:0 0 48px;width:48px;padding:0;border-color:transparent;background:rgba(20,20,20,.07)}
+  .mbar.dark .btn-ghost{background:rgba(255,255,255,.16);color:#fff}
+  .mbar .btn-ghost svg{width:20px;height:20px}
+}
+@media (min-width:961px) and (max-height:620px){.hero-q{display:none}.hero-sub{margin-top:16px}.hero-ctas{margin-top:20px}}
+@media (min-width:961px) and (max-height:480px){.hero-sub{display:none}.hero-micro-line{display:none}.vf-tl span{display:none}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.disc .ring circle{stroke-dashoffset:0}}
+
+/* Temporadas: cerca de una fecha fuerte el eyebrow del hero pasa a píldora de línea fina con el piloto rojo latiendo */
+.hero .eyebrow.t-on{display:inline-flex;align-items:center;gap:10px;padding:6px 14px 6px 12px;border-radius:999px;border:1px solid rgba(244,241,234,.22);color:var(--cream);letter-spacing:.16em}
+.hero .eyebrow.t-on::before{content:"";width:7px;height:7px;border-radius:50%;flex:none;background:var(--rec);box-shadow:0 0 0 0 rgba(255,43,28,.55);animation:t-pulso 2s ease-out infinite}
+@keyframes t-pulso{70%{box-shadow:0 0 0 7px rgba(255,43,28,0)}100%{box-shadow:0 0 0 0 rgba(255,43,28,0)}}
+@media (max-width:640px){.hero .eyebrow.t-on{font-size:10.5px;letter-spacing:.1em;padding:5px 11px 5px 9px}}
+
+/* Botones flotantes (cabecera y barra móvil): aparecen tras un mínimo scroll, no al pintar el hero */
+.top .btn-primary{transition:opacity .35s,transform .35s cubic-bezier(.2,.7,.2,1),background .25s,box-shadow .25s}
+html.cta-wait .top .btn-primary{opacity:0;transform:translateY(-8px);pointer-events:none}
+.mbar{transition:transform .35s cubic-bezier(.2,.7,.2,1),opacity .35s,background .4s,border-color .4s}
+html.cta-wait .mbar,.mbar.off{transform:translateY(150%)!important;opacity:0!important;pointer-events:none}
+.hero .hero-ctas .btn{white-space:normal;text-align:center;min-width:0;max-width:100%}
+
+/* ---- Paneles laterales ---- */
+.bk{position:fixed;inset:0;z-index:120}
+.bk[hidden]{display:none}
+.bk-scrim{position:absolute;inset:0;background:rgba(18,18,20,.55);opacity:0;transition:opacity .35s ease}
+.bk.open .bk-scrim{opacity:1}
+.bk-panel{position:absolute;top:0;right:0;bottom:0;width:min(480px,100%);background:var(--shell);display:flex;flex-direction:column;box-shadow:-30px 0 80px -30px rgba(18,18,20,.45);transform:translateX(100%);transition:transform .42s cubic-bezier(.2,.8,.2,1)}
+.bk.open .bk-panel{transform:none}
+.bk-head{display:grid;grid-template-columns:44px 1fr 44px;align-items:center;gap:8px;padding:calc(10px + env(safe-area-inset-top,0px)) 12px 10px;border-bottom:1px solid var(--line);background:#fff}
+.bk-head .t{text-align:center;display:grid;gap:2px}
+.bk-head .t span{font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft)}
+.bk-head .t b{font-family:var(--font-display);font-weight:400;font-size:20px;color:var(--hibiscus);line-height:1.1}
+.bk-ib{all:unset;cursor:pointer;width:44px;height:44px;border-radius:50%;display:grid;place-items:center;color:var(--ink)}
+.bk-ib:hover{background:var(--shell-2)}
+.bk-ib:focus-visible{outline:3px solid var(--hibiscus)}
+.bk-ib svg{width:22px;height:22px}
+.bk-ib[disabled]{visibility:hidden}
+.bk-prog{height:4px;background:var(--shell-2)}
+.bk-prog i{display:block;height:100%;background:linear-gradient(90deg,var(--hibiscus),var(--sun));transform-origin:left;transition:transform .35s ease}
+.bk-body{flex:1;overflow-y:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch;padding:28px 22px 24px}
+.bk-pane{display:grid;gap:18px;align-content:start}
+.bk-pane[hidden]{display:none}
+.bk-pane h3{font-size:clamp(26px,6vw,32px);line-height:1.1}
+.bk-pane .sub{color:var(--ink-soft);margin-top:-8px}
+.bk-opts{display:grid;gap:10px}
+.bk-opts label{position:relative;cursor:pointer;display:block}
+.bk-opts input{position:absolute;opacity:0;inset:0;margin:0;cursor:pointer}
+.bk-opts span{display:flex;align-items:center;justify-content:space-between;min-height:58px;padding:0 18px;border-radius:16px;border:1.5px solid var(--line);background:#fff;font-size:17px;font-weight:600;transition:border-color .2s,background .2s,color .2s}
+.bk-opts span::after{content:"";width:22px;height:22px;border-radius:50%;border:2px solid var(--line);flex:none;transition:all .2s}
+.bk-opts input[type=checkbox]+span::after{border-radius:7px}
+.bk-opts input:checked+span{border-color:var(--hibiscus);background:#FBECEC;color:var(--hibiscus-ink)}
+.bk-opts input:checked+span::after{border-color:var(--hibiscus);background:var(--hibiscus) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='none' stroke='white' stroke-width='3.2' stroke-linecap='round' stroke-linejoin='round' d='M6 12l4 4 8-8'/%3E%3C/svg%3E") center/14px no-repeat}
+.bk-opts input:focus-visible+span{outline:3px solid var(--hibiscus);outline-offset:2px}
+.bk-opts.row{grid-template-columns:repeat(auto-fit,minmax(0,1fr));gap:8px}
+.bk-opts.row span{justify-content:center;min-height:50px;padding:0 10px;font-size:15px;text-align:center}
+.bk-opts.row span::after{display:none}
+.bk-field{display:grid;gap:8px;min-width:0}
+.bk-field>span{font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-soft)}
+.bk-field input,.bk-field textarea{display:block;width:100%;min-width:0;max-width:100%;min-height:56px;padding:14px 16px;border-radius:14px;border:1.5px solid var(--line);background:#fff;font:500 17px var(--font-body);color:var(--ink);-webkit-appearance:none;appearance:none}
+.bk-field input[type=date]{text-align:left}
+.bk-field input::-webkit-date-and-time-value{text-align:left}
+.bk-field textarea{min-height:96px;resize:vertical}
+.cal{background:#fff;border:1.5px solid var(--line);border-radius:18px;padding:10px 12px 14px}
+.cal-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:6px}
+.cal-head b{font-size:17px}
+.cal-head .bk-ib[disabled]{visibility:visible;opacity:.25;cursor:default}
+.cal-dow,.cal-grid{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:4px;text-align:center}
+.cal-dow span{font-size:12px;font-weight:700;color:var(--ink-soft);padding:4px 0}
+.cal-dow .we,.cal-grid .we{color:var(--hibiscus)}
+.cal-grid button{all:unset;box-sizing:border-box;cursor:pointer;aspect-ratio:1;max-height:48px;width:100%;display:grid;place-items:center;border-radius:12px;font-weight:600;font-size:15px;font-variant-numeric:tabular-nums;color:var(--ink);transition:background .15s,color .15s}
+.cal-grid button.we{color:var(--hibiscus)}
+.cal-grid button:hover:not([disabled]){background:var(--shell-2)}
+.cal-grid button[disabled]{opacity:.28;cursor:default}
+.cal-grid button{position:relative}
+.cal-grid button.today{opacity:1;color:var(--ink);box-shadow:inset 0 0 0 2px var(--sun);background:#FBF1F1}
+.cal-grid button.today::after{content:"";position:absolute;left:50%;bottom:12%;width:5px;height:5px;margin-left:-2.5px;border-radius:50%;background:#E0864A}
+.cal-legend{display:flex;align-items:center;gap:6px;margin:10px 2px 0;font-size:13px;font-weight:600;color:var(--ink-soft)}
+.cal-legend i{width:14px;height:14px;border-radius:5px;box-shadow:inset 0 0 0 2px var(--sun);background:#FBF1F1;position:relative;flex:none}
+.cal-legend i::after{content:"";position:absolute;left:50%;bottom:2px;width:4px;height:4px;margin-left:-2px;border-radius:50%;background:#E0864A}
+.cal-grid button[aria-pressed="true"]{background:var(--hibiscus);color:#fff}
+.cal-grid button:focus-visible{outline:3px solid var(--hibiscus);outline-offset:1px}
+.cal-sel{margin:4px 0 0;font-weight:600;color:var(--ink-soft)}
+.cal-sel.on{color:var(--hibiscus-ink)}
+.bk-field input:focus,.bk-field textarea:focus{outline:none;border-color:var(--hibiscus)}
+.bk-field input[aria-invalid="true"]{border-color:#C6283D;background:#FFF2F4}
+.stepper{display:grid;grid-template-columns:56px 1fr 56px;align-items:center;background:#fff;border:1.5px solid var(--line);border-radius:16px;overflow:hidden}
+.stepper button{all:unset;cursor:pointer;height:56px;display:grid;place-items:center;font-size:26px;font-weight:600;color:var(--hibiscus)}
+.stepper button:active{background:var(--shell-2)}
+.stepper button:focus-visible{outline:3px solid var(--hibiscus);outline-offset:-3px}
+.stepper output{text-align:center;font-size:22px;font-weight:700;font-variant-numeric:tabular-nums}
+.bk-foot{padding:12px 22px calc(14px + env(safe-area-inset-bottom,0px));border-top:1px solid var(--line);background:#fff;display:grid;gap:8px}
+.bk-foot .btn{width:100%;min-height:56px;font-size:17px}
+.bk-foot [hidden]{display:none!important}
+.f-error{margin:0;color:#B3213A;font-weight:600;font-size:15px}
+.btn-wa{background:#1FA855;color:#fff;box-shadow:0 12px 24px -12px rgba(31,168,85,.8);width:100%;white-space:nowrap}
+.btn-wa:hover{background:#178F47}
+.btn-wa svg{width:22px;height:22px}
+.f-preview{margin:0;white-space:pre-wrap;font:16px/1.5 var(--font-body);background:#E7FFDB;border-radius:16px 16px 16px 4px;padding:16px 18px;color:#123;box-shadow:0 1px 0 rgba(0,0,0,.06)}
+.f-copy{all:unset;cursor:pointer;justify-self:center;font-size:14px;font-weight:600;color:var(--hibiscus-ink);text-decoration:underline;text-underline-offset:3px;padding:4px 8px}
+.f-copy:focus-visible{outline:3px solid var(--hibiscus);border-radius:6px}
+.f-hint{margin:0;font-size:13px;color:var(--ink-soft);text-align:center}
+
+
+.hrs{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.stepper.sm{grid-template-columns:40px 1fr 40px;border-radius:14px}
+.stepper.sm button{height:44px;font-size:22px}
+.stepper.sm button[disabled]{opacity:.25;cursor:default}
+.stepper.sm output{font-size:18px}
+.hrs-out{margin:-4px 0 0;font-size:14px;font-weight:600;color:var(--hibiscus-ink)}
+/* Panel compacto: ningún paso necesita scroll */
+.bk-body{padding:18px 18px 14px}
+.bk-pane{gap:14px}
+.bk-pane h3{font-size:24px}
+.bk-pane .sub{margin-top:-6px;font-size:15px}
+.bk-field{gap:6px}
+.bk-field>span{font-size:12px}
+.bk-opts{gap:8px}
+.bk-opts span{min-height:50px;font-size:16px;border-radius:14px}
+.bk-opts.row span{min-height:44px}
+.bk-opts.grid2{grid-template-columns:1fr 1fr}
+.bk-opts.grid2 span{min-height:44px;padding:0 12px;font-size:14px}
+.bk-opts.grid2 span::after{width:18px;height:18px}
+.bk-field input,.bk-field textarea{min-height:48px;padding:11px 14px;font-size:16px}
+.bk-field textarea{min-height:76px}
+.stepper{grid-template-columns:52px 1fr 52px}
+.stepper button{height:48px}
+.cal{padding:6px 8px 10px}
+.cal-head{margin-bottom:2px}
+.cal-head .bk-ib{width:38px;height:38px}
+.cal-dow span{padding:2px 0}
+.cal-grid{gap:2px}
+.cal-grid button{aspect-ratio:auto;height:clamp(34px,5.2vh,44px)}
+.cal-legend{margin-top:6px;font-size:12px}
+.cal-sel{margin:0;font-size:14px}
+.f-preview{font-size:14px;padding:12px 14px}
+.bk-foot{padding:10px 18px calc(10px + env(safe-area-inset-bottom,0px));gap:6px}
+.bk-foot .btn{min-height:50px}
+.bk-head{padding-block:calc(6px + env(safe-area-inset-top,0px)) 6px}
+@media (max-height:700px){
+  .bk-pane h3{font-size:22px}
+  .bk-opts span{min-height:46px}
+  .bk-opts.row span,.bk-opts.grid2 span{min-height:40px}
+  .stepper button{height:44px}
+  .cal-grid button{height:32px;font-size:14px}
+  .bk-body{padding-top:14px}
+  .f-preview{font-size:13px;line-height:1.4;padding:10px 12px}
+  .bk-pane .sub{font-size:13.5px}
+}
+@media (max-height:620px){.bk-pane{gap:10px}.bk-pane h3{font-size:20px}.f-preview{font-size:12.5px;line-height:1.35}}
+.rvd-body{display:grid;grid-template-columns:minmax(0,1fr);gap:18px;align-content:start;overflow-x:hidden;overscroll-behavior-x:none;touch-action:pan-y}
+.rvd .bk-panel{overflow-x:hidden;max-width:100vw}
+.rvd-body>*,.rvd-list>*{min-width:0;max-width:100%}
+.rvd-list .rv,.rvd-list .rv *{overflow-wrap:anywhere}
+.rvd-list .rv-top{flex-wrap:wrap}.rvd-list .rv-tag{white-space:normal}
+.rvd-sum{display:grid;grid-template-columns:auto minmax(0,1fr);gap:22px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:var(--r-md);padding:18px 20px}
+.rvd-score{display:grid;justify-items:center;gap:4px}
+.rvd-score b{font-size:44px;line-height:1;font-weight:700;color:var(--ink)}
+.rvd-score small{font-size:13px;color:var(--ink-soft)}
+.rvd-dist{list-style:none;margin:0;padding:0;display:grid;gap:5px;font-size:13px;color:var(--ink-soft)}
+.rvd-dist li{display:grid;grid-template-columns:12px 1fr 22px;gap:8px;align-items:center}
+.rvd-dist i{height:8px;border-radius:99px;background:var(--shell-2);overflow:hidden}.rvd-dist b{display:block;height:100%;background:#F5B400;border-radius:99px}
+.rvd-dist em{font-style:normal;text-align:right}
+.rvd-h{margin:6px 0 0;font-size:17px}
+.rvd-list{display:grid;grid-template-columns:minmax(0,1fr);gap:12px}
+.rvd-list .rv{background:#fff;opacity:1!important;transform:none!important}
+.rvd-map{border-radius:var(--r-md);overflow:hidden;border:1px solid var(--line);background:var(--shell-2);height:300px;flex:none}
+.rvd-map iframe{width:100%;height:100%;border:0;display:block}
+.rvd-note{margin:0;font-size:13px;color:var(--ink-soft)}
+.rvd-foot{padding:12px 16px calc(12px + env(safe-area-inset-bottom,0px));border-top:1px solid var(--line);background:#fff}
+.rvd-foot .btn{width:100%}
+/* Simulador en panel lateral; los tres rombos del logo hacen de cargador */
+.sim .bk-panel{width:min(1120px,100%);background:var(--night);color:#F4F1EA;box-shadow:-30px 0 80px -30px rgba(0,0,0,.6)}
+.sim .bk-head{background:var(--night);border-bottom-color:rgba(244,241,234,.14)}
+.sim .bk-head .t span{color:rgba(244,241,234,.62)}
+.sim .bk-head .t b{color:#F4F1EA}
+.sim .bk-ib{color:#F4F1EA}
+.sim .bk-ib:hover{background:rgba(255,255,255,.1)}
+.sim-main{position:relative;flex:1;min-height:0;display:flex;flex-direction:column}
+.sim-body{flex:1;min-height:0;overflow-y:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch;padding:clamp(18px,3vw,36px);padding-bottom:calc(clamp(18px,3vw,36px) + env(safe-area-inset-bottom,0px))}
+.sim-load{position:absolute;inset:0;z-index:5;display:grid;place-content:center;justify-items:center;gap:22px;background:var(--night);color:rgba(244,241,234,.7);font-size:14px;font-weight:600;letter-spacing:.04em;transition:opacity .4s}
+.sim-load.done{opacity:0;pointer-events:none}
+.rhombs{width:112px;height:auto;overflow:visible}
+.rhombs path{transform-box:fill-box;transform-origin:center;animation:rhomb 1.35s ease-in-out infinite}
+.rhombs .r-top{fill:#F4F1EA}
+.rhombs .r-l{fill:#FF6600;animation-delay:.18s}
+.rhombs .r-r{fill:#FF6600;animation-delay:.36s}
+@keyframes rhomb{0%,65%,100%{opacity:.2;transform:scale(.82)}28%{opacity:1;transform:scale(1)}}
+/* Subir arriba */
+.totop{position:fixed;right:20px;bottom:24px;z-index:65;width:48px;height:48px;border-radius:50%;border:1px solid rgba(255,255,255,.6);background:rgba(255,255,255,.72);-webkit-backdrop-filter:blur(14px) saturate(1.6);backdrop-filter:blur(14px) saturate(1.6);color:var(--ink);display:grid;place-items:center;cursor:pointer;box-shadow:0 10px 30px -10px rgba(21,21,21,.3);opacity:0;transform:translateY(12px) scale(.9);pointer-events:none;transition:opacity .3s,transform .3s}
+.totop.on{opacity:1;transform:none;pointer-events:auto}
+.totop:hover{transform:translateY(-2px)}
+.totop svg{width:22px;height:22px}
+@media (max-width:960px){.totop{bottom:calc(86px + env(safe-area-inset-bottom,0px));right:16px;width:44px;height:44px}}
+@media (max-width:640px){.bk-panel{width:100%;transform:translateY(100%);box-shadow:none}}
+.bk-head .t b{font-family:var(--font-display);font-weight:400;color:var(--ink)}
+.bk-opts input:checked+span{background:#FBECEC}
+.btn-wa{font-size:16px}
+.bk-pane h3:focus{outline:none}
+.bk-opts.grid2.tight span{min-height:44px;padding:0 12px;font-size:14.5px}
+@media (max-height:700px){.bk-opts.grid2.tight span{min-height:38px;font-size:14px}}
+
+</style>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-phone" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 22s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></g></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="M3.5 6.5l8.5 6.5 8.5-6.5"/></g></symbol>
+  <symbol id="i-ig" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".6" fill="currentColor"/></g></symbol>
+  <symbol id="i-yt" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><rect x="2.5" y="5" width="19" height="14" rx="4"/><path d="M10 9.2v5.6l4.8-2.8z" fill="currentColor"/></g></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2.8l2.8 5.9 6.4.8-4.7 4.4 1.2 6.4L12 17.2l-5.7 3.1 1.2-6.4L2.8 9.5l6.4-.8z"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-play" viewBox="0 0 24 24"><path fill="currentColor" d="M8 5.5v13a1 1 0 0 0 1.5.9l10.4-6.5a1 1 0 0 0 0-1.8L9.5 4.6A1 1 0 0 0 8 5.5z"/></symbol>
+  <symbol id="i-rec" viewBox="0 0 24 24"><circle cx="12" cy="12" r="6" fill="currentColor"/></symbol>
+</svg>
+
+<div class="intro" id="intro" aria-hidden="true">
+  <div class="intro-core">
+    <span class="disc"><svg class="ring" viewBox="0 0 100 100"><circle cx="50" cy="50" r="48" pathLength="1"/></svg><img src="img/logo.png" alt=""></span>
+    <b>Pixelecer</b>
+    <small>Productora audiovisual · Pontevedra</small>
+  </div>
+</div>
+<noscript><style>.intro{display:none}</style></noscript>
+
+<header class="top" id="top">
+  <div class="wrap">
+    <a class="brand" href="#hero" aria-label="Pixelecer Audiovisual, inicio"><img src="img/logo.png" alt=""><span>Pixelecer</span></a>
+    <nav class="nav" aria-label="Secciones">
+      <a href="#trabajos">Trabajos</a>
+      <a href="#servicios">Servicios</a>
+      <a href="#proceso">Cómo trabajamos</a>
+      <a href="#resenas">Reseñas</a>
+      <a href="#visita">Contacto</a>
+    </nav>
+    <a class="btn btn-primary" href="#presupuesto"><svg aria-hidden="true"><use href="#i-rec"/></svg>Presupuesto</a>
+  </div>
+  <div class="progress" id="progress"></div>
+</header>
+
+<main>
+  <section class="hero" id="hero">
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <span class="eyebrow" data-t="eyebrow">Productora audiovisual<span class="eb-dot"> · </span><span class="eb-2">Pontevedra · desde 2016</span></span>
+        <h1><span class="n1">Hacemos vídeos.</span> <em>Contamos historias</em></h1>
+        <p class="hero-sub" data-t="sub">Productora audiovisual en Pontevedra: spots y vídeo corporativo, videoclips, documental, grabación con dron y películas de boda. De la idea a la entrega, con nuestro equipo, en Galicia y allá donde haga falta.</p>
+        <div class="hero-ctas">
+          <a class="btn btn-rec" href="#presupuesto"><svg aria-hidden="true"><use href="#i-rec"/></svg><span data-t="cta">Dale al REC</span></a>
+          <a class="tel" href="tel:+34697295462"><svg><use href="#i-phone"/></svg>697 29 54 62</a>
+        </div>
+        <p class="hero-micro-line" data-t="micro">Cuéntanos tu idea · presupuesto por WhatsApp, sin compromiso</p>
+        <blockquote class="hero-q">«Aportan ideas y hacen crecer las tuyas» <cite>Jose Angel F. · Google</cite></blockquote>
+      </div>
+
+      <figure class="vf" id="vf" aria-label="Monitor con trabajos reales de Pixelecer">
+        <div class="vf-screen" id="vf-screen">
+          <div class="vf-takes" id="vf-takes"></div>
+          <div class="vf-ui" aria-hidden="true">
+            <i class="c tl"></i><i class="c tr"></i><i class="c bl"></i><i class="c br"></i>
+            <span class="vf-rec"><b></b>REC</span>
+            <span class="vf-tc" id="vf-tc">00:00:00:00</span>
+            <span class="vf-label" id="vf-label">Demo reel</span>
+            <span class="vf-cut" id="vf-cut">Corte</span>
+          </div>
+          <a class="rate-stk" href="#resenas" data-rvd aria-label="5,0 de 5 en Google, 45 reseñas. Ver reseñas">
+            <span class="stars"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></span>
+            <b>5,0</b><small>45 reseñas<br>en Google</small>
+          </a>
+        </div>
+        <div class="vf-tl" id="vf-tl" role="group" aria-label="Elige qué ver en el monitor"></div>
+      </figure>
+    </div>
+    <div class="wrap facts">
+      <div><b data-count="2016" data-from="1990">2016</b><span>Nace Pixelecer en Pontevedra</span></div>
+      <div><b>+500</b><span>Proyectos creativos realizados</span></div>
+      <div><b>+10</b><span>Países grabando bodas, en tres continentes</span></div>
+      <div><b>AESA</b><span>Operadores de dron certificados</span></div>
+    </div>
+  </section>
+
+  <section class="clients" aria-label="Algunos de nuestros clientes">
+    <div class="wrap"><span class="eyebrow">Han confiado en nosotros</span></div>
+    <div class="marq"><div class="marq-in">
+      <span>Xunta de Galicia</span><span>Concello de Pontevedra</span><span>Concello de Santiago</span><span>Deputación de Pontevedra</span><span>Xacobeo Galicia</span><span>Cruz Roja</span><span>Warner Music Group</span><span>Sony Music</span><span>Feiraco</span><span>Viña Costeira</span><span>Tamboura</span><span>Cesuga</span>
+      <span aria-hidden="true">Xunta de Galicia</span><span aria-hidden="true">Concello de Pontevedra</span><span aria-hidden="true">Concello de Santiago</span><span aria-hidden="true">Deputación de Pontevedra</span><span aria-hidden="true">Xacobeo Galicia</span><span aria-hidden="true">Cruz Roja</span><span aria-hidden="true">Warner Music Group</span><span aria-hidden="true">Sony Music</span><span aria-hidden="true">Feiraco</span><span aria-hidden="true">Viña Costeira</span><span aria-hidden="true">Tamboura</span><span aria-hidden="true">Cesuga</span>
+    </div></div>
+  </section>
+
+  <section class="sec manifesto" id="manifiesto">
+    <div class="wrap">
+      <span class="eyebrow">Tiempo de lecer, tiempo de crear</span>
+      <h2 class="mani" id="mani">Todo buen proyecto empieza por escuchar. Nos gusta imaginar sin límites. Nos mueve crear, para llegar. Al editar, todo cobra sentido. Si no consigue emocionar, no nos representa.</h2>
+      <p class="lead">Pixelecer nace en 2016 en un «tiempo de lecer», ese espacio de libertad donde todo fluye sin prisas. Desde entonces hemos ampliado equipo y proyectos sin perder la esencia: buscar la emoción detrás de cada imagen, para marcas, artistas, instituciones y personas.</p>
+    </div>
+  </section>
+
+  <section class="sec band-ink" id="trabajos">
+    <div class="wrap">
+      <div class="sec-head" data-reveal>
+        <span class="eyebrow">Portfolio</span>
+        <h2>Historias que <em>hemos contado</em></h2>
+        <p class="lead">Spots, videoclips y películas de boda. Toca cualquiera para verla aquí mismo.</p>
+      </div>
+      <div class="filters" role="group" aria-label="Filtrar trabajos">
+        <button type="button" class="on" data-f="all">Todos</button>
+        <button type="button" data-f="corp">Corporativos y spots</button>
+        <button type="button" data-f="clip">Videoclips</button>
+        <button type="button" data-f="boda">Bodas</button>
+      </div>
+      <div class="works" id="works"></div>
+      <div class="works-more"><button type="button" class="btn btn-ghost" id="works-more">Ver más trabajos</button></div>
+    </div>
+  </section>
+
+  <section class="sec" id="servicios">
+    <div class="wrap">
+      <div class="sec-head" data-reveal>
+        <span class="eyebrow">Lo que hacemos</span>
+        <h2>Vídeo, dron <em>y wedding films</em></h2>
+      </div>
+      <div class="svc">
+        <article class="svc-card" data-reveal>
+          <img src="img/w-toxa.jpg" alt="O encontro, spot de Pixelecer en A Toxa" loading="lazy">
+          <div>
+            <h3>Producción audiovisual</h3>
+            <p>Transformamos ideas en historias que emocionan y te ayudan a diferenciarte. Vídeo, fotografía y animación.</p>
+            <ul><li>Vídeo corporativo y spots</li><li>Publicidad y contenido para redes</li><li>Documental y campañas institucionales</li><li>Videoclips</li></ul>
+            <a class="link" href="#presupuesto" data-tipo="Vídeo corporativo">Pedir presupuesto <svg><use href="#i-arrow"/></svg></a>
+          </div>
+        </article>
+        <article class="svc-card" data-reveal>
+          <img src="img/w-vina-costeira.jpg" alt="Toma aérea de los viñedos de Viña Costeira" loading="lazy">
+          <div>
+            <h3>Grabación con dron</h3>
+            <p>La vista desde el cielo lo cambia todo. Operadores y radiofonistas certificados por AESA y gestión integral de los permisos de vuelo.</p>
+            <ul><li>Tomas aéreas en vídeo y foto</li><li>DJI Mini, Mavic, Inspire y FPV</li><li>Inspección de naves, cubiertas y fachadas</li><li>Topografía, ortofotos y volúmenes</li></ul>
+            <a class="link" href="#presupuesto" data-tipo="Grabación con dron">Pedir presupuesto <svg><use href="#i-arrow"/></svg></a>
+          </div>
+        </article>
+        <article class="svc-card" data-reveal>
+          <img src="img/b-robert-maite.jpg" alt="Robert y Maite, película de boda en Marruecos" loading="lazy">
+          <div>
+            <h3>Wedding films</h3>
+            <p>Nada de vídeos genéricos: una película con alma para cada pareja. En Galicia y en destination weddings, en más de diez países.</p>
+            <ul><li>Preboda, boda y postboda</li><li>Bodas íntimas y luxury weddings</li><li>Destination weddings: Italia, Francia, Portugal…</li></ul>
+            <div class="awards" aria-label="Premios"><img src="img/premio-2022.jpg" alt="Wedding Awards 2022 de bodas.net" loading="lazy"><img src="img/premio-2023.jpg" alt="Wedding Awards 2023 de bodas.net" loading="lazy"><img src="img/premio-2025.jpg" alt="Wedding Awards 2025 de bodas.net" loading="lazy"><img src="img/nominado-2023.jpg" alt="Nominado a Videógrafo del año 2023" loading="lazy"></div>
+            <a class="link" href="#presupuesto" data-tipo="Vídeo de boda">Consultar nuestra fecha <svg><use href="#i-arrow"/></svg></a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec band-white" id="proceso">
+    <div class="wrap">
+      <div class="sec-head" data-reveal>
+        <span class="eyebrow">Cómo trabajamos</span>
+        <h2>De la idea <em>a la pantalla</em></h2>
+        <p class="lead">Te contamos cómo trabajamos, paso a paso.</p>
+      </div>
+      <ol class="steps">
+        <li data-reveal><figure><img src="img/p-pre.jpg" alt="Claqueta antes de un rodaje" loading="lazy"><span>01</span></figure><h3>Preproducción</h3><p>Definimos el enfoque y, aprobada la propuesta creativa, planificamos localizaciones, equipo técnico y tiempos.</p></li>
+        <li data-reveal><figure><img src="img/p-pro.jpg" alt="Operador de cámara de Pixelecer en un rodaje" loading="lazy"><span>02</span></figure><h3>Producción</h3><p>Rodaje o sesión fotográfica: el momento de capturar las imágenes que darán vida al proyecto.</p></li>
+        <li data-reveal><figure><img src="img/p-post.jpg" alt="Edición en la oficina de Pixelecer" loading="lazy"><span>03</span></figure><h3>Postproducción</h3><p>Editamos, afinamos ritmo y color y dejamos cada detalle listo para entregar un resultado con personalidad.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="sec" id="resenas">
+    <div class="wrap">
+      <div class="sec-head" data-reveal>
+        <span class="eyebrow">Reseñas de Google</span>
+        <h2>5,0 en 45 reseñas. <em>Todas de cinco estrellas</em></h2>
+      </div>
+      <div class="rv-grid" id="rv-grid"></div>
+      <p class="rv-more"><a href="#resenas" data-rvd>Ver más reseñas →</a> <span>Fragmentos literales de reseñas de 5 estrellas en Google.</span></p>
+    </div>
+  </section>
+
+  <section class="sec band-ink cta-band" id="presupuesto">
+    <div class="wrap book-cta" data-reveal>
+      <div>
+        <span class="eyebrow">¿Una idea en mente?</span>
+        <h2>Dale al REC. <em>Nosotros la contamos</em></h2>
+        <p class="lead">Cuatro preguntas rápidas y tu solicitud sale ya escrita por WhatsApp, con un código propio.</p>
+        <ul class="book-perks"><li>Sin registrarte</li><li>Menos de un minuto</li><li>O llámanos al 986 108 741</li></ul>
+      </div>
+      <a class="btn btn-rec" href="#presupuesto"><svg aria-hidden="true"><use href="#i-rec"/></svg>Pedir presupuesto</a>
+    </div>
+  </section>
+
+  <section class="sec band-white draft" id="borrador" hidden>
+    <div class="wrap">
+      <div class="sec-head"><span class="eyebrow">Borrador · Datos por confirmar</span><h2>Plazos y tarifas <em>claros</em></h2></div>
+      <ul class="incl">
+        <li>WhatsApp para presupuestos: <mark>[¿697 29 54 62 tiene WhatsApp?]</mark></li>
+        <li>Plazo habitual de entrega de un vídeo corporativo: <mark>[__ semanas]</mark></li>
+        <li>Plazo de entrega de una película de boda: <mark>[__ semanas]</mark></li>
+        <li>Packs o precios orientativos de boda (preboda, boda, postboda, confesionario): <mark>[__ €]</mark></li>
+        <li>Horario de oficina: <mark>[¿L–V 7:00–15:00, como en Google?]</mark></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="sec" id="visita">
+    <div class="wrap visit">
+      <div data-reveal>
+        <span class="eyebrow">Contacto y estudio</span>
+        <h2>Ven a vernos <em>a Pontevedra</em></h2>
+        <table class="hours" aria-label="Horario">
+          <tr><th>Lunes a viernes</th><td>07:00–15:00</td></tr>
+          <tr><th>Sábado y domingo</th><td>Cerrado</td></tr>
+        </table>
+        <ul class="contact">
+          <li><svg><use href="#i-pin"/></svg><a href="https://www.google.com/maps/place/Pixelecer+Audiovisual+%7C+Productora+audiovisual+en+Galicia/@42.4283361,-8.6472524,17z/data=!4m6!3m5!1s0xd2f63e7f1adf0cb:0x8be312c5701a780e!8m2!3d42.4283361!4d-8.6472524!16s%2Fg%2F11gnpr1qny" target="_blank" rel="noopener">Rúa Gagos de Mendoza, 2 · Planta 2, oficina 4 · 36001 Pontevedra</a></li>
+          <li><svg><use href="#i-phone"/></svg><a href="tel:+34986108741">986 108 741</a> · <a href="tel:+34697295462">697 29 54 62</a></li>
+          <li><svg><use href="#i-mail"/></svg><a href="mailto:info@pixelecer.com">info@pixelecer.com</a></li>
+          <li><svg><use href="#i-ig"/></svg><a href="https://www.instagram.com/pixelecer/" target="_blank" rel="noopener">@pixelecer</a> · <a href="https://www.instagram.com/pixelecer.weddings/" target="_blank" rel="noopener">@pixelecer.weddings</a></li>
+          <li><svg><use href="#i-yt"/></svg><a href="https://www.youtube.com/c/PixelecerAudiovisual" target="_blank" rel="noopener">YouTube · Pixelecer Audiovisual</a></li>
+        </ul>
+      </div>
+      <div class="faq" data-reveal>
+        <details open><summary>¿Cuánto cuesta un vídeo?</summary><p>Depende del tipo de pieza, los días de rodaje, el equipo y la postproducción. Cuéntanos tu idea y te preparamos el presupuesto.</p></details>
+        <details><summary>¿Trabajáis fuera de Galicia?</summary><p>Sí. Tenemos base en Pontevedra, pero nos desplazamos allí donde haga falta: ya hemos grabado en más de diez países y tres continentes.</p></details>
+        <details><summary>¿Os encargáis de los permisos del dron?</summary><p>Sí. Nuestros operadores y radiofonistas están certificados por AESA y gestionamos los permisos de vuelo y la coordinación con zonas controladas.</p></details>
+        <details><summary>¿Hacéis preboda y postboda?</summary><p>Sí, además del vídeo del día de la boda. Mira algunas en el portfolio, en «Bodas».</p></details>
+        <details><summary>¿Qué tipo de vídeos hacéis?</summary><p>Vídeo corporativo, spots y publicidad, contenido para redes, documental, campañas institucionales, videoclips, eventos, grabación con dron y películas de boda.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="final">
+    <div class="wrap">
+      <span class="eyebrow">Pixelecer Audiovisual</span>
+      <h2>Hacemos vídeos. <em>Contamos historias</em></h2>
+      <div class="hero-ctas">
+        <a class="btn btn-rec" href="#presupuesto"><svg aria-hidden="true"><use href="#i-rec"/></svg>Dale al REC</a>
+        <a class="btn btn-ghost" href="tel:+34986108741"><svg><use href="#i-phone"/></svg>Llamar</a>
+      </div>
+      <a class="g-rate" href="#resenas" data-rvd><span class="stars"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></span><b>5,0</b><span>· 45 reseñas en Google</span></a>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap"><span>Pixelecer Audiovisual · Rúa Gagos de Mendoza, 2 · 36001 Pontevedra</span><span>986 108 741 · info@pixelecer.com</span></div>
+</footer>
+
+<button class="totop" id="totop" type="button" aria-label="Subir arriba"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="M12 19V5M5 12l7-7 7 7"/></svg></button>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Vídeo" hidden><button type="button" class="lb-x" aria-label="Cerrar">×</button><button type="button" class="lb-nav prev" data-lb="-1" aria-label="Vídeo anterior"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg></button><div class="lb-media" id="lb-media"></div><button type="button" class="lb-nav next" data-lb="1" aria-label="Vídeo siguiente"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></button><div class="lb-foot"><span id="lb-cap"></span><a class="btn btn-light" id="lb-go" href="#presupuesto">Quiero un vídeo así</a></div></div>
+
+<div class="bk rvd" id="rvd" role="dialog" aria-modal="true" aria-labelledby="rvd-title" hidden>
+  <div class="bk-scrim" data-rvd-x></div>
+  <div class="bk-panel">
+    <header class="bk-head">
+      <span></span>
+      <div class="t"><span>Google</span><b id="rvd-title">Reseñas</b></div>
+      <button type="button" class="bk-ib" data-rvd-x aria-label="Cerrar"><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" d="M6 6l12 12M18 6L6 18"/></svg></button>
+    </header>
+    <div class="bk-body rvd-body">
+      <div class="rvd-sum">
+        <div class="rvd-score"><b>5,0</b><span class="rv-stars"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></span><small>45 reseñas</small></div>
+        <ul class="rvd-dist" aria-label="Reparto de estrellas"><li><span>5</span><i><b style="width:100%"></b></i><em>45</em></li><li><span>4</span><i><b style="width:0%"></b></i><em>0</em></li><li><span>3</span><i><b style="width:0%"></b></i><em>0</em></li><li><span>2</span><i><b style="width:0%"></b></i><em>0</em></li><li><span>1</span><i><b style="width:0%"></b></i><em>0</em></li></ul>
+      </div>
+      <h3 class="rvd-h">Reseñas de 5 estrellas</h3>
+      <div class="rvd-list" id="rvd-list"></div>
+      <h3 class="rvd-h">Su ficha en Google Maps</h3>
+      <div class="rvd-map"><iframe id="rvd-map" title="Pixelecer en Google Maps" data-src="https://maps.google.com/maps?q=Pixelecer%20Audiovisual%2C%20R%C3%BAa%20Gagos%20de%20Mendoza%202%2C%2036001%20Pontevedra&amp;hl=es&amp;z=16&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+      <p class="rvd-note">Google no permite mostrar aquí su lista completa de reseñas; puedes leerlas todas en su ficha.</p>
+    </div>
+    <footer class="rvd-foot"><a class="btn btn-ghost" href="https://www.google.com/maps/place/Pixelecer+Audiovisual+%7C+Productora+audiovisual+en+Galicia/@42.4283361,-8.6472524,17z/data=!4m6!3m5!1s0xd2f63e7f1adf0cb:0x8be312c5701a780e!8m2!3d42.4283361!4d-8.6472524!16s%2Fg%2F11gnpr1qny" target="_blank" rel="noopener">Ver las 45 en Google</a></footer>
+  </div>
+</div>
+
+<div class="bk" id="bk" role="dialog" aria-modal="true" aria-labelledby="bk-title" hidden>
+  <div class="bk-scrim" id="bk-scrim"></div>
+  <div class="bk-panel">
+    <header class="bk-head">
+      <button type="button" class="bk-ib" id="bk-back" aria-label="Paso anterior"><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M15 18l-6-6 6-6"/></svg></button>
+      <div class="t"><span id="bk-step">Paso 1 de 4</span><b id="bk-title">Tu presupuesto</b></div>
+      <button type="button" class="bk-ib" id="bk-x" aria-label="Cerrar"><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" d="M6 6l12 12M18 6L6 18"/></svg></button>
+    </header>
+    <div class="bk-prog"><i id="bk-bar" style="transform:scaleX(.25)"></i></div>
+    <form class="bk-body" id="book-form" novalidate>
+      <section class="bk-pane" data-step="1">
+        <h3>¿Qué quieres grabar?</h3>
+        <div class="bk-opts grid2 tight">
+          <label><input type="radio" name="tipo" value="Vídeo corporativo"><span>Vídeo corporativo</span></label>
+          <label><input type="radio" name="tipo" value="Publicidad o contenido de marca"><span>Publicidad / redes</span></label>
+          <label><input type="radio" name="tipo" value="Videoclip"><span>Videoclip</span></label>
+          <label><input type="radio" name="tipo" value="Documental o producción creativa"><span>Documental</span></label>
+          <label><input type="radio" name="tipo" value="Vídeo de boda"><span>Boda</span></label>
+          <label><input type="radio" name="tipo" value="Grabación con dron"><span>Dron</span></label>
+          <label><input type="radio" name="tipo" value="Evento"><span>Evento</span></label>
+          <label><input type="radio" name="tipo" value="Otro"><span>Otro</span></label>
+        </div>
+      </section>
+      <section class="bk-pane" data-step="2" hidden>
+        <h3>Tu idea</h3>
+        <label class="bk-field"><span>Cuéntanosla en una frase</span><input type="text" id="f-idea" placeholder="Un spot para presentar nuestra marca"></label>
+        <label class="bk-field"><span>¿Para cuándo? (fecha o mes aproximado)</span><input type="text" id="f-fecha" placeholder="Mayo de 2027"></label>
+      </section>
+      <section class="bk-pane" data-step="3" hidden>
+        <h3>¿Dónde se graba?</h3>
+        <label class="bk-field"><span>Localidad</span><input type="text" id="f-donde" placeholder="Pontevedra, Vigo, Santiago…"></label>
+        <div class="bk-field"><span>¿Cómo nos conociste?</span>
+          <div class="bk-opts row">
+            <label><input type="radio" name="origen" value="Redes sociales" checked><span>Redes</span></label>
+            <label><input type="radio" name="origen" value="Google"><span>Google</span></label>
+            <label><input type="radio" name="origen" value="Ya os conocía / me os recomendaron"><span>Ya os conocía</span></label>
+          </div>
+        </div>
+      </section>
+      <section class="bk-pane" data-step="4" hidden>
+        <h3>¿Quién eres?</h3>
+        <label class="bk-field"><span>Tu nombre</span><input type="text" id="f-nombre" autocomplete="given-name" placeholder="Laura"></label>
+        <label class="bk-field"><span>Empresa, grupo o pareja (opcional)</span><input type="text" id="f-empresa" autocomplete="organization" placeholder="Laura y Pablo"></label>
+      </section>
+      <section class="bk-pane" data-step="5" hidden>
+        <h3>Tu solicitud está lista</h3>
+        <p class="sub">Te respondemos para conocer el proyecto y darte el presupuesto.</p>
+        <pre class="f-preview" id="f-preview"></pre>
+        <button type="button" class="f-copy" id="f-copy">Copiar mensaje</button>
+      </section>
+    </form>
+    <footer class="bk-foot">
+      <p class="f-error" id="f-error" role="alert" hidden></p>
+      <button type="button" class="btn btn-primary" id="bk-next">Siguiente</button>
+      <a class="btn btn-wa" id="f-wa" href="#" target="_blank" rel="noopener" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .2-1.3c-.1-.1-.3-.2-.6-.3z"/></svg>Enviar por WhatsApp</a>
+    </footer>
+  </div>
+</div>
+
+<div class="mbar">
+  <a class="btn btn-primary" href="#presupuesto"><svg aria-hidden="true"><use href="#i-rec"/></svg><span data-t="mbar">Pedir presupuesto</span></a>
+  <a class="btn btn-ghost" href="tel:+34697295462" aria-label="Llamar al 697 29 54 62"><svg><use href="#i-phone"/></svg></a>
+</div>
+
+<script>
+(function(){
+"use strict";
+var reduced=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+var SFX={play:function(){}};
+
+/* ---------- Temporadas de Pixelecer: fechas fuertes para una productora (campañas de marca y bodas) ---------- */
+/* Solo servicios de su web (spots y vídeo corporativo, contenido de marca, preboda, boda y postboda). Sin precios, plazos ni descuentos.
+   Sin decoración: el rojo REC solo como acento en la píldora del eyebrow. */
+window.TEMPORADAS=[
+  {id:'navidad-marcas',nombre:'Campaña de Navidad',evento:'navidad',desde:'10-15',hasta:'12-05',prioridad:2,
+   textos:{eyebrow:'Campaña de Navidad · {cuenta}',
+     sub:'¿Tu marca tiene vídeo para estas fiestas? Spots, contenido para redes y vídeo corporativo, de la idea a la entrega, desde Pontevedra.',
+     micro:'Navidad está a la vuelta: cuéntanos tu idea con tiempo · presupuesto por WhatsApp',
+     cta:'Preparar mi spot',mbar:'Preparar spot'},
+   marcar:['input[name="tipo"][value="Publicidad o contenido de marca"]'],wa:'🎄 Es para la campaña de Navidad ({fecha})'},
+  {id:'bodas-proximo-ano',nombre:'Reserva de bodas',desde:'12-06',hasta:'02-28',prioridad:1,
+   textos:{eyebrow:'Wedding films · reservando fechas',
+     sub:'¿Os casáis el año que viene? Preboda, boda y postboda con alma, en Galicia o allá donde decidáis casaros. Reservad vuestra fecha con tiempo.',
+     micro:'Contadnos vuestra fecha · respuesta por WhatsApp, sin compromiso',
+     cta:'Consultar nuestra fecha',mbar:'Consultar fecha'},
+   marcar:['input[name="tipo"][value="Vídeo de boda"]'],wa:'💍 Queremos consultar disponibilidad para nuestra boda'},
+  {id:'san-valentin',nombre:'San Valentín',evento:'san-valentin',antes:21,prioridad:3,
+   textos:{eyebrow:'San Valentín · {cuenta}',
+     sub:'Una preboda o una postboda en Galicia es la mejor excusa para celebrarlo: vuestra historia, contada como una película.',
+     micro:'Contadnos vuestra idea · respuesta por WhatsApp, sin compromiso',
+     cta:'Consultar nuestra fecha',mbar:'Consultar fecha'},
+   marcar:['input[name="tipo"][value="Vídeo de boda"]'],wa:'💘 Lo vemos por San Valentín ({fecha}): nos interesa preboda o postboda'}
+];
+/* ---------- Temporadas: la landing cambia sola cuando se acerca una fecha clave del oficio ---------- */
+/* Configura window.TEMPORADAS antes de este bloque (ver references/temporadas/README.md).
+   Pruebas: ?temporada=<id> fuerza una, ?temporada=no las apaga, ?fecha=2027-02-10 simula el día.
+   Selector para enseñarlas: #temporadas en la dirección (en local), 5 toques seguidos en el logo de la cabecera o la tecla T (también dentro del visor del Artifact). */
+(function(){
+var CFG=window.TEMPORADAS||[]; if(!CFG.length)return;
+var MESES=['enero','febrero','marzo','abril','mayo','junio','julio','agosto','septiembre','octubre','noviembre','diciembre'];
+var DAY=864e5;
+function d(y,m,dd){return new Date(y,m-1,dd)}
+function nth(y,m,dow,n){var f=d(y,m,1);return d(y,m,1+(dow-f.getDay()+7)%7+7*(n-1))}       /* n-ésimo día de la semana (0=domingo) del mes */
+function pascua(y){var a=y%19,b=Math.floor(y/100),c=y%100,e=(19*a+b-Math.floor(b/4)-Math.floor((b-Math.floor((8*b+13)/25)+1)/3)+15)%30,
+  f=(32+2*(b%4)+2*Math.floor(c/4)-e-c%4)%7,g=Math.floor((a+11*e+22*f)/451),m=Math.floor((e+f-7*g+114)/31);return d(y,m,(e+f-7*g+114)%31+1)}
+function mas(x,n){return new Date(x.getFullYear(),x.getMonth(),x.getDate()+n)}
+/* Calendario de España. Cada evento devuelve el día clave de ese año. */
+var EV={
+  'reyes':function(y){return d(y,1,6)},
+  'rebajas-invierno':function(y){return d(y,1,7)},
+  'san-valentin':function(y){return d(y,2,14)},
+  'carnaval':function(y){return mas(pascua(y),-47)},            /* martes de carnaval */
+  'dia-padre':function(y){return d(y,3,19)},
+  'semana-santa':function(y){return mas(pascua(y),-3)},         /* jueves santo */
+  'pascua':pascua,
+  'sant-jordi':function(y){return d(y,4,23)},                   /* solo Cataluña */
+  'dia-madre':function(y){return nth(y,5,0,1)},                 /* primer domingo de mayo */
+  'san-isidro':function(y){return d(y,5,15)},                   /* solo Madrid capital */
+  'san-juan':function(y){return d(y,6,24)},
+  'dia-abuelos':function(y){return d(y,7,26)},
+  'vuelta-cole':function(y){return d(y,9,8)},                   /* aproximado: varía por comunidad */
+  'halloween':function(y){return d(y,10,31)},
+  'todos-santos':function(y){return d(y,11,1)},
+  'black-friday':function(y){return mas(nth(y,11,4,4),1)},      /* viernes tras el 4.º jueves */
+  'navidad':function(y){return d(y,12,25)},
+  'nochevieja':function(y){return d(y,12,31)}
+};
+function md(s,y){var p=s.split('-');return d(y,+p[0],+p[1])}
+function antes(t){return t.antes==null?14:t.antes}
+/* Ventanas [inicio, fin, día clave] de una temporada alrededor del año y */
+function ventanas(t,y){var out=[];for(var k=y-1;k<=y+1;k++){
+  if(t.desde){var a=md(t.desde,k),b=md(t.hasta,k);if(b<a)b=md(t.hasta,k+1);out.push([a,b,t.evento?EV[t.evento](b.getFullYear()):b])}
+  else{var e=t.fecha?md(t.fecha,k):EV[t.evento]&&EV[t.evento](k);if(e)out.push([mas(e,-antes(t)),mas(e,t.despues||0),e])}}
+  return out}
+function elegir(hoy){var best=null;hoy=new Date(hoy.getFullYear(),hoy.getMonth(),hoy.getDate());
+  CFG.forEach(function(t){ventanas(t,hoy.getFullYear()).forEach(function(w){if(hoy<w[0]||hoy>w[1])return;
+    var pr=t.prioridad!=null?t.prioridad:(t.desde?1:2),falta=Math.round((w[2]-hoy)/DAY);
+    if(!best||pr>best.pr||(pr===best.pr&&Math.abs(falta)<Math.abs(best.falta)))best={t:t,pr:pr,falta:falta,dia:w[2]}})});
+  return best}
+/* Forzar una temporada aunque hoy no toque: la muestra como si faltaran unos días */
+function forzar(id,hoy){var t=CFG.filter(function(x){return x.id===id})[0];if(!t)return null;
+  var w=ventanas(t,hoy.getFullYear()).filter(function(w){return w[1]>=hoy})[0],falta=Math.round((w[2]-hoy)/DAY);
+  if(hoy<w[0])falta=Math.min(antes(t),9);return {t:t,falta:falta,dia:w[2]}}
+function rellenar(s,b){if(!s)return s;var n=b.falta,f=b.dia.getDate()+' de '+MESES[b.dia.getMonth()];
+  var cuenta=n>1?'Faltan '+n+' días':n===1?'Es mañana':n===0?'Es hoy':'';
+  return s.replace(/\{cuenta\}/g,cuenta).replace(/\{dias\}/g,n).replace(/\{fecha\}/g,f).replace(/\{anio\}/g,b.dia.getFullYear())}
+
+var q=new URLSearchParams(location.search),forzada=q.get('temporada'),sim=q.get('fecha'),hoy=new Date();
+if(sim&&/^\d{4}-\d\d-\d\d$/.test(sim)){var p=sim.split('-');hoy=d(+p[0],+p[1],+p[2])}
+hoy=new Date(hoy.getFullYear(),hoy.getMonth(),hoy.getDate());
+window.TEMPORADA_ELEGIR=function(x){var b=elegir(x);return b?b.t.id:null};   /* para scripts/temporadas.js */
+var root=document.documentElement,reducido=matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+/* Estado original, para poder volver a la versión de todo el año al cambiar de temporada desde el selector */
+var CLAVES={};CFG.forEach(function(t){Object.keys(t.textos||{}).forEach(function(k){CLAVES[k]=1})});   /* solo las claves que usa alguna temporada: otros data-t de la página no se tocan */
+var T=[].slice.call(document.querySelectorAll('[data-t]')).filter(function(el){return CLAVES[el.getAttribute('data-t')]}).map(function(el){return [el,el.innerHTML,el.hidden]});
+var fotosOrig=[],tokens=[],marcados=[],deco=null;
+function limpiar(){
+  T.forEach(function(o){o[0].innerHTML=o[1];o[0].hidden=o[2];o[0].classList.remove('t-on')});
+  tokens.forEach(function(k){root.style.removeProperty(k)});tokens=[];
+  fotosOrig.forEach(function(o){if(o[0].tagName==='SOURCE')o[0].srcset=o[1];else{o[0].src=o[1];if(o[2])o[0].srcset=o[2]}});fotosOrig=[];
+  marcados.forEach(function(el){el.checked=false});marcados=[];
+  if(deco){deco();deco=null}
+  root.removeAttribute('data-temporada');window.TEMPORADA=null}
+function aplicar(b){
+  limpiar();var id=b?b.t.id:null;
+  /* Bloques solo de temporada: data-temporada-solo="san-valentin dia-madre" (empiezan con hidden) y data-temporada-fuera="…" */
+  document.querySelectorAll('[data-temporada-solo]').forEach(function(el){el.hidden=!(id&&el.getAttribute('data-temporada-solo').split(/\s+/).indexOf(id)>-1)});
+  document.querySelectorAll('[data-temporada-fuera]').forEach(function(el){el.hidden=!!(id&&el.getAttribute('data-temporada-fuera').split(/\s+/).indexOf(id)>-1)});
+  if(!b)return;
+  var t=b.t;root.setAttribute('data-temporada',id);
+  /* Colores: sobrescribe tokens de :root (solo acentos; el fondo y la tinta no se tocan) */
+  if(t.tema)Object.keys(t.tema).forEach(function(k){root.style.setProperty(k,t.tema[k]);tokens.push(k)});
+  /* Textos: cualquier elemento con data-t="clave". El HTML trae el texto de todo el año; si estaba hidden, se muestra */
+  if(t.textos)Object.keys(t.textos).forEach(function(k){document.querySelectorAll('[data-t="'+k+'"]').forEach(function(el){el.innerHTML=rellenar(t.textos[k],b);el.hidden=false;el.classList.add('t-on')})});
+  /* Fotos: {selector: ruta}. Solo fotos reales del negocio para esa fecha */
+  if(t.fotos)Object.keys(t.fotos).forEach(function(s){document.querySelectorAll(s).forEach(function(el){
+    if(el.tagName==='SOURCE'){fotosOrig.push([el,el.srcset]);el.srcset=t.fotos[s]}else{fotosOrig.push([el,el.src,el.getAttribute('srcset')]);el.removeAttribute('srcset');el.src=t.fotos[s]}})});
+  /* Marcar opciones del panel de encargo/reserva (solo si no hay ninguna marcada en ese grupo) */
+  if(t.marcar)t.marcar.forEach(function(s){var el=document.querySelector(s);if(el&&!document.querySelector('input[name="'+el.name+'"]:checked')){el.checked=true;marcados.push(el)}});
+  window.TEMPORADA={id:id,nombre:t.nombre||id,dias:b.falta,fecha:b.dia,linea:rellenar(t.wa,b)||''};   /* el panel añade TEMPORADA.linea al mensaje de WhatsApp */
+  try{document.dispatchEvent(new CustomEvent('temporada',{detail:window.TEMPORADA}))}catch(e){}
+  if(t.deco&&!reducido)deco=decorar(t)}
+
+/* Decoración ligera en el hero: petalos, corazones, nieve, hojas, confeti o estrellas. Nunca sobre el texto ni con movimiento reducido */
+function decorar(t){
+  var host=document.querySelector(t.decoEn||'#hero');if(!host)return null;
+  var cv=document.createElement('canvas');cv.className='t-deco';cv.setAttribute('aria-hidden','true');
+  cv.style.cssText='position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:1';
+  host.insertBefore(cv,host.children[1]||null);
+  var cx=cv.getContext('2d'),W=0,H=0,DPR=Math.min(devicePixelRatio||1,1.5),P=[],raf=0,last=0;
+  var COL=t.decoColores||{petalos:['#F5B8C9','#FFD9E2','#E88AA6'],corazones:['#FF6B8B','#FFB3C4','#E0325A'],nieve:['#FFFFFF'],hojas:['#C9733B','#E0A04A','#9C4A24'],confeti:['#FFD166','#EF476F','#06D6A0','#4CC9F0'],estrellas:['#FFE8A3','#FFFFFF']}[t.deco]||['#fff'];
+  function size(){var r=host.getBoundingClientRect();W=r.width;H=r.height;cv.width=W*DPR;cv.height=H*DPR;cx.setTransform(DPR,0,0,DPR,0,0)}
+  function nuevo(top){var s=t.deco==='nieve'?2+Math.random()*3:t.deco==='estrellas'?1.5+Math.random()*2.5:7+Math.random()*7;
+    return {x:Math.random()*W,y:top?-20:Math.random()*H,s:s,vy:(t.deco==='estrellas'?0:.25+Math.random()*.5)*(s>6?1:.7),vx:(Math.random()-.5)*.3,a:Math.random()*6.3,va:(Math.random()-.5)*.03,f:Math.random()*6.3,c:COL[Math.floor(Math.random()*COL.length)]}}
+  function forma(p){cx.save();cx.translate(p.x,p.y);cx.rotate(p.a);cx.fillStyle=p.c;cx.globalAlpha=t.deco==='estrellas'?.4+.5*Math.abs(Math.sin(p.f)):.85;var s=p.s;cx.beginPath();
+    if(t.deco==='corazones'){cx.moveTo(0,s*.35);cx.bezierCurveTo(-s,-s*.3,-s*.4,-s,0,-s*.45);cx.bezierCurveTo(s*.4,-s,s,-s*.3,0,s*.35)}
+    else if(t.deco==='nieve'||t.deco==='estrellas')cx.arc(0,0,s/2,0,7);
+    else if(t.deco==='confeti')cx.rect(-s/2,-s/4,s,s/2);
+    else cx.ellipse(0,0,s/2,s*(t.deco==='hojas'?.28:.34),0,0,7);
+    cx.fill();cx.restore()}
+  function paso(ts){raf=requestAnimationFrame(paso);if(ts-last<30)return;last=ts;
+    var r=host.getBoundingClientRect();if(r.bottom<0||r.top>innerHeight)return;   /* fuera de pantalla: no pinta */
+    cx.clearRect(0,0,W,H);P.forEach(function(p,i){p.f+=.03;p.y+=p.vy;p.x+=p.vx+Math.sin(p.f)*.35;p.a+=p.va;if(p.y>H+20)P[i]=nuevo(true);forma(p)})}
+  function arranca(){cancelAnimationFrame(raf);if(!document.hidden)raf=requestAnimationFrame(paso)}
+  size();var n=Math.min(t.decoCuantos||22,Math.round(W*H/40000)+6);for(var i=0;i<n;i++)P.push(nuevo(false));
+  addEventListener('resize',size);document.addEventListener('visibilitychange',arranca);arranca();
+  return function(){cancelAnimationFrame(raf);removeEventListener('resize',size);document.removeEventListener('visibilitychange',arranca);cv.remove()}}
+
+var hoyB=elegir(hoy);
+aplicar(forzada==='no'?null:forzada?forzar(forzada,hoy):hoyB);
+
+/* ---------- Selector de temporadas: solo con #temporadas en la dirección, para enseñárselas al cliente ---------- */
+/* El visor del Artifact no pasa el #hash al iframe: también se abre con 5 toques seguidos en el logo de la cabecera (.brand) o con la tecla T */
+var sel=null,manual=false;
+function selector(){
+  if(location.hash!=='#temporadas'&&!manual){if(sel){sel.remove();sel=null}return}
+  if(sel)return;
+  var st=document.createElement('style');st.textContent='.t-sel{position:fixed;left:12px;right:12px;bottom:calc(14px + env(safe-area-inset-bottom,0px));z-index:150;margin:0 auto;max-width:max-content;display:flex;align-items:center;gap:6px;padding:6px;border-radius:18px;background:rgba(20,20,20,.82);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);color:#fff;font:600 13px/1.2 system-ui,-apple-system,sans-serif;box-shadow:0 14px 34px -12px rgba(0,0,0,.6);overflow-x:auto;scrollbar-width:none}'
+   +'.t-sel::-webkit-scrollbar{display:none}.t-sel b{padding:0 6px 0 8px;font-size:11px;letter-spacing:.08em;text-transform:uppercase;opacity:.6;white-space:nowrap}'
+   +'.t-sel button{all:unset;cursor:pointer;white-space:nowrap;padding:9px 12px;border-radius:12px;color:#fff}.t-sel button:hover{background:rgba(255,255,255,.12)}.t-sel button[aria-pressed="true"]{background:#fff;color:#111}'
+   +'.t-sel button small{display:block;font-size:10px;font-weight:500;opacity:.65;margin-top:2px}.t-sel .x{opacity:.7;padding:9px 10px}'
+   +'@media (max-width:640px){.t-sel{bottom:calc(84px + env(safe-area-inset-bottom,0px));max-width:none}}';
+  sel=document.createElement('div');sel.className='t-sel';sel.setAttribute('role','toolbar');sel.setAttribute('aria-label','Ver la landing en cada temporada');
+  sel.appendChild(st);
+  function hint(t){var w=ventanas(t,hoy.getFullYear()).filter(function(w){return w[1]>=hoy})[0],f=function(x){return x.getDate()+' '+MESES[x.getMonth()].slice(0,3)};return f(w[0])+' – '+f(w[1])}
+  var h='<b>Temporadas</b><button type="button" data-id="@hoy">Hoy<small>'+(hoyB?(hoyB.t.nombre||hoyB.t.id):'sin temporada')+'</small></button><button type="button" data-id="">Todo el año<small>versión base</small></button>';
+  CFG.forEach(function(t){h+='<button type="button" data-id="'+t.id+'">'+(t.nombre||t.id)+'<small>'+hint(t)+'</small></button>'});
+  sel.insertAdjacentHTML('beforeend',h+'<button type="button" class="x" aria-label="Cerrar el selector">✕</button>');
+  var elegido='@hoy';
+  function marca(){sel.querySelectorAll('button[data-id]').forEach(function(x){x.setAttribute('aria-pressed',String(x.dataset.id===elegido))})}
+  sel.addEventListener('click',function(e){var x=e.target.closest('button');if(!x)return;
+    if(x.classList.contains('x')){manual=false;if(location.hash==='#temporadas')history.replaceState(null,'',location.pathname+location.search);selector();return}
+    elegido=x.dataset.id;aplicar(elegido==='@hoy'?hoyB:elegido?forzar(elegido,hoy):null);marca();window.scrollTo({top:0,behavior:'smooth'})});
+  document.body.appendChild(sel);marca()}
+selector();addEventListener('hashchange',selector);
+var toques=[];
+document.addEventListener('click',function(e){if(!e.target.closest||!e.target.closest(window.TEMPORADAS_DISPARADOR||'.brand'))return;var n=Date.now();
+  toques=toques.filter(function(t){return n-t<2500});toques.push(n);if(toques.length>=5){toques=[];manual=true;selector()}});
+document.addEventListener('keydown',function(e){if((e.key==='t'||e.key==='T')&&!e.metaKey&&!e.ctrlKey&&!e.altKey&&!/INPUT|TEXTAREA|SELECT/.test(e.target.tagName)&&!e.target.isContentEditable){manual=!sel;if(!manual&&location.hash==='#temporadas')history.replaceState(null,'',location.pathname+location.search);selector()}});
+})();
+
+
+/* ---------- Loader con el logo: se va con load (mín. 0,9 s, máx. 3 s) ---------- */
+var introGone=false,introCbs=[];
+function afterIntro(fn){if(introGone)fn();else introCbs.push(fn)}
+(function(){var el=document.getElementById('intro'),root=document.documentElement;
+  function done(){if(introGone)return;introGone=true;root.classList.remove('loading');if(el){el.classList.add('out');setTimeout(function(){el.hidden=true},700)}
+    introCbs.forEach(function(f){try{f()}catch(e){}})}
+  if(!el){done();return}
+  root.classList.add('loading');
+  var min=reduced?500:900,t0=performance.now(),cap=setTimeout(done,3000);
+  function go(){setTimeout(function(){clearTimeout(cap);done()},Math.max(0,min-(performance.now()-t0)))}
+  if(document.readyState==='complete')go();else window.addEventListener('load',go);
+})();
+
+/* ---------- Monitor de rodaje (hero): eliges una toma en la línea de tiempo y se hace el corte ---------- */
+(function(){
+  var box=document.getElementById('vf'); if(!box)return;
+  /* [tipo, archivo, póster/miniatura, pestaña, rótulo en el monitor, duración en ms] — todo material real de Pixelecer */
+  var T=[
+    ['v','img/reel.mp4','img/reel.jpg','Demo reel','Demo reel · Pixelecer',15000],
+    ['i','img/w-oyelo.jpg','img/w-oyelo.jpg','Videoclips','Videoclip · Erin – Óyelo',5200],
+    ['i','img/w-toxa.jpg','img/w-toxa.jpg','Spots','Spot · O encontro, A Toxa',5200],
+    ['v','img/bodas.mp4','img/bodas.jpg','Bodas','Wedding film · Pixelecer',10000],
+    ['i','img/w-campelo.jpg','img/w-campelo.jpg','Dron','Plano aéreo · Mariscos Campelo',5200]
+  ];
+  var takes=document.getElementById('vf-takes'),tl=document.getElementById('vf-tl'),label=document.getElementById('vf-label'),cut=document.getElementById('vf-cut'),tc=document.getElementById('vf-tc');
+  takes.innerHTML=T.map(function(t,i){return t[0]==='v'
+    ?'<video muted playsinline loop preload="'+(i?'none':'auto')+'" poster="'+t[2]+'" aria-hidden="true"'+(i?'':' class="on"')+'><source src="'+t[1]+'" type="video/mp4"></video>'
+    :'<img src="'+t[1]+'" alt="'+t[4]+'" loading="lazy">'}).join('');
+  tl.innerHTML=T.map(function(t,i){return '<button type="button" aria-pressed="'+(i?'false':'true')+'"'+(i?'':' class="on"')+'><i></i><img src="'+t[2]+'" alt="" loading="lazy"><span>'+t[3]+'</span></button>'}).join('');
+  var els=[].slice.call(takes.children),bts=[].slice.call(tl.children),cur=0,t0=performance.now(),raf=0,vis=true,auto=true,hover=false;
+  function play(el){if(el.tagName==='VIDEO'){try{el.currentTime=0}catch(e){}var p=el.play();if(p&&p.catch)p.catch(function(){})}}
+  function go(i,manual){
+    if(i===cur&&!manual)return;
+    var prev=els[cur];cur=(i+T.length)%T.length;
+    if(!reduced&&manual){cut.classList.remove('go');void cut.offsetWidth;cut.classList.add('go')}
+    els.forEach(function(e,k){e.classList.toggle('on',k===cur);if(k!==cur&&e.tagName==='VIDEO')e.pause()});
+    if(prev.tagName==='IMG'){prev.style.animation='none';void prev.offsetWidth;prev.style.animation=''}
+    play(els[cur]);
+    bts.forEach(function(b,k){b.classList.toggle('on',k===cur);b.setAttribute('aria-pressed',k===cur);b.querySelector('i').style.transform='scaleX(0)'});
+    label.textContent=T[cur][4];t0=performance.now();
+  }
+  bts.forEach(function(b,k){b.addEventListener('click',function(){auto=true;go(k,true)})});
+  box.addEventListener('mouseenter',function(){hover=true});box.addEventListener('mouseleave',function(){hover=false});
+  function pad(n){return String(n).padStart(2,'0')}
+  var start=performance.now(),paused=0,last=performance.now();
+  function loop(now){raf=0;
+    var dt=now-last;last=now;
+    if(!vis||document.hidden){paused+=dt}else{
+      var e=now-start-paused,f=Math.floor(e/40)%25,s=Math.floor(e/1000);
+      tc.textContent=pad(Math.floor(s/3600))+':'+pad(Math.floor(s/60)%60)+':'+pad(s%60)+':'+pad(f);
+      if(hover)t0+=dt;
+      var p=(now-t0)/T[cur][5];
+      if(p>=1&&auto&&!reduced){go(cur+1,true);p=0}
+      bts[cur].querySelector('i').style.transform='scaleX('+Math.min(1,p)+')';
+    }
+    raf=requestAnimationFrame(loop)}
+  function see(){var r=box.getBoundingClientRect();var v=r.width>0&&r.bottom>0&&r.top<innerHeight;
+    if(v!==vis){vis=v;var el=els[cur];if(el.tagName==='VIDEO'){if(v)play(el);else el.pause()}}}
+  see();window.addEventListener('scroll',see,{passive:true});window.addEventListener('resize',see);
+  document.addEventListener('visibilitychange',function(){var el=els[cur];if(el.tagName==='VIDEO'){if(document.hidden)el.pause();else if(vis)play(el)}});
+  if(reduced){els[0].removeAttribute('autoplay');return}
+  afterIntro(function(){play(els[0]);t0=performance.now();raf=requestAnimationFrame(loop)});
+})();
+
+/* ---------- Manifiesto: se enciende palabra a palabra ---------- */
+(function(){var m=document.getElementById('mani');if(!m)return;var HOT=/^(escuchar|imaginar|crear|editar|emocionar)$/i;
+  m.innerHTML=m.textContent.split(' ').map(function(w,i){return '<span class="w'+(HOT.test(w.replace(/[,.]/g,''))?' hot':'')+'" style="transition-delay:'+(i*40)+'ms">'+w+'</span>'}).join(' ');})();
+
+/* ---------- Trabajos con filtros y visor de YouTube ---------- */
+(function(){var el=document.getElementById('works');if(!el)return;
+  /* [categoría, id de YouTube, título, etiqueta, imagen] — enlaces de su propia web */
+  var W=[
+    ['corp','dSnBDGScSPg','O encontro · A Toxa','Spot','w-toxa'],
+    ['clip','_xBmLbPaGvM','Erin – Óyelo','Videoclip','w-oyelo'],
+    ['boda','wB8di-JQ26o','Robert y Maite · Marruecos','Boda','b-robert-maite'],
+    ['corp','8e4W6SOQxAQ','25 aniversario Mafari','Corporativo','w-mafari'],
+    ['clip','URiJGYlOAbg','Soulmacklein – No hay love','Videoclip','w-no-hay-love'],
+    ['boda','gcRy4LxfSCw','Pedro y Nerea','Boda','b-pedro-nerea'],
+    ['corp','gPIXOdXAsz0','Cesuga – O encontro de Sober','Corporativo','w-cesuga'],
+    ['clip','XKtkJSu7dDI','Erin – Todo va bien','Videoclip','w-todo-va-bien'],
+    ['boda','DheDRyPsCCA','Elena y Rubén','Boda','b-elena-ruben'],
+    ['corp','E8IO75-pe1c','Spot · Panadería Acuña','Spot','w-acuna'],
+    ['clip','4jUv-X_ALT0','Quinkillada – Nunca','Videoclip','w-nunca'],
+    ['boda','qUaCVhaaev4','Pablo y Sara','Postboda','b-pablo-sara'],
+    ['corp','-gt78Zc3LLs','Nomad – Heartbeat','Corporativo','w-nomad'],
+    ['corp','xitankO_3K8','Spot · Servicios Galicia','Spot','w-servicios-galicia'],
+    ['clip','p6x5PykqTcM','Erin – Aquí mando yo','Videoclip','w-aqui-mando-yo'],
+    ['boda','-_ofs-VZ2wM','Nina y Iago','Boda','b-nina-iago'],
+    ['corp','03nrOd1lRs0','Perseidas · Viña Costeira','Evento','w-vina-costeira'],
+    ['corp','ADLrWo3hB7k','Spot · Mariscos Campelo','Spot','w-campelo'],
+    ['clip','Qi04uk-my6k','The Skarnivals – Do revés','Videoclip','w-skarnivals'],
+    ['boda','csvYGG2zAOM','Adrián y Mireia','Boda','b-adrian-mireia'],
+    ['corp','J9r4R-SSpSA','Cruz Roja · Plan de empleo','Corporativo','w-cruz-roja'],
+    ['corp','QG5KDD-cMC4','Aigua · Spot','Spot','w-aigua'],
+    ['clip','XMvW_OFVXOQ','Erin – Muy lejos','Videoclip','w-muy-lejos'],
+    ['boda','R9dSLZFltrI','Vero y Beto','Boda','b-vero-beto'],
+    ['clip','CHw145nN2rs','Dakidarría – Ate o abrente','Videoclip','w-dakidarria'],
+    ['boda','fNgcm2svA2o','Elisabeth y Fabian','Boda','b-elisabeth-fabian'],
+    ['clip','dwYOpE2CIJ0','Corazón de hielo – Rhygin Shabani feat. Soulmacklein','Videoclip','w-corazon-de-hielo'],
+    ['boda','B1a5I2nrhZ8','Inefable amor','Editorial de boda','b-inefable'],
+    ['clip','sJMztehp4O8','Hard GZ – Chove','Videoclip','w-chove'],
+    ['boda','tmjywrTXRfY','Eladio y María','Preboda','b-eladio-maria'],
+    ['boda','l4o7nJYCGgs','Alba y Diego','Postboda','b-alba-diego'],
+    ['boda','rQYK7cOFyI0','Chus y Manu','Boda','b-chus-manu']
+  ];
+  var TIPO={corp:'Vídeo corporativo',clip:'Videoclip',boda:'Vídeo de boda'};
+  el.innerHTML=W.map(function(x){return '<button type="button" class="work" data-c="'+x[0]+'"><span class="th"><img src="img/'+x[4]+'.jpg" alt="" loading="lazy"><span class="pl"><svg aria-hidden="true"><use href="#i-play"/></svg></span></span><span><b>'+x[2]+'</b><small>'+x[3]+'</small></span></button>'}).join('');
+  var LIM=innerWidth<=640?6:9, mb=document.getElementById('works-more'), f='all', all=false;
+  var works=[].slice.call(el.querySelectorAll('.work')), fb=[].slice.call(document.querySelectorAll('.filters button'));
+  works.forEach(function(w,i){w.setAttribute('aria-label','Ver «'+W[i][2]+'» ('+W[i][3]+')')});
+  function seen(w){return !w.classList.contains('out')&&!w.classList.contains('more')}
+  function apply(anim){var n=0,k=0,pop=[];
+    works.forEach(function(w){var was=seen(w),hit=f==='all'||w.dataset.c===f,more=hit&&!all&&++n>LIM;
+      w.classList.toggle('out',!hit);w.classList.toggle('more',more);w.classList.remove('pop');
+      if(hit&&!more&&(anim==='all'||(anim==='new'&&!was))){w.style.animationDelay=Math.min(k++*40,400)+'ms';pop.push(w)}});
+    if(pop.length){void el.offsetWidth;pop.forEach(function(w){w.classList.add('pop')})}
+    var left=works.some(function(w){return w.classList.contains('more')});mb.parentNode.hidden=!left}
+  fb.forEach(function(b){b.setAttribute('aria-pressed',b.dataset.f===f);b.addEventListener('click',function(){
+    fb.forEach(function(x){x.classList.toggle('on',x===b);x.setAttribute('aria-pressed',x===b)});f=b.dataset.f;all=false;apply('all')})});
+  mb.addEventListener('click',function(){all=true;apply('new')}); apply();
+  var lb=document.getElementById('lb'),media=document.getElementById('lb-media'),go=document.getElementById('lb-go'),cap=document.getElementById('lb-cap'),list=[],at=0,opener=null;
+  function showAt(i){at=(i+list.length)%list.length;var x=W[works.indexOf(list[at])];
+    media.innerHTML='<iframe src="https://www.youtube-nocookie.com/embed/'+x[1]+'?autoplay=1&rel=0" title="'+x[2]+'" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>';
+    go.dataset.tipo=TIPO[x[0]];go.dataset.work=x[2];cap.textContent=x[2]+' · '+x[3]+' · '+(at+1)+' / '+list.length}
+  el.addEventListener('click',function(e){var w=e.target.closest('.work');if(!w)return;list=works.filter(seen);opener=w;lb.hidden=false;document.documentElement.style.overflow='hidden';showAt(list.indexOf(w));
+    try{lb.querySelector('.lb-x').focus({preventScroll:true})}catch(x){}});
+  function close(){lb.hidden=true;media.innerHTML='';document.documentElement.style.overflow='';if(opener)try{opener.focus({preventScroll:true})}catch(x){}}
+  lb.addEventListener('click',function(e){var n=e.target.closest('[data-lb]');if(n){showAt(at+(+n.dataset.lb));return}if(e.target===lb||e.target.closest('.lb-x'))close()});
+  go.addEventListener('click',function(){lb.hidden=true;media.innerHTML=''});
+  document.addEventListener('keydown',function(e){if(lb.hidden)return;if(e.key==='Escape')close();else if(e.key==='ArrowRight')showAt(at+1);else if(e.key==='ArrowLeft')showAt(at-1)});
+})();
+
+/* ---------- Reseñas reales de Google (texto literal, recortes con […]) ---------- */
+var REV=[
+  ['Jose Angel F.','Boda','hace 2 meses','Contactamos con Damian, es un tío cercano y que lo hace fácil, después de los primeros 10 minutos ya estábamos convencidos. […] Tanto Damian como su equipo son unos profesionales de 10, aportan ideas y hacen crecer las tuyas.'],
+  ['Miguel C.','Vídeo corporativo','hace un año','Nos hicieron un vídeo corporativo super profesional'],
+  ['Pedro','Boda y postboda','hace 4 meses','Te hacen sentir cómodo en todo momento y saben captar las emociones, que al final es lo más importante. […] El confesionario con Marco fue otra buena decisión. El resultado nos encantó: un vídeo muy emotivo, pero al mismo tiempo divertido, natural y ameno.'],
+  ['Beatriz C.','Colaboración','hace un año','Su trabajo como videografo es increíble, siempre captura la esencia de cada momento de una forma única. Pero lo que más valoro es su dedicación y lo fácil que es trabajar con el.',1],
+  ['Jesús L.','Boda','hace 4 meses','Una maravilla de decisión! Un placer tratar con Damian y súper contentos con el trabajo de Alex. Nos flipó el video ⚡️⚡️ Recomendados 100%',1],
+  ['Nerea S.','Proyecto','hace un año','Buenos profesionales y mejores personas. Un gustazo contar con ellos. Gracias por vuestra rapidez y colaboración en todo momento. Sois unos cracks!!!',1],
+  ['Abraham S.','Boda','hace 4 meses','Lo que más nos gustó fue que son un equipo joven y con ideas muy innovadoras y curradas. La grabación de la preboda fue mágica y el día de la boda inolvidable.',1],
+  ['Mercedes R.','Boda con dron','hace 2 años','El día de la boda nos sentimos muy cómodos y él se encargó de gestionar todas las cuestiones para poder volar el dron! Y el resultado final llegó muy rápido.',1],
+  ['Nuria L.','Boda','hace 2 años','No hubo posados ni tomas repetidas. Ni nos enteramos de que él estaba ahí, sin embargo tenemos el recuerdo grabado de todo lo que pasó.',1]
+];
+var STAR='<svg><use href="#i-star"/></svg>';
+var grid=document.getElementById('rv-grid');
+if(grid) grid.innerHTML=REV.map(function(r){return '<figure class="rv'+(r[4]?' x':'')+'"'+(r[4]?'':' data-reveal')+'><div class="rv-top"><span class="rv-stars" aria-label="5 de 5 estrellas">'+STAR+STAR+STAR+STAR+STAR+'</span><span class="rv-tag">'+r[1]+'</span></div><blockquote>«'+r[3]+'»</blockquote><figcaption><span><b>'+r[0]+'</b><small>'+r[2]+' · Google</small></span></figcaption></figure>'}).join('');
+
+/* ---------- Borradores ---------- */
+(function(){function sync(){var on=location.hash==='#borradores';document.querySelectorAll('.draft').forEach(function(d){d.hidden=!on});if(on){var t=document.querySelector('.draft');t&&setTimeout(function(){t.scrollIntoView()},300)}}
+ sync();window.addEventListener('hashchange',sync)})();
+
+/* ---------- Presupuesto: panel paso a paso que acaba en WhatsApp ---------- */
+(function(){
+  var WA='34697295462', N=5; /* móvil de su web y de Google; confirmar que tiene WhatsApp */
+  var bk=document.getElementById('bk'); if(!bk)return;
+  var f=document.getElementById('book-form'), panes=[].slice.call(f.querySelectorAll('.bk-pane'));
+  var back=document.getElementById('bk-back'), next=document.getElementById('bk-next'), wa=document.getElementById('f-wa');
+  var err=document.getElementById('f-error'), bar=document.getElementById('bk-bar'), stepT=document.getElementById('bk-step');
+  var nombre=document.getElementById('f-nombre'), pre=document.getElementById('f-preview');
+  function sel(n){var e=f.querySelector('input[name="'+n+'"]:checked');return e?e.value:''}
+  function val(id){var e=document.getElementById(id);return e?e.value.trim():''}
+  var _code='';
+  function code(){if(!_code){var d=new Date(),r='',A='ABCDEFGHJKLMNPQRSTUVWXYZ23456789';for(var i=0;i<3;i++)r+=A[Math.floor(Math.random()*A.length)];_code='PXL-'+String(d.getDate()).padStart(2,'0')+String(d.getMonth()+1).padStart(2,'0')+'-'+r}return _code}
+  function message(){
+    var L=['¡Hola, Pixelecer! Soy '+nombre.value.trim()+(val('f-empresa')?' ('+val('f-empresa')+')':'')+'. Os pido presupuesto:',''];
+    L.push('🔖 Código: '+code());
+    if(window.TEMPORADA&&TEMPORADA.linea)L.push(TEMPORADA.linea);
+    L.push('• Qué queremos grabar: '+sel('tipo'));
+    if(val('f-idea'))L.push('• La idea: '+val('f-idea'));
+    if(val('f-fecha'))L.push('• Para cuándo: '+val('f-fecha'));
+    if(val('f-donde'))L.push('• Dónde: '+val('f-donde'));
+    if(seen)L.push('• Lo que he visto en vuestra web: '+seen);
+    L.push('• Os conocí por: '+sel('origen'));
+    L.push('','¿Hablamos? ¡Gracias!');
+    return L.join('\n');
+  }
+  var step=1, opener=null, seen='';
+  function show(n){
+    step=n; err.hidden=true;
+    panes.forEach(function(p){p.hidden=+p.dataset.step!==n});
+    back.disabled=n===1;
+    var last=n===N; next.hidden=last; wa.hidden=!last;
+    next.textContent=n===4?'Ver mi solicitud':'Siguiente';
+    stepT.textContent=last?'Listo':'Paso '+n+' de 4';
+    bar.style.transform='scaleX('+(Math.min(n,4)/4)+')';
+    if(last){var m=message();pre.textContent=m;wa.href='https://wa.me/'+WA+'?text='+encodeURIComponent(m)}
+    f.scrollTop=0;
+    var h3=panes[n-1].querySelector('h3'); if(h3)h3.setAttribute('tabindex','-1');
+    setTimeout(function(){try{(h3||next).focus({preventScroll:true})}catch(x){}},380);
+  }
+  function fail(msg,el){err.textContent=msg;err.hidden=false;if(el){el.setAttribute('aria-invalid','true');el.focus()}}
+  function validate(n){
+    if(n===1&&!sel('tipo')){fail('Elige qué necesitas.');return false}
+    if(n===4){nombre.removeAttribute('aria-invalid');if(!nombre.value.trim()){fail('Dinos tu nombre para el mensaje.',nombre);return false}}
+    return true;
+  }
+  next.addEventListener('click',function(){if(validate(step))show(step+1)});
+  back.addEventListener('click',function(){if(step>1)show(step-1)});
+  f.addEventListener('submit',function(e){e.preventDefault();next.click()});
+  f.querySelectorAll('input[name="tipo"]').forEach(function(r){r.addEventListener('change',function(){setTimeout(function(){if(step===1)show(2)},220)})});
+  document.getElementById('f-copy').addEventListener('click',function(){var b=this,ok=function(){b.textContent='Copiado';setTimeout(function(){b.textContent='Copiar mensaje'},1600)};
+    try{navigator.clipboard.writeText(pre.textContent).then(ok,function(){var r=document.createRange();r.selectNodeContents(pre);var s=getSelection();s.removeAllRanges();s.addRange(r)})}catch(x){}});
+  function pick(v){var r=f.querySelector('input[name="tipo"][value="'+v+'"]');if(r){r.checked=true;return true}return false}
+  function open(from){
+    opener=from||document.activeElement; bk.hidden=false; document.documentElement.style.overflow='hidden';
+    var ds=from&&from.dataset||{};
+    if(ds.work){seen=ds.work}
+    if(ds.tipo&&pick(ds.tipo))show(2);
+    else if(step===N)show(4); else show(step);
+    requestAnimationFrame(function(){requestAnimationFrame(function(){bk.classList.add('open')})});
+  }
+  window.__openBk=open;
+  function close(){
+    bk.classList.remove('open'); document.documentElement.style.overflow='';
+    setTimeout(function(){bk.hidden=true},reduced?0:420);
+    if(opener&&opener.focus)try{opener.focus({preventScroll:true})}catch(x){}
+  }
+  document.getElementById('bk-x').addEventListener('click',close);
+  document.getElementById('bk-scrim').addEventListener('click',close);
+  document.addEventListener('keydown',function(e){if(!bk.hidden&&e.key==='Escape')close()});
+  document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[href="#presupuesto"]');if(!a)return;e.preventDefault();open(a)});
+})();
+
+/* ---------- Un enlace compartido con #presupuesto abre el panel al llegar ---------- */
+(function(){if(location.hash==='#presupuesto'&&window.__openBk)afterIntro(function(){window.__openBk()})})();
+
+/* ---------- Drawer de reseñas ---------- */
+(function(){var d=document.getElementById('rvd'); if(!d)return;
+ var list=document.getElementById('rvd-list'), map=document.getElementById('rvd-map'), opener=null, filled=false;
+ function open(from){
+   if(!filled){document.querySelectorAll('#resenas .rv').forEach(function(c){var k=c.cloneNode(true);k.removeAttribute('data-reveal');list.appendChild(k)});filled=true}
+   if(!map.src)map.src=map.getAttribute('data-src');
+   opener=from||document.activeElement; d.hidden=false; document.documentElement.style.overflow='hidden'; SFX.play('open');
+   requestAnimationFrame(function(){requestAnimationFrame(function(){d.classList.add('open');var x=d.querySelector('.bk-head [data-rvd-x]');x&&x.focus({preventScroll:true})})});
+ }
+ function close(){ if(d.hidden)return; SFX.play('close'); d.classList.remove('open'); document.documentElement.style.overflow='';
+   setTimeout(function(){d.hidden=true;opener&&opener.focus&&opener.focus({preventScroll:true})},reduced?0:420); }
+ document.addEventListener('click',function(e){var a=e.target.closest('[data-rvd]');if(a){e.preventDefault();open(a);return}
+   if(e.target.closest('[data-rvd-x]'))close()});
+ document.addEventListener('keydown',function(e){if(e.key==='Escape')close()});
+})();
+
+
+
+/* ---------- Cabecera de vidrio sobre el hero, barra móvil y subir arriba: todo por scroll ---------- */
+/* Por scroll y no por IntersectionObserver: dentro del visor (iframe) no detecta bien el hero.
+   La barra móvil se oscurece sobre las zonas oscuras y no tapa ni el titular ni el botón del hero. */
+(function(){var b=document.getElementById('totop'),hero=document.getElementById('hero'),mbar=document.querySelector('.mbar'),top=document.getElementById('top'),darks=[].slice.call(document.querySelectorAll('.hero,.band-ink,.clients')),h1=hero.querySelector('h1'),hcta=hero.querySelector('.hero-ctas .btn'),tk=false;
+ function sync(){tk=false;var end=hero.offsetTop+hero.offsetHeight;b.classList.toggle('on',scrollY>end-innerHeight/2);
+  function over(y){return darks.some(function(s){var r=s.getBoundingClientRect();return r.top<y&&r.bottom>y})}
+  if(top)top.classList.toggle('dark',over(top.offsetHeight/2));
+  if(mbar){mbar.classList.toggle('dark',over(innerHeight-34));
+    var hr=h1.getBoundingClientRect(),cr=hcta.getBoundingClientRect();
+    mbar.classList.toggle('off',(hr.bottom>innerHeight-84&&hr.top<innerHeight)||(cr.bottom>0&&cr.top<innerHeight))}}
+ sync();window.addEventListener('scroll',function(){if(!tk){tk=true;requestAnimationFrame(sync)}},{passive:true});window.addEventListener('resize',sync);
+ b.addEventListener('click',function(){window.scrollTo({top:0,behavior:reduced?'auto':'smooth'})});})();
+
+/* ---------- Animaciones por visibilidad ---------- */
+(function(){
+  var root=document.documentElement;
+  if(!('IntersectionObserver' in window)||reduced)return;
+  root.classList.add('js-anim');
+  var io=new IntersectionObserver(function(es){var k=0;es.forEach(function(e){if(!e.isIntersecting)return;var el=e.target;el.style.transitionDelay=Math.min(k++*90,450)+'ms';el.classList.add('in');io.unobserve(el);setTimeout(function(){el.style.transitionDelay=''},1500)})},{rootMargin:'0px 0px -8% 0px'});
+  document.querySelectorAll('[data-reveal]').forEach(function(el){io.observe(el)});
+  var m=document.getElementById('mani');
+  if(m)new IntersectionObserver(function(e,o){if(e[0].isIntersecting){m.classList.add('lit');o.disconnect()}},{threshold:.4}).observe(m);
+  var fo=new IntersectionObserver(function(es,o){es.forEach(function(e){if(!e.isIntersecting)return;o.unobserve(e.target);
+    var b=e.target,to=+b.dataset.count,from=+b.dataset.from||0,t0=performance.now(),D=1100;
+    (function step(now){var p=Math.min(1,Math.max(0,(now-t0)/D));b.textContent=Math.round(from+(to-from)*(1-Math.pow(1-p,3)));if(p<1)requestAnimationFrame(step)})(t0)})},{threshold:.6});
+  document.querySelectorAll('.facts b[data-count]').forEach(function(b){fo.observe(b)});
+  var bar=document.getElementById('progress'), tk=false;
+  function prog(){tk=false;var H=root.scrollHeight-innerHeight;bar.style.transform='scaleX('+(H>0?Math.min(1,scrollY/H):0)+')'}
+  window.addEventListener('scroll',function(){if(!tk){tk=true;requestAnimationFrame(prog)}},{passive:true});
+})();
+})();
+
+/* ---------- Botones flotantes tras un mínimo scroll (cabecera y barra móvil ocultas al pintar el hero) ---------- */
+(function(){var h=document.documentElement,tk=false;function s(){tk=false;h.classList.toggle('cta-wait',scrollY<=Math.min(120,innerHeight*.15))}
+ s();addEventListener('scroll',function(){if(!tk){tk=true;requestAnimationFrame(s)}},{passive:true});addEventListener('resize',s);})();
+</script>

@@ -1,0 +1,1176 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ByL Studio · Fotografía gastronómica y vídeo en Jaén</title>
+<meta name="description" content="Productora audiovisual en Jaén: fotografía gastronómica y de producto, retrato, eventos, espacios y vídeo corporativo para restaurantes, marcas, agencias e instituciones de Jaén, Córdoba, Granada y Málaga. 5,0★ en Google.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Figtree:wght@400;500;600;700&display=swap">
+<link rel="icon" href="img/logo.png">
+<style>
+:root{color-scheme:light;
+  --shell:#F5F1F2;--shell-2:#EAE2E5;--paper:#FCFAFA;--ink:#1A1416;--ink-soft:#6B5F64;--line:rgba(26,20,22,.12);
+  --acc:#A13D63;--acc-2:#86304F;--on-acc:#fff;--acc-light:#E895B6;--acc-soft:#F6E4EC;
+  --night:#120D0F;--on-night:#F7F2F4;--on-night-soft:rgba(247,242,244,.66);--night-line:rgba(247,242,244,.14);--glow:rgba(161,61,99,.3);
+  --hibiscus:#A13D63;--hibiscus-ink:#1A1416;--sun:#A13D63;--palm:#1A1416;
+  --font-display:"Bricolage Grotesque",ui-sans-serif,sans-serif;--font-body:"Figtree",ui-sans-serif,system-ui,sans-serif;--fw-display:700;--ls-display:-.035em;
+  --r-sm:8px;--r-md:12px;--r-lg:18px;--wrap:1240px;--head:72px;--logo-h:44px;--logo-hm:36px;--ld-pad:16%}
+/* Base común de estudio creativo (foto y audiovisual). Tokens en :root (los pone cada landing); el portfolio manda. */
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html{scroll-behavior:smooth;scroll-padding-top:calc(var(--head) + 12px)}
+body{margin:0;background:var(--shell);color:var(--ink);font-family:var(--font-body);font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:clip}
+img,video{max-width:100%;display:block}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--acc);outline-offset:3px;border-radius:4px}
+.wrap{max-width:var(--wrap);margin-inline:auto;padding-inline:clamp(20px,4vw,48px)}
+h1,h2,h3{margin:0;text-wrap:balance;font-family:var(--font-display);font-weight:var(--fw-display,400);line-height:1.04;letter-spacing:var(--ls-display,-.015em)}
+h1 em,h2 em{font-style:var(--em-style,italic);color:var(--em-color,inherit)}
+h3{font-size:24px}
+p{margin:0}
+.eyebrow{display:inline-block;font-size:12.5px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-soft)}
+.eyebrow::before{content:"";display:inline-block;vertical-align:middle;margin:-2px 10px 0 0;width:22px;height:1px;background:currentColor;opacity:.7}
+.lead{font-size:clamp(17px,1.4vw,19px);color:var(--ink-soft);max-width:36em}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 26px;border-radius:var(--r-btn,999px);font:600 15.5px/1.15 var(--font-body);letter-spacing:.01em;text-decoration:none;border:1px solid transparent;cursor:pointer;text-align:center;transition:background .25s,color .25s,border-color .25s,transform .25s,box-shadow .25s}
+.btn svg{width:18px;height:18px;flex:none}
+.btn-primary{background:var(--acc);color:var(--on-acc)}
+.btn-primary:hover{background:var(--acc-2);transform:translateY(-1px)}
+.btn-ghost{background:transparent;border-color:var(--line);color:inherit}
+.btn-ghost:hover{border-color:currentColor}
+.btn-light{background:#fff;color:#151515}
+.btn-light:hover{background:var(--acc);color:var(--on-acc)}
+.link{display:inline-flex;align-items:center;gap:8px;font-weight:600;text-decoration:none;border-bottom:1px solid var(--line);padding-bottom:2px;transition:border-color .2s,gap .2s}
+.link svg{width:16px;height:16px}
+.link:hover{border-color:currentColor;gap:12px}
+.sec{padding-block:clamp(80px,10vw,140px)}
+.sec-head{display:grid;gap:16px;max-width:800px;margin-bottom:clamp(36px,5vw,60px)}
+.sec-head h2,.cta-band h2,.visit h2,.about h2{font-size:clamp(38px,5vw,68px)}
+.band-paper{background:var(--paper)}
+.band-night{background:var(--night);color:var(--on-night);--ink:var(--on-night);--ink-soft:var(--on-night-soft);--line:var(--night-line)}
+.tel{display:inline-flex;align-items:center;gap:8px;font-weight:600;text-decoration:none;font-variant-numeric:tabular-nums}
+.tel svg{width:17px;height:17px;opacity:.7}
+
+/* Loader con el logo */
+.loader{position:fixed;inset:0;z-index:200;display:grid;place-items:center;background:radial-gradient(60% 50% at 50% 45%,var(--glow),transparent 70%),var(--night);color:var(--on-night);transition:opacity .7s cubic-bezier(.2,.7,.2,1),visibility 0s .7s;animation:ld-safety 0s 4s forwards}
+.loader.out{opacity:0;visibility:hidden}
+@keyframes ld-safety{to{opacity:0;visibility:hidden}}
+.ld-in{display:grid;justify-items:center;gap:14px;transition:transform .7s cubic-bezier(.2,.7,.2,1)}
+.loader.out .ld-in{transform:scale(.92) translateY(-8px)}
+.ld-mark{position:relative;width:clamp(140px,13vw,184px);aspect-ratio:1;display:grid;place-items:center}
+.ld-mark img{width:74%;height:74%;object-fit:contain;border-radius:50%;background:var(--ld-bg,#fff);padding:var(--ld-pad,12%);box-shadow:0 18px 40px -16px rgba(0,0,0,.6);animation:ld-breathe 1.8s ease-in-out infinite}
+.ld-ring{position:absolute;inset:0;transform:rotate(-90deg)}
+.ld-ring circle{fill:none;stroke:rgba(255,255,255,.14);stroke-width:2}
+.ld-ring .ld-arc{stroke:var(--acc-light);stroke-width:2.5;stroke-linecap:round;stroke-dasharray:100;stroke-dashoffset:100;animation:ld-draw 1.1s cubic-bezier(.6,.1,.3,1) forwards}
+.ld-name{font:var(--fw-display,400) clamp(28px,2.6vw,38px)/1 var(--font-display);letter-spacing:-.01em;margin-top:6px;animation:ld-up .8s .15s cubic-bezier(.2,.7,.2,1) both}
+.ld-sub{font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--on-night-soft);animation:ld-up .8s .3s cubic-bezier(.2,.7,.2,1) both}
+@keyframes ld-draw{to{stroke-dashoffset:0}}
+@keyframes ld-breathe{50%{transform:scale(1.04)}}
+@keyframes ld-up{from{opacity:0;transform:translateY(10px)}}
+.loading .hero *{animation-play-state:paused!important}
+
+/* Cabecera: vidrio oscuro sobre el hero y las bandas oscuras, clara fuera */
+.top{position:fixed;top:0;left:0;right:0;padding-top:env(safe-area-inset-top,0px);z-index:60;background:color-mix(in srgb,var(--shell) 90%,transparent);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);border-bottom:1px solid var(--line);transition:background .4s,color .4s,border-color .4s}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;height:var(--head)}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;min-width:0}
+.brand img{height:var(--logo-h,34px);width:auto}
+.brand .logo-dark{display:none}
+.nav{display:flex;gap:clamp(16px,2vw,30px);font-size:14.5px;font-weight:500}
+.nav a{text-decoration:none;color:var(--ink-soft);white-space:nowrap}
+.nav a:hover{color:var(--ink)}
+.top .btn{min-height:42px;padding:0 20px;font-size:14.5px;white-space:nowrap}
+.top.dark{background:color-mix(in srgb,var(--night) 45%,transparent);color:var(--on-night);border-bottom-color:rgba(255,255,255,.1)}
+.top.dark .nav a{color:var(--on-night-soft)}
+.top.dark .nav a:hover{color:var(--on-night)}
+.top.dark .brand .logo-light{display:none}
+.top.dark .brand .logo-dark{display:block}
+.progress{position:absolute;left:0;bottom:-1px;height:2px;width:100%;background:var(--acc);transform:scaleX(0);transform-origin:left}
+
+/* Hero: oscuro, con el trabajo real como protagonista */
+.hero{position:relative;isolation:isolate;overflow:hidden;background:var(--night);color:var(--on-night);--ink:var(--on-night);--ink-soft:var(--on-night-soft);--line:var(--night-line);min-height:100vh;min-height:100svh;display:flex;flex-direction:column}
+.hero-grid{position:relative;z-index:2;flex:1;display:grid;grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr);gap:clamp(32px,4.5vw,72px);align-items:center;padding-top:calc(var(--head) + clamp(24px,4vw,56px));padding-bottom:clamp(36px,5vw,64px)}
+.hero-grid>*{min-width:0}
+.hero-copy{display:grid;justify-items:start;align-content:center}
+.hero .eyebrow{color:var(--acc-light)}
+.hero h1{font-size:clamp(44px,5.6vw,88px);margin-top:20px;line-height:1}
+.hero h1 em{display:block;color:var(--acc-light)}
+.hero-sub{margin-top:22px;max-width:30em;font-size:clamp(17px,1.35vw,19px);color:var(--on-night-soft)}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:14px 20px;margin-top:30px;align-items:center}
+.hero-ctas .btn{max-width:100%}
+.hero-micro{margin-top:14px;font-size:14px;color:var(--on-night-soft)}
+.hero-art{position:relative}
+/* Sello de la nota de Google sobre el gesto del hero */
+.rate-stk{position:absolute;z-index:7;display:grid;grid-template-columns:auto auto;align-items:center;gap:2px 10px;padding:11px 15px 11px 13px;border-radius:16px;background:#fff;color:#16161a;text-decoration:none;box-shadow:0 22px 40px -16px rgba(0,0,0,.6);transition:transform .3s;right:var(--stk-r,-14px);top:var(--stk-t,-18px);transform:rotate(3deg)}
+.rate-stk:hover{transform:rotate(0) scale(1.04)}
+.rate-stk .stars{grid-column:1/-1;display:flex;gap:2px;color:#F5B400}.rate-stk svg{width:17px;height:17px}
+.rate-stk b{font:700 36px/1 var(--font-body);letter-spacing:-.03em}
+.rate-stk small{font-size:13px;line-height:1.25;font-weight:600;color:#5d5d66}
+.facts{position:relative;z-index:2;display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--night-line)}
+.facts div{display:grid;gap:2px;padding:18px 20px 22px 0}
+.facts div+div{padding-left:20px;border-left:1px solid var(--night-line)}
+.facts b{font:var(--fw-display,400) clamp(24px,2.3vw,34px)/1.05 var(--font-display);font-variant-numeric:tabular-nums}
+.facts span{font-size:13.5px;color:var(--on-night-soft)}
+
+/* Cinta de clientes / servicios */
+.ticker{overflow-x:auto;overflow-y:hidden;scrollbar-width:none;border-block:1px solid var(--line);background:var(--paper);padding:18px 0;-webkit-mask:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
+.ticker::-webkit-scrollbar{display:none}
+.ticker-in{display:flex;gap:46px;width:max-content;animation:tick 48s linear infinite}
+.ticker span{font:var(--fw-display,400) clamp(20px,2vw,26px)/1.2 var(--font-display);white-space:nowrap;color:var(--ink-soft)}
+.ticker span::after{content:"✦";margin-left:46px;font-size:.6em;vertical-align:.25em;color:var(--acc)}
+.ticker:hover .ticker-in{animation-play-state:paused}
+@keyframes tick{to{transform:translateX(-50%)}}
+
+/* Reseñas */
+.rv-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(20px,2.6vw,36px)}
+.rv{margin:0;display:grid;gap:16px;align-content:start;padding:26px 24px;border-radius:var(--r-lg);background:var(--paper);border:1px solid var(--line)}
+.rv-top{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.rv-stars{display:flex;gap:2px;color:#F5B400}.rv-stars svg{width:15px;height:15px}
+.rv-tag{font-size:11.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft)}
+.rv blockquote{margin:0;font:var(--fw-display,400) clamp(19px,1.6vw,23px)/1.35 var(--font-display)}
+.rv figcaption{display:flex;align-items:center;gap:12px}
+.rv figcaption i{width:38px;height:38px;border-radius:50%;display:grid;place-items:center;font-style:normal;font-weight:700;color:#fff;flex:none}
+.rv figcaption span{display:grid;line-height:1.3}.rv figcaption b{font-weight:600;font-size:15px}.rv figcaption small{color:var(--ink-soft);font-size:13px}
+.rv-more{display:flex;flex-wrap:wrap;gap:6px 16px;align-items:baseline;margin:34px 0 0;font-size:14px;color:var(--ink-soft)}
+.rv-more a{font-weight:600;color:var(--ink);text-decoration:none;border-bottom:1px solid var(--line)}
+.rv-sum{display:inline-flex;align-items:center;gap:12px;text-decoration:none}
+.rv-sum b{font:700 54px/1 var(--font-body);letter-spacing:-.03em}
+.rv-sum>span{display:grid;gap:4px;font-size:14px;color:var(--ink-soft);line-height:1.35}
+
+/* Portfolio */
+.filters{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:26px}
+.filters button{all:unset;cursor:pointer;font-size:14.5px;font-weight:600;color:var(--ink-soft);padding:9px 16px;border-radius:999px;border:1px solid var(--line);transition:all .2s}
+.filters button[aria-pressed="true"]{background:var(--ink);color:var(--shell);border-color:var(--ink)}
+.filters button:hover{color:var(--ink);border-color:var(--ink)}
+.filters button:focus-visible{outline:2px solid var(--acc)}
+.works{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:210px;grid-auto-flow:dense;gap:14px}
+.work{all:unset;cursor:zoom-in;position:relative;display:block;height:100%;border-radius:var(--r-md);overflow:hidden;background:var(--shell-2)}
+.work img{width:100%;height:100%;object-fit:cover;transition:transform .9s cubic-bezier(.2,.7,.2,1)}
+.work:hover img{transform:scale(1.05)}
+.work::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(0,0,0,.55),transparent 45%);opacity:0;transition:opacity .3s}
+.work span{position:absolute;z-index:1;left:14px;right:14px;bottom:12px;color:#fff;font-size:13px;font-weight:600;letter-spacing:.02em;opacity:0;transform:translateY(6px);transition:opacity .3s,transform .3s}
+.work:hover span,.work:focus-visible span{opacity:1;transform:none}
+.work:hover::after,.work:focus-visible::after{opacity:1}
+.work:focus-visible{outline:2px solid var(--acc);outline-offset:2px}
+.work.big{grid-column:span 2;grid-row:span 2}
+.work.tall{grid-row:span 2}
+.work.wide{grid-column:span 2}
+.work.out,.work.more{display:none}
+.work.play::before{content:"";position:absolute;z-index:2;left:50%;top:50%;width:58px;height:58px;margin:-29px 0 0 -29px;border-radius:50%;background:rgba(255,255,255,.9) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M8 5v14l11-7z' fill='%23151515'/%3E%3C/svg%3E") 55% 50%/24px no-repeat;box-shadow:0 10px 30px -10px rgba(0,0,0,.6);transition:transform .3s}
+.work.play:hover::before{transform:scale(1.1)}
+.pop{animation:pop .55s cubic-bezier(.2,.7,.2,1) both}
+@keyframes pop{from{opacity:0;transform:translateY(14px) scale(.98)}to{opacity:1;transform:none}}
+.works-more{display:flex;justify-content:center;margin-top:28px}
+.lb{position:fixed;inset:0;z-index:150;background:rgba(10,10,12,.95);display:grid;place-items:center;gap:18px;padding:64px 16px 24px;grid-template-rows:1fr auto}
+.lb img{max-width:min(1000px,100%);max-height:100%;border-radius:8px;object-fit:contain;align-self:center}
+.lb-x{all:unset;cursor:pointer;position:absolute;top:14px;right:18px;width:44px;height:44px;display:grid;place-items:center;color:#fff;font-size:32px}
+.lb-nav{all:unset;cursor:pointer;position:absolute;top:50%;transform:translateY(-50%);width:48px;height:48px;border-radius:50%;display:grid;place-items:center;color:#fff;background:rgba(255,255,255,.14)}
+.lb-nav:hover{background:rgba(255,255,255,.26)}
+.lb-nav.prev{left:14px}.lb-nav.next{right:14px}
+.lb-nav svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.lb-foot{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:12px 22px;color:rgba(255,255,255,.8);font-size:14px}
+.lb-foot a.watch{color:#fff}
+
+/* Servicios */
+.svc{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(18px,2.2vw,28px)}
+.svc-card{position:relative;display:grid;align-content:end;min-height:340px;padding:24px;border-radius:var(--r-lg);overflow:hidden;color:#fff;text-decoration:none;isolation:isolate}
+.svc-card img{position:absolute;inset:0;z-index:-2;width:100%;height:100%;object-fit:cover;transition:transform .9s cubic-bezier(.2,.7,.2,1)}
+.svc-card::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(0deg,rgba(0,0,0,.82),rgba(0,0,0,.15) 60%,transparent)}
+.svc-card:hover img{transform:scale(1.05)}
+.svc-card h3{font-size:clamp(24px,2vw,30px);color:#fff}
+.svc-card p{margin-top:8px;font-size:15px;color:rgba(255,255,255,.86)}
+.svc-card .price{display:inline-block;margin-top:12px;font-size:13px;font-weight:700;letter-spacing:.04em;padding:6px 12px;border-radius:999px;background:rgba(255,255,255,.16);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}
+.svc-list{display:grid;grid-template-columns:repeat(3,1fr);gap:0 clamp(24px,4vw,56px);margin-top:clamp(28px,4vw,48px);border-top:1px solid var(--line)}
+.svc-list li{list-style:none;padding:14px 0;border-bottom:1px solid var(--line)}
+.svc-list{padding:0}
+
+/* Proceso */
+.steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(var(--steps,4),1fr);gap:clamp(16px,2vw,28px);counter-reset:s}
+.steps li{position:relative;padding-top:22px;border-top:1px solid var(--line);counter-increment:s}
+.steps li::before{content:counter(s,decimal-leading-zero);display:block;font:var(--fw-display,400) 34px/1 var(--font-display);color:var(--acc);margin-bottom:14px}
+.steps h3{font-size:22px}
+.steps p{margin-top:8px;font-size:15.5px;color:var(--ink-soft)}
+
+/* Sobre el estudio */
+.about{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(32px,5vw,80px);align-items:center}
+.about-img{position:relative;border-radius:var(--r-lg);overflow:hidden;aspect-ratio:4/5}
+.about-img img{width:100%;height:100%;object-fit:cover}
+.about-copy{display:grid;gap:18px;justify-items:start}
+.about-copy p{color:var(--ink-soft)}
+.chips{display:flex;flex-wrap:wrap;gap:8px;list-style:none;margin:6px 0 0;padding:0}
+.chips li{font-size:13.5px;font-weight:600;padding:7px 13px;border-radius:999px;border:1px solid var(--line)}
+
+/* Banda de presupuesto */
+.cta-band{display:grid;grid-template-columns:1fr auto;gap:36px;align-items:end}
+.cta-band>div{display:grid;gap:16px}
+.perks{list-style:none;margin:4px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:8px 26px;font-size:14.5px;color:var(--ink-soft)}
+.perks li::before{content:"✓ ";color:var(--acc-light)}
+.cta-band .btn{min-height:58px;padding:0 32px;font-size:16px}
+
+.draft{outline:2px dashed #E5B300;outline-offset:-12px}
+.incl{list-style:none;margin:0;padding:0;display:grid;gap:10px;font-size:18px}
+mark{background:#FFE58A;padding:0 4px;border-radius:4px;color:#151515}
+
+/* Contacto y FAQ */
+.visit{display:grid;grid-template-columns:1fr 1fr;gap:clamp(36px,6vw,96px);align-items:start}
+.visit>div:first-child{display:grid;gap:18px;justify-items:start}
+.contact{list-style:none;margin:6px 0 0;padding:0;display:grid;gap:12px}
+.contact li{display:flex;align-items:flex-start;gap:12px}
+.contact svg{width:18px;height:18px;flex:none;color:var(--acc);margin-top:4px}
+.contact a{text-decoration:none}
+.contact a:hover{color:var(--acc)}
+.faq{display:grid;border-top:1px solid var(--line)}
+.faq details{border-bottom:1px solid var(--line)}
+.faq summary{cursor:pointer;list-style:none;padding:20px 0;font:var(--fw-display,400) 21px/1.3 var(--font-display);display:flex;justify-content:space-between;gap:16px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font:300 24px/1 var(--font-body);color:var(--ink-soft);transition:transform .25s}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq details p{padding:0 0 22px;color:var(--ink-soft)}
+
+/* Cierre */
+.final{position:relative;isolation:isolate;overflow:hidden;padding-block:clamp(100px,13vw,170px);text-align:center;background:var(--night);color:var(--on-night);--ink:var(--on-night);--ink-soft:var(--on-night-soft);--line:var(--night-line)}
+.final-bg{position:absolute;inset:0;z-index:-1}
+.final-bg img{width:100%;height:100%;object-fit:cover;opacity:.32}
+.final-bg::after{content:"";position:absolute;inset:0;background:radial-gradient(60% 70% at 50% 50%,color-mix(in srgb,var(--night) 50%,transparent),var(--night))}
+.final .wrap{display:grid;justify-items:center;gap:24px}
+.final .eyebrow{color:var(--acc-light)}
+.final h2{font-size:clamp(40px,5.6vw,84px);line-height:1}
+.final h2 em{display:block;color:var(--acc-light)}
+.final .hero-ctas{justify-content:center;margin-top:0}
+.final .g-rate{display:inline-flex;align-items:center;gap:8px;font-size:14px;color:var(--on-night-soft);text-decoration:none}
+.final .g-rate .stars{display:flex;color:#F5B400}.final .g-rate svg{width:14px;height:14px}
+.foot{background:var(--night);color:var(--on-night-soft)}
+.foot .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 24px;font-size:13.5px;padding-block:26px;border-top:1px solid var(--night-line)}
+.foot a{text-decoration:none}.foot a:hover{color:var(--on-night)}
+
+/* Animaciones */
+.js-anim [data-reveal]{opacity:0;transform:translateY(24px);transition:opacity 1s cubic-bezier(.2,.7,.2,1),transform 1s cubic-bezier(.2,.7,.2,1)}
+.js-anim [data-reveal].in{opacity:1;transform:none}
+.js-anim .hero-copy>*{animation:rise 1s cubic-bezier(.2,.7,.2,1) both}
+.js-anim .hero-copy>:nth-child(2){animation-delay:.08s}.js-anim .hero-copy>:nth-child(3){animation-delay:.16s}.js-anim .hero-copy>:nth-child(4){animation-delay:.24s}.js-anim .hero-copy>:nth-child(5){animation-delay:.32s}
+@keyframes rise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+
+.mbar{display:none}
+
+@media (max-width:960px){
+  .nav{display:none}
+  .hero-grid{grid-template-columns:1fr}
+  .visit,.cta-band,.about{grid-template-columns:1fr}
+  .facts{grid-template-columns:1fr 1fr}
+  .facts div:nth-child(3){padding-left:0;border-left:0}
+  .facts div:nth-child(n+3){border-top:1px solid var(--night-line)}
+  .works{grid-template-columns:repeat(3,1fr)}
+  .rv-grid{grid-template-columns:1fr}
+  .svc{grid-template-columns:1fr 1fr}
+  .svc-list{grid-template-columns:1fr 1fr}
+  .steps{grid-template-columns:1fr 1fr}
+}
+@media (max-width:640px){
+  body{font-size:16px;padding-bottom:84px}
+  :root{--head:60px}
+  .top .btn{display:none}
+  .brand img{height:var(--logo-hm,28px)}
+  .hero{min-height:0}
+  .hero-grid{padding-top:var(--head);gap:0;padding-bottom:30px}
+  .hero-art{order:-1;margin-inline:calc(-1*clamp(20px,4vw,48px))}
+  .hero .eyebrow{margin-top:18px;font-size:11px;letter-spacing:.14em}
+  .hero .eyebrow .eb-2{display:none}
+  .hero h1{font-size:clamp(32px,10.4vw,48px);margin-top:10px}
+  .hero-sub{margin-top:12px;font-size:15.5px}
+  .hero-ctas{margin-top:18px;width:100%}
+  .hero-ctas>.btn{width:100%}
+  .hero .tel{display:none}
+  .rate-stk{right:12px;top:auto;bottom:12px;padding:8px 11px 9px;border-radius:13px;gap:1px 8px;transform:rotate(2deg)}
+  .rate-stk b{font-size:26px}.rate-stk svg{width:13px;height:13px}.rate-stk small{font-size:11.5px}
+  .facts div{padding:14px 10px 16px 0}.facts div+div{padding-left:12px}
+  .works{grid-template-columns:1fr 1fr;grid-auto-rows:150px;gap:8px}
+  .work span{opacity:1;transform:none;font-size:12px}
+  .work::after{opacity:1}
+  .svc,.svc-list,.steps{grid-template-columns:1fr}
+  .svc-card{min-height:260px}
+  .cta-band .btn{width:100%}
+  .final .hero-ctas{flex-direction:column;width:100%}.final .hero-ctas .btn{width:100%}
+  .mbar{display:flex;gap:6px;position:fixed;left:12px;right:12px;bottom:calc(10px + env(safe-area-inset-bottom,0px));z-index:70;padding:6px;border-radius:999px;background:color-mix(in srgb,var(--shell) 86%,transparent);-webkit-backdrop-filter:blur(18px) saturate(1.5);backdrop-filter:blur(18px) saturate(1.5);border:1px solid var(--line);box-shadow:0 14px 34px -14px rgba(0,0,0,.45)}
+  .mbar.dark{background:color-mix(in srgb,var(--night) 70%,transparent);border-color:rgba(255,255,255,.16)}
+  .mbar .btn{flex:1;min-height:48px;white-space:nowrap;padding:0 16px}
+  .mbar .btn-ghost{flex:0 0 48px;width:48px;padding:0;border-color:transparent;background:rgba(0,0,0,.07);color:var(--ink)}
+  .mbar.dark .btn-ghost{background:rgba(255,255,255,.16);color:#fff}
+  .mbar .btn-ghost svg{width:20px;height:20px}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+
+/* Temporadas: el eyebrow del hero se vuelve una píldora con punto latiendo */
+.hero .eyebrow.t-on{padding:6px 14px 6px 10px;border-radius:999px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.22);color:#fff;letter-spacing:.14em}
+.hero .eyebrow.t-on::before{width:8px;height:8px;margin-top:-3px;border-radius:50%;opacity:1;background:var(--acc-light);box-shadow:0 0 0 0 var(--acc-light);animation:t-pulso 1.8s ease-out infinite}
+@keyframes t-pulso{70%{box-shadow:0 0 0 8px transparent}100%{box-shadow:0 0 0 0 transparent}}
+
+/* Botones flotantes (cabecera y barra móvil): aparecen tras un mínimo scroll, no al pintar el hero */
+.top .btn-primary{transition:opacity .35s,transform .35s cubic-bezier(.2,.7,.2,1),background .25s}
+html.cta-wait .top .btn-primary{opacity:0;transform:translateY(-8px);pointer-events:none}
+.mbar{transition:transform .35s cubic-bezier(.2,.7,.2,1),opacity .35s,background .4s,border-color .4s}
+html.cta-wait .mbar,.mbar.off{transform:translateY(150%)!important;opacity:0!important;pointer-events:none}
+
+/* Paneles: acento de la marca */
+.bk-opts input:checked+span{background:var(--acc-soft)!important;border-color:var(--acc);color:var(--ink)}
+.bk-opts input:checked+span::after{border-color:var(--acc);background-color:var(--acc)}
+.bk-prog i{background:var(--acc)}
+.bk-head .t b{color:var(--ink)}
+.bk-field select{display:block;width:100%;min-height:52px;padding:0 14px;border-radius:14px;border:1.5px solid var(--line);background:#fff;font:500 16px var(--font-body);color:var(--ink)}
+
+/* ---- Propio de ByL Studio ---- */
+
+h1,h2{font-weight:700;letter-spacing:-.035em}
+.hero h1{font-size:clamp(44px,5.4vw,86px);line-height:.98}
+.hero h1 em,h2 em{font-style:normal;color:var(--acc-light)}
+h2 em{color:var(--acc)}
+.band-night h2 em,.final h2 em{color:var(--acc-light)}
+.hero{background:radial-gradient(50% 60% at 78% 40%,rgba(161,61,99,.3),transparent 70%),var(--night)}
+/* Claqueta del hero: cada golpe es una toma nueva con un trabajo real */
+.take{margin:0;position:relative;justify-self:center;width:min(100%,calc((100svh - var(--head) - 120px)*.8),520px)}
+.take-shot{position:relative;aspect-ratio:4/5;border-radius:14px;background:#000;box-shadow:0 40px 80px -30px rgba(0,0,0,.85)}
+.take-shot img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:14px;opacity:0}
+.take-shot img.on{opacity:1}
+.take-shot.cut img.on{animation:cut .5s steps(1)}
+@keyframes cut{0%{filter:brightness(2.2) contrast(.8)}12%{filter:none}}
+.take .rate-stk{--stk-r:-20px;--stk-t:24px}
+.clap{all:unset;cursor:pointer;position:absolute;left:-38px;bottom:-26px;width:236px;transform:rotate(-6deg);filter:drop-shadow(0 22px 26px rgba(0,0,0,.55));z-index:6}
+.clap:focus-visible{outline:2px solid #fff;outline-offset:6px}
+.clap-stick{display:block;height:30px;border-radius:4px 4px 0 0;background:repeating-linear-gradient(-55deg,#111 0 16px,#f4f1ec 16px 32px);transform-origin:6px 100%;transition:transform .12s ease-in}
+.clap.open .clap-stick{transform:rotate(-24deg);transition:transform .25s ease-out}
+.clap-body{display:grid;background:#141414;border:2px solid #2a2a2a;border-top:0;border-radius:0 0 8px 8px;color:#fff;font-family:var(--font-body)}
+.clap-row{display:grid;gap:1px;padding:7px 11px;border-top:1px solid rgba(255,255,255,.18)}
+.clap-row.three{grid-template-columns:1fr 64px;padding:0}
+.clap-row.three>span{display:grid;gap:1px;padding:7px 11px}
+.clap-row.three>span+span{border-left:1px solid rgba(255,255,255,.18)}
+.clap small{font-size:9.5px;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.55)}
+.clap b{font:600 15px/1.15 var(--font-body);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.clap.hit{animation:hit .25s ease-out}
+@keyframes hit{30%{transform:rotate(-6deg) translateY(3px) scale(.98)}}
+.take-hint{position:absolute;left:210px;bottom:-30px;margin:0;font-size:12.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--on-night-soft)}
+.brand-t{font:700 24px/1 var(--font-display);letter-spacing:-.03em;white-space:nowrap}.brand-t b{color:var(--acc-light);font-weight:700}
+.top:not(.dark) .brand-t b{color:var(--acc)}
+.quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(20px,2.6vw,36px);margin-top:clamp(28px,3vw,40px)}
+.quotes blockquote{margin:0;padding:22px 0 0;border-top:2px solid var(--acc);display:grid;gap:12px}
+.quotes p{font-size:16px;color:var(--ink)}
+.quotes cite{font-style:normal;font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft)}
+@media (max-width:960px){.quotes{grid-template-columns:1fr}.take{margin-top:20px}}
+@media (max-width:640px){
+  .take{width:auto;margin:0;justify-self:stretch}
+  .take-shot{aspect-ratio:auto;height:min(64vw,32svh);border-radius:0;box-shadow:none}
+  .take-shot img{border-radius:0}
+  .clap{left:12px;bottom:-16px;width:150px}
+  .clap-stick{height:18px}
+  .clap-row{padding:4px 8px}.clap-row.three>span{padding:4px 8px}.clap-row.three{grid-template-columns:1fr 44px}
+  .clap small{font-size:8px}.clap b{font-size:11.5px}
+  .clap-row:first-child{display:none}
+  .take-hint{display:none}
+  .take .rate-stk{right:12px;bottom:12px;top:auto}
+  .hero .eyebrow{margin-top:30px}
+}
+
+/* ---- Paneles laterales ---- */
+.bk{position:fixed;inset:0;z-index:120}
+.bk[hidden]{display:none}
+.bk-scrim{position:absolute;inset:0;background:rgba(18,18,20,.55);opacity:0;transition:opacity .35s ease}
+.bk.open .bk-scrim{opacity:1}
+.bk-panel{position:absolute;top:0;right:0;bottom:0;width:min(480px,100%);background:var(--shell);display:flex;flex-direction:column;box-shadow:-30px 0 80px -30px rgba(18,18,20,.45);transform:translateX(100%);transition:transform .42s cubic-bezier(.2,.8,.2,1)}
+.bk.open .bk-panel{transform:none}
+.bk-head{display:grid;grid-template-columns:44px 1fr 44px;align-items:center;gap:8px;padding:calc(10px + env(safe-area-inset-top,0px)) 12px 10px;border-bottom:1px solid var(--line);background:var(--paper)}
+.bk-head .t{text-align:center;display:grid;gap:2px}
+.bk-head .t span{font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft)}
+.bk-head .t b{font-family:var(--font-display);font-weight:400;font-size:20px;color:var(--hibiscus);line-height:1.1}
+.bk-ib{all:unset;cursor:pointer;width:44px;height:44px;border-radius:50%;display:grid;place-items:center;color:var(--ink)}
+.bk-ib:hover{background:var(--shell-2)}
+.bk-ib:focus-visible{outline:3px solid var(--hibiscus)}
+.bk-ib svg{width:22px;height:22px}
+.bk-ib[disabled]{visibility:hidden}
+.bk-prog{height:4px;background:var(--shell-2)}
+.bk-prog i{display:block;height:100%;background:linear-gradient(90deg,var(--hibiscus),var(--sun));transform-origin:left;transition:transform .35s ease}
+.bk-body{flex:1;overflow-y:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch;padding:28px 22px 24px}
+.bk-pane{display:grid;gap:18px;align-content:start}
+.bk-pane[hidden]{display:none}
+.bk-pane h3{font-size:clamp(26px,6vw,32px);line-height:1.1}
+.bk-pane .sub{color:var(--ink-soft);margin-top:-8px}
+.bk-opts{display:grid;gap:10px}
+.bk-opts label{position:relative;cursor:pointer;display:block}
+.bk-opts input{position:absolute;opacity:0;inset:0;margin:0;cursor:pointer}
+.bk-opts span{display:flex;align-items:center;justify-content:space-between;min-height:58px;padding:0 18px;border-radius:16px;border:1.5px solid var(--line);background:var(--paper);font-size:17px;font-weight:600;transition:border-color .2s,background .2s,color .2s}
+.bk-opts span::after{content:"";width:22px;height:22px;border-radius:50%;border:2px solid var(--line);flex:none;transition:all .2s}
+.bk-opts input[type=checkbox]+span::after{border-radius:7px}
+.bk-opts input:checked+span{border-color:var(--hibiscus);background:#FFF1E8;color:var(--hibiscus-ink)}
+.bk-opts input:checked+span::after{border-color:var(--hibiscus);background:var(--hibiscus) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='none' stroke='white' stroke-width='3.2' stroke-linecap='round' stroke-linejoin='round' d='M6 12l4 4 8-8'/%3E%3C/svg%3E") center/14px no-repeat}
+.bk-opts input:focus-visible+span{outline:3px solid var(--hibiscus);outline-offset:2px}
+.bk-opts.row{grid-template-columns:repeat(auto-fit,minmax(0,1fr));gap:8px}
+.bk-opts.row span{justify-content:center;min-height:50px;padding:0 10px;font-size:15px;text-align:center}
+.bk-opts.row span::after{display:none}
+.bk-field{display:grid;gap:8px;min-width:0}
+.bk-field>span{font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-soft)}
+.bk-field input,.bk-field textarea{display:block;width:100%;min-width:0;max-width:100%;min-height:56px;padding:14px 16px;border-radius:14px;border:1.5px solid var(--line);background:var(--paper);font:500 17px var(--font-body);color:var(--ink);-webkit-appearance:none;appearance:none}
+.bk-field input[type=date]{text-align:left}
+.bk-field input::-webkit-date-and-time-value{text-align:left}
+.bk-field textarea{min-height:96px;resize:vertical}
+.cal{background:var(--paper);border:1.5px solid var(--line);border-radius:18px;padding:10px 12px 14px}
+.cal-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:6px}
+.cal-head b{font-size:17px}
+.cal-head .bk-ib[disabled]{visibility:visible;opacity:.25;cursor:default}
+.cal-dow,.cal-grid{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:4px;text-align:center}
+.cal-dow span{font-size:12px;font-weight:700;color:var(--ink-soft);padding:4px 0}
+.cal-dow .we,.cal-grid .we{color:var(--hibiscus)}
+.cal-grid button{all:unset;box-sizing:border-box;cursor:pointer;aspect-ratio:1;max-height:48px;width:100%;display:grid;place-items:center;border-radius:12px;font-weight:600;font-size:15px;font-variant-numeric:tabular-nums;color:var(--ink);transition:background .15s,color .15s}
+.cal-grid button.we{color:var(--hibiscus)}
+.cal-grid button:hover:not([disabled]){background:var(--shell-2)}
+.cal-grid button[disabled]{opacity:.28;cursor:default}
+.cal-grid button{position:relative}
+.cal-grid button.today{opacity:1;color:var(--ink);box-shadow:inset 0 0 0 2px var(--sun);background:#FFF6EE}
+.cal-grid button.today::after{content:"";position:absolute;left:50%;bottom:12%;width:5px;height:5px;margin-left:-2.5px;border-radius:50%;background:#E0864A}
+.cal-legend{display:flex;align-items:center;gap:6px;margin:10px 2px 0;font-size:13px;font-weight:600;color:var(--ink-soft)}
+.cal-legend i{width:14px;height:14px;border-radius:5px;box-shadow:inset 0 0 0 2px var(--sun);background:#FFF6EE;position:relative;flex:none}
+.cal-legend i::after{content:"";position:absolute;left:50%;bottom:2px;width:4px;height:4px;margin-left:-2px;border-radius:50%;background:#E0864A}
+.cal-grid button[aria-pressed="true"]{background:var(--hibiscus);color:#fff}
+.cal-grid button:focus-visible{outline:3px solid var(--hibiscus);outline-offset:1px}
+.cal-sel{margin:4px 0 0;font-weight:600;color:var(--ink-soft)}
+.cal-sel.on{color:var(--hibiscus-ink)}
+.bk-field input:focus,.bk-field textarea:focus{outline:none;border-color:var(--hibiscus)}
+.bk-field input[aria-invalid="true"]{border-color:#C6283D;background:#FFF2F4}
+.stepper{display:grid;grid-template-columns:56px 1fr 56px;align-items:center;background:var(--paper);border:1.5px solid var(--line);border-radius:16px;overflow:hidden}
+.stepper button{all:unset;cursor:pointer;height:56px;display:grid;place-items:center;font-size:26px;font-weight:600;color:var(--hibiscus)}
+.stepper button:active{background:var(--shell-2)}
+.stepper button:focus-visible{outline:3px solid var(--hibiscus);outline-offset:-3px}
+.stepper output{text-align:center;font-size:22px;font-weight:700;font-variant-numeric:tabular-nums}
+.bk-foot{padding:12px 22px calc(14px + env(safe-area-inset-bottom,0px));border-top:1px solid var(--line);background:var(--paper);display:grid;gap:8px}
+.bk-foot .btn{width:100%;min-height:56px;font-size:17px}
+.bk-foot [hidden]{display:none!important}
+.f-error{margin:0;color:#B3213A;font-weight:600;font-size:15px}
+.btn-wa{background:#1FA855;color:#fff;box-shadow:0 12px 24px -12px rgba(31,168,85,.8);width:100%;white-space:nowrap}
+.btn-wa:hover{background:#178F47}
+.btn-wa svg{width:22px;height:22px}
+.f-preview{margin:0;white-space:pre-wrap;font:16px/1.5 var(--font-body);background:#E7FFDB;border-radius:16px 16px 16px 4px;padding:16px 18px;color:#123;box-shadow:0 1px 0 rgba(0,0,0,.06)}
+.f-copy{all:unset;cursor:pointer;justify-self:center;font-size:14px;font-weight:600;color:var(--hibiscus-ink);text-decoration:underline;text-underline-offset:3px;padding:4px 8px}
+.f-copy:focus-visible{outline:3px solid var(--hibiscus);border-radius:6px}
+.f-hint{margin:0;font-size:13px;color:var(--ink-soft);text-align:center}
+
+
+.hrs{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.stepper.sm{grid-template-columns:40px 1fr 40px;border-radius:14px}
+.stepper.sm button{height:44px;font-size:22px}
+.stepper.sm button[disabled]{opacity:.25;cursor:default}
+.stepper.sm output{font-size:18px}
+.hrs-out{margin:-4px 0 0;font-size:14px;font-weight:600;color:var(--hibiscus-ink)}
+/* Panel compacto: ningún paso necesita scroll */
+.bk-body{padding:18px 18px 14px}
+.bk-pane{gap:14px}
+.bk-pane h3{font-size:24px}
+.bk-pane .sub{margin-top:-6px;font-size:15px}
+.bk-field{gap:6px}
+.bk-field>span{font-size:12px}
+.bk-opts{gap:8px}
+.bk-opts span{min-height:50px;font-size:16px;border-radius:14px}
+.bk-opts.row span{min-height:44px}
+.bk-opts.grid2{grid-template-columns:1fr 1fr}
+.bk-opts.grid2 span{min-height:44px;padding:0 12px;font-size:14px}
+.bk-opts.grid2 span::after{width:18px;height:18px}
+.bk-field input,.bk-field textarea{min-height:48px;padding:11px 14px;font-size:16px}
+.bk-field textarea{min-height:76px}
+.stepper{grid-template-columns:52px 1fr 52px}
+.stepper button{height:48px}
+.cal{padding:6px 8px 10px}
+.cal-head{margin-bottom:2px}
+.cal-head .bk-ib{width:38px;height:38px}
+.cal-dow span{padding:2px 0}
+.cal-grid{gap:2px}
+.cal-grid button{aspect-ratio:auto;height:clamp(34px,5.2vh,44px)}
+.cal-legend{margin-top:6px;font-size:12px}
+.cal-sel{margin:0;font-size:14px}
+.f-preview{font-size:14px;padding:12px 14px}
+.bk-foot{padding:10px 18px calc(10px + env(safe-area-inset-bottom,0px));gap:6px}
+.bk-foot .btn{min-height:50px}
+.bk-head{padding-block:calc(6px + env(safe-area-inset-top,0px)) 6px}
+@media (max-height:700px){
+  .bk-pane h3{font-size:22px}
+  .bk-opts span{min-height:46px}
+  .bk-opts.row span,.bk-opts.grid2 span{min-height:40px}
+  .stepper button{height:44px}
+  .cal-grid button{height:32px;font-size:14px}
+  .bk-body{padding-top:14px}
+  .f-preview{font-size:13px;line-height:1.4;padding:10px 12px}
+  .bk-pane .sub{font-size:13.5px}
+}
+@media (max-height:620px){.bk-pane{gap:10px}.bk-pane h3{font-size:20px}.f-preview{font-size:12.5px;line-height:1.35}}
+.rvd-body{display:grid;grid-template-columns:minmax(0,1fr);gap:18px;align-content:start;overflow-x:hidden;overscroll-behavior-x:none;touch-action:pan-y}
+.rvd .bk-panel{overflow-x:hidden;max-width:100vw}
+.rvd-body>*,.rvd-list>*{min-width:0;max-width:100%}
+.rvd-list .rv,.rvd-list .rv *{overflow-wrap:anywhere}
+.rvd-list .rv-top{flex-wrap:wrap}.rvd-list .rv-tag{white-space:normal}
+.rvd-sum{display:grid;grid-template-columns:auto minmax(0,1fr);gap:22px;align-items:center;background:var(--paper);border:1px solid var(--line);border-radius:var(--r-md);padding:18px 20px}
+.rvd-score{display:grid;justify-items:center;gap:4px}
+.rvd-score b{font-size:44px;line-height:1;font-weight:700;color:var(--ink)}
+.rvd-score small{font-size:13px;color:var(--ink-soft)}
+.rvd-dist{list-style:none;margin:0;padding:0;display:grid;gap:5px;font-size:13px;color:var(--ink-soft)}
+.rvd-dist li{display:grid;grid-template-columns:12px 1fr 22px;gap:8px;align-items:center}
+.rvd-dist i{height:8px;border-radius:99px;background:var(--shell-2);overflow:hidden}.rvd-dist b{display:block;height:100%;background:#F5B400;border-radius:99px}
+.rvd-dist em{font-style:normal;text-align:right}
+.rvd-h{margin:6px 0 0;font-size:17px}
+.rvd-list{display:grid;grid-template-columns:minmax(0,1fr);gap:12px}
+.rvd-list .rv{background:var(--paper);opacity:1!important;transform:none!important}
+.rvd-map{border-radius:var(--r-md);overflow:hidden;border:1px solid var(--line);background:var(--shell-2);height:300px;flex:none}
+.rvd-map iframe{width:100%;height:100%;border:0;display:block}
+.rvd-note{margin:0;font-size:13px;color:var(--ink-soft)}
+.rvd-foot{padding:12px 16px calc(12px + env(safe-area-inset-bottom,0px));border-top:1px solid var(--line);background:var(--paper)}
+.rvd-foot .btn{width:100%}
+/* Simulador en panel lateral; los tres rombos del logo hacen de cargador */
+.sim .bk-panel{width:min(1120px,100%);background:var(--night);color:#F4F1EA;box-shadow:-30px 0 80px -30px rgba(0,0,0,.6)}
+.sim .bk-head{background:var(--night);border-bottom-color:rgba(244,241,234,.14)}
+.sim .bk-head .t span{color:rgba(244,241,234,.62)}
+.sim .bk-head .t b{color:#F4F1EA}
+.sim .bk-ib{color:#F4F1EA}
+.sim .bk-ib:hover{background:rgba(255,255,255,.1)}
+.sim-main{position:relative;flex:1;min-height:0;display:flex;flex-direction:column}
+.sim-body{flex:1;min-height:0;overflow-y:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch;padding:clamp(18px,3vw,36px);padding-bottom:calc(clamp(18px,3vw,36px) + env(safe-area-inset-bottom,0px))}
+.sim-load{position:absolute;inset:0;z-index:5;display:grid;place-content:center;justify-items:center;gap:22px;background:var(--night);color:rgba(244,241,234,.7);font-size:14px;font-weight:600;letter-spacing:.04em;transition:opacity .4s}
+.sim-load.done{opacity:0;pointer-events:none}
+.rhombs{width:112px;height:auto;overflow:visible}
+.rhombs path{transform-box:fill-box;transform-origin:center;animation:rhomb 1.35s ease-in-out infinite}
+.rhombs .r-top{fill:#F4F1EA}
+.rhombs .r-l{fill:#FF6600;animation-delay:.18s}
+.rhombs .r-r{fill:#FF6600;animation-delay:.36s}
+@keyframes rhomb{0%,65%,100%{opacity:.2;transform:scale(.82)}28%{opacity:1;transform:scale(1)}}
+/* Subir arriba */
+.totop{position:fixed;right:20px;bottom:24px;z-index:65;width:48px;height:48px;border-radius:50%;border:1px solid rgba(255,255,255,.6);background:rgba(255,255,255,.72);-webkit-backdrop-filter:blur(14px) saturate(1.6);backdrop-filter:blur(14px) saturate(1.6);color:var(--ink);display:grid;place-items:center;cursor:pointer;box-shadow:0 10px 30px -10px rgba(21,21,21,.3);opacity:0;transform:translateY(12px) scale(.9);pointer-events:none;transition:opacity .3s,transform .3s}
+.totop.on{opacity:1;transform:none;pointer-events:auto}
+.totop:hover{transform:translateY(-2px)}
+.totop svg{width:22px;height:22px}
+@media (max-width:960px){.totop{bottom:calc(86px + env(safe-area-inset-bottom,0px));right:16px;width:44px;height:44px}}
+@media (max-width:640px){.bk-panel{width:100%;transform:translateY(100%);box-shadow:none}}
+.bk-head .t b{font-family:var(--font-display);font-weight:400;color:var(--ink)}
+.bk-opts input:checked+span{background:#FFF1E8}
+.btn-wa{font-size:16px}
+.bk-pane h3:focus{outline:none}
+.bk-opts.grid2.tight span{min-height:44px;padding:0 12px;font-size:14.5px}
+@media (max-height:700px){.bk-opts.grid2.tight span{min-height:38px;font-size:14px}}
+
+
+</style>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-phone" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 22s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></g></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="M3.5 6.5l8.5 6.5 8.5-6.5"/></g></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2.8l2.8 5.9 6.4.8-4.7 4.4 1.2 6.4L12 17.2l-5.7 3.1 1.2-6.4L2.8 9.5l6.4-.8z"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M21 11.5a8.4 8.4 0 0 1-12.3 7.5L3 21l2-5.4A8.4 8.4 0 1 1 21 11.5z"/></symbol>
+  <symbol id="i-ig" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></g></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></g></symbol>
+  <symbol id="i-play" viewBox="0 0 24 24"><path fill="currentColor" d="M8 5v14l11-7z"/></symbol>
+</svg>
+<div class="loader" id="loader" aria-hidden="true">
+  <div class="ld-in">
+    <div class="ld-mark"><svg class="ld-ring" viewBox="0 0 140 140"><circle cx="70" cy="70" r="66"/><circle class="ld-arc" cx="70" cy="70" r="66" pathLength="100"/></svg><img src="img/logo.png" alt=""></div>
+    <b class="ld-name">ByL Studio</b>
+    <small class="ld-sub">Productora audiovisual · Jaén</small>
+  </div>
+</div>
+<script>
+/* ---------- Loader con el logo: en cada entrada o recarga; se va al cargar la página (mín. 0,9 s, máx. 3 s) ---------- */
+(function(){var d=document.documentElement,l=document.getElementById('loader'),t0=Date.now(),done=false;d.classList.add('loading');
+ function go(){if(done)return;done=true;setTimeout(function(){l.classList.add('out');d.classList.remove('loading');setTimeout(function(){l.remove()},900)},Math.max(0,900-(Date.now()-t0)))}
+ if(document.readyState==='complete')go();else window.addEventListener('load',go);setTimeout(go,3000);})();
+</script>
+
+<header class="top dark" id="top">
+  <div class="wrap">
+    <a class="brand" href="#hero" aria-label="ByL Studio, inicio"><span class="brand-t">By<b>L</b> Studio</span></a>
+    <nav class="nav" aria-label="Secciones"><a href="#trabajos">Portfolio</a><a href="#servicios">Servicios</a><a href="#proceso">Proceso</a><a href="#resenas">Opiniones</a><a href="#contacto">Contacto</a></nav>
+    <a class="btn btn-primary" href="#presupuesto">¿Hablamos?</a>
+  </div>
+  <div class="progress" id="progress"></div>
+</header>
+
+<main>
+  <section class="hero" id="hero">
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <span class="eyebrow" data-t="eyebrow">Productora audiovisual<span class="eb-2">&nbsp;· Jaén</span></span>
+        <h1 data-t="h1">Contamos lo que haces <em>para que conecte</em></h1>
+        <p class="hero-sub" data-t="sub">Fotografía gastronómica y de producto, retrato, eventos y vídeo corporativo para restaurantes, marcas, agencias e instituciones de Jaén, Córdoba, Granada y Málaga.</p>
+        <div class="hero-ctas">
+          <a class="btn btn-primary" href="#presupuesto"><span data-t="cta">¿Hablamos de tu proyecto?</span> <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          <a class="tel" href="tel:+34625800507"><svg><use href="#i-phone"/></svg>625 80 05 07</a>
+        </div>
+        <p class="hero-micro" data-t="micro">Respuesta por WhatsApp · sin compromiso</p>
+      </div>
+      <figure class="hero-art take" id="take" aria-label="Claqueta con trabajos reales de ByL Studio: tócala para la siguiente toma">
+        <div class="take-shot" id="take-shot">
+          <img id="take-a" class="on" src="img/w-ama-1.jpg" alt="Plato fotografiado por ByL Studio" fetchpriority="high"><img id="take-b" src="img/w-trueno.jpg" alt="">
+          <a class="rate-stk " href="#resenas" data-rvd aria-label="5,0 de 5 en Google, 7 reseñas"><span class="stars"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></span><b>5,0</b><small>7 reseñas<br>en Google</small></a>
+        </div>
+        <button type="button" class="clap" id="clap" aria-label="Siguiente toma">
+          <span class="clap-stick" aria-hidden="true"></span>
+          <span class="clap-body" aria-hidden="true">
+            <span class="clap-row"><small>Prod.</small><b>ByL Studio</b></span>
+            <span class="clap-row three"><span><small>Escena</small><b id="clap-esc">Gastronomía</b></span><span><small>Toma</small><b id="clap-toma">01</b></span></span>
+            <span class="clap-row"><small>Cliente</small><b id="clap-cli">Ama</b></span>
+          </span>
+        </button>
+        <p class="take-hint" aria-hidden="true">Toca la claqueta</p>
+      </figure>
+    </div>
+  </section>
+<div class="ticker" aria-label="Cocinas y marcas que han pasado por su objetivo"><div class="ticker-in"><span>Ama</span><span>Asador Contrapunto</span><span>Ka Oru</span><span>Bocao Vitango</span><span>La Indómita</span><span>Cortijo El Naranjo</span><span>Bien Frito</span><span>La Piccola Cafetería</span><span>Borombombillos</span><span>Quesos y Besos</span><span>El Trueno</span><span>Jaén de Vinos</span><span>Ajhito</span><span>Las Aguas de Arbuniel</span></div></div>
+  <section class="sec" id="resenas">
+    <div class="wrap">
+      <div class="sec-head" data-reveal>
+        <span class="eyebrow">Reseñas de Google y opiniones de clientes</span>
+        <h2>5,0 en Google. <em>Y lo dicen los chefs</em></h2>
+        <a class="rv-sum" href="#resenas" data-rvd><b>5,0</b><span><span class="rv-stars"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></span>7 reseñas en Google</span></a>
+      </div>
+      <div class="rv-grid" id="rv-grid"></div>
+      <div class="quotes" data-reveal>
+        <blockquote><p>«By L Studio son unos cracks. Para mí son el referente en Andalucía en lo que a fotografía y vídeo gastronómico se refiere. Cuando trabajas con ellos notas la diferencia.»</p><cite>Dani G. Peinado · Chef del AOVE</cite></blockquote>
+        <blockquote><p>«Me pidieron unas fotografías de una revista de un día para otro. Elena realizó la sesión en el restaurante y han quedado unas imágenes preciosas. Las fotografías reflejan nuestra cocina.»</p><cite>Joaquín Machuca · Borombombillos</cite></blockquote>
+        <blockquote><p>«La experiencia trabajando con Elena es siempre muy muy buena. No solo realiza las fotografías o videos, si no que además resuelve cualquier problema que pueda surgir.»</p><cite>David Hernández · Jaén de Vinos</cite></blockquote>
+      </div>
+      <p class="rv-more"><a href="#resenas" data-rvd>Ver el resumen de sus reseñas →</a> <span>Fragmentos literales de reseñas de 5 estrellas en Google y de opiniones publicadas en su web.</span></p>
+    </div>
+  </section>
+
+  <section class="sec band-paper" id="trabajos">
+    <div class="wrap">
+      <div class="sec-head" data-reveal>
+        <span class="eyebrow">Portfolio</span>
+        <h2>Despierta el apetito <em>antes de la primera reserva</em></h2>
+        <p class="lead">Restaurantes, marcas y conciertos de Jaén y Andalucía. Cada imagen cuenta una historia.</p>
+      </div>
+      <div class="filters" role="group" aria-label="Filtrar trabajos"><button type="button" data-f="all">Todo</button><button type="button" data-f="gastro">Gastronomía</button><button type="button" data-f="producto">Producto</button><button type="button" data-f="retrato">Retrato</button><button type="button" data-f="eventos">Eventos</button><button type="button" data-f="espacios">Espacios</button></div>
+      <div class="works" id="works"></div>
+      <div class="works-more"><button type="button" class="btn btn-ghost" id="works-more">Ver más trabajos</button></div>
+    </div>
+  </section>
+
+  <section class="sec" id="servicios">
+    <div class="wrap">
+      <div class="sec-head" data-reveal>
+        <span class="eyebrow">¿Qué podemos hacer por ti?</span>
+        <h2>No solo producimos piezas. <em>Les damos sentido</em></h2>
+        <p class="lead">Acompañamos todo el proceso para que el contenido tenga coherencia y un objetivo claro: estrategia, dirección creativa y producción.</p>
+      </div>
+      <div class="svc">
+        <a class="svc-card" href="#presupuesto" data-tipo="Fotografía gastronómica" data-reveal><img src="img/w-contrapunto-1.jpg" alt="" loading="lazy"><h3>Fotografía gastronómica</h3><p>Para restaurantes y hostelería: platos, espacios y equipo que cuentan quiénes sois.</p></a>
+        <a class="svc-card" href="#presupuesto" data-tipo="Fotografía de producto" data-reveal><img src="img/w-qyb.jpg" alt="" loading="lazy"><h3>Fotografía de producto</h3><p>Creativa, con los valores de la marca, o descriptiva sobre fondo neutro para tienda online.</p></a>
+        <a class="svc-card" href="#presupuesto" data-tipo="Vídeo corporativo" data-reveal><img src="img/video-cibus.jpg" alt="" loading="lazy"><h3>Vídeo corporativo</h3><p>Para ferias y congresos, tu web o reels para Instagram, TikTok y YouTube.</p></a>
+        <a class="svc-card" href="#presupuesto" data-tipo="Retrato profesional" data-reveal><img src="img/w-retrato-chef.jpg" alt="" loading="lazy" style="object-position:50% 25%"><h3>Retrato profesional</h3><p>Quién está detrás de cada nombre y marca, con seguridad y proximidad.</p></a>
+        <a class="svc-card" href="#presupuesto" data-tipo="Fotografía de eventos o conciertos" data-reveal><img src="img/w-concierto-2.jpg" alt="" loading="lazy"><h3>Eventos y conciertos</h3><p>Inauguraciones, congresos y espectáculos, listos para notas de prensa y redes.</p></a>
+        <a class="svc-card" href="#presupuesto" data-tipo="Fotografía de espacios" data-reveal><img src="img/w-cortijo-1.jpg" alt="" loading="lazy"><h3>Espacios y arquitectura</h3><p>Restaurantes, hoteles y cortijos: tus instalaciones, como mejor se ven.</p></a>
+      </div>
+      <ul class="svc-list"><li>Estrategia de contenidos</li><li>Dirección creativa</li><li>Partner de producción para agencias</li></ul>
+    </div>
+  </section>
+
+  <section class="sec band-paper" id="proceso">
+    <div class="wrap">
+      <div class="sec-head" data-reveal>
+        <span class="eyebrow">¿Cómo trabajamos?</span>
+        <h2>De la idea <em>a la entrega</em></h2>
+      </div>
+      <ol class="steps" style="--steps:3">
+        <li data-reveal><h3>Entendemos el proyecto</h3><p>Hablamos contigo para conocer qué necesitas, qué quieres comunicar y en qué contexto.</p></li>
+        <li data-reveal><h3>Definimos el estilo</h3><p>Proponemos una idea clara y un planteamiento que tenga sentido para tu marca.</p></li>
+        <li data-reveal><h3>Producción</h3><p>Fotografía y vídeo, cuidando tanto la narrativa como la estética.</p></li>
+        <li data-reveal><h3>Postproducción</h3><p>Construimos la pieza final con detalle y coherencia.</p></li>
+        <li data-reveal><h3>Revisamos contigo</h3><p>Ajustamos lo necesario para que el resultado encaje contigo.</p></li>
+        <li data-reveal><h3>Entregamos</h3><p>Listo para usar donde lo necesites.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="sec band-night" id="presupuesto">
+    <div class="wrap cta-band" data-reveal>
+      <div>
+        <span class="eyebrow">¿Empezamos?</span>
+        <h2>¿Tienes un proyecto en mente? <em>Vemos cómo darle forma</em></h2>
+        <p class="lead">Tres preguntas y tu mensaje sale ya escrito por WhatsApp, con un código propio, para que te propongamos una idea.</p>
+        <ul class="perks"><li>Sin registrarte</li><li>Menos de un minuto</li><li>Atención con cita previa</li></ul>
+      </div>
+      <a class="btn btn-primary" href="#presupuesto">Contar mi proyecto <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+    </div>
+  </section>
+
+  <section class="sec" id="estudio">
+    <div class="wrap about">
+      <div class="about-img" data-reveal><img src="img/elena.jpg" alt="Elena de Urda, fotógrafa y directora de fotografía de ByL Studio" loading="lazy" style="object-position:55% 40%"></div>
+      <div class="about-copy" data-reveal>
+        <span class="eyebrow">Quiénes somos</span>
+        <h2>Elena de Urda <em>y Xavi Soler</em></h2>
+        <p>ByL Studio es una productora audiovisual de Jaén. Elena es licenciada en Comunicación Audiovisual por la Universidad de Málaga y se especializó en operadora de cámara y dirección de fotografía en el Centro de Estudios Cinematográficos de Cataluña.</p>
+        <p>Ha sido directora de fotografía del documental «La vida en una gota» y ha trabajado como operadora y directora de fotografía en documentales y cortometrajes. En ByL Studio une arte y técnica para contar la historia de restaurantes, chefs y marcas.</p>
+        <ul class="chips"><li>Gastronomía</li><li>Producto</li><li>Vídeo</li><li>Dirección de fotografía</li><li>Agencias</li></ul>
+        <a class="link" href="https://www.instagram.com/byl_studio/" target="_blank" rel="noopener">Síguelos en @byl_studio <svg><use href="#i-arrow"/></svg></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec band-paper draft" id="borrador" hidden>
+    <div class="wrap">
+      <div class="sec-head"><span class="eyebrow">Borrador · Datos por confirmar</span><h2>Lo que falta <em>por confirmar</em></h2></div>
+      <ul class="incl"><li>WhatsApp: <mark>[¿625 80 05 07? Es el teléfono de su web y de Google, «solo cita previa»; en el pie de su web aparece 625 889 183]</mark></li><li>Horario de atención: <mark>[en Google: abre a las 9:00]</mark></li><li>Foto de Xavi Soler para presentarlo: <mark>[…]</mark></li><li>Vídeos para enlazar desde el portfolio (YouTube): <mark>[…]</mark></li><li>Marcas o clientes que se puedan nombrar como tales: <mark>[la cinta usa nombres de proyectos de su portfolio]</mark></li></ul>
+    </div>
+  </section>
+
+  <section class="sec" id="contacto">
+    <div class="wrap visit">
+      <div data-reveal>
+        <span class="eyebrow">Contacto</span>
+        <h2>Trabajamos en Jaén, Córdoba, <em>Granada y Málaga</em></h2>
+        <p class="lead">El estudio está en el centro de Jaén. Atención con cita previa.</p>
+        <ul class="contact"><li><svg><use href="#i-pin"/></svg><a href="https://www.google.com/maps/place/ByL+Studio+Fotograf%C3%ADa+Gastron%C3%B3mica+Y+De+Producto/@37.76477,-3.78586,17z/data=!3m1!4b1!4m6!3m5!1s0xd6dd7c4fde25573:0x22ca9557fba93452!8m2!3d37.76477!4d-3.78586!16s%2Fg%2F11tt4_1qdk" target="_blank" rel="noopener">C/ Fuente de Don Diego, 54, local · 23001 Jaén</a></li><li><svg><use href="#i-phone"/></svg><a href="tel:+34625800507">625 80 05 07</a> · solo cita previa</li><li><svg><use href="#i-mail"/></svg><a href="mailto:elena@bylstudio.com">elena@bylstudio.com</a></li><li><svg><use href="#i-ig"/></svg><a href="https://www.instagram.com/byl_studio/" target="_blank" rel="noopener">@byl_studio</a> · <a href="https://www.youtube.com/channel/UCPnaqNSXCMZ6VVZkyiyqobQ" target="_blank" rel="noopener">YouTube</a></li></ul>
+      </div>
+      <div class="faq" data-reveal><details open><summary>¿Venís al restaurante?</summary><p>Sí, la sesión se puede hacer en tu restaurante para que las fotos reflejen tu cocina, tu espacio y tu equipo.</p></details><details><summary>¿Trabajáis con agencias?</summary><p>Sí, como partner creativo y de producción: nos integramos en vuestros proyectos como un equipo externo fiable, desde piezas sueltas hasta campañas completas.</p></details><details><summary>¿Hacéis también vídeo?</summary><p>Sí: vídeo corporativo para ferias y congresos, vídeos para webs y reels para Instagram, TikTok y YouTube.</p></details><details><summary>¿Qué diferencia hay entre producto creativo y descriptivo?</summary><p>La creativa cuenta los valores y la historia de la marca; la descriptiva enseña el producto sobre fondo neutro, como en las fichas de una tienda online.</p></details><details><summary>¿En qué zonas trabajáis?</summary><p>En Jaén, Córdoba, Granada y Málaga.</p></details></div>
+    </div>
+  </section>
+
+  <section class="final">
+    <div class="final-bg" aria-hidden="true"><img src="img/w-asador-1.jpg" alt="" loading="lazy"></div>
+    <div class="wrap">
+      <span class="eyebrow">ByL Studio</span>
+      <h2>Contamos lo que haces <em>para que conecte</em></h2>
+      <div class="hero-ctas">
+        <a class="btn btn-primary" href="#presupuesto">Contar mi proyecto</a>
+        <a class="btn btn-ghost" href="tel:+34625800507">Llamar</a>
+      </div>
+      <a class="g-rate" href="#resenas" data-rvd><span class="stars"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></span><b>5,0</b><span>· 7 reseñas en Google</span></a>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap"><span>ByL Studio · C/ Fuente de Don Diego, 54 · 23001 Jaén</span><span><a href="tel:+34625800507">625 80 05 07</a> · <a href="mailto:elena@bylstudio.com">elena@bylstudio.com</a></span></div>
+</footer>
+<button class="totop" id="totop" type="button" aria-label="Subir arriba"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="M12 19V5M5 12l7-7 7 7"/></svg></button>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Trabajo ampliado" hidden><button type="button" class="lb-x" aria-label="Cerrar">×</button><button type="button" class="lb-nav prev" data-lb="-1" aria-label="Anterior"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg></button><img id="lb-img" alt=""><button type="button" class="lb-nav next" data-lb="1" aria-label="Siguiente"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></button><div class="lb-foot"><span id="lb-cap"></span><a class="btn btn-ghost watch" id="lb-watch" href="#" target="_blank" rel="noopener" hidden><svg aria-hidden="true"><use href="#i-play"/></svg>Ver el vídeo</a><a class="btn btn-light" id="lb-go" href="#presupuesto">Quiero algo así</a></div></div>
+
+<div class="bk rvd" id="rvd" role="dialog" aria-modal="true" aria-labelledby="rvd-title" hidden>
+  <div class="bk-scrim" data-rvd-x></div>
+  <div class="bk-panel">
+    <header class="bk-head">
+      <span></span>
+      <div class="t"><span>Google</span><b id="rvd-title">Reseñas</b></div>
+      <button type="button" class="bk-ib" data-rvd-x aria-label="Cerrar"><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" d="M6 6l12 12M18 6L6 18"/></svg></button>
+    </header>
+    <div class="bk-body rvd-body">
+      <div class="rvd-sum">
+        <div class="rvd-score"><b>5,0</b><span class="rv-stars"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></span><small>7 reseñas</small></div>
+        <ul class="rvd-dist" aria-label="Reparto de estrellas"><li><span>5</span><i><b style="width:100.0%"></b></i><em>7</em></li><li><span>4</span><i><b style="width:0.0%"></b></i><em>0</em></li><li><span>3</span><i><b style="width:0.0%"></b></i><em>0</em></li><li><span>2</span><i><b style="width:0.0%"></b></i><em>0</em></li><li><span>1</span><i><b style="width:0.0%"></b></i><em>0</em></li></ul>
+      </div>
+      <h3 class="rvd-h">Reseñas de 5 estrellas</h3>
+      <div class="rvd-list" id="rvd-list"></div>
+      <h3 class="rvd-h">Su ficha en Google Maps</h3>
+      <div class="rvd-map"><iframe id="rvd-map" title="ByL Studio en Google Maps" data-src="https://maps.google.com/maps?q=ByL%20Studio%2C%20Calle%20Fuente%20de%20Don%20Diego%2054%2C%20Ja%C3%A9n&amp;hl=es&amp;z=15&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+      <p class="rvd-note">Google no permite mostrar aquí su lista completa de reseñas; puedes leerlas todas en su ficha.</p>
+    </div>
+    <footer class="rvd-foot"><a class="btn btn-ghost" href="https://www.google.com/maps/place/ByL+Studio+Fotograf%C3%ADa+Gastron%C3%B3mica+Y+De+Producto/@37.76477,-3.78586,17z/data=!3m1!4b1!4m6!3m5!1s0xd6dd7c4fde25573:0x22ca9557fba93452!8m2!3d37.76477!4d-3.78586!16s%2Fg%2F11tt4_1qdk" target="_blank" rel="noopener">Ver las 7 en Google</a></footer>
+  </div>
+</div>
+
+<div class="bk" id="bk" role="dialog" aria-modal="true" aria-labelledby="bk-title" hidden>
+  <div class="bk-scrim" id="bk-scrim"></div>
+  <div class="bk-panel">
+    <header class="bk-head">
+      <button type="button" class="bk-ib" id="bk-back" aria-label="Paso anterior"><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M15 18l-6-6 6-6"/></svg></button>
+      <div class="t"><span id="bk-step">Paso 1</span><b id="bk-title">Tu proyecto</b></div>
+      <button type="button" class="bk-ib" id="bk-x" aria-label="Cerrar"><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" d="M6 6l12 12M18 6L6 18"/></svg></button>
+    </header>
+    <div class="bk-prog"><i id="bk-bar" style="transform:scaleX(.33)"></i></div>
+    <form class="bk-body" id="book-form" novalidate>
+      <section class="bk-pane" data-step="1">
+        <h3>¿Qué necesitas contar?</h3>
+        <div class="bk-opts grid2 tight"><label><input type="radio" name="tipo" value="Fotografía gastronómica"><span>Gastronómica</span></label><label><input type="radio" name="tipo" value="Fotografía de producto"><span>Producto</span></label><label><input type="radio" name="tipo" value="Retrato profesional"><span>Retrato</span></label><label><input type="radio" name="tipo" value="Fotografía de eventos o conciertos"><span>Eventos</span></label><label><input type="radio" name="tipo" value="Fotografía de espacios"><span>Espacios</span></label><label><input type="radio" name="tipo" value="Vídeo corporativo"><span>Vídeo corporativo</span></label><label><input type="radio" name="tipo" value="Contenido para redes"><span>Contenido para redes</span></label><label><input type="radio" name="tipo" value="Somos una agencia"><span>Somos una agencia</span></label></div>
+      </section>
+      <section class="bk-pane" data-step="2" hidden>
+        <h3>Tu proyecto</h3>
+        <label class="bk-field"><span>¿Qué quieres contar?</span><input type="text" id="f-que" placeholder="Carta nueva, lanzamiento, web del restaurante…" data-k="Qué quiero contar"></label>
+        <label class="bk-field"><span>¿Dónde?</span><input type="text" id="f-donde" placeholder="Jaén, Córdoba, Granada, Málaga…" data-k="Dónde"></label>
+        <label class="bk-field"><span>Fecha o plazo (si lo tienes)</span><input type="text" id="f-fecha" placeholder="Antes de la temporada de verano" data-k="Plazo"></label>
+      </section>
+      <section class="bk-pane" data-step="3" hidden>
+        <h3>¿Quién eres?</h3>
+        <label class="bk-field"><span>Tu nombre</span><input type="text" id="f-nombre" autocomplete="given-name" placeholder="Laura"></label>
+        <label class="bk-field"><span>Restaurante, marca o agencia (opcional)</span><input type="text" id="f-empresa" autocomplete="organization" placeholder="Tu negocio"></label>
+      </section>
+      <section class="bk-pane" data-step="4" hidden>
+        <h3>Tu mensaje está listo</h3>
+        <p class="sub">Te contestamos por WhatsApp para hablar de la idea y preparar el presupuesto.</p>
+        <pre class="f-preview" id="f-preview"></pre>
+        <button type="button" class="f-copy" id="f-copy">Copiar mensaje</button>
+      </section>
+    </form>
+    <footer class="bk-foot">
+      <p class="f-error" id="f-error" role="alert" hidden></p>
+      <button type="button" class="btn btn-primary" id="bk-next">Siguiente</button>
+      <a class="btn btn-wa" id="f-wa" href="#" target="_blank" rel="noopener" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .2-1.3c-.1-.1-.3-.2-.6-.3z"/></svg>Enviar por WhatsApp</a>
+    </footer>
+  </div>
+</div>
+
+<div class="mbar">
+  <a class="btn btn-primary" href="#presupuesto"><span data-t="mbar">¿Hablamos?</span></a>
+  <a class="btn btn-ghost" href="tel:+34625800507" aria-label="Llamar"><svg><use href="#i-phone"/></svg></a>
+</div>
+
+<script>
+(function(){
+"use strict";
+var reduced=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+var SFX={play:function(){}};
+window.WORKS=[{"src": "img/w-ama-1.jpg", "t": "Ama · plato de autor", "c": "gastro", "k": "tall"}, {"src": "img/w-asador-1.jpg", "t": "Asador · fuego en mesa", "c": "gastro", "k": ""}, {"src": "img/w-trueno.jpg", "t": "El Trueno · aceite de oliva", "c": "producto", "k": "tall"}, {"src": "img/w-ama-chef.jpg", "t": "Ama · retrato del chef", "c": "retrato", "k": ""}, {"src": "img/w-kaoru-1.jpg", "t": "Ka Oru · bebida", "c": "gastro producto", "k": ""}, {"src": "img/w-bocao.jpg", "t": "Bocao Vitango · brasa", "c": "gastro", "k": ""}, {"src": "img/w-concierto-1.jpg", "t": "Concierto de Estrella Morente", "c": "eventos", "k": "wide"}, {"src": "img/w-contrapunto-1.jpg", "t": "Asador Contrapunto · emplatado", "c": "gastro", "k": ""}, {"src": "img/w-kaoru-espacio.jpg", "t": "Ka Oru · el espacio", "c": "espacios", "k": "wide"}, {"src": "img/w-besos.jpg", "t": "Besos y Quesos · producto en estudio", "c": "producto", "k": ""}, {"src": "img/w-asador-2.jpg", "t": "Asador · postre", "c": "gastro", "k": ""}, {"src": "img/w-retrato-chef.jpg", "t": "Retrato profesional de chef", "c": "retrato", "k": ""}, {"src": "img/w-indomita-1.jpg", "t": "La Indómita · Cambil", "c": "gastro", "k": ""}, {"src": "img/w-cortijo-1.jpg", "t": "Cortijo El Naranjo · salón", "c": "espacios", "k": "wide"}, {"src": "img/w-contrapunto-2.jpg", "t": "Asador Contrapunto · carne", "c": "gastro", "k": ""}, {"src": "img/w-concierto-2.jpg", "t": "Arquillos Suena · concierto", "c": "eventos", "k": ""}, {"src": "img/w-bury.jpg", "t": "Bury · bodegón", "c": "producto", "k": ""}, {"src": "img/w-kaoru-2.jpg", "t": "Ka Oru · coctelería", "c": "gastro producto", "k": "tall"}, {"src": "img/w-retrato-1.jpg", "t": "Retrato profesional", "c": "retrato", "k": ""}, {"src": "img/w-bienfrito.jpg", "t": "Bien Frito · Quality Fry", "c": "gastro", "k": ""}, {"src": "img/w-moratilla.jpg", "t": "La Moratilla", "c": "gastro", "k": ""}, {"src": "img/w-cortijo-2.jpg", "t": "Cortijo El Naranjo · mesa", "c": "gastro", "k": ""}, {"src": "img/w-contrapunto-3.jpg", "t": "Asador Contrapunto · pescado", "c": "gastro", "k": ""}, {"src": "img/w-piccola.jpg", "t": "La Piccola Cafetería", "c": "gastro producto", "k": ""}, {"src": "img/w-qyb.jpg", "t": "Quesos y Besos · Valleclaro", "c": "producto", "k": ""}, {"src": "img/w-ajhito.jpg", "t": "Ajhito · cocina en marcha", "c": "espacios gastro", "k": ""}];
+window.REV=[["MªDolores G.", "Fotografía de producto", "hace un año", "Realizan las fotografías de los productos de nuestra empresa y Elena es la mejor fotógrafa gastronómica con la que hemos dado!!! Profesional y un placer siempre trabajar con ellos 😊…"], ["Lola M.", "Chef", "hace 3 años", "Super Profesionales en su trabajo!! Son capaces de retratar lo intangible a través de su cámara! Sin lugar a dudas, recomendables 100%"], ["David M.", "Proyecto audiovisual", "hace 2 años", "Profesionalidad y atención excelente. Todo fluye cuando se trata de buscar un objetivo y el resultado es especial"]];
+window.REV_COLS=["#A13D63", "#1A1416", "#6B5F64"];
+window.BK={"wa": "34625800507", "code": "BYL", "hi": "¡Hola, ByL Studio! Soy {n}{e}. Os escribo por un proyecto:", "tipoK": "Qué necesito", "ask": "¿Lo hablamos? ¡Gracias!"};
+window.WORKS_LIM=13;window.WORKS_LIM_M=8;
+
+/* ---------- Temporadas de ByL Studio: fechas en las que un restaurante o una marca necesita imagen ---------- */
+/* Solo servicios de su web (fotografía gastronómica, de producto, contenido para redes). Sin precios ni descuentos. */
+window.TEMPORADAS=[
+  {id:'cosecha',nombre:'Aceite nuevo',desde:'10-15',hasta:'11-20',prioridad:1,
+   textos:{eyebrow:'Campaña del aceite nuevo',sub:'Fotos y vídeo de producto para presentar tu nueva cosecha: botellas, bodegones y contenido para tu web y tus redes, en estudio o en el campo.',cta:'Fotografiar mi aceite',mbar:'Fotos de producto'},
+   marcar:['input[name="tipo"][value="Fotografía de producto"]'],wa:'🫒 Es para presentar el aceite de la nueva cosecha'},
+  {id:'navidad',nombre:'Navidad',evento:'navidad',desde:'11-21',hasta:'12-18',prioridad:2,
+   textos:{eyebrow:'Navidad · {cuenta}',sub:'Tus menús, platos y productos de Navidad fotografiados a tiempo para la web, la carta y las redes. En tu restaurante o en estudio.',cta:'Preparar mis fotos de Navidad',mbar:'Fotos para Navidad'},
+   marcar:['input[name="tipo"][value="Fotografía gastronómica"]'],wa:'🎄 Es para la campaña de Navidad'},
+  {id:'verano',nombre:'Carta de verano',desde:'05-01',hasta:'06-15',prioridad:1,
+   textos:{eyebrow:'Carta de temporada',sub:'¿Cambias de carta para el verano? La fotografiamos en tu restaurante para que despierte el apetito en la web, la carta y las redes.'},
+   marcar:['input[name="tipo"][value="Fotografía gastronómica"]'],wa:'☀️ Es para la carta de verano'}
+];
+/* ---------- Temporadas: la landing cambia sola cuando se acerca una fecha clave del oficio ---------- */
+/* Configura window.TEMPORADAS antes de este bloque (ver references/temporadas/README.md).
+   Pruebas: ?temporada=<id> fuerza una, ?temporada=no las apaga, ?fecha=2027-02-10 simula el día.
+   Selector para enseñarlas: #temporadas en la dirección (en local), 5 toques seguidos en el logo de la cabecera o la tecla T (también dentro del visor del Artifact). */
+(function(){
+var CFG=window.TEMPORADAS||[]; if(!CFG.length)return;
+var MESES=['enero','febrero','marzo','abril','mayo','junio','julio','agosto','septiembre','octubre','noviembre','diciembre'];
+var DAY=864e5;
+function d(y,m,dd){return new Date(y,m-1,dd)}
+function nth(y,m,dow,n){var f=d(y,m,1);return d(y,m,1+(dow-f.getDay()+7)%7+7*(n-1))}       /* n-ésimo día de la semana (0=domingo) del mes */
+function pascua(y){var a=y%19,b=Math.floor(y/100),c=y%100,e=(19*a+b-Math.floor(b/4)-Math.floor((b-Math.floor((8*b+13)/25)+1)/3)+15)%30,
+  f=(32+2*(b%4)+2*Math.floor(c/4)-e-c%4)%7,g=Math.floor((a+11*e+22*f)/451),m=Math.floor((e+f-7*g+114)/31);return d(y,m,(e+f-7*g+114)%31+1)}
+function mas(x,n){return new Date(x.getFullYear(),x.getMonth(),x.getDate()+n)}
+/* Calendario de España. Cada evento devuelve el día clave de ese año. */
+var EV={
+  'reyes':function(y){return d(y,1,6)},
+  'rebajas-invierno':function(y){return d(y,1,7)},
+  'san-valentin':function(y){return d(y,2,14)},
+  'carnaval':function(y){return mas(pascua(y),-47)},            /* martes de carnaval */
+  'dia-padre':function(y){return d(y,3,19)},
+  'semana-santa':function(y){return mas(pascua(y),-3)},         /* jueves santo */
+  'pascua':pascua,
+  'sant-jordi':function(y){return d(y,4,23)},                   /* solo Cataluña */
+  'dia-madre':function(y){return nth(y,5,0,1)},                 /* primer domingo de mayo */
+  'san-isidro':function(y){return d(y,5,15)},                   /* solo Madrid capital */
+  'san-juan':function(y){return d(y,6,24)},
+  'dia-abuelos':function(y){return d(y,7,26)},
+  'vuelta-cole':function(y){return d(y,9,8)},                   /* aproximado: varía por comunidad */
+  'halloween':function(y){return d(y,10,31)},
+  'todos-santos':function(y){return d(y,11,1)},
+  'black-friday':function(y){return mas(nth(y,11,4,4),1)},      /* viernes tras el 4.º jueves */
+  'navidad':function(y){return d(y,12,25)},
+  'nochevieja':function(y){return d(y,12,31)}
+};
+function md(s,y){var p=s.split('-');return d(y,+p[0],+p[1])}
+function antes(t){return t.antes==null?14:t.antes}
+/* Ventanas [inicio, fin, día clave] de una temporada alrededor del año y */
+function ventanas(t,y){var out=[];for(var k=y-1;k<=y+1;k++){
+  if(t.desde){var a=md(t.desde,k),b=md(t.hasta,k);if(b<a)b=md(t.hasta,k+1);out.push([a,b,t.evento?EV[t.evento](b.getFullYear()):b])}
+  else{var e=t.fecha?md(t.fecha,k):EV[t.evento]&&EV[t.evento](k);if(e)out.push([mas(e,-antes(t)),mas(e,t.despues||0),e])}}
+  return out}
+function elegir(hoy){var best=null;hoy=new Date(hoy.getFullYear(),hoy.getMonth(),hoy.getDate());
+  CFG.forEach(function(t){ventanas(t,hoy.getFullYear()).forEach(function(w){if(hoy<w[0]||hoy>w[1])return;
+    var pr=t.prioridad!=null?t.prioridad:(t.desde?1:2),falta=Math.round((w[2]-hoy)/DAY);
+    if(!best||pr>best.pr||(pr===best.pr&&Math.abs(falta)<Math.abs(best.falta)))best={t:t,pr:pr,falta:falta,dia:w[2]}})});
+  return best}
+/* Forzar una temporada aunque hoy no toque: la muestra como si faltaran unos días */
+function forzar(id,hoy){var t=CFG.filter(function(x){return x.id===id})[0];if(!t)return null;
+  var w=ventanas(t,hoy.getFullYear()).filter(function(w){return w[1]>=hoy})[0],falta=Math.round((w[2]-hoy)/DAY);
+  if(hoy<w[0])falta=Math.min(antes(t),9);return {t:t,falta:falta,dia:w[2]}}
+function rellenar(s,b){if(!s)return s;var n=b.falta,f=b.dia.getDate()+' de '+MESES[b.dia.getMonth()];
+  var cuenta=n>1?'Faltan '+n+' días':n===1?'Es mañana':n===0?'Es hoy':'';
+  return s.replace(/\{cuenta\}/g,cuenta).replace(/\{dias\}/g,n).replace(/\{fecha\}/g,f).replace(/\{anio\}/g,b.dia.getFullYear())}
+
+var q=new URLSearchParams(location.search),forzada=q.get('temporada'),sim=q.get('fecha'),hoy=new Date();
+if(sim&&/^\d{4}-\d\d-\d\d$/.test(sim)){var p=sim.split('-');hoy=d(+p[0],+p[1],+p[2])}
+hoy=new Date(hoy.getFullYear(),hoy.getMonth(),hoy.getDate());
+window.TEMPORADA_ELEGIR=function(x){var b=elegir(x);return b?b.t.id:null};   /* para scripts/temporadas.js */
+var root=document.documentElement,reducido=matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+/* Estado original, para poder volver a la versión de todo el año al cambiar de temporada desde el selector */
+var CLAVES={};CFG.forEach(function(t){Object.keys(t.textos||{}).forEach(function(k){CLAVES[k]=1})});   /* solo las claves que usa alguna temporada: otros data-t de la página no se tocan */
+var T=[].slice.call(document.querySelectorAll('[data-t]')).filter(function(el){return CLAVES[el.getAttribute('data-t')]}).map(function(el){return [el,el.innerHTML,el.hidden]});
+var fotosOrig=[],tokens=[],marcados=[],deco=null;
+function limpiar(){
+  T.forEach(function(o){o[0].innerHTML=o[1];o[0].hidden=o[2];o[0].classList.remove('t-on')});
+  tokens.forEach(function(k){root.style.removeProperty(k)});tokens=[];
+  fotosOrig.forEach(function(o){if(o[0].tagName==='SOURCE')o[0].srcset=o[1];else{o[0].src=o[1];if(o[2])o[0].srcset=o[2]}});fotosOrig=[];
+  marcados.forEach(function(el){el.checked=false});marcados=[];
+  if(deco){deco();deco=null}
+  root.removeAttribute('data-temporada');window.TEMPORADA=null}
+function aplicar(b){
+  limpiar();var id=b?b.t.id:null;
+  /* Bloques solo de temporada: data-temporada-solo="san-valentin dia-madre" (empiezan con hidden) y data-temporada-fuera="…" */
+  document.querySelectorAll('[data-temporada-solo]').forEach(function(el){el.hidden=!(id&&el.getAttribute('data-temporada-solo').split(/\s+/).indexOf(id)>-1)});
+  document.querySelectorAll('[data-temporada-fuera]').forEach(function(el){el.hidden=!!(id&&el.getAttribute('data-temporada-fuera').split(/\s+/).indexOf(id)>-1)});
+  if(!b)return;
+  var t=b.t;root.setAttribute('data-temporada',id);
+  /* Colores: sobrescribe tokens de :root (solo acentos; el fondo y la tinta no se tocan) */
+  if(t.tema)Object.keys(t.tema).forEach(function(k){root.style.setProperty(k,t.tema[k]);tokens.push(k)});
+  /* Textos: cualquier elemento con data-t="clave". El HTML trae el texto de todo el año; si estaba hidden, se muestra */
+  if(t.textos)Object.keys(t.textos).forEach(function(k){document.querySelectorAll('[data-t="'+k+'"]').forEach(function(el){el.innerHTML=rellenar(t.textos[k],b);el.hidden=false;el.classList.add('t-on')})});
+  /* Fotos: {selector: ruta}. Solo fotos reales del negocio para esa fecha */
+  if(t.fotos)Object.keys(t.fotos).forEach(function(s){document.querySelectorAll(s).forEach(function(el){
+    if(el.tagName==='SOURCE'){fotosOrig.push([el,el.srcset]);el.srcset=t.fotos[s]}else{fotosOrig.push([el,el.src,el.getAttribute('srcset')]);el.removeAttribute('srcset');el.src=t.fotos[s]}})});
+  /* Marcar opciones del panel de encargo/reserva (solo si no hay ninguna marcada en ese grupo) */
+  if(t.marcar)t.marcar.forEach(function(s){var el=document.querySelector(s);if(el&&!document.querySelector('input[name="'+el.name+'"]:checked')){el.checked=true;marcados.push(el)}});
+  window.TEMPORADA={id:id,nombre:t.nombre||id,dias:b.falta,fecha:b.dia,linea:rellenar(t.wa,b)||''};   /* el panel añade TEMPORADA.linea al mensaje de WhatsApp */
+  try{document.dispatchEvent(new CustomEvent('temporada',{detail:window.TEMPORADA}))}catch(e){}
+  if(t.deco&&!reducido)deco=decorar(t)}
+
+/* Decoración ligera en el hero: petalos, corazones, nieve, hojas, confeti o estrellas. Nunca sobre el texto ni con movimiento reducido */
+function decorar(t){
+  var host=document.querySelector(t.decoEn||'#hero');if(!host)return null;
+  var cv=document.createElement('canvas');cv.className='t-deco';cv.setAttribute('aria-hidden','true');
+  cv.style.cssText='position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:1';
+  host.insertBefore(cv,host.children[1]||null);
+  var cx=cv.getContext('2d'),W=0,H=0,DPR=Math.min(devicePixelRatio||1,1.5),P=[],raf=0,last=0;
+  var COL=t.decoColores||{petalos:['#F5B8C9','#FFD9E2','#E88AA6'],corazones:['#FF6B8B','#FFB3C4','#E0325A'],nieve:['#FFFFFF'],hojas:['#C9733B','#E0A04A','#9C4A24'],confeti:['#FFD166','#EF476F','#06D6A0','#4CC9F0'],estrellas:['#FFE8A3','#FFFFFF']}[t.deco]||['#fff'];
+  function size(){var r=host.getBoundingClientRect();W=r.width;H=r.height;cv.width=W*DPR;cv.height=H*DPR;cx.setTransform(DPR,0,0,DPR,0,0)}
+  function nuevo(top){var s=t.deco==='nieve'?2+Math.random()*3:t.deco==='estrellas'?1.5+Math.random()*2.5:7+Math.random()*7;
+    return {x:Math.random()*W,y:top?-20:Math.random()*H,s:s,vy:(t.deco==='estrellas'?0:.25+Math.random()*.5)*(s>6?1:.7),vx:(Math.random()-.5)*.3,a:Math.random()*6.3,va:(Math.random()-.5)*.03,f:Math.random()*6.3,c:COL[Math.floor(Math.random()*COL.length)]}}
+  function forma(p){cx.save();cx.translate(p.x,p.y);cx.rotate(p.a);cx.fillStyle=p.c;cx.globalAlpha=t.deco==='estrellas'?.4+.5*Math.abs(Math.sin(p.f)):.85;var s=p.s;cx.beginPath();
+    if(t.deco==='corazones'){cx.moveTo(0,s*.35);cx.bezierCurveTo(-s,-s*.3,-s*.4,-s,0,-s*.45);cx.bezierCurveTo(s*.4,-s,s,-s*.3,0,s*.35)}
+    else if(t.deco==='nieve'||t.deco==='estrellas')cx.arc(0,0,s/2,0,7);
+    else if(t.deco==='confeti')cx.rect(-s/2,-s/4,s,s/2);
+    else cx.ellipse(0,0,s/2,s*(t.deco==='hojas'?.28:.34),0,0,7);
+    cx.fill();cx.restore()}
+  function paso(ts){raf=requestAnimationFrame(paso);if(ts-last<30)return;last=ts;
+    var r=host.getBoundingClientRect();if(r.bottom<0||r.top>innerHeight)return;   /* fuera de pantalla: no pinta */
+    cx.clearRect(0,0,W,H);P.forEach(function(p,i){p.f+=.03;p.y+=p.vy;p.x+=p.vx+Math.sin(p.f)*.35;p.a+=p.va;if(p.y>H+20)P[i]=nuevo(true);forma(p)})}
+  function arranca(){cancelAnimationFrame(raf);if(!document.hidden)raf=requestAnimationFrame(paso)}
+  size();var n=Math.min(t.decoCuantos||22,Math.round(W*H/40000)+6);for(var i=0;i<n;i++)P.push(nuevo(false));
+  addEventListener('resize',size);document.addEventListener('visibilitychange',arranca);arranca();
+  return function(){cancelAnimationFrame(raf);removeEventListener('resize',size);document.removeEventListener('visibilitychange',arranca);cv.remove()}}
+
+var hoyB=elegir(hoy);
+aplicar(forzada==='no'?null:forzada?forzar(forzada,hoy):hoyB);
+
+/* ---------- Selector de temporadas: solo con #temporadas en la dirección, para enseñárselas al cliente ---------- */
+/* El visor del Artifact no pasa el #hash al iframe: también se abre con 5 toques seguidos en el logo de la cabecera (.brand) o con la tecla T */
+var sel=null,manual=false;
+function selector(){
+  if(location.hash!=='#temporadas'&&!manual){if(sel){sel.remove();sel=null}return}
+  if(sel)return;
+  var st=document.createElement('style');st.textContent='.t-sel{position:fixed;left:12px;right:12px;bottom:calc(14px + env(safe-area-inset-bottom,0px));z-index:150;margin:0 auto;max-width:max-content;display:flex;align-items:center;gap:6px;padding:6px;border-radius:18px;background:rgba(20,20,20,.82);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);color:#fff;font:600 13px/1.2 system-ui,-apple-system,sans-serif;box-shadow:0 14px 34px -12px rgba(0,0,0,.6);overflow-x:auto;scrollbar-width:none}'
+   +'.t-sel::-webkit-scrollbar{display:none}.t-sel b{padding:0 6px 0 8px;font-size:11px;letter-spacing:.08em;text-transform:uppercase;opacity:.6;white-space:nowrap}'
+   +'.t-sel button{all:unset;cursor:pointer;white-space:nowrap;padding:9px 12px;border-radius:12px;color:#fff}.t-sel button:hover{background:rgba(255,255,255,.12)}.t-sel button[aria-pressed="true"]{background:#fff;color:#111}'
+   +'.t-sel button small{display:block;font-size:10px;font-weight:500;opacity:.65;margin-top:2px}.t-sel .x{opacity:.7;padding:9px 10px}'
+   +'@media (max-width:640px){.t-sel{bottom:calc(84px + env(safe-area-inset-bottom,0px));max-width:none}}';
+  sel=document.createElement('div');sel.className='t-sel';sel.setAttribute('role','toolbar');sel.setAttribute('aria-label','Ver la landing en cada temporada');
+  sel.appendChild(st);
+  function hint(t){var w=ventanas(t,hoy.getFullYear()).filter(function(w){return w[1]>=hoy})[0],f=function(x){return x.getDate()+' '+MESES[x.getMonth()].slice(0,3)};return f(w[0])+' – '+f(w[1])}
+  var h='<b>Temporadas</b><button type="button" data-id="@hoy">Hoy<small>'+(hoyB?(hoyB.t.nombre||hoyB.t.id):'sin temporada')+'</small></button><button type="button" data-id="">Todo el año<small>versión base</small></button>';
+  CFG.forEach(function(t){h+='<button type="button" data-id="'+t.id+'">'+(t.nombre||t.id)+'<small>'+hint(t)+'</small></button>'});
+  sel.insertAdjacentHTML('beforeend',h+'<button type="button" class="x" aria-label="Cerrar el selector">✕</button>');
+  var elegido='@hoy';
+  function marca(){sel.querySelectorAll('button[data-id]').forEach(function(x){x.setAttribute('aria-pressed',String(x.dataset.id===elegido))})}
+  sel.addEventListener('click',function(e){var x=e.target.closest('button');if(!x)return;
+    if(x.classList.contains('x')){manual=false;if(location.hash==='#temporadas')history.replaceState(null,'',location.pathname+location.search);selector();return}
+    elegido=x.dataset.id;aplicar(elegido==='@hoy'?hoyB:elegido?forzar(elegido,hoy):null);marca();window.scrollTo({top:0,behavior:'smooth'})});
+  document.body.appendChild(sel);marca()}
+selector();addEventListener('hashchange',selector);
+var toques=[];
+document.addEventListener('click',function(e){if(!e.target.closest||!e.target.closest(window.TEMPORADAS_DISPARADOR||'.brand'))return;var n=Date.now();
+  toques=toques.filter(function(t){return n-t<2500});toques.push(n);if(toques.length>=5){toques=[];manual=true;selector()}});
+document.addEventListener('keydown',function(e){if((e.key==='t'||e.key==='T')&&!e.metaKey&&!e.ctrlKey&&!e.altKey&&!/INPUT|TEXTAREA|SELECT/.test(e.target.tagName)&&!e.target.isContentEditable){manual=!sel;if(!manual&&location.hash==='#temporadas')history.replaceState(null,'',location.pathname+location.search);selector()}});
+})();
+
+
+
+/* ---------- Claqueta del hero: cada golpe corta a otra toma (trabajo real) ---------- */
+(function(){var clap=document.getElementById('clap'),shot=document.getElementById('take-shot');if(!clap)return;
+ var T=[["img/w-ama-1.jpg", "Gastronomía", "Ama"], ["img/w-trueno.jpg", "Producto", "El Trueno"], ["img/w-asador-1.jpg", "Gastronomía", "Asador"], ["img/w-ama-chef.jpg", "Retrato", "Ama"], ["img/w-kaoru-1.jpg", "Bebida", "Ka Oru"], ["img/w-concierto-1.jpg", "Conciertos", "Estrella Morente"], ["img/w-bocao.jpg", "Gastronomía", "Bocao Vitango"]];
+ var A=document.getElementById('take-a'),B=document.getElementById('take-b'),esc=document.getElementById('clap-esc'),toma=document.getElementById('clap-toma'),cli=document.getElementById('clap-cli');
+ T.forEach(function(t){var i=new Image();i.src=t[0]});
+ var i=0,n=1,busy=false,timer=0;
+ function next(){if(busy)return;busy=true;var k=(i+1)%T.length;
+   esc.textContent=T[k][1];cli.textContent=T[k][2];n++;toma.textContent=String(n).padStart(2,'0');
+   if(reduced){A.src=T[k][0];i=k;busy=false;return}
+   clap.classList.add('open');
+   setTimeout(function(){clap.classList.remove('open');clap.classList.add('hit');
+     setTimeout(function(){B.src=T[k][0];B.classList.add('on');A.classList.remove('on');var x=A;A=B;B=x;shot.classList.remove('cut');void shot.offsetWidth;shot.classList.add('cut');i=k;
+       setTimeout(function(){clap.classList.remove('hit');busy=false},260)},120)},420)}
+ function play(){clearInterval(timer);if(!reduced)timer=setInterval(function(){if(!document.hidden&&!document.documentElement.classList.contains('loading'))next()},3800)}
+ clap.addEventListener('click',function(){next();play()});
+ shot.addEventListener('click',function(e){if(e.target.closest('.rate-stk'))return;next();play()});
+ play();
+})();
+
+
+/* ---------- Cabecera de vidrio, barra móvil y ↑ (por scroll: el IntersectionObserver falla dentro de iframes) ---------- */
+(function(){var top=document.getElementById('top'),hero=document.getElementById('hero'),mbar=document.querySelector('.mbar'),totop=document.getElementById('totop'),
+  darks=[].slice.call(document.querySelectorAll('.hero,.band-night,.final,.foot')),h1=document.querySelector('.hero h1'),cta=document.querySelector('.hero-ctas .btn'),tk=false;
+ function over(y){return darks.some(function(s){var r=s.getBoundingClientRect();return r.top<y&&r.bottom>y})}
+ function sync(){tk=false;var end=hero.offsetTop+hero.offsetHeight;
+  if(top)top.classList.toggle('dark',over(top.offsetHeight/2));
+  if(mbar){mbar.classList.toggle('dark',over(innerHeight-34));
+   /* la barra no tapa el titular ni el botón del hero */
+   var off=false;if(h1){var q=h1.getBoundingClientRect();if(q.bottom>innerHeight-84&&q.top<innerHeight)off=true}
+   if(cta){var c=cta.getBoundingClientRect();if(c.bottom>0&&c.top<innerHeight)off=true}
+   mbar.classList.toggle('off',off)}
+  if(totop)totop.classList.toggle('on',scrollY>end-innerHeight/2)}
+ sync();window.addEventListener('scroll',function(){if(!tk){tk=true;requestAnimationFrame(sync)}},{passive:true});window.addEventListener('resize',sync);
+ if(totop)totop.addEventListener('click',function(){window.scrollTo({top:0,behavior:reduced?'auto':'smooth'})});})();
+
+/* ---------- Cinta de clientes y servicios: se duplica para el bucle ---------- */
+(function(){document.querySelectorAll('.ticker-in').forEach(function(t){t.innerHTML+=t.innerHTML;[].slice.call(t.children).slice(t.children.length/2).forEach(function(s){s.setAttribute('aria-hidden','true')})})})();
+
+/* ---------- Portfolio con filtros y visor ---------- */
+(function(){var el=document.getElementById('works');if(!el||!window.WORKS)return;
+  var W=window.WORKS;
+  el.innerHTML=W.map(function(x,i){return '<button type="button" class="work '+(x.k||'')+(x.v?' play':'')+'" data-c="'+x.c+'" data-i="'+i+'"><img src="'+x.src+'" alt="'+x.t.replace(/"/g,'')+'" loading="lazy"><span>'+x.t+'</span></button>'}).join('');
+  var LIM=innerWidth<=640?(window.WORKS_LIM_M||8):(window.WORKS_LIM||12),mb=document.getElementById('works-more'),f='all',all=false;
+  var works=[].slice.call(el.querySelectorAll('.work')),fb=[].slice.call(document.querySelectorAll('.filters button'));
+  function seen(w){return !w.classList.contains('out')&&!w.classList.contains('more')}
+  function apply(anim){var n=0,k=0,pop=[];
+    works.forEach(function(w){var was=seen(w),hit=f==='all'||w.dataset.c.split(' ').indexOf(f)>=0,more=hit&&!all&&f==='all'&&++n>LIM;
+      w.classList.toggle('out',!hit);w.classList.toggle('more',more);w.classList.remove('pop');
+      if(hit&&!more&&(anim==='all'||(anim==='new'&&!was))){w.style.animationDelay=Math.min(k++*40,400)+'ms';pop.push(w)}});
+    if(pop.length){void el.offsetWidth;pop.forEach(function(w){w.classList.add('pop')})}
+    if(mb)mb.parentNode.hidden=all||f!=='all'||works.length<=LIM}
+  fb.forEach(function(b){b.setAttribute('aria-pressed',b.dataset.f===f);b.addEventListener('click',function(){
+    fb.forEach(function(x){x.setAttribute('aria-pressed',x===b)});f=b.dataset.f;apply('all')})});
+  if(mb)mb.addEventListener('click',function(){all=true;apply('new')}); apply();
+  var lb=document.getElementById('lb'),li=document.getElementById('lb-img'),go=document.getElementById('lb-go'),cap=document.getElementById('lb-cap'),wv=document.getElementById('lb-watch'),list=[],at=0,opener=null;
+  function showAt(i){at=(i+list.length)%list.length;var x=W[+list[at].dataset.i];li.src=x.big||x.src;li.alt=x.t;cap.textContent=x.t+' · '+(at+1)+' / '+list.length;
+    if(wv){wv.hidden=!x.v;if(x.v)wv.href=x.v}}
+  el.addEventListener('click',function(e){var w=e.target.closest('.work');if(!w)return;list=works.filter(seen);opener=w;lb.hidden=false;showAt(list.indexOf(w));
+    try{lb.querySelector('.lb-x').focus({preventScroll:true})}catch(x){}});
+  function close(){lb.hidden=true;if(opener)try{opener.focus({preventScroll:true})}catch(x){}}
+  lb.addEventListener('click',function(e){var n=e.target.closest('[data-lb]');if(n){showAt(at+(+n.dataset.lb));return}if(e.target===lb||e.target.closest('.lb-x'))close()});
+  if(go)go.addEventListener('click',function(){lb.hidden=true});
+  var x0=null;lb.addEventListener('touchstart',function(e){x0=e.touches[0].clientX},{passive:true});
+  lb.addEventListener('touchend',function(e){if(x0===null)return;var dx=e.changedTouches[0].clientX-x0;if(Math.abs(dx)>40)showAt(at+(dx<0?1:-1));x0=null});
+  document.addEventListener('keydown',function(e){if(lb.hidden)return;if(e.key==='Escape')close();else if(e.key==='ArrowRight')showAt(at+1);else if(e.key==='ArrowLeft')showAt(at-1)});
+})();
+
+/* ---------- Reseñas reales de Google (texto literal, recortes con «…») ---------- */
+(function(){var grid=document.getElementById('rv-grid');if(!grid||!window.REV)return;
+ var COLS=window.REV_COLS||['#333','#555','#777'],STAR='<svg><use href="#i-star"/></svg>';
+ grid.innerHTML=REV.map(function(r,i){return '<figure class="rv" data-reveal><div class="rv-top"><span class="rv-stars" aria-label="5 de 5 estrellas">'+STAR+STAR+STAR+STAR+STAR+'</span><span class="rv-tag">'+r[1]+'</span></div><blockquote>«'+r[3]+'»</blockquote><figcaption><i style="background:'+COLS[i%COLS.length]+'">'+r[0][0]+'</i><span><b>'+r[0]+'</b><small>'+r[2]+' · Google</small></span></figcaption></figure>'}).join('');})();
+
+/* ---------- Borradores: se ven solo con #borradores ---------- */
+(function(){function sync(){var on=location.hash==='#borradores';document.querySelectorAll('.draft').forEach(function(d){d.hidden=!on});if(on){var t=document.querySelector('.draft');t&&setTimeout(function(){t.scrollIntoView()},300)}}
+ sync();window.addEventListener('hashchange',sync)})();
+
+/* ---------- Presupuesto: panel paso a paso que acaba en WhatsApp ---------- */
+/* Los campos con data-k entran en el mensaje con esa etiqueta; los grupos de opciones llevan data-k en su contenedor. */
+(function(){
+  var C=window.BK||{}, bk=document.getElementById('bk'); if(!bk)return;
+  var f=document.getElementById('book-form'), panes=[].slice.call(f.querySelectorAll('.bk-pane')), N=panes.length, Q=N-1;
+  var back=document.getElementById('bk-back'), next=document.getElementById('bk-next'), wa=document.getElementById('f-wa');
+  var err=document.getElementById('f-error'), bar=document.getElementById('bk-bar'), stepT=document.getElementById('bk-step');
+  var nombre=document.getElementById('f-nombre'), pre=document.getElementById('f-preview');
+  function sel(n){var e=f.querySelector('input[name="'+n+'"]:checked');return e?e.value:''}
+  function val(id){var e=document.getElementById(id);return e?e.value.trim():''}
+  var _code='';
+  function code(){if(!_code){var d=new Date(),r='',A='ABCDEFGHJKLMNPQRSTUVWXYZ23456789';for(var i=0;i<3;i++)r+=A[Math.floor(Math.random()*A.length)];_code=C.code+'-'+String(d.getDate()).padStart(2,'0')+String(d.getMonth()+1).padStart(2,'0')+'-'+r}return _code}
+  function message(){
+    var emp=val('f-empresa');
+    var L=[C.hi.replace('{n}',nombre.value.trim()).replace('{e}',emp?', de '+emp:''),''];
+    L.push('🔖 Código: '+code());
+    if(window.TEMPORADA&&TEMPORADA.linea)L.push(TEMPORADA.linea);
+    L.push('• '+(C.tipoK||'Qué necesito')+': '+sel('tipo'));
+    f.querySelectorAll('[data-k]').forEach(function(el){if(el.closest('.bk-pane[data-step="1"]'))return;var v='';
+      if(el.matches('input,textarea,select'))v=el.value.trim();else{var c=el.querySelector('input:checked');v=c?c.value:''}
+      if(v)L.push('• '+el.dataset.k+': '+v)});
+    L.push('',C.ask||'¿Me decís disponibilidad y presupuesto? ¡Gracias!');
+    return L.join('\n');
+  }
+  var step=1, opener=null;
+  function show(n){
+    step=n; err.hidden=true;
+    panes.forEach(function(p){p.hidden=+p.dataset.step!==n});
+    back.disabled=n===1;
+    var last=n===N; next.hidden=last; wa.hidden=!last;
+    next.textContent=n===Q?'Ver mi mensaje':'Siguiente';
+    stepT.textContent=last?'Listo':'Paso '+n+' de '+Q;
+    bar.style.transform='scaleX('+(Math.min(n,Q)/Q)+')';
+    if(last){var m=message();pre.textContent=m;wa.href=C.wa?'https://wa.me/'+C.wa+'?text='+encodeURIComponent(m):'mailto:'+C.mail+'?subject='+encodeURIComponent((C.subject||'Presupuesto')+' · '+code())+'&body='+encodeURIComponent(m)}
+    f.scrollTop=0;
+    var h3=panes[n-1].querySelector('h3'); if(h3)h3.setAttribute('tabindex','-1');
+    setTimeout(function(){try{(h3||next).focus({preventScroll:true})}catch(x){}},380);
+  }
+  function fail(msg,el){err.textContent=msg;err.hidden=false;if(el){el.setAttribute('aria-invalid','true');el.focus()}}
+  function validate(n){
+    if(n===1&&!sel('tipo')){fail(C.tipoErr||'Elige qué necesitas.');return false}
+    if(n===Q){nombre.removeAttribute('aria-invalid');if(!nombre.value.trim()){fail('Dinos tu nombre para el mensaje.',nombre);return false}}
+    return true;
+  }
+  next.addEventListener('click',function(){if(validate(step))show(step+1)});
+  back.addEventListener('click',function(){if(step>1)show(step-1)});
+  f.addEventListener('submit',function(e){e.preventDefault();next.click()});
+  f.querySelectorAll('input[name="tipo"]').forEach(function(r){r.addEventListener('change',function(){setTimeout(function(){if(step===1)show(2)},220)})});
+  document.getElementById('f-copy').addEventListener('click',function(){var b=this,ok=function(){b.textContent='Copiado';setTimeout(function(){b.textContent='Copiar mensaje'},1600)};
+    try{navigator.clipboard.writeText(pre.textContent).then(ok,function(){var r=document.createRange();r.selectNodeContents(pre);var s=getSelection();s.removeAllRanges();s.addRange(r)})}catch(x){}});
+  function pick(v){var r=f.querySelector('input[name="tipo"][value="'+v+'"]');if(r){r.checked=true;return true}return false}
+  function open(from){
+    opener=from||document.activeElement; bk.hidden=false; document.documentElement.style.overflow='hidden';
+    var ds=from&&from.dataset||{};
+    if(ds.tipo&&pick(ds.tipo))show(2); else if(step===N)show(Q); else show(step);
+    requestAnimationFrame(function(){requestAnimationFrame(function(){bk.classList.add('open')})});
+  }
+  function close(){
+    bk.classList.remove('open'); document.documentElement.style.overflow='';
+    setTimeout(function(){bk.hidden=true},reduced?0:420);
+    if(opener&&opener.focus)try{opener.focus({preventScroll:true})}catch(x){}
+  }
+  document.getElementById('bk-x').addEventListener('click',close);
+  document.getElementById('bk-scrim').addEventListener('click',close);
+  document.addEventListener('keydown',function(e){if(!bk.hidden&&e.key==='Escape')close()});
+  document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[href="#presupuesto"]');if(!a)return;e.preventDefault();open(a)});
+  /* un enlace compartido con #presupuesto abre el panel al llegar (fuera del visor del Artifact) */
+  if(location.hash==='#presupuesto')setTimeout(function(){open(null)},600);
+})();
+
+
+/* ---------- Drawer de reseñas ---------- */
+(function(){var d=document.getElementById('rvd'); if(!d)return;
+ var list=document.getElementById('rvd-list'), map=document.getElementById('rvd-map'), opener=null, filled=false;
+ function open(from){
+   if(!filled){document.querySelectorAll('#resenas .rv').forEach(function(c){var k=c.cloneNode(true);k.removeAttribute('data-reveal');list.appendChild(k)});filled=true}
+   if(!map.src)map.src=map.getAttribute('data-src');
+   opener=from||document.activeElement; d.hidden=false; document.documentElement.style.overflow='hidden'; SFX.play('open');
+   requestAnimationFrame(function(){requestAnimationFrame(function(){d.classList.add('open');var x=d.querySelector('.bk-head [data-rvd-x]');x&&x.focus({preventScroll:true})})});
+ }
+ function close(){ if(d.hidden)return; SFX.play('close'); d.classList.remove('open'); document.documentElement.style.overflow='';
+   setTimeout(function(){d.hidden=true;opener&&opener.focus&&opener.focus({preventScroll:true})},reduced?0:420); }
+ document.addEventListener('click',function(e){var a=e.target.closest('[data-rvd]');if(a){e.preventDefault();open(a);return}
+   if(e.target.closest('[data-rvd-x]'))close()});
+ document.addEventListener('keydown',function(e){if(e.key==='Escape')close()});
+})();
+
+
+
+/* ---------- Animaciones por visibilidad ---------- */
+(function(){
+  var root=document.documentElement;
+  if(!('IntersectionObserver' in window)||reduced)return;
+  root.classList.add('js-anim');
+  var io=new IntersectionObserver(function(es){var k=0;es.forEach(function(e){if(!e.isIntersecting)return;var el=e.target;el.style.transitionDelay=Math.min(k++*90,450)+'ms';el.classList.add('in');io.unobserve(el);setTimeout(function(){el.style.transitionDelay=''},1500)})},{rootMargin:'0px 0px -8% 0px'});
+  document.querySelectorAll('[data-reveal]').forEach(function(el){io.observe(el)});
+  var fo=new IntersectionObserver(function(es,o){es.forEach(function(e){if(!e.isIntersecting)return;o.unobserve(e.target);
+    var b=e.target,to=+b.dataset.count,from=+b.dataset.from||0,t0=performance.now(),D=1100;
+    (function step(now){var p=Math.min(1,Math.max(0,(now-t0)/D));b.textContent=Math.round(from+(to-from)*(1-Math.pow(1-p,3)));if(p<1)requestAnimationFrame(step)})(t0)})},{threshold:.6});
+  document.querySelectorAll('[data-count]').forEach(function(b){fo.observe(b)});
+  var bar=document.getElementById('progress'),tk=false;
+  function prog(){tk=false;var H=root.scrollHeight-innerHeight;if(bar)bar.style.transform='scaleX('+(H>0?Math.min(1,scrollY/H):0)+')'}
+  window.addEventListener('scroll',function(){if(!tk){tk=true;requestAnimationFrame(prog)}},{passive:true});
+})();
+
+})();
+
+/* ---------- Botones flotantes tras un mínimo scroll (cabecera y barra móvil ocultas al pintar el hero) ---------- */
+(function(){var h=document.documentElement,tk=false;function s(){tk=false;h.classList.toggle('cta-wait',scrollY<=Math.min(120,innerHeight*.15))}
+ s();addEventListener('scroll',function(){if(!tk){tk=true;requestAnimationFrame(s)}},{passive:true});addEventListener('resize',s);})();
+</script>

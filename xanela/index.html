@@ -1,0 +1,1008 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Xanela · A túa fibra rural en Galicia</title>
+<meta name="description" content="Xanela, operador galego de fibra rural: fibra propia ata 1000 Mb, móbil e TV para a aldea e o teu negocio. Máis de 14.000 clientes, 5.472 km de fibra e tenda en 30 vilas. Dende Chantada.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Nunito+Sans:opsz,wght@6..12,400;6..12,600;6..12,700;6..12,800&display=swap">
+<style>
+/* Xanela — Editorial cálido rural: papel, verde bosque da súa marca e madeira; xesto: unha xanela que se abre á aldea e por onde chega a fibra */
+:root{color-scheme:light;--bg:#F7F4EC;--shell-2:#EDE8DA;--card:#FFFDF8;--ink:#17261D;--ink-soft:#5A665D;--line:rgba(23,38,29,.13);
+  --acc:#205840;--acc-ink:#FFFFFF;--acc-text:#205840;--acc-soft:rgba(32,88,64,.09);--acc-glow:rgba(32,88,64,.5);
+  --hero-bg:radial-gradient(700px 520px at 80% 25%,rgba(150,200,120,.22),rgba(150,200,120,0) 62%),linear-gradient(170deg,#1F5A40 0%,#143D2B 60%,#0E2C1F 100%);--hero-ink:#FBF7EE;--hero-soft:rgba(251,247,238,.85);--hero-hl:#B9E08A;
+  --top-bg:rgba(247,244,236,.9);--top-glass:rgba(14,44,31,.3);--mbar-bg:rgba(247,244,236,.94);
+  --band-bg:#205840;--band-ink:#FBF7EE;--band-hl:#B9E08A;--band-soft:rgba(251,247,238,.86);--band-btn:#FBF7EE;--band-btn-ink:#205840;
+  --panel-acc:#205840;--panel-acc-ink:#174431;--panel-soft:#EAF3EC;
+  --font-display:"Fraunces",ui-serif,Georgia,serif;--font-body:"Nunito Sans",ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;--h-weight:700;
+  --r-sm:12px;--r-md:16px;--r-lg:20px;--r-btn:12px;--shadow:0 30px 60px -30px rgba(14,44,31,.45);--wrap:1180px;--head:72px;--logo-h:40px;--logo-h-m:32px}
+/* ===== Base común de las landings de operadores locales (fibra, móvil, TV) =====
+   Cada negocio redefine los tokens de :root y añade el CSS de su gesto de hero más abajo. */
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html{scroll-behavior:smooth;scroll-padding-top:calc(var(--head) + 12px)}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font-body);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:clip}
+img{max-width:100%;display:block}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--acc);outline-offset:3px;border-radius:6px}
+.wrap{max-width:var(--wrap);margin-inline:auto;padding-inline:clamp(16px,4vw,40px)}
+h1,h2,h3{margin:0;text-wrap:balance;line-height:1.04;letter-spacing:-.025em;font-weight:var(--h-weight,700);font-family:var(--font-display)}
+p{margin:0}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font:700 12.5px/1.25 var(--font-body);letter-spacing:.14em;text-transform:uppercase;color:var(--acc-text)}
+.eyebrow::before{content:"";width:18px;height:2px;border-radius:2px;background:currentColor;flex:none}
+.hl{color:var(--acc-text)}
+.lead{font-size:clamp(17px,1.5vw,19px);color:var(--ink-soft);max-width:36em}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 24px;border-radius:var(--r-btn,14px);font:700 16px/1.15 var(--font-body);text-decoration:none;border:1.5px solid transparent;cursor:pointer;text-align:center;transition:transform .25s cubic-bezier(.2,.7,.2,1),box-shadow .25s,background .25s,border-color .25s,color .25s}
+.btn svg{width:19px;height:19px;flex:none}
+.btn-primary{background:var(--acc);color:var(--acc-ink);box-shadow:0 14px 30px -14px var(--acc-glow)}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 18px 34px -12px var(--acc-glow)}
+.btn-ghost{background:transparent;border-color:var(--line);color:var(--ink)}
+.btn-ghost:hover{border-color:currentColor;transform:translateY(-2px)}
+.btn-dark{background:var(--ink);color:var(--bg)}
+.btn-dark:hover{transform:translateY(-2px)}
+.sec{padding-block:clamp(72px,10vw,124px)}
+.sec-head{display:grid;gap:16px;max-width:780px;margin-bottom:clamp(32px,5vw,56px)}
+.sec-head h2,.split-txt h2,.book-cta h2,.visit h2{font-size:clamp(34px,4.4vw,58px)}
+.band-2{background:var(--shell-2)}
+.band-acc{background:var(--band-bg);color:var(--band-ink)}
+.band-acc .eyebrow,.band-acc .hl{color:var(--band-hl)}
+.band-acc .lead{color:var(--band-soft)}
+
+/* Loader con el logo */
+.loader{position:fixed;inset:0;z-index:300;display:grid;place-items:center;background:var(--hero-bg);transition:opacity .6s ease,visibility .6s;animation:loaderOut .6s 4s forwards}
+.loader.off{opacity:0;visibility:hidden;pointer-events:none}
+.loader-in{display:grid;justify-items:center;gap:16px;color:var(--hero-ink)}
+.loader-logo{position:relative;width:132px;height:132px;border-radius:50%;display:grid;place-items:center;background:var(--loader-disc,#fff);animation:loaderLogo .9s cubic-bezier(.2,.7,.2,1) both;box-shadow:0 20px 60px -20px rgba(0,0,0,.6)}
+.loader-logo img{width:70%;height:auto}
+.loader-ring{position:absolute;inset:-10px;width:calc(100% + 20px);height:calc(100% + 20px);transform:rotate(-90deg)}
+.loader-ring circle{fill:none;stroke:var(--acc);stroke-width:3;stroke-linecap:round;stroke-dasharray:440;stroke-dashoffset:440;animation:ring 1.3s .15s cubic-bezier(.6,.1,.3,1) forwards}
+.loader-in b{font:var(--h-weight,700) 22px/1.1 var(--font-display);letter-spacing:-.01em}
+.loader-in small{font-size:12px;letter-spacing:.16em;text-transform:uppercase;opacity:.7;margin-top:-10px}
+@keyframes ring{to{stroke-dashoffset:0}}
+@keyframes loaderLogo{from{opacity:0;transform:scale(.9)}to{opacity:1;transform:none}}
+@keyframes loaderOut{to{opacity:0;visibility:hidden}}
+.loader:not(.off)~main .hero-copy>*,.loader:not(.off)~main .stage{animation-play-state:paused}
+@media (prefers-reduced-motion:reduce){.loader-logo,.loader-ring circle{animation:none;stroke-dashoffset:0}}
+
+/* Cabecera: de vidrio sobre el hero, sólida al bajar (por scroll) */
+.top{position:fixed;top:0;left:0;right:0;padding-top:env(safe-area-inset-top,0px);z-index:60;background:var(--top-bg);-webkit-backdrop-filter:blur(18px) saturate(1.4);backdrop-filter:blur(18px) saturate(1.4);border-bottom:1px solid var(--line);color:var(--ink);transition:background .35s,border-color .35s,color .35s}
+.top.glass{background:var(--top-glass);border-color:rgba(255,255,255,.14);color:var(--hero-ink)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;height:var(--head)}
+.brand{display:flex;align-items:center;flex:none}
+.brand img{height:var(--logo-h,40px);width:auto}
+.brand .lg-hero{display:none}
+.top.glass .brand .lg-hero{display:block}.top.glass .brand .lg-page{display:none}
+.nav{display:flex;gap:24px;font-size:15px;font-weight:600}
+.nav a{text-decoration:none;opacity:.78;white-space:nowrap}
+.nav a:hover{opacity:1}
+.top .btn{min-height:44px;padding:0 18px;font-size:15px}
+.progress{position:absolute;left:0;bottom:-1px;height:2px;width:100%;background:var(--acc);transform:scaleX(0);transform-origin:left}
+
+/* Hero: fondo de marca, texto claro y el gesto propio en el escenario (.stage) */
+.hero{position:relative;min-height:100vh;min-height:100svh;display:flex;align-items:center;padding:calc(var(--head) + 28px) 0 56px;overflow:hidden;background:var(--hero-bg);color:var(--hero-ink);isolation:isolate}
+.hero::after{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:var(--t-tint,none)}
+.hero-grid{position:relative;z-index:2;display:grid;grid-template-columns:minmax(0,1.02fr) minmax(0,.98fr);gap:clamp(28px,4vw,64px);align-items:center;width:100%}
+.hero-copy{display:grid;justify-items:start;min-width:0}
+.hero-copy>*{min-width:0;max-width:100%}
+.hero .eyebrow{color:var(--hero-hl)}
+.hero h1{font-size:clamp(44px,4.6vw,72px);margin-top:16px;max-width:12.5em}
+.hero h1 .hl{color:var(--hero-hl)}
+.hero-sub{margin-top:18px;max-width:31em;font-size:clamp(17px,1.4vw,20px);color:var(--hero-soft)}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px;align-items:center}
+.hero-ctas .btn{max-width:100%}
+.final .btn-ghost{border-color:rgba(255,255,255,.3);color:var(--hero-ink)}
+.hero .btn-ghost{border-color:rgba(255,255,255,.3);color:var(--hero-ink)}
+.hero-micro{flex-basis:100%;font-size:13.5px;color:var(--hero-soft)}
+.hero-quote{margin:26px 0 0;padding-left:14px;border-left:2px solid var(--hero-hl);font-size:15px;line-height:1.5;color:var(--hero-soft);max-width:30em}
+.hero-quote cite{display:block;font-style:normal;font-size:13px;font-weight:700;margin-top:4px;color:var(--hero-ink);opacity:.85}
+.stage{position:relative;min-width:0;width:100%;height:min(560px,calc((100svh - var(--head) - 120px)));min-height:300px}
+.show-m{display:none}
+
+/* Sello de la nota de Google sobre el gesto */
+.rate-stk{position:absolute;z-index:7;right:2%;top:2%;display:grid;grid-template-columns:auto auto;align-items:center;gap:2px 10px;padding:12px 16px 12px 14px;border-radius:18px;background:#fff;color:#1A1A1A;text-decoration:none;transform:rotate(3deg);box-shadow:0 22px 40px -16px rgba(0,0,0,.55);transition:transform .3s}
+.rate-stk:hover{transform:rotate(1deg) scale(1.04)}
+.rate-stk .stars{grid-column:1/-1;display:flex;gap:2px;color:#F5B400}.rate-stk svg{width:18px;height:18px}
+.rate-stk b{font:800 38px/1 var(--font-display);letter-spacing:-.02em}
+.rate-stk small{font-size:13px;line-height:1.25;font-weight:700;color:#55524D}
+.rate-stk.alt{background:var(--acc);color:var(--acc-ink)}
+.rate-stk.alt small{color:inherit;opacity:.8}
+
+/* Cifras */
+.stats{padding-block:clamp(40px,6vw,64px);background:var(--shell-2);overflow:hidden}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.stats-grid>div{display:grid;gap:4px;padding-left:18px;border-left:2px solid var(--acc)}
+.stats-grid b{font:var(--h-weight,700) clamp(34px,4.2vw,56px)/1 var(--font-display);letter-spacing:-.02em;color:var(--ink)}
+.stats-grid b small{font-size:.5em;margin-left:3px}
+.stats-grid span{color:var(--ink-soft);font-size:15px}
+.marquee{margin-top:clamp(32px,4vw,48px);padding-top:22px;border-top:1px solid var(--line);-webkit-mask-image:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent);mask-image:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent)}
+.mq-track{display:flex;gap:40px;width:max-content;animation:mq 60s linear infinite}
+.mq-track span{font:600 21px/1 var(--font-display);color:var(--ink-soft);opacity:.7;white-space:nowrap}
+.mq-track span:nth-child(3n){color:var(--acc-text);opacity:1}
+@keyframes mq{to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){.mq-track{animation:none}}
+
+/* Reseñas */
+.rv-grid{columns:3 300px;column-gap:20px}
+.rv{break-inside:avoid;margin:0 0 20px;padding:22px;border:1px solid var(--line);border-radius:var(--r-md);background:var(--card);display:grid;gap:14px;transition:transform .3s,border-color .3s}
+.rv:hover{transform:translateY(-3px);border-color:var(--acc)}
+.rv-top{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.rv-stars{display:flex;gap:2px;color:#F5B400}.rv-stars svg{width:16px;height:16px}
+.rv-tag{font-size:12px;font-weight:700;color:var(--acc-text);background:var(--acc-soft);padding:4px 10px;border-radius:999px;white-space:nowrap}
+.rv blockquote{margin:0;font-size:16px;line-height:1.55}
+.rv figcaption{display:flex;align-items:center;gap:10px}
+.rv figcaption i{width:36px;height:36px;border-radius:50%;display:grid;place-items:center;color:#fff;font-style:normal;font-weight:700;flex:none}
+.rv figcaption span{display:grid;line-height:1.25}.rv figcaption small{color:var(--ink-soft);font-size:13px}
+.rv-more{display:flex;flex-wrap:wrap;gap:6px 16px;align-items:baseline;margin:8px 0 0;font-size:14px;color:var(--ink-soft)}
+.rv-more a{font-weight:700;color:var(--acc-text);text-decoration:none}
+
+/* Tarifas: pestañas + tarjetas con precios publicados */
+.tabs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:26px}
+.tabs button{all:unset;cursor:pointer;padding:10px 18px;border-radius:999px;border:1.5px solid var(--line);font-weight:700;font-size:15px;color:var(--ink);background:var(--card);transition:background .2s,border-color .2s,color .2s}
+.tabs button:hover{border-color:var(--acc)}
+.tabs button[aria-selected="true"]{background:var(--ink);border-color:var(--ink);color:var(--bg)}
+.tabs button:focus-visible{outline:3px solid var(--acc);outline-offset:2px}
+.plans{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,250px),1fr));gap:16px}
+.plan{position:relative;display:grid;gap:10px;align-content:start;padding:24px 22px 22px;border-radius:var(--r-lg);background:var(--card);border:1.5px solid var(--line);transition:transform .3s,border-color .3s}
+.plan:hover{transform:translateY(-4px);border-color:var(--acc)}
+.plan.top-pick{border-color:var(--acc);box-shadow:0 30px 60px -36px var(--acc-glow)}
+.plan .badge{position:absolute;top:-12px;left:20px;padding:4px 12px;border-radius:999px;background:var(--acc);color:var(--acc-ink);font-size:12px;font-weight:800;letter-spacing:.04em}
+.plan h3{font-size:22px;letter-spacing:-.01em}
+.plan .spec{font-size:15px;color:var(--ink-soft);margin-top:-4px}
+.plan .price{display:flex;align-items:baseline;gap:6px;margin-top:6px}
+.plan .price b{font:var(--h-weight,700) 44px/1 var(--font-display);letter-spacing:-.03em}
+.plan .price span{font-size:15px;color:var(--ink-soft);font-weight:600}
+.plan .after{font-size:13.5px;color:var(--ink-soft);margin-top:-4px}
+.plan ul{list-style:none;margin:6px 0 0;padding:0;display:grid;gap:6px;font-size:15px}
+.plan li{display:flex;gap:8px;align-items:flex-start}
+.plan li::before{content:"";width:16px;height:16px;flex:none;margin-top:4px;border-radius:50%;background:var(--acc-soft) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='none' stroke='%23222' stroke-width='3.4' stroke-linecap='round' stroke-linejoin='round' d='M6 12l4 4 8-8'/%3E%3C/svg%3E") center/10px no-repeat}
+.plan .btn{margin-top:12px;min-height:48px;width:100%}
+.plans-note{margin-top:18px;font-size:13.5px;color:var(--ink-soft);max-width:60em}
+.plans-note a{color:var(--acc-text);font-weight:700}
+
+/* Ventajas */
+.adv{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:18px}
+.adv li{list-style:none;display:grid;gap:8px;align-content:start;padding:24px;border-radius:var(--r-lg);background:var(--card);border:1px solid var(--line)}
+.adv{margin:0;padding:0}
+.adv li i{width:44px;height:44px;border-radius:14px;display:grid;place-items:center;background:var(--acc-soft);color:var(--acc-text);font-style:normal}
+.adv li i svg{width:22px;height:22px}
+.adv h3{font-size:21px;letter-spacing:-.01em}
+.adv p{color:var(--ink-soft);font-size:15.5px}
+
+/* Bloques partidos */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,6vw,88px);align-items:center}
+.split-img{margin:0;border-radius:var(--r-lg);overflow:hidden;box-shadow:var(--shadow);position:relative}
+.split-img img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.split-img figcaption{position:absolute;left:12px;bottom:12px;padding:6px 12px;border-radius:999px;background:rgba(0,0,0,.6);color:#fff;font-size:13px;font-weight:600;-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}
+.split-txt{display:grid;gap:18px;justify-items:start}
+.split-txt p{color:var(--ink-soft)}
+.band-acc .split-txt p{color:var(--band-soft)}
+.quote{margin:4px 0;padding:16px 18px;border-left:3px solid var(--acc);background:var(--acc-soft);border-radius:0 var(--r-sm) var(--r-sm) 0;font-size:16.5px;line-height:1.55;font-style:italic}
+.quote cite{display:block;margin-top:8px;font-style:normal;font-size:13px;font-weight:700;opacity:.75}
+.team{display:flex;flex-wrap:wrap;gap:8px}
+.team span{padding:6px 12px;border-radius:999px;border:1px solid var(--line);font-size:14px;font-weight:600;background:var(--card)}
+
+/* Pasos */
+.steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:18px;counter-reset:s}
+.steps li{display:grid;gap:10px;align-content:start;padding:26px;border-radius:var(--r-lg);background:var(--card);border:1px solid var(--line)}
+.steps b{font:800 14px/1 var(--font-body);letter-spacing:.12em;color:var(--acc-text)}
+.steps h3{font-size:23px}
+.steps p{color:var(--ink-soft);font-size:16px}
+
+/* Llamada al panel */
+.book-cta{display:grid;grid-template-columns:1fr auto;gap:32px;align-items:end}
+.book-cta>div{display:grid;gap:16px}
+.book-perks{list-style:none;margin:6px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:8px 20px;font-size:15px;color:var(--band-soft)}
+.book-perks li::before{content:"✓ ";font-weight:800;color:var(--band-hl)}
+.book-cta .btn{min-height:58px;padding:0 30px;font-size:17px}
+.band-acc .btn-primary{background:var(--band-btn,#fff);color:var(--band-btn-ink,#111);box-shadow:none}
+
+/* Borrador */
+.draft{outline:3px dashed #E5B300;outline-offset:-12px}
+.incl{list-style:none;margin:0;padding:0;display:grid;gap:10px;font-size:18px}
+mark{background:#FFE58A;color:#141414;padding:0 4px;border-radius:4px}
+
+/* Visita, oficinas y FAQ */
+.visit{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,6vw,88px);align-items:start}
+.visit>div:first-child{display:grid;gap:16px;justify-items:start;min-width:0}
+.hours{border-collapse:collapse;margin-top:6px;font-size:16px}
+.hours th{text-align:left;font-weight:700;padding:8px 24px 8px 0;vertical-align:top}
+.hours td{padding:8px 0;color:var(--ink-soft);font-variant-numeric:tabular-nums}
+.hours tr+tr{border-top:1px solid var(--line)}
+.contact{list-style:none;margin:6px 0 0;padding:0;display:grid;gap:10px}
+.contact li{display:flex;align-items:center;gap:10px;min-width:0}
+.contact svg{width:20px;height:20px;flex:none;color:var(--acc-text)}
+.contact a{text-decoration:none;font-weight:600;overflow-wrap:anywhere}
+.contact a:hover{color:var(--acc-text)}
+.offices{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:12px;width:100%;margin-top:6px}
+.offices>div{padding:14px 16px;border-radius:var(--r-md);border:1px solid var(--line);background:var(--card);display:grid;gap:2px;font-size:14.5px}
+.offices b{font-size:16px}
+.offices span{color:var(--ink-soft)}
+.towns{display:flex;flex-wrap:wrap;gap:6px}
+.towns span{padding:5px 11px;border-radius:999px;background:var(--card);border:1px solid var(--line);font-size:13.5px;font-weight:600}
+.faq{display:grid;gap:10px;min-width:0}
+.faq details{background:var(--card);border:1px solid var(--line);border-radius:var(--r-md);padding:4px 20px}
+.faq summary{cursor:pointer;list-style:none;padding:16px 0;font-weight:700;display:flex;justify-content:space-between;gap:12px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font-size:22px;line-height:1;color:var(--acc-text);transition:transform .25s}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq details p{padding:0 0 18px;color:var(--ink-soft)}
+
+/* Cierre */
+.final{padding-block:clamp(80px,11vw,140px);text-align:center;background:var(--hero-bg);color:var(--hero-ink);position:relative;overflow:hidden}
+.final .wrap{display:grid;justify-items:center;gap:20px;position:relative}
+.final-logo{height:64px;width:auto}
+.final h2{font-size:clamp(40px,5.6vw,76px)}
+.final h2 .hl{color:var(--hero-hl)}
+.final .hero-ctas{justify-content:center;margin-top:4px}
+.g-rate{display:inline-flex;align-items:center;gap:8px;padding:8px 14px;border-radius:999px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);color:inherit;text-decoration:none;font-size:14px}
+.g-rate .stars{display:flex;gap:1px;color:#F5B400}.g-rate svg{width:15px;height:15px}
+.foot{background:var(--bg)}
+.foot .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;font-size:14px;color:var(--ink-soft);padding-block:22px}
+
+/* Animaciones de entrada */
+.js-anim [data-reveal]{opacity:0;transform:translateY(28px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1)}
+.js-anim [data-reveal].in{opacity:1;transform:none}
+.js-anim .hero-copy>*{animation:rise .9s cubic-bezier(.2,.7,.2,1) both}
+.js-anim .hero-copy>:nth-child(2){animation-delay:.08s}.js-anim .hero-copy>:nth-child(3){animation-delay:.16s}.js-anim .hero-copy>:nth-child(4){animation-delay:.24s}.js-anim .hero-copy>:nth-child(5){animation-delay:.32s}
+.js-anim .stage{animation:rise 1s .2s cubic-bezier(.2,.7,.2,1) both}
+@keyframes rise{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
+
+.mbar{display:none}
+
+@media (max-width:1100px){.nav a:nth-child(n+4){display:none}}
+@media (max-width:960px){
+  .nav{display:none}
+  /* el gesto arriba, el texto debajo sobre el fondo de marca */
+  .hero{align-items:flex-start;min-height:0;padding:calc(var(--head) + 10px) 0 40px}
+  .hero-grid{grid-template-columns:minmax(0,1fr);gap:14px}
+  .stage{order:-1;height:min(360px,34svh);min-height:150px}
+  .split,.visit,.book-cta{grid-template-columns:1fr}
+  .split.rev .split-img{order:-1}
+  .stats-grid{grid-template-columns:1fr 1fr}
+  .steps{grid-template-columns:1fr}
+}
+@media (max-width:640px){
+  body{font-size:16px}
+  .hide-m{display:none}
+  .show-m{display:inline}
+  .top .btn{display:none}
+  .brand img{height:var(--logo-h-m,34px)}
+  .stage{height:min(46vw,250px,28svh)}
+  .hero h1{font-size:clamp(32px,9.6vw,48px);margin-top:10px}
+  .hero .eyebrow{font-size:11px;letter-spacing:.1em;white-space:nowrap;max-width:100%;overflow:hidden;text-overflow:ellipsis}
+  .hero-sub{margin-top:12px;font-size:16px}
+  .hero-ctas{margin-top:18px;gap:10px}
+  .hero-ctas .btn{flex:1 1 auto;min-height:50px;padding:0 18px}
+  .hero-quote{display:none}
+  .rate-stk{padding:8px 11px 9px;border-radius:14px;gap:1px 7px}
+  .rate-stk b{font-size:26px}
+  .rate-stk svg{width:13px;height:13px}
+  .rate-stk small{font-size:11px}
+  .rv-grid{columns:auto;display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;margin-inline:-16px;padding:4px 16px 14px;scrollbar-width:none}
+  .rv-grid::-webkit-scrollbar{display:none}
+  .rv{flex:0 0 84%;margin:0;scroll-snap-align:center}
+  .plans{grid-template-columns:none;display:flex;overflow-x:auto;scroll-snap-type:x mandatory;margin-inline:-16px;padding:14px 16px 10px;scrollbar-width:none}
+  .plans::-webkit-scrollbar{display:none}
+  .plan{flex:0 0 82%;scroll-snap-align:center}
+  .tabs{flex-wrap:nowrap;overflow-x:auto;margin-inline:-16px;padding:2px 16px 6px;scrollbar-width:none}
+  .tabs::-webkit-scrollbar{display:none}
+  .tabs button{white-space:nowrap;padding:9px 15px;font-size:14px}
+  .book-cta .btn{width:100%}
+  .final .hero-ctas{width:100%;flex-direction:column}.final .hero-ctas .btn{width:100%}
+  .final .g-rate{max-width:100%;flex-wrap:wrap;justify-content:center}
+  .mq-track span{font-size:17px}
+  .mbar{display:flex;gap:6px;position:fixed;left:12px;right:12px;bottom:calc(10px + env(safe-area-inset-bottom,0px));z-index:70;padding:6px;border-radius:999px;background:var(--mbar-bg);-webkit-backdrop-filter:blur(18px) saturate(1.4);backdrop-filter:blur(18px) saturate(1.4);border:1px solid var(--line);box-shadow:0 14px 34px -14px rgba(0,0,0,.45);transition:transform .35s cubic-bezier(.2,.7,.2,1),opacity .35s,background .4s,border-color .4s}
+  .mbar.glass{background:rgba(10,10,14,.42);border-color:rgba(255,255,255,.18)}
+  .mbar.off{transform:translateY(150%);opacity:0;pointer-events:none}
+  .mbar .btn{flex:1;min-width:0;padding:0 16px;min-height:48px;white-space:nowrap;border-radius:999px}
+  .mbar .btn-ghost{flex:0 0 48px;width:48px;padding:0;border-color:transparent;background:var(--acc-soft);color:var(--acc-text)}
+  .mbar.glass .btn-ghost{background:rgba(255,255,255,.16);color:#fff}
+  body{padding-bottom:0}
+  .foot .wrap{padding-bottom:90px}
+}
+@media (max-width:340px){.hero h1{font-size:30px}.hero .eyebrow{letter-spacing:.05em}.mbar .btn-primary svg{display:none}}
+
+/* Temporadas: el eyebrow se vuelve píldora con punto latiendo */
+.hero .eyebrow.t-on{padding:6px 14px 6px 10px;border-radius:999px;background:var(--t-acc,rgba(255,255,255,.14));border:1px solid rgba(255,255,255,.28);color:var(--t-acc-ink,#fff);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}
+.hero .eyebrow.t-on::before{width:8px;height:8px;border-radius:50%;background:currentColor;animation:t-pulso 1.8s ease-out infinite}
+@keyframes t-pulso{0%{box-shadow:0 0 0 0 rgba(255,255,255,.7)}70%{box-shadow:0 0 0 8px rgba(255,255,255,0)}100%{box-shadow:0 0 0 0 rgba(255,255,255,0)}}
+@media (prefers-reduced-motion:reduce){.hero .eyebrow.t-on::before{animation:none}}
+
+/* Botones flotantes: aparecen tras un mínimo scroll */
+.top .btn-primary{transition:opacity .35s,transform .35s cubic-bezier(.2,.7,.2,1),background .25s,box-shadow .25s}
+html.cta-wait .top .btn-primary{opacity:0;transform:translateY(-8px);pointer-events:none}
+html.cta-wait .mbar{transform:translateY(150%)!important;opacity:0!important;pointer-events:none}
+
+/* ===== Propio de Xanela: gesto del hero y ajustes ===== */
+
+.hero .btn-primary,.final .btn-primary{background:var(--hero-hl);color:#0E2C1F;box-shadow:0 14px 34px -14px rgba(185,224,138,.6)}
+.hero h1{font-weight:700;letter-spacing:-.02em}
+.top.glass .brand .lg-hero{height:38px}
+.final{background:var(--hero-bg)}
+.rate-stk.alt{background:#FBF7EE;color:#17261D;grid-template-columns:auto;justify-items:start;gap:2px}
+.rate-stk.alt b{font-family:var(--font-display);font-weight:700}
+.rate-stk.alt small{color:#5A665D;opacity:1}
+/* Xesto: a xanela que se abre á aldea */
+.win-wrap{position:absolute;inset:0;display:grid;place-items:center;align-content:center;gap:16px}
+.win{position:relative;height:min(100%,440px);aspect-ratio:300/380;max-width:100%;border:14px solid #EDE4D0;border-radius:6px 6px 4px 4px;background:#EDE4D0;box-shadow:0 0 0 2px #C9BFA8,0 50px 90px -40px rgba(0,0,0,.7);perspective:900px;cursor:pointer;outline-offset:6px}
+.win-wrap{grid-template-rows:minmax(0,1fr) auto}
+.win-view{position:absolute;inset:0;width:100%;height:100%}
+.x-win{transition:fill .6s}
+.win.open .x-win{fill:#FFD86B}
+.shutter{position:absolute;top:0;bottom:0;width:50%;display:grid;grid-template-rows:repeat(3,1fr);gap:6%;padding:8% 9%;background:linear-gradient(90deg,#2E6B4C,#24573D);transition:transform 1s cubic-bezier(.3,.7,.2,1);backface-visibility:hidden;box-shadow:inset 0 0 0 3px rgba(0,0,0,.18)}
+.shutter i{display:block;border-radius:3px;background:rgba(0,0,0,.14);box-shadow:inset 0 2px 0 rgba(255,255,255,.08)}
+.shutter.l{left:0;transform-origin:0 50%}
+.shutter.r{right:0;transform-origin:100% 50%;background:linear-gradient(270deg,#2E6B4C,#24573D)}
+.win.peek .shutter.l{transform:rotateY(-28deg)}.win.peek .shutter.r{transform:rotateY(28deg)}
+.win.open .shutter.l{transform:rotateY(-112deg)}.win.open .shutter.r{transform:rotateY(112deg)}
+.win-sill{position:absolute;left:-26px;right:-26px;bottom:-24px;height:14px;border-radius:3px;background:#D9CDB3;box-shadow:0 10px 20px -8px rgba(0,0,0,.5)}
+.win-chip{margin:0;padding:8px 16px;border-radius:999px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.22);font-size:14px;font-weight:700;color:#FBF7EE;transition:background .3s,color .3s}
+.win-chip.done{background:#B9E08A;color:#0E2C1F;border-color:#B9E08A}
+.x-pulse,.x-tag{opacity:0;transition:opacity .6s .5s}
+.win.open .x-pulse,.win.open .x-tag{opacity:1}
+.stage .rate-stk{right:2%;top:6%}
+.split-img img[src*="rural"]{filter:saturate(.9)}
+@media (max-height:700px){.hero-quote{display:none}}
+@media (max-width:960px){.win-wrap{justify-items:start;padding-left:6%;grid-template-rows:1fr}.win{height:calc(100% - 22px);border-width:9px}.win-sill{left:-14px;right:-14px;bottom:-16px;height:9px}.win-chip{display:none}}
+@media (prefers-reduced-motion:reduce){.shutter{transition:none}}
+
+/* ---- Paneles (de la referencia Aloha) ---- */
+.bk{position:fixed;inset:0;z-index:120}
+.bk[hidden]{display:none}
+.bk-scrim{position:absolute;inset:0;background:rgba(26,14,46,.5);opacity:0;transition:opacity .35s ease}
+.bk.open .bk-scrim{opacity:1}
+.bk-panel{position:absolute;top:0;right:0;bottom:0;width:min(480px,100%);background:var(--shell);display:flex;flex-direction:column;box-shadow:-30px 0 80px -30px rgba(26,14,46,.5);transform:translateX(100%);transition:transform .42s cubic-bezier(.2,.8,.2,1)}
+.bk.open .bk-panel{transform:none}
+.bk-head{display:grid;grid-template-columns:44px 1fr 44px;align-items:center;gap:8px;padding:calc(10px + env(safe-area-inset-top,0px)) 12px 10px;border-bottom:1px solid var(--line);background:#fff}
+.bk-head .t{text-align:center;display:grid;gap:2px}
+.bk-head .t span{font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft)}
+.bk-head .t b{font-family:var(--font-display);font-weight:400;font-size:20px;color:var(--hibiscus);line-height:1.1}
+.bk-ib{all:unset;cursor:pointer;width:44px;height:44px;border-radius:50%;display:grid;place-items:center;color:var(--ink)}
+.bk-ib:hover{background:var(--shell-2)}
+.bk-ib:focus-visible{outline:3px solid var(--hibiscus)}
+.bk-ib svg{width:22px;height:22px}
+.bk-ib[disabled]{visibility:hidden}
+.bk-prog{height:4px;background:var(--shell-2)}
+.bk-prog i{display:block;height:100%;background:linear-gradient(90deg,var(--hibiscus),var(--sun));transform-origin:left;transition:transform .35s ease}
+.bk-body{flex:1;overflow-y:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch;padding:28px 22px 24px}
+.bk-pane{display:grid;gap:18px;align-content:start}
+.bk-pane[hidden]{display:none}
+.bk-pane h3{font-size:clamp(26px,6vw,32px);line-height:1.1}
+.bk-pane .sub{color:var(--ink-soft);margin-top:-8px}
+.bk-opts{display:grid;gap:10px}
+.bk-opts label{position:relative;cursor:pointer;display:block}
+.bk-opts input{position:absolute;opacity:0;inset:0;margin:0;cursor:pointer}
+.bk-opts span{display:flex;align-items:center;justify-content:space-between;min-height:58px;padding:0 18px;border-radius:16px;border:1.5px solid var(--line);background:#fff;font-size:17px;font-weight:600;transition:border-color .2s,background .2s,color .2s}
+.bk-opts span::after{content:"";width:22px;height:22px;border-radius:50%;border:2px solid var(--line);flex:none;transition:all .2s}
+.bk-opts input[type=checkbox]+span::after{border-radius:7px}
+.bk-opts input:checked+span{border-color:var(--hibiscus);background:#FFF1F5;color:var(--hibiscus-ink)}
+.bk-opts input:checked+span::after{border-color:var(--hibiscus);background:var(--hibiscus) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='none' stroke='white' stroke-width='3.2' stroke-linecap='round' stroke-linejoin='round' d='M6 12l4 4 8-8'/%3E%3C/svg%3E") center/14px no-repeat}
+.bk-opts input:focus-visible+span{outline:3px solid var(--hibiscus);outline-offset:2px}
+.bk-opts.row{grid-template-columns:repeat(auto-fit,minmax(0,1fr));gap:8px}
+.bk-opts.row span{justify-content:center;min-height:50px;padding:0 10px;font-size:15px;text-align:center}
+.bk-opts.row span::after{display:none}
+.bk-field{display:grid;gap:8px;min-width:0}
+.bk-field>span{font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-soft)}
+.bk-field input,.bk-field textarea{display:block;width:100%;min-width:0;max-width:100%;min-height:56px;padding:14px 16px;border-radius:14px;border:1.5px solid var(--line);background:#fff;font:500 17px var(--font-body);color:var(--ink);-webkit-appearance:none;appearance:none}
+.bk-field input[type=date]{text-align:left}
+.bk-field input::-webkit-date-and-time-value{text-align:left}
+.bk-field textarea{min-height:96px;resize:vertical}
+.cal{background:#fff;border:1.5px solid var(--line);border-radius:18px;padding:10px 12px 14px}
+.cal-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:6px}
+.cal-head b{font-size:17px}
+.cal-head .bk-ib[disabled]{visibility:visible;opacity:.25;cursor:default}
+.cal-dow,.cal-grid{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:4px;text-align:center}
+.cal-dow span{font-size:12px;font-weight:700;color:var(--ink-soft);padding:4px 0}
+.cal-dow .we,.cal-grid .we{color:var(--hibiscus)}
+.cal-grid button{all:unset;box-sizing:border-box;cursor:pointer;aspect-ratio:1;max-height:48px;width:100%;display:grid;place-items:center;border-radius:12px;font-weight:600;font-size:15px;font-variant-numeric:tabular-nums;color:var(--ink);transition:background .15s,color .15s}
+.cal-grid button.we{color:var(--hibiscus)}
+.cal-grid button:hover:not([disabled]){background:var(--shell-2)}
+.cal-grid button[disabled]{opacity:.28;cursor:default}
+.cal-grid button{position:relative}
+.cal-grid button.today{opacity:1;color:var(--ink);box-shadow:inset 0 0 0 2px var(--sun);background:#FFF6EE}
+.cal-grid button.today::after{content:"";position:absolute;left:50%;bottom:12%;width:5px;height:5px;margin-left:-2.5px;border-radius:50%;background:#E0864A}
+.cal-legend{display:flex;align-items:center;gap:6px;margin:10px 2px 0;font-size:13px;font-weight:600;color:var(--ink-soft)}
+.cal-legend i{width:14px;height:14px;border-radius:5px;box-shadow:inset 0 0 0 2px var(--sun);background:#FFF6EE;position:relative;flex:none}
+.cal-legend i::after{content:"";position:absolute;left:50%;bottom:2px;width:4px;height:4px;margin-left:-2px;border-radius:50%;background:#E0864A}
+.cal-grid button[aria-pressed="true"]{background:var(--hibiscus);color:#fff}
+.cal-grid button:focus-visible{outline:3px solid var(--hibiscus);outline-offset:1px}
+.cal-sel{margin:4px 0 0;font-weight:600;color:var(--ink-soft)}
+.cal-sel.on{color:var(--hibiscus-ink)}
+.bk-field input:focus,.bk-field textarea:focus{outline:none;border-color:var(--hibiscus)}
+.bk-field input[aria-invalid="true"]{border-color:#C6283D;background:#FFF2F4}
+.stepper{display:grid;grid-template-columns:56px 1fr 56px;align-items:center;background:#fff;border:1.5px solid var(--line);border-radius:16px;overflow:hidden}
+.stepper button{all:unset;cursor:pointer;height:56px;display:grid;place-items:center;font-size:26px;font-weight:600;color:var(--hibiscus)}
+.stepper button:active{background:var(--shell-2)}
+.stepper button:focus-visible{outline:3px solid var(--hibiscus);outline-offset:-3px}
+.stepper output{text-align:center;font-size:22px;font-weight:700;font-variant-numeric:tabular-nums}
+.bk-foot{padding:12px 22px calc(14px + env(safe-area-inset-bottom,0px));border-top:1px solid var(--line);background:#fff;display:grid;gap:8px}
+.bk-foot .btn{width:100%;min-height:56px;font-size:17px}
+.bk-foot [hidden]{display:none!important}
+.f-error{margin:0;color:#B3213A;font-weight:600;font-size:15px}
+.btn-wa{background:#1FA855;color:#fff;box-shadow:0 12px 24px -12px rgba(31,168,85,.8);width:100%;white-space:nowrap}
+.btn-wa:hover{background:#178F47}
+.btn-wa svg{width:22px;height:22px}
+.f-preview{margin:0;white-space:pre-wrap;font:16px/1.5 var(--font-body);background:#E7FFDB;border-radius:16px 16px 16px 4px;padding:16px 18px;color:#123;box-shadow:0 1px 0 rgba(0,0,0,.06)}
+.f-copy{all:unset;cursor:pointer;justify-self:center;font-size:14px;font-weight:600;color:var(--hibiscus-ink);text-decoration:underline;text-underline-offset:3px;padding:4px 8px}
+.f-copy:focus-visible{outline:3px solid var(--hibiscus);border-radius:6px}
+.f-hint{margin:0;font-size:13px;color:var(--ink-soft);text-align:center}
+
+
+.hrs{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.stepper.sm{grid-template-columns:40px 1fr 40px;border-radius:14px}
+.stepper.sm button{height:44px;font-size:22px}
+.stepper.sm button[disabled]{opacity:.25;cursor:default}
+.stepper.sm output{font-size:18px}
+.hrs-out{margin:-4px 0 0;font-size:14px;font-weight:600;color:var(--hibiscus-ink)}
+/* Panel compacto: ningún paso necesita scroll */
+.bk-body{padding:18px 18px 14px}
+.bk-pane{gap:14px}
+.bk-pane h3{font-size:24px}
+.bk-pane .sub{margin-top:-6px;font-size:15px}
+.bk-field{gap:6px}
+.bk-field>span{font-size:12px}
+.bk-opts{gap:8px}
+.bk-opts span{min-height:50px;font-size:16px;border-radius:14px}
+.bk-opts.row span{min-height:44px}
+.bk-opts.grid2{grid-template-columns:1fr 1fr}
+.bk-opts.grid2 span{min-height:44px;padding:0 12px;font-size:14px}
+.bk-opts.grid2 span::after{width:18px;height:18px}
+.bk-field input,.bk-field textarea{min-height:48px;padding:11px 14px;font-size:16px}
+.bk-field textarea{min-height:76px}
+.stepper{grid-template-columns:52px 1fr 52px}
+.stepper button{height:48px}
+.cal{padding:6px 8px 10px}
+.cal-head{margin-bottom:2px}
+.cal-head .bk-ib{width:38px;height:38px}
+.cal-dow span{padding:2px 0}
+.cal-grid{gap:2px}
+.cal-grid button{aspect-ratio:auto;height:clamp(34px,5.2vh,44px)}
+.cal-legend{margin-top:6px;font-size:12px}
+.cal-sel{margin:0;font-size:14px}
+.f-preview{font-size:14px;padding:12px 14px}
+.bk-foot{padding:10px 18px calc(10px + env(safe-area-inset-bottom,0px));gap:6px}
+.bk-foot .btn{min-height:50px}
+.bk-head{padding-block:calc(6px + env(safe-area-inset-top,0px)) 6px}
+@media (max-height:700px){
+  .bk-pane h3{font-size:22px}
+  .bk-opts span{min-height:46px}
+  .bk-opts.row span,.bk-opts.grid2 span{min-height:40px}
+  .stepper button{height:44px}
+  .cal-grid button{height:32px;font-size:14px}
+  .bk-body{padding-top:14px}
+  .f-preview{font-size:13px;line-height:1.4;padding:10px 12px}
+  .bk-pane .sub{font-size:13.5px}
+}
+@media (max-height:620px){.bk-pane{gap:10px}.bk-pane h3{font-size:20px}.f-preview{font-size:12.5px;line-height:1.35}}
+.rvd-body{display:grid;grid-template-columns:minmax(0,1fr);gap:18px;align-content:start;overflow-x:hidden;overscroll-behavior-x:none;touch-action:pan-y}
+.rvd .bk-panel{overflow-x:hidden;max-width:100vw}
+.rvd-body>*,.rvd-list>*{min-width:0;max-width:100%}
+.rvd-list .rv,.rvd-list .rv *{overflow-wrap:anywhere}
+.rvd-list .rv-top{flex-wrap:wrap}.rvd-list .rv-tag{white-space:normal}
+.rvd-sum{display:grid;grid-template-columns:auto minmax(0,1fr);gap:22px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:var(--r-md);padding:18px 20px}
+.rvd-score{display:grid;justify-items:center;gap:4px}
+.rvd-score b{font-size:44px;line-height:1;font-weight:700;color:var(--ink)}
+.rvd-score small{font-size:13px;color:var(--ink-soft)}
+.rvd-dist{list-style:none;margin:0;padding:0;display:grid;gap:5px;font-size:13px;color:var(--ink-soft)}
+.rvd-dist li{display:grid;grid-template-columns:12px 1fr 22px;gap:8px;align-items:center}
+.rvd-dist i{height:8px;border-radius:99px;background:var(--shell-2);overflow:hidden}.rvd-dist b{display:block;height:100%;background:#F5B400;border-radius:99px}
+.rvd-dist em{font-style:normal;text-align:right}
+.rvd-h{margin:6px 0 0;font-size:17px}
+.rvd-list{display:grid;grid-template-columns:minmax(0,1fr);gap:12px}
+.rvd-list .rv{background:#fff;opacity:1!important;transform:none!important}
+.rvd-map{border-radius:var(--r-md);overflow:hidden;border:1px solid var(--line);background:var(--shell-2);height:300px;flex:none}
+.rvd-map iframe{width:100%;height:100%;border:0;display:block}
+.rvd-note{margin:0;font-size:13px;color:var(--ink-soft)}
+.rvd-foot{padding:12px 16px calc(12px + env(safe-area-inset-bottom,0px));border-top:1px solid var(--line);background:#fff}
+.rvd-foot .btn{width:100%}
+/* Subir arriba */
+.totop{position:fixed;right:20px;bottom:24px;z-index:65;width:48px;height:48px;border-radius:50%;border:1px solid rgba(255,255,255,.6);background:rgba(255,255,255,.72);-webkit-backdrop-filter:blur(14px) saturate(1.6);backdrop-filter:blur(14px) saturate(1.6);color:var(--ink);display:grid;place-items:center;cursor:pointer;box-shadow:0 10px 30px -10px rgba(58,36,48,.4);opacity:0;transform:translateY(12px) scale(.9);pointer-events:none;transition:opacity .3s,transform .3s}
+.totop.on{opacity:1;transform:none;pointer-events:auto}
+.totop:hover{transform:translateY(-2px)}
+.totop svg{width:22px;height:22px}
+@media (max-width:960px){.totop{bottom:calc(86px + env(safe-area-inset-bottom,0px));right:16px;width:44px;height:44px}}
+/* Paneles siempre en claro: tokens propios dentro de .bk */
+.bk{--shell:#F7F6F3;--shell-2:#ECEAE4;--ink:#16161A;--ink-soft:#5C5A55;--line:rgba(0,0,0,.12);--hibiscus:var(--panel-acc);--hibiscus-ink:var(--panel-acc-ink);--sun:var(--panel-acc);--card:#fff;color:var(--ink)}
+@media (max-width:640px){.bk-panel{width:100%;transform:translateY(100%);box-shadow:none}}
+.bk-head .t b{font-family:var(--font-display);font-weight:var(--h-weight,700);color:var(--ink)}
+.bk-opts input:checked+span{background:var(--panel-soft)}
+.bk .btn-primary{background:var(--panel-acc);color:#fff;box-shadow:none}
+.btn-wa{font-size:16px}
+.btn-mail{background:var(--panel-acc);color:#fff;width:100%;white-space:nowrap}
+.btn-tel{background:#fff;border-color:var(--line);color:var(--ink);width:100%}
+.bk-pane h3:focus{outline:none}
+.bk-opts.grid2 span{position:relative;justify-content:center;text-align:center;padding:0 10px;min-width:0}
+.bk-opts.grid2 span::after{position:absolute;top:-7px;right:-7px;width:20px;height:20px;border:0;opacity:0;background-size:11px;box-shadow:0 0 0 2px var(--shell)}
+.bk-opts.grid2 input:checked+span::after{opacity:1}
+.bk-opts span{gap:10px}
+.bk-opts span small{display:block;font-size:12.5px;font-weight:600;color:var(--ink-soft)}
+.bk-opts.plans-opts span{min-height:52px;padding:8px 16px;line-height:1.25}
+.bk-opts.plans-opts span em{font-style:normal;font-weight:800;color:var(--panel-acc-ink);white-space:nowrap}
+.bk-opts.plans-opts{max-height:none}
+@media (max-width:340px){.bk-opts span{font-size:15px;padding:0 12px}}
+.bk-note{margin:-4px 0 0;font-size:13.5px;color:var(--ink-soft)}
+@media (max-height:700px){.bk-opts.plans-opts span{min-height:44px;padding:6px 14px;font-size:14.5px}.bk-opts span small{font-size:11.5px}}
+@media (max-height:620px){.bk-note{display:none}}
+
+</style>
+<div class="loader" id="loader" aria-hidden="true"><div class="loader-in"><div class="loader-logo"><svg class="loader-ring" viewBox="0 0 152 152"><circle cx="76" cy="76" r="70"/></svg><img src="img/logo-mark.png" alt=""></div><b>Xanela</b><small>A túa fibra</small></div></div>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="i-arrow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></symbol><symbol id="i-phone" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></symbol><symbol id="i-mail" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="M3.5 6.5l8.5 6.5 8.5-6.5"/></g></symbol><symbol id="i-pin" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 22s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></g></symbol><symbol id="i-ig" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8" fill="currentColor"/></g></symbol><symbol id="i-star" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2.8l2.8 5.9 6.4.8-4.7 4.4 1.2 6.4L12 17.2l-5.7 3.1 1.2-6.4L2.8 9.5l6.4-.8z"/></symbol><symbol id="i-wifi" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M2 8.8a15 15 0 0 1 20 0M5 12.4a10.5 10.5 0 0 1 14 0M8.5 15.9a5.5 5.5 0 0 1 7 0"/><circle cx="12" cy="19.5" r="1.2" fill="currentColor"/></g></symbol><symbol id="i-bolt" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M13 2L4 14h7l-1 8 9-12h-7z"/></symbol><symbol id="i-tv" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="5" width="19" height="13" rx="2.5"/><path d="M8 21h8M9 2l3 3 3-3"/></g></symbol><symbol id="i-mobile" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="6" y="2" width="12" height="20" rx="3"/><path d="M11 18h2"/></g></symbol><symbol id="i-house" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M3 11l9-7 9 7v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></symbol><symbol id="i-people" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0M16 4.5a3.5 3.5 0 0 1 0 7M18 14.5a6.5 6.5 0 0 1 3.5 5.5"/></g></symbol><symbol id="i-shield" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M12 3l8 3v6c0 4.5-3.4 8.3-8 9-4.6-.7-8-4.5-8-9V6zM8.5 12l2.5 2.5 4.5-5"/></symbol><symbol id="i-clock" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></g></symbol><symbol id="i-tag" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M3 12V4a1 1 0 0 1 1-1h8l9 9-9 9z"/><circle cx="8" cy="8" r="1.5"/></g></symbol><symbol id="i-signal" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 20v-3M9 20v-7M14 20V9M19 20V4"/></g></symbol><symbol id="i-sat" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 7l4 4-6 6-4-4z"/><path d="M7.5 12.5l-4-4 3-3 4 4M16.5 11.5l4 4-3 3-4-4M5 19a4 4 0 0 0 4 0"/></g></symbol><symbol id="i-tool" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M14.7 6.3a4 4 0 0 0 5.2 5.2l-8.6 8.6a2.1 2.1 0 0 1-3-3l8.6-8.6a4 4 0 0 1-2.2-2.2zM16 3l-2 2 4 4 2-2"/></symbol><symbol id="i-globe" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3.2 3 14.8 0 18M12 3c-3 3.2-3 14.8 0 18"/></g></symbol><symbol id="i-heart" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M12 20s-7.5-4.6-7.5-10A4.3 4.3 0 0 1 12 7.4 4.3 4.3 0 0 1 19.5 10c0 5.4-7.5 10-7.5 10z"/></symbol><symbol id="i-fiber" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 18c4 0 5-12 9-12s5 12 9 12"/><circle cx="12" cy="6" r="1.6" fill="currentColor"/></g></symbol><symbol id="i-chat" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M4 5h16v11H9l-5 4z"/></symbol></svg>
+<header class="top glass" id="top">
+  <div class="wrap">
+    <a class="brand" href="#hero" aria-label="Xanela"><img class="lg-page" src="img/logo.png" alt="Xanela, a túa fibra"><img class="lg-hero" src="img/logo-blanco.png" alt=""></a>
+    <nav class="nav" aria-label="Seccións"><a href="#tarifas">Tarifas</a><a href="#numeros">Quen somos</a><a href="#tendas">Tendas</a><a href="#empresas">Empresas</a><a href="#visita">Contacto</a></nav>
+    <a class="btn btn-primary" href="#contratar"><svg aria-hidden="true"><use href="#i-wifi"/></svg>Quero fibra</a>
+  </div>
+  <div class="progress" id="progress"></div>
+</header>
+<main>
+  <section class="hero" id="hero">
+    
+    <div class="hero-grid wrap">
+      <div class="hero-copy">
+        <span class="eyebrow" data-t="eyebrow">Fibra rural en Galicia · dende Chantada</span>
+        <h1 data-t="h1">Abre a xanela. <span class="hl">Chega a fibra.</span></h1>
+        <p class="hero-sub" data-t="sub">Fibra propia ata 1000 Mb, móbil e TV para a aldea e para o teu negocio.<span class="hide-m"> Galegos traballando para galegos, con tenda en 30 vilas.</span></p>
+        <div class="hero-ctas"><a class="btn btn-primary" href="#contratar"><svg aria-hidden="true"><use href="#i-wifi"/></svg><span data-t="cta">Quero fibra</span></a><a class="btn btn-ghost" href="#tarifas">Ver tarifas</a><small class="hero-micro" data-t="micro">Respondemos por WhatsApp · sen compromiso</small></div>
+        <blockquote class="hero-quote">«Vivir na aldea non debería ser sinónimo de ter menos dereitos!»<cite>Xanela, «Quen somos»</cite></blockquote>
+      </div>
+      <div class="stage" id="stage"><div class="win-wrap" id="win-wrap">
+  <div class="win" id="win" role="button" tabindex="0" aria-label="Abrir a xanela">
+    <svg class="win-view" viewBox="0 0 300 380" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+      <defs><linearGradient id="xsky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#BFE3F2"/><stop offset="1" stop-color="#F4F1DE"/></linearGradient></defs>
+      <rect width="300" height="380" fill="url(#xsky)"/>
+      <circle cx="232" cy="78" r="26" fill="#FFE7A3"/>
+      <path d="M0 210 C60 170 110 190 160 170 S260 150 300 175 L300 380 L0 380Z" fill="#8DBB6A"/>
+      <path d="M0 260 C70 225 140 250 200 232 S280 220 300 230 L300 380 L0 380Z" fill="#5E9A4C"/>
+      <path d="M0 310 C80 290 170 312 300 292 L300 380 L0 380Z" fill="#3F7A3A"/>
+      <g class="x-horreo" transform="translate(40 228)"><rect x="0" y="22" width="60" height="22" fill="#C9B79A"/><path d="M-6 22 L30 4 L66 22Z" fill="#9C5B3B"/><rect x="6" y="44" width="6" height="14" fill="#A8977C"/><rect x="48" y="44" width="6" height="14" fill="#A8977C"/><path d="M6 27h48M6 33h48M6 39h48" stroke="#A8977C" stroke-width="1.5"/></g>
+      <g transform="translate(176 196)"><rect x="0" y="20" width="76" height="52" fill="#EFE6D2"/><path d="M-8 22 L38 -4 L84 22Z" fill="#9C5B3B"/><rect class="x-win" x="12" y="34" width="18" height="18" fill="#6E7F86"/><rect x="46" y="44" width="16" height="28" fill="#7A5236"/></g>
+      <path id="x-fibra" d="M300 120 C250 130 230 160 214 216" fill="none" stroke="#205840" stroke-width="3" stroke-dasharray="5 5"/>
+      <circle class="x-pulse" r="5" fill="#B9E08A"><animateMotion dur="2.4s" repeatCount="indefinite"><mpath href="#x-fibra"/></animateMotion></circle>
+      <g class="x-tag" transform="translate(150 118)"><rect x="-44" y="-16" width="88" height="30" rx="15" fill="#205840"/><text x="0" y="5" text-anchor="middle" font-size="15" font-weight="800" fill="#B9E08A" font-family="Nunito Sans,sans-serif">1000 Mb</text></g>
+    </svg>
+    <div class="shutter l" id="sh-l"><i></i><i></i><i></i></div>
+    <div class="shutter r" id="sh-r"><i></i><i></i><i></i></div>
+    <div class="win-sill"></div>
+  </div>
+  <p class="win-chip" id="win-chip">Toca para abrir a xanela</p>
+</div><a class="rate-stk alt" href="#numeros" aria-label="14.427 clientes"><b>14.427</b><small>clientes<br>no rural galego</small></a></div>
+    </div>
+  </section>
+  <section class="stats" aria-label="Xanela en números"><div class="wrap"><div class="stats-grid"><div data-reveal><b>14.427</b><span>clientes satisfeitos</span></div><div data-reveal><b>5.472</b><span>km de fibra despregada</span></div><div data-reveal><b>70</b><span>persoas no equipo</span></div><div data-reveal><b>30</b><span>vilas con tenda Xanela</span></div></div><div class="marquee" aria-hidden="true"><div class="mq-track"><span>Chantada</span><span>Monterroso</span><span>Monforte de Lemos</span><span>Curtis</span><span>Rodeiro</span><span>Allariz</span><span>Negreira</span><span>Sarria</span><span>Taboada</span><span>Vila de Cruces</span><span>Melide</span><span>Ordes</span><span>Cee</span><span>Boiro</span><span>Santa Comba</span><span>Boqueixón</span><span>O Valadouro</span><span>Burela</span><span>Narón</span><span>As Pontes</span><span>A Pastoriza</span><span>Pontedeume</span><span>Carballo</span><span>Vilalba</span><span>Padrón</span><span>Escairón</span><span>Sober</span><span>Foz</span><span>Rábade</span><span>Carballedo</span><span>Chantada</span><span>Monterroso</span><span>Monforte de Lemos</span><span>Curtis</span><span>Rodeiro</span><span>Allariz</span><span>Negreira</span><span>Sarria</span><span>Taboada</span><span>Vila de Cruces</span><span>Melide</span><span>Ordes</span><span>Cee</span><span>Boiro</span><span>Santa Comba</span><span>Boqueixón</span><span>O Valadouro</span><span>Burela</span><span>Narón</span><span>As Pontes</span><span>A Pastoriza</span><span>Pontedeume</span><span>Carballo</span><span>Vilalba</span><span>Padrón</span><span>Escairón</span><span>Sober</span><span>Foz</span><span>Rábade</span><span>Carballedo</span></div></div></div></section>
+  <section class="sec band-2" id="tarifas">
+    <div class="wrap">
+      <div class="sec-head" data-reveal><span class="eyebrow">Tarifas publicadas</span><h2>Fibra para a aldea, <span class="hl">a prezo claro.</span></h2><p class="lead">Os prezos da súa web, con IVE engadido. «Paga só o que contrates.»</p></div>
+      <div class="tabs" role="tablist" aria-label="Tarifas"><button type="button" role="tab" data-tab="paquetes" aria-selected="true">Paquetes</button><button type="button" role="tab" data-tab="fibra" aria-selected="false">Fibra</button><button type="button" role="tab" data-tab="mobil" aria-selected="false">Móbil</button><button type="button" role="tab" data-tab="tv" aria-selected="false">Xanela TV</button><button type="button" role="tab" data-tab="empresas" aria-selected="false">Empresas</button></div>
+      <div class="plans" data-tab="paquetes"><article class="plan top-pick"><span class="badge">Para sempre</span><h3>Xeito</h3><p class="spec">Fibra 600 Mb + 2 móbiles de 40 GB</p><div class="price"><b>29,95</b><span>€/mes para sempre</span></div><ul><li>Instalación gratuíta</li><li>Router wifi</li><li>12 meses de permanencia</li></ul><a class="btn btn-primary" href="#contratar" data-serv="Fibra + Móbil" data-plan="Xeito">Contrátao</a></article><article class="plan"><h3>Fogar</h3><p class="spec">Fibra 1000 Mb + 2 móbiles ilimitados + TV Básico</p><div class="price"><b>39,95</b><span>€/mes para sempre</span></div><ul><li>Instalación gratuíta</li><li>TV Básico incluída</li><li>12 meses de permanencia</li></ul><a class="btn btn-ghost" href="#contratar" data-serv="Fibra + Móbil" data-plan="Fogar">Contrátao</a></article></div><div class="plans" data-tab="fibra" hidden><article class="plan top-pick"><span class="badge">TOP!</span><h3>Fibra 600 Mb</h3><p class="spec">Simétrica</p><div class="price"><b>11</b><span>€/mes 12 meses</span></div><p class="after">Rematada a promoción, 36,95 €/mes</p><ul><li>Instalación gratuíta</li><li>Router wifi</li><li>12 meses de permanencia</li></ul><a class="btn btn-primary" href="#contratar" data-serv="Fibra" data-plan="Fibra 600 Mb">Contrátao</a></article><article class="plan"><h3>Fibra 100 Mb</h3><p class="spec">Simétrica</p><div class="price"><b>19,95</b><span>€/mes 12 meses</span></div><p class="after">Rematada a promoción, 29,95 €/mes</p><ul><li>Instalación gratuíta</li><li>Router wifi</li></ul><a class="btn btn-ghost" href="#contratar" data-serv="Fibra" data-plan="Fibra 100 Mb">Contrátao</a></article><article class="plan"><h3>Fibra 300 Mb</h3><p class="spec">Simétrica</p><div class="price"><b>22,95</b><span>€/mes 12 meses</span></div><p class="after">Rematada a promoción, 32,95 €/mes</p><ul><li>Instalación gratuíta</li><li>Router wifi</li></ul><a class="btn btn-ghost" href="#contratar" data-serv="Fibra" data-plan="Fibra 300 Mb">Contrátao</a></article><article class="plan"><h3>Fibra 1000 Mb</h3><p class="spec">Simétrica</p><div class="price"><b>29,95</b><span>€/mes 12 meses</span></div><p class="after">Rematada a promoción, 39,95 €/mes</p><ul><li>Instalación gratuíta</li><li>Router wifi</li></ul><a class="btn btn-ghost" href="#contratar" data-serv="Fibra" data-plan="Fibra 1000 Mb">Contrátao</a></article></div><p class="plans-note" data-tab-note="fibra">Fibra simétrica propia. Engade o teu fixo por 5 €.</p><div class="plans" data-tab="mobil" hidden><article class="plan"><h3>40 GB + ilimitadas</h3><div class="price"><b>8,95</b><span>€/mes</span></div><ul><li>Chamadas ilimitadas</li><li>A mellor cobertura para o rural</li></ul><a class="btn btn-ghost" href="#contratar" data-serv="Móbil" data-plan="40 GB + ilimitadas">Contrátao</a></article><article class="plan top-pick"><span class="badge">TOP!</span><h3>200 GB + ilimitadas</h3><div class="price"><b>11,95</b><span>€/mes</span></div><ul><li>Chamadas ilimitadas</li><li>A mellor cobertura para o rural</li></ul><a class="btn btn-primary" href="#contratar" data-serv="Móbil" data-plan="200 GB + ilimitadas">Contrátao</a></article><article class="plan"><h3>800 GB + ilimitadas</h3><div class="price"><b>15,95</b><span>€/mes</span></div><ul><li>Chamadas ilimitadas</li><li>A mellor cobertura para o rural</li></ul><a class="btn btn-ghost" href="#contratar" data-serv="Móbil" data-plan="800 GB + ilimitadas">Contrátao</a></article><article class="plan"><h3>10 GB + ilimitadas</h3><div class="price"><b>6,50</b><span>€/mes</span></div><ul><li>Chamadas ilimitadas</li><li>Engadindo outra liña</li></ul><a class="btn btn-ghost" href="#contratar" data-serv="Móbil" data-plan="10 GB + ilimitadas">Contrátao</a></article></div><p class="plans-note" data-tab-note="mobil">Agora con VoLTE e VoWIFI. Se esgotas os datos, engade un bono por só 1 €. A de 10 GB, só engadindo outra liña coas tarifas superiores.</p><div class="plans" data-tab="tv" hidden><article class="plan"><h3>Básico</h3><p class="spec">+90 canles</p><div class="price"><b>4,50</b><span>€/mes</span></div><ul><li>Contido á carta</li><li>4 dispositivos simultáneos</li></ul><a class="btn btn-ghost" href="#contratar" data-serv="TV" data-plan="Básico">Contrátao</a></article><article class="plan top-pick"><span class="badge">Para a familia</span><h3>Diversión</h3><p class="spec">+110 canles</p><div class="price"><b>8,50</b><span>€/mes</span></div><ul><li>Contido á carta</li><li>4 dispositivos simultáneos</li></ul><a class="btn btn-primary" href="#contratar" data-serv="TV" data-plan="Diversión">Contrátao</a></article><article class="plan"><h3>Total</h3><p class="spec">+125 canles</p><div class="price"><b>14,90</b><span>€/mes</span></div><ul><li>Contido á carta</li><li>4 dispositivos simultáneos</li></ul><a class="btn btn-ghost" href="#contratar" data-serv="TV" data-plan="Total">Contrátao</a></article></div><div class="plans" data-tab="empresas" hidden><article class="plan"><h3>Tarifa Barriña</h3><p class="spec">Fibra 1000 Mb · IP fixa · centraliña 2 extensións</p><div class="price"><b>60</b><span>€/mes sen IVE</span></div><ul><li>Mantemento Premium</li><li>Terminais</li><li>Engade 1 liña móbil por 10 €</li></ul><a class="btn btn-ghost" href="#contratar" data-serv="Empresa" data-plan="Tarifa Barriña">Contrátao</a></article><article class="plan top-pick"><span class="badge">Pemes</span><h3>Tarifa Chiscón</h3><p class="spec">Fibra 1000 Mb · IP fixa · centraliña 5 extensións</p><div class="price"><b>85</b><span>€/mes sen IVE</span></div><ul><li>Mantemento Premium</li><li>Terminais</li><li>Ata 2 liñas móbiles por 20 €</li></ul><a class="btn btn-primary" href="#contratar" data-serv="Empresa" data-plan="Tarifa Chiscón">Contrátao</a></article><article class="plan"><h3>Tarifa Peme</h3><p class="spec">Fibra 1000 Mb · IP fixa · centraliña 10 extensións</p><div class="price"><b>120</b><span>€/mes sen IVE</span></div><ul><li>Router profesional con back-up</li><li>Ata 5 liñas móbiles por 50 €</li><li>18 meses de permanencia</li></ul><a class="btn btn-ghost" href="#contratar" data-serv="Empresa" data-plan="Tarifa Peme">Contrátao</a></article></div><p class="plans-note" data-tab-note="empresas">Resolución de avarías en 8 horas dende a notificación. Centraliña con locucións, horarios, grupo de saltos e captura de chamadas.</p>
+      <p class="plans-note">Prezos publicados en atuaxanela.es a 5 de outubro de 2026, IVE incluído (empresas, sen IVE). Consulta as condicións e a cobertura no teu enderezo antes de contratar.</p>
+    </div>
+  </section>
+  <section class="sec" id="ventajas">
+    <div class="wrap">
+      <div class="sec-head" data-reveal><span class="eyebrow">Por que Xanela</span><h2>Unha empresa do rural, <span class="hl">para o rural.</span></h2><p class="lead">«Queremos chegar onde ninguén chega!»</p></div>
+      <ul class="adv"><li data-reveal><i><svg aria-hidden="true"><use href="#i-fiber"/></svg></i><h3>Fibra propia</h3><p>«Usamos a nosa propia fibra polo que estamos 100% seguros da calidade.»</p></li><li data-reveal><i><svg aria-hidden="true"><use href="#i-people"/></svg></i><h3>Galegos para galegos</h3><p>A inmensa maioría do seu equipo vive no rural. Atenden en galego, preto de ti.</p></li><li data-reveal><i><svg aria-hidden="true"><use href="#i-pin"/></svg></i><h3>Tenda en 30 vilas</h3><p>De Chantada a Burela, de Allariz a Carballo: hai unha tenda Xanela preto da túa casa.</p></li><li data-reveal><i><svg aria-hidden="true"><use href="#i-tag"/></svg></i><h3>Paga só o que contrates</h3><p>Prezos con IVE engadido, sen cotas adicionais nin cambios no prezo do móbil.</p></li><li data-reveal><i><svg aria-hidden="true"><use href="#i-mobile"/></svg></i><h3>Operador móbil propio</h3><p>Xanela xa é Operador Móbil Virtual, con VoLTE e VoWIFI para falar mellor na aldea.</p></li><li data-reveal><i><svg aria-hidden="true"><use href="#i-tool"/></svg></i><h3>Avarías de empresa en 8 h</h3><p>Nas tarifas de empresa, resolven as avarías en 8 horas dende o aviso.</p></li></ul>
+    </div>
+  </section>
+  <section class="sec band-2" id="numeros"><div class="wrap split"><figure class="split-img" data-reveal><img src="img/rural.jpg" alt="Unha muller fala por teléfono nun barco nun canón fluvial, nunha campaña de Xanela" loading="lazy"></figure><div class="split-txt" data-reveal><span class="eyebrow">Quen somos</span><h2>Unha historia de amor <span class="hl">ao rural.</span></h2><p>Xanela leva comunicando o rural dende 2021. «Somos unha empresa do rural para o rural»: queren que todos os habitantes de Galicia poidan ter fibra na casa e no negocio.</p><p>Apoian, difunden e cren na vida no rural, «preto de todo pero lonxe dos agobios das grandes cidades».</p></div></div></section>
+  <section class="sec" id="tendas">
+    <div class="wrap">
+      <div class="sec-head" data-reveal><span class="eyebrow">Tendas e puntos de venda</span><h2>Unha tenda Xanela <span class="hl">na túa vila.</span></h2><p class="lead">Para contratar, preguntar ou levar o router: estas son as vilas con tenda que publican na súa web.</p></div>
+      <div class="towns" data-reveal><span>Chantada</span><span>Monterroso</span><span>Monforte de Lemos</span><span>Curtis</span><span>Rodeiro</span><span>Allariz</span><span>Negreira</span><span>Sarria</span><span>Taboada</span><span>Vila de Cruces</span><span>Melide</span><span>Ordes</span><span>Cee</span><span>Boiro</span><span>Santa Comba</span><span>Boqueixón</span><span>O Valadouro</span><span>Burela</span><span>Narón</span><span>As Pontes</span><span>A Pastoriza</span><span>Pontedeume</span><span>Carballo</span><span>Vilalba</span><span>Padrón</span><span>Escairón</span><span>Sober</span><span>Foz</span><span>Rábade</span><span>Carballedo</span></div>
+    </div>
+  </section>
+  <section class="sec band-2" id="empresas"><div class="wrap split rev"><div class="split-txt" data-reveal><span class="eyebrow">Empresas e alianzas</span><h2>Fibra 1000 Mb e centraliña <span class="hl">para o teu negocio.</span></h2><p>Tarifas Barriña, Chiscón e Peme: fibra simétrica de 1000 Mb, IP fixa, mantemento Premium e centraliña de 2 a 10 extensións, con avarías resoltas en 8 horas.</p><p>E en 2026 Xanela e Bittel uníronse para reforzar o servizo de fibra.</p><a class="btn btn-primary" href="#contratar" data-serv="Empresa">Fibra para o meu negocio</a></div><figure class="split-img" data-reveal><img src="img/xanela-bittel.jpg" alt="Dous responsables de Xanela e Bittel dándose a man nunha oficina" loading="lazy"></figure></div></section>
+  <section class="sec band-2" id="como"><div class="wrap"><div class="sec-head" data-reveal><span class="eyebrow">Como contratar</span><h2>Tres pasos <span class="hl">e xa navegas.</span></h2></div><ol class="steps"><li data-reveal><b>01</b><h3>Cóntanos onde vives</h3><p>Por WhatsApp, no 900 899 122 ou na túa tenda. Miran se chega a fibra ao teu lugar.</p></li><li data-reveal><b>02</b><h3>Instalación gratuíta</h3><p>Instálanche a fibra e o router wifi sen custo de instalación.</p></li><li data-reveal><b>03</b><h3>Xa estás conectado</h3><p>Se a fibra aínda non chega, traballan para mellorar a rede no rural: pregunta igual.</p></li></ol></div></section>
+  <section class="sec band-acc" id="contratar">
+    <div class="wrap book-cta" data-reveal>
+      <div><span class="eyebrow">Sen compromiso</span><h2>Chega a fibra á túa casa? <span class="hl">Pregúntao.</span></h2><p class="lead">Catro preguntas e a túa consulta sae escrita por WhatsApp, cun código propio.</p><ul class="book-perks"><li>Sen rexistrarte</li><li>Menos dun minuto</li><li>Ou chama ao 900 899 122</li></ul></div>
+      <a class="btn btn-primary" href="#contratar"><svg aria-hidden="true"><use href="#i-wifi"/></svg>Consultar cobertura</a>
+    </div>
+  </section>
+  <section class="sec band-2 draft" id="borrador" hidden><div class="wrap"><div class="sec-head"><span class="eyebrow">Borrador · faltan datos de Xanela</span><h2>Para completar <span class="hl">a web.</span></h2><p class="lead">Só se ve con #borradores.</p></div><ul class="incl"><li>Reseñas de clientes con permiso para citalas: <mark>[3 opinións]</mark></li><li>Fotos de instalacións na aldea e das tendas: <mark>[fotos]</mark></li><li>Datas da XanelaFest: <mark>[…]</mark></li></ul></div></section>
+  <section class="sec" id="visita">
+    <div class="wrap visit">
+      <div data-reveal><span class="eyebrow">Contacto</span><h2>Dende Chantada <span class="hl">para toda Galicia.</span></h2><div class="offices"><div><b>Tenda de Chantada</b><span>Rúa Fontearcada, 9</span><span>Luns–venres 9:00–14:00 e 16:00–19:00</span></div><div><b>Tenda de Monforte</b><span>Rúa Cardenal Rodrigo de Castro, 34</span><span>Luns–venres 9:00–14:00 e 16:00–19:00</span></div><div><b>Tenda de Monterroso</b><span>Praza de Galicia, 1</span><span>Luns–venres 9:00–14:00 e 16:00–19:00</span></div></div><ul class="contact"><li><svg aria-hidden="true"><use href="#i-phone"/></svg><a href="tel:+34900899122">900 899 122 · gratuíto</a></li><li><svg aria-hidden="true"><use href="#i-chat"/></svg><a href="https://wa.me/34621142500" target="_blank" rel="noopener">621 142 500 · WhatsApp</a></li><li><svg aria-hidden="true"><use href="#i-mail"/></svg><a href="mailto:info@atuaxanela.es">info@atuaxanela.es</a></li><li><svg aria-hidden="true"><use href="#i-ig"/></svg><a href="https://www.instagram.com/atuaxanela/" target="_blank" rel="noopener">@atuaxanela</a></li><li><svg aria-hidden="true"><use href="#i-pin"/></svg><a href="https://www.google.com/maps/place/Xanela:+a+t%C3%BAa+fibra!/@42.5842012,-7.7761142,17z" target="_blank" rel="noopener">Polígono Os Acivros, parcela 23 · 27519 Chantada (Lugo)</a></li></ul></div>
+      <div class="faq" data-reveal><details open><summary>A fibra chega á miña aldea?</summary><p>Despregaron xa 5.472 km de fibra. Pregunta co teu lugar e concello: se aínda non chega, traballan para mellorar a rede no rural.</p></details><details><summary>Canto custa a instalación?</summary><p>A instalación é gratuíta e inclúe router wifi.</p></details><details><summary>Hai permanencia?</summary><p>Na fibra e nos paquetes, 12 meses. Nas tarifas de empresa, 18 meses.</p></details><details><summary>Que pasa ao rematar a promoción?</summary><p>Indícano en cada tarifa: por exemplo, a Fibra 600 Mb pasa de 11 € a 36,95 €/mes. Os paquetes Xeito e Fogar teñen prezo para sempre.</p></details><details><summary>Podo engadir o fixo?</summary><p>Si, por 5 € ao mes.</p></details><details><summary>E se esgoto os datos do móbil?</summary><p>Engade un bono por só 1 €, sen cambios no prezo nin cotas adicionais.</p></details></div>
+    </div>
+  </section>
+  <section class="final">
+    
+    <div class="wrap">
+      <img class="final-logo" src="img/logo-blanco.png" alt="" loading="lazy">
+      <h2>O rural, <span class="hl">ben conectado.</span></h2>
+      <div class="hero-ctas"><a class="btn btn-primary" href="#contratar"><svg aria-hidden="true"><use href="#i-wifi"/></svg>Quero fibra</a><a class="btn btn-ghost" href="tel:+34900899122"><svg aria-hidden="true"><use href="#i-phone"/></svg>Chamar</a></div>
+      
+    </div>
+  </section>
+</main>
+<footer class="foot"><div class="wrap"><span>Xanela · Polígono Os Acivros, parcela 23 · 27519 Chantada (Lugo)</span><span>900 899 122 · info@atuaxanela.es</span></div></footer>
+<button class="totop" id="totop" type="button" aria-label="Subir"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="M12 19V5M5 12l7-7 7 7"/></svg></button>
+<div class="bk" id="bk" role="dialog" aria-modal="true" aria-labelledby="bk-title" hidden>
+  <div class="bk-scrim" id="bk-scrim"></div>
+  <div class="bk-panel">
+    <header class="bk-head">
+      <button type="button" class="bk-ib" id="bk-back" aria-label="Paso anterior"><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M15 18l-6-6 6-6"/></svg></button>
+      <div class="t"><span id="bk-step">Paso 1 de 4</span><b id="bk-title">A túa consulta</b></div>
+      <button type="button" class="bk-ib" id="bk-x" aria-label="Pechar"><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" d="M6 6l12 12M18 6L6 18"/></svg></button>
+    </header>
+    <div class="bk-prog"><i id="bk-bar" style="transform:scaleX(.25)"></i></div>
+    <form class="bk-body" id="book-form" novalidate>
+      <section class="bk-pane" data-step="1"><h3>Que che interesa?</h3><div class="bk-opts"><label><input type="radio" name="serv" value="Fibra + Móbil"><span>Paquete fibra + móbil</span></label><label><input type="radio" name="serv" value="Fibra"><span>Só fibra</span></label><label><input type="radio" name="serv" value="Móbil"><span>Móbil</span></label><label><input type="radio" name="serv" value="TV"><span>Xanela TV</span></label><label><input type="radio" name="serv" value="Empresa"><span>Para a miña empresa</span></label></div></section>
+      <section class="bk-pane" data-step="2" hidden><h3>Que tarifa che encaixa?</h3><p class="bk-note">Prezos publicados na súa web. Se dubidas, que te aconsellen.</p><div class="bk-opts plans-opts" id="f-plans"></div></section>
+      <section class="bk-pane" data-step="3" hidden><h3>Onde a queres?</h3>
+        <label class="bk-field"><span>Lugar, parroquia e concello (para mirar a cobertura)</span><input type="text" id="f-loc" autocomplete="street-address" placeholder="Ex. Lugar de Abaixo, Chantada"></label>
+        <div class="bk-opts row"><label><input type="radio" name="tipo" value="Vivenda" checked><span>Vivenda</span></label><label><input type="radio" name="tipo" value="Segunda residencia"><span>Segunda residencia</span></label><label><input type="radio" name="tipo" value="Negocio"><span>Negocio</span></label></div>
+        <label class="bk-field"><span>Agora estou con… (opcional)</span><input type="text" id="f-ahora" autocomplete="off" placeholder="A túa compañía actual"></label>
+      </section>
+      <section class="bk-pane" data-step="4" hidden><h3>Como te chamas?</h3>
+        <label class="bk-field"><span>O teu nome</span><input type="text" id="f-nombre" autocomplete="given-name" placeholder="Uxía"></label>
+        <div class="bk-opts row"><label><input type="radio" name="pref" value="Escribídeme" checked><span>Escribídeme</span></label><label><input type="radio" name="pref" value="Prefiro que me chamedes"><span>Prefiro que me chamedes</span></label></div>
+      </section>
+      <section class="bk-pane" data-step="5" hidden><h3>A túa consulta está lista</h3><p class="sub">Envíase por WhatsApp cun código propio. Respóndeche unha persoa do equipo.</p><pre class="f-preview" id="f-preview"></pre><button type="button" class="f-copy" id="f-copy">Copiar mensaxe</button></section>
+    </form>
+    <footer class="bk-foot">
+      <p class="f-error" id="f-error" role="alert" hidden></p>
+      <button type="button" class="btn btn-primary" id="bk-next">Seguinte</button>
+      <div id="f-send" class="send-row" style="display:grid;gap:8px" hidden><a class="btn btn-wa" id="f-wa" href="#" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .2-1.3c-.1-.1-.3-.2-.6-.3z"/></svg>Enviar por WhatsApp</a></div>
+    </footer>
+  </div>
+</div>
+<div class="mbar">
+  <a class="btn btn-primary" href="#contratar"><svg aria-hidden="true"><use href="#i-wifi"/></svg><span data-t="mbar">Quero fibra</span></a>
+  <a class="btn btn-ghost" href="tel:+34900899122" aria-label="Chamar ao 900 899 122"><svg aria-hidden="true"><use href="#i-phone"/></svg></a>
+</div>
+
+<script>
+window.CFG={"wa": "34621142500", "mail": "info@atuaxanela.es", "hours": null, "S": {}, "panel": {"prefijo": "XAN", "t": {"hola": "Ola, Xanela!", "soy": "Son", "intro": "Quero información para contratar:", "codigo": "Código", "servicio": "Servizo", "tarifa": "Tarifa", "donde": "Onde", "ahora": "Agora estou con", "cierre": "Confirmádesme se chega a fibra ao meu enderezo? Grazas!", "consejo": "Que me aconselledes", "ver": "Ver a miña consulta", "sig": "Seguinte", "listo": "Listo", "paso": "Paso", "de": "de", "copiado": "Copiado", "err1": "Escolle que che interesa.", "err4": "Dinos o teu nome para a mensaxe."}, "plans": {"Fibra + Móbil": [["Xeito · 600 Mb + 2 móbiles 40 GB", "29,95 €", "para sempre"], ["Fogar · 1000 Mb + 2 móbiles + TV", "39,95 €", "para sempre"]], "Fibra": [["Fibra 600 Mb", "11 €", "12 meses"], ["Fibra 100 Mb", "19,95 €", "12 meses"], ["Fibra 300 Mb", "22,95 €", "12 meses"], ["Fibra 1000 Mb", "29,95 €", "12 meses"]], "Móbil": [["40 GB + ilimitadas", "8,95 €", ""], ["200 GB + ilimitadas", "11,95 €", ""], ["800 GB + ilimitadas", "15,95 €", ""], ["10 GB + ilimitadas", "6,50 €", "con outra liña"]], "TV": [["Básico · +90 canles", "4,50 €", ""], ["Diversión · +110 canles", "8,50 €", ""], ["Total · +125 canles", "14,90 €", ""]], "Empresa": [["Barriña", "60 € sen IVE", ""], ["Chiscón", "85 € sen IVE", ""], ["Peme", "120 € sen IVE", ""]]}}};
+(function(){
+"use strict";
+var reduced=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+var C=window.CFG||{}, S=C.S||{};
+/* ---------- Tempadas de Xanela (fibra rural en Galicia). Textos en galego, sen contas atrás (o motor escribe en castelán). ---------- */
+/* Só servizos e prezos reais da súa web. serv: servizo que abre marcado o panel. */
+window.TEMPORADAS=[
+  {id:'volta-cole',nombre:'Volta ao cole',desde:'09-01',hasta:'10-31',prioridad:2,serv:'Fibra',deco:'confeti',decoColores:['#B9E08A','#FBF7EE','#F2C94C'],decoCuantos:22,
+   textos:{eyebrow:'Volver non é tan malo',h1:'Volver non é <span class="hl">tan malo.</span>',
+     sub:'Fibra 600 Mb por 11 €/mes durante 12 meses, con instalación gratuíta.<span class="hide-m"> E router wifi incluído.</span>',
+     cta:'Quero os 600 Mb',mbar:'Fibra 600 Mb'},wa:'🎒 Pola campaña de volta ao cole'},
+  {id:'vera',nombre:'Verán na aldea',desde:'06-15',hasta:'08-31',prioridad:1,serv:'Fibra + Móbil',
+   textos:{eyebrow:'Verán na aldea',h1:'Este verán, <span class="hl">fibra na casa do pobo.</span>',
+     sub:'Paquete Xeito: fibra 600 Mb e dous móbiles de 40 GB por 29,95 €/mes para sempre.',
+     cta:'Fibra para a aldea'},wa:'☀️ Para a casa da aldea este verán'},
+  {id:'nadal',nombre:'Nadal',evento:'navidad',desde:'12-01',hasta:'12-24',prioridad:2,serv:'TV',deco:'nieve',decoCuantos:46,
+   textos:{eyebrow:'Nadal',h1:'Este Nadal, <span class="hl">a tele de toda a familia.</span>',
+     sub:'Xanela TV dende 4,50 €/mes: ata +125 canles e catro dispositivos á vez.',
+     cta:'Quero Xanela TV',mbar:'Xanela TV'},wa:'🎄 Para este Nadal'}
+];
+/* ---------- Temporadas: la landing cambia sola cuando se acerca una fecha clave del oficio ---------- */
+/* Configura window.TEMPORADAS antes de este bloque (ver references/temporadas/README.md).
+   Pruebas: ?temporada=<id> fuerza una, ?temporada=no las apaga, ?fecha=2027-02-10 simula el día.
+   Selector para enseñarlas: #temporadas en la dirección (en local), 5 toques seguidos en el logo de la cabecera o la tecla T (también dentro del visor del Artifact). */
+(function(){
+var CFG=window.TEMPORADAS||[]; if(!CFG.length)return;
+var MESES=['enero','febrero','marzo','abril','mayo','junio','julio','agosto','septiembre','octubre','noviembre','diciembre'];
+var DAY=864e5;
+function d(y,m,dd){return new Date(y,m-1,dd)}
+function nth(y,m,dow,n){var f=d(y,m,1);return d(y,m,1+(dow-f.getDay()+7)%7+7*(n-1))}       /* n-ésimo día de la semana (0=domingo) del mes */
+function pascua(y){var a=y%19,b=Math.floor(y/100),c=y%100,e=(19*a+b-Math.floor(b/4)-Math.floor((b-Math.floor((8*b+13)/25)+1)/3)+15)%30,
+  f=(32+2*(b%4)+2*Math.floor(c/4)-e-c%4)%7,g=Math.floor((a+11*e+22*f)/451),m=Math.floor((e+f-7*g+114)/31);return d(y,m,(e+f-7*g+114)%31+1)}
+function mas(x,n){return new Date(x.getFullYear(),x.getMonth(),x.getDate()+n)}
+/* Calendario de España. Cada evento devuelve el día clave de ese año. */
+var EV={
+  'reyes':function(y){return d(y,1,6)},
+  'rebajas-invierno':function(y){return d(y,1,7)},
+  'san-valentin':function(y){return d(y,2,14)},
+  'carnaval':function(y){return mas(pascua(y),-47)},            /* martes de carnaval */
+  'dia-padre':function(y){return d(y,3,19)},
+  'semana-santa':function(y){return mas(pascua(y),-3)},         /* jueves santo */
+  'pascua':pascua,
+  'sant-jordi':function(y){return d(y,4,23)},                   /* solo Cataluña */
+  'dia-madre':function(y){return nth(y,5,0,1)},                 /* primer domingo de mayo */
+  'san-isidro':function(y){return d(y,5,15)},                   /* solo Madrid capital */
+  'san-juan':function(y){return d(y,6,24)},
+  'dia-abuelos':function(y){return d(y,7,26)},
+  'vuelta-cole':function(y){return d(y,9,8)},                   /* aproximado: varía por comunidad */
+  'halloween':function(y){return d(y,10,31)},
+  'todos-santos':function(y){return d(y,11,1)},
+  'black-friday':function(y){return mas(nth(y,11,4,4),1)},      /* viernes tras el 4.º jueves */
+  'navidad':function(y){return d(y,12,25)},
+  'nochevieja':function(y){return d(y,12,31)}
+};
+function md(s,y){var p=s.split('-');return d(y,+p[0],+p[1])}
+function antes(t){return t.antes==null?14:t.antes}
+/* Ventanas [inicio, fin, día clave] de una temporada alrededor del año y */
+function ventanas(t,y){var out=[];for(var k=y-1;k<=y+1;k++){
+  if(t.desde){var a=md(t.desde,k),b=md(t.hasta,k);if(b<a)b=md(t.hasta,k+1);out.push([a,b,t.evento?EV[t.evento](b.getFullYear()):b])}
+  else{var e=t.fecha?md(t.fecha,k):EV[t.evento]&&EV[t.evento](k);if(e)out.push([mas(e,-antes(t)),mas(e,t.despues||0),e])}}
+  return out}
+function elegir(hoy){var best=null;hoy=new Date(hoy.getFullYear(),hoy.getMonth(),hoy.getDate());
+  CFG.forEach(function(t){ventanas(t,hoy.getFullYear()).forEach(function(w){if(hoy<w[0]||hoy>w[1])return;
+    var pr=t.prioridad!=null?t.prioridad:(t.desde?1:2),falta=Math.round((w[2]-hoy)/DAY);
+    if(!best||pr>best.pr||(pr===best.pr&&Math.abs(falta)<Math.abs(best.falta)))best={t:t,pr:pr,falta:falta,dia:w[2]}})});
+  return best}
+/* Forzar una temporada aunque hoy no toque: la muestra como si faltaran unos días */
+function forzar(id,hoy){var t=CFG.filter(function(x){return x.id===id})[0];if(!t)return null;
+  var w=ventanas(t,hoy.getFullYear()).filter(function(w){return w[1]>=hoy})[0],falta=Math.round((w[2]-hoy)/DAY);
+  if(hoy<w[0])falta=Math.min(antes(t),9);return {t:t,falta:falta,dia:w[2]}}
+function rellenar(s,b){if(!s)return s;var n=b.falta,f=b.dia.getDate()+' de '+MESES[b.dia.getMonth()];
+  var cuenta=n>1?'Faltan '+n+' días':n===1?'Es mañana':n===0?'Es hoy':'';
+  return s.replace(/\{cuenta\}/g,cuenta).replace(/\{dias\}/g,n).replace(/\{fecha\}/g,f).replace(/\{anio\}/g,b.dia.getFullYear())}
+
+var q=new URLSearchParams(location.search),forzada=q.get('temporada'),sim=q.get('fecha'),hoy=new Date();
+if(sim&&/^\d{4}-\d\d-\d\d$/.test(sim)){var p=sim.split('-');hoy=d(+p[0],+p[1],+p[2])}
+hoy=new Date(hoy.getFullYear(),hoy.getMonth(),hoy.getDate());
+window.TEMPORADA_ELEGIR=function(x){var b=elegir(x);return b?b.t.id:null};   /* para scripts/temporadas.js */
+var root=document.documentElement,reducido=matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+/* Estado original, para poder volver a la versión de todo el año al cambiar de temporada desde el selector */
+var CLAVES={};CFG.forEach(function(t){Object.keys(t.textos||{}).forEach(function(k){CLAVES[k]=1})});   /* solo las claves que usa alguna temporada: otros data-t de la página no se tocan */
+var T=[].slice.call(document.querySelectorAll('[data-t]')).filter(function(el){return CLAVES[el.getAttribute('data-t')]}).map(function(el){return [el,el.innerHTML,el.hidden]});
+var fotosOrig=[],tokens=[],marcados=[],deco=null;
+function limpiar(){
+  T.forEach(function(o){o[0].innerHTML=o[1];o[0].hidden=o[2];o[0].classList.remove('t-on')});
+  tokens.forEach(function(k){root.style.removeProperty(k)});tokens=[];
+  fotosOrig.forEach(function(o){if(o[0].tagName==='SOURCE')o[0].srcset=o[1];else{o[0].src=o[1];if(o[2])o[0].srcset=o[2]}});fotosOrig=[];
+  marcados.forEach(function(el){el.checked=false});marcados=[];
+  if(deco){deco();deco=null}
+  root.removeAttribute('data-temporada');window.TEMPORADA=null}
+function aplicar(b){
+  limpiar();var id=b?b.t.id:null;
+  /* Bloques solo de temporada: data-temporada-solo="san-valentin dia-madre" (empiezan con hidden) y data-temporada-fuera="…" */
+  document.querySelectorAll('[data-temporada-solo]').forEach(function(el){el.hidden=!(id&&el.getAttribute('data-temporada-solo').split(/\s+/).indexOf(id)>-1)});
+  document.querySelectorAll('[data-temporada-fuera]').forEach(function(el){el.hidden=!!(id&&el.getAttribute('data-temporada-fuera').split(/\s+/).indexOf(id)>-1)});
+  if(!b)return;
+  var t=b.t;root.setAttribute('data-temporada',id);
+  /* Colores: sobrescribe tokens de :root (solo acentos; el fondo y la tinta no se tocan) */
+  if(t.tema)Object.keys(t.tema).forEach(function(k){root.style.setProperty(k,t.tema[k]);tokens.push(k)});
+  /* Textos: cualquier elemento con data-t="clave". El HTML trae el texto de todo el año; si estaba hidden, se muestra */
+  if(t.textos)Object.keys(t.textos).forEach(function(k){document.querySelectorAll('[data-t="'+k+'"]').forEach(function(el){el.innerHTML=rellenar(t.textos[k],b);el.hidden=false;el.classList.add('t-on')})});
+  /* Fotos: {selector: ruta}. Solo fotos reales del negocio para esa fecha */
+  if(t.fotos)Object.keys(t.fotos).forEach(function(s){document.querySelectorAll(s).forEach(function(el){
+    if(el.tagName==='SOURCE'){fotosOrig.push([el,el.srcset]);el.srcset=t.fotos[s]}else{fotosOrig.push([el,el.src,el.getAttribute('srcset')]);el.removeAttribute('srcset');el.src=t.fotos[s]}})});
+  /* Marcar opciones del panel de encargo/reserva (solo si no hay ninguna marcada en ese grupo) */
+  if(t.marcar)t.marcar.forEach(function(s){var el=document.querySelector(s);if(el&&!document.querySelector('input[name="'+el.name+'"]:checked')){el.checked=true;marcados.push(el)}});
+  window.TEMPORADA={id:id,nombre:t.nombre||id,dias:b.falta,fecha:b.dia,linea:rellenar(t.wa,b)||''};   /* el panel añade TEMPORADA.linea al mensaje de WhatsApp */
+  try{document.dispatchEvent(new CustomEvent('temporada',{detail:window.TEMPORADA}))}catch(e){}
+  if(t.deco&&!reducido)deco=decorar(t)}
+
+/* Decoración ligera en el hero: petalos, corazones, nieve, hojas, confeti o estrellas. Nunca sobre el texto ni con movimiento reducido */
+function decorar(t){
+  var host=document.querySelector(t.decoEn||'#hero');if(!host)return null;
+  var cv=document.createElement('canvas');cv.className='t-deco';cv.setAttribute('aria-hidden','true');
+  cv.style.cssText='position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:1';
+  host.insertBefore(cv,host.children[1]||null);
+  var cx=cv.getContext('2d'),W=0,H=0,DPR=Math.min(devicePixelRatio||1,1.5),P=[],raf=0,last=0;
+  var COL=t.decoColores||{petalos:['#F5B8C9','#FFD9E2','#E88AA6'],corazones:['#FF6B8B','#FFB3C4','#E0325A'],nieve:['#FFFFFF'],hojas:['#C9733B','#E0A04A','#9C4A24'],confeti:['#FFD166','#EF476F','#06D6A0','#4CC9F0'],estrellas:['#FFE8A3','#FFFFFF']}[t.deco]||['#fff'];
+  function size(){var r=host.getBoundingClientRect();W=r.width;H=r.height;cv.width=W*DPR;cv.height=H*DPR;cx.setTransform(DPR,0,0,DPR,0,0)}
+  function nuevo(top){var s=t.deco==='nieve'?2+Math.random()*3:t.deco==='estrellas'?1.5+Math.random()*2.5:7+Math.random()*7;
+    return {x:Math.random()*W,y:top?-20:Math.random()*H,s:s,vy:(t.deco==='estrellas'?0:.25+Math.random()*.5)*(s>6?1:.7),vx:(Math.random()-.5)*.3,a:Math.random()*6.3,va:(Math.random()-.5)*.03,f:Math.random()*6.3,c:COL[Math.floor(Math.random()*COL.length)]}}
+  function forma(p){cx.save();cx.translate(p.x,p.y);cx.rotate(p.a);cx.fillStyle=p.c;cx.globalAlpha=t.deco==='estrellas'?.4+.5*Math.abs(Math.sin(p.f)):.85;var s=p.s;cx.beginPath();
+    if(t.deco==='corazones'){cx.moveTo(0,s*.35);cx.bezierCurveTo(-s,-s*.3,-s*.4,-s,0,-s*.45);cx.bezierCurveTo(s*.4,-s,s,-s*.3,0,s*.35)}
+    else if(t.deco==='nieve'||t.deco==='estrellas')cx.arc(0,0,s/2,0,7);
+    else if(t.deco==='confeti')cx.rect(-s/2,-s/4,s,s/2);
+    else cx.ellipse(0,0,s/2,s*(t.deco==='hojas'?.28:.34),0,0,7);
+    cx.fill();cx.restore()}
+  function paso(ts){raf=requestAnimationFrame(paso);if(ts-last<30)return;last=ts;
+    var r=host.getBoundingClientRect();if(r.bottom<0||r.top>innerHeight)return;   /* fuera de pantalla: no pinta */
+    cx.clearRect(0,0,W,H);P.forEach(function(p,i){p.f+=.03;p.y+=p.vy;p.x+=p.vx+Math.sin(p.f)*.35;p.a+=p.va;if(p.y>H+20)P[i]=nuevo(true);forma(p)})}
+  function arranca(){cancelAnimationFrame(raf);if(!document.hidden)raf=requestAnimationFrame(paso)}
+  size();var n=Math.min(t.decoCuantos||22,Math.round(W*H/40000)+6);for(var i=0;i<n;i++)P.push(nuevo(false));
+  addEventListener('resize',size);document.addEventListener('visibilitychange',arranca);arranca();
+  return function(){cancelAnimationFrame(raf);removeEventListener('resize',size);document.removeEventListener('visibilitychange',arranca);cv.remove()}}
+
+var hoyB=elegir(hoy);
+aplicar(forzada==='no'?null:forzada?forzar(forzada,hoy):hoyB);
+
+/* ---------- Selector de temporadas: solo con #temporadas en la dirección, para enseñárselas al cliente ---------- */
+/* El visor del Artifact no pasa el #hash al iframe: también se abre con 5 toques seguidos en el logo de la cabecera (.brand) o con la tecla T */
+var sel=null,manual=false;
+function selector(){
+  if(location.hash!=='#temporadas'&&!manual){if(sel){sel.remove();sel=null}return}
+  if(sel)return;
+  var st=document.createElement('style');st.textContent='.t-sel{position:fixed;left:12px;right:12px;bottom:calc(14px + env(safe-area-inset-bottom,0px));z-index:150;margin:0 auto;max-width:max-content;display:flex;align-items:center;gap:6px;padding:6px;border-radius:18px;background:rgba(20,20,20,.82);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);color:#fff;font:600 13px/1.2 system-ui,-apple-system,sans-serif;box-shadow:0 14px 34px -12px rgba(0,0,0,.6);overflow-x:auto;scrollbar-width:none}'
+   +'.t-sel::-webkit-scrollbar{display:none}.t-sel b{padding:0 6px 0 8px;font-size:11px;letter-spacing:.08em;text-transform:uppercase;opacity:.6;white-space:nowrap}'
+   +'.t-sel button{all:unset;cursor:pointer;white-space:nowrap;padding:9px 12px;border-radius:12px;color:#fff}.t-sel button:hover{background:rgba(255,255,255,.12)}.t-sel button[aria-pressed="true"]{background:#fff;color:#111}'
+   +'.t-sel button small{display:block;font-size:10px;font-weight:500;opacity:.65;margin-top:2px}.t-sel .x{opacity:.7;padding:9px 10px}'
+   +'@media (max-width:640px){.t-sel{bottom:calc(84px + env(safe-area-inset-bottom,0px));max-width:none}}';
+  sel=document.createElement('div');sel.className='t-sel';sel.setAttribute('role','toolbar');sel.setAttribute('aria-label','Ver la landing en cada temporada');
+  sel.appendChild(st);
+  function hint(t){var w=ventanas(t,hoy.getFullYear()).filter(function(w){return w[1]>=hoy})[0],f=function(x){return x.getDate()+' '+MESES[x.getMonth()].slice(0,3)};return f(w[0])+' – '+f(w[1])}
+  var h='<b>Temporadas</b><button type="button" data-id="@hoy">Hoy<small>'+(hoyB?(hoyB.t.nombre||hoyB.t.id):'sin temporada')+'</small></button><button type="button" data-id="">Todo el año<small>versión base</small></button>';
+  CFG.forEach(function(t){h+='<button type="button" data-id="'+t.id+'">'+(t.nombre||t.id)+'<small>'+hint(t)+'</small></button>'});
+  sel.insertAdjacentHTML('beforeend',h+'<button type="button" class="x" aria-label="Cerrar el selector">✕</button>');
+  var elegido='@hoy';
+  function marca(){sel.querySelectorAll('button[data-id]').forEach(function(x){x.setAttribute('aria-pressed',String(x.dataset.id===elegido))})}
+  sel.addEventListener('click',function(e){var x=e.target.closest('button');if(!x)return;
+    if(x.classList.contains('x')){manual=false;if(location.hash==='#temporadas')history.replaceState(null,'',location.pathname+location.search);selector();return}
+    elegido=x.dataset.id;aplicar(elegido==='@hoy'?hoyB:elegido?forzar(elegido,hoy):null);marca();window.scrollTo({top:0,behavior:'smooth'})});
+  document.body.appendChild(sel);marca()}
+selector();addEventListener('hashchange',selector);
+var toques=[];
+document.addEventListener('click',function(e){if(!e.target.closest||!e.target.closest(window.TEMPORADAS_DISPARADOR||'.brand'))return;var n=Date.now();
+  toques=toques.filter(function(t){return n-t<2500});toques.push(n);if(toques.length>=5){toques=[];manual=true;selector()}});
+document.addEventListener('keydown',function(e){if((e.key==='t'||e.key==='T')&&!e.metaKey&&!e.ctrlKey&&!e.altKey&&!/INPUT|TEXTAREA|SELECT/.test(e.target.tagName)&&!e.target.isContentEditable){manual=!sel;if(!manual&&location.hash==='#temporadas')history.replaceState(null,'',location.pathname+location.search);selector()}});
+})();
+
+/* Sin sonidos en estas landings: el drawer de reseñas copiado de Aloha llama a SFX.play */
+var SFX={play:function(){}};
+
+/* ---------- Loader con el logo: se va al cargar (mínimo 0,9 s, máximo 3 s) ---------- */
+(function(){var l=document.getElementById('loader');if(!l)return;var t0=performance.now(),done=false;
+  function hide(){if(done)return;done=true;l.classList.add('off');setTimeout(function(){l.remove()},700)}
+  function ready(){setTimeout(hide,Math.max(0,(reduced?200:900)-(performance.now()-t0)))}
+  if(document.readyState==='complete')ready();else window.addEventListener('load',ready);
+  setTimeout(hide,3000);})();
+
+/* ---------- Cabecera de vidrio, barra móvil y ↑ (por scroll: el IntersectionObserver falla dentro de iframes) ---------- */
+(function(){var top=document.getElementById('top'),hero=document.getElementById('hero'),mbar=document.querySelector('.mbar'),totop=document.getElementById('totop'),h1=hero&&hero.querySelector('h1'),hcta=hero&&hero.querySelector('.hero-ctas'),tk=false;
+ function sync(){tk=false;var end=hero.offsetTop+hero.offsetHeight;top.classList.toggle('glass',scrollY<end-top.offsetHeight);
+  if(mbar){mbar.classList.toggle('glass',scrollY+innerHeight-40<end);
+   /* la barra no tapa el titular ni duplica el botón del hero mientras se ve */
+   var off=false;if(h1){var q=h1.getBoundingClientRect();if(q.bottom>innerHeight-84&&q.top<innerHeight)off=true}
+   if(hcta&&getComputedStyle(hcta).display!=='none'){var c=hcta.getBoundingClientRect();if(c.bottom>0&&c.top<innerHeight)off=true}
+   mbar.classList.toggle('off',off)}
+  if(totop)totop.classList.toggle('on',scrollY>end-innerHeight/2)}
+ sync();window.addEventListener('scroll',function(){if(!tk){tk=true;requestAnimationFrame(sync)}},{passive:true});window.addEventListener('resize',sync);
+ if(totop)totop.addEventListener('click',function(){window.scrollTo({top:0,behavior:reduced?'auto':'smooth'})});})();
+
+/* ---------- Abierto ahora / cuándo abre (hora de Madrid, horario publicado) ---------- */
+(function(){var el=document.getElementById('hero-open'),t=document.getElementById('hero-open-t');if(!el||!C.hours)return;
+  var H=C.hours, DIAS=S.dias||['el domingo','el lunes','el martes','el miércoles','el jueves','el viernes','el sábado'];
+  function hh(h){var m=Math.round((h%1)*60);h=Math.floor(h);return (h<10?'0':'')+h+':'+(m<10?'0':'')+m}
+  function paint(){var p={};try{new Intl.DateTimeFormat('en-GB',{timeZone:'Europe/Madrid',weekday:'short',hour:'numeric',minute:'numeric',hourCycle:'h23'}).formatToParts(new Date()).forEach(function(x){p[x.type]=x.value})}catch(e){return}
+    var d=['Sun','Mon','Tue','Wed','Thu','Fri','Sat'].indexOf(p.weekday),m=(+p.hour)*60+(+p.minute),open=null,next=null;
+    (H[d]||[]).forEach(function(r){if(m>=r[0]*60&&m<r[1]*60)open=r;else if(!next&&m<r[0]*60)next=[S.hoy||'hoy',r[0]]});
+    for(var k=1;!open&&!next&&k<8;k++){var dd=(d+k)%7;if((H[dd]||[]).length)next=[k===1?(S.manana||'mañana'):DIAS[dd],H[dd][0][0]]}
+    el.classList.toggle('on',!!open);
+    t.innerHTML=open?'<b>'+(S.abierto||'Abierto ahora')+'</b> · '+(S.hasta||'hasta las')+' '+hh(open[1]):(S.cerrado||'Cerrado ahora · abre')+' '+next[0]+' '+(S.alas||'a las')+' '+hh(next[1]);}
+  paint();setInterval(paint,60000);})();
+
+/* ---------- Tarifas: pestañas ---------- */
+(function(){var tabs=document.querySelector('.tabs');if(!tabs)return;
+  function show(id){tabs.querySelectorAll('button').forEach(function(b){b.setAttribute('aria-selected',String(b.dataset.tab===id))});
+    document.querySelectorAll('.plans[data-tab]').forEach(function(p){p.hidden=p.dataset.tab!==id});
+    document.querySelectorAll('[data-tab-note]').forEach(function(p){p.hidden=p.dataset.tabNote!==id})}
+  tabs.addEventListener('click',function(e){var b=e.target.closest('button');if(b)show(b.dataset.tab)});
+  window.TARIFAS_TAB=show;var f=tabs.querySelector('button');if(f)show(f.dataset.tab);})();
+
+/* ---------- Borradores: se ven solo con #borradores en la dirección ---------- */
+(function(){function sync(){var on=location.hash==='#borradores';document.querySelectorAll('.draft').forEach(function(d){d.hidden=!on});if(on){var t=document.querySelector('.draft');t&&setTimeout(function(){t.scrollIntoView()},300)}}
+ sync();window.addEventListener('hashchange',sync)})();
+
+/* ---------- Contratar: panel paso a paso que acaba en WhatsApp (o email y teléfono si el operador no tiene WhatsApp) ---------- */
+(function(){
+  var N=5, P=C.panel||{}, T=P.t||{};
+  var bk=document.getElementById('bk'); if(!bk)return;
+  var f=document.getElementById('book-form'), panes=[].slice.call(f.querySelectorAll('.bk-pane'));
+  var back=document.getElementById('bk-back'), next=document.getElementById('bk-next'), send=document.getElementById('f-send');
+  var err=document.getElementById('f-error'), bar=document.getElementById('bk-bar'), stepT=document.getElementById('bk-step');
+  var nombre=document.getElementById('f-nombre'), pre=document.getElementById('f-preview'), plansEl=document.getElementById('f-plans');
+  function sel(n){var e=f.querySelector('input[name="'+n+'"]:checked');return e?e.value:''}
+  function val(id){var e=document.getElementById(id);return e?e.value.trim():''}
+  function esc(s){return String(s).replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(/</g,'&lt;')}
+  /* tarifas publicadas del servicio elegido (vienen de la sección de tarifas) */
+  function fill(){var L=(P.plans||{})[sel('serv')]||[];
+    plansEl.className='bk-opts plans-opts'+(L.length>4?' grid2':'');
+    plansEl.innerHTML=L.map(function(p){return '<label><input type="radio" name="plan" value="'+esc(p[0]+(p[1]?' ('+p[1]+')':''))+'"><span><span>'+p[0]+(p[2]?'<small>'+p[2]+'</small>':'')+'</span>'+(p[1]?'<em>'+p[1]+'</em>':'')+'</span></label>'}).join('')
+      +'<label'+(L.length>4?' style="grid-column:1/-1"':'')+'><input type="radio" name="plan" value="'+esc(T.consejo||'Que me aconsejéis')+'"><span>'+(T.consejo||'Que me aconsejéis')+'</span></label>'}
+  f.addEventListener('change',function(e){if(e.target.name==='serv')fill()});
+  var _code='';
+  function code(){if(!_code){var d=new Date(),r='',A='ABCDEFGHJKLMNPQRSTUVWXYZ23456789';for(var i=0;i<3;i++)r+=A[Math.floor(Math.random()*A.length)];_code=(P.prefijo||'WEB')+'-'+String(d.getDate()).padStart(2,'0')+String(d.getMonth()+1).padStart(2,'0')+'-'+r}return _code}
+  function message(){
+    var L=[(T.hola||'¡Hola!')+' '+(T.soy||'Soy')+' '+nombre.value.trim()+'. '+(T.intro||'Quiero información para contratar:'),''];
+    L.push('🔖 '+(T.codigo||'Código')+': '+code());
+    if(window.TEMPORADA&&TEMPORADA.linea)L.push(TEMPORADA.linea);
+    L.push('• '+(T.servicio||'Servicio')+': '+sel('serv'));
+    if(sel('plan'))L.push('• '+(T.tarifa||'Tarifa')+': '+sel('plan'));
+    var donde=[val('f-loc'),sel('tipo')].filter(Boolean).join(' · ');
+    if(donde)L.push('• '+(T.donde||'Dónde')+': '+donde);
+    if(val('f-ahora'))L.push('• '+(T.ahora||'Ahora estoy con')+': '+val('f-ahora'));
+    if(sel('pref'))L.push('• '+sel('pref'));
+    L.push('',T.cierre||'¿Me confirmáis la cobertura y los pasos? ¡Gracias!');
+    return L.join('\n');
+  }
+  var step=1, opener=null;
+  function show(n){
+    step=n; err.hidden=true;
+    panes.forEach(function(p){p.hidden=+p.dataset.step!==n});
+    back.disabled=n===1;
+    var last=n===N; next.hidden=last; send.hidden=!last;
+    next.textContent=n===4?(T.ver||'Ver mi consulta'):(T.sig||'Siguiente');
+    stepT.textContent=last?(T.listo||'Listo'):(T.paso||'Paso')+' '+n+' '+(T.de||'de')+' 4';
+    bar.style.transform='scaleX('+(Math.min(n,4)/4)+')';
+    if(last){var m=message();pre.textContent=m;
+      if(C.wa){document.getElementById('f-wa').href='https://wa.me/'+C.wa+'?text='+encodeURIComponent(m)}
+      else{document.getElementById('f-mail').href='mailto:'+C.mail+'?subject='+encodeURIComponent((T.asunto||'Consulta desde la web')+' · '+code())+'&body='+encodeURIComponent(m)}}
+    f.scrollTop=0;
+    var h3=panes[n-1].querySelector('h3'); if(h3)h3.setAttribute('tabindex','-1');
+    setTimeout(function(){try{(h3||next).focus({preventScroll:true})}catch(x){}},380);
+  }
+  function fail(msg,el){err.textContent=msg;err.hidden=false;if(el){el.setAttribute('aria-invalid','true');el.focus()}}
+  function validate(n){
+    if(n===1&&!sel('serv')){fail(T.err1||'Elige qué te interesa.');return false}
+    if(n===4){nombre.removeAttribute('aria-invalid');if(!nombre.value.trim()){fail(T.err4||'Dinos tu nombre para el mensaje.',nombre);return false}}
+    return true;
+  }
+  next.addEventListener('click',function(){if(validate(step))show(step+1)});
+  back.addEventListener('click',function(){if(step>1)show(step-1)});
+  f.addEventListener('submit',function(e){e.preventDefault();next.click()});
+  /* 'click' y no 'change': al volver al paso 1 y tocar la opción ya marcada también avanza */
+  f.querySelectorAll('input[name="serv"]').forEach(function(r){r.addEventListener('click',function(){setTimeout(function(){if(step===1){fill();show(2)}},220)})});
+  plansEl.addEventListener('click',function(e){if(e.target.name==='plan')setTimeout(function(){if(step===2)show(3)},260)});
+  document.getElementById('f-copy').addEventListener('click',function(){var b=this,t0=b.textContent,ok=function(){b.textContent=T.copiado||'Copiado';setTimeout(function(){b.textContent=t0},1600)};
+    try{navigator.clipboard.writeText(pre.textContent).then(ok,function(){var r=document.createRange();r.selectNodeContents(pre);var s=getSelection();s.removeAllRanges();s.addRange(r)})}catch(x){}});
+  function open(from){
+    opener=from||document.activeElement; bk.hidden=false; document.documentElement.style.overflow='hidden';
+    var ds=from&&from.dataset||{};
+    if(!ds.serv&&window.TEMPORADA){var tc=(window.TEMPORADAS||[]).filter(function(x){return x.id===TEMPORADA.id})[0];if(tc&&tc.serv)ds={serv:tc.serv}}
+    if(ds.serv){var r=f.querySelector('input[name="serv"][value="'+ds.serv+'"]');if(r){r.checked=true;fill();
+      if(ds.plan){var pp=[].filter.call(f.querySelectorAll('input[name="plan"]'),function(x){return x.value.indexOf(ds.plan)===0})[0];if(pp){pp.checked=true;show(3)}else show(2)}else show(2)}}
+    else if(step===N)show(4); else show(step);
+    requestAnimationFrame(function(){requestAnimationFrame(function(){bk.classList.add('open')})});
+  }
+  function close(){
+    bk.classList.remove('open'); document.documentElement.style.overflow='';
+    setTimeout(function(){bk.hidden=true},reduced?0:420);
+    if(opener&&opener.focus)try{opener.focus({preventScroll:true})}catch(x){}
+  }
+  document.getElementById('bk-x').addEventListener('click',close);
+  document.getElementById('bk-scrim').addEventListener('click',close);
+  document.addEventListener('keydown',function(e){if(!bk.hidden&&e.key==='Escape')close()});
+  document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[href="#contratar"]');if(!a)return;e.preventDefault();open(a)});
+  /* un enlace compartido con #contratar abre el panel al llegar (fuera del visor: bio de Instagram, WhatsApp) */
+  if(location.hash==='#contratar')setTimeout(function(){open(null)},600);
+  window.ABRIR_PANEL=open;
+})();
+
+
+/* ---------- Drawer de reseñas ---------- */
+(function(){var d=document.getElementById('rvd'); if(!d)return;
+ var list=document.getElementById('rvd-list'), map=document.getElementById('rvd-map'), opener=null, filled=false;
+ function open(from){
+   if(!filled){document.querySelectorAll('#resenas .rv').forEach(function(c){var k=c.cloneNode(true);k.removeAttribute('data-reveal');list.appendChild(k)});filled=true}
+   if(!map.src)map.src=map.getAttribute('data-src');
+   opener=from||document.activeElement; d.hidden=false; document.documentElement.style.overflow='hidden'; SFX.play('open');
+   requestAnimationFrame(function(){requestAnimationFrame(function(){d.classList.add('open');var x=d.querySelector('.bk-head [data-rvd-x]');x&&x.focus({preventScroll:true})})});
+ }
+ function close(){ if(d.hidden)return; SFX.play('close'); d.classList.remove('open'); document.documentElement.style.overflow='';
+   setTimeout(function(){d.hidden=true;opener&&opener.focus&&opener.focus({preventScroll:true})},reduced?0:420); }
+ document.addEventListener('click',function(e){var a=e.target.closest('[data-rvd]');if(a){e.preventDefault();open(a);return}
+   if(e.target.closest('[data-rvd-x]'))close()});
+ document.addEventListener('keydown',function(e){if(e.key==='Escape')close()});
+})();
+
+
+
+/* ---------- Xesto do hero: a xanela que se abre á aldea ---------- */
+(function(){var w=document.getElementById('win'),chip=document.getElementById('win-chip');if(!w)return;var touched=false,reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function set(open){w.classList.remove('peek');w.classList.toggle('open',open);w.setAttribute('aria-label',open?'Pechar a xanela':'Abrir a xanela');
+    if(chip){chip.classList.toggle('done',open);chip.textContent=open?'Benvida a fibra rural: ata 1000 Mb':'Toca para abrir a xanela'}}
+  function toggle(){touched=true;set(!w.classList.contains('open'))}
+  w.addEventListener('click',toggle);
+  w.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();toggle()}});
+  /* arrastrar cara aos lados tamén a abre */
+  var x0=null;w.addEventListener('pointerdown',function(e){x0=e.clientX});
+  w.addEventListener('pointerup',function(e){if(x0!==null&&Math.abs(e.clientX-x0)>30){touched=true;set(true)}x0=null});
+  /* pista ao chegar: as contras ábrense un chisco e despois de todo */
+  if(!reduced){setTimeout(function(){if(!touched)w.classList.add('peek')},1500);setTimeout(function(){if(!touched)w.classList.remove('peek')},2300);setTimeout(function(){if(!touched)set(true)},3600)}
+  else set(true);
+})();
+
+
+/* ---------- Animaciones por visibilidad (IntersectionObserver) ---------- */
+(function(){
+  var root=document.documentElement;
+  if(!('IntersectionObserver' in window)||reduced)return;
+  root.classList.add('js-anim');
+  var io=new IntersectionObserver(function(es){var k=0;es.forEach(function(e){if(!e.isIntersecting)return;var el=e.target;el.style.transitionDelay=Math.min(k++*90,450)+'ms';el.classList.add('in');io.unobserve(el);setTimeout(function(){el.style.transitionDelay=''},1500)})},{rootMargin:'0px 0px -8% 0px'});
+  document.querySelectorAll('[data-reveal]').forEach(function(el){io.observe(el)});
+  var bar=document.getElementById('progress'), tk=false;
+  function prog(){tk=false;var H=root.scrollHeight-innerHeight;bar.style.transform='scaleX('+(H>0?Math.min(1,scrollY/H):0)+')'}
+  window.addEventListener('scroll',function(){if(!tk){tk=true;requestAnimationFrame(prog)}},{passive:true});
+})();
+})();
+
+/* ---------- Botones flotantes tras un mínimo scroll (cabecera y barra móvil ocultas al pintar el hero) ---------- */
+(function(){var h=document.documentElement,tk=false;function s(){tk=false;h.classList.toggle('cta-wait',scrollY<=Math.min(120,innerHeight*.15))}
+ s();addEventListener('scroll',function(){if(!tk){tk=true;requestAnimationFrame(s)}},{passive:true});addEventListener('resize',s);})();
+</script>

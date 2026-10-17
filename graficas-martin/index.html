@@ -1,0 +1,1394 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Imprenta en Gijón desde 1962 · Gráficas Martín</title>
+<meta name="description" content="Imprenta en Gijón desde 1962: diseño, preimpresión e impresión offset, digital y gran formato. Tarjetas, papelería corporativa, folletos, catálogos, cartas para restaurantes, invitaciones de boda, recordatorios, calendarios, lonas y vinilos. Reparto propio por Asturias y envíos a toda España. 4,8★ en Google (20 reseñas).">
+<meta name="theme-color" content="#17151A">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Figtree:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="icon" href="img/logo-disc.png">
+<style>
+/* Gráficas Martín — imprenta de Gijón desde 1962. Editorial cálido: papel crema, Caslon (la letra de imprenta clásica) para titulares,
+   Figtree para leer y el rojo del logotipo solo como acento. Un único gesto: componer tu nombre en tipos de plomo e imprimirlo. */
+:root{
+  color-scheme: light;
+  --shell:#F4F0E8;
+  --shell-2:#E8E2D6;
+  --paper:#FBF9F5;
+  --ink:#17151A;
+  --ink-soft:#655F58;
+  --red:#931E24;
+  --red-hi:#B3262D;
+  --hibiscus:#931E24;
+  --hibiscus-ink:#7A181E;
+  --palm:#17151A;
+  --sun:#D9675F;
+  --night:#17151A;
+  --cream:#F3EEE5;
+  --line:rgba(23,21,26,.12);
+  --font-display:"Libre Caslon Text", Georgia, "Times New Roman", serif;
+  --font-body:"Figtree", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono:"IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  --r-sm:8px; --r-md:12px; --r-lg:16px;
+  --shadow:0 30px 60px -36px rgba(23,21,26,.35);
+  --wrap:1200px;
+  --head:76px;
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html{scroll-behavior:smooth;scroll-padding-top:calc(var(--head) + 12px)}
+body{margin:0;background:var(--shell);color:var(--ink);font-family:var(--font-body);font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:clip}
+img{max-width:100%;display:block}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--red);outline-offset:3px;border-radius:4px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.wrap{max-width:var(--wrap);margin-inline:auto;padding-inline:clamp(20px,4vw,48px)}
+h1,h2,h3{margin:0;text-wrap:balance;font-family:var(--font-display);font-weight:400;line-height:1.06;letter-spacing:-.02em}
+h1 em,h2 em{font-style:italic;color:var(--ink)}
+h2 em::after{content:"";display:inline-block;width:.15em;height:.15em;margin-left:.05em;border-radius:50%;background:var(--red);vertical-align:.04em}
+h3{font-size:24px}
+p{margin:0}
+.eyebrow{display:inline-block;font:500 12.5px/1.4 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--ink-soft)}
+.lead{font-size:clamp(17px,1.4vw,19px);color:var(--ink-soft);max-width:36em}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 28px;border-radius:999px;font:600 15.5px/1 var(--font-body);letter-spacing:.01em;text-decoration:none;border:1px solid transparent;cursor:pointer;transition:background .25s,color .25s,border-color .25s,transform .25s}
+.btn svg{width:18px;height:18px;flex:none}
+.btn-primary{background:var(--red);color:#fff}
+.btn-primary:hover{background:var(--red-hi);transform:translateY(-1px)}
+.btn-ghost{background:transparent;border-color:var(--line);color:var(--ink)}
+.btn-ghost:hover{border-color:var(--ink)}
+.btn-light{background:var(--cream);color:var(--ink)}
+.btn-light:hover{background:#fff}
+.link{display:inline-flex;align-items:center;gap:8px;font-weight:600;text-decoration:none;border-bottom:1px solid var(--line);padding-bottom:2px;transition:border-color .2s,gap .2s}
+.link svg{width:16px;height:16px}
+.link:hover{border-color:var(--ink);gap:12px}
+.sec{padding-block:clamp(84px,11vw,148px)}
+.sec-head{display:grid;gap:18px;max-width:800px;margin-bottom:clamp(40px,5vw,64px)}
+.sec-head h2,.book-cta h2,.visit h2,.sketch-copy h2,.taller h2{font-size:clamp(36px,4.8vw,66px)}
+.band-white{background:var(--paper)}
+.band-ink{background:var(--night);color:var(--cream)}
+.band-ink .eyebrow,.band-ink .lead{color:rgba(243,238,229,.62)}
+.band-ink h2 em{color:var(--cream)}
+
+/* Loader con el logo: el disco blanco con el logotipo y un anillo rojo que se dibuja, sobre el mismo fondo del hero */
+.intro{position:fixed;inset:0;z-index:300;display:grid;place-items:center;overflow:hidden;background:var(--night);transition:opacity .55s ease,visibility 0s .55s}
+.intro.out{opacity:0;visibility:hidden;pointer-events:none}
+.intro::before{content:"";position:absolute;inset:0;background:radial-gradient(60% 50% at 50% 45%,rgba(147,30,36,.28),transparent 70%)}
+.intro-core{position:relative;display:grid;justify-items:center;gap:18px;color:var(--cream)}
+.intro-core b{font:400 clamp(26px,3vw,36px)/1 var(--font-display);letter-spacing:-.01em}
+.intro-core small{font:500 12px var(--mono);letter-spacing:.18em;text-transform:uppercase;color:rgba(243,238,229,.6);margin-top:-8px}
+.disc{position:relative;display:grid;place-items:center;width:clamp(112px,15vw,150px);aspect-ratio:1}
+.disc img{width:86%;height:auto;border-radius:50%;box-shadow:0 0 0 1px rgba(255,255,255,.2),0 20px 60px -20px rgba(147,30,36,.7)}
+.disc .ring{position:absolute;inset:0;width:100%;height:100%;transform:rotate(-90deg);overflow:visible}
+.disc .ring circle{fill:none;stroke:#C8343B;stroke-width:2.2;stroke-linecap:round;stroke-dasharray:1;stroke-dashoffset:1;animation:ring-draw 1.4s cubic-bezier(.6,.1,.3,1) .1s forwards}
+@keyframes ring-draw{to{stroke-dashoffset:0}}
+.intro-core>*{animation:rise .7s cubic-bezier(.2,.7,.2,1) both}.intro-core b{animation-delay:.15s}.intro-core small{animation-delay:.25s}
+@keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+.intro{animation:intro-safe 0s 4s forwards}
+@keyframes intro-safe{to{opacity:0;visibility:hidden;pointer-events:none}}
+
+/* Cabecera: vidrio oscuro sobre el hero y las bandas oscuras, crema sobre el papel (por scroll) */
+.top{position:fixed;top:0;left:0;right:0;padding-top:env(safe-area-inset-top,0px);z-index:60;background:rgba(244,240,232,.9);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);transition:background .4s,color .4s}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;height:var(--head)}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none}
+.brand img{height:42px;width:42px;border-radius:50%;box-shadow:0 0 0 1px var(--line)}
+.brand span{font:400 22px var(--font-display);letter-spacing:-.01em;white-space:nowrap}
+.nav{display:flex;gap:clamp(18px,2.2vw,32px);font-size:14.5px;font-weight:500}
+.nav a{text-decoration:none;color:var(--ink-soft);white-space:nowrap}
+.nav a:hover{color:var(--ink)}
+.top .btn{min-height:42px;padding:0 20px;font-size:14.5px}
+.top .btn svg{display:none}
+.top.dark{background:rgba(23,21,26,.5);color:var(--cream)}
+.top.dark .nav a{color:rgba(243,238,229,.72)}
+.top.dark .nav a:hover{color:var(--cream)}
+.progress{position:absolute;left:0;bottom:-1px;height:2px;width:100%;background:var(--red);transform:scaleX(0);transform-origin:left}
+
+.hero-ctas{display:flex;flex-wrap:wrap;gap:22px;margin-top:34px;align-items:center}
+.g-rate{display:inline-flex;align-items:center;gap:8px;margin-top:34px;color:var(--ink-soft);text-decoration:none;font-size:14px}
+.g-rate .stars{display:flex;gap:1px;color:#E0A100}.g-rate svg{width:13px;height:13px}
+.g-rate b{color:var(--ink)}
+.tel{display:inline-flex;align-items:center;gap:8px;font-weight:600;text-decoration:none;font-variant-numeric:tabular-nums;white-space:nowrap}
+.tel svg{width:17px;height:17px}
+.tel:hover{color:#E2777C}
+
+/* Manifiesto */
+.mani-grid{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,.65fr);gap:clamp(36px,6vw,96px);align-items:center}
+.mani-grid>div{display:grid;gap:28px}
+.mani{font:400 clamp(32px,4.2vw,58px)/1.12 var(--font-display);letter-spacing:-.02em;max-width:22ch}
+.mani .w{display:inline-block;transition:opacity .5s ease,color .5s ease}
+.js-anim .mani .w{opacity:.18}
+.js-anim .mani.lit .w{opacity:1}
+.mani .w.hot{font-style:italic;color:var(--red)}
+.mani-fig{margin:0;display:grid;gap:12px}
+.mani-fig img{width:100%;border-radius:var(--r-lg);box-shadow:var(--shadow)}
+.mani-fig figcaption{font:400 12.5px/1.5 var(--mono);color:var(--ink-soft)}
+
+/* Portfolio */
+.filters{display:flex;flex-wrap:wrap;gap:6px 26px;margin-bottom:28px}
+.filters button{all:unset;cursor:pointer;font-size:15px;font-weight:500;color:var(--ink-soft);padding:4px 0;border-bottom:1px solid transparent}
+.filters button.on{color:var(--ink);border-bottom-color:var(--red)}
+.filters button:hover{color:var(--ink)}
+.filters button:focus-visible{outline:2px solid var(--red)}
+.works{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:190px;grid-auto-flow:dense;gap:16px}
+.work{all:unset;cursor:zoom-in;position:relative;display:block;height:100%;border-radius:var(--r-md);overflow:hidden;background:var(--shell-2)}
+.work img{width:100%;height:100%;object-fit:cover;transition:transform .9s cubic-bezier(.2,.7,.2,1)}
+.work:hover img{transform:scale(1.05)}
+.work.pop{animation:pop .55s cubic-bezier(.2,.7,.2,1) both}
+@keyframes pop{from{opacity:0;transform:translateY(14px) scale(.98)}to{opacity:1;transform:none}}
+.work::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(0,0,0,.5),transparent 45%);opacity:0;transition:opacity .3s}
+.work span{position:absolute;z-index:1;left:14px;right:14px;bottom:12px;color:#fff;font-size:13px;font-weight:600;letter-spacing:.02em;opacity:0;transform:translateY(6px);transition:opacity .3s,transform .3s}
+.work:hover span,.work:focus-visible span{opacity:1;transform:none}
+.work:hover::after,.work:focus-visible::after{opacity:1}
+.work:focus-visible{outline:2px solid var(--red);outline-offset:2px}
+.work.big{grid-column:span 2;grid-row:span 2}
+.work.wide{grid-column:span 2}
+.work.out,.work.more{display:none}
+.works-more{display:flex;justify-content:center;margin-top:28px}
+.lb{position:fixed;inset:0;z-index:150;background:rgba(14,13,16,.94);display:grid;place-items:center;gap:18px;padding:64px 16px 24px;grid-template-rows:1fr auto}
+.lb img{max-width:min(1000px,100%);max-height:100%;border-radius:8px;object-fit:contain;align-self:center}
+.lb-x{all:unset;cursor:pointer;position:absolute;top:14px;right:18px;width:44px;height:44px;display:grid;place-items:center;color:#fff;font-size:32px}
+.lb-nav{all:unset;cursor:pointer;position:absolute;top:50%;transform:translateY(-50%);width:48px;height:48px;border-radius:50%;display:grid;place-items:center;color:#fff;background:rgba(255,255,255,.14);transition:background .2s}
+.lb-nav:hover{background:rgba(255,255,255,.26)}
+.lb-nav.prev{left:14px}.lb-nav.next{right:14px}
+.lb-nav svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.lb-x:focus-visible,.lb-nav:focus-visible{outline:2px solid #fff;outline-offset:2px}
+.lb-foot{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:12px 22px;color:rgba(255,255,255,.78);font-size:14px;font-variant-numeric:tabular-nums}
+
+/* Servicios */
+.svc{display:grid;grid-template-columns:1fr 1fr 1fr;gap:clamp(28px,4vw,56px);border-top:1px solid var(--line);padding-top:36px}
+.svc h3{font-size:28px;margin-bottom:18px}
+.svc ul{list-style:none;margin:0;padding:0;display:grid}
+.svc li{padding:10px 0;border-bottom:1px solid var(--line)}
+
+/* Taller: tipos de impresión */
+.taller-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(36px,6vw,96px);align-items:center}
+.taller-grid>div{display:grid;gap:22px;justify-items:start}
+.taller-img{margin:0}
+.taller-img img{width:100%;aspect-ratio:4/3.4;object-fit:cover;border-radius:var(--r-lg);filter:grayscale(.2) contrast(1.05)}
+.kinds{list-style:none;margin:0;padding:0;display:grid;width:100%;border-top:1px solid rgba(243,238,229,.16)}
+.kinds li{display:grid;grid-template-columns:150px 1fr;gap:16px;padding:16px 0;border-bottom:1px solid rgba(243,238,229,.16)}
+.kinds b{font:400 22px/1.3 var(--font-display)}
+.kinds span{color:rgba(243,238,229,.7);font-size:15.5px}
+
+/* Del boceto a la pila de tarjetas */
+.sketch-sec{background:var(--paper)}
+.sketch-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(36px,5vw,80px);align-items:center}
+.sketch-copy .sec-head{margin-bottom:36px}
+.stages{list-style:none;margin:0;padding:0;display:grid;border-top:1px solid var(--line)}
+.stages li{display:grid;grid-template-columns:48px 1fr;gap:10px;padding:18px 0;border-bottom:1px solid var(--line);cursor:pointer;transition:opacity .3s;opacity:.42}
+.stages li.on{opacity:1}
+.stages b{font:500 14px/1.9 var(--mono);color:var(--red)}
+.stages h3{font-size:24px}
+.stages p{color:var(--ink-soft);font-size:15.5px;margin-top:6px;max-height:0;overflow:hidden;transition:max-height .5s ease}
+.stages li.on p{max-height:120px}
+.board{position:relative;margin:0;border-radius:var(--r-lg);background:#fff;border:1px solid var(--line);overflow:hidden}
+.board svg{display:block;width:100%;height:auto}
+.board .pencil path{stroke-dasharray:1;stroke-dashoffset:1;transition:stroke-dashoffset 1.4s cubic-bezier(.4,0,.2,1),opacity .4s}
+.board .pencil .dim{stroke:var(--red);stroke-width:1.2}
+.board[data-s="0"] .pencil path{stroke-dashoffset:0}
+.board[data-s="0"] .pencil path:nth-child(n+2){stroke-dashoffset:1}
+.board[data-s="1"] .pencil path,.board[data-s="2"] .pencil path,.board[data-s="3"] .pencil path{stroke-dashoffset:0}
+.board .pencil path:nth-child(2){transition-delay:.15s}.board .pencil path:nth-child(3){transition-delay:.3s}.board .pencil path:nth-child(4){transition-delay:.45s}.board .pencil path:nth-child(5){transition-delay:.7s}.board .pencil path:nth-child(6){transition-delay:.85s}
+.board .fab{opacity:0;transition:opacity .7s}
+.board[data-s="2"] .fab,.board[data-s="3"] .fab{opacity:1}
+.board[data-s="2"] .pencil,.board[data-s="3"] .pencil{opacity:0;transition:opacity .4s .3s}
+.board .fab .w1{font:700 30px var(--font-display);fill:#17151A}
+.board .fab .w2{font:500 15px var(--font-body);fill:#931E24;letter-spacing:.04em}
+.board .fab .w3{font:400 13px var(--mono);fill:#655F58}
+.board .crops{opacity:0;transition:opacity .5s}
+.board[data-s="1"] .crops,.board[data-s="2"] .crops{opacity:1}
+.board .stack{opacity:0;transform:translate(0,0);transition:opacity .6s,transform .9s cubic-bezier(.2,.7,.2,1)}
+.board[data-s="3"] .stack{opacity:1;transform:translate(10px,10px)}
+.board .fab{transition:opacity .7s,transform .9s cubic-bezier(.2,.7,.2,1)}
+.board[data-s="3"] .fab{transform:translate(-6px,-6px) rotate(-1.5deg);transform-origin:280px 208px}
+
+/* Reseñas */
+.rv-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(24px,3vw,40px)}
+.rv-grid .rv:nth-child(n+5){display:none}
+.rv{margin:0;display:grid;gap:18px;align-content:start;padding-top:22px;border-top:1px solid var(--ink)}
+.rv-top{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.rv-stars{display:flex;gap:2px;color:#E0A100}.rv-stars svg{width:14px;height:14px}
+.rv-tag{font:500 11.5px var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft)}
+.rv blockquote{margin:0;font:400 clamp(19px,1.6vw,22px)/1.38 var(--font-display)}
+.rv figcaption{display:flex;align-items:center;gap:10px}
+.rv figcaption i{display:none}
+.rv figcaption span{display:grid;line-height:1.3}.rv figcaption b{font-weight:600;font-size:15px}.rv figcaption small{color:var(--ink-soft);font-size:13px}
+.rv-more{display:flex;flex-wrap:wrap;gap:6px 16px;align-items:baseline;margin:40px 0 0;font-size:14px;color:var(--ink-soft)}
+.rv-more a{font-weight:600;color:var(--ink);text-decoration:none;border-bottom:1px solid var(--line)}
+
+/* Presupuesto */
+.book-cta{display:grid;grid-template-columns:1fr auto;gap:40px;align-items:end}
+.book-cta>div{display:grid;gap:18px}
+.book-perks{list-style:none;margin:6px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:8px 28px;font-size:14.5px;color:rgba(243,238,229,.62)}
+.book-cta .btn{min-height:58px;padding:0 34px;font-size:16px}
+
+.draft{outline:2px dashed #E5B300;outline-offset:-12px}
+.incl{list-style:none;margin:0;padding:0;display:grid;gap:10px;font-size:18px}
+mark{background:#FFE58A;padding:0 4px;border-radius:4px}
+
+/* Visita */
+.visit{display:grid;grid-template-columns:1fr 1fr;gap:clamp(36px,6vw,96px);align-items:start}
+.visit>div:first-child{display:grid;gap:18px;justify-items:start}
+.hours{border-collapse:collapse;margin-top:8px;font-size:16px}
+.hours th{text-align:left;font-weight:500;padding:10px 32px 10px 0}
+.hours td{padding:10px 0;color:var(--ink-soft);font-variant-numeric:tabular-nums}
+.hours tr{border-bottom:1px solid var(--line)}
+.contact{list-style:none;margin:6px 0 0;padding:0;display:grid;gap:12px}
+.contact li{display:flex;align-items:flex-start;gap:12px}
+.contact svg{width:18px;height:18px;flex:none;color:var(--red);margin-top:4px}
+.contact a{text-decoration:none}
+.contact a:hover{color:var(--red)}
+.faq{display:grid;border-top:1px solid var(--line)}
+.faq details{border-bottom:1px solid var(--line)}
+.faq summary{overflow-wrap:anywhere;cursor:pointer;list-style:none;padding:20px 0;font:400 21px/1.3 var(--font-display);display:flex;justify-content:space-between;gap:16px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font:300 24px/1 var(--font-body);color:var(--ink-soft);transition:transform .25s}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq details p{padding:0 0 22px;color:var(--ink-soft)}
+
+/* Cierre */
+.final{padding-block:clamp(100px,13vw,170px);text-align:center;border-top:1px solid var(--line)}
+.final .wrap{display:grid;justify-items:center;gap:26px}
+.final h2{font-size:clamp(40px,5.6vw,84px);line-height:1.02}
+.final h2 em{display:block}
+.final .hero-ctas{justify-content:center;margin-top:0}
+.final .g-rate{margin-top:0}
+.foot .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;font-size:13.5px;color:var(--ink-soft);padding-block:26px;border-top:1px solid var(--line)}
+
+/* Animaciones */
+.js-anim [data-reveal]{opacity:0;transform:translateY(24px);transition:opacity 1s cubic-bezier(.2,.7,.2,1),transform 1s cubic-bezier(.2,.7,.2,1)}
+.js-anim [data-reveal].in{opacity:1;transform:none}
+.totop{background:#fff!important;color:var(--ink)!important;border-color:var(--line)!important;-webkit-backdrop-filter:none!important;backdrop-filter:none!important}
+
+.mbar{display:none}
+
+@media (max-width:960px){
+  .nav{display:none}
+  .visit,.book-cta,.sketch-grid,.mani-grid,.taller-grid{grid-template-columns:minmax(0,1fr)}
+  .visit>*,.faq,.faq details{min-width:0}
+  .board{order:-1}
+  .svc{grid-template-columns:1fr}
+  .works{grid-template-columns:repeat(3,1fr)}
+  .rv-grid{grid-template-columns:1fr 1fr}
+  .mani-fig{max-width:420px}
+}
+@media (max-width:640px){
+  body{font-size:16px;padding-bottom:84px}
+  .top .btn{display:none}
+  .brand img{height:36px;width:36px}
+  .brand span{font-size:20px}
+  .works{grid-template-columns:1fr 1fr;grid-auto-rows:130px;gap:10px}
+  .work.big{grid-column:span 2;grid-row:span 2}
+  .work span{opacity:1;transform:none;font-size:12px}
+  .work::after{opacity:1}
+  .rv-grid{grid-template-columns:1fr}
+  .kinds li{grid-template-columns:1fr;gap:4px}
+  .book-cta .btn{width:100%}
+  .final .hero-ctas{flex-direction:column;width:100%}.final .hero-ctas .btn{width:100%}
+  .mbar{display:flex;gap:6px;position:fixed;left:12px;right:12px;bottom:calc(10px + env(safe-area-inset-bottom,0px));z-index:70;padding:6px;border-radius:999px;background:rgba(244,240,232,.9);-webkit-backdrop-filter:blur(18px) saturate(1.5);backdrop-filter:blur(18px) saturate(1.5);border:1px solid rgba(23,21,26,.1);box-shadow:0 14px 34px -14px rgba(23,21,26,.45)}
+  .mbar.dark{background:rgba(23,21,26,.6);border-color:rgba(255,255,255,.16)}
+  .mbar .btn{flex:1;min-height:48px;white-space:nowrap;padding:0 16px}
+  .mbar .btn-ghost{flex:0 0 48px;width:48px;padding:0;border-color:transparent;background:rgba(23,21,26,.07)}
+  .mbar.dark .btn-ghost{background:rgba(255,255,255,.16);color:#fff}
+  .mbar .btn-ghost svg{width:20px;height:20px}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+
+/* Botones flotantes (cabecera y barra móvil): aparecen tras un mínimo scroll, no al pintar el hero */
+.top .btn-primary{transition:opacity .35s,transform .35s cubic-bezier(.2,.7,.2,1),background .25s}
+html.cta-wait .top .btn-primary{opacity:0;transform:translateY(-8px);pointer-events:none}
+.mbar{transition:transform .35s cubic-bezier(.2,.7,.2,1),opacity .35s,background .4s,border-color .4s}
+html.cta-wait .mbar,.mbar.off{transform:translateY(150%)!important;opacity:0!important;pointer-events:none}
+
+/* Temporadas: el eyebrow del hero pasa a píldora fina con un punto rojo latiendo. Sin decoración */
+.hero .eyebrow.t-on{display:inline-flex;align-items:center;gap:10px;padding:6px 14px 6px 12px;border-radius:999px;border:1px solid rgba(243,238,229,.24);color:var(--cream);letter-spacing:.12em}
+.hero .eyebrow.t-on::before{content:"";width:7px;height:7px;border-radius:50%;flex:none;background:#E2474F;box-shadow:0 0 0 0 rgba(226,71,79,.55);animation:t-pulso 2s ease-out infinite}
+@keyframes t-pulso{70%{box-shadow:0 0 0 7px rgba(226,71,79,0)}100%{box-shadow:0 0 0 0 rgba(226,71,79,0)}}
+@media (max-width:640px){.hero .eyebrow.t-on{font-size:11px;letter-spacing:.08em;padding:5px 12px 5px 10px}}
+
+/* ===== HERO PROPIO: «la composición» ===== */
+/* Hero oscuro como la tinta. A la izquierda la promesa; a la derecha un componedor con tipos de plomo (al revés, como en el taller)
+   que se entintan y se imprimen sobre una tarjeta. El visitante escribe su nombre y lo imprime. */
+.hero.tp{position:relative;isolation:isolate;overflow:hidden;color:var(--cream);
+  background:radial-gradient(70% 60% at 78% 42%,rgba(147,30,36,.32),transparent 70%),radial-gradient(90% 80% at 10% 0%,#25212A 0%,#17151A 60%);
+  padding:calc(var(--head) + clamp(30px,5vw,68px)) 0 0}
+.hero.tp::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;opacity:.55;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 .05 0'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E")}
+.tp-grid{position:relative;z-index:1;display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:clamp(28px,5vw,80px);align-items:center}
+.tp-grid>*{min-width:0}
+.tp .hero-copy{display:grid;justify-items:start}
+.tp .eyebrow{color:rgba(243,238,229,.66)}
+.tp h1{font-size:clamp(46px,6vw,92px);line-height:1;margin-top:18px;letter-spacing:-.03em;color:var(--cream)}
+.tp h1 .n1{display:block}
+.tp h1 em{display:block;color:var(--cream)}
+.tp h1 em::after{content:"";display:inline-block;width:.14em;height:.14em;margin-left:.04em;border-radius:50%;background:#D23A41;vertical-align:.03em}
+.tp .tp-stamp{margin-top:22px;padding:9px 15px 9px 13px;border:1px solid rgba(243,238,229,.22);border-radius:999px;color:rgba(243,238,229,.78);background:rgba(255,255,255,.05);font-size:14px;white-space:nowrap;transition:background .25s,border-color .25s}
+.tp .tp-stamp:hover{background:rgba(255,255,255,.1);border-color:rgba(243,238,229,.4)}
+.tp .tp-stamp b{color:#fff;font-size:16px}
+.tp .tp-stamp .stars{color:#F2B630}
+.tp .hero-sub{margin-top:22px;max-width:31em;font-size:clamp(16px,1.25vw,18px);color:rgba(243,238,229,.74)}
+.tp .hero-ctas{margin-top:28px;gap:22px}
+.tp .tel{color:var(--cream)}
+.tp .tel svg{color:#E2777C}
+.hero-micro-l{margin-top:12px;font-size:13.5px;color:rgba(243,238,229,.55)}
+.hero-q{margin:22px 0 0;padding-left:14px;border-left:2px solid var(--red);font:italic 400 16px/1.45 var(--font-display);color:rgba(243,238,229,.82);max-width:30em}
+.hero-q cite{display:block;margin-top:4px;font:500 11.5px var(--mono);font-style:normal;letter-spacing:.06em;color:rgba(243,238,229,.5)}
+
+/* La prensa */
+.tp-press{--cw:min(100%,440px,max(250px,calc((100svh - var(--head) - 300px) * 1.5)));width:var(--cw);justify-self:center;container-type:inline-size;margin:0;display:grid;justify-items:center;gap:14px}
+.tp-stick{position:relative;width:90cqw;height:20cqw;padding:7px 10px;border-radius:7px;
+  background:linear-gradient(180deg,#4A454F,#2A262E 55%,#1F1C22);box-shadow:inset 0 1px 0 rgba(255,255,255,.18),0 18px 30px -16px rgba(0,0,0,.8);
+  display:flex;justify-content:center;overflow:hidden;transition:transform .22s cubic-bezier(.5,0,.6,1);z-index:2}
+.tp-stick::before,.tp-stick::after{content:"";position:absolute;top:4px;bottom:4px;width:6px;border-radius:2px;background:linear-gradient(90deg,#8E8A93,#5B5760)}
+.tp-stick::before{left:3px}.tp-stick::after{right:3px}
+.tp-sorts{display:flex;gap:2px;height:100%;transform:scaleX(-1);max-width:100%}
+.sort{display:grid;place-items:center;height:100%;padding:0 .1em;border-radius:2px;font:700 var(--fs,40px)/1 var(--font-display);
+  background:linear-gradient(180deg,#77737D 0%,#58545E 45%,#45414A 100%);color:#CFCBD4;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.3),inset 0 -2px 0 rgba(0,0,0,.35),inset 1px 0 0 rgba(255,255,255,.08);
+  text-shadow:0 -1px 0 rgba(0,0,0,.55),0 1px 0 rgba(255,255,255,.25);transition:color .35s,text-shadow .35s}
+.sort.sp{width:.3em;background:linear-gradient(180deg,#3A363F,#2C2930);box-shadow:inset 0 1px 0 rgba(255,255,255,.08)}
+.sort.new{animation:sort-in .28s cubic-bezier(.2,.7,.2,1) both}
+@keyframes sort-in{from{transform:translateY(-60%);opacity:0}}
+.tp-stick.inked .sort:not(.sp){color:#B8343B;text-shadow:0 -1px 0 rgba(0,0,0,.5),0 0 .5px #7A161B}
+.tp-roller{position:absolute;top:-6px;bottom:-6px;left:-40px;width:26px;border-radius:13px;background:linear-gradient(90deg,#1A0B0C,#5A1418 40%,#2A0C0E);box-shadow:0 0 18px rgba(0,0,0,.5);opacity:0}
+.tp-stick.rolling .tp-roller{animation:roll .6s cubic-bezier(.5,0,.5,1) both}
+@keyframes roll{0%{opacity:1;transform:translateX(0)}100%{opacity:1;transform:translateX(calc(90cqw + 50px))}}
+.tp-stick.press{transform:translateY(9cqw) scale(.97)}
+.tp-sheet{position:relative;width:100%;min-width:0}
+.tp-card,.tp-stick,.tp-ctl{contain:inline-size}
+.tp-card{position:relative;width:100%;aspect-ratio:85/55;border-radius:4px;background:#FBF8F1;color:#17151A;overflow:hidden;
+  box-shadow:0 1px 0 rgba(255,255,255,.6) inset,0 30px 60px -28px rgba(0,0,0,.85),0 0 0 1px rgba(0,0,0,.1);
+  display:grid;align-content:center;justify-items:center;gap:6px;padding:8%;transition:transform .22s cubic-bezier(.5,0,.6,1)}
+.tp-card::before{content:"";position:absolute;inset:0;pointer-events:none;opacity:.6;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1.2' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .4 0 0 0 0 .35 0 0 0 0 .3 0 0 0 .09 0'/%3E%3C/filter%3E%3Crect width='120' height='120' filter='url(%23n)'/%3E%3C/svg%3E")}
+.tp-card::after{content:"";position:absolute;left:8%;right:8%;bottom:20%;height:1px;background:rgba(147,30,36,.35)}
+.tp-stick.press+.tp-sheet .tp-card{transform:translateY(3px) scale(.995)}
+.tp-print{position:relative;max-width:100%;white-space:nowrap;font:700 var(--ps,48px)/1.05 var(--font-display);color:#931E24;letter-spacing:-.01em;mix-blend-mode:multiply;
+  -webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='90' height='90'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.75' numOctaves='2'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -2.2 2.25'/%3E%3C/filter%3E%3Crect width='90' height='90' filter='url(%23n)'/%3E%3C/svg%3E");
+  mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='90' height='90'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.75' numOctaves='2'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -2.2 2.25'/%3E%3C/filter%3E%3Crect width='90' height='90' filter='url(%23n)'/%3E%3C/svg%3E")}
+.tp-print.blank{opacity:0}
+.tp-print.fresh{animation:ink-in .55s ease-out both}
+@keyframes ink-in{0%{opacity:0;filter:blur(1.5px);transform:scale(1.04)}35%{opacity:1;filter:blur(.4px)}100%{opacity:1;filter:none;transform:none}}
+.tp-sub{position:absolute;left:0;right:0;bottom:8%;text-align:center;font:500 max(9px,2.6cqw)/1 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:#7C746B}
+.tp-ctl{display:flex;gap:6px;width:100%;padding:5px;border-radius:999px;background:rgba(255,255,255,.07);border:1px solid rgba(243,238,229,.18)}
+.tp-ctl input{flex:1;min-width:0;height:42px;padding:0 16px;border:0;border-radius:999px;background:transparent;color:var(--cream);font:500 16px var(--font-body);-webkit-appearance:none;appearance:none}
+.tp-ctl input::placeholder{color:rgba(243,238,229,.5)}
+.tp-ctl input:focus{outline:none}
+.tp-ctl:focus-within{border-color:rgba(243,238,229,.5)}
+.tp-go{all:unset;box-sizing:border-box;cursor:pointer;height:42px;padding:0 20px;border-radius:999px;background:var(--cream);color:var(--ink);font:600 14.5px/42px var(--font-body);white-space:nowrap;transition:background .2s}
+.tp-go:hover{background:#fff}
+.tp-go:focus-visible{outline:2px solid #fff;outline-offset:2px}
+.tp-cap{font:400 12px/1.5 var(--mono);color:rgba(243,238,229,.55);text-align:center;max-width:100%}
+.tp-cap a{color:var(--cream);text-decoration:none;border-bottom:1px solid rgba(243,238,229,.4)}
+.tp-cap a:hover{border-color:#fff}
+
+/* Pie del hero */
+.tp-slug{position:relative;z-index:1;margin-top:clamp(36px,5vw,60px);padding-block:18px clamp(22px,3vw,30px);border-top:1px solid rgba(243,238,229,.14)}
+.tp-facts{font:400 12.5px/1.6 var(--mono);color:rgba(243,238,229,.55);letter-spacing:.02em}
+.tp-facts b{color:var(--cream);font-weight:500}
+.tp-facts span{margin:0 10px;color:rgba(243,238,229,.3)}
+
+@media (max-width:960px){
+  .tp-grid{grid-template-columns:minmax(0,1fr) minmax(0,.85fr)}
+  .tp-facts span:nth-of-type(n+2),.tp-facts b:nth-of-type(n+3){display:none}
+  .hero-q{display:none}
+}
+@media (max-width:760px){
+  .hero.tp{padding-top:calc(var(--head) + 20px)}
+  .tp-grid{grid-template-columns:minmax(0,1fr);gap:30px}
+  .tp .eb-2{display:none}
+  .tp h1{font-size:clamp(38px,11.5vw,60px);margin-top:12px}
+  .tp .tp-stamp{margin-top:14px}
+  .tp .hero-sub{margin-top:14px;font-size:15.5px}
+  .tp .hero-ctas{margin-top:18px;gap:12px;width:100%}
+  .tp .hero-ctas>.btn{width:100%}
+  .tp .tel{display:none}
+  .hero-micro-l{margin-top:10px;width:100%;text-align:center}
+  .tp-press{--cw:min(100%,380px)}
+  .tp-slug{margin-top:26px}
+  .tp-facts{font-size:12px}
+}
+@media (max-width:760px) and (max-height:700px){.tp .hero-sub{display:none}}
+@media (max-width:360px){.tp .tp-stamp{gap:6px;padding:7px 11px;font-size:12.5px}.tp .tp-stamp .stars svg{width:10px;height:10px}.tp .tp-stamp b{font-size:14px}.tp .hero-ctas>.btn{padding:0 16px;font-size:14.5px}}
+@media (min-width:761px) and (max-height:620px){
+  .hero.tp{padding-top:calc(var(--head) + 16px)}
+  .tp h1{font-size:clamp(40px,4.6vw,62px);margin-top:10px}
+  .tp .hero-sub,.hero-q,.hero-micro-l{display:none}
+  .tp .tp-stamp{margin-top:14px}
+  .tp .hero-ctas{margin-top:16px}
+}
+@media (min-width:761px) and (max-height:800px){.hero-q{display:none}}
+@media (max-width:360px){.brand span{font-size:17px}.brand img{height:32px;width:32px}.intro-core{padding-inline:16px;text-align:center}.intro-core small{letter-spacing:.08em;font-size:11px}.intro-core b{font-size:24px}}
+/* ===== /HERO PROPIO ===== */
+
+/* ---- Paneles laterales ---- */
+.bk{position:fixed;inset:0;z-index:120}
+.bk[hidden]{display:none}
+.bk-scrim{position:absolute;inset:0;background:rgba(18,18,20,.55);opacity:0;transition:opacity .35s ease}
+.bk.open .bk-scrim{opacity:1}
+.bk-panel{position:absolute;top:0;right:0;bottom:0;width:min(480px,100%);background:var(--shell);display:flex;flex-direction:column;box-shadow:-30px 0 80px -30px rgba(18,18,20,.45);transform:translateX(100%);transition:transform .42s cubic-bezier(.2,.8,.2,1)}
+.bk.open .bk-panel{transform:none}
+.bk-head{display:grid;grid-template-columns:44px 1fr 44px;align-items:center;gap:8px;padding:calc(10px + env(safe-area-inset-top,0px)) 12px 10px;border-bottom:1px solid var(--line);background:#fff}
+.bk-head .t{text-align:center;display:grid;gap:2px}
+.bk-head .t span{font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft)}
+.bk-head .t b{font-family:var(--font-display);font-weight:400;font-size:20px;color:var(--hibiscus);line-height:1.1}
+.bk-ib{all:unset;cursor:pointer;width:44px;height:44px;border-radius:50%;display:grid;place-items:center;color:var(--ink)}
+.bk-ib:hover{background:var(--shell-2)}
+.bk-ib:focus-visible{outline:3px solid var(--hibiscus)}
+.bk-ib svg{width:22px;height:22px}
+.bk-ib[disabled]{visibility:hidden}
+.bk-prog{height:4px;background:var(--shell-2)}
+.bk-prog i{display:block;height:100%;background:linear-gradient(90deg,var(--hibiscus),var(--sun));transform-origin:left;transition:transform .35s ease}
+.bk-body{flex:1;overflow-y:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch;padding:28px 22px 24px}
+.bk-pane{display:grid;gap:18px;align-content:start}
+.bk-pane[hidden]{display:none}
+.bk-pane h3{font-size:clamp(26px,6vw,32px);line-height:1.1}
+.bk-pane .sub{color:var(--ink-soft);margin-top:-8px}
+.bk-opts{display:grid;gap:10px}
+.bk-opts label{position:relative;cursor:pointer;display:block}
+.bk-opts input{position:absolute;opacity:0;inset:0;margin:0;cursor:pointer}
+.bk-opts span{display:flex;align-items:center;justify-content:space-between;min-height:58px;padding:0 18px;border-radius:16px;border:1.5px solid var(--line);background:#fff;font-size:17px;font-weight:600;transition:border-color .2s,background .2s,color .2s}
+.bk-opts span::after{content:"";width:22px;height:22px;border-radius:50%;border:2px solid var(--line);flex:none;transition:all .2s}
+.bk-opts input[type=checkbox]+span::after{border-radius:7px}
+.bk-opts input:checked+span{border-color:var(--hibiscus);background:#FBEDEC;color:var(--hibiscus-ink)}
+.bk-opts input:checked+span::after{border-color:var(--hibiscus);background:var(--hibiscus) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='none' stroke='white' stroke-width='3.2' stroke-linecap='round' stroke-linejoin='round' d='M6 12l4 4 8-8'/%3E%3C/svg%3E") center/14px no-repeat}
+.bk-opts input:focus-visible+span{outline:3px solid var(--hibiscus);outline-offset:2px}
+.bk-opts.row{grid-template-columns:repeat(auto-fit,minmax(0,1fr));gap:8px}
+.bk-opts.row span{justify-content:center;min-height:50px;padding:0 10px;font-size:15px;text-align:center}
+.bk-opts.row span::after{display:none}
+.bk-field{display:grid;gap:8px;min-width:0}
+.bk-field>span{font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-soft)}
+.bk-field input,.bk-field textarea{display:block;width:100%;min-width:0;max-width:100%;min-height:56px;padding:14px 16px;border-radius:14px;border:1.5px solid var(--line);background:#fff;font:500 17px var(--font-body);color:var(--ink);-webkit-appearance:none;appearance:none}
+.bk-field input[type=date]{text-align:left}
+.bk-field input::-webkit-date-and-time-value{text-align:left}
+.bk-field textarea{min-height:96px;resize:vertical}
+.cal{background:#fff;border:1.5px solid var(--line);border-radius:18px;padding:10px 12px 14px}
+.cal-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:6px}
+.cal-head b{font-size:17px}
+.cal-head .bk-ib[disabled]{visibility:visible;opacity:.25;cursor:default}
+.cal-dow,.cal-grid{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:4px;text-align:center}
+.cal-dow span{font-size:12px;font-weight:700;color:var(--ink-soft);padding:4px 0}
+.cal-dow .we,.cal-grid .we{color:var(--hibiscus)}
+.cal-grid button{all:unset;box-sizing:border-box;cursor:pointer;aspect-ratio:1;max-height:48px;width:100%;display:grid;place-items:center;border-radius:12px;font-weight:600;font-size:15px;font-variant-numeric:tabular-nums;color:var(--ink);transition:background .15s,color .15s}
+.cal-grid button.we{color:var(--hibiscus)}
+.cal-grid button:hover:not([disabled]){background:var(--shell-2)}
+.cal-grid button[disabled]{opacity:.28;cursor:default}
+.cal-grid button{position:relative}
+.cal-grid button.today{opacity:1;color:var(--ink);box-shadow:inset 0 0 0 2px var(--sun);background:#FBEDEC}
+.cal-grid button.today::after{content:"";position:absolute;left:50%;bottom:12%;width:5px;height:5px;margin-left:-2.5px;border-radius:50%;background:#931E24}
+.cal-legend{display:flex;align-items:center;gap:6px;margin:10px 2px 0;font-size:13px;font-weight:600;color:var(--ink-soft)}
+.cal-legend i{width:14px;height:14px;border-radius:5px;box-shadow:inset 0 0 0 2px var(--sun);background:#FBEDEC;position:relative;flex:none}
+.cal-legend i::after{content:"";position:absolute;left:50%;bottom:2px;width:4px;height:4px;margin-left:-2px;border-radius:50%;background:#931E24}
+.cal-grid button[aria-pressed="true"]{background:var(--hibiscus);color:#fff}
+.cal-grid button:focus-visible{outline:3px solid var(--hibiscus);outline-offset:1px}
+.cal-sel{margin:4px 0 0;font-weight:600;color:var(--ink-soft)}
+.cal-sel.on{color:var(--hibiscus-ink)}
+.bk-field input:focus,.bk-field textarea:focus{outline:none;border-color:var(--hibiscus)}
+.bk-field input[aria-invalid="true"]{border-color:#C6283D;background:#FFF2F4}
+.stepper{display:grid;grid-template-columns:56px 1fr 56px;align-items:center;background:#fff;border:1.5px solid var(--line);border-radius:16px;overflow:hidden}
+.stepper button{all:unset;cursor:pointer;height:56px;display:grid;place-items:center;font-size:26px;font-weight:600;color:var(--hibiscus)}
+.stepper button:active{background:var(--shell-2)}
+.stepper button:focus-visible{outline:3px solid var(--hibiscus);outline-offset:-3px}
+.stepper output{text-align:center;font-size:22px;font-weight:700;font-variant-numeric:tabular-nums}
+.bk-foot{padding:12px 22px calc(14px + env(safe-area-inset-bottom,0px));border-top:1px solid var(--line);background:#fff;display:grid;gap:8px}
+.bk-foot .btn{width:100%;min-height:56px;font-size:17px}
+.bk-foot [hidden]{display:none!important}
+.f-error{margin:0;color:#B3213A;font-weight:600;font-size:15px}
+.btn-wa{background:#1FA855;color:#fff;box-shadow:0 12px 24px -12px rgba(31,168,85,.8);width:100%;white-space:nowrap}
+.btn-wa:hover{background:#178F47}
+.btn-wa svg{width:22px;height:22px}
+.f-preview{margin:0;white-space:pre-wrap;font:16px/1.5 var(--font-body);background:#E7FFDB;border-radius:16px 16px 16px 4px;padding:16px 18px;color:#123;box-shadow:0 1px 0 rgba(0,0,0,.06)}
+.f-copy{all:unset;cursor:pointer;justify-self:center;font-size:14px;font-weight:600;color:var(--hibiscus-ink);text-decoration:underline;text-underline-offset:3px;padding:4px 8px}
+.f-copy:focus-visible{outline:3px solid var(--hibiscus);border-radius:6px}
+.f-hint{margin:0;font-size:13px;color:var(--ink-soft);text-align:center}
+
+
+.hrs{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.stepper.sm{grid-template-columns:40px 1fr 40px;border-radius:14px}
+.stepper.sm button{height:44px;font-size:22px}
+.stepper.sm button[disabled]{opacity:.25;cursor:default}
+.stepper.sm output{font-size:18px}
+.hrs-out{margin:-4px 0 0;font-size:14px;font-weight:600;color:var(--hibiscus-ink)}
+/* Panel compacto: ningún paso necesita scroll */
+.bk-body{padding:18px 18px 14px}
+.bk-pane{gap:14px}
+.bk-pane h3{font-size:24px}
+.bk-pane .sub{margin-top:-6px;font-size:15px}
+.bk-field{gap:6px}
+.bk-field>span{font-size:12px}
+.bk-opts{gap:8px}
+.bk-opts span{min-height:50px;font-size:16px;border-radius:14px}
+.bk-opts.row span{min-height:44px}
+.bk-opts.grid2{grid-template-columns:1fr 1fr}
+.bk-opts.grid2 span{min-height:44px;padding:0 12px;font-size:14px}
+.bk-opts.grid2 span::after{width:18px;height:18px}
+.bk-field input,.bk-field textarea{min-height:48px;padding:11px 14px;font-size:16px}
+.bk-field textarea{min-height:76px}
+.stepper{grid-template-columns:52px 1fr 52px}
+.stepper button{height:48px}
+.cal{padding:6px 8px 10px}
+.cal-head{margin-bottom:2px}
+.cal-head .bk-ib{width:38px;height:38px}
+.cal-dow span{padding:2px 0}
+.cal-grid{gap:2px}
+.cal-grid button{aspect-ratio:auto;height:clamp(34px,5.2vh,44px)}
+.cal-legend{margin-top:6px;font-size:12px}
+.cal-sel{margin:0;font-size:14px}
+.f-preview{font-size:14px;padding:12px 14px}
+.bk-foot{padding:10px 18px calc(10px + env(safe-area-inset-bottom,0px));gap:6px}
+.bk-foot .btn{min-height:50px}
+.bk-head{padding-block:calc(6px + env(safe-area-inset-top,0px)) 6px}
+@media (max-height:700px){
+  .bk-pane h3{font-size:22px}
+  .bk-opts span{min-height:46px}
+  .bk-opts.row span,.bk-opts.grid2 span{min-height:40px}
+  .stepper button{height:44px}
+  .cal-grid button{height:32px;font-size:14px}
+  .bk-body{padding-top:14px}
+  .f-preview{font-size:13px;line-height:1.4;padding:10px 12px}
+  .bk-pane .sub{font-size:13.5px}
+}
+@media (max-height:620px){.bk-pane{gap:10px}.bk-pane h3{font-size:20px}.f-preview{font-size:12.5px;line-height:1.35}}
+.rvd-body{display:grid;grid-template-columns:minmax(0,1fr);gap:18px;align-content:start;overflow-x:hidden;overscroll-behavior-x:none;touch-action:pan-y}
+.rvd .bk-panel{overflow-x:hidden;max-width:100vw}
+.rvd-body>*,.rvd-list>*{min-width:0;max-width:100%}
+.rvd-list .rv,.rvd-list .rv *{overflow-wrap:anywhere}
+.rvd-list .rv-top{flex-wrap:wrap}.rvd-list .rv-tag{white-space:normal}
+.rvd-sum{display:grid;grid-template-columns:auto minmax(0,1fr);gap:22px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:var(--r-md);padding:18px 20px}
+.rvd-score{display:grid;justify-items:center;gap:4px}
+.rvd-score b{font-size:44px;line-height:1;font-weight:700;color:var(--ink)}
+.rvd-score small{font-size:13px;color:var(--ink-soft)}
+.rvd-dist{list-style:none;margin:0;padding:0;display:grid;gap:5px;font-size:13px;color:var(--ink-soft)}
+.rvd-dist li{display:grid;grid-template-columns:12px 1fr 22px;gap:8px;align-items:center}
+.rvd-dist i{height:8px;border-radius:99px;background:var(--shell-2);overflow:hidden}.rvd-dist b{display:block;height:100%;background:#F5B400;border-radius:99px}
+.rvd-dist em{font-style:normal;text-align:right}
+.rvd-h{margin:6px 0 0;font-size:17px}
+.rvd-list{display:grid;grid-template-columns:minmax(0,1fr);gap:12px}
+.rvd-list .rv{background:#fff;opacity:1!important;transform:none!important}
+.rvd-map{border-radius:var(--r-md);overflow:hidden;border:1px solid var(--line);background:var(--shell-2);height:300px;flex:none}
+.rvd-map iframe{width:100%;height:100%;border:0;display:block}
+.rvd-note{margin:0;font-size:13px;color:var(--ink-soft)}
+.rvd-foot{padding:12px 16px calc(12px + env(safe-area-inset-bottom,0px));border-top:1px solid var(--line);background:#fff}
+.rvd-foot .btn{width:100%}
+/* Simulador en panel lateral; los tres rombos del logo hacen de cargador */
+/* Subir arriba */
+.totop{position:fixed;right:20px;bottom:24px;z-index:65;width:48px;height:48px;border-radius:50%;border:1px solid rgba(255,255,255,.6);background:rgba(255,255,255,.72);-webkit-backdrop-filter:blur(14px) saturate(1.6);backdrop-filter:blur(14px) saturate(1.6);color:var(--ink);display:grid;place-items:center;cursor:pointer;box-shadow:0 10px 30px -10px rgba(21,21,21,.3);opacity:0;transform:translateY(12px) scale(.9);pointer-events:none;transition:opacity .3s,transform .3s}
+.totop.on{opacity:1;transform:none;pointer-events:auto}
+.totop:hover{transform:translateY(-2px)}
+.totop svg{width:22px;height:22px}
+@media (max-width:960px){.totop{bottom:calc(86px + env(safe-area-inset-bottom,0px));right:16px;width:44px;height:44px}}
+@media (max-width:640px){.bk-panel{width:100%;transform:translateY(100%);box-shadow:none}}
+.bk-head .t b{font-family:var(--font-display);font-weight:400;color:var(--ink)}
+.bk-opts input:checked+span{background:#FBEDEC}
+.btn-wa{font-size:16px}
+.bk-pane h3:focus{outline:none}
+.bk-opts.grid2.tight span{min-height:44px;padding:0 12px;font-size:14.5px}
+@media (max-height:700px){.bk-opts.grid2.tight span{min-height:38px;font-size:14px}}
+
+</style>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-pen" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M4 20h4L19 9a2.8 2.8 0 0 0-4-4L4 16zM13.5 6.5l4 4"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 22s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></g></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="M3.5 6.5l8.5 6.5 8.5-6.5"/></g></symbol>
+  <symbol id="i-fb" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M15 3h-2.5A4.5 4.5 0 0 0 8 7.5V10H5.5v4H8v7h4v-7h3l.5-4H12V7.8c0-.5.4-.8.8-.8H15z"/></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2.8l2.8 5.9 6.4.8-4.7 4.4 1.2 6.4L12 17.2l-5.7 3.1 1.2-6.4L2.8 9.5l6.4-.8z"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-truck" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6h12v10H2zM14 9h4l4 4v3h-8z"/><circle cx="6.5" cy="17.5" r="1.8"/><circle cx="17.5" cy="17.5" r="1.8"/></g></symbol>
+</svg>
+
+<div class="intro" id="intro" aria-hidden="true">
+  <div class="intro-core">
+    <span class="disc"><svg class="ring" viewBox="0 0 100 100"><circle cx="50" cy="50" r="48" pathLength="1"/></svg><img src="img/logo-disc.png" alt=""></span>
+    <b>Gráficas Martín</b>
+    <small>Imprenta · Gijón · desde 1962</small>
+  </div>
+</div>
+<noscript><style>.intro{display:none}</style></noscript>
+
+<header class="top dark" id="top">
+  <div class="wrap">
+    <a class="brand" href="#hero" aria-label="Gráficas Martín, inicio"><img src="img/logo-disc.png" alt=""><span>Gráficas Martín</span></a>
+    <nav class="nav" aria-label="Secciones">
+      <a href="#trabajos">Trabajos</a>
+      <a href="#servicios">Servicios</a>
+      <a href="#proceso">Cómo trabajamos</a>
+      <a href="#resenas">Reseñas</a>
+      <a href="#visita">Contacto</a>
+    </nav>
+    <a class="btn btn-primary" href="#presupuesto">Presupuesto</a>
+  </div>
+  <div class="progress" id="progress"></div>
+</header>
+
+<main>
+  <section class="hero tp" id="hero">
+    <div class="wrap tp-grid">
+      <div class="hero-copy">
+        <span class="eyebrow" data-t="eyebrow">Imprenta en Gijón<span class="eb-2"> · desde 1962</span></span>
+        <h1 data-t="h1"><span class="n1">Bien impreso,</span> <em>desde 1962</em></h1>
+        <a class="g-rate tp-stamp" href="#resenas" data-rvd><span class="stars"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></span><b>4,8</b><span>en Google · 20 reseñas</span></a>
+        <p class="hero-sub" data-t="sub">Diseño, preimpresión e impresión offset, digital y gran formato en el centro de Gijón: tarjetas, papelería, folletos, catálogos, cartas, invitaciones, calendarios y lonas. Reparto propio por Asturias y envíos a toda España.</p>
+        <div class="hero-ctas">
+          <a class="btn btn-primary" href="#presupuesto"><svg aria-hidden="true"><use href="#i-pen"/></svg><span data-t="cta">Pedir presupuesto</span></a>
+          <a class="tel" href="tel:+34985386800"><svg><use href="#i-phone"/></svg>985 38 68 00</a>
+        </div>
+        <p class="hero-micro-l" data-t="micro">Por WhatsApp o por teléfono · sin compromiso</p>
+        <blockquote class="hero-q">«Nos aconsejaron muy bien. Trabajo impecable» <cite>Vanesa C. · Google</cite></blockquote>
+      </div>
+
+      <figure class="tp-press" id="tp-press" aria-label="Prueba la imprenta: compón una palabra con tipos de plomo e imprímela">
+        <div class="tp-stick" aria-hidden="true">
+          <div class="tp-sorts" id="tp-sorts"></div>
+          <i class="tp-roller" id="tp-roller"></i>
+        </div>
+        <div class="tp-sheet">
+          <div class="tp-card" id="tp-card"><span class="tp-print" id="tp-print">Tarjetas</span><small class="tp-sub" id="tp-sub">Impreso en Gijón</small></div>
+        </div>
+        <form class="tp-ctl" id="tp-ctl" autocomplete="off">
+          <label class="sr" for="tp-in">Escribe una palabra para imprimirla</label>
+          <input id="tp-in" type="text" maxlength="14" spellcheck="false" placeholder="Escribe tu nombre">
+          <button type="submit" class="tp-go">Imprimir</button>
+        </form>
+        <figcaption class="tp-cap" id="tp-cap">Compón tu nombre en tipos de plomo y pulsa «Imprimir»</figcaption>
+      </figure>
+    </div>
+    <div class="wrap tp-slug">
+      <p class="tp-facts"><b>Desde 1962</b> en Gijón<span>·</span><b>Offset, digital</b> y gran formato<span>·</span><b>Reparto propio</b> por Asturias<span>·</span><b>Envíos</b> a toda España</p>
+    </div>
+  </section>
+
+  <section class="sec manifesto" id="manifiesto">
+    <div class="wrap mani-grid">
+      <div>
+        <span class="eyebrow">¿Somos la imprenta más barata de Gijón?</span>
+        <h2 class="mani" id="mani">Nunca lo hemos querido ser. Un euro arriba o abajo no es tan importante como que el trabajo quede bien hecho.</h2>
+        <p class="lead">Buscamos el mejor precio posible para tu proyecto, pero lo que nos ha traído hasta aquí es la calidad del producto final, la puntualidad en las entregas y el trato personal. Tu proyecto es nuestro proyecto.</p>
+      </div>
+      <figure class="mani-fig" data-reveal><img src="img/tipos-1962.jpg" alt="Tipos de plomo de Gráficas Martín con el año 62 compuesto" loading="lazy"><figcaption>Tipos móviles del taller. Así se componía antes de la preimpresión digital.</figcaption></figure>
+    </div>
+  </section>
+
+  <section class="sec band-white" id="trabajos">
+    <div class="wrap">
+      <div class="sec-head" data-reveal>
+        <span class="eyebrow">Trabajos</span>
+        <h2>Papel que <em>se nota en la mano</em></h2>
+        <p class="lead">Algunos trabajos salidos de nuestra imprenta en Gijón, para empresas, hostelería, particulares, agencias y estudios de diseño.</p>
+      </div>
+      <div class="filters" role="group" aria-label="Filtrar trabajos">
+        <button type="button" class="on" data-f="all">Todos</button>
+        <button type="button" data-f="papeleria">Papelería corporativa</button>
+        <button type="button" data-f="publicidad">Publicidad</button>
+        <button type="button" data-f="eventos">Hostelería y celebraciones</button>
+        <button type="button" data-f="granformato">Gran formato</button>
+      </div>
+      <div class="works" id="works"></div>
+      <div class="works-more"><button type="button" class="btn btn-ghost" id="works-more">Ver más trabajos</button></div>
+    </div>
+  </section>
+
+  <section class="sec" id="servicios">
+    <div class="wrap">
+      <div class="sec-head" data-reveal>
+        <span class="eyebrow">Servicio integral de artes gráficas</span>
+        <h2>Todo lo que se imprime, <em>bajo un mismo techo</em></h2>
+      </div>
+      <div class="svc">
+        <div data-reveal><h3>Imprenta y papelería</h3><ul><li>Tarjetas, sobres y carpetas</li><li>Papel de carta, talonarios y recibos</li><li>Logotipo e imagen corporativa</li><li>Relieves y tintas UVI</li><li>Sellos de caucho</li><li>Merchandising e imanes</li></ul></div>
+        <div data-reveal><h3>Publicidad y celebraciones</h3><ul><li>Folletos y trípticos</li><li>Catálogos y revistas</li><li>Carteles</li><li>Calendarios de pared, sobremesa y bolsillo</li><li>Cartas para restaurantes</li><li>Invitaciones de boda y recordatorios de comunión</li></ul></div>
+        <div data-reveal><h3>Gran formato</h3><ul><li>Lonas</li><li>Vinilos de corte</li><li>Rotulación</li><li>Soportes expositivos</li><li>Trabajos personalizados</li></ul></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec band-ink taller" id="taller">
+    <div class="wrap taller-grid">
+      <figure class="taller-img" data-reveal><img src="img/taller-heidelberg.jpg" alt="Máquina Heidelberg en el taller de Gráficas Martín" loading="lazy"></figure>
+      <div data-reveal>
+        <span class="eyebrow">Tipos de impresión</span>
+        <h2>Offset, digital o gran formato: <em>te aconsejamos el que conviene</em></h2>
+        <ul class="kinds">
+          <li><b>Offset</b><span>Reproducción fiel y detallada, gran variedad de papeles y el mejor coste en tiradas grandes.</span></li>
+          <li><b>Digital</b><span>Pruebas y tiradas cortas rentables, entregas rápidas y cambios de última hora.</span></li>
+          <li><b>Gran formato</b><span>Lonas, vinilos y soportes que se ven desde lejos y resisten en el exterior.</span></li>
+        </ul>
+        <a class="btn btn-light" href="#presupuesto">Consultar mi trabajo <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec sketch-sec" id="proceso">
+    <div class="wrap sketch-grid">
+      <div class="sketch-copy">
+        <div class="sec-head" data-reveal>
+          <span class="eyebrow">Cómo trabajamos</span>
+          <h2>De tu idea <em>a tus manos</em></h2>
+          <p class="lead">Trae tu proyecto o cuéntanos la idea. Elegimos contigo la mejor solución para el trabajo y para tu bolsillo, y te lo llevamos.</p>
+        </div>
+        <ol class="stages" id="stages">
+          <li data-s="0" class="on"><b>01</b><div><h3>Cuéntanos</h3><p>Qué necesitas, para cuándo y cuántas unidades. En la imprenta, por teléfono o por WhatsApp.</p></div></li>
+          <li data-s="1"><b>02</b><div><h3>Diseño y preimpresión</h3><p>Lo diseñamos o preparamos tu archivo. Si hace falta, prueba en digital y correcciones.</p></div></li>
+          <li data-s="2"><b>03</b><div><h3>Impresión</h3><p>En offset, digital o gran formato, en el papel que mejor le va a tu trabajo.</p></div></li>
+          <li data-s="3"><b>04</b><div><h3>Entrega</h3><p>Con nuestro transporte por Asturias o por mensajería a cualquier punto de España.</p></div></li>
+        </ol>
+      </div>
+      <figure class="board" id="board" data-s="0" aria-label="Ilustración del proceso: de un boceto a una pila de tarjetas impresas">
+        <svg viewBox="0 0 600 460" class="draw" aria-hidden="true">
+          <defs><pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M20 0H0V20" fill="none" stroke="rgba(23,21,26,.07)"/></pattern></defs>
+          <rect width="600" height="460" fill="url(#grid)"/>
+          <g class="stack">
+            <rect x="136" y="132" width="340" height="216" rx="6" fill="#fff" stroke="rgba(23,21,26,.25)"/>
+            <rect x="128" y="124" width="340" height="216" rx="6" fill="#fff" stroke="rgba(23,21,26,.25)"/>
+            <rect x="120" y="116" width="340" height="216" rx="6" fill="#fff" stroke="rgba(23,21,26,.25)"/>
+          </g>
+          <g class="pencil" fill="none" stroke="#2a2a2a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path pathLength="1" d="M110 100h340v216H110z"/>
+            <path pathLength="1" d="M140 150h170"/>
+            <path pathLength="1" d="M140 182h120"/>
+            <path pathLength="1" d="M140 262h200M140 284h150"/>
+            <path pathLength="1" class="dim" d="M110 76v14M450 76v14M110 83h340"/>
+            <path pathLength="1" class="dim" d="M474 100h14M474 316h14M481 100v216"/>
+          </g>
+          <g class="fab">
+            <rect x="110" y="100" width="340" height="216" rx="6" fill="#fff" stroke="rgba(23,21,26,.2)"/>
+            <rect x="110" y="100" width="14" height="216" fill="#931E24"/>
+            <text x="146" y="168" class="w1">Tu nombre</text>
+            <text x="146" y="198" class="w2">Tu oficio · Tu ciudad</text>
+            <text x="146" y="276" class="w3">tel. 000 00 00 00</text>
+            <text x="146" y="298" class="w3">hola@tunegocio.es</text>
+          </g>
+          <g class="crops" stroke="#17151A" stroke-width="1.2"><path d="M94 100h-18M110 84V66M466 100h18M450 84V66M94 316h-18M110 332v18M466 316h18M450 332v18"/></g>
+        </svg>
+      </figure>
+    </div>
+  </section>
+
+  <section class="sec band-white" id="resenas">
+    <div class="wrap">
+      <div class="sec-head" data-reveal>
+        <span class="eyebrow">Reseñas de Google</span>
+        <h2>4,8 de media en 20 reseñas. <em>Y estudios de diseño que imprimen con nosotros</em></h2>
+      </div>
+      <div class="rv-grid" id="rv-grid"></div>
+      <p class="rv-more"><a href="#resenas" data-rvd>Ver más reseñas →</a> <span>Fragmentos literales de reseñas de 5 estrellas en Google.</span></p>
+    </div>
+  </section>
+
+  <section class="sec band-ink" id="presupuesto">
+    <div class="wrap book-cta" data-reveal>
+      <div>
+        <span class="eyebrow">Presupuesto sin compromiso</span>
+        <h2>Cuéntanos qué quieres imprimir. <em>Te aconsejamos</em></h2>
+        <p class="lead">Cuatro preguntas rápidas y tu solicitud sale ya escrita por WhatsApp, con un código propio.</p>
+        <ul class="book-perks"><li>Sin registrarte</li><li>Menos de un minuto</li><li>O llámanos al 985 38 68 00</li></ul>
+      </div>
+      <a class="btn btn-light" href="#presupuesto">Pedir presupuesto</a>
+    </div>
+  </section>
+
+  <section class="sec band-white draft" id="borrador" hidden>
+    <div class="wrap">
+      <div class="sec-head"><span class="eyebrow">Borrador · Datos por confirmar</span><h2>Plazos y precios <em>claros</em></h2></div>
+      <ul class="incl">
+        <li>¿El 649 09 51 10 atiende WhatsApp? <mark>[confirmar; el panel de presupuesto envía ahí]</mark></li>
+        <li>Plazo habitual de tarjetas, folletos y cartas: <mark>[__ días]</mark></li>
+        <li>Precios orientativos (500 tarjetas, 1.000 folletos…): <mark>[__ €]</mark></li>
+        <li>Coste y plazo de los envíos por mensajería: <mark>[¿?]</mark></li>
+        <li>Fotos del taller y del equipo: <mark>[pendientes]</mark></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="sec" id="visita">
+    <div class="wrap visit">
+      <div data-reveal>
+        <span class="eyebrow">Contacto e imprenta</span>
+        <h2>Ven a vernos <em>a la calle San Rafael</em></h2>
+        <table class="hours" aria-label="Horario">
+          <tr><th>Lunes a jueves</th><td>08:30–13:00 · 15:30–19:00</td></tr>
+          <tr><th>Viernes</th><td>08:00–15:00</td></tr>
+          <tr><th>Sábado y domingo</th><td>Cerrado</td></tr>
+        </table>
+        <ul class="contact">
+          <li><svg><use href="#i-pin"/></svg><a href="https://maps.google.com/?cid=10889645133279159119" target="_blank" rel="noopener">C/ San Rafael, 18 · 33209 Gijón (Asturias)</a></li>
+          <li><svg><use href="#i-phone"/></svg><span><a href="tel:+34985386800">985 38 68 00</a> · <a href="tel:+34649095110">649 09 51 10</a></span></li>
+          <li><svg><use href="#i-mail"/></svg><a href="mailto:info@graficasmartingijon.es">info@graficasmartingijon.es</a></li>
+          <li><svg><use href="#i-fb"/></svg><a href="https://www.facebook.com/GraficasMartin" target="_blank" rel="noopener">facebook.com/GraficasMartin</a></li>
+        </ul>
+      </div>
+      <div class="faq" data-reveal>
+        <details open><summary>¿Cuánto cuesta mi trabajo?</summary><p>Depende del tipo, la cantidad, el papel y el acabado. Cuéntanos qué necesitas y buscamos la mejor solución para tu proyecto y para tu bolsillo, sin compromiso.</p></details>
+        <details><summary>No tengo el diseño, ¿me lo hacéis?</summary><p>Sí. Diseñamos tu logotipo, tu imagen corporativa, tu carta o tus invitaciones, y preparamos el archivo para imprenta. Si ya lo tienes, lo revisamos.</p></details>
+        <details><summary>¿Offset o digital?</summary><p>La digital es ideal para pruebas y tiradas cortas o urgentes; la offset, para tiradas grandes con la máxima calidad. Te aconsejamos según tu trabajo.</p></details>
+        <details><summary>¿Trabajáis fuera de Gijón?</summary><p>Sí. Repartimos con transporte propio por Asturias y enviamos por mensajería a cualquier punto de España. Tenemos clientes en Oviedo, Avilés, Cangas de Onís y Mieres, entre otros.</p></details>
+        <details><summary>¿Imprimís para agencias y estudios de diseño?</summary><p>Sí. Trabajamos tanto para particulares y empresas como para agencias de publicidad y estudios de diseño.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="final">
+    <div class="wrap">
+      <span class="eyebrow">Imprenta Gráficas Martín · Gijón</span>
+      <h2>Bien impreso, <em>desde 1962</em></h2>
+      <div class="hero-ctas">
+        <a class="btn btn-primary" href="#presupuesto"><svg aria-hidden="true"><use href="#i-pen"/></svg>Pedir presupuesto</a>
+        <a class="btn btn-ghost" href="tel:+34985386800"><svg><use href="#i-phone"/></svg>Llamar</a>
+      </div>
+      <a class="g-rate" href="#resenas" data-rvd><span class="stars"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></span><b>4,8</b><span>· 20 reseñas en Google</span></a>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap"><span>Imprenta Gráficas Martín, S.L. · C/ San Rafael, 18 · 33209 Gijón (Asturias)</span><span>985 38 68 00 · info@graficasmartingijon.es</span></div>
+</footer>
+<button class="totop" id="totop" type="button" aria-label="Subir arriba"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="M12 19V5M5 12l7-7 7 7"/></svg></button>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Trabajo ampliado" hidden><button type="button" class="lb-x" aria-label="Cerrar">×</button><button type="button" class="lb-nav prev" data-lb="-1" aria-label="Trabajo anterior"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg></button><img id="lb-img" alt=""><button type="button" class="lb-nav next" data-lb="1" aria-label="Trabajo siguiente"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></button><div class="lb-foot"><span id="lb-cap"></span><a class="btn btn-light" id="lb-go" href="#presupuesto">Quiero algo así</a></div></div>
+
+<div class="bk rvd" id="rvd" role="dialog" aria-modal="true" aria-labelledby="rvd-title" hidden>
+  <div class="bk-scrim" data-rvd-x></div>
+  <div class="bk-panel">
+    <header class="bk-head">
+      <span></span>
+      <div class="t"><span>Google</span><b id="rvd-title">Reseñas</b></div>
+      <button type="button" class="bk-ib" data-rvd-x aria-label="Cerrar"><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" d="M6 6l12 12M18 6L6 18"/></svg></button>
+    </header>
+    <div class="bk-body rvd-body">
+      <div class="rvd-sum">
+        <div class="rvd-score"><b>4,8</b><span class="rv-stars"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></span><small>20 reseñas</small></div>
+        <ul class="rvd-dist" aria-label="Reparto de estrellas"><li><span>5</span><i><b style="width:95%"></b></i><em>19</em></li><li><span>4</span><i><b style="width:0%"></b></i><em>0</em></li><li><span>3</span><i><b style="width:0%"></b></i><em>0</em></li><li><span>2</span><i><b style="width:0%"></b></i><em>0</em></li><li><span>1</span><i><b style="width:5%"></b></i><em>1</em></li></ul>
+      </div>
+      <h3 class="rvd-h">Reseñas de 5 estrellas</h3>
+      <div class="rvd-list" id="rvd-list"></div>
+      <h3 class="rvd-h">Su ficha en Google Maps</h3>
+      <div class="rvd-map"><iframe id="rvd-map" title="Imprenta Gráficas Martín en Google Maps" data-src="https://maps.google.com/maps?q=Imprenta%20Gr%C3%A1ficas%20Mart%C3%ADn%2C%20Calle%20San%20Rafael%2018%2C%20Gij%C3%B3n&amp;hl=es&amp;z=16&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+      <p class="rvd-note">Google no permite mostrar aquí su lista completa de reseñas; puedes leerlas todas en su ficha.</p>
+    </div>
+    <footer class="rvd-foot"><a class="btn btn-ghost" href="https://maps.google.com/?cid=10889645133279159119" target="_blank" rel="noopener">Ver las 20 en Google</a></footer>
+  </div>
+</div>
+
+<div class="bk" id="bk" role="dialog" aria-modal="true" aria-labelledby="bk-title" hidden>
+  <div class="bk-scrim" id="bk-scrim"></div>
+  <div class="bk-panel">
+    <header class="bk-head">
+      <button type="button" class="bk-ib" id="bk-back" aria-label="Paso anterior"><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M15 18l-6-6 6-6"/></svg></button>
+      <div class="t"><span id="bk-step">Paso 1 de 4</span><b id="bk-title">Tu presupuesto</b></div>
+      <button type="button" class="bk-ib" id="bk-x" aria-label="Cerrar"><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" d="M6 6l12 12M18 6L6 18"/></svg></button>
+    </header>
+    <div class="bk-prog"><i id="bk-bar" style="transform:scaleX(.25)"></i></div>
+    <form class="bk-body" id="book-form" novalidate>
+      <section class="bk-pane" data-step="1">
+        <h3>¿Qué necesitas?</h3>
+        <div class="bk-opts grid2 tight">
+          <label><input type="radio" name="tipo" value="Tarjetas y papelería corporativa"><span>Tarjetas y papelería</span></label>
+          <label><input type="radio" name="tipo" value="Folletos y trípticos"><span>Folletos</span></label>
+          <label><input type="radio" name="tipo" value="Catálogos y revistas"><span>Catálogos</span></label>
+          <label><input type="radio" name="tipo" value="Carteles"><span>Carteles</span></label>
+          <label><input type="radio" name="tipo" value="Cartas para restaurantes"><span>Cartas</span></label>
+          <label><input type="radio" name="tipo" value="Invitaciones de boda"><span>Invitaciones</span></label>
+          <label><input type="radio" name="tipo" value="Recordatorios de comunión"><span>Recordatorios</span></label>
+          <label><input type="radio" name="tipo" value="Calendarios"><span>Calendarios</span></label>
+          <label><input type="radio" name="tipo" value="Lonas, vinilos y gran formato"><span>Gran formato</span></label>
+          <label><input type="radio" name="tipo" value="Otro / no lo sé"><span>Otro / no lo sé</span></label>
+        </div>
+      </section>
+      <section class="bk-pane" data-step="2" hidden>
+        <h3>Tu trabajo</h3>
+        <label class="bk-field"><span>Nombre, marca o texto principal</span><input type="text" id="f-texto" placeholder="El nombre que va impreso"></label>
+        <div class="bk-field"><span>¿Tienes el diseño?</span>
+          <div class="bk-opts row">
+            <label><input type="radio" name="logo" value="Tengo el diseño o el archivo" checked><span>Sí, lo tengo</span></label>
+            <label><input type="radio" name="logo" value="Necesito el diseño"><span>Diseñádmelo</span></label>
+          </div>
+        </div>
+        <label class="bk-field"><span>Cantidad aproximada</span><input type="text" id="f-medidas" placeholder="Unidades, medidas, papel…"></label>
+      </section>
+      <section class="bk-pane" data-step="3" hidden>
+        <h3>Entrega</h3>
+        <label class="bk-field"><span>Localidad</span><input type="text" id="f-donde" placeholder="Gijón, Oviedo, Avilés…"></label>
+        <div class="bk-field"><span>¿Cómo lo quieres?</span>
+          <div class="bk-opts row">
+            <label><input type="radio" name="inst" value="Lo recojo en la imprenta" checked><span>Lo recojo</span></label>
+            <label><input type="radio" name="inst" value="Necesito que me lo enviéis"><span>Enviádmelo</span></label>
+          </div>
+        </div>
+        <label class="bk-field"><span>Algo más (opcional)</span><input type="text" id="f-notas" placeholder="Lo necesito para el día 20, papel mate…"></label>
+      </section>
+      <section class="bk-pane" data-step="4" hidden>
+        <h3>¿Quién eres?</h3>
+        <label class="bk-field"><span>Tu nombre</span><input type="text" id="f-nombre" autocomplete="given-name" placeholder="Tu nombre"></label>
+        <label class="bk-field"><span>Negocio o empresa (opcional)</span><input type="text" id="f-empresa" autocomplete="organization" placeholder="Opcional"></label>
+      </section>
+      <section class="bk-pane" data-step="5" hidden>
+        <h3>Tu solicitud está lista</h3>
+        <p class="sub">Envíala y te contestamos para aconsejarte y darte el presupuesto.</p>
+        <pre class="f-preview" id="f-preview"></pre>
+        <button type="button" class="f-copy" id="f-copy">Copiar mensaje</button>
+      </section>
+    </form>
+    <footer class="bk-foot">
+      <p class="f-error" id="f-error" role="alert" hidden></p>
+      <button type="button" class="btn btn-primary" id="bk-next">Siguiente</button>
+      <a class="btn btn-wa" id="f-wa" href="#" target="_blank" rel="noopener" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .2-1.3c-.1-.1-.3-.2-.6-.3z"/></svg>Enviar por WhatsApp</a>
+    </footer>
+  </div>
+</div>
+
+<div class="mbar">
+  <a class="btn btn-primary" href="#presupuesto"><span data-t="mbar">Pedir presupuesto</span></a>
+  <a class="btn btn-ghost" href="tel:+34985386800" aria-label="Llamar al 985 38 68 00"><svg><use href="#i-phone"/></svg></a>
+</div>
+
+<script>
+(function(){
+"use strict";
+var reduced=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+var SFX={play:function(){}};
+
+/* ---------- Temporadas de Gráficas Martín: fechas en las que se encargan los trabajos que hacen ---------- */
+/* Solo productos de su web (invitaciones de boda, recordatorios de comunión, calendarios, folletos, carteles, catálogos, papelería).
+   Sin precios, plazos ni descuentos. Sin decoración: el rojo del logo solo como acento en la píldora del eyebrow. */
+window.TEMPORADAS=[
+  {id:'bodas',nombre:'Invitaciones de boda',desde:'01-08',hasta:'02-28',prioridad:1,
+   textos:{eyebrow:'Temporada de bodas',
+     sub:'Invitaciones de boda diseñadas e impresas en Gijón: cartulina gruesa, pergamino o papel reciclado y hecho a mano. Os aconsejamos a partir de vuestra temática.',
+     cta:'Pedir mis invitaciones',mbar:'Pedir invitaciones'},
+   marcar:['input[name="tipo"][value="Invitaciones de boda"]'],wa:'💍 Es para nuestras invitaciones de boda'},
+  {id:'comuniones',nombre:'Comuniones',desde:'03-01',hasta:'05-15',prioridad:1,
+   textos:{eyebrow:'Comuniones · encárgalo con tiempo',
+     sub:'Recordatorios de comunión e invitaciones diseñados e impresos en Gijón, con reparto propio por Asturias y envíos a toda España.',
+     cta:'Pedir recordatorios',mbar:'Pedir recordatorios'},
+   marcar:['input[name="tipo"][value="Recordatorios de comunión"]'],wa:'🕊️ Es para unos recordatorios de comunión'},
+  {id:'septiembre',nombre:'Vuelta de vacaciones',desde:'08-25',hasta:'09-30',prioridad:1,
+   textos:{eyebrow:'Septiembre · imagen al día',
+     sub:'Vuelve del verano con la papelería al día: tarjetas, sobres, carpetas, talonarios y catálogos, diseñados o revisados por nosotros e impresos en Gijón.'},
+   marcar:['input[name="tipo"][value="Tarjetas y papelería corporativa"]'],wa:'🗓️ Quiero poner al día la papelería tras el verano'},
+  {id:'calendarios',nombre:'Calendarios',evento:'navidad',desde:'10-15',hasta:'12-15',prioridad:1,
+   textos:{eyebrow:'Calendarios para el año nuevo',
+     sub:'Calendarios personalizados de pared, sobremesa, bolsillo o en tarjeta para regalar a tus clientes, impresos en Gijón y entregados por Asturias o toda España.',
+     cta:'Pedir mis calendarios',mbar:'Pedir calendarios'},
+   marcar:['input[name="tipo"][value="Calendarios"]'],wa:'📅 Es para los calendarios del año que viene'},
+  {id:'black-friday',nombre:'Black Friday',evento:'black-friday',antes:21,prioridad:2,
+   textos:{eyebrow:'Black Friday · {cuenta}',
+     sub:'Prepara tu campaña: folletos, carteles, lonas y vinilos para tu escaparate, impresos en Gijón en digital, offset o gran formato.'},
+   marcar:['input[name="tipo"][value="Folletos y trípticos"]'],wa:'🛍️ Es para la campaña de Black Friday ({fecha})'}
+];
+/* ---------- Temporadas: la landing cambia sola cuando se acerca una fecha clave del oficio ---------- */
+/* Configura window.TEMPORADAS antes de este bloque (ver references/temporadas/README.md).
+   Pruebas: ?temporada=<id> fuerza una, ?temporada=no las apaga, ?fecha=2027-02-10 simula el día.
+   Selector para enseñarlas: #temporadas en la dirección (en local), 5 toques seguidos en el logo de la cabecera o la tecla T (también dentro del visor del Artifact). */
+(function(){
+var CFG=window.TEMPORADAS||[]; if(!CFG.length)return;
+var MESES=['enero','febrero','marzo','abril','mayo','junio','julio','agosto','septiembre','octubre','noviembre','diciembre'];
+var DAY=864e5;
+function d(y,m,dd){return new Date(y,m-1,dd)}
+function nth(y,m,dow,n){var f=d(y,m,1);return d(y,m,1+(dow-f.getDay()+7)%7+7*(n-1))}       /* n-ésimo día de la semana (0=domingo) del mes */
+function pascua(y){var a=y%19,b=Math.floor(y/100),c=y%100,e=(19*a+b-Math.floor(b/4)-Math.floor((b-Math.floor((8*b+13)/25)+1)/3)+15)%30,
+  f=(32+2*(b%4)+2*Math.floor(c/4)-e-c%4)%7,g=Math.floor((a+11*e+22*f)/451),m=Math.floor((e+f-7*g+114)/31);return d(y,m,(e+f-7*g+114)%31+1)}
+function mas(x,n){return new Date(x.getFullYear(),x.getMonth(),x.getDate()+n)}
+/* Calendario de España. Cada evento devuelve el día clave de ese año. */
+var EV={
+  'reyes':function(y){return d(y,1,6)},
+  'rebajas-invierno':function(y){return d(y,1,7)},
+  'san-valentin':function(y){return d(y,2,14)},
+  'carnaval':function(y){return mas(pascua(y),-47)},            /* martes de carnaval */
+  'dia-padre':function(y){return d(y,3,19)},
+  'semana-santa':function(y){return mas(pascua(y),-3)},         /* jueves santo */
+  'pascua':pascua,
+  'sant-jordi':function(y){return d(y,4,23)},                   /* solo Cataluña */
+  'dia-madre':function(y){return nth(y,5,0,1)},                 /* primer domingo de mayo */
+  'san-isidro':function(y){return d(y,5,15)},                   /* solo Madrid capital */
+  'san-juan':function(y){return d(y,6,24)},
+  'dia-abuelos':function(y){return d(y,7,26)},
+  'vuelta-cole':function(y){return d(y,9,8)},                   /* aproximado: varía por comunidad */
+  'halloween':function(y){return d(y,10,31)},
+  'todos-santos':function(y){return d(y,11,1)},
+  'black-friday':function(y){return mas(nth(y,11,4,4),1)},      /* viernes tras el 4.º jueves */
+  'navidad':function(y){return d(y,12,25)},
+  'nochevieja':function(y){return d(y,12,31)}
+};
+function md(s,y){var p=s.split('-');return d(y,+p[0],+p[1])}
+function antes(t){return t.antes==null?14:t.antes}
+/* Ventanas [inicio, fin, día clave] de una temporada alrededor del año y */
+function ventanas(t,y){var out=[];for(var k=y-1;k<=y+1;k++){
+  if(t.desde){var a=md(t.desde,k),b=md(t.hasta,k);if(b<a)b=md(t.hasta,k+1);out.push([a,b,t.evento?EV[t.evento](b.getFullYear()):b])}
+  else{var e=t.fecha?md(t.fecha,k):EV[t.evento]&&EV[t.evento](k);if(e)out.push([mas(e,-antes(t)),mas(e,t.despues||0),e])}}
+  return out}
+function elegir(hoy){var best=null;hoy=new Date(hoy.getFullYear(),hoy.getMonth(),hoy.getDate());
+  CFG.forEach(function(t){ventanas(t,hoy.getFullYear()).forEach(function(w){if(hoy<w[0]||hoy>w[1])return;
+    var pr=t.prioridad!=null?t.prioridad:(t.desde?1:2),falta=Math.round((w[2]-hoy)/DAY);
+    if(!best||pr>best.pr||(pr===best.pr&&Math.abs(falta)<Math.abs(best.falta)))best={t:t,pr:pr,falta:falta,dia:w[2]}})});
+  return best}
+/* Forzar una temporada aunque hoy no toque: la muestra como si faltaran unos días */
+function forzar(id,hoy){var t=CFG.filter(function(x){return x.id===id})[0];if(!t)return null;
+  var w=ventanas(t,hoy.getFullYear()).filter(function(w){return w[1]>=hoy})[0],falta=Math.round((w[2]-hoy)/DAY);
+  if(hoy<w[0])falta=Math.min(antes(t),9);return {t:t,falta:falta,dia:w[2]}}
+function rellenar(s,b){if(!s)return s;var n=b.falta,f=b.dia.getDate()+' de '+MESES[b.dia.getMonth()];
+  var cuenta=n>1?'Faltan '+n+' días':n===1?'Es mañana':n===0?'Es hoy':'';
+  return s.replace(/\{cuenta\}/g,cuenta).replace(/\{dias\}/g,n).replace(/\{fecha\}/g,f).replace(/\{anio\}/g,b.dia.getFullYear())}
+
+var q=new URLSearchParams(location.search),forzada=q.get('temporada'),sim=q.get('fecha'),hoy=new Date();
+if(sim&&/^\d{4}-\d\d-\d\d$/.test(sim)){var p=sim.split('-');hoy=d(+p[0],+p[1],+p[2])}
+hoy=new Date(hoy.getFullYear(),hoy.getMonth(),hoy.getDate());
+window.TEMPORADA_ELEGIR=function(x){var b=elegir(x);return b?b.t.id:null};   /* para scripts/temporadas.js */
+var root=document.documentElement,reducido=matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+/* Estado original, para poder volver a la versión de todo el año al cambiar de temporada desde el selector */
+var CLAVES={};CFG.forEach(function(t){Object.keys(t.textos||{}).forEach(function(k){CLAVES[k]=1})});   /* solo las claves que usa alguna temporada: otros data-t de la página no se tocan */
+var T=[].slice.call(document.querySelectorAll('[data-t]')).filter(function(el){return CLAVES[el.getAttribute('data-t')]}).map(function(el){return [el,el.innerHTML,el.hidden]});
+var fotosOrig=[],tokens=[],marcados=[],deco=null;
+function limpiar(){
+  T.forEach(function(o){o[0].innerHTML=o[1];o[0].hidden=o[2];o[0].classList.remove('t-on')});
+  tokens.forEach(function(k){root.style.removeProperty(k)});tokens=[];
+  fotosOrig.forEach(function(o){if(o[0].tagName==='SOURCE')o[0].srcset=o[1];else{o[0].src=o[1];if(o[2])o[0].srcset=o[2]}});fotosOrig=[];
+  marcados.forEach(function(el){el.checked=false});marcados=[];
+  if(deco){deco();deco=null}
+  root.removeAttribute('data-temporada');window.TEMPORADA=null}
+function aplicar(b){
+  limpiar();var id=b?b.t.id:null;
+  /* Bloques solo de temporada: data-temporada-solo="san-valentin dia-madre" (empiezan con hidden) y data-temporada-fuera="…" */
+  document.querySelectorAll('[data-temporada-solo]').forEach(function(el){el.hidden=!(id&&el.getAttribute('data-temporada-solo').split(/\s+/).indexOf(id)>-1)});
+  document.querySelectorAll('[data-temporada-fuera]').forEach(function(el){el.hidden=!!(id&&el.getAttribute('data-temporada-fuera').split(/\s+/).indexOf(id)>-1)});
+  if(!b)return;
+  var t=b.t;root.setAttribute('data-temporada',id);
+  /* Colores: sobrescribe tokens de :root (solo acentos; el fondo y la tinta no se tocan) */
+  if(t.tema)Object.keys(t.tema).forEach(function(k){root.style.setProperty(k,t.tema[k]);tokens.push(k)});
+  /* Textos: cualquier elemento con data-t="clave". El HTML trae el texto de todo el año; si estaba hidden, se muestra */
+  if(t.textos)Object.keys(t.textos).forEach(function(k){document.querySelectorAll('[data-t="'+k+'"]').forEach(function(el){el.innerHTML=rellenar(t.textos[k],b);el.hidden=false;el.classList.add('t-on')})});
+  /* Fotos: {selector: ruta}. Solo fotos reales del negocio para esa fecha */
+  if(t.fotos)Object.keys(t.fotos).forEach(function(s){document.querySelectorAll(s).forEach(function(el){
+    if(el.tagName==='SOURCE'){fotosOrig.push([el,el.srcset]);el.srcset=t.fotos[s]}else{fotosOrig.push([el,el.src,el.getAttribute('srcset')]);el.removeAttribute('srcset');el.src=t.fotos[s]}})});
+  /* Marcar opciones del panel de encargo/reserva (solo si no hay ninguna marcada en ese grupo) */
+  if(t.marcar)t.marcar.forEach(function(s){var el=document.querySelector(s);if(el&&!document.querySelector('input[name="'+el.name+'"]:checked')){el.checked=true;marcados.push(el)}});
+  window.TEMPORADA={id:id,nombre:t.nombre||id,dias:b.falta,fecha:b.dia,linea:rellenar(t.wa,b)||''};   /* el panel añade TEMPORADA.linea al mensaje de WhatsApp */
+  try{document.dispatchEvent(new CustomEvent('temporada',{detail:window.TEMPORADA}))}catch(e){}
+  if(t.deco&&!reducido)deco=decorar(t)}
+
+/* Decoración ligera en el hero: petalos, corazones, nieve, hojas, confeti o estrellas. Nunca sobre el texto ni con movimiento reducido */
+function decorar(t){
+  var host=document.querySelector(t.decoEn||'#hero');if(!host)return null;
+  var cv=document.createElement('canvas');cv.className='t-deco';cv.setAttribute('aria-hidden','true');
+  cv.style.cssText='position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:1';
+  host.insertBefore(cv,host.children[1]||null);
+  var cx=cv.getContext('2d'),W=0,H=0,DPR=Math.min(devicePixelRatio||1,1.5),P=[],raf=0,last=0;
+  var COL=t.decoColores||{petalos:['#F5B8C9','#FFD9E2','#E88AA6'],corazones:['#FF6B8B','#FFB3C4','#E0325A'],nieve:['#FFFFFF'],hojas:['#C9733B','#E0A04A','#9C4A24'],confeti:['#FFD166','#EF476F','#06D6A0','#4CC9F0'],estrellas:['#FFE8A3','#FFFFFF']}[t.deco]||['#fff'];
+  function size(){var r=host.getBoundingClientRect();W=r.width;H=r.height;cv.width=W*DPR;cv.height=H*DPR;cx.setTransform(DPR,0,0,DPR,0,0)}
+  function nuevo(top){var s=t.deco==='nieve'?2+Math.random()*3:t.deco==='estrellas'?1.5+Math.random()*2.5:7+Math.random()*7;
+    return {x:Math.random()*W,y:top?-20:Math.random()*H,s:s,vy:(t.deco==='estrellas'?0:.25+Math.random()*.5)*(s>6?1:.7),vx:(Math.random()-.5)*.3,a:Math.random()*6.3,va:(Math.random()-.5)*.03,f:Math.random()*6.3,c:COL[Math.floor(Math.random()*COL.length)]}}
+  function forma(p){cx.save();cx.translate(p.x,p.y);cx.rotate(p.a);cx.fillStyle=p.c;cx.globalAlpha=t.deco==='estrellas'?.4+.5*Math.abs(Math.sin(p.f)):.85;var s=p.s;cx.beginPath();
+    if(t.deco==='corazones'){cx.moveTo(0,s*.35);cx.bezierCurveTo(-s,-s*.3,-s*.4,-s,0,-s*.45);cx.bezierCurveTo(s*.4,-s,s,-s*.3,0,s*.35)}
+    else if(t.deco==='nieve'||t.deco==='estrellas')cx.arc(0,0,s/2,0,7);
+    else if(t.deco==='confeti')cx.rect(-s/2,-s/4,s,s/2);
+    else cx.ellipse(0,0,s/2,s*(t.deco==='hojas'?.28:.34),0,0,7);
+    cx.fill();cx.restore()}
+  function paso(ts){raf=requestAnimationFrame(paso);if(ts-last<30)return;last=ts;
+    var r=host.getBoundingClientRect();if(r.bottom<0||r.top>innerHeight)return;   /* fuera de pantalla: no pinta */
+    cx.clearRect(0,0,W,H);P.forEach(function(p,i){p.f+=.03;p.y+=p.vy;p.x+=p.vx+Math.sin(p.f)*.35;p.a+=p.va;if(p.y>H+20)P[i]=nuevo(true);forma(p)})}
+  function arranca(){cancelAnimationFrame(raf);if(!document.hidden)raf=requestAnimationFrame(paso)}
+  size();var n=Math.min(t.decoCuantos||22,Math.round(W*H/40000)+6);for(var i=0;i<n;i++)P.push(nuevo(false));
+  addEventListener('resize',size);document.addEventListener('visibilitychange',arranca);arranca();
+  return function(){cancelAnimationFrame(raf);removeEventListener('resize',size);document.removeEventListener('visibilitychange',arranca);cv.remove()}}
+
+var hoyB=elegir(hoy);
+aplicar(forzada==='no'?null:forzada?forzar(forzada,hoy):hoyB);
+
+/* ---------- Selector de temporadas: solo con #temporadas en la dirección, para enseñárselas al cliente ---------- */
+/* El visor del Artifact no pasa el #hash al iframe: también se abre con 5 toques seguidos en el logo de la cabecera (.brand) o con la tecla T */
+var sel=null,manual=false;
+function selector(){
+  if(location.hash!=='#temporadas'&&!manual){if(sel){sel.remove();sel=null}return}
+  if(sel)return;
+  var st=document.createElement('style');st.textContent='.t-sel{position:fixed;left:12px;right:12px;bottom:calc(14px + env(safe-area-inset-bottom,0px));z-index:150;margin:0 auto;max-width:max-content;display:flex;align-items:center;gap:6px;padding:6px;border-radius:18px;background:rgba(20,20,20,.82);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);color:#fff;font:600 13px/1.2 system-ui,-apple-system,sans-serif;box-shadow:0 14px 34px -12px rgba(0,0,0,.6);overflow-x:auto;scrollbar-width:none}'
+   +'.t-sel::-webkit-scrollbar{display:none}.t-sel b{padding:0 6px 0 8px;font-size:11px;letter-spacing:.08em;text-transform:uppercase;opacity:.6;white-space:nowrap}'
+   +'.t-sel button{all:unset;cursor:pointer;white-space:nowrap;padding:9px 12px;border-radius:12px;color:#fff}.t-sel button:hover{background:rgba(255,255,255,.12)}.t-sel button[aria-pressed="true"]{background:#fff;color:#111}'
+   +'.t-sel button small{display:block;font-size:10px;font-weight:500;opacity:.65;margin-top:2px}.t-sel .x{opacity:.7;padding:9px 10px}'
+   +'@media (max-width:640px){.t-sel{bottom:calc(84px + env(safe-area-inset-bottom,0px));max-width:none}}';
+  sel=document.createElement('div');sel.className='t-sel';sel.setAttribute('role','toolbar');sel.setAttribute('aria-label','Ver la landing en cada temporada');
+  sel.appendChild(st);
+  function hint(t){var w=ventanas(t,hoy.getFullYear()).filter(function(w){return w[1]>=hoy})[0],f=function(x){return x.getDate()+' '+MESES[x.getMonth()].slice(0,3)};return f(w[0])+' – '+f(w[1])}
+  var h='<b>Temporadas</b><button type="button" data-id="@hoy">Hoy<small>'+(hoyB?(hoyB.t.nombre||hoyB.t.id):'sin temporada')+'</small></button><button type="button" data-id="">Todo el año<small>versión base</small></button>';
+  CFG.forEach(function(t){h+='<button type="button" data-id="'+t.id+'">'+(t.nombre||t.id)+'<small>'+hint(t)+'</small></button>'});
+  sel.insertAdjacentHTML('beforeend',h+'<button type="button" class="x" aria-label="Cerrar el selector">✕</button>');
+  var elegido='@hoy';
+  function marca(){sel.querySelectorAll('button[data-id]').forEach(function(x){x.setAttribute('aria-pressed',String(x.dataset.id===elegido))})}
+  sel.addEventListener('click',function(e){var x=e.target.closest('button');if(!x)return;
+    if(x.classList.contains('x')){manual=false;if(location.hash==='#temporadas')history.replaceState(null,'',location.pathname+location.search);selector();return}
+    elegido=x.dataset.id;aplicar(elegido==='@hoy'?hoyB:elegido?forzar(elegido,hoy):null);marca();window.scrollTo({top:0,behavior:'smooth'})});
+  document.body.appendChild(sel);marca()}
+selector();addEventListener('hashchange',selector);
+var toques=[];
+document.addEventListener('click',function(e){if(!e.target.closest||!e.target.closest(window.TEMPORADAS_DISPARADOR||'.brand'))return;var n=Date.now();
+  toques=toques.filter(function(t){return n-t<2500});toques.push(n);if(toques.length>=5){toques=[];manual=true;selector()}});
+document.addEventListener('keydown',function(e){if((e.key==='t'||e.key==='T')&&!e.metaKey&&!e.ctrlKey&&!e.altKey&&!/INPUT|TEXTAREA|SELECT/.test(e.target.tagName)&&!e.target.isContentEditable){manual=!sel;if(!manual&&location.hash==='#temporadas')history.replaceState(null,'',location.pathname+location.search);selector()}});
+})();
+
+
+/* ---------- Loader con el logo: se queda lo justo para que la letra y las fotos estén cargadas ---------- */
+var introGone=false,introCbs=[];
+function afterIntro(fn){if(introGone)fn();else introCbs.push(fn)}
+(function(){var el=document.getElementById('intro');
+  function done(){if(introGone)return;introGone=true;if(el){el.classList.add('out');setTimeout(function(){el.hidden=true},700)}
+    introCbs.forEach(function(f){try{f()}catch(e){}})}
+  if(!el){done();return}
+  /* mínimo 0,9 s, máximo 3 s; se va con load y con la letra cargada */
+  var min=reduced?400:900,t0=performance.now(),cap=setTimeout(done,3000),n=0;
+  function go(){if(++n<2)return;setTimeout(function(){clearTimeout(cap);done()},Math.max(0,min-(performance.now()-t0)))}
+  if(document.readyState==='complete')go();else window.addEventListener('load',go);
+  if(document.fonts&&document.fonts.ready)document.fonts.ready.then(go,go);else go();
+})();
+
+/* ===== HERO PROPIO ===== */
+/* ---------- La composición: tipos de plomo al revés en el componedor; el rodillo los entinta y se imprimen en la tarjeta ---------- */
+(function(){
+  var press=document.getElementById('tp-press'); if(!press)return;
+  var sorts=document.getElementById('tp-sorts'),stick=press.querySelector('.tp-stick'),card=document.getElementById('tp-card'),
+      pr=document.getElementById('tp-print'),inp=document.getElementById('tp-in'),form=document.getElementById('tp-ctl'),cap=document.getElementById('tp-cap');
+  /* La demo solo compone productos que hacen (de su web), nunca nombres de clientes */
+  var DEMO=['Tarjetas','Invitaciones','Catálogos','Calendarios','Cartas','Folletos'],di=1,touched=false,busy=false,vis=true,demoT=0,printed='Tarjetas';
+  var CAP0=cap.innerHTML;
+  function clean(v){return v.replace(/\s+/g,' ').trim().slice(0,14)}
+  function esc(t){return t.replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+  /* cuerpo de los tipos según cuántos caben en el componedor */
+  function fitSorts(){var n=Math.max(4,sorts.children.length),W=stick.clientWidth-26,H=stick.clientHeight-14;
+    var fs=Math.min(H*.78,(W-n*2)/(n*.74));sorts.style.setProperty('--fs',Math.max(10,fs)+'px')}
+  function fitPrint(){var W=card.clientWidth*.84;pr.style.setProperty('--ps',card.clientWidth*.15+'px');var w=pr.scrollWidth;
+    if(w>W)pr.style.setProperty('--ps',card.clientWidth*.15*W/w+'px')}
+  function compose(word,anim){sorts.innerHTML='';Array.from(word).forEach(function(ch,i){var s=document.createElement('span');
+      s.className='sort'+(ch===' '?' sp':'')+(anim?' new':'');s.textContent=ch===' '?'':ch;if(anim)s.style.animationDelay=(i*45)+'ms';sorts.appendChild(s)});
+    stick.classList.remove('inked');fitSorts()}
+  function print(word,done){if(busy)return;busy=true;
+    var t=reduced?[0,0,0,0]:[0,620,840,1100];
+    stick.classList.add('rolling');
+    setTimeout(function(){stick.classList.remove('rolling');stick.classList.add('inked')},t[1]);
+    setTimeout(function(){stick.classList.add('press')},t[1]+20);
+    setTimeout(function(){pr.textContent=word;pr.classList.remove('blank','fresh');fitPrint();void pr.offsetWidth;pr.classList.add('fresh');printed=word},t[2]);
+    setTimeout(function(){stick.classList.remove('press');busy=false;done&&done()},t[3])}
+  function demo(){clearTimeout(demoT);if(touched)return;
+    if(!vis||document.hidden){demoT=setTimeout(demo,1200);return}
+    var w=DEMO[di++%DEMO.length];compose(w,true);
+    demoT=setTimeout(function(){print(w,function(){demoT=setTimeout(demo,2600)})},w.length*45+900)}
+  inp.addEventListener('focus',function(){touched=true;clearTimeout(demoT)});
+  inp.addEventListener('input',function(){touched=true;clearTimeout(demoT);var v=clean(inp.value);compose(v||' ',false)});
+  form.addEventListener('submit',function(e){e.preventDefault();touched=true;clearTimeout(demoT);var v=clean(inp.value);
+    if(!v){inp.focus();return}
+    compose(v,false);print(v,function(){window.__TP={text:v};
+      cap.innerHTML='<a href="#presupuesto" data-from-tp>Pedir tarjetas con «'+esc(v)+'» →</a>'})});
+  window.__TP={text:''};
+  function see(){var r=press.getBoundingClientRect();vis=r.bottom>0&&r.top<innerHeight}
+  window.addEventListener('scroll',see,{passive:true});
+  window.addEventListener('resize',function(){fitSorts();fitPrint()});
+  if(document.fonts&&document.fonts.ready)document.fonts.ready.then(function(){fitSorts();fitPrint()});
+  /* al llegar: tipos compuestos con «Tarjetas», el rodillo pasa y se imprime; luego la demo sigue sola hasta que alguien escribe */
+  compose('Tarjetas',false);fitPrint();
+  afterIntro(function(){setTimeout(function(){if(touched)return;print('Tarjetas',function(){demoT=setTimeout(demo,2600)})},reduced?0:450)});
+})();
+/* ===== /HERO PROPIO ===== */
+
+
+/* ---------- Manifiesto: se enciende palabra a palabra ---------- */
+(function(){var m=document.getElementById('mani');if(!m)return;var HOT=/^(bien|hecho)$/i;
+  m.innerHTML=m.textContent.split(' ').map(function(w,i){return '<span class="w'+(HOT.test(w.replace(/[,.]/g,''))?' hot':'')+'" style="transition-delay:'+(i*45)+'ms">'+w+'</span>'}).join(' ');})();
+
+/* ---------- Trabajos con filtros y visor ---------- */
+(function(){var el=document.getElementById('works');if(!el)return;
+  /* [categoría, pies con lo que muestra cada foto de su web, una por foto img/w-<categoría>-<n>.jpg] */
+  var W=[['papeleria',['Tarjetas de visita','Carpetas corporativas','Tarjetas y papelería de empresa','Sobres impresos','Carpetas con solapa','Papel de carta con logotipo','Papel de carta y talonarios']],
+    ['publicidad',['Folletos y trípticos','Catálogos','Carteles y folletos','Revista impresa','Calendario de pared']],
+    ['eventos',['Carta para restaurante','Invitaciones de boda','Invitación de boda ilustrada','Cartas para restaurantes','Recordatorio de comunión']],
+    ['granformato',['Lona en el plotter de gran formato','Fachada rotulada de Globo Fiesta','Vinilo de corte en pared']]];
+  var items=[];W.forEach(function(c){c[1].forEach(function(cap,i){items.push([c[0],'img/w-'+c[0]+'-'+(i+1)+'.jpg',c[0],cap])})});
+  /* mezcla estable para que "Todos" no salga agrupado */
+  var order=[];for(var k=0;k<12;k++)W.forEach(function(c){var it=items.filter(function(x){return x[0]===c[0]})[k];if(it)order.push(it)});
+  var BIG={0:'big',3:'wide',7:'big',12:'wide',17:'wide'};
+  el.innerHTML=order.map(function(x,i){return '<button type="button" class="work '+(BIG[i]||'')+'" data-c="'+x[0]+'" data-t="'+x[2]+'" data-cap="'+x[3]+'"><img src="'+x[1]+'" alt="'+x[3]+', trabajo de Gráficas Martín" loading="lazy"><span>'+x[3]+'</span></button>'}).join('');
+  var LIM=innerWidth<=640?8:12, mb=document.getElementById('works-more'), f='all', all=false;
+  var works=[].slice.call(el.querySelectorAll('.work')), fb=[].slice.call(document.querySelectorAll('.filters button'));
+  function seen(w){return !w.classList.contains('out')&&!w.classList.contains('more')}
+  /* anim: 'all' reanima toda la rejilla (cambio de filtro); 'new' solo lo que aparece ("ver más") */
+  function apply(anim){var n=0,k=0,pop=[];
+    works.forEach(function(w){var was=seen(w),hit=f==='all'||w.dataset.c===f,more=hit&&!all&&f==='all'&&++n>LIM;
+      w.classList.toggle('out',!hit);w.classList.toggle('more',more);w.classList.remove('pop');
+      if(hit&&!more&&(anim==='all'||(anim==='new'&&!was))){w.style.animationDelay=Math.min(k++*40,400)+'ms';pop.push(w)}});
+    if(pop.length){void el.offsetWidth;pop.forEach(function(w){w.classList.add('pop')})}
+    mb.parentNode.hidden=all||f!=='all'}
+  fb.forEach(function(b){b.setAttribute('aria-pressed',b.dataset.f===f);b.addEventListener('click',function(){
+    fb.forEach(function(x){x.classList.toggle('on',x===b);x.setAttribute('aria-pressed',x===b)});f=b.dataset.f;apply('all')})});
+  mb.addEventListener('click',function(){all=true;apply('new')}); apply();
+  var lb=document.getElementById('lb'),li=document.getElementById('lb-img'),go=document.getElementById('lb-go'),cap=document.getElementById('lb-cap'),list=[],at=0,opener=null;
+  function showAt(i){at=(i+list.length)%list.length;var w=list[at],im=w.querySelector('img');li.src=im.src;li.alt=im.alt;go.dataset.tipo=w.dataset.c;cap.textContent=w.dataset.cap+' · '+(at+1)+' / '+list.length}
+  el.addEventListener('click',function(e){var w=e.target.closest('.work');if(!w)return;list=works.filter(seen);opener=w;lb.hidden=false;showAt(list.indexOf(w));
+    try{lb.querySelector('.lb-x').focus({preventScroll:true})}catch(x){}});
+  function close(){lb.hidden=true;if(opener)try{opener.focus({preventScroll:true})}catch(x){}}
+  lb.addEventListener('click',function(e){var n=e.target.closest('[data-lb]');if(n){showAt(at+(+n.dataset.lb));return}if(e.target===lb||e.target.closest('.lb-x'))close()});
+  go.addEventListener('click',function(){lb.hidden=true});
+  document.addEventListener('keydown',function(e){if(lb.hidden)return;if(e.key==='Escape')close();else if(e.key==='ArrowRight')showAt(at+1);else if(e.key==='ArrowLeft')showAt(at-1)});
+})();
+
+/* ---------- Del boceto a la fachada: avanza solo al verse; también se elige a mano ---------- */
+(function(){var board=document.getElementById('board'),list=document.getElementById('stages');if(!board)return;
+  var lis=[].slice.call(list.querySelectorAll('li')),cur=0,timer=null,auto=true;
+  function go(i){cur=i;board.dataset.s=i;lis.forEach(function(l,k){l.classList.toggle('on',k===i)})}
+  function tick(){if(!auto)return;go((cur+1)%4);timer=setTimeout(tick,cur===3?4200:2600)}
+  lis.forEach(function(l,k){l.addEventListener('click',function(){auto=false;clearTimeout(timer);go(k)})});
+  if(reduced){go(3);return}
+  if('IntersectionObserver' in window)new IntersectionObserver(function(e){if(e[0].isIntersecting&&!timer&&auto){go(0);timer=setTimeout(tick,1800)}},{threshold:.45}).observe(board);
+  else go(3);
+})();
+
+/* ---------- Reseñas reales de Google (texto literal) ---------- */
+var REV=[
+  ['Vanesa C.','Asesoramiento','hace 5 meses','Nos aconsejaron muy bien. Trabajo impecable, muy atentos y grandes profesionales. Totalmente recomendable. Volveremos a repetir.'],
+  ['Marta O.','Atención','hace un año','Super amables. Atención telefónica de 10. No pueden hacerme el trabajo porque objetivamente no me valdría pero incluso me ofrecen solución. Una maravilla.'],
+  ['Javier R.','Imprenta','hace 5 años','Una de las últimas imprentas tradicionales que queda en el centro de Gijón. Buenos profesionales y buena gente.'],
+  ['Pixelbox Estudio Gráfico','Estudio de diseño','hace 9 años','Imprenta de confianza. Siempre atentos y aconsejando para obtener el mejor acabado en sus trabajos. Más de 5 años trabajando con ellos y ni una sola pega.'],
+  ['Vicky P.','Imprenta','hace 9 meses','Profesionalidad inmejorable!!calidad,asesoramiento y  servicio impecable!! 💯%recomendable…'],
+  ['David B.','Imprenta','hace un año','Da gusto tratar con profesionales'],
+  ['Dmentes Estudio','Estudio de diseño','hace 8 años','Profesionales de confianza. Atentos, cercanos y fiables. Es un lujo poder contar con ellos cada día.'],
+  ['Tilde Comunicación','Agencia','hace 9 años','Ya son unos años trabajando con Gráficas Martín.Solo puedo tener buenas palabras hacia ellos: seriedad, profesionalidad, cercanos y por supuesto  muy buenos precios!!!'],
+  ['Manuel L.','Imprenta','hace 9 años','Profesionalidad y trato excelente. No dudo en escoger a Graficas Martin como imprenta para todos mis trabajos!'],
+  ['Rene G.','Imprenta','hace 8 años','Encantados siempre con su trabajo y buen hacer. Seguiremos trabajando con ellos :)']
+];
+var COLS=['#931E24','#17151A','#655F58','#B3262D'], STAR='<svg><use href="#i-star"/></svg>';
+var grid=document.getElementById('rv-grid');
+if(grid) grid.innerHTML=REV.map(function(r,i){return '<figure class="rv" data-reveal><div class="rv-top"><span class="rv-stars" aria-label="5 de 5 estrellas">'+STAR+STAR+STAR+STAR+STAR+'</span><span class="rv-tag">'+r[1]+'</span></div><blockquote>«'+r[3]+'»</blockquote><figcaption><i style="background:'+COLS[i%4]+'">'+r[0][0]+'</i><span><b>'+r[0]+'</b><small>'+r[2]+' · Google</small></span></figcaption></figure>'}).join('');
+
+/* ---------- Borradores ---------- */
+(function(){function sync(){var on=location.hash==='#borradores';document.querySelectorAll('.draft').forEach(function(d){d.hidden=!on});if(on){var t=document.querySelector('.draft');t&&setTimeout(function(){t.scrollIntoView()},300)}}
+ sync();window.addEventListener('hashchange',sync)})();
+
+/* ---------- Presupuesto: panel paso a paso que acaba en WhatsApp ---------- */
+(function(){
+  var WA='34649095110', N=5; /* Móvil que publica su web (649 095 110). PENDIENTE: confirmar que atiende WhatsApp */
+  var bk=document.getElementById('bk'); if(!bk)return;
+  var f=document.getElementById('book-form'), panes=[].slice.call(f.querySelectorAll('.bk-pane'));
+  var back=document.getElementById('bk-back'), next=document.getElementById('bk-next'), wa=document.getElementById('f-wa');
+  var err=document.getElementById('f-error'), bar=document.getElementById('bk-bar'), stepT=document.getElementById('bk-step');
+  var nombre=document.getElementById('f-nombre'), pre=document.getElementById('f-preview');
+  function sel(n){var e=f.querySelector('input[name="'+n+'"]:checked');return e?e.value:''}
+  function val(id){var e=document.getElementById(id);return e?e.value.trim():''}
+  var _code='';
+  function code(){if(!_code){var d=new Date(),r='',A='ABCDEFGHJKLMNPQRSTUVWXYZ23456789';for(var i=0;i<3;i++)r+=A[Math.floor(Math.random()*A.length)];_code='GM-'+String(d.getDate()).padStart(2,'0')+String(d.getMonth()+1).padStart(2,'0')+'-'+r}return _code}
+  function message(){
+    var L=['¡Hola, Gráficas Martín! Soy '+nombre.value.trim()+(val('f-empresa')?', de '+val('f-empresa'):'')+'. Os pido presupuesto:',''];
+    L.push('🔖 Código: '+code());
+    if(window.TEMPORADA&&TEMPORADA.linea)L.push(TEMPORADA.linea);
+    L.push('• Qué necesito: '+sel('tipo'));
+    if(val('f-texto'))L.push('• Texto o marca: «'+val('f-texto')+'»');
+    L.push('• '+sel('logo'));
+    if(val('f-medidas'))L.push('• Cantidad: '+val('f-medidas'));
+    if(val('f-donde'))L.push('• Localidad de entrega: '+val('f-donde'));
+    L.push('• '+sel('inst'));
+    if(val('f-notas'))L.push('','Más detalles: '+val('f-notas'));
+    L.push('','¿Me decís precio y plazo? ¡Gracias!');
+    return L.join('\n');
+  }
+  var step=1, opener=null;
+  function show(n){
+    step=n; err.hidden=true;
+    panes.forEach(function(p){p.hidden=+p.dataset.step!==n});
+    back.disabled=n===1;
+    var last=n===N; next.hidden=last; wa.hidden=!last;
+    next.textContent=n===4?'Ver mi solicitud':'Siguiente';
+    stepT.textContent=last?'Listo':'Paso '+n+' de 4';
+    bar.style.transform='scaleX('+(Math.min(n,4)/4)+')';
+    if(last){var m=message();pre.textContent=m;wa.href='https://wa.me/'+WA+'?text='+encodeURIComponent(m)}
+    f.scrollTop=0;
+    var h3=panes[n-1].querySelector('h3'); if(h3)h3.setAttribute('tabindex','-1');
+    setTimeout(function(){try{(h3||next).focus({preventScroll:true})}catch(x){}},380);
+  }
+  function fail(msg,el){err.textContent=msg;err.hidden=false;if(el){el.setAttribute('aria-invalid','true');el.focus()}}
+  function validate(n){
+    if(n===1&&!sel('tipo')){fail('Elige qué necesitas.');return false}
+    if(n===4){nombre.removeAttribute('aria-invalid');if(!nombre.value.trim()){fail('Dinos tu nombre para el mensaje.',nombre);return false}}
+    return true;
+  }
+  next.addEventListener('click',function(){if(validate(step))show(step+1)});
+  back.addEventListener('click',function(){if(step>1)show(step-1)});
+  f.addEventListener('submit',function(e){e.preventDefault();next.click()});
+  f.querySelectorAll('input[name="tipo"]').forEach(function(r){r.addEventListener('change',function(){setTimeout(function(){if(step===1)show(2)},220)})});
+  document.getElementById('f-copy').addEventListener('click',function(){var b=this,ok=function(){b.textContent='Copiado';setTimeout(function(){b.textContent='Copiar mensaje'},1600)};
+    try{navigator.clipboard.writeText(pre.textContent).then(ok,function(){var r=document.createRange();r.selectNodeContents(pre);var s=getSelection();s.removeAllRanges();s.addRange(r)})}catch(x){}});
+  function pick(v){var r=f.querySelector('input[name="tipo"][value="'+v+'"]');if(r){r.checked=true;return true}return false}
+  var MAP={'papeleria':'Tarjetas y papelería corporativa','publicidad':'Folletos y trípticos','eventos':'Cartas para restaurantes','granformato':'Lonas, vinilos y gran formato','tarjetas':'Tarjetas y papelería corporativa'};
+  function open(from){
+    opener=from||document.activeElement; bk.hidden=false; document.documentElement.style.overflow='hidden';
+    var ds=from&&from.dataset||{};
+    if(ds.fromTp!==undefined&&window.__TP&&window.__TP.text){pick('Tarjetas y papelería corporativa');document.getElementById('f-texto').value=window.__TP.text;show(2)}
+    else if(ds.tipo&&pick(MAP[ds.tipo]||ds.tipo))show(2);
+    else if(step===N)show(4); else show(step);
+    requestAnimationFrame(function(){requestAnimationFrame(function(){bk.classList.add('open')})});
+  }
+  function close(){
+    bk.classList.remove('open'); document.documentElement.style.overflow='';
+    setTimeout(function(){bk.hidden=true},reduced?0:420);
+    if(opener&&opener.focus)try{opener.focus({preventScroll:true})}catch(x){}
+  }
+  document.getElementById('bk-x').addEventListener('click',close);
+  document.getElementById('bk-scrim').addEventListener('click',close);
+  document.addEventListener('keydown',function(e){if(!bk.hidden&&e.key==='Escape')close()});
+  document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[href="#presupuesto"]');if(!a)return;e.preventDefault();open(a)});
+  /* un enlace compartido con #presupuesto (bio, WhatsApp) abre el panel al llegar; dentro del visor del Artifact no llega el hash */
+  if(location.hash==='#presupuesto')setTimeout(function(){open(null)},600);
+})();
+
+
+
+/* ---------- Drawer de reseñas ---------- */
+(function(){var d=document.getElementById('rvd'); if(!d)return;
+ var list=document.getElementById('rvd-list'), map=document.getElementById('rvd-map'), opener=null, filled=false;
+ function open(from){
+   if(!filled){document.querySelectorAll('#resenas .rv').forEach(function(c){var k=c.cloneNode(true);k.removeAttribute('data-reveal');list.appendChild(k)});filled=true}
+   if(!map.src)map.src=map.getAttribute('data-src');
+   opener=from||document.activeElement; d.hidden=false; document.documentElement.style.overflow='hidden'; SFX.play('open');
+   requestAnimationFrame(function(){requestAnimationFrame(function(){d.classList.add('open');var x=d.querySelector('.bk-head [data-rvd-x]');x&&x.focus({preventScroll:true})})});
+ }
+ function close(){ if(d.hidden)return; SFX.play('close'); d.classList.remove('open'); document.documentElement.style.overflow='';
+   setTimeout(function(){d.hidden=true;opener&&opener.focus&&opener.focus({preventScroll:true})},reduced?0:420); }
+ document.addEventListener('click',function(e){var a=e.target.closest('[data-rvd]');if(a){e.preventDefault();open(a);return}
+   if(e.target.closest('[data-rvd-x]'))close()});
+ document.addEventListener('keydown',function(e){if(e.key==='Escape')close()});
+})();
+
+
+
+/* ---------- Cabecera, barra móvil y subir arriba, por scroll ---------- */
+/* Por scroll y no por IntersectionObserver: dentro del visor (iframe) no detecta bien el hero.
+   Cabecera y barra se oscurecen sobre el hero y las bandas oscuras; la barra no sale mientras se ven el titular o el botón del hero. */
+(function(){var b=document.getElementById('totop'),hero=document.getElementById('hero'),mbar=document.querySelector('.mbar'),top=document.getElementById('top'),
+  h1=hero.querySelector('h1'),cta=hero.querySelector('.hero-ctas .btn'),darks=[hero].concat([].slice.call(document.querySelectorAll('.band-ink'))),tk=false;
+ function sync(){tk=false;var end=hero.offsetTop+hero.offsetHeight;b.classList.toggle('on',scrollY>end-innerHeight/2);
+  function over(y){return darks.some(function(s){var r=s.getBoundingClientRect();return r.top<y&&r.bottom>y})}
+  if(top)top.classList.toggle('dark',over(top.offsetHeight/2));
+  if(mbar){mbar.classList.toggle('dark',over(innerHeight-34));
+    var hb=h1.getBoundingClientRect(),cb=cta.getBoundingClientRect();
+    mbar.classList.toggle('off',(hb.bottom>innerHeight-84&&hb.top<innerHeight)||(cb.bottom>0&&cb.top<innerHeight))}}
+ sync();window.addEventListener('scroll',function(){if(!tk){tk=true;requestAnimationFrame(sync)}},{passive:true});window.addEventListener('resize',sync);
+ b.addEventListener('click',function(){window.scrollTo({top:0,behavior:reduced?'auto':'smooth'})});})();
+
+/* ---------- Animaciones por visibilidad ---------- */
+(function(){
+  var root=document.documentElement;
+  if(!('IntersectionObserver' in window)||reduced)return;
+  root.classList.add('js-anim');
+  var io=new IntersectionObserver(function(es){var k=0;es.forEach(function(e){if(!e.isIntersecting)return;var el=e.target;el.style.transitionDelay=Math.min(k++*90,450)+'ms';el.classList.add('in');io.unobserve(el);setTimeout(function(){el.style.transitionDelay=''},1500)})},{rootMargin:'0px 0px -8% 0px'});
+  document.querySelectorAll('[data-reveal]').forEach(function(el){io.observe(el)});
+  var m=document.getElementById('mani');
+  if(m)new IntersectionObserver(function(e,o){if(e[0].isIntersecting){m.classList.add('lit');o.disconnect()}},{threshold:.4}).observe(m);
+  /* Cifras del hero: cuentan hasta su valor al entrar en pantalla */
+  var fo=new IntersectionObserver(function(es,o){es.forEach(function(e){if(!e.isIntersecting)return;o.unobserve(e.target);
+    var b=e.target,to=+b.dataset.count,from=+b.dataset.from||0,t0=performance.now(),D=1100;
+    (function step(now){var p=Math.min(1,Math.max(0,(now-t0)/D));b.textContent=Math.round(from+(to-from)*(1-Math.pow(1-p,3)));if(p<1)requestAnimationFrame(step)})(t0)})},{threshold:.6});
+  document.querySelectorAll('.facts b[data-count]').forEach(function(b){fo.observe(b)});
+  var bar=document.getElementById('progress'), tk=false;
+  function prog(){tk=false;var H=root.scrollHeight-innerHeight;bar.style.transform='scaleX('+(H>0?Math.min(1,scrollY/H):0)+')'}
+  window.addEventListener('scroll',function(){if(!tk){tk=true;requestAnimationFrame(prog)}},{passive:true});
+})();
+})();
+
+/* ---------- Botones flotantes tras un mínimo scroll (cabecera y barra móvil ocultas al pintar el hero) ---------- */
+(function(){var h=document.documentElement,tk=false;function s(){tk=false;h.classList.toggle('cta-wait',scrollY<=Math.min(120,innerHeight*.15))}
+ s();addEventListener('scroll',function(){if(!tk){tk=true;requestAnimationFrame(s)}},{passive:true});addEventListener('resize',s);})();
+
+</script>

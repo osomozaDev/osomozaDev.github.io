@@ -1,0 +1,1280 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Reglade3 · Diseño gráfico y editorial en Las Palmas</title>
+<meta name="description" content="Reglade3, estudio de diseño gráfico e industrial en Las Palmas de Gran Canaria desde 2008: maquetación de libros y memorias anuales, exposiciones, identidad corporativa, web y PDF accesibles. 5,0★ en Google con 19 reseñas.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400;1,6..72,500&family=Public+Sans:wght@400;500;600;700&display=swap">
+<link rel="icon" href="img/logo.png">
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-phone" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 22s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></g></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="M3.5 6.5l8.5 6.5 8.5-6.5"/></g></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2.8l2.8 5.9 6.4.8-4.7 4.4 1.2 6.4L12 17.2l-5.7 3.1 1.2-6.4L2.8 9.5l6.4-.8z"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 20.5l1.6-5.2A8.4 8.4 0 1 1 21 11.5z"/></symbol>
+  <symbol id="i-ig" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".6" fill="currentColor"/></g></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></g></symbol>
+</svg>
+<style>
+/* Base de estudio creativo (común a las landings de estudios de diseño): editorial, contenida, el portfolio manda.
+   Cada estudio redefine los tokens y su hero en studio.css. */
+:root{
+  color-scheme: light;
+  --bg:#F5F3EE; --paper:#FBFAF7; --ink:#151515; --ink-soft:#66625B; --line:rgba(21,21,21,.12);
+  --acc:#FF5A00; --acc-ink:#fff; --tint:#FFF1E8;
+  --night:#121214; --on-night:#F4F1EA; --on-night-soft:rgba(244,241,234,.66);
+  --hero-bg:var(--night);
+  --font-display:Georgia, serif; --font-body:ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --r-sm:8px; --r-md:14px; --r-lg:20px;
+  --wrap:1240px; --head:74px;
+  /* nombres de la referencia Aloha para el CSS de los paneles */
+  --shell:var(--bg); --shell-2:color-mix(in srgb,var(--ink) 7%,var(--bg)); --hibiscus:var(--ink); --hibiscus-ink:var(--ink); --sun:var(--acc); --palm:var(--ink);
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html{scroll-behavior:smooth;scroll-padding-top:calc(var(--head) + 12px)}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font-body);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:clip}
+img{max-width:100%;display:block}
+a{color:inherit}
+button{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--acc);outline-offset:3px;border-radius:4px}
+.wrap{max-width:var(--wrap);margin-inline:auto;padding-inline:clamp(18px,4vw,48px)}
+h1,h2,h3{margin:0;text-wrap:balance;font-family:var(--font-display);font-weight:400;line-height:1.02;letter-spacing:-.015em}
+h3{font-size:24px}
+p{margin:0}
+.eyebrow{display:inline-block;font-size:12.5px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-soft)}
+.lead{font-size:clamp(17px,1.35vw,19px);color:var(--ink-soft);max-width:36em}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 26px;border-radius:999px;font:600 15.5px/1.15 var(--font-body);letter-spacing:.01em;text-decoration:none;text-align:center;border:1px solid transparent;cursor:pointer;transition:background .25s,color .25s,border-color .25s,transform .25s}
+.btn svg{width:18px;height:18px;flex:none}
+.btn-primary{background:var(--ink);color:var(--bg)}
+.btn-primary:hover{background:var(--acc);color:var(--acc-ink)}
+.btn-acc{background:var(--acc);color:var(--acc-ink)}
+.btn-acc:hover{filter:brightness(1.06);transform:translateY(-1px)}
+.btn-ghost{background:transparent;border-color:var(--line);color:var(--ink)}
+.btn-ghost:hover{border-color:var(--ink)}
+.btn-light{background:var(--on-night);color:var(--night)}
+.btn-light:hover{background:var(--acc);color:var(--acc-ink)}
+.link{display:inline-flex;align-items:center;gap:8px;font-weight:600;text-decoration:none;border-bottom:1px solid var(--line);padding-bottom:2px;transition:border-color .2s,gap .2s}
+.link svg{width:16px;height:16px}
+.link:hover{border-color:currentColor;gap:12px}
+.sec{padding-block:clamp(80px,10vw,140px)}
+.sec-head{display:grid;gap:16px;max-width:800px;margin-bottom:clamp(36px,5vw,60px)}
+.sec-head h2,.book-cta h2,.visit h2{font-size:clamp(38px,5vw,70px)}
+.band-paper{background:var(--paper)}
+.band-ink{background:var(--night);color:var(--on-night)}
+.band-ink .eyebrow,.band-ink .lead{color:var(--on-night-soft)}
+.band-ink .btn-ghost,.hero.is-dark .btn-ghost{color:var(--on-night);border-color:rgba(255,255,255,.26)}
+.band-ink .btn-ghost:hover,.hero.is-dark .btn-ghost:hover{border-color:var(--on-night)}
+.band-ink .link{border-color:rgba(255,255,255,.26)}
+mark{background:#FFE58A;color:#151515;padding:0 4px;border-radius:4px}
+.draft{outline:2px dashed #E5B300;outline-offset:-12px}
+.incl{list-style:none;margin:0;padding:0;display:grid;gap:10px;font-size:18px}
+
+/* Loader con el logo: círculo, anillo que se dibuja, nombre y eyebrow, sobre el fondo del hero */
+#loader{position:fixed;inset:0;z-index:300;display:grid;place-items:center;background:var(--hero-bg);color:var(--hero-ink,var(--on-night));transition:opacity .5s ease,visibility 0s .5s;animation:ld-safe 0s 4s forwards}
+#loader.out{opacity:0;visibility:hidden;pointer-events:none}
+@keyframes ld-safe{to{opacity:0;visibility:hidden;pointer-events:none}}
+.ld{display:grid;justify-items:center;gap:16px;text-align:center}
+.ld-mark{position:relative;width:112px;height:112px;display:grid;place-items:center}
+.ld-mark svg{position:absolute;inset:0;width:100%;height:100%;transform:rotate(-90deg)}
+.ld-mark circle{fill:none;stroke:currentColor;stroke-width:1.5;opacity:.18}
+.ld-mark circle.r{opacity:1;stroke:var(--acc);stroke-width:2.2;stroke-linecap:round;stroke-dasharray:340;stroke-dashoffset:340;animation:ld-ring 1.1s .1s cubic-bezier(.6,.1,.3,1) forwards}
+@keyframes ld-ring{to{stroke-dashoffset:0}}
+.ld-mark img{width:60%;height:auto;max-height:56%;object-fit:contain;animation:ld-in .6s .15s both}
+.ld b{font:400 26px/1 var(--font-display);letter-spacing:-.01em;animation:ld-in .6s .3s both}
+.ld small{font-size:11.5px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;opacity:.6;animation:ld-in .6s .4s both}
+@keyframes ld-in{from{opacity:0;transform:translateY(8px)}}
+
+/* Cabecera: clara sobre zonas claras y vidrio oscuro sobre el hero oscuro y las bandas de noche */
+.top{position:fixed;top:0;left:0;right:0;padding-top:env(safe-area-inset-top,0px);z-index:60;background:color-mix(in srgb,var(--bg) 86%,transparent);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);transition:background .4s,color .4s,box-shadow .4s}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;height:var(--head)}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;flex:none}
+.brand img{height:30px;width:auto}
+.brand .logo-n{display:none}
+.nav{display:flex;gap:clamp(16px,2vw,30px);font-size:14.5px;font-weight:500}
+.nav a{text-decoration:none;color:var(--ink-soft);white-space:nowrap}
+.nav a:hover{color:var(--ink)}
+.top .btn{min-height:42px;padding:0 20px;font-size:14.5px}
+.top.dark{background:rgba(14,14,16,.38);color:var(--on-night)}
+.top.dark .brand .logo-p{display:none}.top.dark .brand .logo-n{display:block}
+.top.dark .nav a{color:var(--on-night-soft)}.top.dark .nav a:hover{color:var(--on-night)}
+.top.dark .btn-primary{background:var(--on-night);color:var(--night)}
+.top.dark .btn-primary:hover{background:var(--acc);color:var(--acc-ink)}
+.progress{position:absolute;left:0;bottom:-1px;height:2px;width:100%;background:var(--acc);transform:scaleX(0);transform-origin:left}
+
+/* Hero (común) */
+.hero{position:relative;min-height:min(100svh,980px);padding:calc(var(--head) + clamp(28px,5vw,64px)) 0 clamp(36px,5vw,64px);display:grid;align-content:center;overflow:hidden}
+.hero.is-dark{background:var(--hero-bg);color:var(--on-night)}
+.hero.is-dark .eyebrow{color:var(--on-night-soft)}
+.hero-grid{position:relative;z-index:2;display:grid;grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr);gap:clamp(32px,5vw,80px);align-items:center}
+.hero-grid>*{min-width:0}
+.hero-copy{display:flex;flex-direction:column;align-items:flex-start;min-width:0}
+.hero h1{font-size:clamp(46px,6vw,96px);line-height:.98;margin-top:20px}
+.hero-sub{margin-top:24px;max-width:31em;font-size:clamp(16.5px,1.3vw,19px);opacity:.82}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:14px 20px;margin-top:30px;align-items:center}
+.hero-ctas .btn{max-width:100%}
+.hero-micro{font-size:13.5px;opacity:.7;margin-top:12px}
+/* Nota de Google: sello con estrellas, nota grande y número de reseñas; abre el panel de reseñas */
+.g-rate{display:inline-flex;align-items:center;gap:12px;margin-top:28px;padding:10px 16px 10px 12px;border-radius:16px;text-decoration:none;color:inherit;border:1px solid color-mix(in srgb,currentColor 18%,transparent);background:color-mix(in srgb,currentColor 5%,transparent);transition:border-color .25s,transform .25s}
+.g-rate:hover{border-color:color-mix(in srgb,currentColor 45%,transparent);transform:translateY(-1px)}
+.g-rate b{font:400 34px/1 var(--font-display);letter-spacing:-.02em}
+.g-rate .stars{display:flex;gap:1px;color:#F5B400}.g-rate .stars svg{width:14px;height:14px}
+.g-rate .gr-t{display:grid;gap:2px;font-size:13px;line-height:1.2;opacity:.85}
+.g-rate .gr-t i{font-style:normal;opacity:.75}
+.facts{display:grid;grid-template-columns:repeat(4,1fr);margin-top:clamp(40px,6vw,80px);border-top:1px solid var(--line);position:relative;z-index:2}
+.hero.is-dark .facts{border-color:rgba(255,255,255,.14)}
+.facts div{display:grid;gap:4px;padding:20px 18px 6px 0}
+.facts div+div{padding-left:18px;border-left:1px solid var(--line)}
+.hero.is-dark .facts div+div{border-color:rgba(255,255,255,.14)}
+.facts b{font:400 clamp(26px,2.4vw,36px)/1 var(--font-display);font-variant-numeric:tabular-nums}
+.facts span{font-size:13.5px;opacity:.7}
+
+/* Clientes en texto: carrusel continuo */
+.marquee{overflow:hidden;border-block:1px solid var(--line);padding:22px 0;-webkit-mask:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
+.marquee-in{display:flex;gap:0;width:max-content;animation:mq 60s linear infinite}
+.marquee:hover .marquee-in{animation-play-state:paused}
+.marquee span{font:400 clamp(22px,2.2vw,30px)/1.1 var(--font-display);white-space:nowrap;padding-inline:22px;display:inline-flex;align-items:center;gap:44px}
+.marquee span::after{content:"";width:6px;height:6px;border-radius:50%;background:var(--acc);margin-left:22px}
+@keyframes mq{to{transform:translateX(-50%)}}
+
+/* Portfolio con filtros y visor */
+.filters{display:flex;flex-wrap:wrap;gap:8px 22px;margin-bottom:28px}
+.filters button{all:unset;cursor:pointer;font-size:15px;font-weight:500;color:var(--ink-soft);padding:4px 0;border-bottom:1.5px solid transparent;transition:color .2s,border-color .2s}
+.filters button:hover{color:var(--ink)}
+.filters button.on{color:var(--ink);border-color:var(--acc)}
+.filters button:focus-visible{outline:2px solid var(--acc);outline-offset:4px}
+.works{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:clamp(150px,16vw,230px);grid-auto-flow:dense;gap:14px}
+.work{all:unset;cursor:zoom-in;position:relative;border-radius:var(--r-md);overflow:hidden;background:var(--shell-2)}
+.work.big{grid-column:span 2;grid-row:span 2}.work.wide{grid-column:span 2}.work.tall{grid-row:span 2}
+.work img{width:100%;height:100%;object-fit:cover;transition:transform .8s cubic-bezier(.2,.7,.2,1)}
+.work:hover img{transform:scale(1.04)}
+.work::after{content:"";position:absolute;inset:45% 0 0;background:linear-gradient(transparent,rgba(0,0,0,.62));opacity:0;transition:opacity .3s}
+.work span{position:absolute;left:14px;right:14px;bottom:12px;z-index:1;color:#fff;font-size:13.5px;line-height:1.3;opacity:0;transform:translateY(6px);transition:opacity .3s,transform .3s}
+.work span b{display:block;font-size:15.5px}
+.work:hover::after,.work:focus-visible::after,.work:hover span,.work:focus-visible span{opacity:1;transform:none}
+.work:focus-visible{outline:2px solid var(--acc);outline-offset:3px}
+.work.out{display:none}
+.work.pop{animation:pop .55s cubic-bezier(.2,.7,.2,1) both}
+@keyframes pop{from{opacity:0;transform:translateY(14px) scale(.98)}}
+.lb{position:fixed;inset:0;z-index:150;background:rgba(12,12,14,.94);display:grid;place-items:center;gap:16px;padding:60px 16px 22px;grid-template-rows:1fr auto}
+.lb img{max-width:min(1100px,100%);max-height:100%;border-radius:10px;object-fit:contain;align-self:center}
+.lb-x{all:unset;cursor:pointer;position:absolute;top:12px;right:16px;width:44px;height:44px;display:grid;place-items:center;color:#fff;font-size:32px}
+.lb-nav{all:unset;cursor:pointer;position:absolute;top:50%;transform:translateY(-50%);width:48px;height:48px;border-radius:50%;display:grid;place-items:center;color:#fff;background:rgba(255,255,255,.14)}
+.lb-nav:hover{background:rgba(255,255,255,.26)}
+.lb-nav.prev{left:14px}.lb-nav.next{right:14px}
+.lb-nav svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.lb-x:focus-visible,.lb-nav:focus-visible{outline:2px solid var(--acc);outline-offset:2px}
+.lb-foot{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:12px 22px;color:rgba(255,255,255,.8);font-size:14px;text-align:center}
+.lb-foot b{color:#fff}
+
+/* Servicios: lista editorial con líneas finas */
+.svc{display:grid;grid-template-columns:repeat(2,1fr);gap:0 clamp(32px,5vw,80px);border-top:1px solid var(--line)}
+.svc-i{display:grid;grid-template-columns:auto 1fr;gap:6px 22px;padding:28px 0;border-bottom:1px solid var(--line)}
+.svc-i>b{font:400 15px/1.6 var(--font-body);color:var(--acc-text,var(--ink-soft));font-variant-numeric:tabular-nums;grid-row:span 3}
+.svc-i h3{font-size:clamp(24px,2.2vw,30px)}
+.svc-i p{color:var(--ink-soft);font-size:16px}
+.svc-i ul{list-style:none;margin:6px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:6px}
+.svc-i li{font-size:13px;padding:4px 10px;border-radius:999px;border:1px solid var(--line);color:var(--ink-soft)}
+.band-ink .svc,.band-ink .svc-i{border-color:rgba(255,255,255,.14)}
+.band-ink .svc-i p{color:var(--on-night-soft)}.band-ink .svc-i li{border-color:rgba(255,255,255,.2);color:var(--on-night-soft)}
+
+/* Proceso */
+.steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(18px,2.4vw,32px);counter-reset:st}
+.steps li{display:grid;gap:12px;align-content:start;padding-top:20px;border-top:1px solid currentColor}
+.steps li b{font:400 44px/1 var(--font-display);color:var(--acc-text,var(--acc))}
+.steps h3{font-size:24px}
+.steps p{font-size:15.5px;color:var(--ink-soft)}
+.band-ink .steps p{color:var(--on-night-soft)}
+
+/* Reseñas */
+.rv-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(22px,3vw,40px)}
+.rv{margin:0;display:grid;gap:16px;align-content:start;padding-top:20px;border-top:1px solid var(--ink)}
+.rv-top{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.rv-stars{display:flex;gap:2px;color:#F5B400}.rv-stars svg{width:14px;height:14px}
+.rv-tag{font-size:11.5px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft);text-align:right}
+.rv blockquote{margin:0;font:400 clamp(20px,1.7vw,24px)/1.32 var(--font-display)}
+.rv figcaption{display:flex;align-items:center;gap:10px}
+.rv figcaption i{display:none}
+.rv figcaption span{display:grid;line-height:1.3}.rv figcaption b{font-weight:600;font-size:15px}.rv figcaption small{color:var(--ink-soft);font-size:13px}
+.rv-more{display:flex;flex-wrap:wrap;gap:6px 16px;align-items:baseline;margin:36px 0 0;font-size:14px;color:var(--ink-soft)}
+.rv-more a{font-weight:600;color:var(--ink);text-decoration:none;border-bottom:1px solid var(--line)}
+
+/* Banda de presupuesto */
+.book-cta{display:grid;grid-template-columns:1fr auto;gap:40px;align-items:end}
+.book-cta>div{display:grid;gap:16px}
+.book-perks{list-style:none;margin:6px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:8px 26px;font-size:14.5px;color:var(--on-night-soft)}
+.book-perks li::before{content:"";display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--acc);margin-right:10px;vertical-align:2px}
+.book-cta .btn{min-height:58px;padding:0 32px;font-size:16px}
+
+/* Visita y contacto */
+.visit{display:grid;grid-template-columns:1fr 1fr;gap:clamp(36px,6vw,96px);align-items:start}
+.visit>div:first-child{display:grid;gap:18px;justify-items:start}
+.hours{border-collapse:collapse;margin-top:6px;font-size:16px}
+.hours th{text-align:left;font-weight:500;padding:10px 28px 10px 0}
+.hours td{padding:10px 0;color:var(--ink-soft);font-variant-numeric:tabular-nums}
+.hours tr{border-bottom:1px solid var(--line)}
+.contact{list-style:none;margin:6px 0 0;padding:0;display:grid;gap:12px}
+.contact li{display:flex;align-items:flex-start;gap:12px}
+.contact svg{width:18px;height:18px;flex:none;color:var(--ink-soft);margin-top:4px}
+.contact a{text-decoration:none;overflow-wrap:anywhere}
+.contact a:hover{color:var(--acc-text,var(--acc))}
+.faq{display:grid;border-top:1px solid var(--line)}
+.faq details{border-bottom:1px solid var(--line)}
+.faq summary{cursor:pointer;list-style:none;padding:20px 0;font:400 21px/1.25 var(--font-display);display:flex;justify-content:space-between;gap:16px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font:300 24px/1 var(--font-body);color:var(--ink-soft);transition:transform .25s}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq details p{padding:0 0 22px;color:var(--ink-soft)}
+
+/* Cierre y pie */
+.final{padding-block:clamp(96px,12vw,160px);text-align:center}
+.final .wrap{display:grid;justify-items:center;gap:24px}
+.final h2{font-size:clamp(40px,5.6vw,88px);line-height:1}
+.final .hero-ctas{justify-content:center;margin-top:0}
+.final .g-rate{margin-top:0}
+.foot .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 24px;font-size:13.5px;color:var(--ink-soft);padding-block:26px;border-top:1px solid var(--line)}
+.foot a{text-decoration:none}.foot a:hover{color:var(--ink)}
+
+/* Barra inferior móvil: píldora flotante translúcida, oscura sobre zonas oscuras y clara fuera */
+.mbar{display:none}
+
+/* Animaciones de entrada */
+.js-anim [data-reveal]{opacity:0;transform:translateY(22px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1)}
+.js-anim [data-reveal].in{opacity:1;transform:none}
+.js-anim .hero-copy>*{animation:rise .9s cubic-bezier(.2,.7,.2,1) both}
+.js-anim .hero-copy>:nth-child(2){animation-delay:.07s}.js-anim .hero-copy>:nth-child(3){animation-delay:.14s}.js-anim .hero-copy>:nth-child(4){animation-delay:.21s}.js-anim .hero-copy>:nth-child(5){animation-delay:.28s}.js-anim .hero-copy>:nth-child(6){animation-delay:.35s}
+html.loading .hero *{animation-play-state:paused!important}
+@keyframes rise{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+
+@media (max-width:960px){
+  .nav{display:none}
+  .hero-grid,.visit,.book-cta{grid-template-columns:1fr}
+  .facts{grid-template-columns:1fr 1fr}
+  .facts div:nth-child(3){padding-left:0;border-left:0}
+  .facts div:nth-child(n+3){border-top:1px solid var(--line)}
+  .hero.is-dark .facts div:nth-child(n+3){border-color:rgba(255,255,255,.14)}
+  .works{grid-template-columns:repeat(3,1fr)}
+  .rv-grid{grid-template-columns:1fr}
+  .svc{grid-template-columns:1fr}
+  .steps{grid-template-columns:1fr 1fr}
+}
+@media (max-width:640px){
+  body{font-size:16px;padding-bottom:84px}
+  :root{--head:62px}
+  .top .btn{display:none}
+  .brand img{height:26px}
+  .hero{min-height:0;padding-top:calc(var(--head) + 22px);align-content:start}
+  .hero h1{margin-top:12px}
+  .hero-sub{margin-top:14px;font-size:16px}
+  .hero-ctas{margin-top:20px;gap:12px;width:100%}
+  .hero-ctas>.btn{width:100%}
+  .g-rate{margin-top:16px}
+  .facts{margin-top:36px}
+  .facts div{padding:14px 10px 4px 0}.facts div+div{padding-left:12px}
+  .works{grid-template-columns:1fr 1fr;grid-auto-rows:150px;gap:10px}
+  .work.big,.work.wide{grid-column:span 2}
+  .work span{opacity:1;transform:none;font-size:12px}.work span b{font-size:14px}
+  .work::after{opacity:1}
+  .steps{grid-template-columns:1fr}
+  .book-cta .btn{width:100%}
+  .final .hero-ctas{flex-direction:column;width:100%}.final .hero-ctas .btn{width:100%}
+  .mbar{display:flex;gap:6px;position:fixed;left:12px;right:12px;bottom:calc(10px + env(safe-area-inset-bottom,0px));z-index:70;padding:6px;border-radius:999px;background:color-mix(in srgb,var(--bg) 90%,transparent);-webkit-backdrop-filter:blur(18px) saturate(1.5);backdrop-filter:blur(18px) saturate(1.5);border:1px solid var(--line);box-shadow:0 14px 34px -14px rgba(0,0,0,.45);transition:transform .35s cubic-bezier(.2,.7,.2,1),opacity .35s,background .4s,border-color .4s}
+  .mbar.dark{background:rgba(16,16,18,.82);border-color:rgba(255,255,255,.16)}
+  .mbar .btn{flex:1;min-height:48px;white-space:nowrap;padding:0 16px}
+  .mbar.dark .btn-primary{background:var(--acc);color:var(--acc-ink)}
+  .mbar .btn-ghost{flex:0 0 48px;width:48px;padding:0;border-color:transparent;background:color-mix(in srgb,var(--ink) 8%,transparent)}
+  .mbar.dark .btn-ghost{background:rgba(255,255,255,.16);color:#fff}
+  .mbar .btn-ghost svg{width:20px;height:20px}
+  .mbar.off{transform:translateY(150%);opacity:0;pointer-events:none}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.marquee-in{animation:none!important}}
+
+/* Temporadas: el eyebrow del hero pasa a píldora de línea fina con un punto de acento latiendo */
+.hero .eyebrow.t-on{display:inline-flex;align-items:center;gap:10px;padding:6px 14px 6px 12px;border-radius:999px;border:1px solid color-mix(in srgb,currentColor 30%,transparent);letter-spacing:.14em}
+.hero .eyebrow.t-on::before{content:"";width:6px;height:6px;border-radius:50%;flex:none;background:var(--acc);box-shadow:0 0 0 0 color-mix(in srgb,var(--acc) 60%,transparent);animation:t-pulso 2s ease-out infinite}
+@keyframes t-pulso{70%{box-shadow:0 0 0 7px transparent}100%{box-shadow:0 0 0 0 transparent}}
+@media (max-width:640px){.hero .eyebrow.t-on{font-size:10.5px;letter-spacing:.1em;padding:5px 11px 5px 10px}}
+
+/* Botones flotantes (cabecera y barra móvil): aparecen tras un mínimo scroll, no al pintar el hero */
+.top .btn-primary{transition:opacity .35s,transform .35s cubic-bezier(.2,.7,.2,1),background .25s,color .25s}
+html.cta-wait .top .btn-primary{opacity:0;transform:translateY(-8px);pointer-events:none}
+html.cta-wait .mbar{transform:translateY(150%)!important;opacity:0!important;pointer-events:none}
+
+.bk-opts.stack span{min-height:48px;font-size:15.5px}
+@media (max-height:700px){.bk-opts.stack span{min-height:42px}}
+
+
+/* ---- Paneles laterales ---- */
+.bk{position:fixed;inset:0;z-index:120}
+.bk[hidden]{display:none}
+.bk-scrim{position:absolute;inset:0;background:rgba(18,18,20,.55);opacity:0;transition:opacity .35s ease}
+.bk.open .bk-scrim{opacity:1}
+.bk-panel{position:absolute;top:0;right:0;bottom:0;width:min(480px,100%);background:var(--shell);display:flex;flex-direction:column;box-shadow:-30px 0 80px -30px rgba(18,18,20,.45);transform:translateX(100%);transition:transform .42s cubic-bezier(.2,.8,.2,1)}
+.bk.open .bk-panel{transform:none}
+.bk-head{display:grid;grid-template-columns:44px 1fr 44px;align-items:center;gap:8px;padding:calc(10px + env(safe-area-inset-top,0px)) 12px 10px;border-bottom:1px solid var(--line);background:var(--paper)}
+.bk-head .t{text-align:center;display:grid;gap:2px}
+.bk-head .t span{font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft)}
+.bk-head .t b{font-family:var(--font-display);font-weight:400;font-size:20px;color:var(--hibiscus);line-height:1.1}
+.bk-ib{all:unset;cursor:pointer;width:44px;height:44px;border-radius:50%;display:grid;place-items:center;color:var(--ink)}
+.bk-ib:hover{background:var(--shell-2)}
+.bk-ib:focus-visible{outline:3px solid var(--hibiscus)}
+.bk-ib svg{width:22px;height:22px}
+.bk-ib[disabled]{visibility:hidden}
+.bk-prog{height:4px;background:var(--shell-2)}
+.bk-prog i{display:block;height:100%;background:linear-gradient(90deg,var(--hibiscus),var(--sun));transform-origin:left;transition:transform .35s ease}
+.bk-body{flex:1;overflow-y:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch;padding:28px 22px 24px}
+.bk-pane{display:grid;gap:18px;align-content:start}
+.bk-pane[hidden]{display:none}
+.bk-pane h3{font-size:clamp(26px,6vw,32px);line-height:1.1}
+.bk-pane .sub{color:var(--ink-soft);margin-top:-8px}
+.bk-opts{display:grid;gap:10px}
+.bk-opts label{position:relative;cursor:pointer;display:block}
+.bk-opts input{position:absolute;opacity:0;inset:0;margin:0;cursor:pointer}
+.bk-opts span{display:flex;align-items:center;justify-content:space-between;min-height:58px;padding:0 18px;border-radius:16px;border:1.5px solid var(--line);background:var(--paper);font-size:17px;font-weight:600;transition:border-color .2s,background .2s,color .2s}
+.bk-opts span::after{content:"";width:22px;height:22px;border-radius:50%;border:2px solid var(--line);flex:none;transition:all .2s}
+.bk-opts input[type=checkbox]+span::after{border-radius:7px}
+.bk-opts input:checked+span{border-color:var(--hibiscus);background:var(--tint);color:var(--hibiscus-ink)}
+.bk-opts input:checked+span::after{border-color:var(--hibiscus);background:var(--hibiscus) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='none' stroke='white' stroke-width='3.2' stroke-linecap='round' stroke-linejoin='round' d='M6 12l4 4 8-8'/%3E%3C/svg%3E") center/14px no-repeat}
+.bk-opts input:focus-visible+span{outline:3px solid var(--hibiscus);outline-offset:2px}
+.bk-opts.row{grid-template-columns:repeat(auto-fit,minmax(0,1fr));gap:8px}
+.bk-opts.row span{justify-content:center;min-height:50px;padding:0 10px;font-size:15px;text-align:center}
+.bk-opts.row span::after{display:none}
+.bk-field{display:grid;gap:8px;min-width:0}
+.bk-field>span{font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-soft)}
+.bk-field input,.bk-field textarea{display:block;width:100%;min-width:0;max-width:100%;min-height:56px;padding:14px 16px;border-radius:14px;border:1.5px solid var(--line);background:var(--paper);font:500 17px var(--font-body);color:var(--ink);-webkit-appearance:none;appearance:none}
+.bk-field input[type=date]{text-align:left}
+.bk-field input::-webkit-date-and-time-value{text-align:left}
+.bk-field textarea{min-height:96px;resize:vertical}
+.cal{background:var(--paper);border:1.5px solid var(--line);border-radius:18px;padding:10px 12px 14px}
+.cal-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:6px}
+.cal-head b{font-size:17px}
+.cal-head .bk-ib[disabled]{visibility:visible;opacity:.25;cursor:default}
+.cal-dow,.cal-grid{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:4px;text-align:center}
+.cal-dow span{font-size:12px;font-weight:700;color:var(--ink-soft);padding:4px 0}
+.cal-dow .we,.cal-grid .we{color:var(--hibiscus)}
+.cal-grid button{all:unset;box-sizing:border-box;cursor:pointer;aspect-ratio:1;max-height:48px;width:100%;display:grid;place-items:center;border-radius:12px;font-weight:600;font-size:15px;font-variant-numeric:tabular-nums;color:var(--ink);transition:background .15s,color .15s}
+.cal-grid button.we{color:var(--hibiscus)}
+.cal-grid button:hover:not([disabled]){background:var(--shell-2)}
+.cal-grid button[disabled]{opacity:.28;cursor:default}
+.cal-grid button{position:relative}
+.cal-grid button.today{opacity:1;color:var(--ink);box-shadow:inset 0 0 0 2px var(--sun);background:#FFF6EE}
+.cal-grid button.today::after{content:"";position:absolute;left:50%;bottom:12%;width:5px;height:5px;margin-left:-2.5px;border-radius:50%;background:#E0864A}
+.cal-legend{display:flex;align-items:center;gap:6px;margin:10px 2px 0;font-size:13px;font-weight:600;color:var(--ink-soft)}
+.cal-legend i{width:14px;height:14px;border-radius:5px;box-shadow:inset 0 0 0 2px var(--sun);background:#FFF6EE;position:relative;flex:none}
+.cal-legend i::after{content:"";position:absolute;left:50%;bottom:2px;width:4px;height:4px;margin-left:-2px;border-radius:50%;background:#E0864A}
+.cal-grid button[aria-pressed="true"]{background:var(--hibiscus);color:#fff}
+.cal-grid button:focus-visible{outline:3px solid var(--hibiscus);outline-offset:1px}
+.cal-sel{margin:4px 0 0;font-weight:600;color:var(--ink-soft)}
+.cal-sel.on{color:var(--hibiscus-ink)}
+.bk-field input:focus,.bk-field textarea:focus{outline:none;border-color:var(--hibiscus)}
+.bk-field input[aria-invalid="true"]{border-color:#C6283D;background:#FFF2F4}
+.stepper{display:grid;grid-template-columns:56px 1fr 56px;align-items:center;background:var(--paper);border:1.5px solid var(--line);border-radius:16px;overflow:hidden}
+.stepper button{all:unset;cursor:pointer;height:56px;display:grid;place-items:center;font-size:26px;font-weight:600;color:var(--hibiscus)}
+.stepper button:active{background:var(--shell-2)}
+.stepper button:focus-visible{outline:3px solid var(--hibiscus);outline-offset:-3px}
+.stepper output{text-align:center;font-size:22px;font-weight:700;font-variant-numeric:tabular-nums}
+.bk-foot{padding:12px 22px calc(14px + env(safe-area-inset-bottom,0px));border-top:1px solid var(--line);background:var(--paper);display:grid;gap:8px}
+.bk-foot .btn{width:100%;min-height:56px;font-size:17px}
+.bk-foot [hidden]{display:none!important}
+.f-error{margin:0;color:#B3213A;font-weight:600;font-size:15px}
+.btn-wa{background:#1FA855;color:#fff;box-shadow:0 12px 24px -12px rgba(31,168,85,.8);width:100%;white-space:nowrap}
+.btn-wa:hover{background:#178F47}
+.btn-wa svg{width:22px;height:22px}
+.f-preview{margin:0;white-space:pre-wrap;font:16px/1.5 var(--font-body);background:#E7FFDB;border-radius:16px 16px 16px 4px;padding:16px 18px;color:#123;box-shadow:0 1px 0 rgba(0,0,0,.06)}
+.f-copy{all:unset;cursor:pointer;justify-self:center;font-size:14px;font-weight:600;color:var(--hibiscus-ink);text-decoration:underline;text-underline-offset:3px;padding:4px 8px}
+.f-copy:focus-visible{outline:3px solid var(--hibiscus);border-radius:6px}
+.f-hint{margin:0;font-size:13px;color:var(--ink-soft);text-align:center}
+
+
+.hrs{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.stepper.sm{grid-template-columns:40px 1fr 40px;border-radius:14px}
+.stepper.sm button{height:44px;font-size:22px}
+.stepper.sm button[disabled]{opacity:.25;cursor:default}
+.stepper.sm output{font-size:18px}
+.hrs-out{margin:-4px 0 0;font-size:14px;font-weight:600;color:var(--hibiscus-ink)}
+/* Panel compacto: ningún paso necesita scroll */
+.bk-body{padding:18px 18px 14px}
+.bk-pane{gap:14px}
+.bk-pane h3{font-size:24px}
+.bk-pane .sub{margin-top:-6px;font-size:15px}
+.bk-field{gap:6px}
+.bk-field>span{font-size:12px}
+.bk-opts{gap:8px}
+.bk-opts span{min-height:50px;font-size:16px;border-radius:14px}
+.bk-opts.row span{min-height:44px}
+.bk-opts.grid2{grid-template-columns:1fr 1fr}
+.bk-opts.grid2 span{min-height:44px;padding:0 12px;font-size:14px}
+.bk-opts.grid2 span::after{width:18px;height:18px}
+.bk-field input,.bk-field textarea{min-height:48px;padding:11px 14px;font-size:16px}
+.bk-field textarea{min-height:76px}
+.stepper{grid-template-columns:52px 1fr 52px}
+.stepper button{height:48px}
+.cal{padding:6px 8px 10px}
+.cal-head{margin-bottom:2px}
+.cal-head .bk-ib{width:38px;height:38px}
+.cal-dow span{padding:2px 0}
+.cal-grid{gap:2px}
+.cal-grid button{aspect-ratio:auto;height:clamp(34px,5.2vh,44px)}
+.cal-legend{margin-top:6px;font-size:12px}
+.cal-sel{margin:0;font-size:14px}
+.f-preview{font-size:14px;padding:12px 14px}
+.bk-foot{padding:10px 18px calc(10px + env(safe-area-inset-bottom,0px));gap:6px}
+.bk-foot .btn{min-height:50px}
+.bk-head{padding-block:calc(6px + env(safe-area-inset-top,0px)) 6px}
+@media (max-height:700px){
+  .bk-pane h3{font-size:22px}
+  .bk-opts span{min-height:46px}
+  .bk-opts.row span,.bk-opts.grid2 span{min-height:40px}
+  .stepper button{height:44px}
+  .cal-grid button{height:32px;font-size:14px}
+  .bk-body{padding-top:14px}
+  .f-preview{font-size:13px;line-height:1.4;padding:10px 12px}
+  .bk-pane .sub{font-size:13.5px}
+}
+@media (max-height:620px){.bk-pane{gap:10px}.bk-pane h3{font-size:20px}.f-preview{font-size:12.5px;line-height:1.35}}
+.rvd-body{display:grid;grid-template-columns:minmax(0,1fr);gap:18px;align-content:start;overflow-x:hidden;overscroll-behavior-x:none;touch-action:pan-y}
+.rvd .bk-panel{overflow-x:hidden;max-width:100vw}
+.rvd-body>*,.rvd-list>*{min-width:0;max-width:100%}
+.rvd-list .rv,.rvd-list .rv *{overflow-wrap:anywhere}
+.rvd-list .rv-top{flex-wrap:wrap}.rvd-list .rv-tag{white-space:normal}
+.rvd-sum{display:grid;grid-template-columns:auto minmax(0,1fr);gap:22px;align-items:center;background:var(--paper);border:1px solid var(--line);border-radius:var(--r-md);padding:18px 20px}
+.rvd-score{display:grid;justify-items:center;gap:4px}
+.rvd-score b{font-size:44px;line-height:1;font-weight:700;color:var(--ink)}
+.rvd-score small{font-size:13px;color:var(--ink-soft)}
+.rvd-dist{list-style:none;margin:0;padding:0;display:grid;gap:5px;font-size:13px;color:var(--ink-soft)}
+.rvd-dist li{display:grid;grid-template-columns:12px 1fr 22px;gap:8px;align-items:center}
+.rvd-dist i{height:8px;border-radius:99px;background:var(--shell-2);overflow:hidden}.rvd-dist b{display:block;height:100%;background:#F5B400;border-radius:99px}
+.rvd-dist em{font-style:normal;text-align:right}
+.rvd-h{margin:6px 0 0;font-size:17px}
+.rvd-list{display:grid;grid-template-columns:minmax(0,1fr);gap:12px}
+.rvd-list .rv{background:var(--paper);opacity:1!important;transform:none!important}
+.rvd-map{border-radius:var(--r-md);overflow:hidden;border:1px solid var(--line);background:var(--shell-2);height:300px;flex:none}
+.rvd-map iframe{width:100%;height:100%;border:0;display:block}
+.rvd-note{margin:0;font-size:13px;color:var(--ink-soft)}
+.rvd-foot{padding:12px 16px calc(12px + env(safe-area-inset-bottom,0px));border-top:1px solid var(--line);background:var(--paper)}
+.rvd-foot .btn{width:100%}
+/* Subir arriba */
+.totop{position:fixed;right:20px;bottom:24px;z-index:65;width:48px;height:48px;border-radius:50%;border:1px solid rgba(255,255,255,.6);background:rgba(255,255,255,.72);-webkit-backdrop-filter:blur(14px) saturate(1.6);backdrop-filter:blur(14px) saturate(1.6);color:var(--ink);display:grid;place-items:center;cursor:pointer;box-shadow:0 10px 30px -10px rgba(21,21,21,.3);opacity:0;transform:translateY(12px) scale(.9);pointer-events:none;transition:opacity .3s,transform .3s}
+.totop.on{opacity:1;transform:none;pointer-events:auto}
+.totop:hover{transform:translateY(-2px)}
+.totop svg{width:22px;height:22px}
+@media (max-width:960px){.totop{bottom:calc(86px + env(safe-area-inset-bottom,0px));right:16px;width:44px;height:44px}}
+@media (max-width:640px){.bk-panel{width:100%;transform:translateY(100%);box-shadow:none}}
+.bk-head .t b{font-family:var(--font-display);font-weight:400;color:var(--ink)}
+.bk-opts input:checked+span{background:var(--tint)}
+.btn-wa{font-size:16px}
+.bk-pane h3:focus{outline:none}
+.bk-opts.grid2.tight span{min-height:44px;padding:0 12px;font-size:14.5px}
+@media (max-height:700px){.bk-opts.grid2.tight span{min-height:38px;font-size:14px}}
+
+/* Reglade3 — editorial: papel, retícula y el morado de su «3»; el verde oliva del logo solo como acento menor.
+   Un gesto: un catálogo que pasa sus páginas; cada pliego, un proyecto real (página de texto maquetada + página con la foto). */
+:root{
+  --bg:#F5F2EC; --paper:#FBF9F5; --ink:#1E1A1F; --ink-soft:#615B63; --line:rgba(30,26,31,.13);
+  --acc:#782066; --acc-ink:#fff; --acc-text:#782066; --oliva:#8E9431; --tint:#F3E6F0;
+  --night:#2A0F25; --on-night:#F7F1F5; --on-night-soft:rgba(247,241,245,.68);
+  --hero-bg:var(--bg); --hero-ink:var(--ink);
+  --font-display:"Newsreader", Georgia, serif; --font-body:"Public Sans", ui-sans-serif, system-ui, sans-serif;
+}
+h1,h2,h3{font-variation-settings:"opsz" 72;letter-spacing:-.02em}
+h1 em,h2 em{font-style:italic;color:var(--acc)}
+.band-ink h2 em{color:#E7B9DC}
+.hero{background-image:linear-gradient(rgba(120,32,102,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(120,32,102,.05) 1px,transparent 1px);background-size:28px 28px;background-position:center top}
+.hero h1{font-size:clamp(46px,min(5.6vw,11svh),92px);font-weight:400;line-height:.98}
+.hero h1 em{display:block}
+.brand img{height:34px}
+.btn-primary{background:var(--acc);color:#fff}
+.btn-primary:hover{background:var(--ink);color:#fff}
+.top .btn-primary{background:var(--acc)}
+.btn-light:hover{background:#fff;color:var(--acc)}
+#loader .ld b{font-weight:500}
+.ld-3{font:500 64px/1 var(--font-display);color:var(--acc);animation:ld-in .6s .15s both}
+
+/* El catálogo que pasa sus páginas */
+.libro{margin:0;display:grid;gap:12px;justify-items:center}
+.cat{--w:min(100%,640px,calc((100svh - var(--head) - 170px)*1.5));position:relative;width:var(--w);aspect-ratio:3/2;perspective:2200px;container-type:inline-size;cursor:pointer;user-select:none;-webkit-user-select:none;touch-action:pan-y}
+.cat::before{content:"";position:absolute;inset:3% -1.5% -3%;border-radius:6px;background:#D9D2C6;box-shadow:0 40px 70px -30px rgba(40,20,40,.45);transform:translateY(1.2%)}
+.pg,.face{position:absolute;top:0;bottom:0;width:50%;overflow:hidden;background:#FFFEFB}
+.pg-l{left:0;border-radius:4px 0 0 4px;box-shadow:inset -18px 0 24px -18px rgba(0,0,0,.28)}
+.pg-r,.leaf{right:0}
+.pg-r{border-radius:0 4px 4px 0;box-shadow:inset 18px 0 24px -18px rgba(0,0,0,.24)}
+.leaf{position:absolute;top:0;bottom:0;width:50%;transform-origin:0 50%;transform-style:preserve-3d;z-index:3;visibility:hidden}
+.leaf.left{right:auto;left:0;transform-origin:100% 50%}
+.leaf .face{width:100%;backface-visibility:hidden;-webkit-backface-visibility:hidden}
+.leaf .back{transform:rotateY(180deg)}
+.leaf.go{visibility:visible;transition:transform .95s cubic-bezier(.45,.05,.25,1)}
+.leaf.go.fwd{transform:rotateY(-180deg)}
+.leaf.go.bwd{transform:rotateY(180deg)}
+.leaf .face::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.18),transparent 30%);opacity:0;transition:opacity .95s}
+.leaf.go .face::after{opacity:1}
+/* página de texto: maquetación editorial */
+.pt{position:absolute;inset:0;display:flex;flex-direction:column;padding:9cqw 6cqw 5cqw 7cqw}
+.pt .fo{font:600 1.5cqw/1 var(--font-body);letter-spacing:.18em;text-transform:uppercase;color:var(--acc);display:flex;justify-content:space-between;border-bottom:.15cqw solid var(--line);padding-bottom:1.6cqw}
+.pt .nn{font:400 9cqw/1 var(--font-display);color:var(--acc);margin-top:auto}
+.pt h4{margin:1.4cqw 0 0;font:400 3.9cqw/1.05 var(--font-display);letter-spacing:-.02em;color:var(--ink);text-wrap:balance}
+.pt p{margin-top:1.8cqw;font:italic 400 1.9cqw/1.35 var(--font-display);color:var(--ink-soft)}
+.pt .pn{margin-top:4cqw;font:500 1.3cqw/1 var(--font-body);color:var(--ink-soft);letter-spacing:.1em}
+/* página de foto */
+.pf{position:absolute;inset:0;padding:6cqw 6cqw 5cqw 5cqw;display:flex;flex-direction:column;gap:2cqw}
+.pf img{width:100%;flex:1;min-height:0;object-fit:cover;border-radius:.4cqw}
+.pf span{font:500 1.4cqw/1.3 var(--font-body);color:var(--ink-soft);display:flex;justify-content:space-between;gap:2cqw;letter-spacing:.06em}
+.pf span b{color:var(--oliva);font-weight:700}
+.curl{position:absolute;right:0;bottom:0;width:7cqw;height:7cqw;z-index:4;background:linear-gradient(225deg,transparent 48%,#E9E2D6 50%,#FFFEFB 70%);box-shadow:-2px -2px 6px rgba(0,0,0,.12);border-radius:0 0 4px 0;animation:curl 3.6s ease-in-out 2.5s infinite;pointer-events:none}
+@keyframes curl{0%,70%,100%{width:5cqw;height:5cqw}80%{width:9cqw;height:9cqw}}
+.book-rate{position:absolute;left:-14px;bottom:-16px;z-index:5;margin:0;background:var(--acc);color:#fff;border:0;box-shadow:0 16px 34px -14px rgba(60,10,50,.6)}
+.book-rate .stars{color:#FFD45C}.book-rate .gr-t{opacity:1}
+.libro-bar{display:flex;align-items:center;gap:10px;font-size:13.5px;color:var(--ink-soft);font-variant-numeric:tabular-nums;margin-top:10px}
+.libro-bar button{all:unset;cursor:pointer;width:36px;height:36px;border-radius:50%;display:grid;place-items:center;border:1px solid var(--line)}
+.libro-bar button:hover{border-color:var(--ink)}
+.libro-bar button:focus-visible{outline:2px solid var(--acc);outline-offset:2px}
+.libro-bar svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.libro-hint{margin-left:6px;font-style:italic;font-family:var(--font-display);font-size:16px}
+.only-touch{display:none}
+@media (hover:none){.hide-touch{display:none}.only-touch{display:inline}}
+
+/* Logos */
+.logos{padding:34px 0 30px;background:var(--paper)}
+.logos-h{display:flex;flex-wrap:wrap;justify-content:space-between;gap:6px 24px;margin-bottom:12px}
+.logos-n{font-size:14px;color:var(--ink-soft)}
+.logo-mq .marquee-in{align-items:center;gap:56px;animation-duration:75s}
+.logo-mq img{height:52px;width:auto;max-width:170px;object-fit:contain;opacity:.8}
+
+.svc{grid-template-columns:repeat(2,1fr)}
+#resenas .rv-grid .rv-x{display:none}
+
+/* Accesible */
+.acc-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,6vw,96px);align-items:start}
+.acc-sec h2{font-size:clamp(44px,6vw,88px);margin-top:16px}
+.acc-txt{display:grid;gap:22px;justify-items:start}
+.acc-list{list-style:none;margin:0;padding:0;display:grid;border-top:1px solid rgba(255,255,255,.18);width:100%}
+.acc-list li{padding:14px 0;border-bottom:1px solid rgba(255,255,255,.18);color:var(--on-night-soft)}
+.acc-list b{color:var(--on-night);font-weight:600}
+.acc-txt .link{color:var(--on-night)}
+
+/* Autores */
+.autores{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(32px,6vw,96px);align-items:center}
+.autores-img{margin:0}.autores-img img{border-radius:var(--r-lg);width:100%;aspect-ratio:3/2;object-fit:cover}
+.autores-txt{display:grid;gap:18px;justify-items:start}
+.autores-txt h2{font-size:clamp(40px,4.8vw,70px)}
+.autores-txt p:not(.lead){color:var(--ink-soft)}
+.oficina{width:100%;aspect-ratio:2.1;object-fit:cover;border-radius:var(--r-md)}
+.final h2 em{display:block}
+
+@media (max-width:960px){
+  .libro{order:-1}
+  .cat{--w:min(100%,calc(36svh*1.5),620px)}
+  .acc-grid,.autores{grid-template-columns:1fr}
+}
+@media (max-width:640px){
+  .hero{padding-top:calc(var(--head) + 14px)}
+  .hero-grid{gap:16px}
+  .libro{gap:4px}
+  .cat{--w:min(100%,calc(27svh*1.5))}
+  .book-rate{left:auto;right:-6px;bottom:-12px;padding:5px 9px 5px 7px;gap:7px;border-radius:11px}
+  .book-rate b{font-size:22px}.book-rate .stars svg{width:10px;height:10px}.book-rate .gr-t{font-size:10.5px}
+  .libro-bar{margin-top:8px;font-size:12px;gap:8px;align-self:start;justify-self:start}
+  .libro-bar button{width:30px;height:30px}
+  .libro-hint{font-size:14px}
+  .hero .eyebrow{font-size:11px;letter-spacing:.14em}
+  .hero h1{font-size:clamp(36px,11.5vw,54px);margin-top:10px}
+  .hero-sub{display:none}
+  .hero-ctas .link{display:none}
+  .hero-micro{margin-top:10px}
+  .svc{grid-template-columns:1fr}
+  .logo-mq img{height:40px}
+  .pt p,.pt .pn{display:none}
+  .pt h4{font-size:5cqw}
+  .pt .fo{font-size:2.1cqw}
+  .pf span{display:none}
+}
+@media (max-width:640px) and (min-height:760px){.hero-sub{display:block}}
+@media (max-width:420px){.eb2{display:none}}
+@media (min-width:641px) and (max-height:560px){.hero-sub{display:none}.hero{min-height:0}.facts{display:none}.libro-bar{display:none}}
+@media (max-width:640px){.pt .fo>span:first-child{display:none}}
+
+</style>
+
+<div id="loader" aria-hidden="true"><div class="ld"><div class="ld-mark"><svg viewBox="0 0 112 112"><circle cx="56" cy="56" r="54"/><circle class="r" cx="56" cy="56" r="54"/></svg><span class="ld-3">3</span></div><b>Reglade3</b><small>Diseño gráfico y editorial · Las Palmas</small></div></div>
+<script>document.documentElement.classList.add('loading')</script>
+<noscript><style>#loader{display:none}</style></noscript>
+
+<header class="top" id="top">
+  <div class="wrap">
+    <a class="brand" href="#hero" aria-label="Reglade3, inicio"><img class="logo-p" src="img/logo.png" alt="Reglade3, diseño industrial y gráfico" width="858" height="251"><img class="logo-n" src="img/logo-blanco.png" alt="Reglade3" width="858" height="251"></a>
+    <nav class="nav" aria-label="Secciones">
+      <a href="#proyectos">Proyectos</a>
+      <a href="#servicios">Servicios</a>
+      <a href="#autores">Autopublicación</a>
+      <a href="#resenas">Reseñas</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <a class="btn btn-primary" href="#hablemos">Pide presupuesto</a>
+  </div>
+  <div class="progress" id="progress"></div>
+</header>
+
+<main>
+  <section class="hero" id="hero">
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <span class="eyebrow" data-t="eyebrow">Diseño gráfico y editorial<span class="eb2"> · Las Palmas de G. C.</span></span>
+        <h1 data-t="h1">Diseño que se lee <em>de principio a fin</em></h1>
+        <p class="hero-sub" data-t="sub">Reglade3 es un estudio de diseño gráfico e industrial fundado en 2008 en Las Palmas de Gran Canaria: libros y memorias anuales, exposiciones, identidad corporativa, web y contenidos accesibles para instituciones, empresas y autores.</p>
+        <div class="hero-ctas">
+          <a class="btn btn-primary" href="#hablemos"><svg aria-hidden="true"><use href="#i-chat"/></svg><span data-t="cta">Pide tu presupuesto</span></a>
+          <a class="link" href="#proyectos">Ver proyectos <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        </div>
+        <p class="hero-micro">Respuesta por WhatsApp · sin compromiso</p>
+      </div>
+
+      <figure class="libro" id="libro" aria-label="Catálogo de proyectos de Reglade3: pasa la página para ver el siguiente">
+        <div class="cat" id="book">
+          <div class="pg pg-l" id="pg-l"></div>
+          <div class="pg pg-r" id="pg-r"></div>
+          <div class="leaf" id="leaf" aria-hidden="true"><div class="face front"></div><div class="face back"></div></div>
+          <span class="curl" aria-hidden="true"></span>
+          <a class="g-rate book-rate" href="#resenas" data-rvd><b>5,0</b><span class="gr-t"><span class="stars"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></span><i>19 reseñas en Google</i></span></a>
+        </div>
+        <figcaption class="libro-bar"><button type="button" id="bk-prev" aria-label="Página anterior"><svg viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"/></svg></button><span id="libro-n" aria-live="polite">01 / 08</span><button type="button" id="bk-nextp" aria-label="Pasar página"><svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg></button><span class="libro-hint"><span class="hide-touch">Pasa la página</span><span class="only-touch">Toca la página</span></span></figcaption>
+      </figure>
+    </div>
+    <div class="wrap facts">
+      <div><b data-count="2008" data-from="1990">2008</b><span>Año en que se fundó el estudio</span></div>
+      <div><b>+16 años</b><span>De proyectos creativos de todo tipo</span></div>
+      <div><b>KDP</b><span>Libros listos para Amazon, impresos y en EPUB</span></div>
+      <div><b>PDF accesible</b><span>Contenidos para llegar a más personas</span></div>
+    </div>
+  </section>
+
+  <section class="logos" id="clientes" aria-label="Instituciones y empresas que confían en Reglade3">
+    <div class="wrap logos-h"><span class="eyebrow">Empresas e instituciones que ya confían en su trabajo</span><span class="logos-n">Administraciones, museos, universidades, alimentación, autónomos y ONG</span></div>
+    <div class="marquee logo-mq"><div class="marquee-in"><img src="img/clientes/c1.png" alt="Gobierno de Canarias" loading="lazy"><img src="img/clientes/c2.png" alt="Cabildo de Gran Canaria" loading="lazy"><img src="img/clientes/c3.png" alt="Ayuntamiento de Las Palmas de Gran Canaria" loading="lazy"><img src="img/clientes/c4.png" alt="Cultura LPA" loading="lazy"><img src="img/clientes/c5.png" alt="Promoción de Las Palmas de Gran Canaria" loading="lazy"><img src="img/clientes/c6.png" alt="Bibliotecas Municipales de Las Palmas de Gran Canaria" loading="lazy"><img src="img/clientes/c7.png" alt="Ayuntamiento de Tomelloso" loading="lazy"><img src="img/clientes/c8.png" alt="Universidad de Las Palmas de Gran Canaria" loading="lazy"><img src="img/clientes/c9.png" alt="PLOCAN" loading="lazy"><img src="img/clientes/c10.png" alt="El Museo Canario" loading="lazy"><img src="img/clientes/c11.png" alt="Museo Castillo de Mata" loading="lazy"><img src="img/clientes/c12.png" alt="Macflor" loading="lazy"><img src="img/clientes/c13.png" alt="AIDER Gran Canaria" loading="lazy"><img src="img/clientes/c14.png" alt="Hecansa" loading="lazy"><img src="img/clientes/c15.png" alt="Etnonautas" loading="lazy"><img src="img/clientes/c16.png" alt="Juventud Canaria" loading="lazy"><img src="img/clientes/c17.png" alt="Gesplan" loading="lazy"><img src="img/clientes/c18.png" alt="Pronto Dental" loading="lazy"><img src="img/clientes/c1.png" aria-hidden="true" alt="Gobierno de Canarias" loading="lazy"><img src="img/clientes/c2.png" aria-hidden="true" alt="Cabildo de Gran Canaria" loading="lazy"><img src="img/clientes/c3.png" aria-hidden="true" alt="Ayuntamiento de Las Palmas de Gran Canaria" loading="lazy"><img src="img/clientes/c4.png" aria-hidden="true" alt="Cultura LPA" loading="lazy"><img src="img/clientes/c5.png" aria-hidden="true" alt="Promoción de Las Palmas de Gran Canaria" loading="lazy"><img src="img/clientes/c6.png" aria-hidden="true" alt="Bibliotecas Municipales de Las Palmas de Gran Canaria" loading="lazy"><img src="img/clientes/c7.png" aria-hidden="true" alt="Ayuntamiento de Tomelloso" loading="lazy"><img src="img/clientes/c8.png" aria-hidden="true" alt="Universidad de Las Palmas de Gran Canaria" loading="lazy"><img src="img/clientes/c9.png" aria-hidden="true" alt="PLOCAN" loading="lazy"><img src="img/clientes/c10.png" aria-hidden="true" alt="El Museo Canario" loading="lazy"><img src="img/clientes/c11.png" aria-hidden="true" alt="Museo Castillo de Mata" loading="lazy"><img src="img/clientes/c12.png" aria-hidden="true" alt="Macflor" loading="lazy"><img src="img/clientes/c13.png" aria-hidden="true" alt="AIDER Gran Canaria" loading="lazy"><img src="img/clientes/c14.png" aria-hidden="true" alt="Hecansa" loading="lazy"><img src="img/clientes/c15.png" aria-hidden="true" alt="Etnonautas" loading="lazy"><img src="img/clientes/c16.png" aria-hidden="true" alt="Juventud Canaria" loading="lazy"><img src="img/clientes/c17.png" aria-hidden="true" alt="Gesplan" loading="lazy"><img src="img/clientes/c18.png" aria-hidden="true" alt="Pronto Dental" loading="lazy"></div></div>
+  </section>
+
+  <section class="sec band-paper" id="proyectos">
+    <div class="wrap">
+      <div class="sec-head" data-reveal>
+        <span class="eyebrow">Porfolio</span>
+        <h2>Proyectos que se leen, <em>se recorren y se usan</em></h2>
+        <p class="lead">Creatividad, estrategia y técnica: de la memoria institucional al panel de una exposición permanente, del libro autopublicado a la web de una cooperativa.</p>
+      </div>
+      <div class="filters" role="group" aria-label="Filtrar proyectos">
+        <button type="button" class="on" data-f="all">Todos</button>
+        <button type="button" data-f="editorial">Editorial</button>
+        <button type="button" data-f="expo">Exposiciones</button>
+        <button type="button" data-f="web">Web</button>
+        <button type="button" data-f="grafico">Gráfico y packs</button>
+      </div>
+      <div class="works" id="works">
+        <button type="button" class="work big" data-k="memoria" data-c="editorial" data-tipo="Diseño editorial o memoria anual" data-t="Memoria de actividades" data-d="Consejería de Arquitectura y Vivienda · Cabildo de Gran Canaria"><img src="img/w-memoria.jpg" alt="Memoria de actividades de la Consejería de Arquitectura y Vivienda del Cabildo de Gran Canaria" loading="lazy"><span><b>Memoria de actividades</b>Cabildo de Gran Canaria</span></button>
+        <button type="button" class="work" data-k="degollada" data-c="expo" data-tipo="Exposición o señalética" data-t="Centro de Visitantes Degollada Becerra" data-d="Exposición permanente · Gran Canaria"><img src="img/w-degollada.jpg" alt="Paneles de la exposición del Centro de Visitantes Degollada Becerra" loading="lazy"><span><b>Degollada Becerra</b>Exposición permanente</span></button>
+        <button type="button" class="work" data-k="nestor" data-c="expo" data-tipo="Exposición o señalética" data-t="«Néstor o de la andrógina belleza»" data-d="Exposición temporal · Museo Castillo de Mata"><img src="img/w-nestor.jpg" alt="Lona de la exposición sobre Néstor en el Museo Castillo de Mata" loading="lazy"><span><b>Néstor</b>Museo Castillo de Mata</span></button>
+        <button type="button" class="work wide" data-k="nexus" data-c="editorial" data-tipo="Libro para autopublicar" data-t="El viaje de Nexus" data-d="Maquetación de libro para autopublicación en Amazon KDP"><img src="img/w-nexus.jpg" alt="Maqueta del libro El viaje de Nexus abierto" loading="lazy"><span><b>El viaje de Nexus</b>Autopublicación en Amazon KDP</span></button>
+        <button type="button" class="work" data-k="tinta" data-c="expo" data-tipo="Exposición o señalética" data-t="«Memorias de tinta»" data-d="Exposición temporal · El Museo Canario"><img src="img/w-tinta.jpg" alt="Sala de la exposición Memorias de tinta en El Museo Canario" loading="lazy"><span><b>Memorias de tinta</b>El Museo Canario</span></button>
+        <button type="button" class="work tall" data-k="esencia" data-c="grafico" data-tipo="Cartelería o diseño gráfico" data-t="«La esencia del arte»" data-d="Cartelería para eventos en museos"><img src="img/w-esencia.jpg" alt="Carteles de La esencia del arte en una pared" loading="lazy"><span><b>La esencia del arte</b>Cartelería</span></button>
+        <button type="button" class="work wide" data-k="plocan-expo" data-c="expo" data-tipo="Exposición o señalética" data-t="Exposición interactiva con realidad aumentada" data-d="Paneles expositivos para la sede de PLOCAN"><img src="img/w-plocan-expo.jpg" alt="Exposición con paneles y realidad aumentada en PLOCAN" loading="lazy"><span><b>PLOCAN</b>Exposición con realidad aumentada</span></button>
+        <button type="button" class="work" data-k="biosfera" data-c="grafico editorial" data-tipo="Cartelería o diseño gráfico" data-t="Calendario ilustrado" data-d="Reserva de la Biosfera de Gran Canaria"><img src="img/w-biosfera.jpg" alt="Calendario ilustrado de la Reserva de la Biosfera de Gran Canaria" loading="lazy"><span><b>Calendario ilustrado</b>Reserva de la Biosfera</span></button>
+        <button type="button" class="work" data-k="plocan-comic" data-c="editorial" data-tipo="Diseño editorial o memoria anual" data-t="«Supervivencia en PLOCAN»" data-d="Portada del cómic de PLOCAN"><img src="img/w-plocan-comic.jpg" alt="Portada del cómic Supervivencia en PLOCAN" loading="lazy"><span><b>Supervivencia en PLOCAN</b>Cómic</span></button>
+        <button type="button" class="work" data-k="degollada-web" data-c="web" data-tipo="Página web" data-t="Web del Centro de Visitantes Degollada Becerra" data-d="Diseño y desarrollo web"><img src="img/w-degollada-web.jpg" alt="Web del Centro de Visitantes Degollada Becerra en un portátil" loading="lazy"><span><b>Degollada Becerra</b>Diseño web</span></button>
+        <button type="button" class="work" data-k="plocan-diptico" data-c="editorial grafico" data-tipo="Diseño editorial o memoria anual" data-t="Folleto informativo" data-d="PLOCAN · Plataforma Oceánica de Canarias"><img src="img/w-plocan-diptico.jpg" alt="Folleto informativo de PLOCAN" loading="lazy"><span><b>Folleto PLOCAN</b>Díptico</span></button>
+        <button type="button" class="work tall" data-k="welcome" data-c="grafico" data-tipo="Identidad corporativa o welcome pack" data-t="Welcome pack" data-d="Packs de bienvenida personalizados para empresas"><img src="img/w-welcome.jpg" alt="Welcome pack con libreta, taza, botella y alfombrilla" loading="lazy"><span><b>Welcome pack</b>Para empresas</span></button>
+        <button type="button" class="work" data-k="museocanario-web" data-c="web" data-tipo="Página web" data-t="Plataforma web interactiva y multilingüe" data-d="El Museo Canario"><img src="img/w-museocanario-web.jpg" alt="Plataforma web interactiva de El Museo Canario en un portátil" loading="lazy"><span><b>El Museo Canario</b>Plataforma web</span></button>
+        <button type="button" class="work" data-k="nexus-cuaderno" data-c="editorial" data-tipo="Libro para autopublicar" data-t="«La huella de Nexus»" data-d="Cuadernillo de actividades · Manel Mazaira"><img src="img/w-nexus-cuaderno.jpg" alt="Cuadernillo de actividades La huella de Nexus" loading="lazy"><span><b>La huella de Nexus</b>Cuadernillo de actividades</span></button>
+        <button type="button" class="work" data-k="abeja" data-c="web" data-tipo="Página web" data-t="La Abeja Negra" data-d="Diseño de página web · Paula Bezares"><img src="img/w-abeja.jpg" alt="Web de La Abeja Negra en un portátil" loading="lazy"><span><b>La Abeja Negra</b>Diseño web</span></button>
+        <button type="button" class="work wide" data-k="nexos-web" data-c="web" data-tipo="Página web" data-t="Asociación Nexos" data-d="Web funcional, optimizada y completa"><img src="img/w-nexos-web.jpg" alt="Web de la Asociación Nexos" loading="lazy"><span><b>Asociación Nexos</b>Diseño web</span></button>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="servicios">
+    <div class="wrap">
+      <div class="sec-head" data-reveal>
+        <span class="eyebrow">Servicios</span>
+        <h2>De la idea <em>a la imprenta</em></h2>
+        <p class="lead">Soluciones integrales que cubren todas las etapas de tu proyecto, desde la conceptualización hasta la producción final: arte final, corrección ortotipográfica, maquetación en varios idiomas y gestión de la impresión.</p>
+      </div>
+      <div class="svc">
+        <div class="svc-i" data-reveal><b>01</b><h3>Diseño editorial</h3><p>Libros, revistas, catálogos, proyectos académicos y TFM, memorias anuales y de sostenibilidad, EINF e informes.</p><ul><li>Maquetación de documentos extensos</li><li>Memorias anuales</li><li>Programación didáctica</li><li>PDF interactivo</li><li>Preparación para imprenta</li></ul></div>
+        <div class="svc-i" data-reveal><b>02</b><h3>Exposiciones</h3><p>Gráfica aplicada al entorno para muestras temporales, itinerantes y permanentes, en interior y exterior.</p><ul><li>Paneles expositivos</li><li>Señalética para museos</li><li>Catálogos de exposición</li><li>Gráfica ambiental</li></ul></div>
+        <div class="svc-i" data-reveal><b>03</b><h3>Identidad corporativa</h3><p>Logotipos, manuales de marca y recursos de identidad que transmiten los valores de tu marca.</p><ul><li>Diseño de logotipos</li><li>Manual y brandbook</li><li>Papelería corporativa</li><li>Welcome packs</li></ul></div>
+        <div class="svc-i" data-reveal><b>04</b><h3>Diseño web</h3><p>Webs para empresas, profesionales e instituciones, adaptadas a tu imagen y a tus necesidades de comunicación.</p><ul><li>Web corporativa</li><li>Tiendas online</li><li>Landing pages</li><li>Posicionamiento web</li></ul></div>
+        <div class="svc-i" data-reveal><b>05</b><h3>Packaging</h3><p>Envases, cajas, bolsas y etiquetas para productos comerciales y de regalo.</p><ul><li>Envases y etiquetas</li><li>Prototipos y fotomontajes realistas</li><li>Gestión de la producción</li></ul></div>
+        <div class="svc-i" data-reveal><b>06</b><h3>Motion graphics, eventos y talleres</h3><p>Grafismo animado para vídeos corporativos y redes; organización de eventos y talleres de principio a fin, de la logística a la imagen.</p><ul><li>Vídeos corporativos</li><li>Eventos y talleres en Gran Canaria</li></ul></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec band-ink acc-sec" id="accesible">
+    <div class="wrap acc-grid">
+      <div data-reveal>
+        <span class="eyebrow">Contenido accesible · un compromiso de Reglade3</span>
+        <h2>Que lo lea <em>todo el mundo</em></h2>
+      </div>
+      <div class="acc-txt" data-reveal>
+        <p class="lead">Se han especializado en diseño gráfico, espacial y museístico, comunicación visual y soluciones accesibles para instituciones públicas, entidades culturales, empresas tecnológicas, museos y universidades.</p>
+        <ul class="acc-list"><li><b>PDF accesibles</b> para contenidos culturales e institucionales</li><li><b>Índices vinculados</b> y enlaces contextuales que facilitan la navegación</li><li><b>Rutas de Cine de Las Palmas de Gran Canaria</b>: documento accesible para LPA Visit</li></ul>
+        <a class="link" href="#hablemos" data-tipo="PDF accesible o interactivo">Hacer accesible un documento <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="autores">
+    <div class="wrap autores">
+      <figure class="autores-img" data-reveal><img src="img/w-nexus.jpg" alt="El viaje de Nexus, libro autopublicado maquetado por Reglade3" loading="lazy"></figure>
+      <div class="autores-txt" data-reveal>
+        <span class="eyebrow">Autopublicación</span>
+        <h2>Tu libro, listo <em>para Amazon KDP</em></h2>
+        <p class="lead">Diseñan y maquetan libros para autopublicar en plataformas como Amazon KDP, en formato impreso y digital (PDF o EPUB): portada, maquetación interior y preparación de archivos según las especificaciones técnicas.</p>
+        <p>Ya son muchas personas las que han confiado en su equipo para publicar sus obras, como «La huella de Nexus», de Manel Mazaira.</p>
+        <a class="btn btn-primary" href="#hablemos" data-tipo="Libro para autopublicar"><svg aria-hidden="true"><use href="#i-chat"/></svg>Presupuesto para tu libro</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec band-paper" id="proceso">
+    <div class="wrap">
+      <div class="sec-head" data-reveal>
+        <span class="eyebrow">¿Cómo trabajamos?</span>
+        <h2>Estructurado, <em>para que encaje a la primera</em></h2>
+      </div>
+      <ol class="steps">
+        <li data-reveal><b>01</b><h3>Reunión</h3><p>Presencial u online: escuchan tu proyecto, tus objetivos y el público al que va dirigido.</p></li>
+        <li data-reveal><b>02</b><h3>Presupuesto</h3><p>A medida, sin compromiso, adaptado al alcance, el plazo y tus necesidades.</p></li>
+        <li data-reveal><b>03</b><h3>Propuestas</h3><p>Conceptuales y gráficas, con asesoramiento durante todo el proceso creativo y de producción.</p></li>
+        <li data-reveal><b>04</b><h3>Entrega</h3><p>En el formato que necesites: listo para imprenta, para web, en PDF accesible o en PDF interactivo.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="sec" id="resenas">
+    <div class="wrap">
+      <div class="sec-head" data-reveal>
+        <span class="eyebrow">Reseñas de Google</span>
+        <h2>5,0 de media en 19 reseñas. <em>Todas de cinco estrellas.</em></h2>
+      </div>
+      <div class="rv-grid">
+        <figure class="rv" data-reveal><div class="rv-top"><span class="rv-stars" aria-label="5 de 5 estrellas"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></span><span class="rv-tag">Logo y manual</span></div><blockquote>«Muy contenta con Fernando, ha escuchado todas mis ideas y lo que tenía en mi cabeza para mi marca😅 […] me encanta mi logo y el manual básico. Recomendado 100%.»</blockquote><figcaption><span><b>Judith D.</b><small>hace 4 meses · Google</small></span></figcaption></figure>
+        <figure class="rv" data-reveal><div class="rv-top"><span class="rv-stars" aria-label="5 de 5 estrellas"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></span><span class="rv-tag">Cartel y valla</span></div><blockquote>«Nos han diseñado un cartel para nuestro concierto precioso y una adaptación a valla publicitaria increíble.»</blockquote><figcaption><span><b>Pilar R.</b><small>hace 11 meses · Google</small></span></figcaption></figure>
+        <figure class="rv" data-reveal><div class="rv-top"><span class="rv-stars" aria-label="5 de 5 estrellas"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></span><span class="rv-tag">Productora</span></div><blockquote>«Nuestros diseñadores de referencia. Siempre disponibles, siempre puntuales en las entregas y siempre atentos a nuestras necesidades.»</blockquote><figcaption><span><b>Desenfoque Producciones</b><small>hace un año · Google</small></span></figcaption></figure>
+        <figure class="rv rv-x"><div class="rv-top"><span class="rv-stars" aria-label="5 de 5 estrellas"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></span><span class="rv-tag">Empresa</span></div><blockquote>«La mejor empresa de diseño con la que he tenido relación en mi vida profesional. Trato cercano, especializado y profesional.»</blockquote><figcaption><span><b>Alejandro E.</b><small>hace un año · Google</small></span></figcaption></figure>
+        <figure class="rv rv-x"><div class="rv-top"><span class="rv-stars" aria-label="5 de 5 estrellas"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></span><span class="rv-tag">Cliente</span></div><blockquote>«Trabajar con este equipo ha sido una experiencia increíble. Son rapidísimos, resolutivos y con una profesionalidad que se nota en cada detalle.»</blockquote><figcaption><span><b>Mi Maternidad Real</b><small>hace 10 meses · Google</small></span></figcaption></figure>
+      </div>
+      <p class="rv-more"><a href="#resenas" data-rvd>Ver todas las reseñas →</a> <span>Fragmentos literales de reseñas de 5 estrellas en Google.</span></p>
+    </div>
+  </section>
+
+  <section class="sec band-ink book" id="presupuesto">
+    <div class="wrap book-cta" data-reveal>
+      <div>
+        <span class="eyebrow">Presupuesto sin compromiso</span>
+        <h2>Cuéntanos tu proyecto. <em>Lo maquetamos contigo.</em></h2>
+        <p class="lead">Cuatro preguntas rápidas y tu mensaje sale ya escrito por WhatsApp, con un código propio. Trabajan con clientes de toda España: la distancia no es un obstáculo.</p>
+        <ul class="book-perks"><li>Sin registrarte</li><li>Menos de un minuto</li><li>O llama al 928 457 094</li></ul>
+      </div>
+      <a class="btn btn-light" href="#hablemos"><svg aria-hidden="true"><use href="#i-chat"/></svg>Pide tu presupuesto</a>
+    </div>
+  </section>
+
+  <section class="sec band-paper draft" id="borrador" hidden>
+    <div class="wrap">
+      <div class="sec-head"><span class="eyebrow">Borrador · Datos por confirmar</span><h2>Para cerrar <em>la edición</em></h2></div>
+      <ul class="incl">
+        <li>¿El 685 489 888 tiene WhatsApp para recibir los mensajes del panel? <mark>[confirmar]</mark></li>
+        <li>Horario: la web dice 9:00–14:00 y Google, 8:00–20:00 <mark>[¿cuál vale?]</mark></li>
+        <li>Packs cerrados de welcome packs: precios y contenido <mark>[detalle]</mark></li>
+        <li>Fotos del equipo (Fernando y compañía) en la oficina <mark>[fotos]</mark></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="sec" id="contacto">
+    <div class="wrap visit">
+      <div data-reveal>
+        <span class="eyebrow">Contacto y oficina</span>
+        <h2>En el Parque Científico <em>Tecnológico de la ULPGC</em></h2>
+        <img class="oficina" src="img/oficina.jpg" alt="Edificio del Parque Científico Tecnológico de la ULPGC en el Campus de Tafira" loading="lazy">
+        <table class="hours" aria-label="Horario">
+          <tr><th>Lunes a viernes</th><td>09:00–14:00</td></tr>
+          <tr><th>Reuniones</th><td>Horario flexible, con cita</td></tr>
+        </table>
+        <ul class="contact">
+          <li><svg><use href="#i-pin"/></svg><a href="https://www.google.com/maps/place/Reglade3+Dise%C3%B1o+Industrial+y+Gr%C3%A1fico/@28.0795484,-15.4518096,17z/data=!3m1!4b1!4m6!3m5!1s0xc4095d29dc41637:0x96e708d95722af43!8m2!3d28.0795484!4d-15.4518096!16s%2Fg%2F11gg65420y" target="_blank" rel="noopener">Edificio Polivalente II, 3.ª planta, oficina 6 · Campus de Tafira · 35017 Las Palmas de Gran Canaria</a></li>
+          <li><svg><use href="#i-phone"/></svg><a href="tel:+34928457094">928 457 094</a> · <a href="tel:+34685489888">685 489 888</a></li>
+          <li><svg><use href="#i-mail"/></svg><a href="mailto:info@regladetres.es">info@regladetres.es</a></li>
+          <li><svg><use href="#i-ig"/></svg><a href="https://www.instagram.com/regladetres.es/" target="_blank" rel="noopener">@regladetres.es</a></li>
+        </ul>
+      </div>
+      <div class="faq" data-reveal>
+        <details open><summary>¿Trabajan solo con clientes de Las Palmas?</summary><p>No. Aunque la oficina está en Las Palmas de Gran Canaria, trabajan con clientes de toda España. La comunicación y la entrega de archivos son digitales; para los artículos físicos, usan mensajería certificada.</p></details>
+        <details><summary>¿Cuánto cuesta un proyecto de diseño gráfico?</summary><p>Cada proyecto es diferente: presupuesto personalizado y sin compromiso, adaptado al alcance, el plazo y tus necesidades.</p></details>
+        <details><summary>¿Diseñan libros para autopublicar en Amazon KDP?</summary><p>Sí, en formato impreso y EPUB: portada, maquetación interior y preparación de archivos según las especificaciones técnicas de KDP.</p></details>
+        <details><summary>¿Elaboran memorias anuales?</summary><p>Sí: memorias anuales y de sostenibilidad, informes de gobierno corporativo y EINF, para empresas privadas y organismos públicos de todo el territorio nacional.</p></details>
+        <details><summary>¿Se puede quedar fuera de horario?</summary><p>Sí: tienen horario flexible para reuniones fuera del habitual. Escríbeles y coordináis una cita.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="final" id="cierre">
+    <div class="wrap">
+      <span class="eyebrow">Reglade3 · Las Palmas de Gran Canaria</span>
+      <h2>Diseño que se lee <em>de principio a fin</em></h2>
+      <div class="hero-ctas">
+        <a class="btn btn-primary" href="#hablemos"><svg aria-hidden="true"><use href="#i-chat"/></svg>Pide tu presupuesto</a>
+        <a class="btn btn-ghost" href="tel:+34928457094"><svg aria-hidden="true"><use href="#i-phone"/></svg>Llamar</a>
+      </div>
+      <a class="g-rate" href="#resenas" data-rvd><b>5,0</b><span class="gr-t"><span class="stars"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></span><i>19 reseñas en Google</i></span></a>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap"><span>Reglade3 Diseño Industrial y Gráfico SLU · Parque Científico Tecnológico de la ULPGC · Las Palmas de Gran Canaria</span><span><a href="tel:+34928457094">928 457 094</a> · <a href="mailto:info@regladetres.es">info@regladetres.es</a></span></div>
+</footer>
+<button class="totop" id="totop" type="button" aria-label="Subir arriba"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="M12 19V5M5 12l7-7 7 7"/></svg></button>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Proyecto ampliado" hidden><button type="button" class="lb-x" aria-label="Cerrar">×</button><button type="button" class="lb-nav prev" data-lb="-1" aria-label="Proyecto anterior"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg></button><img id="lb-img" alt=""><button type="button" class="lb-nav next" data-lb="1" aria-label="Proyecto siguiente"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></button><div class="lb-foot"><span id="lb-cap"></span><a class="btn btn-light" id="lb-go" href="#hablemos">Quiero algo así</a></div></div>
+
+<div class="bk rvd" id="rvd" role="dialog" aria-modal="true" aria-labelledby="rvd-title" hidden>
+  <div class="bk-scrim" data-rvd-x></div>
+  <div class="bk-panel">
+    <header class="bk-head"><span></span><div class="t"><span>Google</span><b id="rvd-title">Reseñas</b></div><button type="button" class="bk-ib" data-rvd-x aria-label="Cerrar"><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" d="M6 6l12 12M18 6L6 18"/></svg></button></header>
+    <div class="bk-body rvd-body">
+      <div class="rvd-sum"><div class="rvd-score"><b>5,0</b><span class="rv-stars"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></span><small>19 reseñas</small></div><ul class="rvd-dist" aria-label="Reparto de estrellas"><li><span>5</span><i><b style="width:100.0%"></b></i><em>19</em></li><li><span>4</span><i><b style="width:0.0%"></b></i><em>0</em></li><li><span>3</span><i><b style="width:0.0%"></b></i><em>0</em></li><li><span>2</span><i><b style="width:0.0%"></b></i><em>0</em></li><li><span>1</span><i><b style="width:0.0%"></b></i><em>0</em></li></ul></div>
+      <h3 class="rvd-h">Reseñas de 5 estrellas</h3>
+      <div class="rvd-list" id="rvd-list"></div>
+      <h3 class="rvd-h">Su ficha en Google Maps</h3>
+      <div class="rvd-map"><iframe id="rvd-map" title="Reglade3 en Google Maps" data-src="https://maps.google.com/maps?q=Reglade3%20Dise%C3%B1o%20Industrial%20y%20Gr%C3%A1fico%2C%20Las%20Palmas%20de%20Gran%20Canaria&amp;hl=es&amp;z=15&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+      <p class="rvd-note">Google no permite mostrar aquí su lista completa de reseñas; puedes leerlas todas en su ficha.</p>
+    </div>
+    <footer class="rvd-foot"><a class="btn btn-ghost" href="https://www.google.com/maps/place/Reglade3+Dise%C3%B1o+Industrial+y+Gr%C3%A1fico/@28.0795484,-15.4518096,17z/data=!3m1!4b1!4m6!3m5!1s0xc4095d29dc41637:0x96e708d95722af43!8m2!3d28.0795484!4d-15.4518096!16s%2Fg%2F11gg65420y" target="_blank" rel="noopener">Ver las 19 en Google</a></footer>
+  </div>
+</div>
+
+<div class="bk" id="bk" role="dialog" aria-modal="true" aria-labelledby="bk-title" data-wa="34685489888" data-code="RD3" data-brand="Reglade3" data-trato="os" hidden>
+  <div class="bk-scrim" id="bk-scrim"></div>
+  <div class="bk-panel">
+    <header class="bk-head">
+      <button type="button" class="bk-ib" id="bk-back" aria-label="Paso anterior"><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M15 18l-6-6 6-6"/></svg></button>
+      <div class="t"><span id="bk-step">Paso 1 de 4</span><b id="bk-title">Tu presupuesto</b></div>
+      <button type="button" class="bk-ib" id="bk-x" aria-label="Cerrar"><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" d="M6 6l12 12M18 6L6 18"/></svg></button>
+    </header>
+    <div class="bk-prog"><i id="bk-bar" style="transform:scaleX(.25)"></i></div>
+    <form class="bk-body" id="book-form" novalidate>
+      <section class="bk-pane" data-step="1">
+        <h3>¿Qué necesitas?</h3>
+        <div class="bk-opts grid2 tight"><label><input type="radio" name="tipo" value="Diseño editorial o memoria anual"><span>Editorial / memoria</span></label><label><input type="radio" name="tipo" value="Libro para autopublicar"><span>Libro (Amazon KDP)</span></label><label><input type="radio" name="tipo" value="Exposición o señalética"><span>Exposición</span></label><label><input type="radio" name="tipo" value="Identidad corporativa o welcome pack"><span>Identidad / packs</span></label><label><input type="radio" name="tipo" value="Página web"><span>Web</span></label><label><input type="radio" name="tipo" value="Packaging"><span>Packaging</span></label><label><input type="radio" name="tipo" value="PDF accesible o interactivo"><span>PDF accesible</span></label><label><input type="radio" name="tipo" value="Cartelería o diseño gráfico"><span>Cartel / gráfico</span></label></div>
+      </section>
+      <section class="bk-pane" data-step="2" hidden>
+        <h3>Tu proyecto</h3>
+        <label class="bk-field"><span>Nombre de la marca o del proyecto</span><input type="text" id="f-marca" placeholder="Memoria 2026, mi novela, mi marca…"></label>
+        <div class="bk-field"><span>¿De dónde partimos?</span><div class="bk-opts stack"><label><input type="radio" name="punto" value="Empezar de cero"><span>Empezar de cero</span></label><label><input type="radio" name="punto" value="Renovar una marca que ya existe"><span>Renovar mi marca</span></label><label><input type="radio" name="punto" value="Una pieza o campaña concreta"><span>Una pieza concreta</span></label></div></div>
+        <label class="bk-field"><span>Sector (opcional)</span><input type="text" id="f-sector" placeholder="Institución, museo, empresa, autor…"></label>
+      </section>
+      <section class="bk-pane" data-step="3" hidden>
+        <h3>¿Para cuándo?</h3>
+        <div class="bk-opts grid2"><label><input type="radio" name="plazo" value="Sin fecha todavía"><span>Sin fecha aún</span></label><label><input type="radio" name="plazo" value="Este mes"><span>Este mes</span></label><label><input type="radio" name="plazo" value="En 2–3 meses"><span>En 2–3 meses</span></label><label><input type="radio" name="plazo" value="Más adelante"><span>Más adelante</span></label></div>
+        <label class="bk-field"><span>Algo más (opcional)</span><input type="text" id="f-notas" placeholder="Unas 120 páginas, en dos idiomas…"></label>
+      </section>
+      <section class="bk-pane" data-step="4" hidden>
+        <h3>¿Quién eres?</h3>
+        <label class="bk-field"><span>Tu nombre</span><input type="text" id="f-nombre" autocomplete="given-name" placeholder="Laura"></label>
+        <label class="bk-field"><span>Empresa (opcional)</span><input type="text" id="f-empresa" autocomplete="organization" placeholder="Tu empresa"></label>
+        <label class="bk-field"><span>Desde dónde (opcional)</span><input type="text" id="f-donde" autocomplete="address-level2" placeholder="Las Palmas, Telde, Madrid…"></label>
+      </section>
+      <section class="bk-pane" data-step="5" hidden>
+        <h3>Tu mensaje está listo</h3>
+        <p class="sub">Os responden con un presupuesto a medida y sin compromiso.</p>
+        <pre class="f-preview" id="f-preview"></pre>
+        <button type="button" class="f-copy" id="f-copy">Copiar mensaje</button>
+      </section>
+    </form>
+    <footer class="bk-foot">
+      <p class="f-error" id="f-error" role="alert" hidden></p>
+      <button type="button" class="btn btn-primary" id="bk-next">Siguiente</button>
+      <a class="btn btn-wa" id="f-wa" href="#" target="_blank" rel="noopener" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .2-1.3c-.1-.1-.3-.2-.6-.3z"/></svg>Enviar por WhatsApp</a>
+    </footer>
+  </div>
+</div>
+
+<div class="mbar">
+  <a class="btn btn-primary" href="#hablemos"><span data-t="mbar">Pide presupuesto</span></a>
+  <a class="btn btn-ghost" href="tel:+34928457094" aria-label="Llamar al 928 457 094"><svg><use href="#i-phone"/></svg></a>
+</div>
+
+<script>
+(function(){
+"use strict";
+var reduced=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+var SFX={play:function(){}};
+var root=document.documentElement;
+
+/* ---------- Temporadas de Reglade3: los momentos del año en que se encargan memorias, programaciones, libros y packs ---------- */
+/* Solo servicios de su web. Sin precios, plazos ni descuentos. */
+window.TEMPORADAS=[
+  {id:'memorias',nombre:'Temporada de memorias anuales',desde:'01-12',hasta:'04-10',prioridad:1,
+   textos:{eyebrow:'Memorias anuales',sub:'Memorias anuales y de sostenibilidad, EINF e informes: tablas, esquemas y fotografías adaptados a tu marca, listos para imprenta o en PDF accesible.',cta:'Presupuesto de mi memoria'},
+   marcar:['input[name="tipo"][value="Diseño editorial o memoria anual"]'],wa:'📊 Es para la memoria anual de este ejercicio'},
+  {id:'dia-libro',nombre:'Día del Libro',evento:'sant-jordi',antes:25,prioridad:2,
+   textos:{eyebrow:'Día del Libro · {cuenta}',sub:'¿Tienes un libro escrito? Portada, maquetación interior y archivos listos para Amazon KDP, impreso y en EPUB.',cta:'Presupuesto para mi libro'},
+   marcar:['input[name="tipo"][value="Libro para autopublicar"]'],wa:'📚 Quiero autopublicar mi libro (Día del Libro, {fecha})'},
+  {id:'curso',nombre:'Inicio de curso',desde:'09-01',hasta:'10-25',prioridad:1,
+   textos:{eyebrow:'Inicio de curso',sub:'Programaciones didácticas, materiales y documentos extensos bien maquetados y, si lo necesitas, en PDF accesible o interactivo.',cta:'Pide tu presupuesto'},
+   marcar:['input[name="tipo"][value="Diseño editorial o memoria anual"]'],wa:'🎒 Es para material del nuevo curso'},
+  {id:'navidad',nombre:'Welcome packs de Navidad',evento:'navidad',desde:'11-02',hasta:'12-12',prioridad:2,
+   textos:{eyebrow:'Navidad · {cuenta}',sub:'Packs de regalo personalizados para tu equipo y tus clientes: packs cerrados con objetos personalizables o diseño a medida.',cta:'Preparar mis packs'},
+   marcar:['input[name="tipo"][value="Identidad corporativa o welcome pack"]'],wa:'🎁 Es para packs de regalo de Navidad'}
+];
+/* ---------- Temporadas: la landing cambia sola cuando se acerca una fecha clave del oficio ---------- */
+/* Configura window.TEMPORADAS antes de este bloque (ver references/temporadas/README.md).
+   Pruebas: ?temporada=<id> fuerza una, ?temporada=no las apaga, ?fecha=2027-02-10 simula el día.
+   Selector para enseñarlas: #temporadas en la dirección (en local), 5 toques seguidos en el logo de la cabecera o la tecla T (también dentro del visor del Artifact). */
+(function(){
+var CFG=window.TEMPORADAS||[]; if(!CFG.length)return;
+var MESES=['enero','febrero','marzo','abril','mayo','junio','julio','agosto','septiembre','octubre','noviembre','diciembre'];
+var DAY=864e5;
+function d(y,m,dd){return new Date(y,m-1,dd)}
+function nth(y,m,dow,n){var f=d(y,m,1);return d(y,m,1+(dow-f.getDay()+7)%7+7*(n-1))}       /* n-ésimo día de la semana (0=domingo) del mes */
+function pascua(y){var a=y%19,b=Math.floor(y/100),c=y%100,e=(19*a+b-Math.floor(b/4)-Math.floor((b-Math.floor((8*b+13)/25)+1)/3)+15)%30,
+  f=(32+2*(b%4)+2*Math.floor(c/4)-e-c%4)%7,g=Math.floor((a+11*e+22*f)/451),m=Math.floor((e+f-7*g+114)/31);return d(y,m,(e+f-7*g+114)%31+1)}
+function mas(x,n){return new Date(x.getFullYear(),x.getMonth(),x.getDate()+n)}
+/* Calendario de España. Cada evento devuelve el día clave de ese año. */
+var EV={
+  'reyes':function(y){return d(y,1,6)},
+  'rebajas-invierno':function(y){return d(y,1,7)},
+  'san-valentin':function(y){return d(y,2,14)},
+  'carnaval':function(y){return mas(pascua(y),-47)},            /* martes de carnaval */
+  'dia-padre':function(y){return d(y,3,19)},
+  'semana-santa':function(y){return mas(pascua(y),-3)},         /* jueves santo */
+  'pascua':pascua,
+  'sant-jordi':function(y){return d(y,4,23)},                   /* solo Cataluña */
+  'dia-madre':function(y){return nth(y,5,0,1)},                 /* primer domingo de mayo */
+  'san-isidro':function(y){return d(y,5,15)},                   /* solo Madrid capital */
+  'san-juan':function(y){return d(y,6,24)},
+  'dia-abuelos':function(y){return d(y,7,26)},
+  'vuelta-cole':function(y){return d(y,9,8)},                   /* aproximado: varía por comunidad */
+  'halloween':function(y){return d(y,10,31)},
+  'todos-santos':function(y){return d(y,11,1)},
+  'black-friday':function(y){return mas(nth(y,11,4,4),1)},      /* viernes tras el 4.º jueves */
+  'navidad':function(y){return d(y,12,25)},
+  'nochevieja':function(y){return d(y,12,31)}
+};
+function md(s,y){var p=s.split('-');return d(y,+p[0],+p[1])}
+function antes(t){return t.antes==null?14:t.antes}
+/* Ventanas [inicio, fin, día clave] de una temporada alrededor del año y */
+function ventanas(t,y){var out=[];for(var k=y-1;k<=y+1;k++){
+  if(t.desde){var a=md(t.desde,k),b=md(t.hasta,k);if(b<a)b=md(t.hasta,k+1);out.push([a,b,t.evento?EV[t.evento](b.getFullYear()):b])}
+  else{var e=t.fecha?md(t.fecha,k):EV[t.evento]&&EV[t.evento](k);if(e)out.push([mas(e,-antes(t)),mas(e,t.despues||0),e])}}
+  return out}
+function elegir(hoy){var best=null;hoy=new Date(hoy.getFullYear(),hoy.getMonth(),hoy.getDate());
+  CFG.forEach(function(t){ventanas(t,hoy.getFullYear()).forEach(function(w){if(hoy<w[0]||hoy>w[1])return;
+    var pr=t.prioridad!=null?t.prioridad:(t.desde?1:2),falta=Math.round((w[2]-hoy)/DAY);
+    if(!best||pr>best.pr||(pr===best.pr&&Math.abs(falta)<Math.abs(best.falta)))best={t:t,pr:pr,falta:falta,dia:w[2]}})});
+  return best}
+/* Forzar una temporada aunque hoy no toque: la muestra como si faltaran unos días */
+function forzar(id,hoy){var t=CFG.filter(function(x){return x.id===id})[0];if(!t)return null;
+  var w=ventanas(t,hoy.getFullYear()).filter(function(w){return w[1]>=hoy})[0],falta=Math.round((w[2]-hoy)/DAY);
+  if(hoy<w[0])falta=Math.min(antes(t),9);return {t:t,falta:falta,dia:w[2]}}
+function rellenar(s,b){if(!s)return s;var n=b.falta,f=b.dia.getDate()+' de '+MESES[b.dia.getMonth()];
+  var cuenta=n>1?'Faltan '+n+' días':n===1?'Es mañana':n===0?'Es hoy':'';
+  return s.replace(/\{cuenta\}/g,cuenta).replace(/\{dias\}/g,n).replace(/\{fecha\}/g,f).replace(/\{anio\}/g,b.dia.getFullYear())}
+
+var q=new URLSearchParams(location.search),forzada=q.get('temporada'),sim=q.get('fecha'),hoy=new Date();
+if(sim&&/^\d{4}-\d\d-\d\d$/.test(sim)){var p=sim.split('-');hoy=d(+p[0],+p[1],+p[2])}
+hoy=new Date(hoy.getFullYear(),hoy.getMonth(),hoy.getDate());
+window.TEMPORADA_ELEGIR=function(x){var b=elegir(x);return b?b.t.id:null};   /* para scripts/temporadas.js */
+var root=document.documentElement,reducido=matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+/* Estado original, para poder volver a la versión de todo el año al cambiar de temporada desde el selector */
+var CLAVES={};CFG.forEach(function(t){Object.keys(t.textos||{}).forEach(function(k){CLAVES[k]=1})});   /* solo las claves que usa alguna temporada: otros data-t de la página no se tocan */
+var T=[].slice.call(document.querySelectorAll('[data-t]')).filter(function(el){return CLAVES[el.getAttribute('data-t')]}).map(function(el){return [el,el.innerHTML,el.hidden]});
+var fotosOrig=[],tokens=[],marcados=[],deco=null;
+function limpiar(){
+  T.forEach(function(o){o[0].innerHTML=o[1];o[0].hidden=o[2];o[0].classList.remove('t-on')});
+  tokens.forEach(function(k){root.style.removeProperty(k)});tokens=[];
+  fotosOrig.forEach(function(o){if(o[0].tagName==='SOURCE')o[0].srcset=o[1];else{o[0].src=o[1];if(o[2])o[0].srcset=o[2]}});fotosOrig=[];
+  marcados.forEach(function(el){el.checked=false});marcados=[];
+  if(deco){deco();deco=null}
+  root.removeAttribute('data-temporada');window.TEMPORADA=null}
+function aplicar(b){
+  limpiar();var id=b?b.t.id:null;
+  /* Bloques solo de temporada: data-temporada-solo="san-valentin dia-madre" (empiezan con hidden) y data-temporada-fuera="…" */
+  document.querySelectorAll('[data-temporada-solo]').forEach(function(el){el.hidden=!(id&&el.getAttribute('data-temporada-solo').split(/\s+/).indexOf(id)>-1)});
+  document.querySelectorAll('[data-temporada-fuera]').forEach(function(el){el.hidden=!!(id&&el.getAttribute('data-temporada-fuera').split(/\s+/).indexOf(id)>-1)});
+  if(!b)return;
+  var t=b.t;root.setAttribute('data-temporada',id);
+  /* Colores: sobrescribe tokens de :root (solo acentos; el fondo y la tinta no se tocan) */
+  if(t.tema)Object.keys(t.tema).forEach(function(k){root.style.setProperty(k,t.tema[k]);tokens.push(k)});
+  /* Textos: cualquier elemento con data-t="clave". El HTML trae el texto de todo el año; si estaba hidden, se muestra */
+  if(t.textos)Object.keys(t.textos).forEach(function(k){document.querySelectorAll('[data-t="'+k+'"]').forEach(function(el){el.innerHTML=rellenar(t.textos[k],b);el.hidden=false;el.classList.add('t-on')})});
+  /* Fotos: {selector: ruta}. Solo fotos reales del negocio para esa fecha */
+  if(t.fotos)Object.keys(t.fotos).forEach(function(s){document.querySelectorAll(s).forEach(function(el){
+    if(el.tagName==='SOURCE'){fotosOrig.push([el,el.srcset]);el.srcset=t.fotos[s]}else{fotosOrig.push([el,el.src,el.getAttribute('srcset')]);el.removeAttribute('srcset');el.src=t.fotos[s]}})});
+  /* Marcar opciones del panel de encargo/reserva (solo si no hay ninguna marcada en ese grupo) */
+  if(t.marcar)t.marcar.forEach(function(s){var el=document.querySelector(s);if(el&&!document.querySelector('input[name="'+el.name+'"]:checked')){el.checked=true;marcados.push(el)}});
+  window.TEMPORADA={id:id,nombre:t.nombre||id,dias:b.falta,fecha:b.dia,linea:rellenar(t.wa,b)||''};   /* el panel añade TEMPORADA.linea al mensaje de WhatsApp */
+  try{document.dispatchEvent(new CustomEvent('temporada',{detail:window.TEMPORADA}))}catch(e){}
+  if(t.deco&&!reducido)deco=decorar(t)}
+
+/* Decoración ligera en el hero: petalos, corazones, nieve, hojas, confeti o estrellas. Nunca sobre el texto ni con movimiento reducido */
+function decorar(t){
+  var host=document.querySelector(t.decoEn||'#hero');if(!host)return null;
+  var cv=document.createElement('canvas');cv.className='t-deco';cv.setAttribute('aria-hidden','true');
+  cv.style.cssText='position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:1';
+  host.insertBefore(cv,host.children[1]||null);
+  var cx=cv.getContext('2d'),W=0,H=0,DPR=Math.min(devicePixelRatio||1,1.5),P=[],raf=0,last=0;
+  var COL=t.decoColores||{petalos:['#F5B8C9','#FFD9E2','#E88AA6'],corazones:['#FF6B8B','#FFB3C4','#E0325A'],nieve:['#FFFFFF'],hojas:['#C9733B','#E0A04A','#9C4A24'],confeti:['#FFD166','#EF476F','#06D6A0','#4CC9F0'],estrellas:['#FFE8A3','#FFFFFF']}[t.deco]||['#fff'];
+  function size(){var r=host.getBoundingClientRect();W=r.width;H=r.height;cv.width=W*DPR;cv.height=H*DPR;cx.setTransform(DPR,0,0,DPR,0,0)}
+  function nuevo(top){var s=t.deco==='nieve'?2+Math.random()*3:t.deco==='estrellas'?1.5+Math.random()*2.5:7+Math.random()*7;
+    return {x:Math.random()*W,y:top?-20:Math.random()*H,s:s,vy:(t.deco==='estrellas'?0:.25+Math.random()*.5)*(s>6?1:.7),vx:(Math.random()-.5)*.3,a:Math.random()*6.3,va:(Math.random()-.5)*.03,f:Math.random()*6.3,c:COL[Math.floor(Math.random()*COL.length)]}}
+  function forma(p){cx.save();cx.translate(p.x,p.y);cx.rotate(p.a);cx.fillStyle=p.c;cx.globalAlpha=t.deco==='estrellas'?.4+.5*Math.abs(Math.sin(p.f)):.85;var s=p.s;cx.beginPath();
+    if(t.deco==='corazones'){cx.moveTo(0,s*.35);cx.bezierCurveTo(-s,-s*.3,-s*.4,-s,0,-s*.45);cx.bezierCurveTo(s*.4,-s,s,-s*.3,0,s*.35)}
+    else if(t.deco==='nieve'||t.deco==='estrellas')cx.arc(0,0,s/2,0,7);
+    else if(t.deco==='confeti')cx.rect(-s/2,-s/4,s,s/2);
+    else cx.ellipse(0,0,s/2,s*(t.deco==='hojas'?.28:.34),0,0,7);
+    cx.fill();cx.restore()}
+  function paso(ts){raf=requestAnimationFrame(paso);if(ts-last<30)return;last=ts;
+    var r=host.getBoundingClientRect();if(r.bottom<0||r.top>innerHeight)return;   /* fuera de pantalla: no pinta */
+    cx.clearRect(0,0,W,H);P.forEach(function(p,i){p.f+=.03;p.y+=p.vy;p.x+=p.vx+Math.sin(p.f)*.35;p.a+=p.va;if(p.y>H+20)P[i]=nuevo(true);forma(p)})}
+  function arranca(){cancelAnimationFrame(raf);if(!document.hidden)raf=requestAnimationFrame(paso)}
+  size();var n=Math.min(t.decoCuantos||22,Math.round(W*H/40000)+6);for(var i=0;i<n;i++)P.push(nuevo(false));
+  addEventListener('resize',size);document.addEventListener('visibilitychange',arranca);arranca();
+  return function(){cancelAnimationFrame(raf);removeEventListener('resize',size);document.removeEventListener('visibilitychange',arranca);cv.remove()}}
+
+var hoyB=elegir(hoy);
+aplicar(forzada==='no'?null:forzada?forzar(forzada,hoy):hoyB);
+
+/* ---------- Selector de temporadas: solo con #temporadas en la dirección, para enseñárselas al cliente ---------- */
+/* El visor del Artifact no pasa el #hash al iframe: también se abre con 5 toques seguidos en el logo de la cabecera (.brand) o con la tecla T */
+var sel=null,manual=false;
+function selector(){
+  if(location.hash!=='#temporadas'&&!manual){if(sel){sel.remove();sel=null}return}
+  if(sel)return;
+  var st=document.createElement('style');st.textContent='.t-sel{position:fixed;left:12px;right:12px;bottom:calc(14px + env(safe-area-inset-bottom,0px));z-index:150;margin:0 auto;max-width:max-content;display:flex;align-items:center;gap:6px;padding:6px;border-radius:18px;background:rgba(20,20,20,.82);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);color:#fff;font:600 13px/1.2 system-ui,-apple-system,sans-serif;box-shadow:0 14px 34px -12px rgba(0,0,0,.6);overflow-x:auto;scrollbar-width:none}'
+   +'.t-sel::-webkit-scrollbar{display:none}.t-sel b{padding:0 6px 0 8px;font-size:11px;letter-spacing:.08em;text-transform:uppercase;opacity:.6;white-space:nowrap}'
+   +'.t-sel button{all:unset;cursor:pointer;white-space:nowrap;padding:9px 12px;border-radius:12px;color:#fff}.t-sel button:hover{background:rgba(255,255,255,.12)}.t-sel button[aria-pressed="true"]{background:#fff;color:#111}'
+   +'.t-sel button small{display:block;font-size:10px;font-weight:500;opacity:.65;margin-top:2px}.t-sel .x{opacity:.7;padding:9px 10px}'
+   +'@media (max-width:640px){.t-sel{bottom:calc(84px + env(safe-area-inset-bottom,0px));max-width:none}}';
+  sel=document.createElement('div');sel.className='t-sel';sel.setAttribute('role','toolbar');sel.setAttribute('aria-label','Ver la landing en cada temporada');
+  sel.appendChild(st);
+  function hint(t){var w=ventanas(t,hoy.getFullYear()).filter(function(w){return w[1]>=hoy})[0],f=function(x){return x.getDate()+' '+MESES[x.getMonth()].slice(0,3)};return f(w[0])+' – '+f(w[1])}
+  var h='<b>Temporadas</b><button type="button" data-id="@hoy">Hoy<small>'+(hoyB?(hoyB.t.nombre||hoyB.t.id):'sin temporada')+'</small></button><button type="button" data-id="">Todo el año<small>versión base</small></button>';
+  CFG.forEach(function(t){h+='<button type="button" data-id="'+t.id+'">'+(t.nombre||t.id)+'<small>'+hint(t)+'</small></button>'});
+  sel.insertAdjacentHTML('beforeend',h+'<button type="button" class="x" aria-label="Cerrar el selector">✕</button>');
+  var elegido='@hoy';
+  function marca(){sel.querySelectorAll('button[data-id]').forEach(function(x){x.setAttribute('aria-pressed',String(x.dataset.id===elegido))})}
+  sel.addEventListener('click',function(e){var x=e.target.closest('button');if(!x)return;
+    if(x.classList.contains('x')){manual=false;if(location.hash==='#temporadas')history.replaceState(null,'',location.pathname+location.search);selector();return}
+    elegido=x.dataset.id;aplicar(elegido==='@hoy'?hoyB:elegido?forzar(elegido,hoy):null);marca();window.scrollTo({top:0,behavior:'smooth'})});
+  document.body.appendChild(sel);marca()}
+selector();addEventListener('hashchange',selector);
+var toques=[];
+document.addEventListener('click',function(e){if(!e.target.closest||!e.target.closest(window.TEMPORADAS_DISPARADOR||'.brand'))return;var n=Date.now();
+  toques=toques.filter(function(t){return n-t<2500});toques.push(n);if(toques.length>=5){toques=[];manual=true;selector()}});
+document.addEventListener('keydown',function(e){if((e.key==='t'||e.key==='T')&&!e.metaKey&&!e.ctrlKey&&!e.altKey&&!/INPUT|TEXTAREA|SELECT/.test(e.target.tagName)&&!e.target.isContentEditable){manual=!sel;if(!manual&&location.hash==='#temporadas')history.replaceState(null,'',location.pathname+location.search);selector()}});
+})();
+
+
+/* ---------- Loader con el logo: se va con load (mínimo 0,9 s, máximo 3 s); las entradas del hero esperan ---------- */
+var loaderGone=false,loaderCbs=[];
+function afterLoader(fn){if(loaderGone)fn();else loaderCbs.push(fn)}
+(function(){var el=document.getElementById('loader');
+  function done(){if(loaderGone)return;loaderGone=true;root.classList.remove('loading');
+    if(el){el.classList.add('out');setTimeout(function(){el.remove()},520)}
+    loaderCbs.forEach(function(f){try{f()}catch(e){}})}
+  if(!el){done();return}
+  var t0=performance.now(),min=reduced?300:900;setTimeout(done,3000);
+  function go(){setTimeout(done,Math.max(0,min-(performance.now()-t0)))}
+  if(document.readyState==='complete')go();else window.addEventListener('load',go);
+})();
+
+/* ---------- Cabecera, barra móvil y ↑ por scroll (nada de IntersectionObserver: dentro del visor falla) ---------- */
+(function(){var top=document.getElementById('top'),hero=document.getElementById('hero'),mbar=document.querySelector('.mbar'),totop=document.getElementById('totop'),
+  h1=hero&&hero.querySelector('h1'),ctas=[].slice.call(document.querySelectorAll('#hero .hero-ctas .btn')),tk=false;
+ function darks(){return [].slice.call(document.querySelectorAll('.hero.is-dark,.band-ink,[data-dark]'))}
+ function over(y){return darks().some(function(s){var r=s.getBoundingClientRect();return r.top<y&&r.bottom>y})}
+ function sync(){tk=false;var end=hero.offsetTop+hero.offsetHeight,H=innerHeight;
+  if(top)top.classList.toggle('dark',over(top.offsetHeight/2));
+  if(totop)totop.classList.toggle('on',scrollY>end-H/2);
+  if(mbar){mbar.classList.toggle('dark',over(H-34));
+   /* la barra no tapa el titular ni el botón del hero mientras se ven */
+   var hb=h1?h1.getBoundingClientRect():null,off=!!(hb&&hb.bottom>H-84&&hb.top<H);
+   ctas.forEach(function(b){var r=b.getBoundingClientRect();if(r.width&&r.bottom>H-90&&r.top<H)off=true});
+   mbar.classList.toggle('off',off)}}
+ sync();window.addEventListener('scroll',function(){if(!tk){tk=true;requestAnimationFrame(sync)}},{passive:true});window.addEventListener('resize',sync);
+ if(totop)totop.addEventListener('click',function(){window.scrollTo({top:0,behavior:reduced?'auto':'smooth'})});
+})();
+
+/* ---------- Portfolio con filtros y visor ---------- */
+(function(){var el=document.getElementById('works');if(!el)return;
+  var works=[].slice.call(el.querySelectorAll('.work')),fb=[].slice.call(document.querySelectorAll('.filters button')),f='all';
+  function apply(){var k=0,pop=[];works.forEach(function(w){var hit=f==='all'||(' '+w.dataset.c+' ').indexOf(' '+f+' ')>=0;w.classList.toggle('out',!hit);w.classList.remove('pop');
+    if(hit){w.style.animationDelay=Math.min(k++*40,400)+'ms';pop.push(w)}});void el.offsetWidth;pop.forEach(function(w){w.classList.add('pop')})}
+  fb.forEach(function(b){b.setAttribute('aria-pressed',b.dataset.f===f);b.addEventListener('click',function(){
+    fb.forEach(function(x){x.classList.toggle('on',x===b);x.setAttribute('aria-pressed',x===b)});f=b.dataset.f;apply()})});
+  var lb=document.getElementById('lb'),li=document.getElementById('lb-img'),go=document.getElementById('lb-go'),cap=document.getElementById('lb-cap'),list=[],at=0,opener=null;
+  function showAt(i){at=(i+list.length)%list.length;var w=list[at],im=w.querySelector('img');li.src=im.dataset.full||im.src;li.alt=im.alt;
+    go.dataset.tipo=w.dataset.tipo||'';cap.innerHTML='<b>'+w.dataset.t+'</b> · '+(w.dataset.d||'')+' · '+(at+1)+' / '+list.length}
+  el.addEventListener('click',function(e){var w=e.target.closest('.work');if(!w)return;list=works.filter(function(x){return !x.classList.contains('out')});opener=w;lb.hidden=false;showAt(list.indexOf(w));
+    try{lb.querySelector('.lb-x').focus({preventScroll:true})}catch(x){}});
+  function close(){lb.hidden=true;if(opener)try{opener.focus({preventScroll:true})}catch(x){}}
+  lb.addEventListener('click',function(e){var n=e.target.closest('[data-lb]');if(n){showAt(at+(+n.dataset.lb));return}if(e.target===lb||e.target.closest('.lb-x'))close()});
+  go.addEventListener('click',function(){lb.hidden=true});
+  var x0=null;lb.addEventListener('touchstart',function(e){x0=e.touches[0].clientX},{passive:true});
+  lb.addEventListener('touchend',function(e){if(x0===null)return;var dx=e.changedTouches[0].clientX-x0;if(Math.abs(dx)>40)showAt(at+(dx<0?1:-1));x0=null});
+  document.addEventListener('keydown',function(e){if(lb.hidden)return;if(e.key==='Escape')close();else if(e.key==='ArrowRight')showAt(at+1);else if(e.key==='ArrowLeft')showAt(at-1)});
+})();
+
+/* ---------- Borradores: se ven solo con #borradores en la dirección ---------- */
+(function(){function sync(){var on=location.hash==='#borradores';document.querySelectorAll('.draft').forEach(function(d){d.hidden=!on});if(on){var t=document.querySelector('.draft');t&&setTimeout(function(){t.scrollIntoView()},300)}}
+ sync();window.addEventListener('hashchange',sync)})();
+
+/* ---------- Hablemos: panel paso a paso que acaba en WhatsApp (sin servidor) ---------- */
+/* Configuración en el propio panel: data-wa (número), data-code (prefijo del código), data-brand (a quién se saluda), data-trato ("tu" u "os") */
+(function(){
+  var bk=document.getElementById('bk'); if(!bk)return;
+  var WA=bk.dataset.wa, PRE=bk.dataset.code||'EST', BRAND=bk.dataset.brand||'', TU=bk.dataset.trato==='tu', N=5;
+  var f=document.getElementById('book-form'), panes=[].slice.call(f.querySelectorAll('.bk-pane'));
+  var back=document.getElementById('bk-back'), next=document.getElementById('bk-next'), wa=document.getElementById('f-wa');
+  var err=document.getElementById('f-error'), bar=document.getElementById('bk-bar'), stepT=document.getElementById('bk-step');
+  var nombre=document.getElementById('f-nombre'), pre=document.getElementById('f-preview');
+  function sel(n){var e=f.querySelector('input[name="'+n+'"]:checked');return e?e.value:''}
+  function val(id){var e=document.getElementById(id);return e?e.value.trim():''}
+  var _code='';
+  function code(){if(!_code){var d=new Date(),r='',A='ABCDEFGHJKLMNPQRSTUVWXYZ23456789';for(var i=0;i<3;i++)r+=A[Math.floor(Math.random()*A.length)];_code=PRE+'-'+String(d.getDate()).padStart(2,'0')+String(d.getMonth()+1).padStart(2,'0')+'-'+r}return _code}
+  function message(){
+    var L=['¡Hola, '+BRAND+'! Soy '+nombre.value.trim()+(val('f-empresa')?', de '+val('f-empresa'):'')+'. '+(TU?'Te':'Os')+' escribo desde '+(TU?'tu':'vuestra')+' web:',''];
+    L.push('🔖 Código: '+code());
+    if(window.TEMPORADA&&TEMPORADA.linea)L.push(TEMPORADA.linea);
+    L.push('• Necesito: '+sel('tipo'));
+    if(val('f-marca'))L.push('• Marca o proyecto: '+val('f-marca'));
+    if(sel('punto'))L.push('• Punto de partida: '+sel('punto'));
+    if(val('f-sector'))L.push('• Sector: '+val('f-sector'));
+    if(sel('plazo'))L.push('• Plazo: '+sel('plazo'));
+    if(val('f-donde'))L.push('• Desde: '+val('f-donde'));
+    if(val('f-notas'))L.push('','Más detalles: '+val('f-notas'));
+    L.push('',TU?'¿Me cuentas cómo lo plantearías? ¡Gracias!':'¿Me contáis cómo lo plantearíais? ¡Gracias!');
+    return L.join('\n');
+  }
+  var step=1, opener=null;
+  function show(n){
+    step=n; err.hidden=true;
+    panes.forEach(function(p){p.hidden=+p.dataset.step!==n});
+    back.disabled=n===1;
+    var last=n===N; next.hidden=last; wa.hidden=!last;
+    next.textContent=n===4?'Ver mi mensaje':'Siguiente';
+    stepT.textContent=last?'Listo':'Paso '+n+' de 4';
+    bar.style.transform='scaleX('+(Math.min(n,4)/4)+')';
+    if(last){var m=message();pre.textContent=m;wa.href='https://wa.me/'+WA+'?text='+encodeURIComponent(m)}
+    f.scrollTop=0;
+    var h3=panes[n-1].querySelector('h3'); if(h3)h3.setAttribute('tabindex','-1');
+    setTimeout(function(){try{(h3||next).focus({preventScroll:true})}catch(x){}},380);
+  }
+  function fail(msg,el){err.textContent=msg;err.hidden=false;if(el){el.setAttribute('aria-invalid','true');el.focus()}}
+  function validate(n){
+    if(n===1&&!sel('tipo')){fail('Elige qué necesitas.');return false}
+    if(n===4){nombre.removeAttribute('aria-invalid');if(!nombre.value.trim()){fail('Dinos tu nombre para el mensaje.',nombre);return false}}
+    return true;
+  }
+  next.addEventListener('click',function(){if(validate(step))show(step+1)});
+  back.addEventListener('click',function(){if(step>1)show(step-1)});
+  f.addEventListener('submit',function(e){e.preventDefault();next.click()});
+  f.querySelectorAll('input[name="tipo"]').forEach(function(r){r.addEventListener('change',function(){setTimeout(function(){if(step===1)show(2)},220)})});
+  document.getElementById('f-copy').addEventListener('click',function(){var b=this,ok=function(){b.textContent='Copiado';setTimeout(function(){b.textContent='Copiar mensaje'},1600)};
+    try{navigator.clipboard.writeText(pre.textContent).then(ok,function(){var r=document.createRange();r.selectNodeContents(pre);var s=getSelection();s.removeAllRanges();s.addRange(r)})}catch(x){}});
+  function pick(v){var r=f.querySelector('input[name="tipo"][value="'+v+'"]');if(r){r.checked=true;return true}return false}
+  function open(from){
+    opener=from||document.activeElement; bk.hidden=false; document.documentElement.style.overflow='hidden';
+    var ds=from&&from.dataset||{};
+    if(ds.tipo&&pick(ds.tipo))show(2); else if(step===N)show(4); else show(step);
+    requestAnimationFrame(function(){requestAnimationFrame(function(){bk.classList.add('open')})});
+  }
+  function close(){
+    bk.classList.remove('open'); document.documentElement.style.overflow='';
+    setTimeout(function(){bk.hidden=true},reduced?0:420);
+    if(opener&&opener.focus)try{opener.focus({preventScroll:true})}catch(x){}
+  }
+  document.getElementById('bk-x').addEventListener('click',close);
+  document.getElementById('bk-scrim').addEventListener('click',close);
+  document.addEventListener('keydown',function(e){if(!bk.hidden&&e.key==='Escape')close()});
+  document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[href="#hablemos"]');if(!a)return;e.preventDefault();open(a)});
+  /* un enlace compartido con #hablemos (bio de Instagram, WhatsApp) abre el panel al llegar */
+  if(location.hash==='#hablemos')setTimeout(function(){open(null)},400);
+})();
+
+
+/* ---------- Drawer de reseñas ---------- */
+(function(){var d=document.getElementById('rvd'); if(!d)return;
+ var list=document.getElementById('rvd-list'), map=document.getElementById('rvd-map'), opener=null, filled=false;
+ function open(from){
+   if(!filled){document.querySelectorAll('#resenas .rv').forEach(function(c){var k=c.cloneNode(true);k.removeAttribute('data-reveal');list.appendChild(k)});filled=true}
+   if(!map.src)map.src=map.getAttribute('data-src');
+   opener=from||document.activeElement; d.hidden=false; document.documentElement.style.overflow='hidden'; SFX.play('open');
+   requestAnimationFrame(function(){requestAnimationFrame(function(){d.classList.add('open');var x=d.querySelector('.bk-head [data-rvd-x]');x&&x.focus({preventScroll:true})})});
+ }
+ function close(){ if(d.hidden)return; SFX.play('close'); d.classList.remove('open'); document.documentElement.style.overflow='';
+   setTimeout(function(){d.hidden=true;opener&&opener.focus&&opener.focus({preventScroll:true})},reduced?0:420); }
+ document.addEventListener('click',function(e){var a=e.target.closest('[data-rvd]');if(a){e.preventDefault();open(a);return}
+   if(e.target.closest('[data-rvd-x]'))close()});
+ document.addEventListener('keydown',function(e){if(e.key==='Escape')close()});
+})();
+
+
+
+/* ---------- Animaciones por visibilidad (aquí sí vale IntersectionObserver: solo revela contenido) ---------- */
+(function(){
+  if(!('IntersectionObserver' in window)||reduced)return;
+  root.classList.add('js-anim');
+  var io=new IntersectionObserver(function(es){var k=0;es.forEach(function(e){if(!e.isIntersecting)return;var el=e.target;el.style.transitionDelay=Math.min(k++*90,450)+'ms';el.classList.add('in');io.unobserve(el);setTimeout(function(){el.style.transitionDelay=''},1500)})},{rootMargin:'0px 0px -8% 0px'});
+  document.querySelectorAll('[data-reveal]').forEach(function(el){io.observe(el)});
+  var fo=new IntersectionObserver(function(es,o){es.forEach(function(e){if(!e.isIntersecting)return;o.unobserve(e.target);
+    var b=e.target,to=+b.dataset.count,from=+b.dataset.from||0,t0=performance.now(),D=1100;
+    (function step(now){var p=Math.min(1,Math.max(0,(now-t0)/D));b.textContent=Math.round(from+(to-from)*(1-Math.pow(1-p,3)));if(p<1)requestAnimationFrame(step)})(t0)})},{threshold:.6});
+  document.querySelectorAll('[data-count]').forEach(function(b){fo.observe(b)});
+})();
+(function(){var bar=document.getElementById('progress'),tk=false;if(!bar)return;
+  function prog(){tk=false;var H=root.scrollHeight-innerHeight;bar.style.transform='scaleX('+(H>0?Math.min(1,scrollY/H):0)+')'}
+  window.addEventListener('scroll',function(){if(!tk){tk=true;requestAnimationFrame(prog)}},{passive:true});})();
+
+/* ---------- Catálogo del hero: pasa sus páginas; cada pliego es un proyecto real (texto maquetado + foto) ---------- */
+(function(){var book=document.getElementById('book');if(!book)return;
+  /* [categoría, título, cliente o detalle, foto, pie] */
+  var P=[['Diseño editorial','Memoria de actividades','Consejería de Arquitectura y Vivienda · Cabildo de Gran Canaria','w-memoria','Maquetación de memoria'],
+    ['Exposiciones','Centro de Visitantes Degollada Becerra','Exposición permanente en Gran Canaria','w-degollada','Paneles interpretativos'],
+    ['Exposiciones','«Néstor o de la andrógina belleza»','Exposición temporal · Museo Castillo de Mata','w-nestor','Imagen y recursos gráficos'],
+    ['Autopublicación','El viaje de Nexus','Libro maquetado para Amazon KDP','w-nexus','Impreso y digital'],
+    ['Exposiciones','«Memorias de tinta»','Exposición temporal · El Museo Canario','w-tinta','Gráfica de sala'],
+    ['Realidad aumentada','Exposición interactiva','Paneles expositivos para la sede de PLOCAN','w-plocan-expo','Diseño de exposiciones'],
+    ['Ilustración','Calendario ilustrado','Reserva de la Biosfera de Gran Canaria','w-biosfera','Diseño gráfico'],
+    ['Cómic','«Supervivencia en PLOCAN»','Portada del cómic de PLOCAN','w-plocan-comic','Diseño editorial']];
+  var N=P.length,i=0,busy=false,hold=0,timer=0,vis=true;
+  var pl=document.getElementById('pg-l'),pr=document.getElementById('pg-r'),leaf=document.getElementById('leaf'),fr=leaf.querySelector('.front'),bk=leaf.querySelector('.back'),num=document.getElementById('libro-n');
+  function pad(n){return String(n).padStart(2,'0')}
+  function L(k){var p=P[k];return '<div class="pt"><span class="fo"><span>Reglade3</span><span>'+p[0]+'</span></span><span class="nn">'+pad(k+1)+'</span><h4>'+p[1]+'</h4><p>'+p[2]+'</p><span class="pn">'+(k*2+2)+'</span></div>'}
+  function R(k){var p=P[k];return '<div class="pf"><img src="img/'+p[3]+'.jpg" alt="'+p[1].replace(/[«»]/g,'')+', proyecto de Reglade3" draggable="false"'+(k?' loading="lazy"':'')+'><span><b>'+p[0]+'</b><span>'+p[4]+' · '+(k*2+3)+'</span></span></div>'}
+  function set(k){pl.innerHTML=L(k);pr.innerHTML=R(k);num.textContent=pad(k+1)+' / '+pad(N)}
+  /* precarga de la siguiente foto para que el pase no parpadee */
+  function pre(k){var im=new Image();im.src='img/'+P[k][3]+'.jpg'}
+  function done(j,side){setTimeout(function(){if(side==='f')pl.innerHTML=L(j);else pr.innerHTML=R(j);leaf.className='leaf';i=j;num.textContent=pad(j+1)+' / '+pad(N);busy=false;pre((j+1)%N)},reduced?0:980)}
+  function next(){if(busy)return;busy=true;var j=(i+1)%N;leaf.className='leaf';fr.innerHTML=R(i);bk.innerHTML=L(j);pr.innerHTML=R(j);void leaf.offsetWidth;leaf.className='leaf go fwd';done(j,'f')}
+  function prev(){if(busy)return;busy=true;var j=(i-1+N)%N;leaf.className='leaf left';fr.innerHTML=L(i);bk.innerHTML=R(j);pl.innerHTML=L(j);void leaf.offsetWidth;leaf.className='leaf left go bwd';done(j,'b')}
+  function user(){hold=performance.now()+10000}
+  var x0=null,swiped=false;
+  book.addEventListener('pointerdown',function(e){x0=e.clientX;swiped=false});
+  book.addEventListener('pointerup',function(e){if(x0===null)return;var dx=e.clientX-x0;x0=null;if(Math.abs(dx)>30){swiped=true;user();dx<0?next():prev()}});
+  book.addEventListener('click',function(e){if(e.target.closest('.g-rate'))return;if(swiped){swiped=false;return}var r=book.getBoundingClientRect();user();(e.clientX-r.left>r.width/2)?next():prev()});
+  document.getElementById('bk-nextp').addEventListener('click',function(){user();next()});
+  document.getElementById('bk-prev').addEventListener('click',function(){user();prev()});
+  book.addEventListener('mouseenter',function(){hold=performance.now()+1e9});book.addEventListener('mouseleave',function(){hold=performance.now()+2500});
+  function see(){var r=book.getBoundingClientRect();vis=r.bottom>0&&r.top<innerHeight}
+  window.addEventListener('scroll',see,{passive:true});
+  set(0);pre(1);
+  afterLoader(function(){if(reduced)return;timer=setInterval(function(){if(vis&&!document.hidden&&performance.now()>hold)next()},4800)});
+})();
+
+})();
+
+/* ---------- Botones flotantes tras un mínimo scroll (cabecera y barra móvil ocultas al pintar el hero) ---------- */
+(function(){var h=document.documentElement,tk=false;function s(){tk=false;h.classList.toggle('cta-wait',scrollY<=Math.min(120,innerHeight*.15))}
+ s();addEventListener('scroll',function(){if(!tk){tk=true;requestAnimationFrame(s)}},{passive:true});addEventListener('resize',s);})();
+</script>
