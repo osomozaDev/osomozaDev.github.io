@@ -349,7 +349,8 @@ mark{background:#FFE58A;padding:0 4px;border-radius:4px}
   .final .hero-ctas{width:100%}.final .hero-ctas .btn{flex:1}
   .mbar{display:flex;gap:6px;position:fixed;left:12px;right:12px;bottom:calc(10px + env(safe-area-inset-bottom,0px));z-index:70;padding:6px;border-radius:999px;background:rgba(246,241,233,.78);-webkit-backdrop-filter:blur(18px) saturate(1.5);backdrop-filter:blur(18px) saturate(1.5);border:1px solid rgba(29,42,34,.1);box-shadow:0 14px 34px -14px rgba(16,14,14,.5);transition:background .4s,border-color .4s}
   .mbar.glass{background:rgba(16,14,14,.42);border-color:rgba(255,255,255,.18)}
-  .mbar .btn{flex:1;min-height:48px;white-space:nowrap}
+  .mbar .btn{flex:1;min-height:48px;white-space:nowrap;min-width:0;padding:0 14px}
+  .mbar .btn span{overflow:hidden;text-overflow:ellipsis}
   .mbar .btn-ghost{flex:0 0 48px;width:48px;padding:0;border-color:transparent;background:rgba(29,42,34,.08)}
   .mbar.glass .btn-ghost{background:rgba(255,255,255,.16);color:#fff}
 }

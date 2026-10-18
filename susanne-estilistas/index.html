@@ -486,6 +486,9 @@ h3{font-family:var(--font-body);font-weight:700;letter-spacing:0}
 
 .mbar.off{transform:translateY(150%)!important;opacity:0!important;pointer-events:none}
 
+/* A 290 px con texto ancho la fila «Lunes, martes y jueves» estiraba la tabla de horario */
+@media (max-width:360px){.hours th{white-space:normal;padding-right:14px}}
+
 /* ---- Paneles (de la referencia Aloha) ---- */
 .bk{position:fixed;inset:0;z-index:120}
 .bk[hidden]{display:none}

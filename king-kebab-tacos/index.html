@@ -433,6 +433,8 @@ html.cta-wait .mbar{transform:translateY(150%)!important;opacity:0!important;poi
 h1,h2,h3{letter-spacing:-.035em;font-weight:800}
 .hero h1{font-size:clamp(46px,5.2vw,80px);line-height:.98}
 .hero h1 .display{font-size:.86em}
+/* Móvil estrecho: la regla de arriba pisaba el tamaño móvil y a 290 px el h1 (46 px) quedaba fuera del primer pantallazo y «Halloween,» ensanchaba el hero */
+@media (max-width:360px){.hero h1{font-size:clamp(32px,12vw,46px)}.hero-inner{min-width:0}}
 .brand-k{background:var(--hibiscus);color:#fff}.brand-k svg{width:22px;height:22px}
 .ld-logo{background:var(--hibiscus);color:#fff}
 .ld-name{font-weight:800;letter-spacing:.04em}
