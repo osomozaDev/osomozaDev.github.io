@@ -1,154 +1,1347 @@
 <!doctype html>
 <html lang="es">
-<head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>musa barber shop · San Martín de la Vega</title>
-<meta name="description" content="Barbería en San Martín de la Vega. 4,4 ★ con 22 reseñas en Google. Degradados, cortes clásicos y arreglo de barba con navaja. Reserva tu hueco por WhatsApp y sin esperas.">
-<meta name="theme-color" content="#131313">
+<title>Musa Barber Shop · San Martín de la Vega</title>
+<meta name="description" content="Barbería de barrio en San Martín de la Vega (C. de San Marcos, 38), abierta de lunes a domingo: corte de caballero, niño y jubilado, afeitado y arreglo de barba. 4,4★ con 22 reseñas en Google. Pide cita por WhatsApp.">
 <meta name="robots" content="noindex">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Inter:wght@400;500;600&display=swap">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zilla+Slab:ital,wght@0,500;0,700;1,500;1,600&family=Barlow:wght@400;500;600;700&family=Barlow+Condensed:wght@600;700&display=swap">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='6' fill='%231F4FA0'/%3E%3Ctext x='12' y='17' text-anchor='middle' font-family='Georgia' font-weight='700' font-size='14' fill='white'%3EM%3C/text%3E%3C/svg%3E">
 <style>
-:root{--bg:#131313;--sf:#1d1d1d;--ink:#f1ece2;--mu:#a69f92;--ac:#c8a465;--aci:#131313;--ln:#2e2c29;--fh:"Oswald",Georgia,serif;--fb:"Inter",system-ui,sans-serif;color-scheme:dark}
-*{box-sizing:border-box;margin:0}
-html{scroll-behavior:smooth}
-body{background:var(--bg);color:var(--ink);font:16px/1.6 var(--fb);-webkit-font-smoothing:antialiased;overflow-x:hidden}
-img{display:block;max-width:100%}
-a{color:inherit}
-.w{max-width:1120px;margin:0 auto;padding-inline:20px}
-.demo{background:var(--ink);color:var(--bg);font-size:.78rem;text-align:center;padding:6px 16px;letter-spacing:.02em}
-header{position:sticky;top:0;z-index:20;transition:background .25s,box-shadow .25s}
-header.on{background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(10px);box-shadow:0 1px 0 var(--ln)}
-header .w{display:flex;align-items:center;justify-content:space-between;gap:12px;height:64px}
-.logo{font:700 1.15rem/1.1 var(--fh);text-decoration:none;max-width:60vw;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-header:not(.on) .logo,header:not(.on) nav a{color:#fff}
-nav{display:flex;gap:22px;align-items:center}
-nav a{text-decoration:none;font-weight:500;font-size:.95rem}
-.btn{display:inline-flex;align-items:center;gap:8px;background:var(--ac);color:var(--aci);text-decoration:none;font-weight:600;padding:12px 20px;border-radius:999px;border:0;transition:transform .15s,box-shadow .15s}
-.btn:hover{transform:translateY(-1px);box-shadow:0 8px 24px -8px var(--ac)}
-.btn.ghost{background:rgba(255,255,255,.14);color:#fff;backdrop-filter:blur(6px);box-shadow:inset 0 0 0 1px rgba(255,255,255,.35)}
-.btn svg{width:18px;height:18px;flex:none}
-header .btn{padding:9px 16px;font-size:.9rem}
-.hero{position:relative;margin-top:-64px;min-height:min(92svh,760px);display:flex;align-items:flex-end;color:#fff;isolation:isolate}
-.hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2}
-.hero::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(0,0,0,.55) 0%,rgba(0,0,0,.15) 35%,rgba(0,0,0,.78) 100%)}
-.hero .w{padding-block:120px 64px;width:100%}
-.eyebrow{display:inline-block;font-size:.8rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;opacity:.9;margin-bottom:14px}
-h1{font:800 clamp(2.4rem,7vw,4.6rem)/1.02 var(--fh);letter-spacing:-.02em;max-width:16ch;text-wrap:balance}
-.lema{font-size:clamp(1.05rem,2.4vw,1.3rem);max-width:40ch;margin-top:14px;opacity:.95}
-.rate{display:inline-flex;align-items:center;gap:10px;margin-top:22px;background:rgba(255,255,255,.14);backdrop-filter:blur(6px);padding:8px 14px;border-radius:999px;font-weight:600;font-size:.95rem;text-decoration:none}
-.stars{color:#fbbf24;letter-spacing:2px}
-.ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
-section{padding-block:clamp(64px,10vw,110px)}
-.kick{color:var(--ac);font-weight:600;font-size:.82rem;letter-spacing:.12em;text-transform:uppercase}
-h2{font:800 clamp(1.9rem,4.5vw,3rem)/1.08 var(--fh);letter-spacing:-.015em;margin-top:10px;max-width:22ch;text-wrap:balance}
-.lead{color:var(--mu);font-size:1.1rem;max-width:56ch;margin-top:14px}
-.cards{list-style:none;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px;margin-top:40px}
-.card{background:var(--sf);border:1px solid var(--ln);border-radius:20px;padding:26px}
-.ico{display:inline-grid;place-items:center;width:40px;height:40px;border-radius:12px;background:color-mix(in srgb,var(--ac) 14%,transparent);color:var(--ac);font-weight:700;font-size:.85rem}
-.card h3{font:700 1.2rem/1.25 var(--fh);margin-top:16px}
-.card p{color:var(--mu);margin-top:6px;font-size:.97rem}
-.gal{display:grid;grid-template-columns:2fr 1fr;grid-template-rows:1fr 1fr;gap:12px;margin-top:40px;height:min(70vw,520px)}
-.gal figure{overflow:hidden;border-radius:20px}
-.gal figure:first-child{grid-row:1/3}
-.gal img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
-.gal figure:hover img{transform:scale(1.04)}
-.rev{background:var(--sf);border-block:1px solid var(--ln)}
-.revg{display:grid;grid-template-columns:auto 1fr;gap:clamp(24px,6vw,72px);align-items:center}
-.big{font:800 clamp(4.5rem,14vw,8rem)/.9 var(--fh);letter-spacing:-.04em}
-.big small{display:block;font:600 1rem var(--fb);letter-spacing:0;color:var(--mu);margin-top:12px}
-.big .stars{font-size:1.6rem;display:block;margin-top:10px}
-.loc{display:grid;grid-template-columns:1fr 1.3fr;gap:28px;margin-top:40px;align-items:stretch}
-.info{background:var(--sf);border:1px solid var(--ln);border-radius:20px;padding:28px;display:grid;gap:20px;align-content:start}
-.info dt{font-size:.78rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--mu)}
-.info dd{font-size:1.08rem;font-weight:500;margin-top:2px}
-.map{border-radius:20px;overflow:hidden;border:1px solid var(--ln);min-height:340px;background:var(--ln)}
-.map iframe{width:100%;height:100%;min-height:340px;border:0;display:block}
-.fin{text-align:center}
-.fin h2,.fin .lead{margin-inline:auto}
-.fin .ctas{justify-content:center}
-footer{border-top:1px solid var(--ln);padding:28px 0 120px;color:var(--mu);font-size:.85rem}
-footer .w{display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-between}
-.pill{position:fixed;left:50%;bottom:calc(14px + env(safe-area-inset-bottom));transform:translate(-50%,0);z-index:30;display:none;gap:6px;padding:6px;border-radius:999px;background:var(--ink);box-shadow:0 12px 32px -10px rgba(0,0,0,.45);transition:background .25s,transform .3s}
-.pill a{display:flex;align-items:center;gap:7px;padding:11px 16px;border-radius:999px;text-decoration:none;font-weight:600;font-size:.92rem;color:var(--bg);white-space:nowrap}
-.pill a.wa{background:var(--ac);color:var(--aci)}
-.pill svg{width:18px;height:18px}
-.pill.hero-on{background:rgba(255,255,255,.18);backdrop-filter:blur(12px)}
-.pill.hero-on a:not(.wa){color:#fff}
-.top{position:fixed;right:16px;bottom:calc(84px + env(safe-area-inset-bottom));z-index:29;width:44px;height:44px;border-radius:50%;border:1px solid var(--ln);background:var(--sf);color:var(--ink);display:grid;place-items:center;opacity:0;pointer-events:none;transition:opacity .25s;cursor:pointer}
-.top.on{opacity:1;pointer-events:auto}
-:focus-visible{outline:2px solid var(--ac);outline-offset:3px}
-@media (max-width:820px){
- nav a:not(.btn){display:none}
- .revg,.loc{grid-template-columns:1fr}
- .gal{grid-template-columns:1fr 1fr;grid-template-rows:2fr 1fr;height:min(110vw,560px)}
- .gal figure:first-child{grid-row:auto;grid-column:1/3}
- .pill{display:flex}
- header .btn{display:none}
+/* Musa Barber Shop — azul, rojo y crema del cartel de su puerta y del poste de barbero. Slab (Zilla) como las letras de su rótulo. */
+:root{
+  color-scheme: light;
+  --shell:#F6F1E7;
+  --shell-2:#ECE4D4;
+  --ink:#1A1A22;
+  --ink-soft:#5E5C66;
+  --hibiscus:#C8352B;
+  --hibiscus-ink:#A42A22;
+  --palm:#1F4FA0;
+  --jungle:#121A2E;
+  --sun:#8FB0E8;
+  --blush:#EAF0FA;
+  --line:rgba(26,26,34,.13);
+  --font-display:"Zilla Slab", Rockwell, Georgia, serif;
+  --font-body:"Barlow", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mark:"Zilla Slab", Georgia, serif;
+  --r-sm:10px; --r-md:14px; --r-lg:18px;
+  --shadow:0 30px 60px -30px rgba(18,26,46,.45), 0 8px 20px -10px rgba(18,26,46,.18);
+  --wrap:1180px;
+  --head:72px;
 }
-@media (max-width:380px){.pill a{padding:10px 12px;font-size:.85rem}.w{padding-inline:16px}}
-@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html{scroll-behavior:smooth;scroll-padding-top:calc(var(--head) + 12px)}
+body{margin:0;background:var(--shell);color:var(--ink);font-family:var(--font-body);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:clip}
+img{max-width:100%;display:block}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--hibiscus);outline-offset:3px;border-radius:6px}
+.wrap{max-width:var(--wrap);margin-inline:auto;padding-inline:clamp(16px,4vw,40px)}
+h1,h2,h3{margin:0;text-wrap:balance;line-height:1.02;letter-spacing:-.01em;font-weight:400;font-family:var(--font-display)}
+p{margin:0}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--palm)}
+.eyebrow::before{content:"";width:18px;height:18px;flex:none;background:currentColor;-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='none' stroke='black' stroke-width='2.2' stroke-linecap='round' d='M12 3v4M12 17v4M3 12h4M17 12h4M6 6l2.5 2.5M15.5 15.5L18 18M18 6l-2.5 2.5M8.5 15.5L6 18'/%3E%3C/svg%3E") center/contain no-repeat;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='none' stroke='black' stroke-width='2.2' stroke-linecap='round' d='M12 3v4M12 17v4M3 12h4M17 12h4M6 6l2.5 2.5M15.5 15.5L18 18M18 6l-2.5 2.5M8.5 15.5L6 18'/%3E%3C/svg%3E") center/contain no-repeat}
+.display{font-family:var(--font-display);font-style:italic;font-weight:400;letter-spacing:-.01em;color:var(--hibiscus)}
+.lead{font-size:clamp(18px,1.6vw,20px);color:var(--ink-soft);max-width:34em}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 24px;border-radius:999px;font:600 16px/1 var(--font-body);text-decoration:none;border:1.5px solid transparent;cursor:pointer;transition:transform .25s cubic-bezier(.2,.7,.2,1),box-shadow .25s,background .25s,border-color .25s}
+.btn svg{width:19px;height:19px;flex:none}
+.btn-primary{background:var(--hibiscus);color:#fff;box-shadow:0 12px 24px -12px rgba(200,53,43,.55)}
+.btn-primary:hover{background:var(--hibiscus-ink);transform:translateY(-2px)}
+.btn-ghost{background:transparent;border-color:var(--line);color:var(--ink)}
+.btn-ghost:hover{border-color:var(--ink);transform:translateY(-2px)}
+.btn-light{background:rgba(255,255,255,.94);color:var(--ink)}
+.btn-light:hover{background:#fff;transform:translateY(-2px)}
+.hide-m{}
+.sec{padding-block:clamp(72px,10vw,128px)}
+.sec-head{display:grid;gap:16px;max-width:760px;margin-bottom:clamp(36px,5vw,56px)}
+.sec-head h2,.split-txt h2,.book-cta h2,.visit h2{font-size:clamp(34px,4.4vw,56px)}
+.sec-head .display,.split-txt .display,.book-cta .display,.visit .display{display:block}
+.band-white{background:#fff}
+.band-blush{background:var(--blush)}
+.band-night{background:var(--jungle);color:#F4EFE6}
+.band-night .eyebrow{color:var(--sun)}
+.band-night .display{color:#8FB0E8}
+.band-night .lead{color:rgba(244,239,230,.78)}
+.band-blue{background:#173A78;color:#F6F1E7}
+.band-blue .eyebrow{color:#8FB0E8}
+.band-blue .display{color:#F6F1E7}
+.band-blue .lead{color:rgba(246,241,231,.82)}
+.band-blue .plans li{background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.14)}.band-blue .plans p{color:rgba(246,241,231,.78)}.band-blue .plans li>svg{color:#F6F1E7}.band-blue .svc-cta{color:#8FB0E8}
+
+/* Cabecera */
+.top{position:fixed;top:0;left:0;right:0;padding-top:env(safe-area-inset-top,0px);z-index:60;background:rgba(246,241,231,.88);-webkit-backdrop-filter:blur(18px) saturate(1.5);backdrop-filter:blur(18px) saturate(1.5);border-bottom:1px solid var(--line);transition:background .4s,border-color .4s}
+.top.glass{background:linear-gradient(180deg,rgba(12,12,14,.5),rgba(12,12,14,.08));border-bottom-color:rgba(255,255,255,.18)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;height:var(--head)}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none}
+.brand-k{width:44px;height:44px;border-radius:50%;background:#F6F1E7;color:#fff;display:grid;place-items:center;flex:none;overflow:hidden}.brand-k .pole{width:12px;height:30px}
+.wm{display:grid;font:400 24px/1 var(--font-mark);color:var(--ink);white-space:nowrap}.wm small{font:500 10.5px/1.4 var(--font-body);letter-spacing:.3em;text-transform:uppercase;opacity:.7}
+.wm-k{width:.95em;height:1.15em;margin:0 .14em 0 0}
+.top.glass .brand-k{background:rgba(255,255,255,.14);box-shadow:inset 0 0 0 1px rgba(255,255,255,.35)}
+.top.glass .wm,.top.glass .nav a{color:#fff}
+.nav{display:flex;gap:26px;font-size:15px;font-weight:500}
+.nav a{text-decoration:none;color:var(--ink-soft);white-space:nowrap}
+.nav a:hover{color:var(--hibiscus)}
+.top .btn{min-height:44px;padding:0 18px;font-size:15px}
+.progress{position:absolute;left:0;bottom:-1px;height:2px;width:100%;background:var(--hibiscus);transform:scaleX(0);transform-origin:left}
+.top.glass .progress{opacity:0}
+
+/* Loader con el logo */
+.loader{position:fixed;inset:0;z-index:200;display:grid;place-items:center;background:radial-gradient(60% 50% at 50% 45%,rgba(143,176,232,.2),transparent 70%),var(--jungle);color:#F4EFE6;transition:opacity .7s cubic-bezier(.2,.7,.2,1),visibility 0s .7s;animation:ld-safety 0s 4s forwards}
+.loader.out{opacity:0;visibility:hidden}
+@keyframes ld-safety{to{opacity:0;visibility:hidden}}
+.ld-in{display:grid;justify-items:center;gap:14px;transition:transform .7s cubic-bezier(.2,.7,.2,1)}
+.loader.out .ld-in{transform:scale(.92) translateY(-8px)}
+.ld-mark{position:relative;width:clamp(140px,13vw,184px);aspect-ratio:1;display:grid;place-items:center}
+.ld-logo{width:77%;height:77%;border-radius:50%;background:#F6F1E7;color:#fff;overflow:hidden;display:grid;place-items:center;box-shadow:0 18px 40px -16px rgba(0,0,0,.6);animation:ld-breathe 1.8s ease-in-out infinite}.ld-logo .pole{width:26%;height:66%}
+.ld-ring{position:absolute;inset:0;transform:rotate(-90deg)}
+.ld-ring circle{fill:none;stroke:rgba(244,239,230,.14);stroke-width:2}
+.ld-ring .ld-arc{stroke:var(--sun);stroke-width:2.5;stroke-linecap:round;stroke-dasharray:100;stroke-dashoffset:100;animation:ld-draw 1.1s cubic-bezier(.6,.1,.3,1) forwards}
+.ld-name{font:italic 400 clamp(34px,3vw,46px)/1 var(--font-mark);color:#F7F2EE;margin-top:6px;animation:ld-up .8s .15s cubic-bezier(.2,.7,.2,1) both}
+.ld-sub{font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#8FB0E8;animation:ld-up .8s .3s cubic-bezier(.2,.7,.2,1) both}
+@keyframes ld-draw{to{stroke-dashoffset:0}}
+@keyframes ld-breathe{50%{transform:scale(1.04)}}
+@keyframes ld-up{from{opacity:0;transform:translateY(10px)}}
+/* las entradas del hero esperan a que se vaya el loader */
+.loading .hero-inner>*,.loading .deck-wrap{animation-play-state:paused!important}
+@media (prefers-reduced-motion:reduce){.ld-logo,.ld-ring .ld-arc{animation:none;stroke-dashoffset:0}}
+
+/* Hero */
+.hero{position:relative;height:100vh;height:100svh;min-height:640px;max-height:1000px;overflow:hidden;background:var(--jungle);color:#fff}
+.hero-bg{position:absolute;inset:0;z-index:0;overflow:hidden}
+.hero-bg img{width:100%;height:100%;object-fit:cover;object-position:50% 60%;animation:kenburns 20s ease-out both}
+.hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(16,24,44,.82) 0%,rgba(16,24,44,.55) 42%,rgba(16,24,44,.12) 75%),linear-gradient(180deg,rgba(16,24,44,.4),transparent 30%)}
+@keyframes kenburns{from{transform:scale(1.12)}to{transform:scale(1)}}
+.hero-inner{position:relative;z-index:2;height:100%;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;padding-top:var(--head)}
+.hero .eyebrow{color:#8FB0E8}
+.hero h1{font-size:clamp(50px,6.6vw,96px);max-width:11em;margin-top:18px;text-shadow:0 2px 30px rgba(0,0,0,.25)}
+.hero h1 .display{display:block;color:#8FB0E8;font-size:.82em;margin-top:.08em}
+.hero-sub{margin-top:20px;max-width:33em;font-size:clamp(17px,1.4vw,20px);color:rgba(255,255,255,.9)}
+.hero-meta{display:flex;flex-wrap:wrap;align-items:center;gap:10px 16px;margin-top:22px}
+.g-rate{display:inline-flex;align-items:center;gap:8px;padding:8px 14px;border-radius:999px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.3);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);color:#fff;text-decoration:none;font-size:14px}
+.g-rate .stars{display:flex;gap:1px;color:#F5C04A}.g-rate svg{width:15px;height:15px}
+.g-rate b{font-size:15px}
+.hero-quote{font-size:14px;font-style:italic;color:rgba(255,255,255,.88)}
+.hero-quote small{font-style:normal;opacity:.75}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px;align-items:center}
+.hero .btn-ghost{background:rgba(255,255,255,.92);border-color:transparent;color:var(--ink)}
+.hero-micro{flex-basis:100%;font-size:13px;color:rgba(255,255,255,.8)}
+
+/* Hero: la tienda como ambiente y una baraja de ramos reales delante */
+.hero-bg img{filter:blur(2px) saturate(1.1)}
+:root{--t-glow:rgba(232,185,164,.32);--t-veil:16 24 44;--t-seal:#F7F2EE;--t-seal-ink:var(--jungle)}
+.hero{background:rgb(var(--t-veil))}
+.hero-bg::after{background:radial-gradient(60% 70% at 74% 55%,var(--t-glow),transparent 70%),linear-gradient(90deg,rgb(var(--t-veil)/.9) 0%,rgb(var(--t-veil)/.78) 45%,rgb(var(--t-veil)/.6) 100%);transition:opacity .6s}
+.seal circle{fill:var(--t-seal)}
+/* Ambiente del hero por temporada (lo activa data-temporada en <html>) */
+[data-temporada="san-valentin"]{--t-display:#FFB3C6;--t-glow:rgba(235,30,80,.62);--t-veil:52 6 20;--t-seal:#FF4D73;--t-seal-ink:#fff}
+[data-temporada="dia-madre"]{--t-glow:rgba(255,150,180,.55);--t-veil:72 28 44;--t-seal:#FFD3DF}
+[data-temporada="todos-santos"]{--t-display:#EBDCC8;--t-glow:rgba(240,170,90,.42);--t-veil:30 20 30;--t-seal:#E9D9C4}
+[data-temporada="navidad"]{--t-display:#F4D88E;--t-glow:rgba(240,190,90,.5);--t-veil:8 38 24;--t-seal:#E8C46A}
+[data-temporada="graduaciones"]{--t-display:#F4D88E;--t-glow:rgba(240,200,90,.45);--t-veil:16 24 44;--t-seal:#F4D88E}
+[data-temporada="bodas"]{--t-display:#FFF0DC;--t-glow:rgba(255,236,210,.45);--t-veil:44 38 32;--t-seal:#FFF4E6}
+[data-temporada] .hero-bg img{filter:blur(4px) saturate(.9) brightness(.85)}
+/* Temporadas con fondo propio: se ve más (menos desenfoque y velo más ligero en el lado de la foto) */
+[data-t-foto] .hero-bg img{filter:blur(1.5px) saturate(1.05);object-position:70% 50%}
+[data-t-foto] .hero-bg::after{background:linear-gradient(90deg,rgb(var(--t-veil)/.92) 0%,rgb(var(--t-veil)/.7) 42%,rgb(var(--t-veil)/.25) 100%)}
+@media (max-width:960px){[data-t-foto] .hero-bg img{filter:blur(1px) saturate(1.1)}[data-t-foto] .hero-bg::after{background:linear-gradient(180deg,rgb(var(--t-veil)/.15),rgb(var(--t-veil)/.35) 38%,rgb(var(--t-veil)/.85) 62%,rgb(var(--t-veil)/.92))}}
+.deck.swap .card{transition:none}
+.deck-wrap.t-in{animation:deckin 1s cubic-bezier(.2,.75,.2,1) both}
+.hero h1{font-size:clamp(50px,6vw,92px)}
+.hero h1 .display{color:#8FB0E8}
+.hero-inner{padding-right:min(46%,520px)}
+.deck-wrap{position:absolute;z-index:3;right:max(clamp(16px,4vw,40px),calc((100% - var(--wrap))/2 + 40px));top:calc(50% + var(--head)/2);transform:translateY(-50%);width:clamp(280px,29vw,410px);width:min(clamp(280px,29vw,410px),max(210px,calc((100vh - var(--head) - 150px)*.75)));width:min(clamp(280px,29vw,410px),max(210px,calc((100svh - var(--head) - 150px)*.75)));aspect-ratio:3/4}
+.deck{position:relative;width:100%;height:100%;cursor:pointer;outline:none}
+.deck:focus-visible{outline:3px solid #8FB0E8;outline-offset:14px;border-radius:24px}
+.card{position:absolute;inset:0;margin:0;border-radius:22px;overflow:hidden;background:var(--jungle);border:6px solid #F7F2EE;box-shadow:0 40px 70px -30px rgba(0,0,0,.7),0 10px 24px -8px rgba(0,0,0,.35);transition:transform .9s cubic-bezier(.2,.75,.2,1),opacity .6s,filter .6s;will-change:transform}
+.card img{width:100%;height:100%;object-fit:cover;display:block}
+.card figcaption{position:absolute;left:12px;right:12px;bottom:12px;padding:9px 14px;border-radius:999px;background:rgba(246,241,231,.95);color:var(--ink);font:italic 500 16px/1.2 var(--font-display);text-align:center;opacity:0;transform:translateY(8px);transition:opacity .5s .35s,transform .5s .35s}
+.card[data-pos="0"]{transform:rotate(-3deg);z-index:4}
+.card[data-pos="0"] figcaption{opacity:1;transform:none}
+.card[data-pos="1"]{transform:translate(18%,-2%) rotate(7deg) scale(.93);z-index:3;filter:brightness(.85)}
+.card[data-pos="2"]{transform:translate(-16%,3%) rotate(-11deg) scale(.88);z-index:2;filter:brightness(.7)}
+.card[data-pos="3"]{transform:translate(4%,5%) rotate(3deg) scale(.82);z-index:1;filter:brightness(.55)}
+.card.out{transform:translate(-125%,6%) rotate(-24deg);opacity:0;z-index:5}
+.deck:hover .card[data-pos="0"]{transform:rotate(-1deg) scale(1.02)}
+.seal{position:absolute;z-index:6;width:clamp(92px,8.5vw,120px);left:-14%;bottom:-6%;animation:spin 24s linear infinite;filter:drop-shadow(0 10px 20px rgba(0,0,0,.35))}
+.seal text{font:700 11px var(--font-body);fill:var(--t-seal-ink)}
+.seal-ico{color:var(--ink)}
+@keyframes spin{to{transform:rotate(360deg)}}
+.rate-stk{position:absolute;z-index:7;right:-9%;top:-5%;display:grid;grid-template-columns:auto auto;align-items:center;gap:2px 10px;padding:12px 16px 12px 14px;border-radius:18px;background:#fff;color:var(--ink);text-decoration:none;transform:rotate(4deg);box-shadow:0 22px 40px -16px rgba(0,0,0,.55);transition:transform .3s}
+.rate-stk:hover{transform:rotate(1deg) scale(1.04)}
+.rate-stk .stars{grid-column:1/-1;display:flex;gap:2px;color:#F5B400}.rate-stk svg{width:19px;height:19px}
+.rate-stk b{font:600 40px/1 var(--font-display);letter-spacing:-.02em}
+.rate-stk small{font-size:13.5px;line-height:1.25;font-weight:600;color:var(--ink-soft)}
+.js-anim .deck-wrap{animation:deckin 1.2s .3s cubic-bezier(.2,.75,.2,1) both}
+@keyframes deckin{from{opacity:0;transform:translateY(-44%) rotate(6deg) scale(.9)}to{opacity:1;transform:translateY(-50%)}}
+@media (prefers-reduced-motion:reduce){.seal{animation:none}.card{transition:none}}
+
+/* Reseñas: la foto de Yolanda difuminada de fondo */
+#resenas{position:relative;overflow:hidden;isolation:isolate}
+#resenas::before{content:"";position:absolute;inset:-60px;z-index:-2;background:url("img/hero.jpg") right 0 top 30%/auto 130% no-repeat,#EDE3DC;filter:blur(7px) saturate(1.05);transform:scale(1.04)}
+#resenas::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(246,241,231,.97) 0%,rgba(246,241,231,.9) 42%,rgba(246,241,231,.45) 78%,rgba(246,241,231,.3) 100%)}
+#resenas .rv{background:rgba(246,241,231,.9);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}
+@media (max-width:640px){#resenas::before{background-position:50% 0;background-size:cover}#resenas::after{background:linear-gradient(180deg,rgba(246,241,231,.55) 0%,rgba(246,241,231,.88) 40%,rgba(246,241,231,.95) 100%)}}
+
+/* Reseñas: tarjetas */
+.rv-grid{columns:3 300px;column-gap:20px}
+.rv{break-inside:avoid;margin:0 0 20px;padding:22px;border:1px solid var(--line);border-radius:var(--r-md);background:var(--shell);display:grid;gap:14px;transition:transform .3s,box-shadow .3s}
+.rv:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
+.rv-top{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.rv-stars{display:flex;gap:2px;color:#F5B400}.rv-stars svg{width:16px;height:16px}
+.rv-tag{font-size:12px;font-weight:600;color:var(--palm);background:rgba(31,79,160,.1);padding:4px 10px;border-radius:999px;white-space:nowrap}
+.rv blockquote{margin:0;font-size:16px;line-height:1.55}
+.rv figcaption{display:flex;align-items:center;gap:10px}
+.rv figcaption i{width:36px;height:36px;border-radius:50%;display:grid;place-items:center;color:#fff;font-style:normal;font-weight:700}
+.rv figcaption span{display:grid;line-height:1.25}.rv figcaption small{color:var(--ink-soft);font-size:13px}
+.rv-more{display:flex;flex-wrap:wrap;gap:6px 16px;align-items:baseline;margin:8px 0 0;font-size:14px;color:var(--ink-soft)}
+.rv-more a{font-weight:700;color:var(--hibiscus-ink);text-decoration:none}
+
+/* Servicios */
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.svc{display:grid;grid-template-rows:auto 1fr;background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);overflow:hidden;transition:transform .3s,box-shadow .3s}
+.svc:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.svc img{width:100%;aspect-ratio:4/3;object-fit:cover;transition:transform .8s cubic-bezier(.2,.7,.2,1)}
+.svc:hover img{transform:scale(1.04)}
+.svc>div{display:grid;gap:10px;align-content:start;padding:22px 22px 24px}
+.svc h3{font-size:26px}
+.svc p{color:var(--ink-soft);font-size:16px}
+.svc-cta{display:inline-flex;align-items:center;gap:8px;margin-top:6px;font-weight:700;font-size:15px;color:var(--hibiscus-ink);text-decoration:none}
+.svc-cta svg{width:16px;height:16px;transition:transform .25s}
+.svc-cta:hover svg{transform:translateX(4px)}
+
+/* Carrete de ramos */
+.reel{display:flex;gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;padding:0 max(16px,calc((100vw - var(--wrap))/2 + 40px)) 8px;scrollbar-width:none}
+.reel::-webkit-scrollbar{display:none}
+.reel figure{flex:0 0 clamp(240px,24vw,320px);margin:0;scroll-snap-align:start}
+.reel img{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:var(--r-md)}
+.reel-note{font-size:13px;color:rgba(244,239,230,.55)}
+.reel-foot{margin-top:28px}
+
+/* Bloques partidos */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,6vw,88px);align-items:center}
+.split-img{margin:0;border-radius:var(--r-lg);overflow:hidden;box-shadow:var(--shadow)}
+.split-img img{width:100%;aspect-ratio:4/5;object-fit:cover}
+.split-img.portrait img{aspect-ratio:3/4;object-position:50% 20%}
+.split-txt{display:grid;gap:18px;justify-items:start}
+.split-txt p{color:var(--ink-soft)}
+.quote{margin:4px 0 6px;padding:18px 20px;border-left:3px solid var(--hibiscus);background:rgba(255,255,255,.7);border-radius:0 var(--r-sm) var(--r-sm) 0;font-family:var(--font-display);font-style:italic;font-size:18px;line-height:1.5}
+.quote cite{display:block;margin-top:10px;font-family:var(--font-body);font-style:normal;font-size:13px;font-weight:600;color:var(--ink-soft)}
+.cat{font-family:var(--font-display);font-style:italic;font-size:19px;color:var(--palm)!important}
+
+/* Pasos */
+.steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.steps li{display:grid;gap:10px;align-content:start;padding:26px;border-radius:var(--r-lg);background:#fff;border:1px solid var(--line)}
+.steps b{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;background:var(--blush);color:var(--hibiscus-ink);font-family:var(--font-display);font-size:22px}
+.steps h3{font-size:24px}
+.steps p{color:var(--ink-soft);font-size:16px}
+
+/* Encargo */
+.book-cta{display:grid;grid-template-columns:1fr auto;gap:32px;align-items:end}
+.book-cta>div{display:grid;gap:16px}
+.book-perks{list-style:none;margin:6px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:8px 20px;font-size:15px;color:rgba(244,239,230,.85)}
+.book-perks li::before{content:"✓ ";color:#8FB0E8;font-weight:700}
+.book-cta .btn{min-height:58px;padding:0 30px;font-size:17px}
+
+/* Borrador */
+.draft{outline:3px dashed #E5B300;outline-offset:-12px}
+.incl{list-style:none;margin:0;padding:0;display:grid;gap:10px;font-size:18px}
+mark{background:#FFE58A;padding:0 4px;border-radius:4px}
+
+/* Visita y FAQ */
+.visit{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,6vw,88px);align-items:start}
+.visit>div:first-child{display:grid;gap:16px;justify-items:start}
+.hours{border-collapse:collapse;margin-top:8px;font-size:16px}
+.hours th{text-align:left;font-weight:600;padding:8px 24px 8px 0;color:var(--ink)}
+.hours td{padding:8px 0;color:var(--ink-soft);font-variant-numeric:tabular-nums}
+.hours tr+tr{border-top:1px solid var(--line)}
+.contact{list-style:none;margin:6px 0 0;padding:0;display:grid;gap:10px}
+.contact li{display:flex;align-items:center;gap:10px}
+.contact svg{width:20px;height:20px;flex:none;color:var(--palm)}
+.contact a{text-decoration:none;font-weight:500}
+.contact a:hover{color:var(--hibiscus)}
+.faq{display:grid;gap:10px}
+.faq details{background:#fff;border:1px solid var(--line);border-radius:var(--r-md);padding:4px 20px}
+.faq summary{cursor:pointer;list-style:none;padding:16px 0;font-weight:700;display:flex;justify-content:space-between;gap:12px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font-size:22px;line-height:1;color:var(--hibiscus);transition:transform .25s}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq details p{padding:0 0 18px;color:var(--ink-soft)}
+
+/* Cierre y pie */
+.final{padding-block:clamp(80px,11vw,140px);text-align:center}
+.final .wrap{display:grid;justify-items:center;gap:18px}
+.final h2{font-size:clamp(40px,5.6vw,76px);max-width:12em}
+.final h2 .display{display:block}
+.final .hero-ctas{justify-content:center;margin-top:8px}
+.g-rate-final{margin-top:6px}
+.foot{background:var(--jungle);color:rgba(244,239,230,.7);overflow:hidden}
+.wordmark{font-family:var(--font-display);font-style:italic;font-size:clamp(56px,14vw,210px);line-height:.9;text-align:center;color:rgba(244,239,230,.08);white-space:nowrap;padding-top:20px}
+.foot .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;font-size:14px;padding-block:22px;border-top:1px solid rgba(244,239,230,.12)}
+
+/* Animaciones de entrada */
+.js-anim [data-reveal]{opacity:0;transform:translateY(32px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1)}
+.js-anim [data-reveal].in{opacity:1;transform:none}
+.js-anim .hero-inner>*{animation:rise .9s cubic-bezier(.2,.7,.2,1) both}
+.js-anim .hero-inner>:nth-child(2){animation-delay:.12s}.js-anim .hero-inner>:nth-child(3){animation-delay:.24s}.js-anim .hero-inner>:nth-child(4){animation-delay:.36s}.js-anim .hero-inner>:nth-child(5){animation-delay:.48s}
+@keyframes rise{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+
+.mbar{display:none}
+
+@media (max-width:1060px){.nav a:nth-child(n+4){display:none}}
+@media (max-width:960px){
+  .nav{display:none}
+  .svc-grid{grid-template-columns:1fr 1fr}
+  .split,.visit,.book-cta{grid-template-columns:1fr}
+  .split.rev .split-img{order:-1}
+  .steps{grid-template-columns:1fr}
+  .hero{height:auto;min-height:0;max-height:none;display:flex;flex-direction:column}
+  .hero-inner{height:auto;padding-right:clamp(16px,4vw,40px);padding-top:30px;padding-bottom:56px}
+  .deck-wrap{position:relative;order:-1;right:auto;top:auto;transform:none;margin:calc(var(--head) + 30px) auto 0;width:min(50vw,280px)}
+  .js-anim .deck-wrap{animation-name:deckin-m}
+  .seal{left:-24%;bottom:auto;top:-6%}
+  .rate-stk{right:-24%;top:4%;padding:9px 12px 10px;border-radius:14px;gap:2px 8px}
+  .rate-stk b{font-size:28px}
+  .rate-stk svg{width:14px;height:14px}
+  .rate-stk small{font-size:11.5px}
+  .hero-bg::after{background:radial-gradient(70% 40% at 50% 26%,var(--t-glow),transparent 70%),linear-gradient(180deg,rgb(var(--t-veil)/.72),rgb(var(--t-veil)/.9) 55%)}
+  .deck-wrap.t-in{animation-name:deckin-m}
+}
+@keyframes deckin-m{from{opacity:0;transform:translateY(16px) rotate(6deg) scale(.9)}to{opacity:1;transform:none}}
+@media (max-width:640px){
+  body{font-size:16px;padding-bottom:76px}
+  .hide-m{display:none}
+  .top .btn{display:none}
+  .hero-inner{padding-top:26px;padding-bottom:36px}
+  .deck-wrap{margin-top:calc(var(--head) + 22px);width:min(50vw,280px,32vh);width:min(50vw,280px,32svh)}
+  .card{border-width:4px;border-radius:18px}
+  .card figcaption{font-size:13px;padding:7px 10px;left:8px;right:8px;bottom:8px}
+  .hero h1{font-size:clamp(32px,11vw,54px)}
+  .hero-sub{margin-top:14px;font-size:16px}
+  .hero-meta{margin-top:16px}
+  .hero .hero-ctas .btn-primary,.hero-micro{display:none}
+  .hero .eyebrow{font-size:11px;letter-spacing:.1em}
+  .hero .hero-ctas{margin-top:14px}
+  .hero .hero-ctas .btn-ghost{min-height:46px}
+  .svc-grid{grid-template-columns:1fr}
+  .rv-grid{columns:auto;display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;margin-inline:-16px;padding:4px 16px 14px;scrollbar-width:none}
+  .rv-grid::-webkit-scrollbar{display:none}
+  .rv{flex:0 0 84%;margin:0;scroll-snap-align:center}
+  .reel figure{flex-basis:72%}
+  .book-cta .btn{width:100%}
+  .final .hero-ctas{width:100%}.final .hero-ctas .btn{flex:1}
+  .mbar{display:flex;gap:6px;position:fixed;left:12px;right:12px;bottom:calc(10px + env(safe-area-inset-bottom,0px));z-index:70;padding:6px;border-radius:999px;background:rgba(246,241,231,.78);-webkit-backdrop-filter:blur(18px) saturate(1.5);backdrop-filter:blur(18px) saturate(1.5);border:1px solid rgba(29,42,34,.1);box-shadow:0 14px 34px -14px rgba(16,24,44,.5);transition:background .4s,border-color .4s}
+  .mbar.glass{background:rgba(16,24,44,.42);border-color:rgba(255,255,255,.18)}
+  .mbar .btn{flex:1;min-height:48px;white-space:nowrap}
+  .mbar .btn-ghost{flex:0 0 48px;width:48px;padding:0;border-color:transparent;background:rgba(29,42,34,.08)}
+  .mbar.glass .btn-ghost{background:rgba(255,255,255,.16);color:#fff}
+}
+
+/* Temporadas: el eyebrow del hero se vuelve una píldora con punto latiendo cuando hay fecha cerca */
+.hero .eyebrow.t-on{padding:6px 14px 6px 10px;border-radius:999px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.22);color:#fff;-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}
+.hero .eyebrow.t-on::before{width:8px;height:8px;border-radius:50%;-webkit-mask:none;mask:none;background:var(--hibiscus);box-shadow:0 0 0 0 var(--hibiscus);animation:t-pulso 1.8s ease-out infinite}
+@keyframes t-pulso{70%{box-shadow:0 0 0 8px transparent}100%{box-shadow:0 0 0 0 transparent}}
+[data-temporada] .hero h1 .display{color:var(--t-display,#8FB0E8)}
+@media (prefers-reduced-motion:reduce){.hero .eyebrow.t-on::before{animation:none}}
+
+/* Botones flotantes (cabecera y barra móvil): aparecen tras un mínimo scroll, no al pintar el hero */
+.top .btn-primary{transition:opacity .35s,transform .35s cubic-bezier(.2,.7,.2,1),background .25s,box-shadow .25s}
+html.cta-wait .top .btn-primary{opacity:0;transform:translateY(-8px);pointer-events:none}
+.mbar{transition:transform .35s cubic-bezier(.2,.7,.2,1),opacity .35s,background .4s,border-color .4s}
+html.cta-wait .mbar{transform:translateY(150%)!important;opacity:0!important;pointer-events:none}
+
+#rv-grid .rv:nth-child(n+7){display:none}
+.hours th{white-space:nowrap}
+
+/* La carta según las reseñas */
+.menu{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(24px,4vw,56px);align-items:stretch}
+.menu-list{list-style:none;margin:0;padding:0;display:grid;align-content:start;border-top:1px solid var(--line)}
+.menu-list li{border-bottom:1px solid var(--line)}
+.menu-list button{all:unset;box-sizing:border-box;width:100%;cursor:pointer;display:flex;align-items:baseline;justify-content:space-between;gap:16px;padding:18px 4px;transition:padding .3s cubic-bezier(.2,.7,.2,1),color .25s}
+.menu-list b{font:500 clamp(24px,2.6vw,34px)/1.1 var(--font-display);letter-spacing:-.01em}
+.menu-list small{font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft);white-space:nowrap}
+.menu-list button:hover,.menu-list button[aria-selected=true]{padding-left:18px;color:var(--hibiscus)}
+.menu-list button[aria-selected=true] b{font-style:italic}
+.menu-list button:focus-visible{outline:3px solid var(--hibiscus);outline-offset:-3px;border-radius:8px}
+.menu-show{position:relative;margin:0;border-radius:var(--r-lg);overflow:hidden;min-height:420px;background:var(--ink);box-shadow:var(--shadow)}
+.menu-show img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:opacity .25s,transform .6s cubic-bezier(.2,.7,.2,1)}
+.menu-show::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(12,12,14,.82))}
+.menu-show figcaption{position:absolute;z-index:2;left:0;right:0;bottom:0;padding:26px 28px;color:#fff;display:grid;gap:8px;transition:opacity .25s}
+.menu-show blockquote{margin:0;font:italic 500 clamp(20px,2vw,26px)/1.3 var(--font-display)}
+.menu-show cite{font-style:normal;font-size:13px;font-weight:600;opacity:.8}
+.menu-show.swap img,.menu-show.swap figcaption{opacity:0}
+.menu-show.swap img{transform:scale(1.04)}
+
+/* El local: dos fotos solapadas */
+.local-pics{position:relative;box-shadow:none;overflow:visible;aspect-ratio:4/5}
+.local-pics img{position:absolute;border-radius:var(--r-lg);box-shadow:var(--shadow);object-fit:cover}
+.local-pics img:first-child{inset:0 18% 22% 0;width:82%;height:78%;aspect-ratio:auto}
+.local-pics img:last-child{right:0;bottom:0;width:58%;height:50%;aspect-ratio:auto;border:6px solid #fff}
+
+/* Planes */
+.plans{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.plans li{display:grid;gap:10px;align-content:start;padding:26px;border-radius:var(--r-lg);background:#fff;border:1px solid var(--line)}
+.plans li>svg{width:30px;height:30px;color:var(--hibiscus)}
+.plans h3{font-size:24px}
+.plans p{color:var(--ink-soft);font-size:15.5px}
+@media (max-width:960px){.menu{grid-template-columns:1fr}.menu-show{min-height:0;aspect-ratio:4/3;order:-1}.plans{grid-template-columns:1fr 1fr}}
+@media (max-width:640px){.plans{grid-template-columns:1fr}.menu-list b{font-size:22px}.menu-list button{padding:14px 2px}.menu-show figcaption{padding:18px}.wm{font-size:15px;letter-spacing:.22em}.brand-k{width:36px;height:36px}}
+
+.final .btn{white-space:nowrap}
+
+@media (min-width:961px) and (max-height:520px){.deck-wrap{right:max(72px,calc((100% - var(--wrap))/2 + 72px))}}
+
+.plans h3{font-size:30px}
+.steps h3,.svc h3{font-size:28px}
+/* Elige tu color */
+.tonos{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:28px}
+.tonos button{all:unset;box-sizing:border-box;cursor:pointer;display:inline-flex;align-items:center;gap:10px;padding:10px 18px 10px 10px;border-radius:999px;border:1.5px solid var(--line);background:#fff;font:500 16px var(--font-body);transition:border-color .25s,transform .25s}
+.tonos button i{width:30px;height:30px;border-radius:50%;background:var(--sw);box-shadow:inset 0 0 0 2px rgba(255,255,255,.6)}
+.tonos button:hover{transform:translateY(-2px)}
+.tonos button[aria-selected=true]{border-color:var(--ink);background:var(--ink);color:#fff}
+.tonos button:focus-visible{outline:3px solid var(--hibiscus);outline-offset:3px}
+.tono-grid{display:grid;grid-template-columns:repeat(var(--n,5),minmax(0,1fr));gap:14px;transition:opacity .2s}
+.tono-grid.swap{opacity:0}
+.tono-grid figure{margin:0;position:relative;border-radius:var(--r-md);overflow:hidden;aspect-ratio:3/4;animation:tono-in .6s calc(var(--i)*60ms) cubic-bezier(.2,.7,.2,1) both}
+.tono-grid img{width:100%;height:100%;object-fit:cover;transition:transform .8s cubic-bezier(.2,.7,.2,1)}
+.tono-grid figure:hover img{transform:scale(1.05)}
+.tono-grid figcaption{position:absolute;left:10px;bottom:10px;padding:6px 12px;border-radius:999px;background:rgba(246,241,231,.92);font:italic 400 17px/1.1 var(--font-display)}
+@keyframes tono-in{from{opacity:0;transform:translateY(14px)}}
+@media (prefers-reduced-motion:reduce){.tono-grid figure{animation:none}}
+.tono-foot{display:flex;flex-wrap:wrap;gap:16px 24px;align-items:center;justify-content:space-between;margin-top:26px}
+.tono-foot p{font:italic 400 24px/1.3 var(--font-display);max-width:30em}
+@media (max-width:760px){.tono-grid{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;margin-inline:-16px;padding:0 16px 8px;scrollbar-width:none}.tono-grid::-webkit-scrollbar{display:none}.tono-grid figure{flex:0 0 62%;scroll-snap-align:start}}
+@media (max-width:640px){.tonos button{font-size:15px}.wm{font-size:20px}.wm small{font-size:9px}.tono-foot .btn{width:100%}}
+
+/* Cabecera: el logo es un disco crema; con vidrio sigue crema para que se lea */
+.top.glass .brand-k{background:#F6F0E8;box-shadow:0 0 0 1px rgba(255,255,255,.4)}
+.wm{font-weight:500;letter-spacing:.02em;text-transform:uppercase}
+.wm small{text-transform:none;letter-spacing:.06em;font:italic 400 13px/1.2 var(--font-display);opacity:.85}
+.hero h1{font-weight:500;letter-spacing:-.02em}
+.hero h1 .display{font-weight:400}
+h2{font-weight:500}
+.ld-name{font-style:normal;text-transform:uppercase;letter-spacing:.06em;font-weight:500}
+
+
+.top.glass .brand-k{background:var(--hibiscus);box-shadow:0 0 0 1px rgba(255,255,255,.4)}
+.wm{font-weight:600;letter-spacing:-.01em}
+.wm small{font:600 10px/1.4 var(--font-body);letter-spacing:.22em;text-transform:uppercase;opacity:.75}
+.hero h1{font-weight:600;letter-spacing:-.025em;font-variation-settings:"opsz" 144}
+.hero h1 .display{font-weight:400}
+h2{font-weight:600;letter-spacing:-.02em}
+.ld-name{font-style:normal;font-weight:600}
+.seal-ico{color:var(--hibiscus)}
+
+/* Baraja de citas: tarjetas tipográficas con los colores del toldo y del vinilo */
+.card.q{display:grid;align-content:end;gap:14px;padding:clamp(20px,2.4vw,30px);border-color:#FBF5F2}
+.card.q blockquote{margin:0;font:600 clamp(24px,2.3vw,34px)/1.12 var(--font-display);letter-spacing:-.02em;font-variation-settings:"opsz" 144}
+.card.q figcaption{position:static;opacity:1;transform:none;justify-self:start;background:rgba(255,255,255,.9);font:600 14px/1.2 var(--font-body);padding:8px 14px}
+.card.q::after{content:"";position:absolute;left:20px;top:20px;width:46px;height:46px;opacity:.35;background:currentColor;-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cg fill='none' stroke='black' stroke-width='1.6' stroke-linecap='round'%3E%3Ccircle cx='6' cy='6' r='3'/%3E%3Ccircle cx='6' cy='18' r='3'/%3E%3Cpath d='M20 4L8.1 15.9M14.5 14.5L20 20M8.1 8.1L12 12'/%3E%3C/g%3E%3C/svg%3E") center/contain no-repeat;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cg fill='none' stroke='black' stroke-width='1.6' stroke-linecap='round'%3E%3Ccircle cx='6' cy='6' r='3'/%3E%3Ccircle cx='6' cy='18' r='3'/%3E%3Cpath d='M20 4L8.1 15.9M14.5 14.5L20 20M8.1 8.1L12 12'/%3E%3C/g%3E%3C/svg%3E") center/contain no-repeat}
+.q1{background:#C8352B;color:#fff}
+.q3 figcaption{background:#F7E3E8!important}
+@media (max-width:640px){.card.q{padding:16px}.card.q blockquote{font-size:clamp(17px,5.4vw,22px)}.card.q figcaption{font-size:12px;padding:6px 10px}.card.q::after{width:26px;height:26px;left:12px;top:12px}}
+
+
+
+.top.glass .brand-k{background:#F6F1E7;box-shadow:0 0 0 1px rgba(255,255,255,.5)}
+.wm{font:700 26px/1 var(--font-mark);letter-spacing:.04em}
+.wm small{font:700 10px/1.4 var(--font-body);letter-spacing:.24em;text-transform:uppercase;opacity:.75}
+.hero h1{font-weight:700;letter-spacing:-.015em}
+.hero h1 .display{font-weight:500}
+h2{font-weight:700}
+.ld-name{font-style:normal;font-weight:700;letter-spacing:.08em}
+.seal-ico{color:var(--hibiscus)}
+.card.q blockquote{font-weight:700}
+.top.glass + * .btn{}
+/* Poste de barbero: rayas que suben si la barbería está abierta */
+.pole{display:inline-block;border-radius:999px;border:2px solid #fff;box-shadow:0 0 0 1px rgba(0,0,0,.15);background:repeating-linear-gradient(135deg,#C8352B 0 6px,#fff 6px 12px,#1F4FA0 12px 18px,#fff 18px 24px);background-size:100% 34px;animation:pole 1.6s linear infinite}
+@keyframes pole{to{background-position:0 -34px}}
+@media (prefers-reduced-motion:reduce){.pole{animation:none}}
+
+/* El cartel de la puerta */
+.crt{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.85fr);gap:clamp(28px,6vw,90px);align-items:center}
+.crt-txt{display:grid;gap:18px;justify-items:start}
+.crt-txt h2{font-size:clamp(36px,4.4vw,58px)}
+.crt-txt .display{display:block}
+.crt-out{display:grid;gap:8px;padding:20px 22px;border-radius:var(--r-lg);background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);width:min(100%,460px);transition:opacity .18s}
+.crt-out.swap{opacity:0}
+.crt-out b{font:700 clamp(26px,2.8vw,34px)/1.05 var(--font-display);color:#fff}
+.crt-out p{font:italic 500 19px/1.4 var(--font-display);color:rgba(246,241,231,.9)}
+.crt-out small{font:600 13px var(--font-body);font-style:normal;opacity:.75}
+.cartel{position:relative;padding:12px;border-radius:10px;background:#15161C;box-shadow:0 40px 70px -30px rgba(0,0,0,.8);max-width:400px;width:100%;justify-self:center}
+.crt-top{margin:-28px auto 10px;width:62%;text-align:center;background:#F6F1E7;color:#2A2A32;border:3px solid #15161C;border-radius:6px;font:700 26px/1.3 var(--font-display);letter-spacing:.1em}
+.crt-body{position:relative;padding:22px 18px 18px;border-radius:4px;background:#F6F1E7;color:#1A1A22;text-align:center;
+  border:10px solid transparent;border-image:repeating-linear-gradient(45deg,#C8352B 0 10px,#F6F1E7 10px 20px,#1F4FA0 20px 30px,#F6F1E7 30px 40px) 10}
+.crt-hor{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:12px}
+.crt-hor small{display:block;font:700 12px var(--font-body);letter-spacing:.14em;text-transform:uppercase;color:#C8352B}
+.crt-hor b{display:block;font:700 20px/1.1 var(--font-display);color:#C8352B}
+.crt-hor span{display:block;font:700 18px/1.25 var(--font-body);color:#1A1A22}
+.pole.big{width:22px;height:72px;animation-play-state:paused}
+.musa-abierto .pole.big{animation-play-state:running}
+.crt-now{margin:12px auto 0;display:inline-block;padding:6px 14px;border-radius:999px;background:#1A1A22;color:#fff;font:700 13px/1.2 var(--font-body);letter-spacing:.04em}
+.musa-abierto .crt-now{background:#1F7A44}
+.crt-brand{margin-top:12px;font:700 64px/.9 var(--font-display);color:#1F4FA0;letter-spacing:.02em;text-shadow:3px 3px 0 #C8352B}
+.crt-brand small{display:block;font:700 22px/1.2 var(--font-display);color:#C8352B;text-shadow:none;letter-spacing:.08em;text-transform:uppercase}
+.crt-list{list-style:none;margin:12px 0 0;padding:0;display:grid}
+.crt-list li{border-top:2px solid #1F4FA0}
+.crt-list li:last-child{border-bottom:2px solid #1F4FA0}
+.crt-list button{all:unset;box-sizing:border-box;width:100%;cursor:pointer;padding:9px 6px;min-height:44px;font:700 21px/1.2 "Barlow Condensed",var(--font-body);letter-spacing:.06em;text-transform:uppercase;color:#1F4FA0;transition:background .2s,color .2s}
+.crt-list button:hover{background:rgba(31,79,160,.08)}
+.crt-list button[aria-pressed=true]{background:#1F4FA0;color:#fff}
+.crt-list button:focus-visible{outline:3px solid #C8352B;outline-offset:-3px}
+@media (max-width:960px){.crt{grid-template-columns:1fr}.cartel{margin-top:20px}}
+@media (max-width:640px){.crt-brand{font-size:50px}.crt-list button{font-size:19px}.crt-txt .btn{width:100%}.crt-body{padding:16px 10px 12px}}
+@media (max-width:640px){h1,h2,h3{overflow-wrap:break-word}}
+
+/* ---- Paneles (de la referencia Aloha) ---- */
+.bk{position:fixed;inset:0;z-index:120}
+.bk[hidden]{display:none}
+.bk-scrim{position:absolute;inset:0;background:rgba(26,14,46,.5);opacity:0;transition:opacity .35s ease}
+.bk.open .bk-scrim{opacity:1}
+.bk-panel{position:absolute;top:0;right:0;bottom:0;width:min(480px,100%);background:var(--shell);display:flex;flex-direction:column;box-shadow:-30px 0 80px -30px rgba(26,14,46,.5);transform:translateX(100%);transition:transform .42s cubic-bezier(.2,.8,.2,1)}
+.bk.open .bk-panel{transform:none}
+.bk-head{display:grid;grid-template-columns:44px 1fr 44px;align-items:center;gap:8px;padding:calc(10px + env(safe-area-inset-top,0px)) 12px 10px;border-bottom:1px solid var(--line);background:#fff}
+.bk-head .t{text-align:center;display:grid;gap:2px}
+.bk-head .t span{font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft)}
+.bk-head .t b{font-family:var(--font-display);font-weight:400;font-size:20px;color:var(--hibiscus);line-height:1.1}
+.bk-ib{all:unset;cursor:pointer;width:44px;height:44px;border-radius:50%;display:grid;place-items:center;color:var(--ink)}
+.bk-ib:hover{background:var(--shell-2)}
+.bk-ib:focus-visible{outline:3px solid var(--hibiscus)}
+.bk-ib svg{width:22px;height:22px}
+.bk-ib[disabled]{visibility:hidden}
+.bk-prog{height:4px;background:var(--shell-2)}
+.bk-prog i{display:block;height:100%;background:linear-gradient(90deg,var(--hibiscus),var(--sun));transform-origin:left;transition:transform .35s ease}
+.bk-body{flex:1;overflow-y:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch;padding:28px 22px 24px}
+.bk-pane{display:grid;gap:18px;align-content:start}
+.bk-pane[hidden]{display:none}
+.bk-pane h3{font-size:clamp(26px,6vw,32px);line-height:1.1}
+.bk-pane .sub{color:var(--ink-soft);margin-top:-8px}
+.bk-opts{display:grid;gap:10px}
+.bk-opts label{position:relative;cursor:pointer;display:block}
+.bk-opts input{position:absolute;opacity:0;inset:0;margin:0;cursor:pointer}
+.bk-opts span{display:flex;align-items:center;justify-content:space-between;min-height:58px;padding:0 18px;border-radius:16px;border:1.5px solid var(--line);background:#fff;font-size:17px;font-weight:600;transition:border-color .2s,background .2s,color .2s}
+.bk-opts span::after{content:"";width:22px;height:22px;border-radius:50%;border:2px solid var(--line);flex:none;transition:all .2s}
+.bk-opts input[type=checkbox]+span::after{border-radius:7px}
+.bk-opts input:checked+span{border-color:var(--hibiscus);background:#FFF1F5;color:var(--hibiscus-ink)}
+.bk-opts input:checked+span::after{border-color:var(--hibiscus);background:var(--hibiscus) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='none' stroke='white' stroke-width='3.2' stroke-linecap='round' stroke-linejoin='round' d='M6 12l4 4 8-8'/%3E%3C/svg%3E") center/14px no-repeat}
+.bk-opts input:focus-visible+span{outline:3px solid var(--hibiscus);outline-offset:2px}
+.bk-opts.row{grid-template-columns:repeat(auto-fit,minmax(0,1fr));gap:8px}
+.bk-opts.row span{justify-content:center;min-height:50px;padding:0 10px;font-size:15px;text-align:center}
+.bk-opts.row span::after{display:none}
+.bk-field{display:grid;gap:8px;min-width:0}
+.bk-field>span{font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-soft)}
+.bk-field input,.bk-field textarea{display:block;width:100%;min-width:0;max-width:100%;min-height:56px;padding:14px 16px;border-radius:14px;border:1.5px solid var(--line);background:#fff;font:500 17px var(--font-body);color:var(--ink);-webkit-appearance:none;appearance:none}
+.bk-field input[type=date]{text-align:left}
+.bk-field input::-webkit-date-and-time-value{text-align:left}
+.bk-field textarea{min-height:96px;resize:vertical}
+.cal{background:#fff;border:1.5px solid var(--line);border-radius:18px;padding:10px 12px 14px}
+.cal-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:6px}
+.cal-head b{font-size:17px}
+.cal-head .bk-ib[disabled]{visibility:visible;opacity:.25;cursor:default}
+.cal-dow,.cal-grid{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:4px;text-align:center}
+.cal-dow span{font-size:12px;font-weight:700;color:var(--ink-soft);padding:4px 0}
+.cal-dow .we,.cal-grid .we{color:var(--hibiscus)}
+.cal-grid button{all:unset;box-sizing:border-box;cursor:pointer;aspect-ratio:1;max-height:48px;width:100%;display:grid;place-items:center;border-radius:12px;font-weight:600;font-size:15px;font-variant-numeric:tabular-nums;color:var(--ink);transition:background .15s,color .15s}
+.cal-grid button.we{color:var(--hibiscus)}
+.cal-grid button:hover:not([disabled]){background:var(--shell-2)}
+.cal-grid button[disabled]{opacity:.28;cursor:default}
+.cal-grid button{position:relative}
+.cal-grid button.today{opacity:1;color:var(--ink);box-shadow:inset 0 0 0 2px var(--sun);background:#FFF6EE}
+.cal-grid button.today::after{content:"";position:absolute;left:50%;bottom:12%;width:5px;height:5px;margin-left:-2.5px;border-radius:50%;background:#E0864A}
+.cal-legend{display:flex;align-items:center;gap:6px;margin:10px 2px 0;font-size:13px;font-weight:600;color:var(--ink-soft)}
+.cal-legend i{width:14px;height:14px;border-radius:5px;box-shadow:inset 0 0 0 2px var(--sun);background:#FFF6EE;position:relative;flex:none}
+.cal-legend i::after{content:"";position:absolute;left:50%;bottom:2px;width:4px;height:4px;margin-left:-2px;border-radius:50%;background:#E0864A}
+.cal-grid button[aria-pressed="true"]{background:var(--hibiscus);color:#fff}
+.cal-grid button:focus-visible{outline:3px solid var(--hibiscus);outline-offset:1px}
+.cal-sel{margin:4px 0 0;font-weight:600;color:var(--ink-soft)}
+.cal-sel.on{color:var(--hibiscus-ink)}
+.bk-field input:focus,.bk-field textarea:focus{outline:none;border-color:var(--hibiscus)}
+.bk-field input[aria-invalid="true"]{border-color:#C6283D;background:#FFF2F4}
+.stepper{display:grid;grid-template-columns:56px 1fr 56px;align-items:center;background:#fff;border:1.5px solid var(--line);border-radius:16px;overflow:hidden}
+.stepper button{all:unset;cursor:pointer;height:56px;display:grid;place-items:center;font-size:26px;font-weight:600;color:var(--hibiscus)}
+.stepper button:active{background:var(--shell-2)}
+.stepper button:focus-visible{outline:3px solid var(--hibiscus);outline-offset:-3px}
+.stepper output{text-align:center;font-size:22px;font-weight:700;font-variant-numeric:tabular-nums}
+.bk-foot{padding:12px 22px calc(14px + env(safe-area-inset-bottom,0px));border-top:1px solid var(--line);background:#fff;display:grid;gap:8px}
+.bk-foot .btn{width:100%;min-height:56px;font-size:17px}
+.bk-foot [hidden]{display:none!important}
+.f-error{margin:0;color:#B3213A;font-weight:600;font-size:15px}
+.btn-wa{background:#1FA855;color:#fff;box-shadow:0 12px 24px -12px rgba(31,168,85,.8);width:100%;white-space:nowrap}
+.btn-wa:hover{background:#178F47}
+.btn-wa svg{width:22px;height:22px}
+.f-preview{margin:0;white-space:pre-wrap;font:16px/1.5 var(--font-body);background:#E7FFDB;border-radius:16px 16px 16px 4px;padding:16px 18px;color:#123;box-shadow:0 1px 0 rgba(0,0,0,.06)}
+.f-copy{all:unset;cursor:pointer;justify-self:center;font-size:14px;font-weight:600;color:var(--hibiscus-ink);text-decoration:underline;text-underline-offset:3px;padding:4px 8px}
+.f-copy:focus-visible{outline:3px solid var(--hibiscus);border-radius:6px}
+.f-hint{margin:0;font-size:13px;color:var(--ink-soft);text-align:center}
+
+
+.hrs{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.stepper.sm{grid-template-columns:40px 1fr 40px;border-radius:14px}
+.stepper.sm button{height:44px;font-size:22px}
+.stepper.sm button[disabled]{opacity:.25;cursor:default}
+.stepper.sm output{font-size:18px}
+.hrs-out{margin:-4px 0 0;font-size:14px;font-weight:600;color:var(--hibiscus-ink)}
+/* Panel compacto: ningún paso necesita scroll */
+.bk-body{padding:18px 18px 14px}
+.bk-pane{gap:14px}
+.bk-pane h3{font-size:24px}
+.bk-pane .sub{margin-top:-6px;font-size:15px}
+.bk-field{gap:6px}
+.bk-field>span{font-size:12px}
+.bk-opts{gap:8px}
+.bk-opts span{min-height:50px;font-size:16px;border-radius:14px}
+.bk-opts.row span{min-height:44px}
+.bk-opts.grid2{grid-template-columns:1fr 1fr}
+.bk-opts.grid2 span{min-height:44px;padding:0 12px;font-size:14px}
+.bk-opts.grid2 span::after{width:18px;height:18px}
+.bk-field input,.bk-field textarea{min-height:48px;padding:11px 14px;font-size:16px}
+.bk-field textarea{min-height:76px}
+.stepper{grid-template-columns:52px 1fr 52px}
+.stepper button{height:48px}
+.cal{padding:6px 8px 10px}
+.cal-head{margin-bottom:2px}
+.cal-head .bk-ib{width:38px;height:38px}
+.cal-dow span{padding:2px 0}
+.cal-grid{gap:2px}
+.cal-grid button{aspect-ratio:auto;height:clamp(34px,5.2vh,44px)}
+.cal-legend{margin-top:6px;font-size:12px}
+.cal-sel{margin:0;font-size:14px}
+.f-preview{font-size:14px;padding:12px 14px}
+.bk-foot{padding:10px 18px calc(10px + env(safe-area-inset-bottom,0px));gap:6px}
+.bk-foot .btn{min-height:50px}
+.bk-head{padding-block:calc(6px + env(safe-area-inset-top,0px)) 6px}
+@media (max-height:700px){
+  .bk-pane h3{font-size:22px}
+  .bk-opts span{min-height:46px}
+  .bk-opts.row span,.bk-opts.grid2 span{min-height:40px}
+  .stepper button{height:44px}
+  .cal-grid button{height:32px;font-size:14px}
+  .bk-body{padding-top:14px}
+  .f-preview{font-size:13px;line-height:1.4;padding:10px 12px}
+  .bk-pane .sub{font-size:13.5px}
+}
+@media (max-height:620px){.bk-pane{gap:10px}.bk-pane h3{font-size:20px}.f-preview{font-size:12.5px;line-height:1.35}}
+.rvd-body{display:grid;grid-template-columns:minmax(0,1fr);gap:18px;align-content:start;overflow-x:hidden;overscroll-behavior-x:none;touch-action:pan-y}
+.rvd .bk-panel{overflow-x:hidden;max-width:100vw}
+.rvd-body>*,.rvd-list>*{min-width:0;max-width:100%}
+.rvd-list .rv,.rvd-list .rv *{overflow-wrap:anywhere}
+.rvd-list .rv-top{flex-wrap:wrap}.rvd-list .rv-tag{white-space:normal}
+.rvd-sum{display:grid;grid-template-columns:auto minmax(0,1fr);gap:22px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:var(--r-md);padding:18px 20px}
+.rvd-score{display:grid;justify-items:center;gap:4px}
+.rvd-score b{font-size:44px;line-height:1;font-weight:700;color:var(--ink)}
+.rvd-score small{font-size:13px;color:var(--ink-soft)}
+.rvd-dist{list-style:none;margin:0;padding:0;display:grid;gap:5px;font-size:13px;color:var(--ink-soft)}
+.rvd-dist li{display:grid;grid-template-columns:12px 1fr 22px;gap:8px;align-items:center}
+.rvd-dist i{height:8px;border-radius:99px;background:var(--shell-2);overflow:hidden}.rvd-dist b{display:block;height:100%;background:#F5B400;border-radius:99px}
+.rvd-dist em{font-style:normal;text-align:right}
+.rvd-h{margin:6px 0 0;font-size:17px}
+.rvd-list{display:grid;grid-template-columns:minmax(0,1fr);gap:12px}
+.rvd-list .rv{background:#fff;opacity:1!important;transform:none!important}
+.rvd-map{border-radius:var(--r-md);overflow:hidden;border:1px solid var(--line);background:var(--shell-2);height:300px;flex:none}
+.rvd-map iframe{width:100%;height:100%;border:0;display:block}
+.rvd-note{margin:0;font-size:13px;color:var(--ink-soft)}
+.rvd-foot{padding:12px 16px calc(12px + env(safe-area-inset-bottom,0px));border-top:1px solid var(--line);background:#fff}
+.rvd-foot .btn{width:100%}
+/* Subir arriba */
+.totop{position:fixed;right:20px;bottom:24px;z-index:65;width:48px;height:48px;border-radius:50%;border:1px solid rgba(255,255,255,.6);background:rgba(255,255,255,.72);-webkit-backdrop-filter:blur(14px) saturate(1.6);backdrop-filter:blur(14px) saturate(1.6);color:var(--ink);display:grid;place-items:center;cursor:pointer;box-shadow:0 10px 30px -10px rgba(58,36,48,.4);opacity:0;transform:translateY(12px) scale(.9);pointer-events:none;transition:opacity .3s,transform .3s}
+.totop.on{opacity:1;transform:none;pointer-events:auto}
+.totop:hover{transform:translateY(-2px)}
+.totop svg{width:22px;height:22px}
+@media (max-width:960px){.totop{bottom:calc(86px + env(safe-area-inset-bottom,0px));right:16px;width:44px;height:44px}}
+@media (max-width:640px){.bk-panel{width:100%;transform:translateY(100%);box-shadow:none}}
+.bk-head .t b{font-style:italic}
+.bk-opts input:checked+span{background:#EAF0FA}
+.btn-wa{font-size:16px}
+@media (max-height:620px){.cal-legend{display:none}}
+.bk-pane h3:focus{outline:none}
 </style>
-</head>
-<body>
-<div class="demo">Propuesta de web para musa barber shop · fotos de ejemplo, se cambian por las vuestras</div>
-<header id="hd"><div class="w">
- <a class="logo" href="#">musa barber shop</a>
- <nav><a href="#servicios">Qué ofrecemos</a><a href="#opiniones">Opiniones</a><a href="#donde">Dónde estamos</a>
- <a class="btn" href="https://wa.me/34632382377?text=Hola%2C%20quer%C3%ADa%20pedir%20cita%20para%20" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1s-.5-.1-.7.1-.8 1-.9 1.2-.3.2-.6.1a8 8 0 0 1-2.4-1.5 9 9 0 0 1-1.6-2c-.2-.3 0-.5.1-.6l.4-.5.3-.5v-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6a1.1 1.1 0 0 0-.8.4 3.4 3.4 0 0 0-1 2.5 5.9 5.9 0 0 0 1.2 3.1 13.5 13.5 0 0 0 5.2 4.6c.7.3 1.3.5 1.7.6a4.2 4.2 0 0 0 1.9.1 3.1 3.1 0 0 0 2-1.4 2.5 2.5 0 0 0 .2-1.4c-.1-.1-.3-.2-.6-.3ZM12 21.8a9.8 9.8 0 0 1-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4A9.8 9.8 0 1 1 12 21.8ZM20.5 3.5A11.8 11.8 0 0 0 1.9 17.7L.2 24l6.4-1.7A11.8 11.8 0 0 0 24 12a11.7 11.7 0 0 0-3.5-8.5Z"/></svg> WhatsApp</a></nav>
-</div></header>
-<main>
-<section class="hero" id="inicio">
- <img src="../fotos-comunes/img/barber-1.jpg" alt="" fetchpriority="high">
- <div class="w">
-  <span class="eyebrow">Barbería · San Martín de la Vega</span>
-  <h1>musa barber shop</h1>
-  <p class="lema">Cortes con estilo y barba perfecta</p>
-  <a class="rate" href="https://www.google.com/maps/search/?api=1&query=musa%20barber%20shop%2C%20C.%20de%20San%20Marcos%2C%2038%2C%20San%20Mart%C3%ADn%20de%20la%20Vega" target="_blank" rel="noopener"><span class="stars" aria-hidden="true">★★★★☆</span>4,4 · 22 reseñas en Google</a>
-  <div class="ctas"><a class="btn" href="https://wa.me/34632382377?text=Hola%2C%20quer%C3%ADa%20pedir%20cita%20para%20" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1s-.5-.1-.7.1-.8 1-.9 1.2-.3.2-.6.1a8 8 0 0 1-2.4-1.5 9 9 0 0 1-1.6-2c-.2-.3 0-.5.1-.6l.4-.5.3-.5v-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6a1.1 1.1 0 0 0-.8.4 3.4 3.4 0 0 0-1 2.5 5.9 5.9 0 0 0 1.2 3.1 13.5 13.5 0 0 0 5.2 4.6c.7.3 1.3.5 1.7.6a4.2 4.2 0 0 0 1.9.1 3.1 3.1 0 0 0 2-1.4 2.5 2.5 0 0 0 .2-1.4c-.1-.1-.3-.2-.6-.3ZM12 21.8a9.8 9.8 0 0 1-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4A9.8 9.8 0 1 1 12 21.8ZM20.5 3.5A11.8 11.8 0 0 0 1.9 17.7L.2 24l6.4-1.7A11.8 11.8 0 0 0 24 12a11.7 11.7 0 0 0-3.5-8.5Z"/></svg> Pedir cita</a><a class="btn ghost" href="https://www.google.com/maps/search/?api=1&query=musa%20barber%20shop%2C%20C.%20de%20San%20Marcos%2C%2038%2C%20San%20Mart%C3%ADn%20de%20la%20Vega" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg> Cómo llegar</a></div>
- </div>
-</section>
-<section id="servicios"><div class="w">
- <span class="kick">Qué ofrecemos</span>
- <h2>Cortes con estilo y barba perfecta</h2>
- <p class="lead">Degradados, cortes clásicos y arreglo de barba con navaja. Reserva tu hueco por WhatsApp y sin esperas.</p>
- <ul class="cards"><li class="card"><span class="ico">01</span><h3>Corte</h3><p>Clásico, degradado o lo que tengas en mente.</p></li><li class="card"><span class="ico">02</span><h3>Barba</h3><p>Perfilado, arreglo y afeitado a navaja.</p></li><li class="card"><span class="ico">03</span><h3>Corte + barba</h3><p>El combo completo.</p></li><li class="card"><span class="ico">04</span><h3>Niños</h3><p>Cortes para los más peques.</p></li></ul>
- <div class="gal"><figure><img src="../fotos-comunes/img/barber-0.jpg" alt="" loading="lazy" width="800" height="600"></figure><figure><img src="../fotos-comunes/img/barber-2.jpg" alt="" loading="lazy" width="800" height="600"></figure><figure><img src="../fotos-comunes/img/barber-3.jpg" alt="" loading="lazy" width="800" height="600"></figure></div>
-</div></section>
-<section class="rev" id="opiniones"><div class="w revg">
- <div class="big">4,4<span class="stars" aria-label="4,4 de 5">★★★★☆</span><small>22 reseñas en Google</small></div>
- <div><span class="kick">Opiniones</span><h2>Lo dicen nuestros clientes</h2>
- <p class="lead">22 personas nos han valorado en Google con una media de 4,4 sobre 5. Gracias a todos por confiar en musa barber shop.</p>
- <div class="ctas"><a class="btn" href="https://www.google.com/maps/search/?api=1&query=musa%20barber%20shop%2C%20C.%20de%20San%20Marcos%2C%2038%2C%20San%20Mart%C3%ADn%20de%20la%20Vega" target="_blank" rel="noopener">Leer las reseñas</a></div></div>
-</div></section>
-<section id="donde"><div class="w">
- <span class="kick">Dónde estamos</span>
- <h2>Te esperamos en San Martín de la Vega</h2>
- <div class="loc">
-  <dl class="info">
-   <div><dt>Dirección</dt><dd>C. de San Marcos, 38, San Martín de la Vega</dd></div>
-   <div><dt>Teléfono y WhatsApp</dt><dd><a href="tel:+34632382377">632 382 377</a></dd></div>
-   <div><dt>Horario</dt><dd>Consúltanos por WhatsApp</dd></div>
-   <div class="ctas" style="margin-top:0"><a class="btn" href="https://wa.me/34632382377?text=Hola%2C%20quer%C3%ADa%20pedir%20cita%20para%20" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1s-.5-.1-.7.1-.8 1-.9 1.2-.3.2-.6.1a8 8 0 0 1-2.4-1.5 9 9 0 0 1-1.6-2c-.2-.3 0-.5.1-.6l.4-.5.3-.5v-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6a1.1 1.1 0 0 0-.8.4 3.4 3.4 0 0 0-1 2.5 5.9 5.9 0 0 0 1.2 3.1 13.5 13.5 0 0 0 5.2 4.6c.7.3 1.3.5 1.7.6a4.2 4.2 0 0 0 1.9.1 3.1 3.1 0 0 0 2-1.4 2.5 2.5 0 0 0 .2-1.4c-.1-.1-.3-.2-.6-.3ZM12 21.8a9.8 9.8 0 0 1-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4A9.8 9.8 0 1 1 12 21.8ZM20.5 3.5A11.8 11.8 0 0 0 1.9 17.7L.2 24l6.4-1.7A11.8 11.8 0 0 0 24 12a11.7 11.7 0 0 0-3.5-8.5Z"/></svg> Pedir cita</a><a class="btn" style="background:transparent;color:var(--ink);box-shadow:inset 0 0 0 1px var(--ln)" href="https://www.google.com/maps/search/?api=1&query=musa%20barber%20shop%2C%20C.%20de%20San%20Marcos%2C%2038%2C%20San%20Mart%C3%ADn%20de%20la%20Vega" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg> Abrir mapa</a></div>
-  </dl>
-  <div class="map"><iframe src="https://maps.google.com/maps?q=musa%20barber%20shop%2C%20C.%20de%20San%20Marcos%2C%2038%2C%20San%20Mart%C3%ADn%20de%20la%20Vega&z=16&output=embed" loading="lazy" title="Mapa de musa barber shop" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
- </div>
-</div></section>
-<section class="fin"><div class="w">
- <span class="kick">San Martín de la Vega</span>
- <h2>¿Hablamos?</h2>
- <p class="lead">Escríbenos por WhatsApp y te respondemos enseguida.</p>
- <div class="ctas"><a class="btn" href="https://wa.me/34632382377?text=Hola%2C%20quer%C3%ADa%20pedir%20cita%20para%20" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1s-.5-.1-.7.1-.8 1-.9 1.2-.3.2-.6.1a8 8 0 0 1-2.4-1.5 9 9 0 0 1-1.6-2c-.2-.3 0-.5.1-.6l.4-.5.3-.5v-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6a1.1 1.1 0 0 0-.8.4 3.4 3.4 0 0 0-1 2.5 5.9 5.9 0 0 0 1.2 3.1 13.5 13.5 0 0 0 5.2 4.6c.7.3 1.3.5 1.7.6a4.2 4.2 0 0 0 1.9.1 3.1 3.1 0 0 0 2-1.4 2.5 2.5 0 0 0 .2-1.4c-.1-.1-.3-.2-.6-.3ZM12 21.8a9.8 9.8 0 0 1-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4A9.8 9.8 0 1 1 12 21.8ZM20.5 3.5A11.8 11.8 0 0 0 1.9 17.7L.2 24l6.4-1.7A11.8 11.8 0 0 0 24 12a11.7 11.7 0 0 0-3.5-8.5Z"/></svg> Pedir cita</a></div>
-</div></section>
-</main>
-<footer><div class="w"><span>© musa barber shop · C. de San Marcos, 38, San Martín de la Vega</span><span>Fotos ilustrativas</span></div></footer>
-<div class="pill" id="pill"><a href="#donde"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg> Dónde</a><a href="tel:+34632382377"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></svg> Llamar</a><a class="wa" href="https://wa.me/34632382377?text=Hola%2C%20quer%C3%ADa%20pedir%20cita%20para%20" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1s-.5-.1-.7.1-.8 1-.9 1.2-.3.2-.6.1a8 8 0 0 1-2.4-1.5 9 9 0 0 1-1.6-2c-.2-.3 0-.5.1-.6l.4-.5.3-.5v-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6a1.1 1.1 0 0 0-.8.4 3.4 3.4 0 0 0-1 2.5 5.9 5.9 0 0 0 1.2 3.1 13.5 13.5 0 0 0 5.2 4.6c.7.3 1.3.5 1.7.6a4.2 4.2 0 0 0 1.9.1 3.1 3.1 0 0 0 2-1.4 2.5 2.5 0 0 0 .2-1.4c-.1-.1-.3-.2-.6-.3ZM12 21.8a9.8 9.8 0 0 1-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4A9.8 9.8 0 1 1 12 21.8ZM20.5 3.5A11.8 11.8 0 0 0 1.9 17.7L.2 24l6.4-1.7A11.8 11.8 0 0 0 24 12a11.7 11.7 0 0 0-3.5-8.5Z"/></svg> WhatsApp</a></div>
-<button class="top" id="top" aria-label="Volver arriba"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-tijera" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M20 4L8.1 15.9M14.5 14.5L20 20M8.1 8.1L12 12"/></g></symbol>
+  <symbol id="i-gota" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11z"/></g></symbol>
+  <symbol id="i-brillo" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M12 3v4M12 17v4M3 12h4M17 12h4M6 6l2.5 2.5M15.5 15.5L18 18M18 6l-2.5 2.5M8.5 15.5L6 18"/></symbol>
+  <symbol id="i-onda" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M8 3c-3 4 3 6 0 10s3 6 0 8M14 3c-3 4 3 6 0 10s3 6 0 8"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 22s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></g></symbol>
+  <symbol id="i-cal" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4"/></g></symbol>
+  <symbol id="i-navaja" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l9-9 3 3-9 9H3z"/><path d="M12 8l5-5 4 4-6 4"/></g></symbol>
+  <symbol id="i-fb" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M15 3h-2a4 4 0 0 0-4 4v3H7v4h2v7h4v-7h2.5l.5-4h-3V7.5a.5.5 0 0 1 .5-.5H15z"/></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2.8l2.8 5.9 6.4.8-4.7 4.4 1.2 6.4L12 17.2l-5.7 3.1 1.2-6.4L2.8 9.5l6.4-.8z"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></symbol>
+</svg>
+<div class="loader" id="loader" aria-hidden="true">
+  <div class="ld-in">
+    <div class="ld-mark"><svg class="ld-ring" viewBox="0 0 140 140"><circle cx="70" cy="70" r="66"/><circle class="ld-arc" cx="70" cy="70" r="66" pathLength="100"/></svg><span class="ld-logo"><i class="pole"></i></span></div>
+    <b class="ld-name">MUSA</b>
+    <small class="ld-sub">Barber Shop · San Martín de la Vega</small>
+  </div>
+</div>
 <script>
-(()=>{const h=document.getElementById('hd'),p=document.getElementById('pill'),t=document.getElementById('top'),hero=document.getElementById('inicio');
-const f=()=>{const y=scrollY,hh=hero.offsetHeight;h.classList.toggle('on',y>hh-90);p.classList.toggle('hero-on',y<hh-120);t.classList.toggle('on',y>hh+200)};
-addEventListener('scroll',f,{passive:true});addEventListener('resize',f);f();t.onclick=()=>scrollTo({top:0,behavior:'smooth'})})();
+/* ---------- Loader con su poste de barbero: en cada entrada o recarga (mín. 0,9 s, máx. 3 s) ---------- */
+(function(){var d=document.documentElement,l=document.getElementById('loader'),t0=Date.now(),done=false;d.classList.add('loading');
+ function go(){if(done)return;done=true;setTimeout(function(){l.classList.add('out');d.classList.remove('loading');setTimeout(function(){l.remove()},900)},Math.max(0,900-(Date.now()-t0)))}
+ if(document.readyState==='complete')go();else window.addEventListener('load',go);setTimeout(go,3000);})();
 </script>
-</body>
-</html>
+
+<header class="top glass" id="top">
+  <div class="wrap">
+    <a class="brand" href="#hero" aria-label="Musa Barber Shop, inicio"><span class="brand-k"><i class="pole"></i></span><span class="wm">MUSA<small>Barber Shop</small></span></a>
+    <nav class="nav" aria-label="Secciones">
+      <a href="#resenas">Reseñas</a>
+      <a href="#cartel">El cartel</a>
+      <a href="#barberia">La barbería</a>
+      <a href="#visita">Horario</a>
+    </nav>
+    <a class="btn btn-primary" href="#cita"><svg><use href="#i-tijera"/></svg>Pedir cita</a>
+  </div>
+  <div class="progress" id="progress"></div>
+</header>
+
+<main>
+  <section class="hero" id="hero">
+    <picture class="hero-bg" aria-hidden="true"><source media="(max-width:640px)" srcset="img/hero-m.jpg"><img src="img/hero.jpg" alt="" fetchpriority="high" decoding="async"></picture>
+    <div class="hero-inner wrap">
+      <span class="eyebrow" data-t="eyebrow">Barbería · San Martín</span>
+      <h1 data-t="h1">De barrio, de toda la vida. <span class="display">Con arte en las manos</span></h1>
+      <p class="hero-sub" data-t="sub">Corte de caballero, niño y jubilado, afeitado y barba en la calle San Marcos. <span class="hide-m">Abierto de lunes a domingo, mañana y tarde.</span></p>
+      <div class="hero-meta hide-m">
+        <span class="hero-quote">«Un peluquero 10 que podría estar cortando a los famosos, en una peluquería de barrio de toda la vida.» <small>— Ancor S., en Google</small></span>
+      </div>
+      <div class="hero-ctas">
+        <a class="btn btn-primary" href="#cita"><svg><use href="#i-tijera"/></svg><span data-t="cta">Pedir cita</span></a>
+        <a class="btn btn-ghost" href="#cartel">¿Está abierto?</a>
+        <small class="hero-micro" data-t="micro">Te respondemos por WhatsApp · sin compromiso</small>
+      </div>
+    </div>
+    <div class="deck-wrap" aria-label="Cortes de Musa Barber Shop y lo que dicen sus clientes">
+      <div class="deck" id="deck" role="button" tabindex="0" aria-label="Ver la siguiente tarjeta">
+        <figure class="card"><img src="img/fade.jpg" alt="Degradado en la nuca de un cliente, recién cortado" fetchpriority="high"><figcaption>Degradado</figcaption></figure>
+        <figure class="card q q1"><blockquote>«…entro como un adefesio y salgo casi guapo.»</blockquote><figcaption>Valentín C.</figcaption></figure>
+        <figure class="card"><img src="img/perfil.jpg" alt="Corte con los lados degradados y volumen arriba, de perfil"><figcaption>Lados y volumen</figcaption></figure>
+        <figure class="card"><img src="img/fachada.jpg" alt="Fachada de Musa Barber Shop con el poste de barbero"><figcaption>Calle San Marcos, 38</figcaption></figure>
+      </div>
+      <a class="rate-stk" href="#resenas" data-rvd aria-label="4,4 de 5 en Google, 22 reseñas. Ver reseñas"><span class="stars"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></span><b>4,4</b><small>22 reseñas<br>en Google</small></a>
+      <svg class="seal" viewBox="0 0 120 120" aria-hidden="true"><defs><path id="seal-c" d="M60 60m-44 0a44 44 0 1 1 88 0a44 44 0 1 1-88 0"/></defs><circle cx="60" cy="60" r="58"/><text><textPath href="#seal-c" textLength="272" lengthAdjust="spacing">BARBER SHOP · LUNES A DOMINGO · </textPath></text><use href="#i-tijera" x="44" y="44" width="32" height="32" class="seal-ico"/></svg>
+    </div>
+  </section>
+
+  <section class="sec band-white" id="resenas">
+    <div class="wrap">
+      <div class="sec-head" data-reveal>
+        <span class="eyebrow">Reseñas de Google</span>
+        <h2>4,4 en 22 reseñas. <span class="display">«Cortando al mínimo detalle».</span></h2>
+      </div>
+      <div class="rv-grid" id="rv-grid"></div>
+      <p class="rv-more"><a href="#resenas" data-rvd>Ver más reseñas →</a> <span>Fragmentos literales de reseñas de 5 estrellas en Google.</span></p>
+    </div>
+  </section>
+
+  <section class="sec band-blue" id="cartel">
+    <div class="wrap crt">
+      <div class="crt-txt" data-reveal>
+        <span class="eyebrow">El cartel de la puerta</span>
+        <h2>¿Está abierto? <span class="display">Mira el poste.</span></h2>
+        <p class="lead">Si el poste gira, Musa está abierto. Toca cada línea del cartel y te contamos qué dicen sus clientes de ese servicio.</p>
+        <div class="crt-out" aria-live="polite">
+          <b id="crt-name">Corte caballeros</b>
+          <p id="crt-q">«…cortando al mínimo detalle, siempre con buena conversación, agradable, respetuoso,…» <small>— Fran L.</small></p>
+        </div>
+        <a class="btn btn-light" href="#cita" id="crt-cta" data-tipo="Corte caballero"><svg><use href="#i-tijera"/></svg>Pedir cita para esto</a>
+      </div>
+      <div class="cartel" data-reveal>
+        <div class="crt-top">MUSA</div>
+        <div class="crt-body">
+          <div class="crt-hor">
+            <i class="pole big" id="crt-pole"></i>
+            <div>
+              <small>Horario</small>
+              <b>Lunes a Domingo</b>
+              <span>9:00 a 14:00<br>16:30 a 21:00</span>
+            </div>
+            <i class="pole big"></i>
+          </div>
+          <p class="crt-now" id="crt-now">Abierto</p>
+          <p class="crt-brand">MUSA<small>Barbershop</small></p>
+          <ul class="crt-list" id="crt-list">
+            <li><button type="button" data-k="0" aria-pressed="true">Corte caballeros</button></li>
+            <li><button type="button" data-k="1" aria-pressed="false">Corte niño</button></li>
+            <li><button type="button" data-k="2" aria-pressed="false">Corte jubilados</button></li>
+            <li><button type="button" data-k="3" aria-pressed="false">Afeitado</button></li>
+            <li><button type="button" data-k="4" aria-pressed="false">Arreglo de barba</button></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec band-white" id="barberia">
+    <div class="wrap split rev">
+      <div class="split-txt" data-reveal>
+        <span class="eyebrow">La barbería</span>
+        <h2>Musa y su equipo. <span class="display">Te entienden a la primera.</span></h2>
+        <p class="lead">Una barbería de barrio en la calle San Marcos, con el poste en la puerta. Cortes clásicos y modernos, para jóvenes y mayores, con buena conversación y sin postureo.</p>
+        <blockquote class="quote">«Un peluquero profesional, amable, que te entiende cuando le pides algo y lo clave en el corte de pelo. Recomendable 100x100. Tanto para jovenes como mayores, se adapta a todo.»<cite>Jose Alberto M., reseña de Google</cite></blockquote>
+        <a class="btn btn-primary" href="#cita"><svg><use href="#i-tijera"/></svg>Pedir cita</a>
+      </div>
+      <figure class="split-img portrait" data-reveal><img src="img/fachada.jpg" alt="Fachada de Musa Barber Shop en la calle San Marcos" loading="lazy"></figure>
+    </div>
+  </section>
+
+  <section class="sec band-blue" id="cita">
+    <div class="wrap book-cta" data-reveal>
+      <div>
+        <span class="eyebrow">Pide tu cita</span>
+        <h2>Dinos día y franja. <span class="display">Te confirmamos la hora.</span></h2>
+        <p class="lead">Unas pocas preguntas y tu petición sale ya escrita por WhatsApp. Puedes decir si prefieres que te atienda Musa.</p>
+        <ul class="book-perks"><li>Sin registrarte</li><li>Abierto los 7 días</li><li>O llama al 632 38 23 77</li></ul>
+      </div>
+      <a class="btn btn-light" href="#cita"><svg><use href="#i-tijera"/></svg>Pedir cita</a>
+    </div>
+  </section>
+
+  <section class="sec band-white draft" id="pendiente" hidden>
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">Borrador · Datos de la barbería</span>
+        <h2>Lo que nos falta <span class="display">por saber.</span></h2>
+        <p class="lead">Faltan datos de la barbería para completar esta sección.</p>
+      </div>
+      <ul class="incl">
+        <li>Precios (caballero, niño, jubilado, afeitado, barba): <mark>[…]</mark></li>
+        <li>¿Se atiende con cita, sin cita o las dos cosas? <mark>[…]</mark></li>
+        <li>Equipo: <mark>[Musa y …]</mark></li>
+        <li>Más fotos de cortes e interior: <mark>[…]</mark></li>
+        <li>Instagram: <mark>[@…]</mark></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="sec" id="visita">
+    <div class="wrap visit">
+      <div data-reveal>
+        <span class="eyebrow">Visítanos</span>
+        <h2>De lunes a domingo <span class="display">en San Martín de la Vega.</span></h2>
+        <p class="lead">Calle de San Marcos, 38: el toldo blanco de MUSA y el poste de barbero en la puerta.</p>
+        <table class="hours" aria-label="Horario">
+          <tr><th>Lunes a domingo</th><td>9:00–14:00<br>16:30–21:00</td></tr>
+        </table>
+        <ul class="contact">
+          <li><svg><use href="#i-pin"/></svg><a href="https://www.google.com/maps/search/musa+barber+shop%2C+C.+de+San+Marcos%2C+38%2C+San+Mart%C3%ADn+de+la+Vega" target="_blank" rel="noopener">C. de San Marcos, 38 · 28330 San Martín de la Vega</a></li>
+          <li><svg><use href="#i-phone"/></svg><a href="tel:+34632382377">632 38 23 77</a></li>
+        </ul>
+      </div>
+      <div class="faq" data-reveal>
+        <details open><summary>¿Puedo pedir que me corte Musa?</summary><p>Sí. Al pedir cita marca «Prefiero a Musa» y te buscamos hueco con él.</p></details>
+        <details><summary>¿Cortáis a niños y a mayores?</summary><p>Sí: corte de niño y corte de jubilado están en el cartel. Jose Alberto lo resume: «Tanto para jovenes como mayores, se adapta a todo».</p></details>
+        <details><summary>¿Abrís el domingo?</summary><p>Sí, de lunes a domingo, de 9:00 a 14:00 y de 16:30 a 21:00.</p></details>
+        <details><summary>¿Cuánto cuesta?</summary><p>Escríbenos y te lo decimos. Fran cuenta que sale «por menos de la mitad de precio» que en cadenas de prestigio.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="final band-blue">
+    <div class="wrap">
+      <span class="eyebrow">Musa Barber Shop</span>
+      <h2>De barrio, de toda la vida. <span class="display">Con arte en las manos</span></h2>
+      <div class="hero-ctas">
+        <a class="btn btn-primary" href="#cita"><svg><use href="#i-tijera"/></svg>Pedir cita</a>
+        <a class="btn btn-light" href="tel:+34632382377"><svg><use href="#i-phone"/></svg>Llamar</a>
+      </div>
+      <a class="g-rate g-rate-final" href="#resenas" data-rvd><span class="stars"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></span><b>4,4</b><span>· 22 reseñas en Google</span></a>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wordmark" aria-hidden="true">MUSA</div>
+  <div class="wrap"><span>Musa Barber Shop · C. de San Marcos, 38 · 28330 San Martín de la Vega, Madrid</span><span>632 38 23 77</span></div>
+</footer>
+
+<button class="totop" id="totop" type="button" aria-label="Subir arriba"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="M12 19V5M5 12l7-7 7 7"/></svg></button>
+
+<div class="bk rvd" id="rvd" role="dialog" aria-modal="true" aria-labelledby="rvd-title" hidden>
+  <div class="bk-scrim" data-rvd-x></div>
+  <div class="bk-panel">
+    <header class="bk-head">
+      <span></span>
+      <div class="t"><span>Google</span><b id="rvd-title">Reseñas</b></div>
+      <button type="button" class="bk-ib" data-rvd-x aria-label="Cerrar"><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" d="M6 6l12 12M18 6L6 18"/></svg></button>
+    </header>
+    <div class="bk-body rvd-body">
+      <div class="rvd-sum">
+        <div class="rvd-score"><b>4,4</b><span class="rv-stars"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></span><small>22 reseñas</small></div>
+        <ul class="rvd-dist" aria-label="Reparto de estrellas"><li><span>5</span><i><b style="width:77.3%"></b></i><em>17</em></li><li><span>4</span><i><b style="width:9.1%"></b></i><em>2</em></li><li><span>3</span><i><b style="width:0%"></b></i><em>0</em></li><li><span>2</span><i><b style="width:0%"></b></i><em>0</em></li><li><span>1</span><i><b style="width:13.6%"></b></i><em>3</em></li></ul>
+      </div>
+      <h3 class="rvd-h">Reseñas de 5 estrellas</h3>
+      <div class="rvd-list" id="rvd-list"></div>
+      <h3 class="rvd-h">Su ficha en Google Maps</h3>
+      <div class="rvd-map"><iframe id="rvd-map" title="Musa Barber Shop en Google Maps" data-src="https://maps.google.com/maps?q=Musa%20Barber%20Shop%2C%20Calle%20de%20San%20Marcos%2038%2C%2028330%20San%20Mart%C3%ADn%20de%20la%20Vega&amp;hl=es&amp;z=16&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+      <p class="rvd-note">Google no permite mostrar aquí su lista completa de reseñas; puedes leerlas todas en su ficha.</p>
+    </div>
+    <footer class="rvd-foot"><a class="btn btn-ghost" href="https://www.google.com/maps/search/musa+barber+shop%2C+C.+de+San+Marcos%2C+38%2C+San+Mart%C3%ADn+de+la+Vega" target="_blank" rel="noopener">Ver las 22 en Google</a></footer>
+  </div>
+</div>
+
+<div class="bk" id="bk" role="dialog" aria-modal="true" aria-labelledby="bk-title" hidden>
+  <div class="bk-scrim" id="bk-scrim"></div>
+  <div class="bk-panel">
+    <header class="bk-head">
+      <button type="button" class="bk-ib" id="bk-back" aria-label="Paso anterior"><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M15 18l-6-6 6-6"/></svg></button>
+      <div class="t"><span id="bk-step">Paso 1 de 4</span><b id="bk-title">Tu cita</b></div>
+      <button type="button" class="bk-ib" id="bk-x" aria-label="Cerrar"><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" d="M6 6l12 12M18 6L6 18"/></svg></button>
+    </header>
+    <div class="bk-prog"><i id="bk-bar" style="transform:scaleX(.25)"></i></div>
+    <form class="bk-body" id="book-form" novalidate>
+      <section class="bk-pane" data-step="1">
+        <h3>¿Qué te quieres hacer?</h3>
+        <div class="bk-opts">
+          <label><input type="radio" name="tipo" value="Corte caballero"><span>Corte caballero</span></label>
+          <label><input type="radio" name="tipo" value="Corte niño"><span>Corte niño</span></label>
+          <label><input type="radio" name="tipo" value="Corte jubilado"><span>Corte jubilado</span></label>
+          <label><input type="radio" name="tipo" value="Afeitado"><span>Afeitado</span></label>
+          <label><input type="radio" name="tipo" value="Arreglo de barba"><span>Arreglo de barba</span></label>
+        </div>
+      </section>
+      <section class="bk-pane" data-step="2" hidden>
+        <h3>¿Qué día te viene bien?</h3>
+        <div class="bk-field">
+          <div class="cal" id="cal">
+            <div class="cal-head">
+              <button type="button" class="bk-ib" id="cal-prev" aria-label="Mes anterior"><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M15 18l-6-6 6-6"/></svg></button>
+              <b id="cal-m" aria-live="polite"></b>
+              <button type="button" class="bk-ib" id="cal-next" aria-label="Mes siguiente"><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M9 18l6-6-6-6"/></svg></button>
+            </div>
+            <div class="cal-dow" aria-hidden="true"><span>L</span><span>M</span><span>X</span><span>J</span><span>V</span><span>S</span><span>D</span></div>
+            <div class="cal-grid" id="cal-grid"></div>
+            <p class="cal-legend"><i></i>Hoy · abierto todos los días</p>
+          </div>
+          <input type="hidden" id="f-fecha" name="fecha">
+        </div>
+      </section>
+      <section class="bk-pane" data-step="3" hidden>
+        <h3>¿Mañana o tarde?</h3>
+        <div class="bk-field"><span>Franja</span>
+          <div class="bk-opts row">
+            <label id="f-manana"><input type="radio" name="franja" value="por la mañana"><span>Mañana</span></label>
+            <label id="f-tarde"><input type="radio" name="franja" value="por la tarde"><span>Tarde</span></label>
+            <label><input type="radio" name="franja" value="cuando haya hueco"><span>Me da igual</span></label>
+          </div>
+        </div>
+        <div class="bk-field"><span>¿Quién te atiende?</span>
+          <div class="bk-opts row">
+            <label><input type="radio" name="primera" value="Prefiero que me atienda Musa"><span>Prefiero a Musa</span></label>
+            <label><input type="radio" name="primera" value="Me da igual quién me atienda"><span>Me da igual</span></label>
+          </div>
+        </div>
+      </section>
+      <section class="bk-pane" data-step="4" hidden>
+        <h3>Últimos detalles</h3>
+        <label class="bk-field"><span>Tu nombre</span><input type="text" id="f-nombre" autocomplete="given-name" placeholder="Luis"></label>
+        <label class="bk-field"><span>Algo más (opcional)</span><input type="text" id="f-notas" placeholder="Degradado y barba…"></label>
+      </section>
+      <section class="bk-pane" data-step="5" hidden>
+        <h3>Tu cita está casi lista</h3>
+        <p class="sub">Envíala y, si quieres, adjunta en el chat una foto del corte que te gustaría.</p>
+        <pre class="f-preview" id="f-preview"></pre>
+        <button type="button" class="f-copy" id="f-copy">Copiar mensaje</button>
+      </section>
+    </form>
+    <footer class="bk-foot">
+      <p class="f-error" id="f-error" role="alert" hidden></p>
+      <button type="button" class="btn btn-primary" id="bk-next">Siguiente</button>
+      <a class="btn btn-wa" id="f-wa" href="#" target="_blank" rel="noopener" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .2-1.3c-.1-.1-.3-.2-.6-.3z"/></svg>Enviar por WhatsApp</a>
+    </footer>
+  </div>
+</div>
+
+<div class="mbar">
+  <a class="btn btn-primary" href="#cita"><svg><use href="#i-tijera"/></svg><span data-t="mbar">Pedir cita</span></a>
+  <a class="btn btn-ghost" href="tel:+34632382377" aria-label="Llamar al 632 38 23 77"><svg><use href="#i-phone"/></svg></a>
+</div>
+
+<script>
+(function(){
+"use strict";
+var reduced=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+var SFX={play:function(){}}; /* sin sonidos: no es un negocio festivo */
+
+/* ---------- Temporadas de Musa Barber Shop: fechas fuertes de una barbería de barrio ---------- */
+/* Solo los servicios del cartel y la fecha. Sin precios ni promociones que no conocemos. */
+window.TEMPORADAS=[
+  {id:'navidad',nombre:'Navidad y Nochevieja',desde:'12-01',hasta:'12-30',evento:'nochevieja',prioridad:2,deco:'estrellas',decoColores:['#FFFFFF','#E3554A','#8FB0E8'],decoCuantos:26,
+   sello:'NAVIDAD · NOCHEVIEJA · MUSA · ',
+   textos:{eyebrow:'Nochevieja · {cuenta}',h1:'Para las cenas, <span class="display">corte y barba a punto</span>',
+     sub:'Corte, afeitado y arreglo de barba para Navidad y Nochevieja. <span class="hide-m">Abierto todos los días: pide tu hora con tiempo.</span>',
+     cta:'Pedir cita para las fiestas',micro:'Diciembre vuela · te respondemos por WhatsApp',mbar:'Pedir cita'},
+   wa:'🎄 Es para las fiestas'},
+  {id:'dia-padre',nombre:'Día del Padre',evento:'dia-padre',antes:14,despues:0,prioridad:2,
+   sello:'DÍA DEL PADRE · MUSA · ',
+   textos:{eyebrow:'Día del Padre · {cuenta}',h1:'Para papá, <span class="display">corte y barba</span>',
+     sub:'Pídele hora para el Día del Padre, o venid juntos: hay corte de caballero, niño y jubilado. <span class="hide-m">Abierto también el domingo.</span>',
+     cta:'Pedir cita'},
+   wa:'👔 Es para el Día del Padre ({fecha})'},
+  {id:'comuniones',nombre:'Comuniones',desde:'04-15',hasta:'06-10',prioridad:1,
+   sello:'COMUNIONES · BODAS · MUSA · ',
+   textos:{eyebrow:'Comuniones y bodas',h1:'Para el gran día, <span class="display">toda la familia</span>',
+     sub:'Corte de niño, de caballero y de jubilado, y arreglo de barba. <span class="hide-m">Dinos la fecha y os buscamos hora.</span>',
+     cta:'Consultar mi fecha'},
+   wa:'💐 Es para una comunión o boda'},
+  {id:'septiembre',nombre:'Vuelta al cole',desde:'08-25',hasta:'09-20',prioridad:1,
+   sello:'VUELTA AL COLE · MUSA · ',
+   textos:{eyebrow:'Vuelta al cole',h1:'Vuelta al cole <span class="display">con corte nuevo</span>',
+     sub:'Corte de niño y de caballero para empezar el curso. <span class="hide-m">Abierto de lunes a domingo.</span>',
+     cta:'Pedir cita'},
+   marcar:['input[name="tipo"][value="Corte niño"]'],wa:'🎒 Es para la vuelta al cole'}
+];
+/* ---------- Temporadas: la landing cambia sola cuando se acerca una fecha clave del oficio ---------- */
+/* Configura window.TEMPORADAS antes de este bloque (ver references/temporadas/README.md).
+   Pruebas: ?temporada=<id> fuerza una, ?temporada=no las apaga, ?fecha=2027-02-10 simula el día.
+   Selector para enseñarlas: #temporadas en la dirección (en local), 5 toques seguidos en el logo de la cabecera o la tecla T (también dentro del visor del Artifact). */
+(function(){
+var CFG=window.TEMPORADAS||[]; if(!CFG.length)return;
+var MESES=['enero','febrero','marzo','abril','mayo','junio','julio','agosto','septiembre','octubre','noviembre','diciembre'];
+var DAY=864e5;
+function d(y,m,dd){return new Date(y,m-1,dd)}
+function nth(y,m,dow,n){var f=d(y,m,1);return d(y,m,1+(dow-f.getDay()+7)%7+7*(n-1))}       /* n-ésimo día de la semana (0=domingo) del mes */
+function pascua(y){var a=y%19,b=Math.floor(y/100),c=y%100,e=(19*a+b-Math.floor(b/4)-Math.floor((b-Math.floor((8*b+13)/25)+1)/3)+15)%30,
+  f=(32+2*(b%4)+2*Math.floor(c/4)-e-c%4)%7,g=Math.floor((a+11*e+22*f)/451),m=Math.floor((e+f-7*g+114)/31);return d(y,m,(e+f-7*g+114)%31+1)}
+function mas(x,n){return new Date(x.getFullYear(),x.getMonth(),x.getDate()+n)}
+/* Calendario de España. Cada evento devuelve el día clave de ese año. */
+var EV={
+  'reyes':function(y){return d(y,1,6)},
+  'rebajas-invierno':function(y){return d(y,1,7)},
+  'san-valentin':function(y){return d(y,2,14)},
+  'carnaval':function(y){return mas(pascua(y),-47)},            /* martes de carnaval */
+  'dia-padre':function(y){return d(y,3,19)},
+  'semana-santa':function(y){return mas(pascua(y),-3)},         /* jueves santo */
+  'pascua':pascua,
+  'sant-jordi':function(y){return d(y,4,23)},                   /* solo Cataluña */
+  'dia-madre':function(y){return nth(y,5,0,1)},                 /* primer domingo de mayo */
+  'san-isidro':function(y){return d(y,5,15)},                   /* solo Madrid capital */
+  'san-juan':function(y){return d(y,6,24)},
+  'dia-abuelos':function(y){return d(y,7,26)},
+  'vuelta-cole':function(y){return d(y,9,8)},                   /* aproximado: varía por comunidad */
+  'halloween':function(y){return d(y,10,31)},
+  'todos-santos':function(y){return d(y,11,1)},
+  'black-friday':function(y){return mas(nth(y,11,4,4),1)},      /* viernes tras el 4.º jueves */
+  'navidad':function(y){return d(y,12,25)},
+  'nochevieja':function(y){return d(y,12,31)}
+};
+function md(s,y){var p=s.split('-');return d(y,+p[0],+p[1])}
+function antes(t){return t.antes==null?14:t.antes}
+/* Ventanas [inicio, fin, día clave] de una temporada alrededor del año y */
+function ventanas(t,y){var out=[];for(var k=y-1;k<=y+1;k++){
+  if(t.desde){var a=md(t.desde,k),b=md(t.hasta,k);if(b<a)b=md(t.hasta,k+1);out.push([a,b,t.evento?EV[t.evento](b.getFullYear()):b])}
+  else{var e=t.fecha?md(t.fecha,k):EV[t.evento]&&EV[t.evento](k);if(e)out.push([mas(e,-antes(t)),mas(e,t.despues||0),e])}}
+  return out}
+function elegir(hoy){var best=null;hoy=new Date(hoy.getFullYear(),hoy.getMonth(),hoy.getDate());
+  CFG.forEach(function(t){ventanas(t,hoy.getFullYear()).forEach(function(w){if(hoy<w[0]||hoy>w[1])return;
+    var pr=t.prioridad!=null?t.prioridad:(t.desde?1:2),falta=Math.round((w[2]-hoy)/DAY);
+    if(!best||pr>best.pr||(pr===best.pr&&Math.abs(falta)<Math.abs(best.falta)))best={t:t,pr:pr,falta:falta,dia:w[2]}})});
+  return best}
+/* Forzar una temporada aunque hoy no toque: la muestra como si faltaran unos días */
+function forzar(id,hoy){var t=CFG.filter(function(x){return x.id===id})[0];if(!t)return null;
+  var w=ventanas(t,hoy.getFullYear()).filter(function(w){return w[1]>=hoy})[0],falta=Math.round((w[2]-hoy)/DAY);
+  if(hoy<w[0])falta=Math.min(antes(t),9);return {t:t,falta:falta,dia:w[2]}}
+function rellenar(s,b){if(!s)return s;var n=b.falta,f=b.dia.getDate()+' de '+MESES[b.dia.getMonth()];
+  var cuenta=n>1?'Faltan '+n+' días':n===1?'Es mañana':n===0?'Es hoy':'';
+  return s.replace(/\{cuenta\}/g,cuenta).replace(/\{dias\}/g,n).replace(/\{fecha\}/g,f).replace(/\{anio\}/g,b.dia.getFullYear())}
+
+var q=new URLSearchParams(location.search),forzada=q.get('temporada'),sim=q.get('fecha'),hoy=new Date();
+if(sim&&/^\d{4}-\d\d-\d\d$/.test(sim)){var p=sim.split('-');hoy=d(+p[0],+p[1],+p[2])}
+hoy=new Date(hoy.getFullYear(),hoy.getMonth(),hoy.getDate());
+window.TEMPORADA_ELEGIR=function(x){var b=elegir(x);return b?b.t.id:null};   /* para scripts/temporadas.js */
+var root=document.documentElement,reducido=matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+/* Estado original, para poder volver a la versión de todo el año al cambiar de temporada desde el selector */
+var CLAVES={};CFG.forEach(function(t){Object.keys(t.textos||{}).forEach(function(k){CLAVES[k]=1})});   /* solo las claves que usa alguna temporada: otros data-t de la página no se tocan */
+var T=[].slice.call(document.querySelectorAll('[data-t]')).filter(function(el){return CLAVES[el.getAttribute('data-t')]}).map(function(el){return [el,el.innerHTML,el.hidden]});
+var fotosOrig=[],tokens=[],marcados=[],deco=null;
+function limpiar(){
+  T.forEach(function(o){o[0].innerHTML=o[1];o[0].hidden=o[2];o[0].classList.remove('t-on')});
+  tokens.forEach(function(k){root.style.removeProperty(k)});tokens=[];
+  fotosOrig.forEach(function(o){if(o[0].tagName==='SOURCE')o[0].srcset=o[1];else{o[0].src=o[1];if(o[2])o[0].srcset=o[2]}});fotosOrig=[];
+  marcados.forEach(function(el){el.checked=false});marcados=[];
+  if(deco){deco();deco=null}
+  root.removeAttribute('data-temporada');window.TEMPORADA=null}
+function aplicar(b){
+  limpiar();var id=b?b.t.id:null;
+  /* Bloques solo de temporada: data-temporada-solo="san-valentin dia-madre" (empiezan con hidden) y data-temporada-fuera="…" */
+  document.querySelectorAll('[data-temporada-solo]').forEach(function(el){el.hidden=!(id&&el.getAttribute('data-temporada-solo').split(/\s+/).indexOf(id)>-1)});
+  document.querySelectorAll('[data-temporada-fuera]').forEach(function(el){el.hidden=!!(id&&el.getAttribute('data-temporada-fuera').split(/\s+/).indexOf(id)>-1)});
+  if(!b)return;
+  var t=b.t;root.setAttribute('data-temporada',id);
+  /* Colores: sobrescribe tokens de :root (solo acentos; el fondo y la tinta no se tocan) */
+  if(t.tema)Object.keys(t.tema).forEach(function(k){root.style.setProperty(k,t.tema[k]);tokens.push(k)});
+  /* Textos: cualquier elemento con data-t="clave". El HTML trae el texto de todo el año; si estaba hidden, se muestra */
+  if(t.textos)Object.keys(t.textos).forEach(function(k){document.querySelectorAll('[data-t="'+k+'"]').forEach(function(el){el.innerHTML=rellenar(t.textos[k],b);el.hidden=false;el.classList.add('t-on')})});
+  /* Fotos: {selector: ruta}. Solo fotos reales del negocio para esa fecha */
+  if(t.fotos)Object.keys(t.fotos).forEach(function(s){document.querySelectorAll(s).forEach(function(el){
+    if(el.tagName==='SOURCE'){fotosOrig.push([el,el.srcset]);el.srcset=t.fotos[s]}else{fotosOrig.push([el,el.src,el.getAttribute('srcset')]);el.removeAttribute('srcset');el.src=t.fotos[s]}})});
+  /* Marcar opciones del panel de encargo/reserva (solo si no hay ninguna marcada en ese grupo) */
+  if(t.marcar)t.marcar.forEach(function(s){var el=document.querySelector(s);if(el&&!document.querySelector('input[name="'+el.name+'"]:checked')){el.checked=true;marcados.push(el)}});
+  window.TEMPORADA={id:id,nombre:t.nombre||id,dias:b.falta,fecha:b.dia,linea:rellenar(t.wa,b)||''};   /* el panel añade TEMPORADA.linea al mensaje de WhatsApp */
+  try{document.dispatchEvent(new CustomEvent('temporada',{detail:window.TEMPORADA}))}catch(e){}
+  if(t.deco&&!reducido)deco=decorar(t)}
+
+/* Decoración ligera en el hero: petalos, corazones, nieve, hojas, confeti o estrellas. Nunca sobre el texto ni con movimiento reducido */
+function decorar(t){
+  var host=document.querySelector(t.decoEn||'#hero');if(!host)return null;
+  var cv=document.createElement('canvas');cv.className='t-deco';cv.setAttribute('aria-hidden','true');
+  cv.style.cssText='position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:1';
+  host.insertBefore(cv,host.children[1]||null);
+  var cx=cv.getContext('2d'),W=0,H=0,DPR=Math.min(devicePixelRatio||1,1.5),P=[],raf=0,last=0;
+  var COL=t.decoColores||{petalos:['#F5B8C9','#FFD9E2','#E88AA6'],corazones:['#FF6B8B','#FFB3C4','#E0325A'],nieve:['#FFFFFF'],hojas:['#C9733B','#E0A04A','#9C4A24'],confeti:['#FFD166','#EF476F','#06D6A0','#4CC9F0'],estrellas:['#FFE8A3','#FFFFFF']}[t.deco]||['#fff'];
+  function size(){var r=host.getBoundingClientRect();W=r.width;H=r.height;cv.width=W*DPR;cv.height=H*DPR;cx.setTransform(DPR,0,0,DPR,0,0)}
+  function nuevo(top){var s=t.deco==='nieve'?2+Math.random()*3:t.deco==='estrellas'?1.5+Math.random()*2.5:7+Math.random()*7;
+    return {x:Math.random()*W,y:top?-20:Math.random()*H,s:s,vy:(t.deco==='estrellas'?0:.25+Math.random()*.5)*(s>6?1:.7),vx:(Math.random()-.5)*.3,a:Math.random()*6.3,va:(Math.random()-.5)*.03,f:Math.random()*6.3,c:COL[Math.floor(Math.random()*COL.length)]}}
+  function forma(p){cx.save();cx.translate(p.x,p.y);cx.rotate(p.a);cx.fillStyle=p.c;cx.globalAlpha=t.deco==='estrellas'?.4+.5*Math.abs(Math.sin(p.f)):.85;var s=p.s;cx.beginPath();
+    if(t.deco==='corazones'){cx.moveTo(0,s*.35);cx.bezierCurveTo(-s,-s*.3,-s*.4,-s,0,-s*.45);cx.bezierCurveTo(s*.4,-s,s,-s*.3,0,s*.35)}
+    else if(t.deco==='nieve'||t.deco==='estrellas')cx.arc(0,0,s/2,0,7);
+    else if(t.deco==='confeti')cx.rect(-s/2,-s/4,s,s/2);
+    else cx.ellipse(0,0,s/2,s*(t.deco==='hojas'?.28:.34),0,0,7);
+    cx.fill();cx.restore()}
+  function paso(ts){raf=requestAnimationFrame(paso);if(ts-last<30)return;last=ts;
+    var r=host.getBoundingClientRect();if(r.bottom<0||r.top>innerHeight)return;   /* fuera de pantalla: no pinta */
+    cx.clearRect(0,0,W,H);P.forEach(function(p,i){p.f+=.03;p.y+=p.vy;p.x+=p.vx+Math.sin(p.f)*.35;p.a+=p.va;if(p.y>H+20)P[i]=nuevo(true);forma(p)})}
+  function arranca(){cancelAnimationFrame(raf);if(!document.hidden)raf=requestAnimationFrame(paso)}
+  size();var n=Math.min(t.decoCuantos||22,Math.round(W*H/40000)+6);for(var i=0;i<n;i++)P.push(nuevo(false));
+  addEventListener('resize',size);document.addEventListener('visibilitychange',arranca);arranca();
+  return function(){cancelAnimationFrame(raf);removeEventListener('resize',size);document.removeEventListener('visibilitychange',arranca);cv.remove()}}
+
+var hoyB=elegir(hoy);
+aplicar(forzada==='no'?null:forzada?forzar(forzada,hoy):hoyB);
+
+/* ---------- Selector de temporadas: solo con #temporadas en la dirección, para enseñárselas al cliente ---------- */
+/* El visor del Artifact no pasa el #hash al iframe: también se abre con 5 toques seguidos en el logo de la cabecera (.brand) o con la tecla T */
+var sel=null,manual=false;
+function selector(){
+  if(location.hash!=='#temporadas'&&!manual){if(sel){sel.remove();sel=null}return}
+  if(sel)return;
+  var st=document.createElement('style');st.textContent='.t-sel{position:fixed;left:12px;right:12px;bottom:calc(14px + env(safe-area-inset-bottom,0px));z-index:150;margin:0 auto;max-width:max-content;display:flex;align-items:center;gap:6px;padding:6px;border-radius:18px;background:rgba(20,20,20,.82);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);color:#fff;font:600 13px/1.2 system-ui,-apple-system,sans-serif;box-shadow:0 14px 34px -12px rgba(0,0,0,.6);overflow-x:auto;scrollbar-width:none}'
+   +'.t-sel::-webkit-scrollbar{display:none}.t-sel b{padding:0 6px 0 8px;font-size:11px;letter-spacing:.08em;text-transform:uppercase;opacity:.6;white-space:nowrap}'
+   +'.t-sel button{all:unset;cursor:pointer;white-space:nowrap;padding:9px 12px;border-radius:12px;color:#fff}.t-sel button:hover{background:rgba(255,255,255,.12)}.t-sel button[aria-pressed="true"]{background:#fff;color:#111}'
+   +'.t-sel button small{display:block;font-size:10px;font-weight:500;opacity:.65;margin-top:2px}.t-sel .x{opacity:.7;padding:9px 10px}'
+   +'@media (max-width:640px){.t-sel{bottom:calc(84px + env(safe-area-inset-bottom,0px));max-width:none}}';
+  sel=document.createElement('div');sel.className='t-sel';sel.setAttribute('role','toolbar');sel.setAttribute('aria-label','Ver la landing en cada temporada');
+  sel.appendChild(st);
+  function hint(t){var w=ventanas(t,hoy.getFullYear()).filter(function(w){return w[1]>=hoy})[0],f=function(x){return x.getDate()+' '+MESES[x.getMonth()].slice(0,3)};return f(w[0])+' – '+f(w[1])}
+  var h='<b>Temporadas</b><button type="button" data-id="@hoy">Hoy<small>'+(hoyB?(hoyB.t.nombre||hoyB.t.id):'sin temporada')+'</small></button><button type="button" data-id="">Todo el año<small>versión base</small></button>';
+  CFG.forEach(function(t){h+='<button type="button" data-id="'+t.id+'">'+(t.nombre||t.id)+'<small>'+hint(t)+'</small></button>'});
+  sel.insertAdjacentHTML('beforeend',h+'<button type="button" class="x" aria-label="Cerrar el selector">✕</button>');
+  var elegido='@hoy';
+  function marca(){sel.querySelectorAll('button[data-id]').forEach(function(x){x.setAttribute('aria-pressed',String(x.dataset.id===elegido))})}
+  sel.addEventListener('click',function(e){var x=e.target.closest('button');if(!x)return;
+    if(x.classList.contains('x')){manual=false;if(location.hash==='#temporadas')history.replaceState(null,'',location.pathname+location.search);selector();return}
+    elegido=x.dataset.id;aplicar(elegido==='@hoy'?hoyB:elegido?forzar(elegido,hoy):null);marca();window.scrollTo({top:0,behavior:'smooth'})});
+  document.body.appendChild(sel);marca()}
+selector();addEventListener('hashchange',selector);
+var toques=[];
+document.addEventListener('click',function(e){if(!e.target.closest||!e.target.closest(window.TEMPORADAS_DISPARADOR||'.brand'))return;var n=Date.now();
+  toques=toques.filter(function(t){return n-t<2500});toques.push(n);if(toques.length>=5){toques=[];manual=true;selector()}});
+document.addEventListener('keydown',function(e){if((e.key==='t'||e.key==='T')&&!e.metaKey&&!e.ctrlKey&&!e.altKey&&!/INPUT|TEXTAREA|SELECT/.test(e.target.tagName)&&!e.target.isContentEditable){manual=!sel;if(!manual&&location.hash==='#temporadas')history.replaceState(null,'',location.pathname+location.search);selector()}});
+})();
+
+
+/* ---------- Reseñas reales de Google (texto literal, recortado con […]); las 6 primeras en la página, todas en el panel ---------- */
+var REV=[
+  ['Oscar M.','Atención','hace 1 mes','Musa es un profesiinal siempre dispuesto a satisfacer al cliente'],
+  ['Alejandro S.','Experiencia','hace 2 meses','Muy buena atención y barberos con gran experiencia súper recomendable'],
+  ['Ancor S.','Arte en las manos','hace 1 año','Un peluquero 10 que podría estar cortando a los famosos, en una peluquería de barrio de toda la vida. El chico que trabaja con ellos tiene un gran valor, un profesional con arte en sus manos. Excelente trabajo! Gracias'],
+  ['Jose Alberto M.','Jóvenes y mayores','hace 3 años','Un peluquero profesional, amable, que te entiende cuando le pides algo y lo clave en el corte de pelo. Recomendable 100x100. Tanto para jovenes como mayores, se adapta a todo.'],
+  ['Fran L.','Al mínimo detalle','hace 4 años','…por menos de la mitad de precio, Musa te dedica una atención y cuidado como nadie, cortando al mínimo detalle, siempre con buena conversación, agradable, respetuoso,… Un peluquero que te hace no querer volver a que te toque el pelo nadie más que él.'],
+  ['Valentín C.','Casi guapo','hace 4 años','Fantástico ...entro como un adefesio y salgo casi guapo, trato excelente!!!!'],
+  ['Eli','Corte de 💯','hace 2 meses','MUY contento corte de 💯'],
+  ['A. Serrano','Corte moderno','hace 2 años','El mejor de San Martín, los chicos quedaron muy contentos con su corte moderno'],
+  ['Alberto C.','Precio','hace 3 años','Buen peluquero, un lugar práctico y por el precio que tiene se esmera mucho en el corte para buscar la perfección.']
+];
+var COLS=['#1F4FA0','#C8352B','#1A1A22','#6B7A99'], STAR='<svg><use href="#i-star"/></svg>';
+var grid=document.getElementById('rv-grid');
+if(grid) grid.innerHTML=REV.map(function(r,i){return '<figure class="rv" data-reveal><div class="rv-top"><span class="rv-stars" aria-label="5 de 5 estrellas">'+STAR+STAR+STAR+STAR+STAR+'</span><span class="rv-tag">'+r[1]+'</span></div><blockquote>«'+r[3]+'»</blockquote><figcaption><i style="background:'+COLS[i%4]+'">'+r[0][0]+'</i><span><b>'+r[0]+'</b><small>'+r[2]+' · Google</small></span></figcaption></figure>'}).join('');
+
+
+/* ---------- El cartel de la puerta: el poste gira si está abierto ahora; cada línea enseña lo que dicen sus clientes ---------- */
+(function(){var L=document.getElementById('crt-list');if(!L)return;
+ var D=[['Corte caballeros','«…cortando al mínimo detalle, siempre con buena conversación, agradable, respetuoso,…»','Fran L.','Corte caballero'],
+  ['Corte niño','«…los chicos quedaron muy contentos con su corte moderno»','A. Serrano','Corte niño'],
+  ['Corte jubilados','«Tanto para jovenes como mayores, se adapta a todo.»','Jose Alberto M.','Corte jubilado'],
+  ['Afeitado','En el cartel desde siempre. Pídelo junto a tu corte o solo.','','Afeitado'],
+  ['Arreglo de barba','«Es un lugar recomendable en Madrid para un buen corte de pelo o arreglo de barba.»','Nicolai B.','Arreglo de barba']];
+ var nm=document.getElementById('crt-name'),q=document.getElementById('crt-q'),cta=document.getElementById('crt-cta'),now=document.getElementById('crt-now'),out=document.querySelector('.crt-out'),touched=false;
+ function pick(k){var d=D[k];[].forEach.call(L.querySelectorAll('button'),function(b){b.setAttribute('aria-pressed',+b.dataset.k===k)});
+  out.classList.add('swap');setTimeout(function(){nm.textContent=d[0];q.innerHTML=d[1]+(d[2]?' <small>— '+d[2]+'</small>':'');cta.dataset.tipo=d[3];out.classList.remove('swap')},reduced?0:180)}
+ L.addEventListener('click',function(e){var b=e.target.closest('button');if(b){touched=true;pick(+b.dataset.k)}});
+ /* ¿abierto ahora? 9:00–14:00 y 16:30–21:00 todos los días (hora del visitante) */
+ function estado(){var d=new Date(),m=d.getHours()*60+d.getMinutes(),T=[[540,840],[990,1260]],abierto=T.some(function(t){return m>=t[0]&&m<t[1]}),txt;
+  function hm(x){return Math.floor(x/60)+':'+String(x%60).padStart(2,'0')}
+  if(abierto){var c=T.filter(function(t){return m>=t[0]&&m<t[1]})[0][1];txt='Abierto ahora · cierra a las '+hm(c)}
+  else{var n=T.filter(function(t){return m<t[0]})[0];txt='Cerrado ahora · abre '+(n?'a las '+hm(n[0]):'mañana a las 9:00')}
+  now.textContent=txt;document.documentElement.classList.toggle('musa-abierto',abierto)}
+ estado();setInterval(estado,60000);
+ /* pista al llegar: recorre dos líneas del cartel sola */
+ if('IntersectionObserver' in window&&!reduced){var io=new IntersectionObserver(function(es){if(!es[0].isIntersecting)return;io.disconnect();
+   [2,0].forEach(function(k,i){setTimeout(function(){if(!touched)pick(k)},900+i*1500)})},{threshold:.5});io.observe(L)}
+})();
+
+/* ---------- Cabecera de vidrio sobre el hero (por scroll: el IntersectionObserver falla dentro de iframes) ---------- */
+(function(){var top=document.getElementById('top'),hero=document.getElementById('hero'),mbar=document.querySelector('.mbar'),totop=document.getElementById('totop'),tk=false;
+ function sync(){tk=false;var end=hero.offsetTop+hero.offsetHeight;top.classList.toggle('glass',scrollY<end-top.offsetHeight);
+  if(mbar)mbar.classList.toggle('glass',scrollY+innerHeight-40<end);if(totop)totop.classList.toggle('on',scrollY>end-innerHeight/2)}
+ sync();window.addEventListener('scroll',function(){if(!tk){tk=true;requestAnimationFrame(sync)}},{passive:true});window.addEventListener('resize',sync);})();
+
+/* ---------- Baraja del hero: citas reales de sus clientas (no hay fotos de trabajos en su ficha); pasa sola y al tocarla ---------- */
+(function(){var deck=document.getElementById('deck');if(!deck)return;
+ var cards=[].slice.call(deck.children),order=cards.map(function(_,i){return i}),busy=false,timer=null;
+ function lay(){order.forEach(function(c,p){cards[c].dataset.pos=p;cards[c].setAttribute('aria-hidden',p?'true':'false')})}
+ function next(){if(busy)return;busy=true;var top=cards[order[0]];top.classList.add('out');
+  setTimeout(function(){order.push(order.shift());top.classList.remove('out');lay();busy=false},reduced?0:520)}
+ function play(){stop();if(!reduced)timer=setInterval(next,3800)}
+ function stop(){clearInterval(timer)}
+ lay();play();
+ var sealT=document.querySelector('.seal textPath'),SEAL=sealT&&sealT.textContent;
+ function temporada(){var id=document.documentElement.getAttribute('data-temporada')||'';var t=(window.TEMPORADAS||[]).filter(function(x){return x.id===id})[0]||{};if(sealT)sealT.textContent=t.sello||SEAL}
+ temporada();new MutationObserver(temporada).observe(document.documentElement,{attributes:true,attributeFilter:['data-temporada']});
+ deck.addEventListener('click',function(){next();play()});
+ deck.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();next();play()}});
+ deck.addEventListener('mouseenter',stop);deck.addEventListener('mouseleave',play);
+ document.addEventListener('visibilitychange',function(){document.hidden?stop():play()});})();
+
+/* ---------- Borradores: se ven solo con #borradores en la dirección ---------- */
+(function(){function sync(){var on=location.hash==='#borradores';document.querySelectorAll('.draft').forEach(function(d){d.hidden=!on});if(on){var t=document.querySelector('.draft');t&&setTimeout(function(){t.scrollIntoView()},300)}}
+ sync();window.addEventListener('hashchange',sync)})();
+
+/* ---------- Cita: panel paso a paso que acaba en WhatsApp ---------- */
+(function(){
+  var WA='34632382377', N=5, ABIERTO=[0,1,2,3,4,5,6]; /* todos los días, mañana y tarde */
+  var bk=document.getElementById('bk'); if(!bk)return;
+  var f=document.getElementById('book-form'), panes=[].slice.call(f.querySelectorAll('.bk-pane'));
+  var back=document.getElementById('bk-back'), next=document.getElementById('bk-next'), wa=document.getElementById('f-wa');
+  var err=document.getElementById('f-error'), bar=document.getElementById('bk-bar'), stepT=document.getElementById('bk-step');
+  var fecha=document.getElementById('f-fecha'), nombre=document.getElementById('f-nombre'), pre=document.getElementById('f-preview');
+  var step=1, opener=null;
+  /* Calendario propio: desde hoy, solo días laborables */
+  var min=new Date(); min.setHours(0,0,0,0);
+  var view=new Date(min.getFullYear(),min.getMonth(),1), grid=document.getElementById('cal-grid'), calM=document.getElementById('cal-m'), cPrev=document.getElementById('cal-prev');
+  function iso(dt){return dt.getFullYear()+'-'+String(dt.getMonth()+1).padStart(2,'0')+'-'+String(dt.getDate()).padStart(2,'0')}
+  var todayIso=iso(new Date());
+  function drawCal(){
+    var mn=view.toLocaleDateString('es-ES',{month:'long'});calM.textContent=mn.charAt(0).toUpperCase()+mn.slice(1)+' '+view.getFullYear();
+    cPrev.disabled=view<=new Date(min.getFullYear(),min.getMonth(),1);
+    var first=(new Date(view.getFullYear(),view.getMonth(),1).getDay()+6)%7, days=new Date(view.getFullYear(),view.getMonth()+1,0).getDate(), h='';
+    for(var i=0;i<first;i++)h+='<span></span>';
+    for(var dd=1;dd<=days;dd++){var dt=new Date(view.getFullYear(),view.getMonth(),dd),w=dt.getDay(),v=iso(dt),isToday=v===todayIso,cerrado=ABIERTO.indexOf(w)<0,off=dt<min||cerrado;
+      h+='<button type="button" data-d="'+v+'" class="'+(cerrado?'we':'')+(isToday?' today':'')+'"'+(off?' disabled':'')+' aria-pressed="'+(fecha.value===v)+'" aria-label="'+dt.toLocaleDateString('es-ES',{weekday:'long',day:'numeric',month:'long'})+(isToday?' (hoy)':'')+(cerrado?' (cerrado)':'')+'"'+(isToday?' aria-current="date"':'')+'>'+dd+'</button>'}
+    grid.innerHTML=h;
+  }
+  grid.addEventListener('click',function(e){var b=e.target.closest('button[data-d]');if(!b||b.disabled)return;fecha.value=b.dataset.d;err.hidden=true;drawCal();var nb=grid.querySelector('[data-d="'+fecha.value+'"]');nb&&nb.focus({preventScroll:true})});
+  cPrev.addEventListener('click',function(){view.setMonth(view.getMonth()-1);drawCal()});
+  document.getElementById('cal-next').addEventListener('click',function(){view.setMonth(view.getMonth()+1);drawCal()});
+  setTimeout(drawCal,0);
+  function sel(n){var e=f.querySelector('input[name="'+n+'"]:checked');return e?e.value:''}
+  function val(id){var e=document.getElementById(id);return e?e.value.trim():''}
+  function fmt(iso){var p=iso.split('-');return new Date(+p[0],+p[1]-1,+p[2]).toLocaleDateString('es-ES',{weekday:'long',day:'numeric',month:'long'})}
+  var _code='',_codeFor='';
+  function code(){if(_codeFor!==fecha.value||!_code){var p=fecha.value.split('-'),r='',A='ABCDEFGHJKLMNPQRSTUVWXYZ23456789';for(var i=0;i<3;i++)r+=A[Math.floor(Math.random()*A.length)];_code='MU-'+p[2]+p[1]+'-'+r;_codeFor=fecha.value}return _code}
+  function lunes(){return false;var p=fecha.value.split('-');return new Date(+p[0],+p[1]-1,+p[2]).getDay()===1}
+  function sabado(){return false;var p=fecha.value.split('-');return new Date(+p[0],+p[1]-1,+p[2]).getDay()===6}
+  function message(){
+    var L=['¡Hola, Musa! Soy '+nombre.value.trim()+'. Quería pedir cita:',''];
+    L.push('🔖 Código: '+code());
+    if(window.TEMPORADA&&TEMPORADA.linea)L.push(TEMPORADA.linea);
+    L.push('• Servicio: '+sel('tipo'));
+    L.push('• Día: '+fmt(fecha.value)+', '+sel('franja'));
+    if(sel('primera'))L.push('• '+sel('primera'));
+    if(val('f-notas'))L.push('','Más detalles: '+val('f-notas'));
+    L.push('','¿Me decís a qué hora tenéis hueco? ¡Gracias!');
+    return L.join('\n');
+  }
+  function show(n){
+    step=n; err.hidden=true;
+    panes.forEach(function(p){p.hidden=+p.dataset.step!==n});
+    if(n===3){var t=document.getElementById('f-tarde'),sa=sabado();t.hidden=sa;if(sa&&sel('franja')==='por la tarde')t.querySelector('input').checked=false;
+      var m=document.getElementById('f-manana'),lu=lunes();m.hidden=lu;if(lu&&sel('franja')==='por la mañana')m.querySelector('input').checked=false}
+    back.disabled=n===1;
+    var last=n===N; next.hidden=last; wa.hidden=!last;
+    next.textContent=n===4?'Ver mi cita':'Siguiente';
+    stepT.textContent=last?'Listo':'Paso '+n+' de 4';
+    bar.style.transform='scaleX('+(Math.min(n,4)/4)+')';
+    if(last){var m=message();pre.textContent=m;wa.href='https://wa.me/'+WA+'?text='+encodeURIComponent(m)}
+    f.scrollTop=0;
+    var h3=panes[n-1].querySelector('h3'); if(h3)h3.setAttribute('tabindex','-1');
+    setTimeout(function(){try{(h3||next).focus({preventScroll:true})}catch(x){}},380);
+  }
+  function fail(msg,el){err.textContent=msg;err.hidden=false;if(el){el.setAttribute('aria-invalid','true');el.focus()}}
+  function validate(n){
+    if(n===1&&!sel('tipo')){fail('Elige qué te quieres hacer.');return false}
+    if(n===2&&!fecha.value){fail('Elige un día en el calendario.');var fb=grid.querySelector('button:not([disabled])');fb&&fb.focus();return false}
+    if(n===3&&!sel('franja')){fail('Elige mañana o tarde.');return false}
+    if(n===4){nombre.removeAttribute('aria-invalid');if(!nombre.value.trim()){fail('Dinos tu nombre para el mensaje.',nombre);return false}}
+    return true;
+  }
+  next.addEventListener('click',function(){if(validate(step))show(step+1)});
+  back.addEventListener('click',function(){if(step>1)show(step-1)});
+  f.addEventListener('submit',function(e){e.preventDefault();next.click()});
+  f.querySelectorAll('input[name="tipo"]').forEach(function(r){r.addEventListener('change',function(){setTimeout(function(){if(step===1)show(2)},220)})});
+  document.getElementById('f-copy').addEventListener('click',function(){var b=this,ok=function(){b.textContent='Copiado';setTimeout(function(){b.textContent='Copiar mensaje'},1600)};
+    try{navigator.clipboard.writeText(pre.textContent).then(ok,function(){var r=document.createRange();r.selectNodeContents(pre);var s=getSelection();s.removeAllRanges();s.addRange(r)})}catch(x){}});
+  function open(from){
+    opener=from||document.activeElement; bk.hidden=false; document.documentElement.style.overflow='hidden';
+    var preset=from&&from.dataset&&from.dataset.tipo;
+    if(preset){var r=f.querySelector('input[name="tipo"][value="'+preset+'"]');if(r){r.checked=true;show(2)}}
+    else if(step===N)show(4); else show(step);
+    requestAnimationFrame(function(){requestAnimationFrame(function(){bk.classList.add('open')})});
+  }
+  function close(){
+    bk.classList.remove('open'); document.documentElement.style.overflow='';
+    setTimeout(function(){bk.hidden=true},reduced?0:420);
+    if(opener&&opener.focus)try{opener.focus({preventScroll:true})}catch(x){}
+  }
+  document.getElementById('bk-x').addEventListener('click',close);
+  document.getElementById('bk-scrim').addEventListener('click',close);
+  document.addEventListener('keydown',function(e){if(!bk.hidden&&e.key==='Escape')close()});
+  document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[href="#cita"]');if(!a)return;e.preventDefault();open(a)});
+  if(location.hash==='#cita')setTimeout(function(){open()},400);
+})();
+
+
+/* ---------- Drawer de reseñas ---------- */
+(function(){var d=document.getElementById('rvd'); if(!d)return;
+ var list=document.getElementById('rvd-list'), map=document.getElementById('rvd-map'), opener=null, filled=false;
+ function open(from){
+   if(!filled){document.querySelectorAll('#resenas .rv').forEach(function(c){var k=c.cloneNode(true);k.removeAttribute('data-reveal');list.appendChild(k)});filled=true}
+   if(!map.src)map.src=map.getAttribute('data-src');
+   opener=from||document.activeElement; d.hidden=false; document.documentElement.style.overflow='hidden'; SFX.play('open');
+   requestAnimationFrame(function(){requestAnimationFrame(function(){d.classList.add('open');var x=d.querySelector('.bk-head [data-rvd-x]');x&&x.focus({preventScroll:true})})});
+ }
+ function close(){ if(d.hidden)return; SFX.play('close'); d.classList.remove('open'); document.documentElement.style.overflow='';
+   setTimeout(function(){d.hidden=true;opener&&opener.focus&&opener.focus({preventScroll:true})},reduced?0:420); }
+ document.addEventListener('click',function(e){var a=e.target.closest('[data-rvd]');if(a){e.preventDefault();open(a);return}
+   if(e.target.closest('[data-rvd-x]'))close()});
+ document.addEventListener('keydown',function(e){if(e.key==='Escape')close()});
+})();
+
+
+
+/* ---------- Subir arriba ---------- */
+(function(){var b=document.getElementById('totop');
+ b.addEventListener('click',function(){window.scrollTo({top:0,behavior:reduced?'auto':'smooth'})});})();
+
+/* ---------- Animaciones por visibilidad (IntersectionObserver) ---------- */
+(function(){
+  var root=document.documentElement;
+  if(!('IntersectionObserver' in window)||reduced)return;
+  root.classList.add('js-anim');
+  var io=new IntersectionObserver(function(es){var k=0;es.forEach(function(e){if(!e.isIntersecting)return;var el=e.target;el.style.transitionDelay=Math.min(k++*90,450)+'ms';el.classList.add('in');io.unobserve(el);setTimeout(function(){el.style.transitionDelay=''},1500)})},{rootMargin:'0px 0px -8% 0px'});
+  document.querySelectorAll('[data-reveal]').forEach(function(el){io.observe(el)});
+  var bar=document.getElementById('progress'), tk=false;
+  function prog(){tk=false;var H=root.scrollHeight-innerHeight;bar.style.transform='scaleX('+(H>0?Math.min(1,scrollY/H):0)+')'}
+  window.addEventListener('scroll',function(){if(!tk){tk=true;requestAnimationFrame(prog)}},{passive:true});
+})();
+})();
+
+/* ---------- Botones flotantes tras un mínimo scroll (cabecera y barra móvil ocultas al pintar el hero) ---------- */
+(function(){var h=document.documentElement,tk=false;function s(){tk=false;h.classList.toggle('cta-wait',scrollY<=Math.min(120,innerHeight*.15))}
+ s();addEventListener('scroll',function(){if(!tk){tk=true;requestAnimationFrame(s)}},{passive:true});addEventListener('resize',s);})();
+</script>
